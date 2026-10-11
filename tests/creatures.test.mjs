@@ -66,3 +66,13 @@ test('generated NPCs use the dnd5e 6 roll fields and preserve published statisti
     }
   }
 });
+
+test('the summoned Snowman armor supports native summon bonuses',async()=>{
+  const index=JSON.parse(await fs.readFile('data/build-index.json','utf8'));
+  const row=index.documents.find(d=>d.pack==='companions'&&d.name==='Abominable Snowman');
+  assert.ok(row);
+  const actor=JSON.parse(await fs.readFile(`packs-src/release/companions/${row.id}.json`,'utf8'));
+  assert.equal(actor.system.attributes.ac.flat,19);
+  assert.deepEqual(actor.system.attributes.ac.calcs,['natural']);
+  assert.equal(actor.system.attributes.ac.override,undefined,'An AC override would discard native summon AC bonus effects.');
+});

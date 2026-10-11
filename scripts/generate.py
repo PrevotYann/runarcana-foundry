@@ -142,7 +142,7 @@ def spell(page):
 def snowman(page):
     """Reviewed published summon; native summon matching supplies its caster attack and DC."""
     key=page['id']+'#summoned-creature';doc={'name':'Abominable Snowman','type':'npc','img':'icons/svg/mystery-man.svg','items':[],'effects':[],
-        'system':{'abilities':{k:{'value':v} for k,v in zip(['str','dex','con','int','wis','cha'],[18,11,21,10,16,8])},'attributes':{'ac':{'flat':19,'override':19},'hp':{'value':100,'max':100},'movement':{'speeds':{'walk':'50'},'units':'ft'}},'traits':{'size':'huge'},'details':{'type':{'value':'elemental','subtype':'construct'},'biography':{'value':page['html']}}},'prototypeToken':{'actorLink':False},'flags':provenance(page,key)}
+        'system':{'abilities':{k:{'value':v} for k,v in zip(['str','dex','con','int','wis','cha'],[18,11,21,10,16,8])},'attributes':{'ac':{'flat':19,'calcs':['natural']},'hp':{'value':100,'max':100},'movement':{'speeds':{'walk':'50'},'units':'ft'}},'traits':{'size':'huge'},'details':{'type':{'value':'elemental','subtype':'construct'},'biography':{'value':page['html']}}},'prototypeToken':{'actorLink':False},'flags':provenance(page,key)}
     doc['flags']['dnd5e']={'summon':{'level':8}}
     doc['flags']['runarcana'].update(enabled=True,manualRecharge=True,manualInitiative=True,manualSlowDuration=True,manualAugmentation=True,sourceInconsistency='8th-level spell says higher-level mana equals a 6th-level spell; no correction assumed.')
     for name,reach,parts in [('Bite',15,[('1d10 + 3 + @flags.dnd5e.summon.level','piercing'),('1d10 + @flags.dnd5e.summon.level','glacial')]),('Claws of Ice',10,[('2d6 + 3 + @flags.dnd5e.summon.level','glacial')])]:
