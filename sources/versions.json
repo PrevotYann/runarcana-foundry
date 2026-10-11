@@ -9,5 +9,5 @@
   "localInstallationObserved": {"foundry": "12.343", "dnd5e": "4.4.4", "babele": "2.6.2", "usedForModuleRuntimeTests": false, "modified": false},
   "buildAndUnitTests": {"node": "24.13.1", "python": "3.14.3", "foundryvtt-cli": "3.0.5", "beautifulsoup4": "4.14.3", "validation": "unit tests with mocks and static compiled-LevelDB checks"},
   "wiki": {"source": "https://wiki.runarcana.org/en/", "observedRulesVersions": ["0.96"], "observedBuilds": ["0.157"], "perPageMetadata": "sources/catalog.json", "nullVersionMeans": "not stated on this source; no version assumed"},
-  "module": {"version": "0.3.0", "runtimeVerified": false, "complete": false}
+  "module": {"version": "0.4.0", "runtimeVerified": false, "complete": false}
 }

@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "collectedAt": "2026-10-11T15:10:00.447453+00:00",
+  "collectedAt": "2026-10-11T15:35:16.219358+00:00",
   "discoveryComplete": false,
   "pages": [
     {
@@ -25793,9 +25793,16 @@
       "part": 4,
       "language": "en",
       "anchors": [],
-      "status": "pending",
+      "status": "collected",
       "attemptedAt": "2026-10-11T14:05:38.585814+00:00",
-      "cacheAvailable": false
+      "cacheAvailable": false,
+      "resolvedUrl": "https://wiki.runarcana.org/en/monsters-and-creatures/creatures/alnuk-warrior/",
+      "collectedAt": "2026-10-11T15:33:22.419157+00:00",
+      "sha256": "79dd9e2b556daef4a48f75633e49e7b1568eff8c4f34a0feca9210ff49fad7a7",
+      "cache": "sources/cache/74433f56e376597ee7195049c7b35ba9393fdb1c2da17f8103826601de98d94f.html",
+      "title": "Alnuk Warrior",
+      "rulesVersion": null,
+      "wikiBuild": "0.157"
     },
     {
       "id": "/en/monsters-and-creatures/creatures/arachnid-brood-spawn/",
@@ -25842,30 +25849,99 @@
       "url": "https://wiki.runarcana.org/en/monsters-and-creatures/creatures/azurite-eagle/",
       "part": 4,
       "language": "en",
-      "anchors": [],
-      "status": "pending",
+      "anchors": [
+        {
+          "id": "rewards",
+          "title": "Rewards",
+          "level": 2
+        },
+        {
+          "id": "item-crafting",
+          "title": "Item Crafting",
+          "level": 3
+        },
+        {
+          "id": "azurite-eagle-sheet",
+          "title": "Azurite Eagle Sheet",
+          "level": 2
+        }
+      ],
+      "status": "collected",
       "attemptedAt": "2026-10-11T14:05:38.631968+00:00",
-      "cacheAvailable": false
+      "cacheAvailable": false,
+      "resolvedUrl": "https://wiki.runarcana.org/en/monsters-and-creatures/creatures/azurite-eagle/",
+      "collectedAt": "2026-10-11T15:33:35.074034+00:00",
+      "sha256": "d25223f053116adbaee36664ce750afe5386b576b04cbf61a1e2c6a4f65f45b9",
+      "cache": "sources/cache/1af6de3101891113409da88ed9c13365111520a5ea1ffcc29c1372d0426d01d1.html",
+      "title": "Azurite Eagle",
+      "rulesVersion": null,
+      "wikiBuild": "0.157"
     },
     {
       "id": "/en/monsters-and-creatures/creatures/badgerbear/",
       "url": "https://wiki.runarcana.org/en/monsters-and-creatures/creatures/badgerbear/",
       "part": 4,
       "language": "en",
-      "anchors": [],
-      "status": "pending",
+      "anchors": [
+        {
+          "id": "badgerbear-statblocks",
+          "title": "Badgerbear Statblocks",
+          "level": 2
+        },
+        {
+          "id": "common",
+          "title": "Common",
+          "level": 3
+        },
+        {
+          "id": "security-badgerbear",
+          "title": "Security Badgerbear",
+          "level": 3
+        }
+      ],
+      "status": "collected",
       "attemptedAt": "2026-10-11T14:05:38.641408+00:00",
-      "cacheAvailable": false
+      "cacheAvailable": false,
+      "resolvedUrl": "https://wiki.runarcana.org/en/monsters-and-creatures/creatures/badgerbear/",
+      "collectedAt": "2026-10-11T15:25:33.617774+00:00",
+      "sha256": "09557b634bd6678c272ae7225bae3e4b595d24f53b4bdb08f5d09bcb47b38428",
+      "cache": "sources/cache/28e83fdec79127bceadfac049477c6bbd98b0cd0c523002415d268157f6a3810.html",
+      "title": "Badgerbear",
+      "rulesVersion": null,
+      "wikiBuild": "0.157"
     },
     {
       "id": "/en/monsters-and-creatures/creatures/bark-beast/",
       "url": "https://wiki.runarcana.org/en/monsters-and-creatures/creatures/bark-beast/",
       "part": 4,
       "language": "en",
-      "anchors": [],
-      "status": "pending",
+      "anchors": [
+        {
+          "id": "rewards",
+          "title": "Rewards",
+          "level": 2
+        },
+        {
+          "id": "crafting-items",
+          "title": "Crafting Items",
+          "level": 3
+        },
+        {
+          "id": "barkbeast-statblock",
+          "title": "Barkbeast Statblock",
+          "level": 2
+        }
+      ],
+      "status": "collected",
       "attemptedAt": "2026-10-11T14:05:38.649857+00:00",
-      "cacheAvailable": false
+      "cacheAvailable": false,
+      "resolvedUrl": "https://wiki.runarcana.org/en/monsters-and-creatures/creatures/bark-beast/",
+      "collectedAt": "2026-10-11T15:25:46.297418+00:00",
+      "sha256": "b945d0ede98b2b5031520d2fe30219f7569d72ca21e5e82f96a7425434888681",
+      "cache": "sources/cache/85aae18557eaa90d5b27beef9107f48c85339b9e1b15ab7f2259cec957b2e980.html",
+      "title": "Barkbeast",
+      "rulesVersion": null,
+      "wikiBuild": "0.157"
     },
     {
       "id": "/en/monsters-and-creatures/creatures/basilisk/",
@@ -25927,10 +26003,73 @@
       "url": "https://wiki.runarcana.org/en/monsters-and-creatures/creatures/blue-sentinel/",
       "part": 4,
       "language": "en",
-      "anchors": [],
-      "status": "pending",
+      "anchors": [
+        {
+          "id": "the-protected-region",
+          "title": "The Protected Region",
+          "level": 2
+        },
+        {
+          "id": "lair",
+          "title": "Lair",
+          "level": 2
+        },
+        {
+          "id": "regional-effects",
+          "title": "Regional Effects",
+          "level": 3
+        },
+        {
+          "id": "lair-actions",
+          "title": "Lair Actions",
+          "level": 3
+        },
+        {
+          "id": "rewards",
+          "title": "Rewards",
+          "level": 2
+        },
+        {
+          "id": "item-crafting",
+          "title": "Item Crafting",
+          "level": 3
+        },
+        {
+          "id": "formulas",
+          "title": "Formulas",
+          "level": 3
+        },
+        {
+          "id": "arcane-focus-blue-magic-orb",
+          "title": "Arcane Focus: Blue Magic Orb",
+          "level": 4
+        },
+        {
+          "id": "blue-sentinel-sheets",
+          "title": "Blue Sentinel Sheets",
+          "level": 2
+        },
+        {
+          "id": "blue-sentry",
+          "title": "Blue Sentry",
+          "level": 3
+        },
+        {
+          "id": "blue-sentinel",
+          "title": "Blue Sentinel",
+          "level": 3
+        }
+      ],
+      "status": "collected",
       "attemptedAt": "2026-10-11T14:05:38.678839+00:00",
-      "cacheAvailable": false
+      "cacheAvailable": false,
+      "resolvedUrl": "https://wiki.runarcana.org/en/monsters-and-creatures/creatures/blue-sentinel/",
+      "collectedAt": "2026-10-11T15:33:47.768606+00:00",
+      "sha256": "3ddef6612eb55b7deab7a204deac16db0591a1e0cae8c91bb92a072824ddce2e",
+      "cache": "sources/cache/837f1876faa5e831829e89bf4885cedad1e9e6d00ec956b218da3164162cdf5c.html",
+      "title": "Blue Sentinel",
+      "rulesVersion": null,
+      "wikiBuild": "0.157"
     },
     {
       "id": "/en/monsters-and-creatures/creatures/bolor/",
@@ -25960,30 +26099,69 @@
       "url": "https://wiki.runarcana.org/en/monsters-and-creatures/creatures/bottle-bees/",
       "part": 4,
       "language": "en",
-      "anchors": [],
-      "status": "pending",
+      "anchors": [
+        {
+          "id": "bottle-bee-sheet",
+          "title": "Bottle-Bee Sheet",
+          "level": 2
+        }
+      ],
+      "status": "collected",
       "attemptedAt": "2026-10-11T14:05:38.697918+00:00",
-      "cacheAvailable": false
+      "cacheAvailable": false,
+      "resolvedUrl": "https://wiki.runarcana.org/en/monsters-and-creatures/creatures/bottle-bees/",
+      "collectedAt": "2026-10-11T15:28:30.983774+00:00",
+      "sha256": "83c63c9e73d97f45a6b5afd41d0ce9ab47dd62fd784cba9e238e3402a36a6b1f",
+      "cache": "sources/cache/d410d99dddd1b6f779732f0185bdab68adc875305b5f55b574bb49c4d66be1c3.html",
+      "title": "Bottle-Bees",
+      "rulesVersion": null,
+      "wikiBuild": "0.157"
     },
     {
       "id": "/en/monsters-and-creatures/creatures/bovine-elnuk/",
       "url": "https://wiki.runarcana.org/en/monsters-and-creatures/creatures/bovine-elnuk/",
       "part": 4,
       "language": "en",
-      "anchors": [],
-      "status": "pending",
+      "anchors": [
+        {
+          "id": "bull-elnuk-statblock",
+          "title": "Bull Elnuk Statblock",
+          "level": 2
+        }
+      ],
+      "status": "collected",
       "attemptedAt": "2026-10-11T14:05:38.706304+00:00",
-      "cacheAvailable": false
+      "cacheAvailable": false,
+      "resolvedUrl": "https://wiki.runarcana.org/en/monsters-and-creatures/creatures/bovine-elnuk/",
+      "collectedAt": "2026-10-11T15:31:02.990668+00:00",
+      "sha256": "32479de1960ebccad098db4f934980d3552822517d16de6f43ebf6146c29d85a",
+      "cache": "sources/cache/6f80d3b761f18fcbbd2e0ba3013c8dafad8eb93ed6c064c16e19325d34c27f66.html",
+      "title": "Bull Elnuk",
+      "rulesVersion": null,
+      "wikiBuild": "0.157"
     },
     {
       "id": "/en/monsters-and-creatures/creatures/brave-poro/",
       "url": "https://wiki.runarcana.org/en/monsters-and-creatures/creatures/brave-poro/",
       "part": 4,
       "language": "en",
-      "anchors": [],
-      "status": "pending",
+      "anchors": [
+        {
+          "id": "plucky-poro-statblock",
+          "title": "Plucky Poro Statblock",
+          "level": 2
+        }
+      ],
+      "status": "collected",
       "attemptedAt": "2026-10-11T14:05:38.715307+00:00",
-      "cacheAvailable": false
+      "cacheAvailable": false,
+      "resolvedUrl": "https://wiki.runarcana.org/en/monsters-and-creatures/creatures/brave-poro/",
+      "collectedAt": "2026-10-11T15:25:58.972879+00:00",
+      "sha256": "058c4a7a90684decaf55d015b50c78ae994bcaec2d4f070414e19a2352bcbb00",
+      "cache": "sources/cache/59c254cede3d668f97e0a51701582dc8f95dd88e369f5ab7cd8a5f0d5c6c2e93.html",
+      "title": "Plucky Poro",
+      "rulesVersion": null,
+      "wikiBuild": "0.157"
     },
     {
       "id": "/en/monsters-and-creatures/creatures/brawler/",
@@ -26013,10 +26191,28 @@
       "url": "https://wiki.runarcana.org/en/monsters-and-creatures/creatures/bubble-bear/",
       "part": 4,
       "language": "en",
-      "anchors": [],
-      "status": "pending",
+      "anchors": [
+        {
+          "id": "rewards",
+          "title": "Rewards",
+          "level": 2
+        },
+        {
+          "id": "bubble-bear-sheet",
+          "title": "Bubble Bear Sheet",
+          "level": 2
+        }
+      ],
+      "status": "collected",
       "attemptedAt": "2026-10-11T14:05:38.731430+00:00",
-      "cacheAvailable": false
+      "cacheAvailable": false,
+      "resolvedUrl": "https://wiki.runarcana.org/en/monsters-and-creatures/creatures/bubble-bear/",
+      "collectedAt": "2026-10-11T15:28:43.637324+00:00",
+      "sha256": "cf852d9d614f06984add2c08a5f830f4fe17ea3fa883a50ab3bbbac24ec99e54",
+      "cache": "sources/cache/3dfa6bbca38d3c2cba5d6d275df48607a4080e6a077e9317a83f41ed6db42869.html",
+      "title": "Bubble Bear",
+      "rulesVersion": null,
+      "wikiBuild": "0.157"
     },
     {
       "id": "/en/monsters-and-creatures/creatures/buff-squirrel/",
@@ -26024,9 +26220,16 @@
       "part": 4,
       "language": "en",
       "anchors": [],
-      "status": "pending",
+      "status": "collected",
       "attemptedAt": "2026-10-11T14:05:38.738547+00:00",
-      "cacheAvailable": false
+      "cacheAvailable": false,
+      "resolvedUrl": "https://wiki.runarcana.org/en/monsters-and-creatures/creatures/buff-squirrel/",
+      "collectedAt": "2026-10-11T15:34:00.434710+00:00",
+      "sha256": "976877083f1013681e1052ad49aa480f2e20b6722ff2e5d436b83c20110cde01",
+      "cache": "sources/cache/1fba86e0c70acfaf92c7189dcde58ad84233afe8952903d4fee078f0568c3f1e.html",
+      "title": "Swole Squirrel",
+      "rulesVersion": null,
+      "wikiBuild": "0.157"
     },
     {
       "id": "/en/monsters-and-creatures/creatures/camel/",
@@ -26083,20 +26286,46 @@
       "url": "https://wiki.runarcana.org/en/monsters-and-creatures/creatures/caprihound/",
       "part": 4,
       "language": "en",
-      "anchors": [],
-      "status": "pending",
+      "anchors": [
+        {
+          "id": "ramhound-sheet",
+          "title": "Ramhound Sheet",
+          "level": 2
+        }
+      ],
+      "status": "collected",
       "attemptedAt": "2026-10-11T14:05:38.772097+00:00",
-      "cacheAvailable": false
+      "cacheAvailable": false,
+      "resolvedUrl": "https://wiki.runarcana.org/en/monsters-and-creatures/creatures/caprihound/",
+      "collectedAt": "2026-10-11T15:26:11.632688+00:00",
+      "sha256": "0623b6df6809ceabba4a147b96ff2331d93bd13a8cd5d2bdef2fe25111ed5eac",
+      "cache": "sources/cache/38dbb2eee3420818b67d86e08e20c40bef7288ec276473de981e4d4c7a50c36c.html",
+      "title": "Ramhound",
+      "rulesVersion": null,
+      "wikiBuild": "0.157"
     },
     {
       "id": "/en/monsters-and-creatures/creatures/captive-yeti/",
       "url": "https://wiki.runarcana.org/en/monsters-and-creatures/creatures/captive-yeti/",
       "part": 4,
       "language": "en",
-      "anchors": [],
-      "status": "pending",
+      "anchors": [
+        {
+          "id": "captive-yeti-statblock",
+          "title": "Captive Yeti Statblock",
+          "level": 2
+        }
+      ],
+      "status": "collected",
       "attemptedAt": "2026-10-11T14:05:38.779599+00:00",
-      "cacheAvailable": false
+      "cacheAvailable": false,
+      "resolvedUrl": "https://wiki.runarcana.org/en/monsters-and-creatures/creatures/captive-yeti/",
+      "collectedAt": "2026-10-11T15:31:15.632762+00:00",
+      "sha256": "7261ed999cf71e25cdd2e3c45da8ef286b1d537c4a09a96a856eae6459c5427e",
+      "cache": "sources/cache/aaa6c461d98eeea6f7ac43808b90bce184cf641aced84d7d3be7716171f6fe03.html",
+      "title": "Captive Yeti",
+      "rulesVersion": null,
+      "wikiBuild": "0.157"
     },
     {
       "id": "/en/monsters-and-creatures/creatures/cat/",
@@ -26126,10 +26355,23 @@
       "url": "https://wiki.runarcana.org/en/monsters-and-creatures/creatures/chembee-queen/",
       "part": 4,
       "language": "en",
-      "anchors": [],
-      "status": "pending",
+      "anchors": [
+        {
+          "id": "queen-chembee-statblock",
+          "title": "Queen-Chembee Statblock",
+          "level": 2
+        }
+      ],
+      "status": "collected",
       "attemptedAt": "2026-10-11T14:05:38.796897+00:00",
-      "cacheAvailable": false
+      "cacheAvailable": false,
+      "resolvedUrl": "https://wiki.runarcana.org/en/monsters-and-creatures/creatures/chembee-queen/",
+      "collectedAt": "2026-10-11T15:34:13.098972+00:00",
+      "sha256": "c8add8d8ea0ac6d0ead51e60c08e4d1fba23ef6ba7d9385de4130d7d30b7c306",
+      "cache": "sources/cache/2d2e94e8dfefbdb90e25b2aded14310d120bbc89a1140ae5caa44eebd2456758.html",
+      "title": "Queen-Chembee",
+      "rulesVersion": null,
+      "wikiBuild": "0.157"
     },
     {
       "id": "/en/monsters-and-creatures/creatures/chilopod-voidling/",
@@ -26146,20 +26388,91 @@
       "url": "https://wiki.runarcana.org/en/monsters-and-creatures/creatures/clawstrider/",
       "part": 4,
       "language": "en",
-      "anchors": [],
-      "status": "pending",
+      "anchors": [
+        {
+          "id": "snowy-razorclaw-statblock",
+          "title": "Snowy Razorclaw Statblock",
+          "level": 2
+        }
+      ],
+      "status": "collected",
       "attemptedAt": "2026-10-11T14:05:38.813780+00:00",
-      "cacheAvailable": false
+      "cacheAvailable": false,
+      "resolvedUrl": "https://wiki.runarcana.org/en/monsters-and-creatures/creatures/clawstrider/",
+      "collectedAt": "2026-10-11T15:28:56.378312+00:00",
+      "sha256": "76733b4077868fc30eff80b2176fdcc02efa0df9da76b5f58dff3ff41c1c01f2",
+      "cache": "sources/cache/7dc1d6d645b848ca858e0531fa71db0b49d4569992ee0beb40ad0a907eba13ff.html",
+      "title": "Snowy Razorclaw",
+      "rulesVersion": null,
+      "wikiBuild": "0.157"
     },
     {
       "id": "/en/monsters-and-creatures/creatures/cloud-dragon/",
       "url": "https://wiki.runarcana.org/en/monsters-and-creatures/creatures/cloud-dragon/",
       "part": 4,
       "language": "en",
-      "anchors": [],
-      "status": "pending",
+      "anchors": [
+        {
+          "id": "lair",
+          "title": "Lair",
+          "level": 2
+        },
+        {
+          "id": "regional-effects",
+          "title": "Regional Effects",
+          "level": 3
+        },
+        {
+          "id": "lair-actions",
+          "title": "Lair Actions",
+          "level": 3
+        },
+        {
+          "id": "rewards",
+          "title": "Rewards",
+          "level": 2
+        },
+        {
+          "id": "item-crafting",
+          "title": "Item Crafting",
+          "level": 3
+        },
+        {
+          "id": "cloud-drake-sheets",
+          "title": "Cloud Drake Sheets",
+          "level": 2
+        },
+        {
+          "id": "hatchling",
+          "title": "Hatchling",
+          "level": 3
+        },
+        {
+          "id": "young",
+          "title": "Young",
+          "level": 3
+        },
+        {
+          "id": "adult",
+          "title": "Adult",
+          "level": 3
+        },
+        {
+          "id": "elder",
+          "title": "Elder",
+          "level": 3
+        }
+      ],
+      "status": "collected",
       "attemptedAt": "2026-10-11T14:05:38.823660+00:00",
-      "cacheAvailable": false
+      "cacheAvailable": false,
+      "resolvedUrl": "https://wiki.runarcana.org/en/monsters-and-creatures/creatures/cloud-dragon/",
+      "collectedAt": "2026-10-11T15:31:28.302933+00:00",
+      "sha256": "0aa7328d4677ba75d811afc0d58f9bdba86ec68e2040e36f395f175f1fa81587",
+      "cache": "sources/cache/116baa74f9df65b0c7e3801bc5b916b166bd3c679363f69a8fd377a0eabf69cc.html",
+      "title": "Cloud Drake",
+      "rulesVersion": null,
+      "wikiBuild": "0.157"
     },
     {
       "id": "/en/monsters-and-creatures/creatures/crabs/",
@@ -26269,10 +26582,23 @@
       "url": "https://wiki.runarcana.org/en/monsters-and-creatures/creatures/deck-hunter/",
       "part": 4,
       "language": "en",
-      "anchors": [],
-      "status": "pending",
+      "anchors": [
+        {
+          "id": "deck-hunter-sheet",
+          "title": "Deck Hunter Sheet",
+          "level": 2
+        }
+      ],
+      "status": "collected",
       "attemptedAt": "2026-10-11T14:05:38.882559+00:00",
-      "cacheAvailable": false
+      "cacheAvailable": false,
+      "resolvedUrl": "https://wiki.runarcana.org/en/monsters-and-creatures/creatures/deck-hunter/",
+      "collectedAt": "2026-10-11T15:29:09.047786+00:00",
+      "sha256": "7073d77d51cb0c660e0b95e76791cf9fafb4c7c27bf3c52f4526886842577ab1",
+      "cache": "sources/cache/417414f2d5ba341f54524362bf927d56454861bdbe626d8f71941aeb78e80c59.html",
+      "title": "Deck Hunter",
+      "rulesVersion": null,
+      "wikiBuild": "0.157"
     },
     {
       "id": "/en/monsters-and-creatures/creatures/defender-captain/",
@@ -26299,10 +26625,23 @@
       "url": "https://wiki.runarcana.org/en/monsters-and-creatures/creatures/demolisher/",
       "part": 4,
       "language": "en",
-      "anchors": [],
-      "status": "pending",
+      "anchors": [
+        {
+          "id": "demolisher-sheet",
+          "title": "Demolisher Sheet",
+          "level": 2
+        }
+      ],
+      "status": "collected",
       "attemptedAt": "2026-10-11T14:05:38.902556+00:00",
-      "cacheAvailable": false
+      "cacheAvailable": false,
+      "resolvedUrl": "https://wiki.runarcana.org/en/monsters-and-creatures/creatures/demolisher/",
+      "collectedAt": "2026-10-11T15:26:24.289236+00:00",
+      "sha256": "e55cb1749c56d131a68b175a9ed69b1691bef04d6455b85b1aac49ec8a834223",
+      "cache": "sources/cache/4532bd047c73a3fa0db1d5cce285438dbe80a9cc0312f1bc0301dbac71a5fbd1.html",
+      "title": "Demolisher",
+      "rulesVersion": null,
+      "wikiBuild": "0.157"
     },
     {
       "id": "/en/monsters-and-creatures/creatures/detonator/",
@@ -26389,19 +26728,59 @@
       "part": 4,
       "language": "en",
       "anchors": [],
-      "status": "pending",
+      "status": "collected",
       "attemptedAt": "2026-10-11T14:05:38.949432+00:00",
-      "cacheAvailable": false
+      "cacheAvailable": false,
+      "resolvedUrl": "https://wiki.runarcana.org/en/monsters-and-creatures/creatures/donkey-mule/",
+      "collectedAt": "2026-10-11T15:29:21.711681+00:00",
+      "sha256": "39ead64956490717ddd731e1a6a7e140d7d39b5cd84cf42812e944d53c1f35bb",
+      "cache": "sources/cache/e0ddaf546499f6767dd927412578c7d38ad7df5ba2d387ee14453838bdbb1126.html",
+      "title": "Donkey / Mule",
+      "rulesVersion": null,
+      "wikiBuild": "0.157"
     },
     {
       "id": "/en/monsters-and-creatures/creatures/dragon-hound/",
       "url": "https://wiki.runarcana.org/en/monsters-and-creatures/creatures/dragon-hound/",
       "part": 4,
       "language": "en",
-      "anchors": [],
-      "status": "pending",
+      "anchors": [
+        {
+          "id": "rewards",
+          "title": "Rewards",
+          "level": 2
+        },
+        {
+          "id": "item-crafting",
+          "title": "Item Crafting",
+          "level": 3
+        },
+        {
+          "id": "drakehound-sheets",
+          "title": "Drakehound Sheets",
+          "level": 2
+        },
+        {
+          "id": "common",
+          "title": "Common",
+          "level": 3
+        },
+        {
+          "id": "noxian",
+          "title": "Noxian",
+          "level": 3
+        }
+      ],
+      "status": "collected",
       "attemptedAt": "2026-10-11T14:05:38.958594+00:00",
-      "cacheAvailable": false
+      "cacheAvailable": false,
+      "resolvedUrl": "https://wiki.runarcana.org/en/monsters-and-creatures/creatures/dragon-hound/",
+      "collectedAt": "2026-10-11T15:31:40.994592+00:00",
+      "sha256": "5cd8dd3793d2e029c99246939e67b97f9a97aa745238d9ad1f8d3c691798ed40",
+      "cache": "sources/cache/ac99a9a55a7c98a74d6a686e5afe6468e7e6db45d0e1c3ecb0d4107e10461e20.html",
+      "title": "Drakehound",
+      "rulesVersion": null,
+      "wikiBuild": "0.157"
     },
     {
       "id": "/en/monsters-and-creatures/creatures/dragonling/",
@@ -26409,9 +26788,16 @@
       "part": 4,
       "language": "en",
       "anchors": [],
-      "status": "pending",
+      "status": "collected",
       "attemptedAt": "2026-10-11T14:05:38.967061+00:00",
-      "cacheAvailable": false
+      "cacheAvailable": false,
+      "resolvedUrl": "https://wiki.runarcana.org/en/monsters-and-creatures/creatures/dragonling/",
+      "collectedAt": "2026-10-11T15:26:36.940684+00:00",
+      "sha256": "eaf1058ad95b510461d96209898962e21c1f605fd29bca557d8d2331ede16665",
+      "cache": "sources/cache/e2db32a7eff11d45e4c8873477772b3ab2c3ac743de905f80a1192baf0dd59b3.html",
+      "title": "Dragonling",
+      "rulesVersion": null,
+      "wikiBuild": "0.157"
     },
     {
       "id": "/en/monsters-and-creatures/creatures/drakalope/",
@@ -26640,20 +27026,46 @@
       "url": "https://wiki.runarcana.org/en/monsters-and-creatures/creatures/fleefeather/",
       "part": 4,
       "language": "en",
-      "anchors": [],
-      "status": "pending",
+      "anchors": [
+        {
+          "id": "fleefeather-statblocks",
+          "title": "Fleefeather Statblocks",
+          "level": 2
+        }
+      ],
+      "status": "collected",
       "attemptedAt": "2026-10-11T14:05:39.066885+00:00",
-      "cacheAvailable": false
+      "cacheAvailable": false,
+      "resolvedUrl": "https://wiki.runarcana.org/en/monsters-and-creatures/creatures/fleefeather/",
+      "collectedAt": "2026-10-11T15:29:34.366535+00:00",
+      "sha256": "a0038ce9fab914134384dcf513ebcec9cb3438f723fa910b5829f80ce5e4cc39",
+      "cache": "sources/cache/f60764c75a7cd1c498b6c2d5eb9f8345029290ec422c497595740fb7cd919f0f.html",
+      "title": "Fleefeather",
+      "rulesVersion": null,
+      "wikiBuild": "0.157"
     },
     {
       "id": "/en/monsters-and-creatures/creatures/freed-spirits/",
       "url": "https://wiki.runarcana.org/en/monsters-and-creatures/creatures/freed-spirits/",
       "part": 4,
       "language": "en",
-      "anchors": [],
-      "status": "pending",
+      "anchors": [
+        {
+          "id": "unleashed-spirit-statblock",
+          "title": "Unleashed Spirit Statblock",
+          "level": 2
+        }
+      ],
+      "status": "collected",
       "attemptedAt": "2026-10-11T14:05:39.073589+00:00",
-      "cacheAvailable": false
+      "cacheAvailable": false,
+      "resolvedUrl": "https://wiki.runarcana.org/en/monsters-and-creatures/creatures/freed-spirits/",
+      "collectedAt": "2026-10-11T15:34:25.765663+00:00",
+      "sha256": "1cc7f324aed7d60f180e0d3bcde8286a0a4cf2f0614e135d901aba817fd828f0",
+      "cache": "sources/cache/d7900c2b112d8daf4ec1833e9710efa93716fdd308779417f4a7d1a5e0b34efb.html",
+      "title": "Unleashed Spirits",
+      "rulesVersion": null,
+      "wikiBuild": "0.157"
     },
     {
       "id": "/en/monsters-and-creatures/creatures/frenzied-skitterer/",
@@ -26727,9 +27139,16 @@
       "part": 4,
       "language": "en",
       "anchors": [],
-      "status": "pending",
+      "status": "collected",
       "attemptedAt": "2026-10-11T14:05:39.119118+00:00",
-      "cacheAvailable": false
+      "cacheAvailable": false,
+      "resolvedUrl": "https://wiki.runarcana.org/en/monsters-and-creatures/creatures/giant-crab/",
+      "collectedAt": "2026-10-11T15:26:49.622204+00:00",
+      "sha256": "eacc2d378ac3c5ebe274401c4647e9bcb2c052c7eb6ffe47152e96d8ff679dd7",
+      "cache": "sources/cache/07d439233df8f5bf12657031643f38b05155b613a17ccc6cac86ba0b955c940b.html",
+      "title": "Giant Crab",
+      "rulesVersion": null,
+      "wikiBuild": "0.157"
     },
     {
       "id": "/en/monsters-and-creatures/creatures/giant-eagle/",
@@ -26737,9 +27156,16 @@
       "part": 4,
       "language": "en",
       "anchors": [],
-      "status": "pending",
+      "status": "collected",
       "attemptedAt": "2026-10-11T14:05:39.126075+00:00",
-      "cacheAvailable": false
+      "cacheAvailable": false,
+      "resolvedUrl": "https://wiki.runarcana.org/en/monsters-and-creatures/creatures/giant-eagle/",
+      "collectedAt": "2026-10-11T15:29:47.010688+00:00",
+      "sha256": "1fc97f0d704384cdeff23f1438503c9a4ff1fc69bfea336a03c33327f14797ac",
+      "cache": "sources/cache/0bd7cff23596a205ba864fddf6de1b6556020089ea91ecdf0bb12939806b3e12.html",
+      "title": "Giant Eagle",
+      "rulesVersion": null,
+      "wikiBuild": "0.157"
     },
     {
       "id": "/en/monsters-and-creatures/creatures/giant-frog/",
@@ -26747,19 +27173,39 @@
       "part": 4,
       "language": "en",
       "anchors": [],
-      "status": "pending",
+      "status": "collected",
       "attemptedAt": "2026-10-11T14:05:39.134749+00:00",
-      "cacheAvailable": false
+      "cacheAvailable": false,
+      "resolvedUrl": "https://wiki.runarcana.org/en/monsters-and-creatures/creatures/giant-frog/",
+      "collectedAt": "2026-10-11T15:27:02.284166+00:00",
+      "sha256": "fa1fd59b46c00849d2f88dc5339ba3cffa793f752f662326b81cbb7a4f105584",
+      "cache": "sources/cache/636fff7f8f1b9973c6a7612f6a83a1b6970b2e878041f1f6303cbd99581c6b0b.html",
+      "title": "Giant Frog",
+      "rulesVersion": null,
+      "wikiBuild": "0.157"
     },
     {
       "id": "/en/monsters-and-creatures/creatures/giant-jackdaw/",
       "url": "https://wiki.runarcana.org/en/monsters-and-creatures/creatures/giant-jackdaw/",
       "part": 4,
       "language": "en",
-      "anchors": [],
-      "status": "pending",
+      "anchors": [
+        {
+          "id": "giant-crow-statblock",
+          "title": "Giant Crow Statblock",
+          "level": 2
+        }
+      ],
+      "status": "collected",
       "attemptedAt": "2026-10-11T14:05:39.144180+00:00",
-      "cacheAvailable": false
+      "cacheAvailable": false,
+      "resolvedUrl": "https://wiki.runarcana.org/en/monsters-and-creatures/creatures/giant-jackdaw/",
+      "collectedAt": "2026-10-11T15:34:38.435488+00:00",
+      "sha256": "b1610d4d046118ec4d46dc1f3333ada71042141512af5390e6973f31b030257c",
+      "cache": "sources/cache/778a3c4f802036d821e49693a9d70c6b8987f842888bbef5159aa2cda4b5120c.html",
+      "title": "Giant Crow",
+      "rulesVersion": null,
+      "wikiBuild": "0.157"
     },
     {
       "id": "/en/monsters-and-creatures/creatures/giant-owl/",
@@ -26784,29 +27230,72 @@
       "part": 4,
       "language": "en",
       "anchors": [],
-      "status": "pending",
+      "status": "collected",
       "attemptedAt": "2026-10-11T14:05:39.163214+00:00",
-      "cacheAvailable": false
+      "cacheAvailable": false,
+      "resolvedUrl": "https://wiki.runarcana.org/en/monsters-and-creatures/creatures/giant-rat/",
+      "collectedAt": "2026-10-11T15:23:39.690467+00:00",
+      "sha256": "144526a70274740d18702de73e80086cd8689aab62eda00fc076004f17847aeb",
+      "cache": "sources/cache/1f9481d0b28f2c37b2bfc8638fb08f09eec0f246ce94f775fd04a318dc8c3131.html",
+      "title": "Giant Rat",
+      "rulesVersion": null,
+      "wikiBuild": "0.157"
     },
     {
       "id": "/en/monsters-and-creatures/creatures/giant-spider/",
       "url": "https://wiki.runarcana.org/en/monsters-and-creatures/creatures/giant-spider/",
       "part": 4,
       "language": "en",
-      "anchors": [],
-      "status": "pending",
+      "anchors": [
+        {
+          "id": "giant-spider-sheet",
+          "title": "Giant Spider Sheet",
+          "level": 2
+        }
+      ],
+      "status": "collected",
       "attemptedAt": "2026-10-11T14:05:39.172923+00:00",
-      "cacheAvailable": false
+      "cacheAvailable": false,
+      "resolvedUrl": "https://wiki.runarcana.org/en/monsters-and-creatures/creatures/giant-spider/",
+      "collectedAt": "2026-10-11T15:31:53.673367+00:00",
+      "sha256": "6ad4177bf3dcef203f076032622d8479823767541e10b4f9189fc3faa7847746",
+      "cache": "sources/cache/5fd643f5a8d6c09763d6ad8169607ce9ee05aedbace4a0d7f15681b2dec72e97.html",
+      "title": "Giant Spider",
+      "rulesVersion": null,
+      "wikiBuild": "0.157"
     },
     {
       "id": "/en/monsters-and-creatures/creatures/glimmerfly/",
       "url": "https://wiki.runarcana.org/en/monsters-and-creatures/creatures/glimmerfly/",
       "part": 4,
       "language": "en",
-      "anchors": [],
-      "status": "pending",
+      "anchors": [
+        {
+          "id": "sparklefly-sheets",
+          "title": "Sparklefly Sheets",
+          "level": 2
+        },
+        {
+          "id": "individual",
+          "title": "Individual",
+          "level": 3
+        },
+        {
+          "id": "clouds",
+          "title": "Clouds",
+          "level": 3
+        }
+      ],
+      "status": "collected",
       "attemptedAt": "2026-10-11T14:05:39.179860+00:00",
-      "cacheAvailable": false
+      "cacheAvailable": false,
+      "resolvedUrl": "https://wiki.runarcana.org/en/monsters-and-creatures/creatures/glimmerfly/",
+      "collectedAt": "2026-10-11T15:27:14.937470+00:00",
+      "sha256": "45c8b348aa92694d7d208c91c0344a98fc13ecfa56a2b04c262d6a6282de3866",
+      "cache": "sources/cache/9722a4d7f1cd6f71acc15381d03218da9aba080c83ccc0b331797c25ae6cdd56.html",
+      "title": "Sparklefly",
+      "rulesVersion": null,
+      "wikiBuild": "0.157"
     },
     {
       "id": "/en/monsters-and-creatures/creatures/goat/",
@@ -26942,10 +27431,53 @@
       "url": "https://wiki.runarcana.org/en/monsters-and-creatures/creatures/hive-herald/",
       "part": 4,
       "language": "en",
-      "anchors": [],
-      "status": "pending",
+      "anchors": [
+        {
+          "id": "lair",
+          "title": "Lair",
+          "level": 2
+        },
+        {
+          "id": "regional-effects",
+          "title": "Regional Effects",
+          "level": 3
+        },
+        {
+          "id": "lair-actions",
+          "title": "Lair Actions",
+          "level": 3
+        },
+        {
+          "id": "void-portal-sheets",
+          "title": "Void Portal Sheets",
+          "level": 2
+        },
+        {
+          "id": "herald",
+          "title": "Herald",
+          "level": 3
+        },
+        {
+          "id": "neonatologist",
+          "title": "Neonatologist",
+          "level": 3
+        },
+        {
+          "id": "embryo",
+          "title": "Embryo",
+          "level": 3
+        }
+      ],
+      "status": "collected",
       "attemptedAt": "2026-10-11T14:05:39.240323+00:00",
-      "cacheAvailable": false
+      "cacheAvailable": false,
+      "resolvedUrl": "https://wiki.runarcana.org/en/monsters-and-creatures/creatures/hive-herald/",
+      "collectedAt": "2026-10-11T15:29:59.649948+00:00",
+      "sha256": "0fa904982e42cf77bcc540e58c6f0ff18d1e13ffdc6f1b250b38cb8383b07150",
+      "cache": "sources/cache/b9624948c2ab694173f517d9f39c2740e8d0f72a7d1cfd9d9d27d7041fb69b63.html",
+      "title": "Hive Herald",
+      "rulesVersion": null,
+      "wikiBuild": "0.157"
     },
     {
       "id": "/en/monsters-and-creatures/creatures/homeless/",
@@ -27018,10 +27550,33 @@
       "url": "https://wiki.runarcana.org/en/monsters-and-creatures/creatures/house-spider/",
       "part": 4,
       "language": "en",
-      "anchors": [],
-      "status": "pending",
+      "anchors": [
+        {
+          "id": "house-spider-sheets",
+          "title": "House Spider Sheets",
+          "level": 2
+        },
+        {
+          "id": "individual",
+          "title": "Individual",
+          "level": 3
+        },
+        {
+          "id": "colony",
+          "title": "Colony",
+          "level": 3
+        }
+      ],
+      "status": "collected",
       "attemptedAt": "2026-10-11T14:05:39.266003+00:00",
-      "cacheAvailable": false
+      "cacheAvailable": false,
+      "resolvedUrl": "https://wiki.runarcana.org/en/monsters-and-creatures/creatures/house-spider/",
+      "collectedAt": "2026-10-11T15:32:06.365384+00:00",
+      "sha256": "59f615e19cb10381718e43bd54cec87cdade2300a8e5eac5158b85dc8cb911bc",
+      "cache": "sources/cache/d1013ef53f5d5f1bb5da77fa73fb128f31add09471c96268967a779c8d0abdb5.html",
+      "title": "House Spider",
+      "rulesVersion": null,
+      "wikiBuild": "0.157"
     },
     {
       "id": "/en/monsters-and-creatures/creatures/ibik/",
@@ -27192,10 +27747,23 @@
       "url": "https://wiki.runarcana.org/en/monsters-and-creatures/creatures/mister-root/",
       "part": 4,
       "language": "en",
-      "anchors": [],
-      "status": "pending",
+      "anchors": [
+        {
+          "id": "mister-root-sheet",
+          "title": "Mister Root Sheet",
+          "level": 2
+        }
+      ],
+      "status": "collected",
       "attemptedAt": "2026-10-11T14:05:39.303248+00:00",
-      "cacheAvailable": false
+      "cacheAvailable": false,
+      "resolvedUrl": "https://wiki.runarcana.org/en/monsters-and-creatures/creatures/mister-root/",
+      "collectedAt": "2026-10-11T15:30:12.315851+00:00",
+      "sha256": "a60656b2b149b0278a78a2ca64fbeec111fbada8fd91af65cab4ed41c11ad58d",
+      "cache": "sources/cache/d8aeb58a2c2ecabef8346763b1db63f6bb56f01f8cb17d7409289c62385aab0c.html",
+      "title": "Mister Root",
+      "rulesVersion": null,
+      "wikiBuild": "0.157"
     },
     {
       "id": "/en/monsters-and-creatures/creatures/moose/",
@@ -27217,20 +27785,76 @@
       "url": "https://wiki.runarcana.org/en/monsters-and-creatures/creatures/mountain-goat/",
       "part": 4,
       "language": "en",
-      "anchors": [],
-      "status": "pending",
+      "anchors": [
+        {
+          "id": "rewards",
+          "title": "Rewards",
+          "level": 2
+        },
+        {
+          "id": "item-crafting",
+          "title": "Item Crafting",
+          "level": 3
+        },
+        {
+          "id": "mountain-goat-sheets",
+          "title": "Mountain Goat Sheets",
+          "level": 2
+        },
+        {
+          "id": "kid",
+          "title": "Kid",
+          "level": 3
+        },
+        {
+          "id": "adult",
+          "title": "Adult",
+          "level": 3
+        }
+      ],
+      "status": "collected",
       "attemptedAt": "2026-10-11T14:05:39.345986+00:00",
-      "cacheAvailable": false
+      "cacheAvailable": false,
+      "resolvedUrl": "https://wiki.runarcana.org/en/monsters-and-creatures/creatures/mountain-goat/",
+      "collectedAt": "2026-10-11T15:34:51.101477+00:00",
+      "sha256": "ddd396142949e8e1da5cf3143f2705771777068cfbbf4bd19add85b1fe8a8b86",
+      "cache": "sources/cache/16bb7f9d25ff6e81fce54a7d02a71f473d7efd0a41a2820301f15d018f3ee184.html",
+      "title": "Mountain Goat",
+      "rulesVersion": null,
+      "wikiBuild": "0.157"
     },
     {
       "id": "/en/monsters-and-creatures/creatures/murk-wolves/",
       "url": "https://wiki.runarcana.org/en/monsters-and-creatures/creatures/murk-wolves/",
       "part": 4,
       "language": "en",
-      "anchors": [],
-      "status": "pending",
+      "anchors": [
+        {
+          "id": "murk-wolf-and-murk-wolf-hydra-statblocks",
+          "title": "Murk Wolf and Murk Wolf Hydra Statblocks",
+          "level": 2
+        },
+        {
+          "id": "murk-wolf",
+          "title": "Murk Wolf",
+          "level": 3
+        },
+        {
+          "id": "murk-wolf-hydra",
+          "title": "Murk Wolf Hydra",
+          "level": 3
+        }
+      ],
+      "status": "collected",
       "attemptedAt": "2026-10-11T14:05:39.352188+00:00",
-      "cacheAvailable": false
+      "cacheAvailable": false,
+      "resolvedUrl": "https://wiki.runarcana.org/en/monsters-and-creatures/creatures/murk-wolves/",
+      "collectedAt": "2026-10-11T15:30:24.979621+00:00",
+      "sha256": "e1b66c2218b4a531a21549abd6ba16a716e1c65a2f0c7eb4fd2143e89a339421",
+      "cache": "sources/cache/ccfecbfc05c0e9e46086d12b7604974c135ed8cbe4ea7ba6f9c79d4bb1c3c1b2.html",
+      "title": "Murk Wolves",
+      "rulesVersion": null,
+      "wikiBuild": "0.157"
     },
     {
       "id": "/en/monsters-and-creatures/creatures/navori-longtail/",
@@ -27257,10 +27881,23 @@
       "url": "https://wiki.runarcana.org/en/monsters-and-creatures/creatures/noxian-risen/",
       "part": 4,
       "language": "en",
-      "anchors": [],
-      "status": "pending",
+      "anchors": [
+        {
+          "id": "risen-statblocks",
+          "title": "Risen Statblocks",
+          "level": 2
+        }
+      ],
+      "status": "collected",
       "attemptedAt": "2026-10-11T14:05:39.372999+00:00",
-      "cacheAvailable": false
+      "cacheAvailable": false,
+      "resolvedUrl": "https://wiki.runarcana.org/en/monsters-and-creatures/creatures/noxian-risen/",
+      "collectedAt": "2026-10-11T15:32:19.028215+00:00",
+      "sha256": "72dce7f2fe21f9008fe69bd264b06b034ab0eaf75b481999d86e44aab7834c29",
+      "cache": "sources/cache/cbb893679d204aa714006d7793c3dd212306cd9dff6a757aad1611b5ff2a2ed4.html",
+      "title": "Noxian Risen",
+      "rulesVersion": null,
+      "wikiBuild": "0.157"
     },
     {
       "id": "/en/monsters-and-creatures/creatures/ophidian-brood-spawn/",
@@ -27344,10 +27981,53 @@
       "url": "https://wiki.runarcana.org/en/monsters-and-creatures/creatures/poison-frog/",
       "part": 4,
       "language": "en",
-      "anchors": [],
-      "status": "pending",
+      "anchors": [
+        {
+          "id": "rewards",
+          "title": "Rewards",
+          "level": 2
+        },
+        {
+          "id": "venom",
+          "title": "Venom",
+          "level": 3
+        },
+        {
+          "id": "venom-effects",
+          "title": "Venom Effects",
+          "level": 4
+        },
+        {
+          "id": "poison-frog-statblocks",
+          "title": "Poison Frog Statblocks",
+          "level": 2
+        },
+        {
+          "id": "individual",
+          "title": "Individual",
+          "level": 3
+        },
+        {
+          "id": "collective",
+          "title": "Collective",
+          "level": 3
+        },
+        {
+          "id": "giant",
+          "title": "Giant",
+          "level": 3
+        }
+      ],
+      "status": "collected",
       "attemptedAt": "2026-10-11T14:05:39.422462+00:00",
-      "cacheAvailable": false
+      "cacheAvailable": false,
+      "resolvedUrl": "https://wiki.runarcana.org/en/monsters-and-creatures/creatures/poison-frog/",
+      "collectedAt": "2026-10-11T15:30:37.671485+00:00",
+      "sha256": "83d64bfec4580d3949181f8febdc8db9664583673eaef0d15fdbc3897685c780",
+      "cache": "sources/cache/29a1402b9baabd1573604b3246f2bcb97553d227545f83a8aca35e4612b537e0.html",
+      "title": "Poison Frog",
+      "rulesVersion": null,
+      "wikiBuild": "0.157"
     },
     {
       "id": "/en/monsters-and-creatures/creatures/poro/",
@@ -27377,10 +28057,23 @@
       "url": "https://wiki.runarcana.org/en/monsters-and-creatures/creatures/powder-monkey/",
       "part": 4,
       "language": "en",
-      "anchors": [],
-      "status": "pending",
+      "anchors": [
+        {
+          "id": "explosive-monkey-statblock",
+          "title": "Explosive Monkey Statblock",
+          "level": 2
+        }
+      ],
+      "status": "collected",
       "attemptedAt": "2026-10-11T14:05:39.439672+00:00",
-      "cacheAvailable": false
+      "cacheAvailable": false,
+      "resolvedUrl": "https://wiki.runarcana.org/en/monsters-and-creatures/creatures/powder-monkey/",
+      "collectedAt": "2026-10-11T15:35:03.780958+00:00",
+      "sha256": "e4f5fb7af8c5840ae31462bac07b62ea852d375cb8868cb8a1b2788eacaf629a",
+      "cache": "sources/cache/c7983e85cea69d87cce944b2b573b3fc6f70395c4391343246d78b1238934934.html",
+      "title": "Powder Monkey",
+      "rulesVersion": null,
+      "wikiBuild": "0.157"
     },
     {
       "id": "/en/monsters-and-creatures/creatures/public-guardian/",
@@ -27431,9 +28124,16 @@
       "part": 4,
       "language": "en",
       "anchors": [],
-      "status": "pending",
+      "status": "collected",
       "attemptedAt": "2026-10-11T14:05:39.462404+00:00",
-      "cacheAvailable": false
+      "cacheAvailable": false,
+      "resolvedUrl": "https://wiki.runarcana.org/en/monsters-and-creatures/creatures/rainbow-fish/",
+      "collectedAt": "2026-10-11T15:32:31.700607+00:00",
+      "sha256": "5910e84456aef5b4e559eb084b50c951f293db8831553abbd8848e44f994d818",
+      "cache": "sources/cache/1a527efd5912b66bcb1899c200b4cda386b11b8e4fb508bfb3eb04a98884aaf5.html",
+      "title": "Rainbow Fish",
+      "rulesVersion": null,
+      "wikiBuild": "0.157"
     },
     {
       "id": "/en/monsters-and-creatures/creatures/raptors/",
@@ -27618,9 +28318,16 @@
       "part": 4,
       "language": "en",
       "anchors": [],
-      "status": "pending",
+      "status": "collected",
       "attemptedAt": "2026-10-11T14:05:39.535470+00:00",
-      "cacheAvailable": false
+      "cacheAvailable": false,
+      "resolvedUrl": "https://wiki.runarcana.org/en/monsters-and-creatures/creatures/rhinoceros/",
+      "collectedAt": "2026-10-11T15:27:27.598239+00:00",
+      "sha256": "73fe25bc1f0093019b4bd4c56ccf73e9b4e11bbd47caf28897c54d72ce698ec8",
+      "cache": "sources/cache/dfe964ed7d40251aac10a7af1b7de199c8210a9a6c1bcd1eb9fb2139f8fc3af6.html",
+      "title": "Rhinoceros",
+      "rulesVersion": null,
+      "wikiBuild": "0.157"
     },
     {
       "id": "/en/monsters-and-creatures/creatures/rockbear/",
@@ -27686,9 +28393,16 @@
       "part": 4,
       "language": "en",
       "anchors": [],
-      "status": "pending",
+      "status": "collected",
       "attemptedAt": "2026-10-11T14:05:39.564264+00:00",
-      "cacheAvailable": false
+      "cacheAvailable": false,
+      "resolvedUrl": "https://wiki.runarcana.org/en/monsters-and-creatures/creatures/sand-swimmer/",
+      "collectedAt": "2026-10-11T15:32:44.354625+00:00",
+      "sha256": "7987c3dd50bdae5886f42a5e9765278330813294a9838b5bf470b16f8d8c9372",
+      "cache": "sources/cache/3b85d48ddc4812adf64ceb232db72dfc6d5c1b4e0478e6993365521ec25c9616.html",
+      "title": "Sand Swimmer",
+      "rulesVersion": null,
+      "wikiBuild": "0.157"
     },
     {
       "id": "/en/monsters-and-creatures/creatures/screeching-dragon/",
@@ -27705,10 +28419,48 @@
       "url": "https://wiki.runarcana.org/en/monsters-and-creatures/creatures/scuttle-crab/",
       "part": 4,
       "language": "en",
-      "anchors": [],
-      "status": "pending",
+      "anchors": [
+        {
+          "id": "swift-sanctuary",
+          "title": "Swift Sanctuary",
+          "level": 2
+        },
+        {
+          "id": "rewards",
+          "title": "Rewards",
+          "level": 2
+        },
+        {
+          "id": "item-crafting",
+          "title": "Item Crafting",
+          "level": 3
+        },
+        {
+          "id": "formulas",
+          "title": "Formulas",
+          "level": 3
+        },
+        {
+          "id": "potion-of-revelation-50-ml",
+          "title": "Potion of Revelation (50 ml)",
+          "level": 4
+        },
+        {
+          "id": "scuttle-crab-sheet",
+          "title": "Scuttle Crab Sheet",
+          "level": 2
+        }
+      ],
+      "status": "collected",
       "attemptedAt": "2026-10-11T14:05:39.583813+00:00",
-      "cacheAvailable": false
+      "cacheAvailable": false,
+      "resolvedUrl": "https://wiki.runarcana.org/en/monsters-and-creatures/creatures/scuttle-crab/",
+      "collectedAt": "2026-10-11T15:32:57.050410+00:00",
+      "sha256": "2bb57d8a2a89fef5b40c0179117b9914a3ab23ddff3c74f5372ac8945564bb00",
+      "cache": "sources/cache/864689ef79f68781d1d58220615fccafd1e8aa9b3c672584704a535d673e2aea.html",
+      "title": "Scuttle Crab",
+      "rulesVersion": null,
+      "wikiBuild": "0.157"
     },
     {
       "id": "/en/monsters-and-creatures/creatures/sea-brute/",
@@ -27716,29 +28468,62 @@
       "part": 4,
       "language": "en",
       "anchors": [],
-      "status": "pending",
+      "status": "collected",
       "attemptedAt": "2026-10-11T14:05:39.593836+00:00",
-      "cacheAvailable": false
+      "cacheAvailable": false,
+      "resolvedUrl": "https://wiki.runarcana.org/en/monsters-and-creatures/creatures/sea-brute/",
+      "collectedAt": "2026-10-11T15:23:52.366169+00:00",
+      "sha256": "029fc1ff00753279f07685ffeeca1c28ba714855818ec886a88da5e4be5d6554",
+      "cache": "sources/cache/c1d13212051aaff7aa19e0b7bb6a66f9ade0ca59b77890ba8b811292e55af0b0.html",
+      "title": "Sea Brute",
+      "rulesVersion": null,
+      "wikiBuild": "0.157"
     },
     {
       "id": "/en/monsters-and-creatures/creatures/sea-horse/",
       "url": "https://wiki.runarcana.org/en/monsters-and-creatures/creatures/sea-horse/",
       "part": 4,
       "language": "en",
-      "anchors": [],
-      "status": "pending",
+      "anchors": [
+        {
+          "id": "sea-horse-sheet",
+          "title": "Sea Horse Sheet",
+          "level": 2
+        }
+      ],
+      "status": "collected",
       "attemptedAt": "2026-10-11T14:05:39.603621+00:00",
-      "cacheAvailable": false
+      "cacheAvailable": false,
+      "resolvedUrl": "https://wiki.runarcana.org/en/monsters-and-creatures/creatures/sea-horse/",
+      "collectedAt": "2026-10-11T15:24:05.013154+00:00",
+      "sha256": "336328e4e9dc67108825a331715419a4e4ff56fc8a1e7d7832a031a6dd24d76a",
+      "cache": "sources/cache/21a9d76952fd4914d4b7ce167cfc794253e3874d26c866c8db7453c50a2162d8.html",
+      "title": "Sea Horse",
+      "rulesVersion": null,
+      "wikiBuild": "0.157"
     },
     {
       "id": "/en/monsters-and-creatures/creatures/silverwing/",
       "url": "https://wiki.runarcana.org/en/monsters-and-creatures/creatures/silverwing/",
       "part": 4,
       "language": "en",
-      "anchors": [],
-      "status": "pending",
+      "anchors": [
+        {
+          "id": "silverwing-statblock",
+          "title": "Silverwing Statblock",
+          "level": 2
+        }
+      ],
+      "status": "collected",
       "attemptedAt": "2026-10-11T14:05:39.613400+00:00",
-      "cacheAvailable": false
+      "cacheAvailable": false,
+      "resolvedUrl": "https://wiki.runarcana.org/en/monsters-and-creatures/creatures/silverwing/",
+      "collectedAt": "2026-10-11T15:27:40.310484+00:00",
+      "sha256": "8cdc80bdb303dd2bde7b43f6af4da89c75cb9d133a0e459f3b6adb89544f6181",
+      "cache": "sources/cache/98285531c7a80356aa3c96ce5b0ba2dd4f74edb0654cbadd2e8a895122ee4485.html",
+      "title": "Silverwing",
+      "rulesVersion": null,
+      "wikiBuild": "0.157"
     },
     {
       "id": "/en/monsters-and-creatures/creatures/skulking-string-puller/",
@@ -27859,10 +28644,23 @@
       "url": "https://wiki.runarcana.org/en/monsters-and-creatures/creatures/soulgorger/",
       "part": 4,
       "language": "en",
-      "anchors": [],
-      "status": "pending",
+      "anchors": [
+        {
+          "id": "soulgorger-sheet",
+          "title": "Soulgorger Sheet",
+          "level": 2
+        }
+      ],
+      "status": "collected",
       "attemptedAt": "2026-10-11T14:05:39.659688+00:00",
-      "cacheAvailable": false
+      "cacheAvailable": false,
+      "resolvedUrl": "https://wiki.runarcana.org/en/monsters-and-creatures/creatures/soulgorger/",
+      "collectedAt": "2026-10-11T15:27:52.975319+00:00",
+      "sha256": "25f10fbe1bfbbb9ae6dcda99e034050eeb3384303492381438a2ddd1848da0a1",
+      "cache": "sources/cache/037903310cd43ec728575dd1fa212c60137c77bfa8be2ab646a91aef6c821d81.html",
+      "title": "Soulgorger",
+      "rulesVersion": null,
+      "wikiBuild": "0.157"
     },
     {
       "id": "/en/monsters-and-creatures/creatures/spectral-knight/",
@@ -27922,10 +28720,23 @@
       "url": "https://wiki.runarcana.org/en/monsters-and-creatures/creatures/spriteling/",
       "part": 4,
       "language": "en",
-      "anchors": [],
-      "status": "pending",
+      "anchors": [
+        {
+          "id": "spriteling-sheet",
+          "title": "Spriteling Sheet",
+          "level": 2
+        }
+      ],
+      "status": "collected",
       "attemptedAt": "2026-10-11T14:05:39.699186+00:00",
-      "cacheAvailable": false
+      "cacheAvailable": false,
+      "resolvedUrl": "https://wiki.runarcana.org/en/monsters-and-creatures/creatures/spriteling/",
+      "collectedAt": "2026-10-11T15:28:05.636928+00:00",
+      "sha256": "21ad12bef1bb49da57e63f7bf3553aea306a83a0e645ad9060e102be802ed8bb",
+      "cache": "sources/cache/a809cafb7cefdbf13b59474df02809b0dfd8480be6346c7c4be16e941838f393.html",
+      "title": "Spriteling",
+      "rulesVersion": null,
+      "wikiBuild": "0.157"
     },
     {
       "id": "/en/monsters-and-creatures/creatures/squirrel/",
@@ -27975,10 +28786,33 @@
       "url": "https://wiki.runarcana.org/en/monsters-and-creatures/creatures/stonehorn/",
       "part": 4,
       "language": "en",
-      "anchors": [],
-      "status": "pending",
+      "anchors": [
+        {
+          "id": "rewards",
+          "title": "Rewards",
+          "level": 2
+        },
+        {
+          "id": "item-crafting",
+          "title": "Item Crafting",
+          "level": 3
+        },
+        {
+          "id": "stonehorn-statblock",
+          "title": "Stonehorn Statblock",
+          "level": 2
+        }
+      ],
+      "status": "collected",
       "attemptedAt": "2026-10-11T14:05:39.726194+00:00",
-      "cacheAvailable": false
+      "cacheAvailable": false,
+      "resolvedUrl": "https://wiki.runarcana.org/en/monsters-and-creatures/creatures/stonehorn/",
+      "collectedAt": "2026-10-11T15:24:17.676669+00:00",
+      "sha256": "28bfe42f74e5520355b7b8a0d1ab4bbc2b6cd143b0bea9a4fcd151bf9453e3d1",
+      "cache": "sources/cache/7330414ffdf84a018c45ee9245c6b9acd9fa527dea7d7639fb52972f905171a5.html",
+      "title": "Stonehorn",
+      "rulesVersion": null,
+      "wikiBuild": "0.157"
     },
     {
       "id": "/en/monsters-and-creatures/creatures/sunhawk/",
@@ -28074,10 +28908,23 @@
       "url": "https://wiki.runarcana.org/en/monsters-and-creatures/creatures/the-immortal/",
       "part": 4,
       "language": "en",
-      "anchors": [],
-      "status": "pending",
+      "anchors": [
+        {
+          "id": "immortal-statblock",
+          "title": "Immortal Statblock",
+          "level": 2
+        }
+      ],
+      "status": "collected",
       "attemptedAt": "2026-10-11T14:05:39.762094+00:00",
-      "cacheAvailable": false
+      "cacheAvailable": false,
+      "resolvedUrl": "https://wiki.runarcana.org/en/monsters-and-creatures/creatures/the-immortal/",
+      "collectedAt": "2026-10-11T15:33:09.714033+00:00",
+      "sha256": "624d5033581df3c1e1fe9615001d0d23daf50c421294eefffac343c0a7291a7a",
+      "cache": "sources/cache/a3f8d9fdbcfcb71fee75a720cf1fc22f1fa40fec9c466d590d9c4ec1f39fa128.html",
+      "title": "The Immortal",
+      "rulesVersion": null,
+      "wikiBuild": "0.157"
     },
     {
       "id": "/en/monsters-and-creatures/creatures/thorn-spitter/",
@@ -28085,9 +28932,10 @@
       "part": 4,
       "language": "en",
       "anchors": [],
-      "status": "pending",
-      "attemptedAt": "2026-10-11T14:05:39.769159+00:00",
-      "cacheAvailable": false
+      "status": "source-unavailable",
+      "attemptedAt": "2026-10-11T15:35:16.219261+00:00",
+      "cacheAvailable": false,
+      "error": "HTTP Error 429: Too Many Requests"
     },
     {
       "id": "/en/monsters-and-creatures/creatures/thrashing-snapper/",
@@ -28142,19 +28990,39 @@
       "part": 4,
       "language": "en",
       "anchors": [],
-      "status": "pending",
+      "status": "collected",
       "attemptedAt": "2026-10-11T14:05:39.799739+00:00",
-      "cacheAvailable": false
+      "cacheAvailable": false,
+      "resolvedUrl": "https://wiki.runarcana.org/en/monsters-and-creatures/creatures/tuskbeast/",
+      "collectedAt": "2026-10-11T15:24:30.326773+00:00",
+      "sha256": "bbc542bcbffdad5b07bcd47c90080d3b271775493dd45ed0f7a622f5c8205440",
+      "cache": "sources/cache/fefbb4506c45586110e7533de83a4c4d0fd0ec0a9ca52a9e76dd1ae8660bd175.html",
+      "title": "Tuskbeast",
+      "rulesVersion": null,
+      "wikiBuild": "0.157"
     },
     {
       "id": "/en/monsters-and-creatures/creatures/viginauts/",
       "url": "https://wiki.runarcana.org/en/monsters-and-creatures/creatures/viginauts/",
       "part": 4,
       "language": "en",
-      "anchors": [],
-      "status": "pending",
+      "anchors": [
+        {
+          "id": "viginaut-statblock",
+          "title": "Viginaut Statblock",
+          "level": 2
+        }
+      ],
+      "status": "collected",
       "attemptedAt": "2026-10-11T14:05:39.805871+00:00",
-      "cacheAvailable": false
+      "cacheAvailable": false,
+      "resolvedUrl": "https://wiki.runarcana.org/en/monsters-and-creatures/creatures/viginauts/",
+      "collectedAt": "2026-10-11T15:24:42.970691+00:00",
+      "sha256": "7afd59667f42f83b8684b5b111012542157f631e47e895d7824958033a63d140",
+      "cache": "sources/cache/48440e4745ed743f87586693487ba906e7cb418385eadd760e0739c773564ed4.html",
+      "title": "Viginauts",
+      "rulesVersion": null,
+      "wikiBuild": "0.157"
     },
     {
       "id": "/en/monsters-and-creatures/creatures/vine-elemental/",
@@ -28171,20 +29039,56 @@
       "url": "https://wiki.runarcana.org/en/monsters-and-creatures/creatures/vine-lasher/",
       "part": 4,
       "language": "en",
-      "anchors": [],
-      "status": "pending",
+      "anchors": [
+        {
+          "id": "vine-lasher-sheet",
+          "title": "Vine Lasher Sheet",
+          "level": 2
+        }
+      ],
+      "status": "collected",
       "attemptedAt": "2026-10-11T14:05:39.817891+00:00",
-      "cacheAvailable": false
+      "cacheAvailable": false,
+      "resolvedUrl": "https://wiki.runarcana.org/en/monsters-and-creatures/creatures/vine-lasher/",
+      "collectedAt": "2026-10-11T15:30:50.337877+00:00",
+      "sha256": "e93958103515815393049de8cdacd3d8b22358384ae2f91025270d28fbdcfc7e",
+      "cache": "sources/cache/5fea04ee1a5ce9781c4865b14b0fdd4dd8bdda857c00ef5797938db97c77dc38.html",
+      "title": "Vine Lasher",
+      "rulesVersion": null,
+      "wikiBuild": "0.157"
     },
     {
       "id": "/en/monsters-and-creatures/creatures/voidgrubs/",
       "url": "https://wiki.runarcana.org/en/monsters-and-creatures/creatures/voidgrubs/",
       "part": 4,
       "language": "en",
-      "anchors": [],
-      "status": "pending",
+      "anchors": [
+        {
+          "id": "voidgrub-and-voidmite-statblocks",
+          "title": "Voidgrub and Voidmite Statblocks",
+          "level": 2
+        },
+        {
+          "id": "voidmite",
+          "title": "Voidmite",
+          "level": 3
+        },
+        {
+          "id": "voidgrub",
+          "title": "Voidgrub",
+          "level": 3
+        }
+      ],
+      "status": "collected",
       "attemptedAt": "2026-10-11T14:05:39.824768+00:00",
-      "cacheAvailable": false
+      "cacheAvailable": false,
+      "resolvedUrl": "https://wiki.runarcana.org/en/monsters-and-creatures/creatures/voidgrubs/",
+      "collectedAt": "2026-10-11T15:24:55.622160+00:00",
+      "sha256": "4dbbb319543eff7d5e07bce87a33a8d5440fd889cc88a88119aeb26168e2d1e5",
+      "cache": "sources/cache/28cf9cf4272e3b2d16ad692bc9a7d43627e069207fe8eefb125704b9b4cd7031.html",
+      "title": "Voidgrubs",
+      "rulesVersion": null,
+      "wikiBuild": "0.157"
     },
     {
       "id": "/en/monsters-and-creatures/creatures/voidling/",
@@ -28208,10 +29112,23 @@
       "url": "https://wiki.runarcana.org/en/monsters-and-creatures/creatures/voidspawn/",
       "part": 4,
       "language": "en",
-      "anchors": [],
-      "status": "pending",
+      "anchors": [
+        {
+          "id": "voidspawn-sheet",
+          "title": "Voidspawn Sheet",
+          "level": 2
+        }
+      ],
+      "status": "collected",
       "attemptedAt": "2026-10-11T14:05:39.844350+00:00",
-      "cacheAvailable": false
+      "cacheAvailable": false,
+      "resolvedUrl": "https://wiki.runarcana.org/en/monsters-and-creatures/creatures/voidspawn/",
+      "collectedAt": "2026-10-11T15:25:08.274835+00:00",
+      "sha256": "a9a2ae92fa51f6e25c4694245ff1bcb045f24d0d517ba1f44f59235356870914",
+      "cache": "sources/cache/559dac8ca4d49530a060f9612484935cf18cd8b6d53650feeebc1668835e2242.html",
+      "title": "Voidspawn",
+      "rulesVersion": null,
+      "wikiBuild": "0.157"
     },
     {
       "id": "/en/monsters-and-creatures/creatures/vulture/",
@@ -28241,10 +29158,53 @@
       "url": "https://wiki.runarcana.org/en/monsters-and-creatures/creatures/whiteflame/",
       "part": 4,
       "language": "en",
-      "anchors": [],
-      "status": "pending",
+      "anchors": [
+        {
+          "id": "rewards",
+          "title": "Rewards",
+          "level": 2
+        },
+        {
+          "id": "item-crafting",
+          "title": "Item Crafting",
+          "level": 3
+        },
+        {
+          "id": "whiteflame-sheets",
+          "title": "Whiteflame Sheets",
+          "level": 2
+        },
+        {
+          "id": "hatchling",
+          "title": "Hatchling",
+          "level": 3
+        },
+        {
+          "id": "young",
+          "title": "Young",
+          "level": 3
+        },
+        {
+          "id": "adult",
+          "title": "Adult",
+          "level": 3
+        },
+        {
+          "id": "elder",
+          "title": "Elder",
+          "level": 3
+        }
+      ],
+      "status": "collected",
       "attemptedAt": "2026-10-11T14:05:39.862832+00:00",
-      "cacheAvailable": false
+      "cacheAvailable": false,
+      "resolvedUrl": "https://wiki.runarcana.org/en/monsters-and-creatures/creatures/whiteflame/",
+      "collectedAt": "2026-10-11T15:28:18.323668+00:00",
+      "sha256": "c849ddf4f43f2fa643997b6e8d652003b033fe9422de5927a0ef83695e3c694e",
+      "cache": "sources/cache/86efb0a13bff861af4c45b03a1b79ea9b4d1b73ca6b12827a43cdf270f5c3d21.html",
+      "title": "Whiteflame",
+      "rulesVersion": null,
+      "wikiBuild": "0.157"
     },
     {
       "id": "/en/monsters-and-creatures/creatures/whump/",
@@ -28307,10 +29267,68 @@
       "url": "https://wiki.runarcana.org/en/monsters-and-creatures/creatures/windfarer/",
       "part": 4,
       "language": "en",
-      "anchors": [],
-      "status": "pending",
+      "anchors": [
+        {
+          "id": "the-windfarers-nest",
+          "title": "The Windfarers’ Nest",
+          "level": 2
+        },
+        {
+          "id": "protective-and-playful-creatures",
+          "title": "Protective… and Playful Creatures?",
+          "level": 2
+        },
+        {
+          "id": "lair",
+          "title": "Lair",
+          "level": 2
+        },
+        {
+          "id": "regional-effects",
+          "title": "Regional Effects",
+          "level": 3
+        },
+        {
+          "id": "lair-actions",
+          "title": "Lair Actions",
+          "level": 3
+        },
+        {
+          "id": "rewards",
+          "title": "Rewards",
+          "level": 2
+        },
+        {
+          "id": "item-crafting",
+          "title": "Item Crafting",
+          "level": 3
+        },
+        {
+          "id": "windfarer-sheets",
+          "title": "Windfarer Sheets",
+          "level": 2
+        },
+        {
+          "id": "hatchling",
+          "title": "Hatchling",
+          "level": 3
+        },
+        {
+          "id": "matriarch",
+          "title": "Matriarch",
+          "level": 3
+        }
+      ],
+      "status": "collected",
       "attemptedAt": "2026-10-11T14:05:39.890038+00:00",
-      "cacheAvailable": false
+      "cacheAvailable": false,
+      "resolvedUrl": "https://wiki.runarcana.org/en/monsters-and-creatures/creatures/windfarer/",
+      "collectedAt": "2026-10-11T15:25:20.941979+00:00",
+      "sha256": "9b2ade325e571adecde23f7f66aa6ba26e0adc841db054d0fe7a36375afd0a4d",
+      "cache": "sources/cache/7660ea196f7f43693be874b72aa7f79e006d74f1e0851e69fc3fee3ddebdfbed.html",
+      "title": "Windfarer",
+      "rulesVersion": null,
+      "wikiBuild": "0.157"
     },
     {
       "id": "/en/monsters-and-creatures/creatures/wolves/",
@@ -32428,7 +33446,7 @@
     "https://runarcana.org/en/runarcana-0-96-update/",
     "https://bit.ly/runarcana_santangelo"
   ],
-  "pending": 558,
-  "rateLimited": false,
+  "pending": 503,
+  "rateLimited": true,
   "retryAfter": null
 }

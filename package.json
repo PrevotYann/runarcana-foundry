@@ -1,5 +1,5 @@
 {
-  "name": "runarcana", "version": "0.3.0", "private": true, "type": "module",
+  "name": "runarcana", "version": "0.4.0", "private": true, "type": "module",
   "scripts": {
     "collect": "python scripts/collect.py",
     "normalize": "python scripts/normalize.py",

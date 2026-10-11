@@ -2,9 +2,9 @@
 
 Profile: **authorized-content**. This module is **incomplete**. It has no Foundry V14 runtime verification.
 
-899 canonical page URLs discovered; 341 complete responses cached; 558 sources not collected. Missing pages are not claimed to be permanently unavailable: HTTP 429 throttling interrupted earlier passes. Collection is resumable from its saved checkpoint; unvisited entries require a resumed crawl or a local export.
+899 canonical page URLs discovered; 396 complete responses cached; 503 sources not collected. Missing pages are not claimed to be permanently unavailable: HTTP 429 throttling interrupted earlier passes. Collection is resumable from its saved checkpoint; unvisited entries require a resumed crawl or a local export.
 
-9072 page/anchor/table/catalog coverage records. Entry discovery is not exhaustive until every source is available and reviewed.
+10405 page/anchor/table/catalog coverage records. Entry discovery is not exhaustive until every source is available and reviewed.
 
 | Part | Discovered pages | Collected pages | Missing pages |
 | --- | ---: | ---: | ---: |
@@ -12,7 +12,7 @@ Profile: **authorized-content**. This module is **incomplete**. It has no Foundr
 | Characters | 98 | 98 | 0 |
 | Rules | 578 | 120 | 458 |
 | Game Mastering | 21 | 21 | 0 |
-| Monsters & Creatures | 164 | 69 | 95 |
+| Monsters & Creatures | 164 | 124 | 40 |
 
 | Pack | Generated native documents |
 | --- | ---: |
@@ -35,9 +35,9 @@ Profile: **authorized-content**. This module is **incomplete**. It has no Foundr
 | rules | 120 |
 | spells | 100 |
 | companions | 1 |
-| creature-rules | 69 |
-| creature-features | 971 |
-| bestiary | 94 |
+| creature-rules | 124 |
+| creature-features | 2150 |
+| bestiary | 177 |
 | rituals | 47 |
 | techmaturgy | 127 |
 | devices | 13 |

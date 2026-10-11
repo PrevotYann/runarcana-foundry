@@ -16,6 +16,8 @@ Version 0.1.1 fixes the unnamed home-page compendium folder that prevented world
 
 Public releases include collected Runarcana texts and native Items, Actors, Journals and RollTables. The maintainer has confirmed permission for their inclusion in this free module; see [credits and permission](docs/credits.md). Artwork remains linked to its source. Mechanical coverage and uncollected sources are still incomplete.
 
+Current development priority: import all available source pages and their full compendium texts. Further mechanical automation is deferred until the content import is complete.
+
 For manual installation, close Foundry, extract the ZIP into `Data/modules/`, then activate Runarcana in a compatible dnd5e world. Enable the world setting and explicitly mark Runarcana actors in the workbench.
 
 Use **Runarcana → Catalog** for lazy compendium browsing. **World import** previews creates/updates/conflicts; local edits and duplicates are skipped. Updating or translating a compendium does not automatically update world copies. Reimport voluntarily to refresh unedited copies. The importer saves a pre-update backup in `flags.runarcana.import.backup`; restore it manually through a document update/export if needed.
@@ -51,7 +53,7 @@ The export must contain `en/.../index.html`. Full pages and normalized local tex
 
 A fresh clone builds from the committed `data/corpus.json.gz` snapshot: install dependencies, then run `npm run build`, `npm run translations`, `npm test`, `npm run validate`, `python scripts/report.py` and `python scripts/package.py`. No wiki network access is needed. After collecting more sources, normalization updates that snapshot.
 
-`npm run build -- --references` is an optional reference-only diagnostic profile. Default releases include content. `python scripts/package.py --source` packages code, build tools and the authorized source snapshot. Inspect installable archives with `node scripts/validate-archive.mjs dist/runarcana-0.3.0.zip`.
+`npm run build -- --references` is an optional reference-only diagnostic profile. Default releases include content. `python scripts/package.py --source` packages code, build tools and the authorized source snapshot. Inspect installable archives with `node scripts/validate-archive.mjs dist/runarcana-0.4.0.zip`.
 
 ## API
 

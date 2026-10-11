@@ -1,8 +1,8 @@
 {
   "profile": "release",
-  "indexedDocuments": 4256,
-  "embeddedDocuments": 2602,
-  "uuidLinks": 2375,
+  "indexedDocuments": 5573,
+  "embeddedDocuments": 3896,
+  "uuidLinks": 2595,
   "packKeys": {
     "start": 2,
     "origins": 20,
@@ -26,9 +26,9 @@
     "afflictions": 168,
     "rewards": 184,
     "tables": 615,
-    "bestiary": 1003,
-    "creature-features": 1066,
-    "creature-rules": 226,
+    "bestiary": 2281,
+    "creature-features": 2328,
+    "creature-rules": 396,
     "references": 229
   },
   "errors": [],
