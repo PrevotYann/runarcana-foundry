@@ -1,0 +1,12 @@
+{
+  "label": "Roll Tables",
+  "mapping": {
+    "name": "name",
+    "description": "description",
+    "results": {
+      "path": "results",
+      "converter": "runarcanaNested"
+    }
+  },
+  "entries": {}
+}

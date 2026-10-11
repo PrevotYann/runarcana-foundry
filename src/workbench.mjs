@@ -1,0 +1,158 @@
+import {isMarked} from './api.mjs';
+
+const t=key=>game.i18n.localize('RUNARCANA.'+key);
+const el=(tag,text,cls)=>{const node=document.createElement(tag);if(text!==undefined)node.textContent=text;if(cls)node.className=cls;return node;};
+const button=(key,action)=>{const node=el('button',t(key));node.type='button';node.addEventListener('click',async()=>{node.disabled=true;try{await action();}catch(error){ui.notifications.error(game.i18n.has(error.message)?game.i18n.localize(error.message):error.message);}finally{node.disabled=false;}});return node;};
+const input=(type,value)=>{const node=el('input');node.type=type;node.value=value??'';return node;};
+const field=(parent,key,control)=>{const label=el('label',t(key));label.append(control);parent.append(label);return control;};
+const select=options=>{const node=el('select');for(const [value,label]of options){const option=el('option',label);option.value=value;node.append(option);}return node;};
+
+export class Workbench extends foundry.applications.api.ApplicationV2 {
+  static DEFAULT_OPTIONS={id:'runarcana-workbench',classes:['runarcana-workbench'],window:{title:'RUNARCANA.Workbench',icon:'fas fa-book-open'},position:{width:850,height:720}};
+  constructor({actor,...options}={}){super(options);this.actor=actor??canvas.tokens?.controlled?.[0]?.actor;this.mode=this.actor?'actor':'catalog';}
+  async _renderHTML() {
+    const root=el('div',undefined,'runarcana-content');
+    const nav=el('nav');
+    for(const mode of ['catalog','creation','actor','import','creature'])nav.append(button('Tab.'+mode,()=>{this.mode=mode;return this.render(true);}));
+    root.append(nav,el('p',t('PartialCoverage'),'runarcana-notice'));
+    if(!game.modules.get('runarcana').api){root.append(el('p',t('Error.Version')));return root;}
+    if(this.mode==='catalog')await this.catalog(root);
+    if(this.mode==='creation')await this.creationPanel(root);
+    if(this.mode==='actor')await this.actorPanel(root);
+    if(this.mode==='import')await this.importPanel(root);
+    if(this.mode==='creature')await this.creaturePanel(root);
+    return root;
+  }
+  _replaceHTML(result,content){content.replaceChildren(result);}
+  async creationPanel(root) {
+    root.append(el('p',t('Creation.Hint')));
+    const form=el('div',undefined,'runarcana-form');
+    const name=field(form,'Creature.Name',input('text',''));
+    const origin=field(form,'Creation.Origin',select([['',t('Creation.Select')]]));
+    const cls=field(form,'Creation.Class',select([['',t('Creation.Select')]]));
+    for(const [packName,control]of [['origins',origin],['classes',cls]]) {
+      const pack=game.packs.get('runarcana.'+packName);
+      if(pack)for(const row of await pack.getIndex()) {const o=el('option',row.name);o.value=`Compendium.runarcana.${packName}.Item.${row._id}`;control.append(o);}
+    }
+    const scores={};
+    for(const ability of ['str','dex','con','int','wis','cha'])scores[ability]=field(form,'Creation.'+ability,input('number',10));
+    const output=el('p');let preview;
+    form.append(button('Preview',()=>{
+      if(!name.value||!origin.value||!cls.value)throw new Error('RUNARCANA.Error.Choices');
+      preview={name:name.value,originUuid:origin.value,classUuid:cls.value,abilities:Object.fromEntries(Object.entries(scores).map(([k,v])=>[k,Number(v.value)]))};
+      output.textContent=`${preview.name}: ${origin.selectedOptions[0].textContent}, ${cls.selectedOptions[0].textContent}; ${Object.entries(preview.abilities).map(([k,v])=>k.toUpperCase()+': '+v).join(', ')}`;
+    }),button('Creation.Create',async()=>{if(!preview)throw new Error('RUNARCANA.Error.Preview');this.actor=await game.modules.get('runarcana').api.beginCharacter(preview);}));
+    root.append(form,output);
+  }
+  async catalog(root) {
+    const packs=[...game.packs].filter(p=>p.metadata.packageName==='runarcana');
+    const picker=field(root,'Pack',select(packs.map(p=>[p.collection,p.metadata.label])));
+    const search=field(root,'Search',input('search',''));
+    const level=field(root,'Level',input('number',''));level.min=0;level.max=30;
+    const filter=field(root,'MysteryRole',input('search',''));
+    const results=el('div',undefined,'runarcana-results');root.append(results);
+    let generation=0;
+    const update=async()=>{
+      const revision=++generation;const pack=game.packs.get(picker.value);
+      const index=await pack.getIndex({fields:['system.level','system.details.cr','flags.runarcana.mysteries','flags.runarcana.role']});
+      if(revision!==generation)return;
+      const rows=[...index].filter(x=>x.name.toLowerCase().includes(search.value.toLowerCase()) && (level.value==='' || String(x.system?.level??x.system?.details?.cr??'')===level.value) && `${x.flags?.runarcana?.mysteries??''} ${x.flags?.runarcana?.role??''}`.toLowerCase().includes(filter.value.toLowerCase()));
+      results.replaceChildren(el('p',game.i18n.format('RUNARCANA.ResultCount',{count:rows.length,shown:Math.min(rows.length,100)})));
+      for(const entry of rows.slice(0,100)) {
+        const row=el('button',entry.name);row.type='button';row.addEventListener('click',async()=>{const doc=await pack.getDocument(entry._id);doc.sheet.render(true);});results.append(row);
+      }
+    };
+    picker.addEventListener('change',update);search.addEventListener('input',update);level.addEventListener('input',update);filter.addEventListener('input',update);await update();
+  }
+  async actorPanel(root) {
+    const actors=[...game.actors].filter(a=>a.isOwner);
+    const picker=field(root,'Actor',select([['',t('SelectActor')],...actors.map(a=>[a.id,a.name])]));
+    if(this.actor&&!this.actor.isToken)picker.value=this.actor.id;
+    picker.addEventListener('change',()=>{this.actor=game.actors.get(picker.value);this.render(true);});
+    if(!this.actor){root.append(el('p',t('SelectActor')));return;}
+    const actor=this.actor,api=game.modules.get('runarcana').api;
+    root.append(el('h2',actor.name));
+    if(!isMarked(actor)){root.append(button('EnableActor',async()=>{await api.enableActor(actor);this.render(true);}));return;}
+    root.append(el('p',t('PrimaryGMHint')));
+    const summary=el('dl');
+    for(const type of ['race','background','class','subclass']){
+      summary.append(el('dt',game.i18n.localize('TYPES.Item.'+type)),el('dd',actor.items.filter(i=>i.type===type).map(i=>`${i.name}${i.type==='class'?` (${i.system.levels})`:''}`).join(', ')));
+    }
+    root.append(summary);
+    for(const [id,r]of Object.entries(actor.getFlag('runarcana','resources')??{})) {
+      const row=el('div',undefined,'runarcana-resource');row.append(el('span',`${r.label??id}: ${r.value}/${r.max}`),button('SpendOne',async()=>{await api.spendResource(actor,id,1,{operationId:crypto.randomUUID()});this.render(true);}));root.append(row);
+    }
+    const form=el('div',undefined,'runarcana-form');
+    const id=field(form,'ResourceId',input('text','mana'));
+    const label=field(form,'ResourceLabel',input('text',t('Mana')));
+    const max=field(form,'Maximum',input('number',0));max.min=0;
+    const value=field(form,'Value',input('number',0));value.min=0;
+    const recovery=field(form,'Recovery',select(['none','short','long','full'].map(v=>[v,t('Rest.'+v)])));
+    form.append(button('SaveResource',async()=>{await api.setResource(actor,id.value,{label:label.value,max:Number(max.value),value:Number(value.value),recovery:recovery.value});this.render(true);}));root.append(form);
+    const rests=el('section');rests.append(el('h3',t('Rest.Title')),el('p',t('Rest.Confirmation')));
+    for(const kind of ['short','long','full'])rests.append(button('Rest.'+kind,async()=>{
+      const confirmed=await foundry.applications.api.DialogV2.confirm({window:{title:t('Rest.'+kind)},content:`<p>${t('Rest.Confirmation')}</p>`});
+      if(confirmed){await api.rest(actor,kind,{operationId:crypto.randomUUID()});this.render(true);}
+    }));
+    const die=select([...new Set(actor.items.filter(i=>i.type==='class').map(i=>i.system.hd.denomination))].map(d=>[d,d]));
+    rests.append(die);
+    for(const kind of ['short','long'])rests.append(button('Rest.Spend'+kind,async()=>{await api.spendHitDie(actor,kind,die.value);this.render(true);}));
+    root.append(rests);
+    root.append(el('h3',t('Progression')),el('p',t('ProgressionHint')));
+    for(const c of actor.items.filter(i=>i.type==='class'))root.append(button('AdvanceClass',()=>{
+      const table=c.getFlag('runarcana','progressionTable')??[];
+      const limit=Math.max(0,...table.slice(1).map(row=>parseInt(row[0],10)).filter(Number.isFinite));
+      if(!limit||c.system.levels>=limit)throw new Error('RUNARCANA.Error.LevelLimit');
+      const manager=game.dnd5e.applications.advancement.AdvancementManager.forLevelChange(actor,c.id,1);
+      return manager?.render(true);
+    }),el('span',c.name));
+    const heritage=el('section');heritage.append(el('h3',t('Choices.Title')));
+    const budget=field(heritage,'Choices.Budget',input('number',0));budget.min=0;
+    const choose=field(heritage,'Choices.Document',select([['',t('Choices.Select')]]));
+    const hp=game.packs.get('runarcana.heritages');
+    if(hp){const ix=await hp.getIndex();for(const e of ix){const o=el('option',e.name);o.value=e._id;choose.append(o);}}
+    const cost=field(heritage,'Choices.Cost',input('number',0));cost.min=0;
+    const reason=field(heritage,'Choices.OverrideReason',input('text',''));
+    const preview=el('p');heritage.append(preview);
+    let plan;
+    heritage.append(button('Preview',()=>{
+      if(!choose.value)throw new Error('RUNARCANA.Error.Choices');
+      plan={budget:Number(budget.value),choices:[{id:choose.value,uuid:`Compendium.runarcana.heritages.Item.${choose.value}`,cost:Number(cost.value)}]};
+      const result=api.previewChoices(actor,plan);preview.textContent=`${t('Choices.Spent')}: ${result.spent}; ${result.errors.map(k=>game.i18n.localize(k)).join(', ')}`;
+    }),button('Apply',async()=>{if(!plan)throw new Error('RUNARCANA.Error.Preview');await api.applyChoices(actor,plan,{overrideReason:reason.value});this.render(true);}));root.append(heritage);
+  }
+  async importPanel(root) {
+    if(!game.user.isGM){root.append(el('p',t('Error.PrimaryGM')));return;}
+    root.append(el('p',t('Import.Policy')));
+    const packs=[...game.packs].filter(p=>p.metadata.packageName==='runarcana');
+    const picker=field(root,'Pack',select(packs.map(p=>[p.metadata.name,p.metadata.label])));
+    const output=el('div',undefined,'runarcana-results');root.append(output);let plan;
+    root.append(button('Preview',async()=>{
+      plan=await game.modules.get('runarcana').api.previewImport([picker.value]);output.replaceChildren();
+      const counts={};for(const row of plan)counts[row.action]=(counts[row.action]??0)+1;
+      for(const [action,n]of Object.entries(counts))output.append(el('p',`${t('Import.'+action)}: ${n}`));
+    }),button('Apply',async()=>{
+      if(!plan)throw new Error('RUNARCANA.Error.Preview');
+      const results=await game.modules.get('runarcana').api.applyImport(plan);
+      output.replaceChildren(el('p',game.i18n.format('RUNARCANA.Import.Result',{count:results.filter(r=>r.status==='imported').length,skipped:results.filter(r=>r.status!=='imported').length})));
+      plan=null;
+    }));
+  }
+  async creaturePanel(root) {
+    const api=game.modules.get('runarcana').api;
+    root.append(el('p',t('Creature.Manual')));
+    const form=el('div',undefined,'runarcana-form');
+    const name=field(form,'Creature.Name',input('text',''));
+    const cr=field(form,'Creature.CR',input('number',1));cr.min=1;cr.max=30;
+    const role=field(form,'Creature.Role',select(['minion','grunt','soldier','elite','paragon'].map(v=>[v,t('Creature.'+v)])));
+    const size=field(form,'Creature.Size',select(['diminutive','tiny','small','medium','large','huge','gargantuan','colossal'].map(v=>[v,t('Creature.'+v)])));size.value='medium';
+    const con=field(form,'Creature.Constitution',input('number',10));
+    const ac=field(form,'Creature.AC',input('number',10));
+    const tl=field(form,'Creature.Threat',input('number',4));
+    const output=el('pre');let preview;
+    form.append(button('Preview',()=>{
+      preview={name:name.value,cr:Number(cr.value),role:role.value,size:size.value,constitution:Number(con.value),ac:Number(ac.value),threatLevel:Number(tl.value)};
+      const result=api.creatureStatistics(preview);output.textContent=`${t('Creature.HP')}: ${result.hp}\n${t('Creature.HitDice')}: ${result.hitDice}\n${t('Creature.Proficiency')}: +${result.proficiency}`;
+    }),button('Creature.Create',async()=>{if(!preview)throw new Error('RUNARCANA.Error.Preview');const actor=await api.createCreature(preview);actor.sheet.render(true);}));root.append(form,output);
+  }
+}

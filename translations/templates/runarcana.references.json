@@ -1,0 +1,11 @@
+{
+  "label": "References & Provenance",
+  "mapping": {
+    "name": "name",
+    "pages": {
+      "path": "pages",
+      "converter": "runarcanaNested"
+    }
+  },
+  "entries": {}
+}

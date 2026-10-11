@@ -1,0 +1,1559 @@
+{
+  "profile": "redistributable-references",
+  "documents": [
+    {
+      "pack": "references",
+      "type": "JournalEntry",
+      "id": "34fafddbb5aed439",
+      "name": "Runarcana RPG",
+      "sourceId": "/en/@journal"
+    },
+    {
+      "pack": "references",
+      "type": "JournalEntry",
+      "id": "d8db616cf70142da",
+      "name": "About Runarcana",
+      "sourceId": "/en/about/@journal"
+    },
+    {
+      "pack": "references",
+      "type": "JournalEntry",
+      "id": "eb60da5afb812322",
+      "name": "Acknowledgements",
+      "sourceId": "/en/acknowledgements/@journal"
+    },
+    {
+      "pack": "references",
+      "type": "JournalEntry",
+      "id": "4dae09a60c699a08",
+      "name": "Appendices",
+      "sourceId": "/en/appendices/@journal"
+    },
+    {
+      "pack": "references",
+      "type": "JournalEntry",
+      "id": "7e4b43764f886ea3",
+      "name": "Arcane",
+      "sourceId": "/en/appendices/arcane/@journal"
+    },
+    {
+      "pack": "references",
+      "type": "JournalEntry",
+      "id": "c21c3368b1c6bad8",
+      "name": "Patch Notes",
+      "sourceId": "/en/appendices/patch-notes/@journal"
+    },
+    {
+      "pack": "references",
+      "type": "JournalEntry",
+      "id": "b2d3aace891a5971",
+      "name": "Patch Notes 0.92",
+      "sourceId": "/en/appendices/patch-notes/0-92/@journal"
+    },
+    {
+      "pack": "references",
+      "type": "JournalEntry",
+      "id": "8a032ae33ca2cdc0",
+      "name": "Patch Notes 0.92b",
+      "sourceId": "/en/appendices/patch-notes/0-92b/@journal"
+    },
+    {
+      "pack": "references",
+      "type": "JournalEntry",
+      "id": "135f74a3b15bf0ed",
+      "name": "Patch Notes 0.92c",
+      "sourceId": "/en/appendices/patch-notes/0-92c/@journal"
+    },
+    {
+      "pack": "references",
+      "type": "JournalEntry",
+      "id": "0e08785dc93b373e",
+      "name": "Patch Notes 0.92d",
+      "sourceId": "/en/appendices/patch-notes/0-92d/@journal"
+    },
+    {
+      "pack": "references",
+      "type": "JournalEntry",
+      "id": "66dd5800b2380de8",
+      "name": "Patch Notes 0.93",
+      "sourceId": "/en/appendices/patch-notes/0-93/@journal"
+    },
+    {
+      "pack": "references",
+      "type": "JournalEntry",
+      "id": "a69a66a4f368cf09",
+      "name": "Patch Notes 0.94",
+      "sourceId": "/en/appendices/patch-notes/0-94/@journal"
+    },
+    {
+      "pack": "references",
+      "type": "JournalEntry",
+      "id": "b4bafeac2421da14",
+      "name": "Patch Notes 0.94a",
+      "sourceId": "/en/appendices/patch-notes/0-94a/@journal"
+    },
+    {
+      "pack": "references",
+      "type": "JournalEntry",
+      "id": "459c3d6e314f447a",
+      "name": "Patch Notes 0.95",
+      "sourceId": "/en/appendices/patch-notes/0-95/@journal"
+    },
+    {
+      "pack": "references",
+      "type": "JournalEntry",
+      "id": "383baeb87d2b2b5f",
+      "name": "Patch Notes 0.96",
+      "sourceId": "/en/appendices/patch-notes/0-96/@journal"
+    },
+    {
+      "pack": "references",
+      "type": "JournalEntry",
+      "id": "04a36687a3ce6518",
+      "name": "About the 0.94 Update",
+      "sourceId": "/en/appendices/patch-notes/about-update-0-94/@journal"
+    },
+    {
+      "pack": "references",
+      "type": "JournalEntry",
+      "id": "5ebff2f3675f1c7b",
+      "name": "Runic Advice",
+      "sourceId": "/en/appendices/runic-council/@journal"
+    },
+    {
+      "pack": "references",
+      "type": "JournalEntry",
+      "id": "8c7c86d60e7e52e4",
+      "name": "Content map",
+      "sourceId": "/en/content-map/@journal"
+    },
+    {
+      "pack": "references",
+      "type": "JournalEntry",
+      "id": "3fc39a7674ba71a8",
+      "name": "Foundations",
+      "sourceId": "/en/foundations/@journal"
+    },
+    {
+      "pack": "references",
+      "type": "JournalEntry",
+      "id": "612bb9bfbbafe387",
+      "name": "Introduction",
+      "sourceId": "/en/foundations/introduction/@journal"
+    },
+    {
+      "pack": "references",
+      "type": "JournalEntry",
+      "id": "89a5cdccb533cc4a",
+      "name": "Licensing",
+      "sourceId": "/en/licensing/@journal"
+    },
+    {
+      "pack": "references",
+      "type": "JournalEntry",
+      "id": "25d92af673b26c7a",
+      "name": "Projects",
+      "sourceId": "/en/projects/@journal"
+    },
+    {
+      "pack": "references",
+      "type": "JournalEntry",
+      "id": "74672392539b7df6",
+      "name": "Runarcana: Drive",
+      "sourceId": "/en/projects/drive/@journal"
+    },
+    {
+      "pack": "references",
+      "type": "JournalEntry",
+      "id": "c4ace6aad6c65e18",
+      "name": "Runarcana: Folio",
+      "sourceId": "/en/projects/folio/@journal"
+    },
+    {
+      "pack": "references",
+      "type": "JournalEntry",
+      "id": "8cc3fb4bb3912a61",
+      "name": "Runarcana: Santangelo",
+      "sourceId": "/en/projects/santangelo/@journal"
+    },
+    {
+      "pack": "references",
+      "type": "JournalEntry",
+      "id": "5790788021edec69",
+      "name": "Stories",
+      "sourceId": "/en/projects/stories/@journal"
+    },
+    {
+      "pack": "references",
+      "type": "JournalEntry",
+      "id": "cea021cd9ffa3ca6",
+      "name": "Toolbox",
+      "sourceId": "/en/projects/toolbox/@journal"
+    },
+    {
+      "pack": "references",
+      "type": "JournalEntry",
+      "id": "ecb9b750db5e2036",
+      "name": "Runarcana +",
+      "sourceId": "/en/runarcana-plus/@journal"
+    },
+    {
+      "pack": "references",
+      "type": "JournalEntry",
+      "id": "643615da6de23f30",
+      "name": "Garden of Shadows",
+      "sourceId": "/en/runarcana-plus/garden-of-shadows/@journal"
+    },
+    {
+      "pack": "references",
+      "type": "JournalEntry",
+      "id": "592f8ab8ad93bcff",
+      "name": "Magitek Repository",
+      "sourceId": "/en/runarcana-plus/magitek-repository/@journal"
+    },
+    {
+      "pack": "references",
+      "type": "JournalEntry",
+      "id": "d086d1beb701c801",
+      "name": "A Grain of Sand",
+      "sourceId": "/en/runarcana-plus/magitek-repository/a-grain-of-sand/@journal"
+    },
+    {
+      "pack": "references",
+      "type": "JournalEntry",
+      "id": "f7ce4c4e66624261",
+      "name": "Barukh Catalog 01",
+      "sourceId": "/en/runarcana-plus/magitek-repository/barukh-catalog-01/@journal"
+    },
+    {
+      "pack": "references",
+      "type": "JournalEntry",
+      "id": "655ad51ac6f415de",
+      "name": "Barukh Catalog 08",
+      "sourceId": "/en/runarcana-plus/magitek-repository/barukh-catalog-08/@journal"
+    },
+    {
+      "pack": "characters",
+      "type": "JournalEntry",
+      "id": "aa729c8e16fd4a9a",
+      "name": "Characters",
+      "sourceId": "/en/characters/@journal"
+    },
+    {
+      "pack": "characters",
+      "type": "JournalEntry",
+      "id": "34cbb9712406269c",
+      "name": "Classes",
+      "sourceId": "/en/characters/classes/@journal"
+    },
+    {
+      "pack": "characters",
+      "type": "JournalEntry",
+      "id": "e8dfa8f9902c5bcb",
+      "name": "Acolyte",
+      "sourceId": "/en/characters/classes/acolyte/@journal"
+    },
+    {
+      "pack": "characters",
+      "type": "JournalEntry",
+      "id": "d9fde9ee3179012c",
+      "name": "Arcanist",
+      "sourceId": "/en/characters/classes/arcanist/@journal"
+    },
+    {
+      "pack": "characters",
+      "type": "JournalEntry",
+      "id": "82021bad93376b34",
+      "name": "Bodhisattva",
+      "sourceId": "/en/characters/classes/bodhisattva/@journal"
+    },
+    {
+      "pack": "characters",
+      "type": "JournalEntry",
+      "id": "53989558d0b3ca68",
+      "name": "Brute",
+      "sourceId": "/en/characters/classes/brute/@journal"
+    },
+    {
+      "pack": "characters",
+      "type": "JournalEntry",
+      "id": "b20eb40cb1e1901e",
+      "name": "Combatant",
+      "sourceId": "/en/characters/classes/combatant/@journal"
+    },
+    {
+      "pack": "characters",
+      "type": "JournalEntry",
+      "id": "43c66f0ba1215cf1",
+      "name": "Hunter",
+      "sourceId": "/en/characters/classes/hunter/@journal"
+    },
+    {
+      "pack": "characters",
+      "type": "JournalEntry",
+      "id": "d8bf0a2e080242d8",
+      "name": "Marksman",
+      "sourceId": "/en/characters/classes/marksman/@journal"
+    },
+    {
+      "pack": "characters",
+      "type": "JournalEntry",
+      "id": "aacc5b90e510736a",
+      "name": "Mercurial",
+      "sourceId": "/en/characters/classes/mercurial/@journal"
+    },
+    {
+      "pack": "characters",
+      "type": "JournalEntry",
+      "id": "52200618ce4b3dbd",
+      "name": "Shaman",
+      "sourceId": "/en/characters/classes/shaman/@journal"
+    },
+    {
+      "pack": "characters",
+      "type": "JournalEntry",
+      "id": "4383fbce2becea71",
+      "name": "Character Creation",
+      "sourceId": "/en/characters/create-character/@journal"
+    },
+    {
+      "pack": "characters",
+      "type": "JournalEntry",
+      "id": "cdc60a70687a2888",
+      "name": "Customization",
+      "sourceId": "/en/characters/customization/@journal"
+    },
+    {
+      "pack": "characters",
+      "type": "JournalEntry",
+      "id": "bb2ebb3187567c91",
+      "name": "Class Resources",
+      "sourceId": "/en/characters/customization/class-resources/@journal"
+    },
+    {
+      "pack": "characters",
+      "type": "JournalEntry",
+      "id": "3e208cfc78d1279f",
+      "name": "Combat Techniques",
+      "sourceId": "/en/characters/customization/class-resources/combat-techniques/@journal"
+    },
+    {
+      "pack": "characters",
+      "type": "JournalEntry",
+      "id": "536c05aa2145bba0",
+      "name": "Feral Forms",
+      "sourceId": "/en/characters/customization/class-resources/feral-forms/@journal"
+    },
+    {
+      "pack": "characters",
+      "type": "JournalEntry",
+      "id": "1d37deed6c55043e",
+      "name": "Great Spirits",
+      "sourceId": "/en/characters/customization/class-resources/great-spirits/@journal"
+    },
+    {
+      "pack": "characters",
+      "type": "JournalEntry",
+      "id": "ca203a1bdf41b0c3",
+      "name": "Ki",
+      "sourceId": "/en/characters/customization/class-resources/ki/@journal"
+    },
+    {
+      "pack": "characters",
+      "type": "JournalEntry",
+      "id": "a65c949a0a87cfbf",
+      "name": "Summons",
+      "sourceId": "/en/characters/customization/class-resources/summons/@journal"
+    },
+    {
+      "pack": "characters",
+      "type": "JournalEntry",
+      "id": "7624dc1113ea08cb",
+      "name": "Sutras",
+      "sourceId": "/en/characters/customization/class-resources/sutras/@journal"
+    },
+    {
+      "pack": "characters",
+      "type": "JournalEntry",
+      "id": "652023274d1f3a4b",
+      "name": "Vel",
+      "sourceId": "/en/characters/customization/class-resources/vel/@journal"
+    },
+    {
+      "pack": "characters",
+      "type": "JournalEntry",
+      "id": "aea9ed3ce0bda69f",
+      "name": "Wraths",
+      "sourceId": "/en/characters/customization/class-resources/wraths/@journal"
+    },
+    {
+      "pack": "characters",
+      "type": "JournalEntry",
+      "id": "d6e0efcd85f17f88",
+      "name": "Heritages",
+      "sourceId": "/en/characters/customization/heritages/@journal"
+    },
+    {
+      "pack": "characters",
+      "type": "JournalEntry",
+      "id": "bfc7b90da7bdd85a",
+      "name": "Improvement",
+      "sourceId": "/en/characters/customization/improvement/@journal"
+    },
+    {
+      "pack": "characters",
+      "type": "JournalEntry",
+      "id": "32c4fc2559713fd4",
+      "name": "Multiclassing",
+      "sourceId": "/en/characters/customization/multiclassing/@journal"
+    },
+    {
+      "pack": "characters",
+      "type": "JournalEntry",
+      "id": "bc4b9a50bf0af449",
+      "name": "Runes",
+      "sourceId": "/en/characters/customization/runes/@journal"
+    },
+    {
+      "pack": "characters",
+      "type": "JournalEntry",
+      "id": "d81e67b6ca75cf3f",
+      "name": "List of Runes",
+      "sourceId": "/en/characters/customization/runes/list-of-runes/@journal"
+    },
+    {
+      "pack": "characters",
+      "type": "JournalEntry",
+      "id": "57a236964655884b",
+      "name": "Runessences",
+      "sourceId": "/en/characters/customization/runes/runessences/@journal"
+    },
+    {
+      "pack": "characters",
+      "type": "JournalEntry",
+      "id": "e742c133cef03d38",
+      "name": "Runic Pulses",
+      "sourceId": "/en/characters/customization/runes/runic-pulses/@journal"
+    },
+    {
+      "pack": "characters",
+      "type": "JournalEntry",
+      "id": "78473fe0bc9ec3ab",
+      "name": "Variant Heritages",
+      "sourceId": "/en/characters/customization/variant-heritages/@journal"
+    },
+    {
+      "pack": "characters",
+      "type": "JournalEntry",
+      "id": "c1c4a7f21e7f0fca",
+      "name": "Detailing",
+      "sourceId": "/en/characters/detailing/@journal"
+    },
+    {
+      "pack": "characters",
+      "type": "JournalEntry",
+      "id": "4eab9553b82e25a5",
+      "name": "Character Details",
+      "sourceId": "/en/characters/detailing/character-details/@journal"
+    },
+    {
+      "pack": "characters",
+      "type": "JournalEntry",
+      "id": "4eec721b83bb0bd3",
+      "name": "Character History",
+      "sourceId": "/en/characters/detailing/character-history/@journal"
+    },
+    {
+      "pack": "characters",
+      "type": "JournalEntry",
+      "id": "1c52ae53f9a0731e",
+      "name": "Crafts",
+      "sourceId": "/en/characters/detailing/crafts/@journal"
+    },
+    {
+      "pack": "characters",
+      "type": "JournalEntry",
+      "id": "b9dca0c49bd87d73",
+      "name": "Formulas",
+      "sourceId": "/en/characters/detailing/crafts/formulas/@journal"
+    },
+    {
+      "pack": "characters",
+      "type": "JournalEntry",
+      "id": "3a906dcea8257a1c",
+      "name": "General Formulas",
+      "sourceId": "/en/characters/detailing/crafts/general-formulas/@journal"
+    },
+    {
+      "pack": "characters",
+      "type": "JournalEntry",
+      "id": "d56b72ff3a30e972",
+      "name": "Major Crafts",
+      "sourceId": "/en/characters/detailing/crafts/major/@journal"
+    },
+    {
+      "pack": "characters",
+      "type": "JournalEntry",
+      "id": "37aae71961063c49",
+      "name": "Alchemist",
+      "sourceId": "/en/characters/detailing/crafts/major/alchemist/@journal"
+    },
+    {
+      "pack": "characters",
+      "type": "JournalEntry",
+      "id": "002bd5c4ef7f9d9a",
+      "name": "Apothecary",
+      "sourceId": "/en/characters/detailing/crafts/major/apothecary/@journal"
+    },
+    {
+      "pack": "characters",
+      "type": "JournalEntry",
+      "id": "9e626ec31c5f675b",
+      "name": "Armorer",
+      "sourceId": "/en/characters/detailing/crafts/major/armorer/@journal"
+    },
+    {
+      "pack": "characters",
+      "type": "JournalEntry",
+      "id": "f899aa7ded532205",
+      "name": "Brewer",
+      "sourceId": "/en/characters/detailing/crafts/major/brewer/@journal"
+    },
+    {
+      "pack": "characters",
+      "type": "JournalEntry",
+      "id": "26af73d09d463ed9",
+      "name": "Cook",
+      "sourceId": "/en/characters/detailing/crafts/major/cook/@journal"
+    },
+    {
+      "pack": "characters",
+      "type": "JournalEntry",
+      "id": "2574b4b73adfb841",
+      "name": "Enchanter",
+      "sourceId": "/en/characters/detailing/crafts/major/enchanter/@journal"
+    },
+    {
+      "pack": "characters",
+      "type": "JournalEntry",
+      "id": "0f4cad366a631e21",
+      "name": "Fashionista",
+      "sourceId": "/en/characters/detailing/crafts/major/fashionista/@journal"
+    },
+    {
+      "pack": "characters",
+      "type": "JournalEntry",
+      "id": "ba0fc0333eba443e",
+      "name": "Fletcher",
+      "sourceId": "/en/characters/detailing/crafts/major/fletcher/@journal"
+    },
+    {
+      "pack": "characters",
+      "type": "JournalEntry",
+      "id": "3dca41ef177e8c48",
+      "name": "Gunsmith",
+      "sourceId": "/en/characters/detailing/crafts/major/gunsmith/@journal"
+    },
+    {
+      "pack": "characters",
+      "type": "JournalEntry",
+      "id": "97f60eee8077b0cf",
+      "name": "Jeweler",
+      "sourceId": "/en/characters/detailing/crafts/major/jeweler/@journal"
+    },
+    {
+      "pack": "characters",
+      "type": "JournalEntry",
+      "id": "40b493cbafecb4c0",
+      "name": "Locksmith",
+      "sourceId": "/en/characters/detailing/crafts/major/locksmith/@journal"
+    },
+    {
+      "pack": "characters",
+      "type": "JournalEntry",
+      "id": "b800f98586262811",
+      "name": "Mason",
+      "sourceId": "/en/characters/detailing/crafts/major/mason/@journal"
+    },
+    {
+      "pack": "characters",
+      "type": "JournalEntry",
+      "id": "24ac9e84c922ef7c",
+      "name": "Techmaturge",
+      "sourceId": "/en/characters/detailing/crafts/major/techmaturge/@journal"
+    },
+    {
+      "pack": "characters",
+      "type": "JournalEntry",
+      "id": "264f34df2c4dc4b8",
+      "name": "Trapper",
+      "sourceId": "/en/characters/detailing/crafts/major/trapper/@journal"
+    },
+    {
+      "pack": "characters",
+      "type": "JournalEntry",
+      "id": "309491ecfda2eda2",
+      "name": "Vehiclewright",
+      "sourceId": "/en/characters/detailing/crafts/major/vehiclewright/@journal"
+    },
+    {
+      "pack": "characters",
+      "type": "JournalEntry",
+      "id": "00723ce02f9e0a90",
+      "name": "Weaponsmith",
+      "sourceId": "/en/characters/detailing/crafts/major/weaponsmith/@journal"
+    },
+    {
+      "pack": "characters",
+      "type": "JournalEntry",
+      "id": "63433bac31e8c30b",
+      "name": "Minor Crafts",
+      "sourceId": "/en/characters/detailing/crafts/minor/@journal"
+    },
+    {
+      "pack": "characters",
+      "type": "JournalEntry",
+      "id": "cb8a0003c3a9f707",
+      "name": "Artist",
+      "sourceId": "/en/characters/detailing/crafts/minor/artist/@journal"
+    },
+    {
+      "pack": "characters",
+      "type": "JournalEntry",
+      "id": "05197305edb5a02f",
+      "name": "Collector",
+      "sourceId": "/en/characters/detailing/crafts/minor/collector/@journal"
+    },
+    {
+      "pack": "characters",
+      "type": "JournalEntry",
+      "id": "f90a6d1391014ad2",
+      "name": "Forger",
+      "sourceId": "/en/characters/detailing/crafts/minor/forger/@journal"
+    },
+    {
+      "pack": "characters",
+      "type": "JournalEntry",
+      "id": "a17928e190a539c2",
+      "name": "Guide",
+      "sourceId": "/en/characters/detailing/crafts/minor/guide/@journal"
+    },
+    {
+      "pack": "characters",
+      "type": "JournalEntry",
+      "id": "a5f9726a0483b87c",
+      "name": "Handworker",
+      "sourceId": "/en/characters/detailing/crafts/minor/handworker/@journal"
+    },
+    {
+      "pack": "characters",
+      "type": "JournalEntry",
+      "id": "078c94c31c6bcb22",
+      "name": "Player",
+      "sourceId": "/en/characters/detailing/crafts/minor/player/@journal"
+    },
+    {
+      "pack": "characters",
+      "type": "JournalEntry",
+      "id": "c137c7e50a3dc706",
+      "name": "Essence and Behavior",
+      "sourceId": "/en/characters/detailing/essence-and-behavior/@journal"
+    },
+    {
+      "pack": "characters",
+      "type": "JournalEntry",
+      "id": "bf6bf53d5bb70ee4",
+      "name": "Languages",
+      "sourceId": "/en/characters/detailing/languages/@journal"
+    },
+    {
+      "pack": "characters",
+      "type": "JournalEntry",
+      "id": "1b72d8b00fba0716",
+      "name": "Pasts",
+      "sourceId": "/en/characters/detailing/pasts/@journal"
+    },
+    {
+      "pack": "characters",
+      "type": "JournalEntry",
+      "id": "4b6301918ddf9fb7",
+      "name": "Realms of Existence",
+      "sourceId": "/en/characters/detailing/realms-of-existence/@journal"
+    },
+    {
+      "pack": "characters",
+      "type": "JournalEntry",
+      "id": "3a297b09300e34ae",
+      "name": "Religion",
+      "sourceId": "/en/characters/detailing/religion/@journal"
+    },
+    {
+      "pack": "characters",
+      "type": "JournalEntry",
+      "id": "eded2ffa85b39d0b",
+      "name": "Regions",
+      "sourceId": "/en/characters/detailing/runeterra/@journal"
+    },
+    {
+      "pack": "characters",
+      "type": "JournalEntry",
+      "id": "624ba994182cf9b9",
+      "name": "Bandle City",
+      "sourceId": "/en/characters/detailing/runeterra/bandle-city/@journal"
+    },
+    {
+      "pack": "characters",
+      "type": "JournalEntry",
+      "id": "a4859ac482384dea",
+      "name": "Bilgewater",
+      "sourceId": "/en/characters/detailing/runeterra/bilgewater/@journal"
+    },
+    {
+      "pack": "characters",
+      "type": "JournalEntry",
+      "id": "1d4c10bfbcf02b53",
+      "name": "Demacia",
+      "sourceId": "/en/characters/detailing/runeterra/demacia/@journal"
+    },
+    {
+      "pack": "characters",
+      "type": "JournalEntry",
+      "id": "8c399a09106d7a1a",
+      "name": "Freljord",
+      "sourceId": "/en/characters/detailing/runeterra/freljord/@journal"
+    },
+    {
+      "pack": "characters",
+      "type": "JournalEntry",
+      "id": "8f4683faeb5cfa1e",
+      "name": "Ionia",
+      "sourceId": "/en/characters/detailing/runeterra/ionia/@journal"
+    },
+    {
+      "pack": "characters",
+      "type": "JournalEntry",
+      "id": "0daa6d15f4bf11cd",
+      "name": "Ixtal",
+      "sourceId": "/en/characters/detailing/runeterra/ixtal/@journal"
+    },
+    {
+      "pack": "characters",
+      "type": "JournalEntry",
+      "id": "ab9fea027da67143",
+      "name": "Nazumah",
+      "sourceId": "/en/characters/detailing/runeterra/nazumah/@journal"
+    },
+    {
+      "pack": "characters",
+      "type": "JournalEntry",
+      "id": "30403e72f2f0a2ac",
+      "name": "Noxus",
+      "sourceId": "/en/characters/detailing/runeterra/noxus/@journal"
+    },
+    {
+      "pack": "characters",
+      "type": "JournalEntry",
+      "id": "4a6f79d7511a0720",
+      "name": "Piltover",
+      "sourceId": "/en/characters/detailing/runeterra/piltover/@journal"
+    },
+    {
+      "pack": "characters",
+      "type": "JournalEntry",
+      "id": "dde855e89136272d",
+      "name": "Shadow Isles",
+      "sourceId": "/en/characters/detailing/runeterra/shadow-isles/@journal"
+    },
+    {
+      "pack": "characters",
+      "type": "JournalEntry",
+      "id": "1206c44aa7136b90",
+      "name": "Shurima",
+      "sourceId": "/en/characters/detailing/runeterra/shurima/@journal"
+    },
+    {
+      "pack": "characters",
+      "type": "JournalEntry",
+      "id": "27afc11b91d6d5c3",
+      "name": "Targon",
+      "sourceId": "/en/characters/detailing/runeterra/targon/@journal"
+    },
+    {
+      "pack": "characters",
+      "type": "JournalEntry",
+      "id": "5791ddac115ddc13",
+      "name": "The Void",
+      "sourceId": "/en/characters/detailing/runeterra/the-void/@journal"
+    },
+    {
+      "pack": "characters",
+      "type": "JournalEntry",
+      "id": "49bb1132984c3020",
+      "name": "Zaun",
+      "sourceId": "/en/characters/detailing/runeterra/zaun/@journal"
+    },
+    {
+      "pack": "characters",
+      "type": "JournalEntry",
+      "id": "88fa5b10279df8f3",
+      "name": "Equipment",
+      "sourceId": "/en/characters/equipment/@journal"
+    },
+    {
+      "pack": "characters",
+      "type": "JournalEntry",
+      "id": "a8128a2a6fcc82a9",
+      "name": "Adventuring Gear",
+      "sourceId": "/en/characters/equipment/adventuring-gear/@journal"
+    },
+    {
+      "pack": "characters",
+      "type": "JournalEntry",
+      "id": "3325b3ba4806216b",
+      "name": "Armor and Shields",
+      "sourceId": "/en/characters/equipment/armor-and-shields/@journal"
+    },
+    {
+      "pack": "characters",
+      "type": "JournalEntry",
+      "id": "e4d9b587ade6d96e",
+      "name": "Equipment and Wealth",
+      "sourceId": "/en/characters/equipment/equipment-and-wealth/@journal"
+    },
+    {
+      "pack": "characters",
+      "type": "JournalEntry",
+      "id": "9d607d1d34f05057",
+      "name": "Firearm Modifications",
+      "sourceId": "/en/characters/equipment/firearm-modifications/@journal"
+    },
+    {
+      "pack": "characters",
+      "type": "JournalEntry",
+      "id": "32a63e7400707266",
+      "name": "Mounts and Lifestyle",
+      "sourceId": "/en/characters/equipment/mounts-and-lifestyle/@journal"
+    },
+    {
+      "pack": "characters",
+      "type": "JournalEntry",
+      "id": "b17834dae54573dd",
+      "name": "Weapons",
+      "sourceId": "/en/characters/equipment/weapons/@journal"
+    },
+    {
+      "pack": "characters",
+      "type": "JournalEntry",
+      "id": "457dd39b39e0e9f8",
+      "name": "Origins",
+      "sourceId": "/en/characters/origins/@journal"
+    },
+    {
+      "pack": "characters",
+      "type": "JournalEntry",
+      "id": "9a1c09dc52b5611f",
+      "name": "Antroplantae",
+      "sourceId": "/en/characters/origins/antroplantae/@journal"
+    },
+    {
+      "pack": "characters",
+      "type": "JournalEntry",
+      "id": "b2ab80a1f42717bc",
+      "name": "Chireans",
+      "sourceId": "/en/characters/origins/chireans/@journal"
+    },
+    {
+      "pack": "characters",
+      "type": "JournalEntry",
+      "id": "1b58931011413e61",
+      "name": "Construct",
+      "sourceId": "/en/characters/origins/construct/@journal"
+    },
+    {
+      "pack": "characters",
+      "type": "JournalEntry",
+      "id": "4293daced1fd4eb6",
+      "name": "Half-Dragon",
+      "sourceId": "/en/characters/origins/half-dragon/@journal"
+    },
+    {
+      "pack": "characters",
+      "type": "JournalEntry",
+      "id": "875942b911104d9f",
+      "name": "Human",
+      "sourceId": "/en/characters/origins/human/@journal"
+    },
+    {
+      "pack": "characters",
+      "type": "JournalEntry",
+      "id": "f9aa99adf11a53e1",
+      "name": "Minotaur",
+      "sourceId": "/en/characters/origins/minotaur/@journal"
+    },
+    {
+      "pack": "characters",
+      "type": "JournalEntry",
+      "id": "0ee8ccf2547cbaf8",
+      "name": "Runeborn",
+      "sourceId": "/en/characters/origins/runeborn/@journal"
+    },
+    {
+      "pack": "characters",
+      "type": "JournalEntry",
+      "id": "af2f890eddbb1122",
+      "name": "Troll",
+      "sourceId": "/en/characters/origins/troll/@journal"
+    },
+    {
+      "pack": "characters",
+      "type": "JournalEntry",
+      "id": "88853a9c7e604c68",
+      "name": "Vastaya",
+      "sourceId": "/en/characters/origins/vastaya/@journal"
+    },
+    {
+      "pack": "characters",
+      "type": "JournalEntry",
+      "id": "52875221fb8365b5",
+      "name": "Yordle",
+      "sourceId": "/en/characters/origins/yordle/@journal"
+    },
+    {
+      "pack": "gm",
+      "type": "JournalEntry",
+      "id": "9a5675b3fefb1b46",
+      "name": "Game Mastering",
+      "sourceId": "/en/game-mastering/@journal"
+    },
+    {
+      "pack": "gm",
+      "type": "JournalEntry",
+      "id": "f967419a783b703f",
+      "name": "Rewards",
+      "sourceId": "/en/game-mastering/rewards/@journal"
+    },
+    {
+      "pack": "gm",
+      "type": "JournalEntry",
+      "id": "75b01b78e1295baf",
+      "name": "Artifacts",
+      "sourceId": "/en/game-mastering/rewards/artifacts/@journal"
+    },
+    {
+      "pack": "gm",
+      "type": "JournalEntry",
+      "id": "2587262eb1bb2023",
+      "name": "Darkin Weapons",
+      "sourceId": "/en/game-mastering/rewards/darkin-weapons/@journal"
+    },
+    {
+      "pack": "gm",
+      "type": "JournalEntry",
+      "id": "352d2a337c0e59f0",
+      "name": "Intelligent Magic Items",
+      "sourceId": "/en/game-mastering/rewards/intelligent-magic-items/@journal"
+    },
+    {
+      "pack": "gm",
+      "type": "JournalEntry",
+      "id": "5e7e891e7ad2ed8d",
+      "name": "Magic Items",
+      "sourceId": "/en/game-mastering/rewards/magic-items/@journal"
+    },
+    {
+      "pack": "gm",
+      "type": "JournalEntry",
+      "id": "e667e6bff7b12416",
+      "name": "Materials",
+      "sourceId": "/en/game-mastering/rewards/materials/@journal"
+    },
+    {
+      "pack": "gm",
+      "type": "JournalEntry",
+      "id": "10301993ec4b2ebf",
+      "name": "Prosthetic Limbs",
+      "sourceId": "/en/game-mastering/rewards/prosthetic-limbs/@journal"
+    },
+    {
+      "pack": "gm",
+      "type": "JournalEntry",
+      "id": "ab1620a12ffa6ca4",
+      "name": "Reward Types",
+      "sourceId": "/en/game-mastering/rewards/reward-types/@journal"
+    },
+    {
+      "pack": "gm",
+      "type": "JournalEntry",
+      "id": "8fcde6985227bd7f",
+      "name": "Trinkets",
+      "sourceId": "/en/game-mastering/rewards/trinkets/@journal"
+    },
+    {
+      "pack": "gm",
+      "type": "JournalEntry",
+      "id": "340496efd1039da1",
+      "name": "Running the Game",
+      "sourceId": "/en/game-mastering/running-the-game/@journal"
+    },
+    {
+      "pack": "gm",
+      "type": "JournalEntry",
+      "id": "970676f24dce8298",
+      "name": "Afflictions",
+      "sourceId": "/en/game-mastering/running-the-game/afflictions/@journal"
+    },
+    {
+      "pack": "gm",
+      "type": "JournalEntry",
+      "id": "dcffce71a4f81086",
+      "name": "Affliction Lists",
+      "sourceId": "/en/game-mastering/running-the-game/afflictions/lists/@journal"
+    },
+    {
+      "pack": "gm",
+      "type": "JournalEntry",
+      "id": "943786eaefaaac73",
+      "name": "Conditions",
+      "sourceId": "/en/game-mastering/running-the-game/conditions/@journal"
+    },
+    {
+      "pack": "gm",
+      "type": "JournalEntry",
+      "id": "357d941a5f5e517e",
+      "name": "Diseases",
+      "sourceId": "/en/game-mastering/running-the-game/diseases/@journal"
+    },
+    {
+      "pack": "gm",
+      "type": "JournalEntry",
+      "id": "731622d6e783df32",
+      "name": "Environments",
+      "sourceId": "/en/game-mastering/running-the-game/environments/@journal"
+    },
+    {
+      "pack": "gm",
+      "type": "JournalEntry",
+      "id": "f2062e0103e76881",
+      "name": "Madness",
+      "sourceId": "/en/game-mastering/running-the-game/madness/@journal"
+    },
+    {
+      "pack": "gm",
+      "type": "JournalEntry",
+      "id": "f3e685aa435bf4d9",
+      "name": "Objects",
+      "sourceId": "/en/game-mastering/running-the-game/objects/@journal"
+    },
+    {
+      "pack": "gm",
+      "type": "JournalEntry",
+      "id": "36db43563f897a31",
+      "name": "Obtaining Resources",
+      "sourceId": "/en/game-mastering/running-the-game/obtaining-resources/@journal"
+    },
+    {
+      "pack": "gm",
+      "type": "JournalEntry",
+      "id": "95c74c9b2795cf0f",
+      "name": "Poisons",
+      "sourceId": "/en/game-mastering/running-the-game/poisons/@journal"
+    },
+    {
+      "pack": "gm",
+      "type": "JournalEntry",
+      "id": "2c418acc61509561",
+      "name": "Traps",
+      "sourceId": "/en/game-mastering/running-the-game/traps/@journal"
+    },
+    {
+      "pack": "rules",
+      "type": "JournalEntry",
+      "id": "2da8837ac3df8d07",
+      "name": "Spell List",
+      "sourceId": "/en/magic/spells/@journal"
+    },
+    {
+      "pack": "rules",
+      "type": "JournalEntry",
+      "id": "53eeb9aa2dbd77b6",
+      "name": "Ablaze",
+      "sourceId": "/en/magic/spells/ablaze/@journal"
+    },
+    {
+      "pack": "rules",
+      "type": "JournalEntry",
+      "id": "c4b97de046d8d3e6",
+      "name": "Abominable Snowman",
+      "sourceId": "/en/magic/spells/abominable-snowman/@journal"
+    },
+    {
+      "pack": "rules",
+      "type": "JournalEntry",
+      "id": "7db5d14fcdfd2401",
+      "name": "Aegis",
+      "sourceId": "/en/magic/spells/aegis/@journal"
+    },
+    {
+      "pack": "rules",
+      "type": "JournalEntry",
+      "id": "c88b7a884075e56f",
+      "name": "Aid",
+      "sourceId": "/en/magic/spells/aid/@journal"
+    },
+    {
+      "pack": "rules",
+      "type": "JournalEntry",
+      "id": "b7679a6df51a33ea",
+      "name": "Akja",
+      "sourceId": "/en/magic/spells/akja/@journal"
+    },
+    {
+      "pack": "rules",
+      "type": "JournalEntry",
+      "id": "049c5ef75ab0f939",
+      "name": "Alarm",
+      "sourceId": "/en/magic/spells/alarm/@journal"
+    },
+    {
+      "pack": "rules",
+      "type": "JournalEntry",
+      "id": "c2316e89c0c51fea",
+      "name": "Augury",
+      "sourceId": "/en/magic/spells/augury/@journal"
+    },
+    {
+      "pack": "rules",
+      "type": "JournalEntry",
+      "id": "ae8e367427ed4283",
+      "name": "Awaken",
+      "sourceId": "/en/magic/spells/awaken/@journal"
+    },
+    {
+      "pack": "rules",
+      "type": "JournalEntry",
+      "id": "9657f6e65c9c72b4",
+      "name": "Bane",
+      "sourceId": "/en/magic/spells/bane/@journal"
+    },
+    {
+      "pack": "rules",
+      "type": "JournalEntry",
+      "id": "dbde1eb0a21c3f88",
+      "name": "Blaze",
+      "sourceId": "/en/magic/spells/blaze/@journal"
+    },
+    {
+      "pack": "rules",
+      "type": "JournalEntry",
+      "id": "77f3fea9f55fc6e3",
+      "name": "Blight",
+      "sourceId": "/en/magic/spells/blight/@journal"
+    },
+    {
+      "pack": "rules",
+      "type": "JournalEntry",
+      "id": "4387f039e80630bf",
+      "name": "Blur",
+      "sourceId": "/en/magic/spells/blur/@journal"
+    },
+    {
+      "pack": "rules",
+      "type": "JournalEntry",
+      "id": "d61068ad2e05fe97",
+      "name": "Clone",
+      "sourceId": "/en/magic/spells/clone/@journal"
+    },
+    {
+      "pack": "rules",
+      "type": "JournalEntry",
+      "id": "7e59f1ba33254be6",
+      "name": "Command",
+      "sourceId": "/en/magic/spells/command/@journal"
+    },
+    {
+      "pack": "rules",
+      "type": "JournalEntry",
+      "id": "7d4237a5f09f4749",
+      "name": "Commune",
+      "sourceId": "/en/magic/spells/commune/@journal"
+    },
+    {
+      "pack": "rules",
+      "type": "JournalEntry",
+      "id": "ef6ac3ecd0766591",
+      "name": "Crush",
+      "sourceId": "/en/magic/spells/crush/@journal"
+    },
+    {
+      "pack": "rules",
+      "type": "JournalEntry",
+      "id": "cd6250da74c361d1",
+      "name": "Dream",
+      "sourceId": "/en/magic/spells/dream/@journal"
+    },
+    {
+      "pack": "rules",
+      "type": "JournalEntry",
+      "id": "1ff58a4f93f436eb",
+      "name": "Erebus",
+      "sourceId": "/en/magic/spells/erebus/@journal"
+    },
+    {
+      "pack": "rules",
+      "type": "JournalEntry",
+      "id": "0aa99d5265cb047c",
+      "name": "Etna",
+      "sourceId": "/en/magic/spells/etna/@journal"
+    },
+    {
+      "pack": "rules",
+      "type": "JournalEntry",
+      "id": "70d6f5b713617eec",
+      "name": "Eyebite",
+      "sourceId": "/en/magic/spells/eyebite/@journal"
+    },
+    {
+      "pack": "rules",
+      "type": "JournalEntry",
+      "id": "b0d4d5602519bcb0",
+      "name": "Fear",
+      "sourceId": "/en/magic/spells/fear/@journal"
+    },
+    {
+      "pack": "rules",
+      "type": "JournalEntry",
+      "id": "1034f4b4e729cd7f",
+      "name": "Fly",
+      "sourceId": "/en/magic/spells/fly/@journal"
+    },
+    {
+      "pack": "rules",
+      "type": "JournalEntry",
+      "id": "669060521feb8186",
+      "name": "Frost Dagger",
+      "sourceId": "/en/magic/spells/frost-dagger/@journal"
+    },
+    {
+      "pack": "rules",
+      "type": "JournalEntry",
+      "id": "46eb35b767f7a4b0",
+      "name": "Fuji",
+      "sourceId": "/en/magic/spells/fuji/@journal"
+    },
+    {
+      "pack": "rules",
+      "type": "JournalEntry",
+      "id": "a10256c0f974dde4",
+      "name": "Gate",
+      "sourceId": "/en/magic/spells/gate/@journal"
+    },
+    {
+      "pack": "rules",
+      "type": "JournalEntry",
+      "id": "abc6055366b57f73",
+      "name": "Geas",
+      "sourceId": "/en/magic/spells/geas/@journal"
+    },
+    {
+      "pack": "rules",
+      "type": "JournalEntry",
+      "id": "73fd2b6b549d606f",
+      "name": "Hallow",
+      "sourceId": "/en/magic/spells/hallow/@journal"
+    },
+    {
+      "pack": "rules",
+      "type": "JournalEntry",
+      "id": "2d35e19171966630",
+      "name": "Harm",
+      "sourceId": "/en/magic/spells/harm/@journal"
+    },
+    {
+      "pack": "rules",
+      "type": "JournalEntry",
+      "id": "ab1bd36079a40d2b",
+      "name": "Haste",
+      "sourceId": "/en/magic/spells/haste/@journal"
+    },
+    {
+      "pack": "rules",
+      "type": "JournalEntry",
+      "id": "c3e4cd9216b674b0",
+      "name": "Hekla",
+      "sourceId": "/en/magic/spells/hekla/@journal"
+    },
+    {
+      "pack": "rules",
+      "type": "JournalEntry",
+      "id": "2b177ae2d00aafbf",
+      "name": "Help",
+      "sourceId": "/en/magic/spells/help/@journal"
+    },
+    {
+      "pack": "rules",
+      "type": "JournalEntry",
+      "id": "96897ad76a4e2912",
+      "name": "Jump",
+      "sourceId": "/en/magic/spells/jump/@journal"
+    },
+    {
+      "pack": "rules",
+      "type": "JournalEntry",
+      "id": "c41e94c28a30c42f",
+      "name": "Knock",
+      "sourceId": "/en/magic/spells/knock/@journal"
+    },
+    {
+      "pack": "rules",
+      "type": "JournalEntry",
+      "id": "b9a1cca874ecf5e6",
+      "name": "Light",
+      "sourceId": "/en/magic/spells/light/@journal"
+    },
+    {
+      "pack": "rules",
+      "type": "JournalEntry",
+      "id": "30153dfb26bf256e",
+      "name": "Maze",
+      "sourceId": "/en/magic/spells/maze/@journal"
+    },
+    {
+      "pack": "rules",
+      "type": "JournalEntry",
+      "id": "697d4f765bbe9260",
+      "name": "Sleep",
+      "sourceId": "/en/magic/spells/sleep/@journal"
+    },
+    {
+      "pack": "rules",
+      "type": "JournalEntry",
+      "id": "3692a0118c91d0c2",
+      "name": "Slow",
+      "sourceId": "/en/magic/spells/slow/@journal"
+    },
+    {
+      "pack": "rules",
+      "type": "JournalEntry",
+      "id": "88d7ae6eabdbc0c9",
+      "name": "Symbol",
+      "sourceId": "/en/magic/spells/symbol/@journal"
+    },
+    {
+      "pack": "rules",
+      "type": "JournalEntry",
+      "id": "c621545743f3951d",
+      "name": "Web",
+      "sourceId": "/en/magic/spells/web/@journal"
+    },
+    {
+      "pack": "rules",
+      "type": "JournalEntry",
+      "id": "87859b120796cb94",
+      "name": "Wish",
+      "sourceId": "/en/magic/spells/wish/@journal"
+    },
+    {
+      "pack": "rules",
+      "type": "JournalEntry",
+      "id": "f8ea33030b12c784",
+      "name": "Rules",
+      "sourceId": "/en/rules/@journal"
+    },
+    {
+      "pack": "rules",
+      "type": "JournalEntry",
+      "id": "5a8a75b6c4d99ddf",
+      "name": "Using Ability Scores",
+      "sourceId": "/en/rules/ability-scores/@journal"
+    },
+    {
+      "pack": "rules",
+      "type": "JournalEntry",
+      "id": "37fe008916f93797",
+      "name": "Adventuring",
+      "sourceId": "/en/rules/adventuring/@journal"
+    },
+    {
+      "pack": "rules",
+      "type": "JournalEntry",
+      "id": "0608caaa77a2f93c",
+      "name": "Combat",
+      "sourceId": "/en/rules/combat/@journal"
+    },
+    {
+      "pack": "rules",
+      "type": "JournalEntry",
+      "id": "be77f5507a480804",
+      "name": "Magic",
+      "sourceId": "/en/rules/magic/@journal"
+    },
+    {
+      "pack": "rules",
+      "type": "JournalEntry",
+      "id": "4bb9efe61dc86f27",
+      "name": "Familiars and Animal Companions",
+      "sourceId": "/en/rules/magic/familiars-and-animal-companions/@journal"
+    },
+    {
+      "pack": "rules",
+      "type": "JournalEntry",
+      "id": "528bde9089675493",
+      "name": "The Mysteries of Magic",
+      "sourceId": "/en/rules/magic/mysteries-of-magic/@journal"
+    },
+    {
+      "pack": "rules",
+      "type": "JournalEntry",
+      "id": "81adf9c1d6b895c8",
+      "name": "Purple Magic",
+      "sourceId": "/en/rules/magic/purple-magic/@journal"
+    },
+    {
+      "pack": "rules",
+      "type": "JournalEntry",
+      "id": "0cf1cb30196fc15a",
+      "name": "Rituals",
+      "sourceId": "/en/rules/magic/rituals/@journal"
+    },
+    {
+      "pack": "rules",
+      "type": "JournalEntry",
+      "id": "03f6029f3d431994",
+      "name": "Ritual List",
+      "sourceId": "/en/rules/magic/rituals/ritual-list/@journal"
+    },
+    {
+      "pack": "rules",
+      "type": "JournalEntry",
+      "id": "3136c03ce19d1d43",
+      "name": "Transferring Essences",
+      "sourceId": "/en/rules/magic/transferring-essences/@journal"
+    },
+    {
+      "pack": "rules",
+      "type": "JournalEntry",
+      "id": "83c6879b4ca488bd",
+      "name": "Yordle Wild Magic",
+      "sourceId": "/en/rules/magic/yordle-wild-magic/@journal"
+    },
+    {
+      "pack": "rules",
+      "type": "JournalEntry",
+      "id": "b75557ef77563254",
+      "name": "The Techmaturgy",
+      "sourceId": "/en/rules/techmaturgy/@journal"
+    },
+    {
+      "pack": "rules",
+      "type": "JournalEntry",
+      "id": "fe9b09baa5c4450d",
+      "name": "Apparatus",
+      "sourceId": "/en/rules/techmaturgy/apparatus/@journal"
+    },
+    {
+      "pack": "rules",
+      "type": "JournalEntry",
+      "id": "0d5c0eabb23b94ee",
+      "name": "Enhanced Armament",
+      "sourceId": "/en/rules/techmaturgy/apparatus/enhanced-armament/@journal"
+    },
+    {
+      "pack": "rules",
+      "type": "JournalEntry",
+      "id": "dc0be3998b4648e5",
+      "name": "Mecha",
+      "sourceId": "/en/rules/techmaturgy/apparatus/mecha/@journal"
+    },
+    {
+      "pack": "rules",
+      "type": "JournalEntry",
+      "id": "94268b9aa7d30fd3",
+      "name": "Projectile",
+      "sourceId": "/en/rules/techmaturgy/apparatus/projectile/@journal"
+    },
+    {
+      "pack": "rules",
+      "type": "JournalEntry",
+      "id": "b9d644b65f23db5f",
+      "name": "Servo",
+      "sourceId": "/en/rules/techmaturgy/apparatus/servo/@journal"
+    },
+    {
+      "pack": "rules",
+      "type": "JournalEntry",
+      "id": "de3f77992f480340",
+      "name": "Triggers",
+      "sourceId": "/en/rules/techmaturgy/apparatus/triggers/@journal"
+    },
+    {
+      "pack": "creature-rules",
+      "type": "JournalEntry",
+      "id": "c887e22a76402ea4",
+      "name": "Monsters & Creatures",
+      "sourceId": "/en/monsters-and-creatures/@journal"
+    },
+    {
+      "pack": "creature-rules",
+      "type": "JournalEntry",
+      "id": "b4a545aa5fc650b0",
+      "name": "Advanced Creature Creation",
+      "sourceId": "/en/monsters-and-creatures/advanced-creature-creation/@journal"
+    },
+    {
+      "pack": "creature-rules",
+      "type": "JournalEntry",
+      "id": "dfd474044c683708",
+      "name": "Altering Creatures",
+      "sourceId": "/en/monsters-and-creatures/altering-creatures/@journal"
+    },
+    {
+      "pack": "creature-rules",
+      "type": "JournalEntry",
+      "id": "9ea94cbdefe6f398",
+      "name": "Creature Creation",
+      "sourceId": "/en/monsters-and-creatures/creature-creation/@journal"
+    },
+    {
+      "pack": "creature-rules",
+      "type": "JournalEntry",
+      "id": "c6e773ec5d5628b3",
+      "name": "Creature Lists",
+      "sourceId": "/en/monsters-and-creatures/creature-lists/@journal"
+    },
+    {
+      "pack": "creature-rules",
+      "type": "JournalEntry",
+      "id": "183700fb98a5cd54",
+      "name": "The Traits of a Creature",
+      "sourceId": "/en/monsters-and-creatures/creature-traits/@journal"
+    },
+    {
+      "pack": "creature-rules",
+      "type": "JournalEntry",
+      "id": "d088f045e1e31554",
+      "name": "Moose",
+      "sourceId": "/en/monsters-and-creatures/creatures/moose/@journal"
+    },
+    {
+      "pack": "creature-rules",
+      "type": "JournalEntry",
+      "id": "f8e04c177880f165",
+      "name": "Echoes",
+      "sourceId": "/en/monsters-and-creatures/echoes/@journal"
+    },
+    {
+      "pack": "creature-rules",
+      "type": "JournalEntry",
+      "id": "af4db152ced212b7",
+      "name": "Types and Traits",
+      "sourceId": "/en/monsters-and-creatures/types-and-traits/@journal"
+    },
+    {
+      "pack": "start",
+      "type": "JournalEntry",
+      "id": "ac28a5f42711a71a",
+      "name": "Runarcana — Start Here",
+      "sourceId": "runarcana:start"
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "label": "Origins",
+  "mapping": {
+    "name": "name",
+    "system": {
+      "path": "system",
+      "converter": "runarcanaSystem"
+    },
+    "effects": {
+      "path": "effects",
+      "converter": "runarcanaNested"
+    }
+  },
+  "entries": {}
+}

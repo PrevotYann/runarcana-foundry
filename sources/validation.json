@@ -1,0 +1,42 @@
+{
+  "profile": "release",
+  "indexedDocuments": 222,
+  "embeddedDocuments": 222,
+  "uuidLinks": 884,
+  "packKeys": {
+    "start": 2,
+    "origins": 0,
+    "classes": 0,
+    "subclasses": 0,
+    "features": 0,
+    "backgrounds": 0,
+    "heritages": 0,
+    "runes": 0,
+    "resources": 0,
+    "crafts": 0,
+    "equipment": 0,
+    "characters": 197,
+    "rules": 122,
+    "spells": 0,
+    "rituals": 0,
+    "techmaturgy": 0,
+    "companions": 0,
+    "devices": 0,
+    "gm": 43,
+    "afflictions": 0,
+    "rewards": 0,
+    "tables": 0,
+    "bestiary": 0,
+    "creature-features": 0,
+    "creature-rules": 19,
+    "references": 75
+  },
+  "errors": [],
+  "warnings": [
+    "Source discovery is incomplete due to unavailable or uncollected pages.",
+    "The entry inventory has not received an exhaustive editorial audit.",
+    "Foundry V14 and Babele runtime tests have not been executed."
+  ],
+  "validation": "static-and-LevelDB-only",
+  "runtimeVerified": false
+}

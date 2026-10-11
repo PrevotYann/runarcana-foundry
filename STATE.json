@@ -1,0 +1,33 @@
+{
+  "objective": "Full Runarcana module for Foundry V14/dnd5e; incomplete",
+  "completed": [
+    "Empty workspace initialized without altering existing Foundry",
+    "Cached resumable crawler; English internal links and embedded search index",
+    "Offline normalization and durable IDs",
+    "Native document generation and LevelDB compilation",
+    "Namespaced rule API and opt-in V14 workbench",
+    "Conservative world importer",
+    "Babele templates/converters and static/unit validations"
+  ],
+  "inProgress": [
+    "All four parts: collection and individual mechanic review"
+  ],
+  "blocked": [
+    "Wiki HTTP 429 rate limiting: use slow resumes/local export",
+    "No Foundry V14 installation available: installed V12.343 remains unchanged",
+    "Redistribution grant for full Runarcana text/artwork not established"
+  ],
+  "next": [
+    "Resume collector with --delay 12 --priority-core",
+    "Normalize, complete per-entry conversions and review marked ambiguous source data",
+    "Run clean V14 runtime/Babele/two-client checks",
+    "Package only the confirmed redistributable profile for publication"
+  ],
+  "snapshot": {
+    "discoveredPages": 899,
+    "collectedPages": 221,
+    "missingPages": 678,
+    "documents": 222,
+    "runtimeVerified": false
+  }
+}

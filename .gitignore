@@ -1,0 +1,12 @@
+node_modules/
+sources/cache/
+sources/technical/
+dist/
+packs/
+*.log
+__pycache__/
+.venv/
+data/local/
+packs-src/local/
+packs-src/release/
+translations/english/

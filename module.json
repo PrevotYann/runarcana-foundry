@@ -1,0 +1,419 @@
+{
+  "id": "runarcana",
+  "title": "Runarcana",
+  "description": "Runarcana rules and local content import for D&D Fifth Edition. Partial mechanical coverage; see coverage report.",
+  "version": "0.1.0",
+  "compatibility": {
+    "minimum": "14.367",
+    "maximum": "14"
+  },
+  "authors": [
+    {
+      "name": "PrevotYann",
+      "url": "https://github.com/PrevotYann"
+    }
+  ],
+  "relationships": {
+    "systems": [
+      {
+        "id": "dnd5e",
+        "type": "system",
+        "compatibility": {
+          "minimum": "6.0.6",
+          "maximum": "6.0.6"
+        }
+      }
+    ],
+    "recommends": [
+      {
+        "id": "babele",
+        "type": "module",
+        "compatibility": {
+          "minimum": "2.9.1"
+        }
+      }
+    ]
+  },
+  "esmodules": [
+    "src/main.mjs"
+  ],
+  "styles": [
+    "styles/runarcana.css"
+  ],
+  "languages": [
+    {
+      "lang": "en",
+      "name": "English",
+      "path": "lang/en.json"
+    }
+  ],
+  "packs": [
+    {
+      "name": "start",
+      "label": "Start Here",
+      "path": "packs/start",
+      "type": "JournalEntry",
+      "system": "dnd5e",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      }
+    },
+    {
+      "name": "origins",
+      "label": "Origins",
+      "path": "packs/origins",
+      "type": "Item",
+      "system": "dnd5e",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      }
+    },
+    {
+      "name": "classes",
+      "label": "Classes",
+      "path": "packs/classes",
+      "type": "Item",
+      "system": "dnd5e",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      }
+    },
+    {
+      "name": "subclasses",
+      "label": "Subclasses",
+      "path": "packs/subclasses",
+      "type": "Item",
+      "system": "dnd5e",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      }
+    },
+    {
+      "name": "features",
+      "label": "Features",
+      "path": "packs/features",
+      "type": "Item",
+      "system": "dnd5e",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      }
+    },
+    {
+      "name": "backgrounds",
+      "label": "Pasts",
+      "path": "packs/backgrounds",
+      "type": "Item",
+      "system": "dnd5e",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      }
+    },
+    {
+      "name": "heritages",
+      "label": "Heritages",
+      "path": "packs/heritages",
+      "type": "Item",
+      "system": "dnd5e",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      }
+    },
+    {
+      "name": "runes",
+      "label": "Runes & Runessences",
+      "path": "packs/runes",
+      "type": "Item",
+      "system": "dnd5e",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      }
+    },
+    {
+      "name": "resources",
+      "label": "Class Resources",
+      "path": "packs/resources",
+      "type": "Item",
+      "system": "dnd5e",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      }
+    },
+    {
+      "name": "crafts",
+      "label": "Crafts & Formulas",
+      "path": "packs/crafts",
+      "type": "Item",
+      "system": "dnd5e",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      }
+    },
+    {
+      "name": "equipment",
+      "label": "Equipment",
+      "path": "packs/equipment",
+      "type": "Item",
+      "system": "dnd5e",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      }
+    },
+    {
+      "name": "characters",
+      "label": "Character Rules",
+      "path": "packs/characters",
+      "type": "JournalEntry",
+      "system": "dnd5e",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      }
+    },
+    {
+      "name": "rules",
+      "label": "Rules",
+      "path": "packs/rules",
+      "type": "JournalEntry",
+      "system": "dnd5e",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      }
+    },
+    {
+      "name": "spells",
+      "label": "Spells",
+      "path": "packs/spells",
+      "type": "Item",
+      "system": "dnd5e",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      }
+    },
+    {
+      "name": "rituals",
+      "label": "Rituals",
+      "path": "packs/rituals",
+      "type": "Item",
+      "system": "dnd5e",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      }
+    },
+    {
+      "name": "techmaturgy",
+      "label": "Techmaturgy",
+      "path": "packs/techmaturgy",
+      "type": "Item",
+      "system": "dnd5e",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      }
+    },
+    {
+      "name": "companions",
+      "label": "Summons & Companions",
+      "path": "packs/companions",
+      "type": "Actor",
+      "system": "dnd5e",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      }
+    },
+    {
+      "name": "devices",
+      "label": "Mechas & Servo",
+      "path": "packs/devices",
+      "type": "Actor",
+      "system": "dnd5e",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      }
+    },
+    {
+      "name": "gm",
+      "label": "Game Mastering",
+      "path": "packs/gm",
+      "type": "JournalEntry",
+      "system": "dnd5e",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      }
+    },
+    {
+      "name": "afflictions",
+      "label": "Conditions & Afflictions",
+      "path": "packs/afflictions",
+      "type": "Item",
+      "system": "dnd5e",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      }
+    },
+    {
+      "name": "rewards",
+      "label": "Rewards",
+      "path": "packs/rewards",
+      "type": "Item",
+      "system": "dnd5e",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      }
+    },
+    {
+      "name": "tables",
+      "label": "Roll Tables",
+      "path": "packs/tables",
+      "type": "RollTable",
+      "system": "dnd5e",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      }
+    },
+    {
+      "name": "bestiary",
+      "label": "Bestiary",
+      "path": "packs/bestiary",
+      "type": "Actor",
+      "system": "dnd5e",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      }
+    },
+    {
+      "name": "creature-features",
+      "label": "Creature Features & Echoes",
+      "path": "packs/creature-features",
+      "type": "Item",
+      "system": "dnd5e",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      }
+    },
+    {
+      "name": "creature-rules",
+      "label": "Creature Creation Rules",
+      "path": "packs/creature-rules",
+      "type": "JournalEntry",
+      "system": "dnd5e",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      }
+    },
+    {
+      "name": "references",
+      "label": "References & Provenance",
+      "path": "packs/references",
+      "type": "JournalEntry",
+      "system": "dnd5e",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      }
+    }
+  ],
+  "packFolders": [
+    {
+      "name": "Runarcana",
+      "sorting": "m",
+      "color": "#397d80",
+      "folders": [
+        {
+          "name": "00 — Start Here",
+          "sorting": "m",
+          "packs": [
+            "start"
+          ]
+        },
+        {
+          "name": "01 — Characters",
+          "sorting": "m",
+          "packs": [
+            "origins",
+            "classes",
+            "subclasses",
+            "features",
+            "backgrounds",
+            "heritages",
+            "runes",
+            "resources",
+            "crafts",
+            "equipment",
+            "characters"
+          ]
+        },
+        {
+          "name": "02 — Rules",
+          "sorting": "m",
+          "packs": [
+            "rules",
+            "spells",
+            "rituals",
+            "techmaturgy",
+            "companions",
+            "devices"
+          ]
+        },
+        {
+          "name": "03 — Game Mastering",
+          "sorting": "m",
+          "packs": [
+            "gm",
+            "afflictions",
+            "rewards",
+            "tables"
+          ]
+        },
+        {
+          "name": "04 — Monsters & Creatures",
+          "sorting": "m",
+          "packs": [
+            "bestiary",
+            "creature-features",
+            "creature-rules"
+          ]
+        },
+        {
+          "name": "90 — References",
+          "sorting": "m",
+          "packs": [
+            "references"
+          ]
+        }
+      ]
+    }
+  ],
+  "flags": {
+    "runarcana": {
+      "localContent": false,
+      "mechanicalCoverage": "partial",
+      "runtimeVerified": false
+    }
+  },
+  "url": "https://github.com/PrevotYann/runarcana-foundry",
+  "manifest": "https://raw.githubusercontent.com/PrevotYann/runarcana-foundry/main/module.json",
+  "download": "https://github.com/PrevotYann/runarcana-foundry/releases/download/v0.1.0/runarcana-0.1.0.zip"
+}

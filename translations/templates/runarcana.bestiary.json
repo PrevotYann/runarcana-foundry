@@ -1,0 +1,19 @@
+{
+  "label": "Bestiary",
+  "mapping": {
+    "name": "name",
+    "system": {
+      "path": "system",
+      "converter": "runarcanaSystem"
+    },
+    "items": {
+      "path": "items",
+      "converter": "runarcanaNested"
+    },
+    "effects": {
+      "path": "effects",
+      "converter": "runarcanaNested"
+    }
+  },
+  "entries": {}
+}

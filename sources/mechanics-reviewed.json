@@ -1,0 +1,32 @@
+{
+  "/en/magic/spells/ablaze/": {
+    "sourceHash": "0326b7c8adc0d3b0bccdb38c03140f1bccf52446ee55a5038274a2390402da8f",
+    "review": "Base native Activities only; duration/conditions/augmentation remain partial.",
+    "runtimeVerified": false
+  },
+  "/en/magic/spells/abominable-snowman/": {
+    "sourceHash": "dbd850456408880259672682f6b73a4a7d2d7911662e32f24b6a3c3e3a5d9550",
+    "review": "Base native Activities only; duration/conditions/augmentation remain partial.",
+    "runtimeVerified": false
+  },
+  "/en/magic/spells/crush/": {
+    "sourceHash": "b1832bf3c46fc57ee7df46fa17d06c23e823b8d1bd269712403c2b64d2f63a5f",
+    "review": "Base native Activities only; duration/conditions/augmentation remain partial.",
+    "runtimeVerified": false
+  },
+  "/en/magic/spells/etna/": {
+    "sourceHash": "07fb54dd0bc51bf1c612265dab42c33867956b6b2c09ba5b7dab2d5475f89a24",
+    "review": "Base native Activities only; duration/conditions/augmentation remain partial.",
+    "runtimeVerified": false
+  },
+  "/en/magic/spells/frost-dagger/": {
+    "sourceHash": "53fb34b285dfede864d52534d39df5a050d400ef1d11a0279d922fc7a0e0ec91",
+    "review": "Base native Activities only; duration/conditions/augmentation remain partial.",
+    "runtimeVerified": false
+  },
+  "/en/magic/spells/hekla/": {
+    "sourceHash": "bed1ad41355ddf5fd01b3ae65b6feef8af4e22f2e8ca12eb326db503a130d605",
+    "review": "Base native Activities only; duration/conditions/augmentation remain partial.",
+    "runtimeVerified": false
+  }
+}
