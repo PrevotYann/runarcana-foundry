@@ -1,7 +1,7 @@
 """Offline extraction. Preserve source text and mark inferred mechanics for review.
-Full wiki data is local-only until an applicable redistribution grant is recorded.
+Wiki text inclusion in this free module uses the maintainer's recorded permission.
 """
-import collections, hashlib, json, pathlib, re, urllib.parse
+import collections, gzip, hashlib, json, pathlib, re, urllib.parse
 from bs4 import BeautifulSoup, Tag
 from collect import canonical, ROOT
 
@@ -40,7 +40,7 @@ def main():
     cat=json.loads((ROOT/'sources/catalog.json').read_text(encoding='utf8'))
     pages=[]; entries=[]; coverage=[]; counts=collections.Counter()
     for row in cat['pages']:
-        base={'id':row['id'],'part':row['part'],'chapter':'/'.join(row['id'].strip('/').split('/')[1:-1]),'url':row['url'],'anchor':None,'language':row['language'],'sha256':row.get('sha256'),'collectedAt':row.get('collectedAt'),'rulesVersion':row.get('rulesVersion'),'wikiBuild':row.get('wikiBuild'),'collectionStatus':row['status'],'documents':[],'uuids':[],'test':'tests/corpus.test.mjs','status':'partial','textual':'missing','mechanical':'manual','redistribution':'not-established'}
+        base={'id':row['id'],'part':row['part'],'chapter':'/'.join(row['id'].strip('/').split('/')[1:-1]),'url':row['url'],'anchor':None,'language':row['language'],'sha256':row.get('sha256'),'collectedAt':row.get('collectedAt'),'rulesVersion':row.get('rulesVersion'),'wikiBuild':row.get('wikiBuild'),'collectionStatus':row['status'],'documents':[],'uuids':[],'test':'tests/corpus.test.mjs','status':'partial','textual':'missing','mechanical':'manual','redistribution':'permission-confirmed-by-maintainer'}
         if row['status']!='collected':
             unattempted=row['status']=='pending' or row.get('error')=='Not present in local source cache'
             coverage.append(base|{'status':'partial' if unattempted else 'source-unavailable','limit':'Full source not yet collected.' if unattempted else row.get('error')}); continue
@@ -145,8 +145,9 @@ def main():
                     coverage.append(base|{'id':feature_id,'kind':'creature-feature','textual':'complete','mechanical':'partial','limit':'Structured attack fields convert only where their published syntax is exact. Conditions/runes and other abilities need individual review.'})
             page['creatures'].append(cr)
         pages.append(page); counts[(row['part'],page['kind'])]+=1
-        coverage.append(base|{'kind':page['kind'],'textual':'complete','status':'source-incomplete' if incomplete else 'partial','limit':'Local text extracted. Automated mechanics and release redistribution are separate gates.'})
+        coverage.append(base|{'kind':page['kind'],'textual':'complete','status':'source-incomplete' if incomplete else 'partial','limit':'Full source text included under the recorded permission; mechanical coverage remains separate.'})
     dump(ROOT/'data/local/corpus.json',{'schema':1,'pages':pages,'entries':entries})
+    (ROOT/'data/corpus.json.gz').write_bytes(gzip.compress(json.dumps({'schema':1,'pages':pages,'entries':entries},ensure_ascii=False).encode('utf8'),mtime=0))
     dump(ROOT/'sources/coverage.json',{'schema':1,'discoveryComplete':cat['discoveryComplete'],'entryInventoryComplete':False,'entries':coverage,'statistics':[{'part':p,'kind':k,'pages':n} for (p,k),n in sorted(counts.items())]})
-    print(f'Normalized {len(pages)} pages, {len(entries)} anchor/table entries; local text only; mechanical coverage remains partial.')
+    print(f'Normalized {len(pages)} pages, {len(entries)} anchor/table entries; authorized text bundle; mechanical coverage remains partial.')
 if __name__=='__main__': main()

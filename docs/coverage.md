@@ -1,16 +1,16 @@
 # Coverage and limits
 
-Profile: **redistributable-references**. This module is **incomplete**. It has no Foundry V14 runtime verification.
+Profile: **authorized-content**. This module is **incomplete**. It has no Foundry V14 runtime verification.
 
-899 canonical page URLs discovered; 221 complete responses cached; 678 sources not collected. Missing pages are not claimed to be permanently unavailable: HTTP 429 throttling interrupted earlier passes. The last slow pass collected more pages and stopped at a checkpoint; unvisited entries require a resumed crawl or a local export.
+899 canonical page URLs discovered; 281 complete responses cached; 618 sources not collected. Missing pages are not claimed to be permanently unavailable: HTTP 429 throttling interrupted earlier passes. The latest pass collected 60 more pages before another HTTP 429; unvisited entries require a resumed crawl or a local export.
 
-8008 page/anchor/table/catalog coverage records. Entry discovery is not exhaustive until every source is available and reviewed.
+8029 page/anchor/table/catalog coverage records. Entry discovery is not exhaustive until every source is available and reviewed.
 
 | Part | Discovered pages | Collected pages | Missing pages |
 | --- | ---: | ---: | ---: |
 | Introduction, appendices, projects | 38 | 33 | 5 |
 | Characters | 98 | 98 | 0 |
-| Rules | 578 | 60 | 518 |
+| Rules | 578 | 120 | 458 |
 | Game Mastering | 21 | 21 | 0 |
 | Monsters & Creatures | 164 | 9 | 155 |
 
@@ -18,9 +18,29 @@ Profile: **redistributable-references**. This module is **incomplete**. It has n
 | --- | ---: |
 | references | 33 |
 | characters | 98 |
+| features | 515 |
+| subclasses | 38 |
+| classes | 9 |
+| resources | 308 |
+| heritages | 333 |
+| runes | 102 |
+| tables | 70 |
+| crafts | 421 |
+| backgrounds | 44 |
+| equipment | 369 |
+| origins | 10 |
 | gm | 21 |
-| rules | 60 |
+| rewards | 177 |
+| afflictions | 165 |
+| rules | 120 |
+| spells | 100 |
+| companions | 1 |
 | creature-rules | 9 |
+| creature-features | 79 |
+| bestiary | 1 |
+| rituals | 47 |
+| techmaturgy | 127 |
+| devices | 13 |
 | start | 1 |
 
 ## Mechanical support

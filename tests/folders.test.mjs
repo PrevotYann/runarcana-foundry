@@ -20,7 +20,7 @@ with tempfile.TemporaryDirectory(prefix='runarcana-folders-') as temp:
     shutil.copytree(root/'scripts',target/'scripts',ignore=shutil.ignore_patterns('__pycache__'))
     shutil.copytree(root/'sources',target/'sources',ignore=shutil.ignore_patterns('cache','technical'))
     shutil.copy2(root/'package.json',target/'package.json')
-    subprocess.run([sys.executable,str(target/'scripts/generate.py')],cwd=target,check=True,stdout=subprocess.DEVNULL)
+    subprocess.run([sys.executable,str(target/'scripts/generate.py'),'--references'],cwd=target,check=True,stdout=subprocess.DEVNULL)
     folder=json.loads((target/'packs-src/release/references/bdc0edd96ebbe434.json').read_text(encoding='utf8'))
     print(json.dumps(folder))`;
   const result=spawnSync('python',['-c',script],{encoding:'utf8'});

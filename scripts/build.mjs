@@ -3,7 +3,7 @@ import fs from 'node:fs/promises';
 import {spawnSync} from 'node:child_process';
 import path from 'node:path';
 const local=process.argv.includes('--local');
-const result=spawnSync('python',['scripts/generate.py',...(local?['--local']:[])],{stdio:'inherit'});
+const result=spawnSync('python',['scripts/generate.py',...(local?['--local']:[]),...(process.argv.includes('--references')?['--references']:[])],{stdio:'inherit'});
 if(result.status!==0)process.exit(result.status??1);
 const manifest=JSON.parse(await fs.readFile('module.json','utf8'));
 const packRoot=path.resolve('packs');

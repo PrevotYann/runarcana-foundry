@@ -1,5 +1,5 @@
 """Generate native Foundry documents and durable IDs from normalized, cached sources."""
-import argparse, collections, hashlib, html, json, pathlib, re
+import argparse, collections, gzip, hashlib, html, json, pathlib, re
 from bs4 import BeautifulSoup
 from normalize import ROOT, dump, sid
 from equipment import generate_equipment
@@ -31,7 +31,7 @@ def uid(key):
 def provenance(page,key):
     fragment=key.split('#',1)[1] if '#' in key else None
     anchor=fragment if any(s.get('anchor')==fragment for s in page.get('sections',[])) else None
-    return {'runarcana':{'canonicalId':key,'sourceUrl':page['url']+(('#'+anchor) if anchor else ''),'sourceAnchor':anchor,'sourceLocator':key,'rulesVersion':page.get('rulesVersion'),'wikiBuild':page.get('wikiBuild'),'sourceHash':page.get('sha256'),'generatorVersion':VERSION,'localOnly':True,'mechanicalCoverage':'partial'}}
+    return {'runarcana':{'canonicalId':key,'sourceUrl':page['url']+(('#'+anchor) if anchor else ''),'sourceAnchor':anchor,'sourceLocator':key,'rulesVersion':page.get('rulesVersion'),'wikiBuild':page.get('wikiBuild'),'sourceHash':page.get('sha256'),'generatorVersion':VERSION,'localOnly':False,'mechanicalCoverage':'partial'}}
 def folder(pack,key,name,parent=None):
     if not isinstance(name,str) or not name.strip():raise ValueError(f'Folder name is required: {pack} {key}')
     ident=uid('folder:'+pack+':'+key)
@@ -62,7 +62,7 @@ def item(name,typ,description):
 def part_pack(p): return {0:'references',1:'characters',2:'rules',3:'gm',4:'creature-rules'}.get(p,'references')
 def journal(page,local):
     pack=part_pack(page['part']); key=page['id']+'@journal'
-    description=page['html'] if local else '<p><a href="'+html.escape(page['url'],quote=True)+'">'+html.escape(page['title'])+'</a></p><p>Import an official local export to read this source here. Redistribution permission for the complete text has not been established.</p>'
+    description=page['html'] if local else '<p><a href="'+html.escape(page['url'],quote=True)+'">'+html.escape(page['title'])+'</a></p><p>Import an official local export to read this source here. This optional reference-only build omits the text; install the content release to read it here.</p>'
     chunks=[]; parsed=BeautifulSoup(description,'html.parser')
     for wrapper in parsed.select('.prose'):wrapper.unwrap()
     # Split at top-level h2 headings, keep complete tables/list markup and stable page IDs.
@@ -346,19 +346,22 @@ def rewrite_links():
     for docs in DOCUMENTS.values():
         for doc in docs: visit(doc)
 def main():
-    parser=argparse.ArgumentParser();parser.add_argument('--local',action='store_true');args=parser.parse_args()
+    parser=argparse.ArgumentParser();parser.add_argument('--local',action='store_true');parser.add_argument('--references',action='store_true');args=parser.parse_args()
+    content=not args.references
     rp=ROOT/'sources/ids.json'
     if rp.exists():REGISTRY.update(json.loads(rp.read_text(encoding='utf8')))
     corpus_path=ROOT/'data/local/corpus.json'
-    if args.local:
-        if not corpus_path.exists():raise SystemExit('Local build requires normalized official sources. Run collect.py and normalize.py first.')
-        corpus=json.loads(corpus_path.read_text(encoding='utf8'))
+    if content:
+        bundle=ROOT/'data/corpus.json.gz'
+        if args.local and corpus_path.exists():corpus=json.loads(corpus_path.read_text(encoding='utf8'))
+        elif bundle.exists():corpus=json.loads(gzip.decompress(bundle.read_bytes()))
+        else:raise SystemExit('Content build requires data/corpus.json.gz. Run collect.py and normalize.py first.')
     else:
         catalog=json.loads((ROOT/'sources/catalog.json').read_text(encoding='utf8'))
         corpus={'pages':[dict(p,html='') for p in catalog['pages'] if p['status']=='collected']}
     for page in corpus['pages']:
-        journal(page,args.local)
-        if not args.local:continue
+        journal(page,content)
+        if not content:continue
         if page['kind']=='spell':spell(page)
         elif page['kind'] in ['class','origin']:class_origin(page)
         for cr in page['creatures']:npc(page,cr)
@@ -375,7 +378,7 @@ def main():
         directory=target/pack;directory.mkdir(parents=True,exist_ok=True)
         for p in directory.glob('*.json'):p.unlink()
         for doc in list(FOLDERS.get(pack,{}).values())+DOCUMENTS.get(pack,[]):dump(directory/(doc['_id']+'.json'),doc)
-    manifest={'id':'runarcana','title':'Runarcana','description':'Runarcana rules and local content import for D&D Fifth Edition. Partial mechanical coverage; see coverage report.','version':VERSION,'compatibility':{'minimum':'14.367','maximum':'14'},'authors':[{'name':'Runarcana Foundry contributors'}],'relationships':{'systems':[{'id':'dnd5e','type':'system','compatibility':{'minimum':'6.0.6','maximum':'6.0.6'}}],'recommends':[{'id':'babele','type':'module','compatibility':{'minimum':'2.9.1'}}]},'esmodules':['src/main.mjs'],'styles':['styles/runarcana.css'],'languages':[{'lang':'en','name':'English','path':'lang/en.json'}],'packs':[{'name':k,'label':v[0],'path':'packs/'+k,'type':v[1],'system':'dnd5e','ownership':{'PLAYER':'OBSERVER','ASSISTANT':'OWNER'}} for k,v in PACKS.items()],'packFolders':[{'name':'Runarcana','sorting':'m','color':'#397d80','folders':[{'name':label,'sorting':'m','packs':[k for k,v in PACKS.items() if v[2]==part]} for part,label in GROUPS.items()]}],'flags':{'runarcana':{'localContent':args.local,'mechanicalCoverage':'partial','runtimeVerified':False}}}
+    manifest={'id':'runarcana','title':'Runarcana','description':'Runarcana rules and content compendiums for D&D Fifth Edition. Partial mechanical coverage; see coverage report.','version':VERSION,'compatibility':{'minimum':'14.367','maximum':'14'},'authors':[{'name':'Runarcana Foundry contributors'}],'relationships':{'systems':[{'id':'dnd5e','type':'system','compatibility':{'minimum':'6.0.6','maximum':'6.0.6'}}],'recommends':[{'id':'babele','type':'module','compatibility':{'minimum':'2.9.1'}}]},'esmodules':['src/main.mjs'],'styles':['styles/runarcana.css'],'languages':[{'lang':'en','name':'English','path':'lang/en.json'}],'packs':[{'name':k,'label':v[0],'path':'packs/'+k,'type':v[1],'system':'dnd5e','ownership':{'PLAYER':'OBSERVER','ASSISTANT':'OWNER'}} for k,v in PACKS.items()],'packFolders':[{'name':'Runarcana','sorting':'m','color':'#397d80','folders':[{'name':label,'sorting':'m','packs':[k for k,v in PACKS.items() if v[2]==part]} for part,label in GROUPS.items()]}],'flags':{'runarcana':{'localContent':args.local,'contentIncluded':content,'mechanicalCoverage':'partial','runtimeVerified':False}}}
     manifest.update(version=VERSION,url='https://github.com/PrevotYann/runarcana-foundry',manifest='https://raw.githubusercontent.com/PrevotYann/runarcana-foundry/main/module.json',download=f'https://github.com/PrevotYann/runarcana-foundry/releases/download/v{VERSION}/runarcana-{VERSION}.zip')
     manifest['authors']=[{'name':'PrevotYann','url':'https://github.com/PrevotYann'}]
     dump(ROOT/'module.json',manifest)
@@ -385,8 +388,8 @@ def main():
         row['uuids']=COVERAGE.get(row['id'],[]);row['documents']=row['uuids']
         row['referenceUuid']=PAGE_UUIDS.get(row['url'])
         if row['id'] in LIMITS:row.update(limit=LIMITS[row['id']],mechanical='manual')
-        if not args.local and row['textual']=='complete':row['textual']='local-cache-only'
-    coverage['buildProfile']='local' if args.local else 'redistributable-references'
+        if not content and row['textual']=='complete':row['textual']='local-cache-only'
+    coverage['buildProfile']='local' if args.local else 'authorized-content' if content else 'references'
     coverage['documentCounts']={k:len(v) for k,v in DOCUMENTS.items()}
     dump(ROOT/'sources/coverage.json',coverage)
     dump(ROOT/'data/build-index.json',{'profile':coverage['buildProfile'],'documents':[{'pack':pack,'type':PACKS[pack][1],'id':d['_id'],'name':d['name'],'sourceId':d.get('flags',{}).get('runarcana',{}).get('canonicalId')} for pack,docs in DOCUMENTS.items() for d in docs]})

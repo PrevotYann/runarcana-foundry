@@ -7,27 +7,26 @@
     "Native document generation and LevelDB compilation",
     "Namespaced rule API and opt-in V14 workbench",
     "Conservative world importer",
-    "Babele templates/converters and static/unit validations"
+    "Babele templates/converters and static/unit validations",
+    "Authorized content included in all 26 public compendiums"
   ],
   "inProgress": [
     "All four parts: collection and individual mechanic review"
   ],
   "blocked": [
     "Wiki HTTP 429 rate limiting: use slow resumes/local export",
-    "No Foundry V14 installation available: installed V12.343 remains unchanged",
-    "Redistribution grant for full Runarcana text/artwork not established"
+    "No Foundry V14 installation available: installed V12.343 remains unchanged"
   ],
   "next": [
     "Resume collector with --delay 12 --priority-core",
     "Normalize, complete per-entry conversions and review marked ambiguous source data",
-    "Run clean V14 runtime/Babele/two-client checks",
-    "Package only the confirmed redistributable profile for publication"
+    "Run clean V14 runtime/Babele/two-client checks"
   ],
   "snapshot": {
     "discoveredPages": 899,
-    "collectedPages": 221,
-    "missingPages": 678,
-    "documents": 222,
+    "collectedPages": 281,
+    "missingPages": 618,
+    "documents": 3211,
     "runtimeVerified": false
   }
 }

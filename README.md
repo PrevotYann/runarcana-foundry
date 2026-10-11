@@ -14,11 +14,9 @@ https://raw.githubusercontent.com/PrevotYann/runarcana-foundry/main/module.json
 
 Version 0.1.1 fixes the unnamed home-page compendium folder that prevented worlds from starting with 0.1.0. Update from Foundry Setup before opening the affected world.
 
-The public release includes original code and source references. Complete wiki texts and personal content packs are excluded because redistribution rights have not been established. This release is incomplete and has static validation only.
+Public releases include collected Runarcana texts and native Items, Actors, Journals and RollTables. The maintainer has confirmed permission for their inclusion in this free module; see [credits and permission](docs/credits.md). Artwork remains linked to its source. Mechanical coverage and uncollected sources are still incomplete.
 
-Close Foundry. Extract the ZIP so its `runarcana` folder sits under your Foundry user-data `Data/modules/`. Restart Foundry, activate the module in a clean compatible dnd5e world, then open **Settings → Configure Settings → Runarcana**. Enable Runarcana rules for this world and reload. Mark each actor voluntarily in the workbench; activation imports nothing into the world.
-
-`runarcana-0.1.1.zip` includes original code and source references. The separate `-local-personal-use.zip` profile includes only the full wiki pages actually cached at its snapshot and partial native conversions. **Do not redistribute that personal build**: redistribution permission for the full texts and artwork has not been established. Images are referenced through source links; none are bundled.
+For manual installation, close Foundry, extract the ZIP into `Data/modules/`, then activate Runarcana in a compatible dnd5e world. Enable the world setting and explicitly mark Runarcana actors in the workbench.
 
 Use **Runarcana → Catalog** for lazy compendium browsing. **World import** previews creates/updates/conflicts; local edits and duplicates are skipped. Updating or translating a compendium does not automatically update world copies. Reimport voluntarily to refresh unedited copies. The importer saves a pre-update backup in `flags.runarcana.import.backup`; restore it manually through a document update/export if needed.
 
@@ -33,12 +31,12 @@ npm ci
 python -m pip install -r scripts/requirements.txt
 python scripts/collect.py --delay 12 --priority-core
 python scripts/normalize.py
-npm run build -- --local
+npm run build
 npm run translations
 npm test
 npm run validate
 python scripts/report.py
-python scripts/package.py --local
+python scripts/package.py
 ```
 
 The crawler stops on HTTP 429/503 and saves every response and checkpoint. Resume later; do not repeatedly restart against a rate limit. `--offline` inventories only cached links. To use an official mirror export:
@@ -49,9 +47,9 @@ python scripts/collect.py --export C:\path\to\official-export
 
 The export must contain `en/.../index.html`. Full pages and normalized local text are kept in `sources/cache/` and `data/local/` and excluded from Git. Once the cache exists, normalization, generation, translations, compilation, testing and packaging run without network. `sources/ids.json` is the durable ID registry; preserve it across updates. `STATE.json` records the recovery state. Structured overrides for unimplemented rules must be reviewed before marking their mechanical coverage complete.
 
-For a public code/reference build from a fresh clone, run `npm ci`, install the Python dependencies, then `npm run build`, `npm run translations`, `npm test`, `npm run validate`, `python scripts/report.py` and `python scripts/package.py`. The reference build uses the committed source catalog and needs no wiki cache or network after dependencies are installed. The manifest points to the public repository and the versioned GitHub release asset.
+A fresh clone builds from the committed `data/corpus.json.gz` snapshot: install dependencies, then run `npm run build`, `npm run translations`, `npm test`, `npm run validate`, `python scripts/report.py` and `python scripts/package.py`. No wiki network access is needed. After collecting more sources, normalization updates that snapshot.
 
-`python scripts/package.py --source` produces the separate code/build-tools archive, excluding cached texts and compiled binaries. Verify installable archives after extraction with `node scripts/validate-archive.mjs dist/runarcana-0.1.1.zip dist/runarcana-0.1.1-local-personal-use.zip`.
+`npm run build -- --references` is an optional reference-only diagnostic profile. Default releases include content. `python scripts/package.py --source` packages code, build tools and the authorized source snapshot. Inspect installable archives with `node scripts/validate-archive.mjs dist/runarcana-0.2.0.zip`.
 
 ## API
 

@@ -1,0 +1,12 @@
+{
+  "wikiText": {
+    "status": "permission-confirmed-by-maintainer",
+    "confirmedBy": "PrevotYann",
+    "recordedAt": "2026-10-11",
+    "scope": "Runarcana wiki texts included in this free Foundry module",
+    "confirmation": "Maintainer stated that permission was obtained for this free module development.",
+    "appliesTo": "https://wiki.runarcana.org/en/",
+    "licenseChange": false
+  },
+  "illustrations": {"bundled": false, "handling": "Source links only; separate artwork rights are not inferred."}
+}

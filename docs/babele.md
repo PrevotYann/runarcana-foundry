@@ -4,7 +4,7 @@ English works without Babele. The observed official manifest is Babele 2.9.1, mi
 
 The core registers `runarcanaNested` and `runarcanaSystem` converters during the actual **`babele.init`** hook. This is Babele 2.9.1's bootstrap registration point, before its runtime session is initialized. No old singleton-init assumption is used.
 
-`npm run translations` creates empty per-pack files under `translations/templates/` and an English reference under `translations/english/`. Local English references contain wiki text and must remain local. Empty templates do not pretend to be a French catalog. Copy templates into a separate module `runarcana-fr`, requiring `runarcana`, `babele` and Babele's `lib-wrapper` dependency. The future module registers its own source in `babele.init`:
+`npm run translations` creates empty per-pack files under `translations/templates/` and an English reference under `translations/english/`. English references contain source texts covered by the recorded module permission. Empty templates do not pretend to be a French catalog. Copy templates into a separate module `runarcana-fr`, requiring `runarcana`, `babele` and Babele's `lib-wrapper` dependency. The future module registers its own source in `babele.init`:
 
 ```js
 Hooks.on("babele.init", babele => {
