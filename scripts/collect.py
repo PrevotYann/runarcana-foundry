@@ -28,9 +28,11 @@ def main():
     parser.add_argument('--export', type=pathlib.Path, help='Directory containing mirrored en/.../index.html')
     parser.add_argument('--refresh', action='store_true')
     parser.add_argument('--limit', type=int, default=0)
-    parser.add_argument('--delay', type=float, default=2.0)
+    parser.add_argument('--fetch-limit', type=int, default=0, help='Checkpoint after this many new responses; cached pages do not count')
+    parser.add_argument('--delay', type=float, default=12.0)
     parser.add_argument('--offline', action='store_true', help='Discover cached links only, without network')
     parser.add_argument('--priority-core',action='store_true',help='Collect rule and inventory pages before individual spell/creature entries')
+    parser.add_argument('--priority-part',type=int,choices=range(5),help='Prioritize uncollected pages from one part (4: bestiary)')
     args = parser.parse_args()
     CACHE.mkdir(parents=True, exist_ok=True)
     catalog = json.loads(CATALOG.read_text(encoding='utf8')) if CATALOG.exists() else {'schema':1,'collectedAt':stamp(),'discoveryComplete':False,'pages':[],'external':[]}
@@ -46,8 +48,14 @@ def main():
         except Exception as e: catalog['sitemapError']=str(e)
     for url in queue:
         known.setdefault(url,{'id':urllib.parse.urlsplit(url).path,'url':url,'part':part(url),'language':'en','anchors':[],'status':'pending'})
-    if args.priority_core:
-        queue.sort(key=lambda u:(0 if known[u]['status']=='collected' else 2 if '/magic/spells/' in u and not u.endswith('/spells/') or '/creatures/' in u else 1,len(u),u))
+    def priority(u):
+        row=known[u]
+        individual=('/magic/spells/' in u and not u.endswith('/spells/')) or '/creatures/' in u
+        return (0 if row['status']=='collected' else 1,
+                0 if args.priority_part is None or row['part']==args.priority_part else 1,
+                1 if args.priority_core and individual else 0,len(u),u)
+    if args.priority_core or args.priority_part is not None:
+        queue.sort(key=priority)
     done = set(); fetched = 0
     while queue:
         url = queue.pop(0)
@@ -71,6 +79,7 @@ def main():
                     row['resolvedUrl'] = response.url
                 row['collectedAt']=stamp(); fetched += 1
                 catalog['rateLimited']=False
+                print(f'Fetched {fetched}: {url}',flush=True)
             body=file.read_bytes(); soup=BeautifulSoup(body,'html.parser')
             article=soup.select_one('main article') or soup.select_one('main')
             if not article: raise ValueError('No main article; response is not a rules page')
@@ -122,6 +131,7 @@ def main():
         save(catalog)
         if len(done)%25==0: print(f'{len(done)} pages visited; {len(queue)} pending; {fetched} fetched',flush=True)
         if args.limit and len(done)>=args.limit: break
+        if args.fetch_limit and fetched>=args.fetch_limit: break
     save(catalog)
     print(f'Finished: {len(known)} pages, discoveryComplete={catalog["discoveryComplete"]}',flush=True)
 if __name__=='__main__': main()

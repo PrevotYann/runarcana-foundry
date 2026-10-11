@@ -3,6 +3,7 @@ import argparse, collections, gzip, hashlib, html, json, pathlib, re
 from bs4 import BeautifulSoup
 from normalize import ROOT, dump, sid
 from equipment import generate_equipment
+from creatures import number, modifier, senses, saving_throws, attack_fields
 VERSION=json.loads((ROOT/'package.json').read_text(encoding='utf8'))['version']
 
 PACKS={
@@ -141,7 +142,7 @@ def spell(page):
 def snowman(page):
     """Reviewed published summon; native summon matching supplies its caster attack and DC."""
     key=page['id']+'#summoned-creature';doc={'name':'Abominable Snowman','type':'npc','img':'icons/svg/mystery-man.svg','items':[],'effects':[],
-        'system':{'abilities':{k:{'value':v} for k,v in zip(['str','dex','con','int','wis','cha'],[18,11,21,10,16,8])},'attributes':{'ac':{'calc':'flat','flat':19},'hp':{'value':100,'max':100},'movement':{'speeds':{'walk':'50'},'units':'ft'}},'traits':{'size':'huge'},'details':{'type':{'value':'elemental','subtype':'construct'},'biography':{'value':page['html']}}},'prototypeToken':{'actorLink':False},'flags':provenance(page,key)}
+        'system':{'abilities':{k:{'value':v} for k,v in zip(['str','dex','con','int','wis','cha'],[18,11,21,10,16,8])},'attributes':{'ac':{'flat':19,'override':19},'hp':{'value':100,'max':100},'movement':{'speeds':{'walk':'50'},'units':'ft'}},'traits':{'size':'huge'},'details':{'type':{'value':'elemental','subtype':'construct'},'biography':{'value':page['html']}}},'prototypeToken':{'actorLink':False},'flags':provenance(page,key)}
     doc['flags']['dnd5e']={'summon':{'level':8}}
     doc['flags']['runarcana'].update(enabled=True,manualRecharge=True,manualInitiative=True,manualSlowDuration=True,manualAugmentation=True,sourceInconsistency='8th-level spell says higher-level mana equals a 6th-level spell; no correction assumed.')
     for name,reach,parts in [('Bite',15,[('1d10 + 3 + @flags.dnd5e.summon.level','piercing'),('1d10 + @flags.dnd5e.summon.level','glacial')]),('Claws of Ice',10,[('2d6 + 3 + @flags.dnd5e.summon.level','glacial')])]:
@@ -250,12 +251,19 @@ def origin_advancements(page,doc):
     if variants:doc['system']['advancement'].append({'_id':uid(key+'@variant-choice'),'type':'ItemChoice','title':heading.replace('-',' ').title(),'configuration':{'allowDrops':False,'type':'feat','choices':{'0':{'count':1,'replacement':False}},'pool':[{'uuid':u} for u in variants],'restriction':{'type':'race'}},'value':{}})
 def npc(page,cr):
     key=cr['id']; stats=cr['vitals']; tags=cr['tags']; extra=cr['extra']
-    def num(s,default=0):
-        m=re.search(r'[+-]?\d+(?:\.\d+)?',str(s));return float(m[0]) if m else default
+    num=number
     hp=num(stats.get('HP'))
-    bits=[x.strip() for x in cr['type'].split(',')]; size=bits[-1].lower() if len(bits)>1 else 'medium'
-    sizekey={'small':'sm','medium':'med','large':'lg','huge':'huge','gargantuan':'grg','tiny':'tiny'}.get(size,'med')
-    system={'abilities':{k:{'value':v} for k,v in cr['abilities'].items()},'attributes':{'hp':{'value':hp,'max':hp,'temp':0,'formula':stats.get('HP','').split('(',1)[-1].rstrip(')')},'ac':{'flat':num(stats.get('AC')),'calc':'flat'},'movement':{},'senses':{'special':extra.get('Senses','')},'init':{'bonus':str(num(stats.get('Initiative'))-((cr['abilities'].get('dex',10)-10)//2))}},'details':{'cr':num(tags.get('CR')),'type':{'value':bits[0].lower() if bits and bits[0].lower() in ['aberration','beast','celestial','construct','dragon','elemental','fey','fiend','giant','humanoid','monstrosity','ooze','plant','undead'] else 'custom','custom':bits[0] if bits else ''},'biography':{'value':page['html']}},'traits':{'size':sizekey,'languages':{'value':[],'custom':extra.get('Languages','')}}}
+    bits=[x.strip() for x in cr['type'].split(',')]; size=bits[-1].lower() if len(bits)>1 else ''
+    sizekey={'small':'sm','medium':'med','large':'lg','huge':'huge','gargantuan':'grg','colossal':'grg','tiny':'tiny','diminutive':'tiny'}.get(size,'med')
+    hp_formula=re.search(r'\(([^)]+)\)',stats.get('HP',''))
+    system={'abilities':{k:{'value':v} for k,v in cr['abilities'].items()},
+            'attributes':{'hp':{'value':hp,'max':hp,'temp':0,'formula':hp_formula[1] if hp_formula else ''},
+                          'ac':{'flat':num(stats.get('AC')),'override':num(stats.get('AC'))},'movement':{},
+                          'senses':senses(extra.get('Senses','')),
+                          'init':{'ability':'dex','roll':{'bonus':str(num(stats.get('Initiative'))-modifier(cr['abilities'],'dex'))}} if 'Initiative' in stats else {}},
+            'details':{'cr':num(tags.get('CR')),'type':{'value':bits[0].lower() if bits and bits[0].lower() in ['aberration','beast','celestial','construct','dragon','elemental','fey','fiend','giant','humanoid','monstrosity','ooze','plant','undead'] else 'custom','custom':bits[0] if bits else ''},'biography':{'value':page['html']}},
+            'traits':{'size':sizekey,'languages':{'value':[],'custom':extra.get('Languages','')}}}
+    saving_throws(cr,system['abilities'])
     for amount,mode in re.findall(r'(\d+)\s*(?:feet|ft\.?)\s*(?:of\s+)?(walking|flying|swimming|climbing|burrowing|walk|fly|swim|climb|burrow)',extra.get('Speed',''),re.I):
         system['attributes']['movement'].setdefault('speeds',{})[{'walking':'walk','flying':'fly','swimming':'swim','climbing':'climb','burrowing':'burrow'}.get(mode.lower(),mode.lower())]=amount
     system['attributes']['movement']['units']='ft'
@@ -265,19 +273,25 @@ def npc(page,cr):
         m=re.search(re.escape(name)+r'\s*([+-]\d+)',extra.get('Skills',''),re.I)
         if m:
             bonus=int(m[1])-(cr['abilities'].get(ability,10)-10)//2
-            system['skills'][skill]={'value':0,'ability':ability,'bonuses':{'check':str(bonus),'passive':''}}
+            system['skills'][skill]={'value':0,'ability':ability,'roll':{'bonus':str(bonus)},'bonuses':{'passive':''}}
+    passive=re.search(r'passive\s+perception\s+(\d+)',extra.get('Senses',''),re.I)
+    if passive:
+        perception=system['skills'].setdefault('prc',{'value':0,'ability':'wis','roll':{'bonus':'0'},'bonuses':{}})
+        perception['bonuses']['passive']=str(int(passive[1])-10-modifier(cr['abilities'],'wis')-int(perception['roll']['bonus']))
     doc={'name':cr['name'],'type':'npc','img':'icons/svg/mystery-man.svg','system':system,'items':[],'effects':[],'prototypeToken':{'name':cr['name'],'actorLink':False}}
-    doc['flags']=provenance(page,key);doc['flags']['runarcana'].update(enabled=True,role=tags.get('Category'),sourceVitals=stats,sourceExtra=extra,damageReduction=num(stats.get('DR')),manualDefenses=True)
+    doc['flags']=provenance(page,key);doc['flags']['runarcana'].update(enabled=True,role=tags.get('Category'),sourceVitals=stats,sourceExtra=extra,sourceSize=size,manualType=not bits[0],manualSize=size not in ['tiny','small','medium','large','huge','gargantuan'],damageReduction=num(stats.get('DR')),manualDefenses=True)
     for f in cr['features']:
         embedded=item(f['name'],'feat',f['html']);embedded['_id']=uid(f['id']);embedded['flags']=provenance(page,f['id'])
-        m=re.search(r'(Melee|Ranged).*?Attack,\s*([+-]\d+) to hit,\s*(\d+)\s*(?:ft\.?|feet).*?(?:deals|takes)\s*\d+\s*\(([^)]+)\)\s*([A-Za-z]+)\s*damage',f['text'],re.I)
-        if m and f['category'].lower()=='attacks':
-            a=activity(f['id']+'@attack',f['name'],'attack',f['html'],attack={'ability':'none','bonus':m[2],'flat':True,'type':{'value':m[1].lower(),'classification':'weapon'}},damage={'includeBase':False,'parts':[damage_part(m[4],m[5])]},range={'override':True,'value':int(m[3]),'units':'ft'})
+        fields=attack_fields(f)
+        if fields:
+            a=activity(f['id']+'@attack',f['name'],'attack',f['html'],attack=fields['attack'],damage={'includeBase':False,'parts':[damage_part(fields['damageFormula'],fields['damageType'])]},range=fields['range'],activation=fields['activation'])
             embedded['system']['activities']={a['_id']:a}
+            embedded['flags']['runarcana'].update(manualRange=fields['manualRange'],manualRiders=fields['manualRiders'])
+        embedded['flags']['runarcana']['manualEffects']=True
         doc['items'].append(embedded)
         # Independent feature links facilitate browsing without duplicate Actors.
         add('creature-features',item(f['name'],'feat',f['html']),f['id'],page,folder('creature-features',key,cr['name']))
-    add('bestiary',doc,key,page,folder('bestiary','type:'+bits[0],bits[0]))
+    add('bestiary',doc,key,page,folder('bestiary','type:'+bits[0],bits[0] or 'Unspecified type'))
 def sections(page):
     routing={'heritage':('heritages','feat'),'improvement':('heritages','feat'),'rune':('runes','feat'),'runessence':('runes','feat'),'class-resource':('resources','feat'),'background':('backgrounds','background'),'craft':('crafts','tool'),'techmaturgy':('techmaturgy','feat'),'reward':('rewards','equipment'),'condition':('afflictions','feat'),'affliction':('afflictions','feat'),'echo':('creature-features','feat'),'ritual':('rituals','feat')}
     for s in page['sections']:
@@ -325,7 +339,7 @@ def devices(page):
             key=page['id']+'#base-'+row[0].lower()
             abilities={a:{'value':int(re.match(r'\d+',row[col])[0])} for a,col in [('str',2),('dex',3),('con',4)]}
             hp=int(row[5]);doc={'name':row[0]+' Servo (base chassis)','type':'npc','img':'icons/svg/mystery-man.svg','items':[],'effects':[],
-                'system':{'abilities':abilities,'attributes':{'hp':{'value':hp,'max':hp},'ac':{'calc':'flat','flat':10+(abilities['dex']['value']-10)//2}},'details':{'type':{'value':'construct'},'biography':{'value':page['html']}},'traits':{'size':{'tiny':'tiny','small':'sm','medium':'med','large':'lg','huge':'huge'}[row[0].lower()]}},'flags':provenance(page,key),'prototypeToken':{'actorLink':False}}
+                'system':{'abilities':abilities,'attributes':{'hp':{'value':hp,'max':hp},'ac':{'flat':10+(abilities['dex']['value']-10)//2,'override':10+(abilities['dex']['value']-10)//2}},'details':{'type':{'value':'construct'},'biography':{'value':page['html']}},'traits':{'size':{'tiny':'tiny','small':'sm','medium':'med','large':'lg','huge':'huge'}[row[0].lower()]}},'flags':provenance(page,key),'prototypeToken':{'actorLink':False}}
             doc['flags']['runarcana'].update(device='servo',sourceChassis=dict(zip(table['rows'][0],row)),manualParameters=['neuron','level','reactor','fuel','line','developments','controller','attacks'],mechanicalCoverage='partial')
             add('devices',doc,key,page,folder('devices','servo','Servo'))
 def rewrite_links():

@@ -128,10 +128,10 @@ def main():
             cr['type']=b.select_one('.creature-stat-type').get_text(' ',strip=True) if b.select_one('.creature-stat-type') else ''
             cr['abilities']={}
             for x in b.select('.attr-name'):
-                m=re.match(r'(STR|DEX|CON|INT|WIS|CHA):\s*(\d+)',x.get_text(' ',strip=True))
+                m=re.match(r'(STR|DEX|CON|INT|WIS|CHA):\s*(\d+)',x.get_text(' ',strip=True),re.I)
                 if m: cr['abilities'][m[1].lower()]=int(m[2])
             cr['extra']={x.dt.get_text(strip=True):x.dd.get_text(' ',strip=True) for x in b.select('dl > div') if x.dt and x.dd}
-            cr['features']=[]
+            cr['features']=[];feature_occurrences=collections.Counter()
             for si,s in enumerate(b.select('.creature-section')):
                 label=s.select_one('.creature-section-label')
                 for pi,p in enumerate(s.find_all('p',recursive=False)):
@@ -140,10 +140,14 @@ def main():
                     fname=strong.get_text(' ',strip=True) if strong else f'Ability {si+1}.{pi+1}'
                     category=label.get_text(' ',strip=True) if label else ''
                     feature_id=key+'#'+re.sub(r'[^a-z0-9]+','-',(category+'-'+fname).casefold()).strip('-')
+                    occurrence=feature_occurrences[feature_id];feature_occurrences[feature_id]+=1
+                    if occurrence:feature_id+=f'-{occurrence+1}'
                     cr['features'].append({'id':feature_id,'name':fname,'category':category, 'html':clean_html(p,row['url']),'text':p.get_text(' ',strip=True)})
                     entries.append({'page':row['id'],'id':feature_id,'name':fname,'kind':'creature-feature','html':clean_html(p,row['url'])})
                     coverage.append(base|{'id':feature_id,'kind':'creature-feature','textual':'complete','mechanical':'partial','limit':'Structured attack fields convert only where their published syntax is exact. Conditions/runes and other abilities need individual review.'})
             page['creatures'].append(cr)
+            if bi>0:
+                coverage.append(base|{'id':key,'kind':'creature-stat-block','textual':'complete','mechanical':'partial','limit':'Separate native Actor for this published variant; conditional abilities and missing source fields need review.'})
         pages.append(page); counts[(row['part'],page['kind'])]+=1
         coverage.append(base|{'kind':page['kind'],'textual':'complete','status':'source-incomplete' if incomplete else 'partial','limit':'Full source text included under the recorded permission; mechanical coverage remains separate.'})
     dump(ROOT/'data/local/corpus.json',{'schema':1,'pages':pages,'entries':entries})

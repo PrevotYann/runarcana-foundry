@@ -47,6 +47,11 @@ for(const pack of manifest.packs) {
     for(const senses of [doc.system?.senses,doc.system?.attributes?.senses])if(senses) {
       if(['darkvision','blindsight','tremorsense','truesight'].some(k=>k in senses))errors.push(`Obsolete senses schema: ${key}`);
     }
+    if(doc.type==='npc') {
+      if('bonus' in (doc.system?.attributes?.init??{}))errors.push(`Obsolete initiative bonus field: ${key}`);
+      for(const skill of Object.values(doc.system?.skills??{}))if('check' in (skill.bonuses??{}))errors.push(`Obsolete skill bonus field: ${key}`);
+      if(doc.system?.attributes?.ac?.calc==='flat')errors.push(`Obsolete armor override field: ${key}`);
+    }
     if(doc.system?.description?.value?.includes('<script'))errors.push(`Unsafe script in description: ${key}`);
   };
   for(const doc of docs) {

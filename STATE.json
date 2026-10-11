@@ -14,19 +14,18 @@
     "All four parts: collection and individual mechanic review"
   ],
   "blocked": [
-    "Wiki HTTP 429 rate limiting: use slow resumes/local export",
     "No Foundry V14 installation available: installed V12.343 remains unchanged"
   ],
   "next": [
-    "Resume collector with --delay 12 --priority-core",
+    "Resume collector with --delay 12 --priority-core --priority-part 4",
     "Normalize, complete per-entry conversions and review marked ambiguous source data",
     "Run clean V14 runtime/Babele/two-client checks"
   ],
   "snapshot": {
     "discoveredPages": 899,
-    "collectedPages": 281,
-    "missingPages": 618,
-    "documents": 3211,
+    "collectedPages": 341,
+    "missingPages": 558,
+    "documents": 4256,
     "runtimeVerified": false
   }
 }

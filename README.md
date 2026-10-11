@@ -45,11 +45,13 @@ The crawler stops on HTTP 429/503 and saves every response and checkpoint. Resum
 python scripts/collect.py --export C:\path\to\official-export
 ```
 
+For a bestiary checkpoint, use `python scripts/collect.py --delay 12 --priority-core --priority-part 4 --fetch-limit 60`. This prioritizes creature sources; the limit counts new downloads rather than cached pages.
+
 The export must contain `en/.../index.html`. Full pages and normalized local text are kept in `sources/cache/` and `data/local/` and excluded from Git. Once the cache exists, normalization, generation, translations, compilation, testing and packaging run without network. `sources/ids.json` is the durable ID registry; preserve it across updates. `STATE.json` records the recovery state. Structured overrides for unimplemented rules must be reviewed before marking their mechanical coverage complete.
 
 A fresh clone builds from the committed `data/corpus.json.gz` snapshot: install dependencies, then run `npm run build`, `npm run translations`, `npm test`, `npm run validate`, `python scripts/report.py` and `python scripts/package.py`. No wiki network access is needed. After collecting more sources, normalization updates that snapshot.
 
-`npm run build -- --references` is an optional reference-only diagnostic profile. Default releases include content. `python scripts/package.py --source` packages code, build tools and the authorized source snapshot. Inspect installable archives with `node scripts/validate-archive.mjs dist/runarcana-0.2.0.zip`.
+`npm run build -- --references` is an optional reference-only diagnostic profile. Default releases include content. `python scripts/package.py --source` packages code, build tools and the authorized source snapshot. Inspect installable archives with `node scripts/validate-archive.mjs dist/runarcana-0.3.0.zip`.
 
 ## API
 

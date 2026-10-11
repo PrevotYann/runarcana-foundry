@@ -2,9 +2,9 @@
 
 Profile: **authorized-content**. This module is **incomplete**. It has no Foundry V14 runtime verification.
 
-899 canonical page URLs discovered; 281 complete responses cached; 618 sources not collected. Missing pages are not claimed to be permanently unavailable: HTTP 429 throttling interrupted earlier passes. The latest pass collected 60 more pages before another HTTP 429; unvisited entries require a resumed crawl or a local export.
+899 canonical page URLs discovered; 341 complete responses cached; 558 sources not collected. Missing pages are not claimed to be permanently unavailable: HTTP 429 throttling interrupted earlier passes. Collection is resumable from its saved checkpoint; unvisited entries require a resumed crawl or a local export.
 
-8029 page/anchor/table/catalog coverage records. Entry discovery is not exhaustive until every source is available and reviewed.
+9072 page/anchor/table/catalog coverage records. Entry discovery is not exhaustive until every source is available and reviewed.
 
 | Part | Discovered pages | Collected pages | Missing pages |
 | --- | ---: | ---: | ---: |
@@ -12,7 +12,7 @@ Profile: **authorized-content**. This module is **incomplete**. It has no Foundr
 | Characters | 98 | 98 | 0 |
 | Rules | 578 | 120 | 458 |
 | Game Mastering | 21 | 21 | 0 |
-| Monsters & Creatures | 164 | 9 | 155 |
+| Monsters & Creatures | 164 | 69 | 95 |
 
 | Pack | Generated native documents |
 | --- | ---: |
@@ -35,9 +35,9 @@ Profile: **authorized-content**. This module is **incomplete**. It has no Foundr
 | rules | 120 |
 | spells | 100 |
 | companions | 1 |
-| creature-rules | 9 |
-| creature-features | 79 |
-| bestiary | 1 |
+| creature-rules | 69 |
+| creature-features | 971 |
+| bestiary | 94 |
 | rituals | 47 |
 | techmaturgy | 127 |
 | devices | 13 |
@@ -45,7 +45,7 @@ Profile: **authorized-content**. This module is **incomplete**. It has no Foundr
 
 ## Mechanical support
 
-Implemented: namespaced resources and staged native Activity consumption; published mana costs; native origin feature grants/variant choices and explicit size/speed/senses; native matched class grants and numeric scale advancements; native source attack bonuses for structured NPC attacks; weapon attack/crit metadata; source RollTables; heritage budget preview and recorded GM overrides; explicit rest recovery; a native creation/progression workflow; source-based creature HP calculator; conservative import updates and backups; Babele converters and translation templates. Six source snapshots have reviewed base spell Activities (including the Snowman companion); these adapters fall back to manual casting if their source hash changes. Spell effects, triggers and augmentation remain partial.
+Implemented: namespaced resources and staged native Activity consumption; published mana costs; native origin feature grants/variant choices and explicit size/speed/senses; native matched class grants and numeric scale advancements; native source attack bonuses, saving throws, initiative, skill checks, passive perception and numeric senses for structured NPCs; weapon attack/crit metadata; source RollTables; heritage budget preview and recorded GM overrides; explicit rest recovery; a native creation/progression workflow; source-based creature HP calculator; conservative import updates and backups; Babele converters and translation templates. Six source snapshots have reviewed base spell Activities (including the Snowman companion); these adapters fall back to manual casting if their source hash changes. Spell effects, triggers and augmentation remain partial.
 
 Manual or incomplete: ability-generation methods and origin attribute choices; exhaustive origin traits/variants; multiclass calculation and restrictions; automatic class resource initialization/recalculation; class-specific recovery exceptions; ritual casting procedures; most spell damage, effects and augmentation; familiars/summons/Feral Forms; condition expirations and weakness; DR exceptions; firearm misfires/reloads/ammunition; runes and conditional effects; comprehensive crafting catalogs; Mecha pilots/developments/fuel; Echo applications; reward charges/effects/evolution. Some extracted feature items provide text and native inventory support only and are explicitly partial.
 
@@ -64,6 +64,8 @@ World import ignores local edits and duplicate world copies. Reimport or languag
 - Armor entries mix “Dexterity Modifier”, “Defense Modifier”, “Electric” and Portuguese currency abbreviations. Unresolved values are preserved in sourceColumns and flagged for manual review.
 - Mecha HP: the table assigns Partial Medium shielding 4, while the example uses 5. Base templates use the table and retain the example in their full source text.
 - Abominable Snowman is listed as level 8, but its higher-level paragraph names level 6. Its published level-8 companion and caster matching are converted; that augmentation instruction remains unresolved.
+- Some creature variants omit their type or size. Those fields are flagged for review; missing types use an Unspecified type folder, Diminutive size uses native Tiny, and Colossal size uses native Gargantuan pending review.
+- Voidling lists two different Promotion - Soldier (10 counters) features. Both published texts are retained as separate feature documents; their intended progression is not inferred.
 - Chapter numbering, untranslated Portuguese fragments and under-construction passages are retained rather than silently corrected.
 
 ## Runtime verification to perform
