@@ -2,7 +2,7 @@
   "id": "runarcana",
   "title": "Runarcana",
   "description": "Runarcana rules and local content import for D&D Fifth Edition. Partial mechanical coverage; see coverage report.",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "compatibility": {
     "minimum": "14.367",
     "maximum": "14"
@@ -415,5 +415,5 @@
   },
   "url": "https://github.com/PrevotYann/runarcana-foundry",
   "manifest": "https://raw.githubusercontent.com/PrevotYann/runarcana-foundry/main/module.json",
-  "download": "https://github.com/PrevotYann/runarcana-foundry/releases/download/v0.1.0/runarcana-0.1.0.zip"
+  "download": "https://github.com/PrevotYann/runarcana-foundry/releases/download/v0.1.1/runarcana-0.1.1.zip"
 }

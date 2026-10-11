@@ -12,11 +12,13 @@ In Foundry's **Add-on Modules → Install Module**, paste this manifest URL:
 https://raw.githubusercontent.com/PrevotYann/runarcana-foundry/main/module.json
 ```
 
+Version 0.1.1 fixes the unnamed home-page compendium folder that prevented worlds from starting with 0.1.0. Update from Foundry Setup before opening the affected world.
+
 The public release includes original code and source references. Complete wiki texts and personal content packs are excluded because redistribution rights have not been established. This release is incomplete and has static validation only.
 
 Close Foundry. Extract the ZIP so its `runarcana` folder sits under your Foundry user-data `Data/modules/`. Restart Foundry, activate the module in a clean compatible dnd5e world, then open **Settings → Configure Settings → Runarcana**. Enable Runarcana rules for this world and reload. Mark each actor voluntarily in the workbench; activation imports nothing into the world.
 
-`runarcana-0.1.0.zip` includes original code and source references. The separate `-local-personal-use.zip` profile includes only the full wiki pages actually cached at its snapshot and partial native conversions. **Do not redistribute that personal build**: redistribution permission for the full texts and artwork has not been established. Images are referenced through source links; none are bundled.
+`runarcana-0.1.1.zip` includes original code and source references. The separate `-local-personal-use.zip` profile includes only the full wiki pages actually cached at its snapshot and partial native conversions. **Do not redistribute that personal build**: redistribution permission for the full texts and artwork has not been established. Images are referenced through source links; none are bundled.
 
 Use **Runarcana → Catalog** for lazy compendium browsing. **World import** previews creates/updates/conflicts; local edits and duplicates are skipped. Updating or translating a compendium does not automatically update world copies. Reimport voluntarily to refresh unedited copies. The importer saves a pre-update backup in `flags.runarcana.import.backup`; restore it manually through a document update/export if needed.
 
@@ -49,7 +51,7 @@ The export must contain `en/.../index.html`. Full pages and normalized local tex
 
 For a public code/reference build from a fresh clone, run `npm ci`, install the Python dependencies, then `npm run build`, `npm run translations`, `npm test`, `npm run validate`, `python scripts/report.py` and `python scripts/package.py`. The reference build uses the committed source catalog and needs no wiki cache or network after dependencies are installed. The manifest points to the public repository and the versioned GitHub release asset.
 
-`python scripts/package.py --source` produces the separate code/build-tools archive, excluding cached texts and compiled binaries. Verify installable archives after extraction with `node scripts/validate-archive.mjs dist/runarcana-0.1.0.zip dist/runarcana-0.1.0-local-personal-use.zip`.
+`python scripts/package.py --source` produces the separate code/build-tools archive, excluding cached texts and compiled binaries. Verify installable archives after extraction with `node scripts/validate-archive.mjs dist/runarcana-0.1.1.zip dist/runarcana-0.1.1-local-personal-use.zip`.
 
 ## API
 

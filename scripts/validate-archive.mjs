@@ -4,6 +4,7 @@ import path from 'node:path';
 import assert from 'node:assert/strict';
 import {spawnSync} from 'node:child_process';
 import {ClassicLevel} from 'classic-level';
+import {folderErrors} from './pack-validation.mjs';
 for(const archive of process.argv.slice(2)) {
   const temp=await fs.mkdtemp(path.join(os.tmpdir(),'runarcana-archive-'));
   try {
@@ -15,7 +16,10 @@ for(const archive of process.argv.slice(2)) {
     for(const pack of manifest.packs) {
       const database=new ClassicLevel(path.join(root,pack.path),{keyEncoding:'utf8',valueEncoding:'json',readOnly:true});
       await database.open();
-      try {assert.equal((await database.keys().all()).length,validation.packKeys[pack.name],pack.name);}finally{await database.close();}
+      try {
+        assert.equal((await database.keys().all()).length,validation.packKeys[pack.name],pack.name);
+        for await(const [key,folder]of database.iterator())if(key.startsWith('!folders!'))assert.deepEqual(folderErrors(folder,pack.type),[],`${pack.name}: invalid compiled folder`);
+      }finally{await database.close();}
     }
     console.log(`${archive}: all ${manifest.packs.length} extracted LevelDB packs open and match their recorded keys.`);
   } finally {

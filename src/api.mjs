@@ -16,7 +16,7 @@ export function assertGM() {
 }
 export function createApi() {
   return Object.freeze({
-    version:'0.1.0', manaCost,scaleDice,creatureStatistics,
+    version:game.modules?.get('runarcana')?.version??'0.1.1', manaCost,scaleDice,creatureStatistics,
     async enableActor(actor) {
       assertGM();
       if(!game.settings.get('runarcana','enabled'))throw new Error('RUNARCANA.Error.WorldDisabled');

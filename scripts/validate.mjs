@@ -1,6 +1,7 @@
 import fs from 'node:fs/promises';
 import {ClassicLevel} from 'classic-level';
 import assert from 'node:assert/strict';
+import {folderErrors} from './pack-validation.mjs';
 const manifest=JSON.parse(await fs.readFile('module.json','utf8'));
 const index=JSON.parse(await fs.readFile('data/build-index.json','utf8'));
 const profile=index.profile==='local'?'local':'release';
@@ -51,7 +52,7 @@ for(const pack of manifest.packs) {
   for(const doc of docs) {
     if(doc.folder&&!folders.has(doc.folder))errors.push(`Missing folder ${doc.folder} in ${pack.name}`);
     if(doc._key.startsWith('!folders!')){
-      if(doc.type!==pack.type)errors.push(`Folder type mismatch: ${pack.name}`);
+      errors.push(...folderErrors(doc,pack.type));
       let parent=doc;const chain=new Set();
       while(parent?.folder){if(chain.has(parent._id)){errors.push(`Folder cycle: ${pack.name}`);break;}chain.add(parent._id);parent=folders.get(parent.folder);}
       continue;
@@ -59,7 +60,9 @@ for(const pack of manifest.packs) {
     walk(doc,doc._key,true);
   }
   const db=new ClassicLevel(pack.path,{keyEncoding:'utf8',valueEncoding:'json',readOnly:true});await db.open();
-  const binaryKeys=await db.keys().all();await db.close();
+  const binaryKeys=await db.keys().all();
+  for await(const [key,doc] of db.iterator())if(key.startsWith('!folders!'))errors.push(...folderErrors(doc,pack.type));
+  await db.close();
   const expected=seen.size+folders.size;
   if(binaryKeys.length!==expected)errors.push(`${pack.name}: binary has ${binaryKeys.length} keys; sources have ${expected}`);
   ids.set(pack.name,binaryKeys.length);

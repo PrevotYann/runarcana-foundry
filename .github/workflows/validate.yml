@@ -26,4 +26,4 @@ jobs:
       - run: npm run validate
       - run: python scripts/report.py
       - run: python scripts/package.py
-      - run: node scripts/validate-archive.mjs dist/runarcana-0.1.0.zip
+      - run: node scripts/validate-archive.mjs dist/runarcana-*.zip

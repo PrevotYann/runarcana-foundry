@@ -3,6 +3,7 @@ import argparse, collections, hashlib, html, json, pathlib, re
 from bs4 import BeautifulSoup
 from normalize import ROOT, dump, sid
 from equipment import generate_equipment
+VERSION=json.loads((ROOT/'package.json').read_text(encoding='utf8'))['version']
 
 PACKS={
  'start':('Start Here','JournalEntry',0),
@@ -30,8 +31,9 @@ def uid(key):
 def provenance(page,key):
     fragment=key.split('#',1)[1] if '#' in key else None
     anchor=fragment if any(s.get('anchor')==fragment for s in page.get('sections',[])) else None
-    return {'runarcana':{'canonicalId':key,'sourceUrl':page['url']+(('#'+anchor) if anchor else ''),'sourceAnchor':anchor,'sourceLocator':key,'rulesVersion':page.get('rulesVersion'),'wikiBuild':page.get('wikiBuild'),'sourceHash':page.get('sha256'),'generatorVersion':'0.1.0','localOnly':True,'mechanicalCoverage':'partial'}}
+    return {'runarcana':{'canonicalId':key,'sourceUrl':page['url']+(('#'+anchor) if anchor else ''),'sourceAnchor':anchor,'sourceLocator':key,'rulesVersion':page.get('rulesVersion'),'wikiBuild':page.get('wikiBuild'),'sourceHash':page.get('sha256'),'generatorVersion':VERSION,'localOnly':True,'mechanicalCoverage':'partial'}}
 def folder(pack,key,name,parent=None):
+    if not isinstance(name,str) or not name.strip():raise ValueError(f'Folder name is required: {pack} {key}')
     ident=uid('folder:'+pack+':'+key)
     FOLDERS.setdefault(pack,{})[ident]={'_id':ident,'_key':'!folders!'+ident,'name':name,'type':PACKS[pack][1],'folder':parent,'sorting':'a','color':'#397d80'}
     return ident
@@ -72,7 +74,8 @@ def journal(page,local):
         current.append(str(child))
     if current: chunks.append((chunk_key,chunk_name,''.join(current)))
     pages=[{'_id':uid(key+'#'+k),'name':n,'type':'text','sort':(i+1)*100000,'text':{'content':c,'format':1},'flags':provenance(page,page['id']+'#'+k)} for i,(k,n,c) in enumerate(chunks)]
-    f=folder(pack,'chapter:'+page['url'].split('/')[4],page['url'].split('/')[4].replace('-',' ').title())
+    chapter=page['url'].split('/')[4]
+    f=folder(pack,'chapter:'+chapter,chapter.replace('-',' ').title() if chapter else 'Introduction')
     result=add(pack,{'name':page['title'],'pages':pages},key,page,f)
     PAGE_UUIDS[page['url']]=result
     COVERAGE.setdefault(page['id'],[]).append(result)
@@ -372,8 +375,8 @@ def main():
         directory=target/pack;directory.mkdir(parents=True,exist_ok=True)
         for p in directory.glob('*.json'):p.unlink()
         for doc in list(FOLDERS.get(pack,{}).values())+DOCUMENTS.get(pack,[]):dump(directory/(doc['_id']+'.json'),doc)
-    manifest={'id':'runarcana','title':'Runarcana','description':'Runarcana rules and local content import for D&D Fifth Edition. Partial mechanical coverage; see coverage report.','version':'0.1.0','compatibility':{'minimum':'14.367','maximum':'14'},'authors':[{'name':'Runarcana Foundry contributors'}],'relationships':{'systems':[{'id':'dnd5e','type':'system','compatibility':{'minimum':'6.0.6','maximum':'6.0.6'}}],'recommends':[{'id':'babele','type':'module','compatibility':{'minimum':'2.9.1'}}]},'esmodules':['src/main.mjs'],'styles':['styles/runarcana.css'],'languages':[{'lang':'en','name':'English','path':'lang/en.json'}],'packs':[{'name':k,'label':v[0],'path':'packs/'+k,'type':v[1],'system':'dnd5e','ownership':{'PLAYER':'OBSERVER','ASSISTANT':'OWNER'}} for k,v in PACKS.items()],'packFolders':[{'name':'Runarcana','sorting':'m','color':'#397d80','folders':[{'name':label,'sorting':'m','packs':[k for k,v in PACKS.items() if v[2]==part]} for part,label in GROUPS.items()]}],'flags':{'runarcana':{'localContent':args.local,'mechanicalCoverage':'partial','runtimeVerified':False}}}
-    manifest.update(url='https://github.com/PrevotYann/runarcana-foundry',manifest='https://raw.githubusercontent.com/PrevotYann/runarcana-foundry/main/module.json',download='https://github.com/PrevotYann/runarcana-foundry/releases/download/v0.1.0/runarcana-0.1.0.zip')
+    manifest={'id':'runarcana','title':'Runarcana','description':'Runarcana rules and local content import for D&D Fifth Edition. Partial mechanical coverage; see coverage report.','version':VERSION,'compatibility':{'minimum':'14.367','maximum':'14'},'authors':[{'name':'Runarcana Foundry contributors'}],'relationships':{'systems':[{'id':'dnd5e','type':'system','compatibility':{'minimum':'6.0.6','maximum':'6.0.6'}}],'recommends':[{'id':'babele','type':'module','compatibility':{'minimum':'2.9.1'}}]},'esmodules':['src/main.mjs'],'styles':['styles/runarcana.css'],'languages':[{'lang':'en','name':'English','path':'lang/en.json'}],'packs':[{'name':k,'label':v[0],'path':'packs/'+k,'type':v[1],'system':'dnd5e','ownership':{'PLAYER':'OBSERVER','ASSISTANT':'OWNER'}} for k,v in PACKS.items()],'packFolders':[{'name':'Runarcana','sorting':'m','color':'#397d80','folders':[{'name':label,'sorting':'m','packs':[k for k,v in PACKS.items() if v[2]==part]} for part,label in GROUPS.items()]}],'flags':{'runarcana':{'localContent':args.local,'mechanicalCoverage':'partial','runtimeVerified':False}}}
+    manifest.update(version=VERSION,url='https://github.com/PrevotYann/runarcana-foundry',manifest='https://raw.githubusercontent.com/PrevotYann/runarcana-foundry/main/module.json',download=f'https://github.com/PrevotYann/runarcana-foundry/releases/download/v{VERSION}/runarcana-{VERSION}.zip')
     manifest['authors']=[{'name':'PrevotYann','url':'https://github.com/PrevotYann'}]
     dump(ROOT/'module.json',manifest)
     dump(rp,dict(sorted(REGISTRY.items())))

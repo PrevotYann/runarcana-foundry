@@ -8,12 +8,12 @@ def main():
     validation=json.loads((ROOT/'sources/validation.json').read_text(encoding='utf8'))
     if validation['errors']:raise SystemExit('Validation errors prevent packaging.')
     dest=ROOT/'dist';dest.mkdir(exist_ok=True)
-    name='runarcana-0.1.0'+('-local-personal-use' if args.local else '')+'.zip'
+    name='runarcana-'+manifest['version']+('-local-personal-use' if args.local else '')+'.zip'
     files=[ROOT/'module.json',ROOT/'README.md',ROOT/'LICENSE',ROOT/'STATE.json',ROOT/'docs/credits.md',ROOT/'docs/babele.md',ROOT/'docs/coverage.md',ROOT/'docs/rule-differences.md',ROOT/'sources/coverage.json',ROOT/'sources/validation.json',ROOT/'sources/catalog.json',ROOT/'sources/missing.json',ROOT/'sources/versions.json',ROOT/'sources/ids.json',ROOT/'sources/mechanics-reviewed.json']
     for directory in ['src','styles','lang','assets','packs','translations/templates']:
         files.extend(x for x in (ROOT/directory).rglob('*') if x.is_file() and x.name not in ['LOCK','LOG','LOG.old'])
     if args.source:
-        name='runarcana-0.1.0-source.zip'
+        name='runarcana-'+manifest['version']+'-source.zip'
         files=[ROOT/n for n in ['.gitignore','LICENSE','README.md','STATE.json','module.json','package.json','package-lock.json']]
         for directory in ['src','styles','lang','docs','scripts','tests','translations/templates']:
             files.extend(x for x in (ROOT/directory).rglob('*') if x.is_file() and x.suffix in ['.mjs','.py','.json','.css','.md','.txt'])
