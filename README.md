@@ -16,7 +16,7 @@ Version 0.1.1 fixes the unnamed home-page compendium folder that prevented world
 
 Public releases include collected Runarcana texts and native Items, Actors, Journals and RollTables. The maintainer has confirmed permission for their inclusion in this free module; see [credits and permission](docs/credits.md). Artwork remains linked to its source. All currently discovered sources are included; mechanical coverage and the editorial section audit remain incomplete.
 
-The discovered source crawl is complete: 899 cached full pages, including all 558 catalog spells. Character creation and origin customization remain under development; the section inventory and remaining mechanics still need review.
+The discovered source crawl is complete: 899 cached full pages, including all 558 catalog spells. The bestiary contains 240 native Actors, including eight Garden of Shadows creatures and variants with published statistics and simple attack activities; conditional abilities, runes and defenses remain manual. Character creation and origin customization remain under development; the section inventory and remaining mechanics still need review.
 
 For manual installation, close Foundry, extract the ZIP into `Data/modules/`, then activate Runarcana in a compatible dnd5e world. Enable the world setting and explicitly mark Runarcana actors in the workbench.
 
@@ -53,7 +53,7 @@ The export must contain `en/.../index.html`. Full pages and normalized local tex
 
 A fresh clone builds from the committed `data/corpus.json.gz` snapshot: install dependencies, then run `npm run build`, `npm run translations`, `npm test`, `npm run validate`, `python scripts/report.py` and `python scripts/package.py`. No wiki network access is needed. After collecting more sources, normalization updates that snapshot.
 
-`npm run build -- --references` is an optional reference-only diagnostic profile. Default releases include content. `python scripts/package.py --source` packages code, build tools and the authorized source snapshot. Inspect installable archives with `node scripts/validate-archive.mjs dist/runarcana-0.13.0.zip`.
+`npm run build -- --references` is an optional reference-only diagnostic profile. Default releases include content. `python scripts/package.py --source` packages code, build tools and the authorized source snapshot. Inspect installable archives with `node scripts/validate-archive.mjs dist/runarcana-0.14.0.zip`.
 
 ## API
 

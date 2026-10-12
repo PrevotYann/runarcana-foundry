@@ -286,6 +286,10 @@ def npc(page,cr):
         perception['bonuses']['passive']=str(int(passive[1])-10-modifier(cr['abilities'],'wis')-int(perception['roll']['bonus']))
     doc={'name':cr['name'],'type':'npc','img':'icons/svg/mystery-man.svg','system':system,'items':[],'effects':[],'prototypeToken':{'name':cr['name'],'actorLink':False}}
     doc['flags']=provenance(page,key);doc['flags']['runarcana'].update(enabled=True,role=tags.get('Category'),sourceVitals=stats,sourceExtra=extra,sourceSize=size,manualType=not bits[0],manualSize=size not in ['tiny','small','medium','large','huge','gargantuan'],damageReduction=num(stats.get('DR')),manualDefenses=True)
+    if cr.get('legacy'):
+        doc['flags']['runarcana']['legacyStatBlock']=True
+        system['details']['alignment']=extra.get('Alignment','')
+        system['details']['type']['subtype']=extra.get('Subtype','')
     for f in cr['features']:
         embedded=item(f['name'],'feat',f['html']);embedded['_id']=uid(f['id']);embedded['flags']=provenance(page,f['id'])
         fields=attack_fields(f)

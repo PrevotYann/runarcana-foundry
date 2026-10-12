@@ -4,7 +4,7 @@ Profile: **authorized-content**. This module is **incomplete**. It has no Foundr
 
 899 canonical page URLs discovered; 899 complete responses cached; 0 sources not collected. All currently discovered page URLs have cached full responses. This completes the discovered crawl, not the editorial review of every section or mechanical conversion.
 
-11385 page/anchor/table/catalog coverage records. Entry discovery is not exhaustive until every source is available and reviewed.
+11442 page/anchor/table/catalog coverage records. Entry discovery is not exhaustive until every source is available and reviewed.
 
 | Part | Discovered pages | Collected pages | Missing pages |
 | --- | ---: | ---: | ---: |
@@ -36,8 +36,8 @@ Profile: **authorized-content**. This module is **incomplete**. It has no Foundr
 | spells | 558 |
 | companions | 1 |
 | creature-rules | 164 |
-| creature-features | 2973 |
-| bestiary | 232 |
+| creature-features | 3027 |
+| bestiary | 240 |
 | rituals | 47 |
 | techmaturgy | 127 |
 | devices | 13 |
@@ -65,7 +65,7 @@ World import ignores local edits and duplicate world copies. Reimport or languag
 - Mecha HP: the table assigns Partial Medium shielding 4, while the example uses 5. Base templates use the table and retain the example in their full source text.
 - Abominable Snowman is listed as level 8, but its higher-level paragraph names level 6. Its published level-8 companion and caster matching are converted; that augmentation instruction remains unresolved.
 - Some creature variants omit their type or size. Those fields are flagged for review; missing types use an Unspecified type folder, Diminutive size uses native Tiny, and Colossal size uses native Gargantuan pending review.
-- The five Garden of Shadows creature pages use a legacy stat-block layout. Their complete statistics and abilities are included in source journals; they have not been converted to native Actors. The structured bestiary contains 232 Actors.
+- The five Garden of Shadows creature pages use a legacy stat-block layout. Eight published creatures and variants are converted to native Actors; conditional traits, runes and defenses remain manual. Megaera lists Charisma 18 with modifier +8; its score is retained as 18, while explicitly published skill and attack bonuses are preserved independently.
 - Voidling lists two different Promotion - Soldier (10 counters) features. Both published texts are retained as separate feature documents; their intended progression is not inferred.
 - Chapter numbering, untranslated Portuguese fragments and under-construction passages are retained rather than silently corrected.
 

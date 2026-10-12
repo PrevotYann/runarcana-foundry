@@ -148,6 +148,15 @@ def main():
             page['creatures'].append(cr)
             if bi>0:
                 coverage.append(base|{'id':key,'kind':'creature-stat-block','textual':'complete','mechanical':'partial','limit':'Separate native Actor for this published variant; conditional abilities and missing source fields need review.'})
+        if '/garden-of-shadows/creatures/' in row['id'] and not page['creatures']:
+            from legacy_creatures import legacy_creatures
+            for cr in legacy_creatures(prose,row,clean_html):
+                page['creatures'].append(cr)
+                for feature in cr['features']:
+                    entries.append({'page':row['id'],'id':feature['id'],'name':feature['name'],'kind':'creature-feature','html':feature['html']})
+                    coverage.append(base|{'id':feature['id'],'kind':'creature-feature','textual':'complete','mechanical':'partial','limit':'Legacy published attack statistics converted where exact; conditional effects and runes remain manual.'})
+                if cr['id']!=row['id']:
+                    coverage.append(base|{'id':cr['id'],'kind':'creature-stat-block','textual':'complete','mechanical':'partial','limit':'Separate native Actor for this published legacy variant; conditional abilities remain manual.'})
         pages.append(page); counts[(row['part'],page['kind'])]+=1
         coverage.append(base|{'kind':page['kind'],'textual':'complete','status':'source-incomplete' if incomplete else 'partial','limit':'Full source text included under the recorded permission; mechanical coverage remains separate.'})
     dump(ROOT/'data/local/corpus.json',{'schema':1,'pages':pages,'entries':entries})

@@ -48967,6 +48967,384 @@
       "sourceId": "/en/monsters-and-creatures/echoes/#echo-of-the-shapeshifters-path"
     },
     {
+      "pack": "creature-features",
+      "type": "Item",
+      "id": "73940603666bad4e",
+      "name": "Antimagic Cone",
+      "sourceId": "/en/runarcana-plus/garden-of-shadows/creatures/argoi/#traits-antimagic-cone"
+    },
+    {
+      "pack": "creature-features",
+      "type": "Item",
+      "id": "4cde8b1a4150aa08",
+      "name": "Punch",
+      "sourceId": "/en/runarcana-plus/garden-of-shadows/creatures/argoi/#actions-punch"
+    },
+    {
+      "pack": "creature-features",
+      "type": "Item",
+      "id": "8006b9e805313019",
+      "name": "Runic Pulse",
+      "sourceId": "/en/runarcana-plus/garden-of-shadows/creatures/argoi/#runes-runic-pulse"
+    },
+    {
+      "pack": "creature-features",
+      "type": "Item",
+      "id": "d03e2637babda487",
+      "name": "Runic Spark",
+      "sourceId": "/en/runarcana-plus/garden-of-shadows/creatures/argoi/#runes-runic-spark"
+    },
+    {
+      "pack": "creature-features",
+      "type": "Item",
+      "id": "221487c3e36465e2",
+      "name": "Evasion",
+      "sourceId": "/en/runarcana-plus/garden-of-shadows/creatures/executioners/#traits-evasion"
+    },
+    {
+      "pack": "creature-features",
+      "type": "Item",
+      "id": "1bf1bcb28becfb50",
+      "name": "Displacement",
+      "sourceId": "/en/runarcana-plus/garden-of-shadows/creatures/executioners/#traits-displacement"
+    },
+    {
+      "pack": "creature-features",
+      "type": "Item",
+      "id": "ba3952b0f8900816",
+      "name": "Multiattack",
+      "sourceId": "/en/runarcana-plus/garden-of-shadows/creatures/executioners/#actions-multiattack"
+    },
+    {
+      "pack": "creature-features",
+      "type": "Item",
+      "id": "388707e199645561",
+      "name": "Tentacle",
+      "sourceId": "/en/runarcana-plus/garden-of-shadows/creatures/executioners/#actions-tentacle"
+    },
+    {
+      "pack": "creature-features",
+      "type": "Item",
+      "id": "629401a484c3875a",
+      "name": "Paralyzing Tentacle (Recharge 6)",
+      "sourceId": "/en/runarcana-plus/garden-of-shadows/creatures/executioners/#actions-paralyzing-tentacle-recharge-6"
+    },
+    {
+      "pack": "creature-features",
+      "type": "Item",
+      "id": "c581fbd83b25701b",
+      "name": "Runic Pulse",
+      "sourceId": "/en/runarcana-plus/garden-of-shadows/creatures/executioners/#runes-runic-pulse"
+    },
+    {
+      "pack": "creature-features",
+      "type": "Item",
+      "id": "c4aed676466d1de7",
+      "name": "Runic Spark",
+      "sourceId": "/en/runarcana-plus/garden-of-shadows/creatures/executioners/#runes-runic-spark"
+    },
+    {
+      "pack": "creature-features",
+      "type": "Item",
+      "id": "2e054037d6478df1",
+      "name": "Shadow Mist (Recharge 4-6)",
+      "sourceId": "/en/runarcana-plus/garden-of-shadows/creatures/executioners/#stat-block-1#traits-shadow-mist-recharge-4-6"
+    },
+    {
+      "pack": "creature-features",
+      "type": "Item",
+      "id": "80094ebed00b1ac8",
+      "name": "Multiattack",
+      "sourceId": "/en/runarcana-plus/garden-of-shadows/creatures/executioners/#stat-block-1#actions-multiattack"
+    },
+    {
+      "pack": "creature-features",
+      "type": "Item",
+      "id": "a65de69d385bdc52",
+      "name": "Bite",
+      "sourceId": "/en/runarcana-plus/garden-of-shadows/creatures/executioners/#stat-block-1#actions-bite"
+    },
+    {
+      "pack": "creature-features",
+      "type": "Item",
+      "id": "745257edbec2a685",
+      "name": "Hooves",
+      "sourceId": "/en/runarcana-plus/garden-of-shadows/creatures/executioners/#stat-block-1#actions-hooves"
+    },
+    {
+      "pack": "creature-features",
+      "type": "Item",
+      "id": "95a64f7c559496a5",
+      "name": "Shadow Run",
+      "sourceId": "/en/runarcana-plus/garden-of-shadows/creatures/executioners/#stat-block-1#actions-shadow-run"
+    },
+    {
+      "pack": "creature-features",
+      "type": "Item",
+      "id": "0126462d0654f576",
+      "name": "Intimidating Presence",
+      "sourceId": "/en/runarcana-plus/garden-of-shadows/creatures/executioners/#stat-block-1#actions-intimidating-presence"
+    },
+    {
+      "pack": "creature-features",
+      "type": "Item",
+      "id": "7698c4005766048e",
+      "name": "Runic Pulse",
+      "sourceId": "/en/runarcana-plus/garden-of-shadows/creatures/executioners/#stat-block-1#runes-runic-pulse"
+    },
+    {
+      "pack": "creature-features",
+      "type": "Item",
+      "id": "084cd1114f460d41",
+      "name": "Runic Spark",
+      "sourceId": "/en/runarcana-plus/garden-of-shadows/creatures/executioners/#stat-block-1#runes-runic-spark"
+    },
+    {
+      "pack": "creature-features",
+      "type": "Item",
+      "id": "defac9240aee67c0",
+      "name": "Innate Spellcasting",
+      "sourceId": "/en/runarcana-plus/garden-of-shadows/creatures/megaera/#traits-innate-spellcasting"
+    },
+    {
+      "pack": "creature-features",
+      "type": "Item",
+      "id": "a84c1769a7e8cdb5",
+      "name": "Legendary Resistance (3/day)",
+      "sourceId": "/en/runarcana-plus/garden-of-shadows/creatures/megaera/#traits-legendary-resistance-3-day"
+    },
+    {
+      "pack": "creature-features",
+      "type": "Item",
+      "id": "2f8abadb62287c90",
+      "name": "Magic Resistance",
+      "sourceId": "/en/runarcana-plus/garden-of-shadows/creatures/megaera/#traits-magic-resistance"
+    },
+    {
+      "pack": "creature-features",
+      "type": "Item",
+      "id": "89cceae185a957b2",
+      "name": "Umbral Sight",
+      "sourceId": "/en/runarcana-plus/garden-of-shadows/creatures/megaera/#traits-umbral-sight"
+    },
+    {
+      "pack": "creature-features",
+      "type": "Item",
+      "id": "2780946bd837dd25",
+      "name": "Multiattack",
+      "sourceId": "/en/runarcana-plus/garden-of-shadows/creatures/megaera/#actions-multiattack"
+    },
+    {
+      "pack": "creature-features",
+      "type": "Item",
+      "id": "4740d7956cda8caa",
+      "name": "Claws",
+      "sourceId": "/en/runarcana-plus/garden-of-shadows/creatures/megaera/#actions-claws"
+    },
+    {
+      "pack": "creature-features",
+      "type": "Item",
+      "id": "e1714ddf35e337e2",
+      "name": "Deadly Gaze",
+      "sourceId": "/en/runarcana-plus/garden-of-shadows/creatures/megaera/#actions-deadly-gaze"
+    },
+    {
+      "pack": "creature-features",
+      "type": "Item",
+      "id": "919232e3f2ffe8fe",
+      "name": "Runic Pulse",
+      "sourceId": "/en/runarcana-plus/garden-of-shadows/creatures/megaera/#runes-runic-pulse"
+    },
+    {
+      "pack": "creature-features",
+      "type": "Item",
+      "id": "7eceb7cad0401bdc",
+      "name": "Runic Spark",
+      "sourceId": "/en/runarcana-plus/garden-of-shadows/creatures/megaera/#runes-runic-spark"
+    },
+    {
+      "pack": "creature-features",
+      "type": "Item",
+      "id": "54ffd2e32aa66082",
+      "name": "Runic Flow",
+      "sourceId": "/en/runarcana-plus/garden-of-shadows/creatures/megaera/#runes-runic-flow"
+    },
+    {
+      "pack": "creature-features",
+      "type": "Item",
+      "id": "541f034800698192",
+      "name": "Runic Vortex",
+      "sourceId": "/en/runarcana-plus/garden-of-shadows/creatures/megaera/#runes-runic-vortex"
+    },
+    {
+      "pack": "creature-features",
+      "type": "Item",
+      "id": "0ab7c92c820be1fd",
+      "name": "Nimble Escape",
+      "sourceId": "/en/runarcana-plus/garden-of-shadows/creatures/nyxis/#traits-nimble-escape"
+    },
+    {
+      "pack": "creature-features",
+      "type": "Item",
+      "id": "996db58146b98438",
+      "name": "Shadow Split (Recharge 5-6)",
+      "sourceId": "/en/runarcana-plus/garden-of-shadows/creatures/nyxis/#traits-shadow-split-recharge-5-6"
+    },
+    {
+      "pack": "creature-features",
+      "type": "Item",
+      "id": "10d7345930a8a59e",
+      "name": "Claws",
+      "sourceId": "/en/runarcana-plus/garden-of-shadows/creatures/nyxis/#actions-claws"
+    },
+    {
+      "pack": "creature-features",
+      "type": "Item",
+      "id": "a283768d75c46394",
+      "name": "Shadow Dart",
+      "sourceId": "/en/runarcana-plus/garden-of-shadows/creatures/nyxis/#actions-shadow-dart"
+    },
+    {
+      "pack": "creature-features",
+      "type": "Item",
+      "id": "99b1ab557a93b813",
+      "name": "Runic Pulse",
+      "sourceId": "/en/runarcana-plus/garden-of-shadows/creatures/nyxis/#runes-runic-pulse"
+    },
+    {
+      "pack": "creature-features",
+      "type": "Item",
+      "id": "9b1c271636ad5427",
+      "name": "Shadow Split (Recharge 5-6)",
+      "sourceId": "/en/runarcana-plus/garden-of-shadows/creatures/nyxis/#stat-block-1#traits-shadow-split-recharge-5-6"
+    },
+    {
+      "pack": "creature-features",
+      "type": "Item",
+      "id": "834128018ed42cf4",
+      "name": "Martial Advantage",
+      "sourceId": "/en/runarcana-plus/garden-of-shadows/creatures/nyxis/#stat-block-1#traits-martial-advantage"
+    },
+    {
+      "pack": "creature-features",
+      "type": "Item",
+      "id": "44feec27d017445b",
+      "name": "Claws",
+      "sourceId": "/en/runarcana-plus/garden-of-shadows/creatures/nyxis/#stat-block-1#actions-claws"
+    },
+    {
+      "pack": "creature-features",
+      "type": "Item",
+      "id": "5886dc23dabb44e0",
+      "name": "Runic Pulse",
+      "sourceId": "/en/runarcana-plus/garden-of-shadows/creatures/nyxis/#stat-block-1#runes-runic-pulse"
+    },
+    {
+      "pack": "creature-features",
+      "type": "Item",
+      "id": "be11b3b16d0af5d8",
+      "name": "Surprise Attack",
+      "sourceId": "/en/runarcana-plus/garden-of-shadows/creatures/nyxis/#stat-block-2#traits-surprise-attack"
+    },
+    {
+      "pack": "creature-features",
+      "type": "Item",
+      "id": "456a06d523244916",
+      "name": "Shadow Split (Recharge 5-6)",
+      "sourceId": "/en/runarcana-plus/garden-of-shadows/creatures/nyxis/#stat-block-2#traits-shadow-split-recharge-5-6"
+    },
+    {
+      "pack": "creature-features",
+      "type": "Item",
+      "id": "4bcc11eb3d1b7ed4",
+      "name": "Martial Advantage",
+      "sourceId": "/en/runarcana-plus/garden-of-shadows/creatures/nyxis/#stat-block-2#traits-martial-advantage"
+    },
+    {
+      "pack": "creature-features",
+      "type": "Item",
+      "id": "deea6606fd4bad09",
+      "name": "Umbral Sight",
+      "sourceId": "/en/runarcana-plus/garden-of-shadows/creatures/nyxis/#stat-block-2#traits-umbral-sight"
+    },
+    {
+      "pack": "creature-features",
+      "type": "Item",
+      "id": "8d52da93b2954ab9",
+      "name": "Claws",
+      "sourceId": "/en/runarcana-plus/garden-of-shadows/creatures/nyxis/#stat-block-2#actions-claws"
+    },
+    {
+      "pack": "creature-features",
+      "type": "Item",
+      "id": "305a1163979ca0b4",
+      "name": "Runic Pulse",
+      "sourceId": "/en/runarcana-plus/garden-of-shadows/creatures/nyxis/#stat-block-2#runes-runic-pulse"
+    },
+    {
+      "pack": "creature-features",
+      "type": "Item",
+      "id": "2fcf536644e9b9f7",
+      "name": "Runic Spark",
+      "sourceId": "/en/runarcana-plus/garden-of-shadows/creatures/nyxis/#stat-block-2#runes-runic-spark"
+    },
+    {
+      "pack": "creature-features",
+      "type": "Item",
+      "id": "7d6a06a95bc68d26",
+      "name": "Echolocation",
+      "sourceId": "/en/runarcana-plus/garden-of-shadows/creatures/stygian/#traits-echolocation"
+    },
+    {
+      "pack": "creature-features",
+      "type": "Item",
+      "id": "bb8b75c2a94632c1",
+      "name": "Magic Resistance",
+      "sourceId": "/en/runarcana-plus/garden-of-shadows/creatures/stygian/#traits-magic-resistance"
+    },
+    {
+      "pack": "creature-features",
+      "type": "Item",
+      "id": "f547c79139fce069",
+      "name": "Flyby",
+      "sourceId": "/en/runarcana-plus/garden-of-shadows/creatures/stygian/#traits-flyby"
+    },
+    {
+      "pack": "creature-features",
+      "type": "Item",
+      "id": "971783f4668efa7f",
+      "name": "Umbral Sight",
+      "sourceId": "/en/runarcana-plus/garden-of-shadows/creatures/stygian/#traits-umbral-sight"
+    },
+    {
+      "pack": "creature-features",
+      "type": "Item",
+      "id": "54557e114ec56302",
+      "name": "Beak",
+      "sourceId": "/en/runarcana-plus/garden-of-shadows/creatures/stygian/#actions-beak"
+    },
+    {
+      "pack": "creature-features",
+      "type": "Item",
+      "id": "05021992f49fa537",
+      "name": "Claws",
+      "sourceId": "/en/runarcana-plus/garden-of-shadows/creatures/stygian/#actions-claws"
+    },
+    {
+      "pack": "creature-features",
+      "type": "Item",
+      "id": "5e1cce87bf84927a",
+      "name": "Runic Pulse",
+      "sourceId": "/en/runarcana-plus/garden-of-shadows/creatures/stygian/#runes-runic-pulse"
+    },
+    {
+      "pack": "creature-features",
+      "type": "Item",
+      "id": "533fd878ad2b19f8",
+      "name": "Runic Spark",
+      "sourceId": "/en/runarcana-plus/garden-of-shadows/creatures/stygian/#runes-runic-spark"
+    },
+    {
       "pack": "bestiary",
       "type": "Actor",
       "id": "b5ffd56514817796",
@@ -50589,6 +50967,62 @@
       "id": "6f07a1c6d1227f6c",
       "name": "Adult Yeti",
       "sourceId": "/en/monsters-and-creatures/creatures/yeti/#stat-block-1"
+    },
+    {
+      "pack": "bestiary",
+      "type": "Actor",
+      "id": "9a91286d4a696566",
+      "name": "Argoi",
+      "sourceId": "/en/runarcana-plus/garden-of-shadows/creatures/argoi/"
+    },
+    {
+      "pack": "bestiary",
+      "type": "Actor",
+      "id": "4fc1eafadef8d040",
+      "name": "Doombeast",
+      "sourceId": "/en/runarcana-plus/garden-of-shadows/creatures/executioners/"
+    },
+    {
+      "pack": "bestiary",
+      "type": "Actor",
+      "id": "5d9840c02a51cd87",
+      "name": "Duskrider",
+      "sourceId": "/en/runarcana-plus/garden-of-shadows/creatures/executioners/#stat-block-1"
+    },
+    {
+      "pack": "bestiary",
+      "type": "Actor",
+      "id": "cbfdd7b47b434ef4",
+      "name": "Megaera",
+      "sourceId": "/en/runarcana-plus/garden-of-shadows/creatures/megaera/"
+    },
+    {
+      "pack": "bestiary",
+      "type": "Actor",
+      "id": "09dabe838aab7caa",
+      "name": "Nyxie",
+      "sourceId": "/en/runarcana-plus/garden-of-shadows/creatures/nyxis/"
+    },
+    {
+      "pack": "bestiary",
+      "type": "Actor",
+      "id": "0699d42547a71470",
+      "name": "Archnyx",
+      "sourceId": "/en/runarcana-plus/garden-of-shadows/creatures/nyxis/#stat-block-1"
+    },
+    {
+      "pack": "bestiary",
+      "type": "Actor",
+      "id": "0877782cd2ce3561",
+      "name": "Tyranyx",
+      "sourceId": "/en/runarcana-plus/garden-of-shadows/creatures/nyxis/#stat-block-2"
+    },
+    {
+      "pack": "bestiary",
+      "type": "Actor",
+      "id": "7f3110d169a62e50",
+      "name": "Stygian",
+      "sourceId": "/en/runarcana-plus/garden-of-shadows/creatures/stygian/"
     },
     {
       "pack": "rituals",

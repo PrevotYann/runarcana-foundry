@@ -288518,6 +288518,114 @@
       "referenceUuid": "Compendium.runarcana.references.JournalEntry.18b0ac28f251f54b"
     },
     {
+      "id": "/en/runarcana-plus/garden-of-shadows/creatures/argoi/#traits-antimagic-cone",
+      "part": 0,
+      "chapter": "runarcana-plus/garden-of-shadows/creatures",
+      "url": "https://wiki.runarcana.org/en/runarcana-plus/garden-of-shadows/creatures/argoi/",
+      "anchor": null,
+      "language": "en",
+      "sha256": "6e4376f3ba03853e3a13d826143eeaf0c97c0ba71c9eae4ccf6b50bfd9aceb00",
+      "collectedAt": "2026-10-12T18:52:16.844641+00:00",
+      "rulesVersion": null,
+      "wikiBuild": "0.157",
+      "collectionStatus": "collected",
+      "documents": [
+        "Compendium.runarcana.creature-features.Item.73940603666bad4e"
+      ],
+      "uuids": [
+        "Compendium.runarcana.creature-features.Item.73940603666bad4e"
+      ],
+      "test": "tests/corpus.test.mjs",
+      "status": "partial",
+      "textual": "complete",
+      "mechanical": "partial",
+      "redistribution": "permission-confirmed-by-maintainer",
+      "kind": "creature-feature",
+      "limit": "Legacy published attack statistics converted where exact; conditional effects and runes remain manual.",
+      "referenceUuid": "Compendium.runarcana.references.JournalEntry.18b0ac28f251f54b"
+    },
+    {
+      "id": "/en/runarcana-plus/garden-of-shadows/creatures/argoi/#actions-punch",
+      "part": 0,
+      "chapter": "runarcana-plus/garden-of-shadows/creatures",
+      "url": "https://wiki.runarcana.org/en/runarcana-plus/garden-of-shadows/creatures/argoi/",
+      "anchor": null,
+      "language": "en",
+      "sha256": "6e4376f3ba03853e3a13d826143eeaf0c97c0ba71c9eae4ccf6b50bfd9aceb00",
+      "collectedAt": "2026-10-12T18:52:16.844641+00:00",
+      "rulesVersion": null,
+      "wikiBuild": "0.157",
+      "collectionStatus": "collected",
+      "documents": [
+        "Compendium.runarcana.creature-features.Item.4cde8b1a4150aa08"
+      ],
+      "uuids": [
+        "Compendium.runarcana.creature-features.Item.4cde8b1a4150aa08"
+      ],
+      "test": "tests/corpus.test.mjs",
+      "status": "partial",
+      "textual": "complete",
+      "mechanical": "partial",
+      "redistribution": "permission-confirmed-by-maintainer",
+      "kind": "creature-feature",
+      "limit": "Legacy published attack statistics converted where exact; conditional effects and runes remain manual.",
+      "referenceUuid": "Compendium.runarcana.references.JournalEntry.18b0ac28f251f54b"
+    },
+    {
+      "id": "/en/runarcana-plus/garden-of-shadows/creatures/argoi/#runes-runic-pulse",
+      "part": 0,
+      "chapter": "runarcana-plus/garden-of-shadows/creatures",
+      "url": "https://wiki.runarcana.org/en/runarcana-plus/garden-of-shadows/creatures/argoi/",
+      "anchor": null,
+      "language": "en",
+      "sha256": "6e4376f3ba03853e3a13d826143eeaf0c97c0ba71c9eae4ccf6b50bfd9aceb00",
+      "collectedAt": "2026-10-12T18:52:16.844641+00:00",
+      "rulesVersion": null,
+      "wikiBuild": "0.157",
+      "collectionStatus": "collected",
+      "documents": [
+        "Compendium.runarcana.creature-features.Item.8006b9e805313019"
+      ],
+      "uuids": [
+        "Compendium.runarcana.creature-features.Item.8006b9e805313019"
+      ],
+      "test": "tests/corpus.test.mjs",
+      "status": "partial",
+      "textual": "complete",
+      "mechanical": "partial",
+      "redistribution": "permission-confirmed-by-maintainer",
+      "kind": "creature-feature",
+      "limit": "Legacy published attack statistics converted where exact; conditional effects and runes remain manual.",
+      "referenceUuid": "Compendium.runarcana.references.JournalEntry.18b0ac28f251f54b"
+    },
+    {
+      "id": "/en/runarcana-plus/garden-of-shadows/creatures/argoi/#runes-runic-spark",
+      "part": 0,
+      "chapter": "runarcana-plus/garden-of-shadows/creatures",
+      "url": "https://wiki.runarcana.org/en/runarcana-plus/garden-of-shadows/creatures/argoi/",
+      "anchor": null,
+      "language": "en",
+      "sha256": "6e4376f3ba03853e3a13d826143eeaf0c97c0ba71c9eae4ccf6b50bfd9aceb00",
+      "collectedAt": "2026-10-12T18:52:16.844641+00:00",
+      "rulesVersion": null,
+      "wikiBuild": "0.157",
+      "collectionStatus": "collected",
+      "documents": [
+        "Compendium.runarcana.creature-features.Item.d03e2637babda487"
+      ],
+      "uuids": [
+        "Compendium.runarcana.creature-features.Item.d03e2637babda487"
+      ],
+      "test": "tests/corpus.test.mjs",
+      "status": "partial",
+      "textual": "complete",
+      "mechanical": "partial",
+      "redistribution": "permission-confirmed-by-maintainer",
+      "kind": "creature-feature",
+      "limit": "Legacy published attack statistics converted where exact; conditional effects and runes remain manual.",
+      "referenceUuid": "Compendium.runarcana.references.JournalEntry.18b0ac28f251f54b"
+    },
+    {
       "id": "/en/runarcana-plus/garden-of-shadows/creatures/argoi/",
       "part": 0,
       "chapter": "runarcana-plus/garden-of-shadows/creatures",
@@ -288530,10 +288638,12 @@
       "wikiBuild": "0.157",
       "collectionStatus": "collected",
       "documents": [
-        "Compendium.runarcana.references.JournalEntry.18b0ac28f251f54b"
+        "Compendium.runarcana.references.JournalEntry.18b0ac28f251f54b",
+        "Compendium.runarcana.bestiary.Actor.9a91286d4a696566"
       ],
       "uuids": [
-        "Compendium.runarcana.references.JournalEntry.18b0ac28f251f54b"
+        "Compendium.runarcana.references.JournalEntry.18b0ac28f251f54b",
+        "Compendium.runarcana.bestiary.Actor.9a91286d4a696566"
       ],
       "test": "tests/corpus.test.mjs",
       "status": "partial",
@@ -288890,6 +289000,438 @@
       "referenceUuid": "Compendium.runarcana.references.JournalEntry.0eac61270b9894d8"
     },
     {
+      "id": "/en/runarcana-plus/garden-of-shadows/creatures/executioners/#traits-evasion",
+      "part": 0,
+      "chapter": "runarcana-plus/garden-of-shadows/creatures",
+      "url": "https://wiki.runarcana.org/en/runarcana-plus/garden-of-shadows/creatures/executioners/",
+      "anchor": null,
+      "language": "en",
+      "sha256": "d7fbf9d86a64175f20191a1764b9ffa390c88f5ce761b06eaee36305f8a02a30",
+      "collectedAt": "2026-10-12T18:53:07.746021+00:00",
+      "rulesVersion": null,
+      "wikiBuild": "0.157",
+      "collectionStatus": "collected",
+      "documents": [
+        "Compendium.runarcana.creature-features.Item.221487c3e36465e2"
+      ],
+      "uuids": [
+        "Compendium.runarcana.creature-features.Item.221487c3e36465e2"
+      ],
+      "test": "tests/corpus.test.mjs",
+      "status": "partial",
+      "textual": "complete",
+      "mechanical": "partial",
+      "redistribution": "permission-confirmed-by-maintainer",
+      "kind": "creature-feature",
+      "limit": "Legacy published attack statistics converted where exact; conditional effects and runes remain manual.",
+      "referenceUuid": "Compendium.runarcana.references.JournalEntry.0eac61270b9894d8"
+    },
+    {
+      "id": "/en/runarcana-plus/garden-of-shadows/creatures/executioners/#traits-displacement",
+      "part": 0,
+      "chapter": "runarcana-plus/garden-of-shadows/creatures",
+      "url": "https://wiki.runarcana.org/en/runarcana-plus/garden-of-shadows/creatures/executioners/",
+      "anchor": null,
+      "language": "en",
+      "sha256": "d7fbf9d86a64175f20191a1764b9ffa390c88f5ce761b06eaee36305f8a02a30",
+      "collectedAt": "2026-10-12T18:53:07.746021+00:00",
+      "rulesVersion": null,
+      "wikiBuild": "0.157",
+      "collectionStatus": "collected",
+      "documents": [
+        "Compendium.runarcana.creature-features.Item.1bf1bcb28becfb50"
+      ],
+      "uuids": [
+        "Compendium.runarcana.creature-features.Item.1bf1bcb28becfb50"
+      ],
+      "test": "tests/corpus.test.mjs",
+      "status": "partial",
+      "textual": "complete",
+      "mechanical": "partial",
+      "redistribution": "permission-confirmed-by-maintainer",
+      "kind": "creature-feature",
+      "limit": "Legacy published attack statistics converted where exact; conditional effects and runes remain manual.",
+      "referenceUuid": "Compendium.runarcana.references.JournalEntry.0eac61270b9894d8"
+    },
+    {
+      "id": "/en/runarcana-plus/garden-of-shadows/creatures/executioners/#actions-multiattack",
+      "part": 0,
+      "chapter": "runarcana-plus/garden-of-shadows/creatures",
+      "url": "https://wiki.runarcana.org/en/runarcana-plus/garden-of-shadows/creatures/executioners/",
+      "anchor": null,
+      "language": "en",
+      "sha256": "d7fbf9d86a64175f20191a1764b9ffa390c88f5ce761b06eaee36305f8a02a30",
+      "collectedAt": "2026-10-12T18:53:07.746021+00:00",
+      "rulesVersion": null,
+      "wikiBuild": "0.157",
+      "collectionStatus": "collected",
+      "documents": [
+        "Compendium.runarcana.creature-features.Item.ba3952b0f8900816"
+      ],
+      "uuids": [
+        "Compendium.runarcana.creature-features.Item.ba3952b0f8900816"
+      ],
+      "test": "tests/corpus.test.mjs",
+      "status": "partial",
+      "textual": "complete",
+      "mechanical": "partial",
+      "redistribution": "permission-confirmed-by-maintainer",
+      "kind": "creature-feature",
+      "limit": "Legacy published attack statistics converted where exact; conditional effects and runes remain manual.",
+      "referenceUuid": "Compendium.runarcana.references.JournalEntry.0eac61270b9894d8"
+    },
+    {
+      "id": "/en/runarcana-plus/garden-of-shadows/creatures/executioners/#actions-tentacle",
+      "part": 0,
+      "chapter": "runarcana-plus/garden-of-shadows/creatures",
+      "url": "https://wiki.runarcana.org/en/runarcana-plus/garden-of-shadows/creatures/executioners/",
+      "anchor": null,
+      "language": "en",
+      "sha256": "d7fbf9d86a64175f20191a1764b9ffa390c88f5ce761b06eaee36305f8a02a30",
+      "collectedAt": "2026-10-12T18:53:07.746021+00:00",
+      "rulesVersion": null,
+      "wikiBuild": "0.157",
+      "collectionStatus": "collected",
+      "documents": [
+        "Compendium.runarcana.creature-features.Item.388707e199645561"
+      ],
+      "uuids": [
+        "Compendium.runarcana.creature-features.Item.388707e199645561"
+      ],
+      "test": "tests/corpus.test.mjs",
+      "status": "partial",
+      "textual": "complete",
+      "mechanical": "partial",
+      "redistribution": "permission-confirmed-by-maintainer",
+      "kind": "creature-feature",
+      "limit": "Legacy published attack statistics converted where exact; conditional effects and runes remain manual.",
+      "referenceUuid": "Compendium.runarcana.references.JournalEntry.0eac61270b9894d8"
+    },
+    {
+      "id": "/en/runarcana-plus/garden-of-shadows/creatures/executioners/#actions-paralyzing-tentacle-recharge-6",
+      "part": 0,
+      "chapter": "runarcana-plus/garden-of-shadows/creatures",
+      "url": "https://wiki.runarcana.org/en/runarcana-plus/garden-of-shadows/creatures/executioners/",
+      "anchor": null,
+      "language": "en",
+      "sha256": "d7fbf9d86a64175f20191a1764b9ffa390c88f5ce761b06eaee36305f8a02a30",
+      "collectedAt": "2026-10-12T18:53:07.746021+00:00",
+      "rulesVersion": null,
+      "wikiBuild": "0.157",
+      "collectionStatus": "collected",
+      "documents": [
+        "Compendium.runarcana.creature-features.Item.629401a484c3875a"
+      ],
+      "uuids": [
+        "Compendium.runarcana.creature-features.Item.629401a484c3875a"
+      ],
+      "test": "tests/corpus.test.mjs",
+      "status": "partial",
+      "textual": "complete",
+      "mechanical": "partial",
+      "redistribution": "permission-confirmed-by-maintainer",
+      "kind": "creature-feature",
+      "limit": "Legacy published attack statistics converted where exact; conditional effects and runes remain manual.",
+      "referenceUuid": "Compendium.runarcana.references.JournalEntry.0eac61270b9894d8"
+    },
+    {
+      "id": "/en/runarcana-plus/garden-of-shadows/creatures/executioners/#runes-runic-pulse",
+      "part": 0,
+      "chapter": "runarcana-plus/garden-of-shadows/creatures",
+      "url": "https://wiki.runarcana.org/en/runarcana-plus/garden-of-shadows/creatures/executioners/",
+      "anchor": null,
+      "language": "en",
+      "sha256": "d7fbf9d86a64175f20191a1764b9ffa390c88f5ce761b06eaee36305f8a02a30",
+      "collectedAt": "2026-10-12T18:53:07.746021+00:00",
+      "rulesVersion": null,
+      "wikiBuild": "0.157",
+      "collectionStatus": "collected",
+      "documents": [
+        "Compendium.runarcana.creature-features.Item.c581fbd83b25701b"
+      ],
+      "uuids": [
+        "Compendium.runarcana.creature-features.Item.c581fbd83b25701b"
+      ],
+      "test": "tests/corpus.test.mjs",
+      "status": "partial",
+      "textual": "complete",
+      "mechanical": "partial",
+      "redistribution": "permission-confirmed-by-maintainer",
+      "kind": "creature-feature",
+      "limit": "Legacy published attack statistics converted where exact; conditional effects and runes remain manual.",
+      "referenceUuid": "Compendium.runarcana.references.JournalEntry.0eac61270b9894d8"
+    },
+    {
+      "id": "/en/runarcana-plus/garden-of-shadows/creatures/executioners/#runes-runic-spark",
+      "part": 0,
+      "chapter": "runarcana-plus/garden-of-shadows/creatures",
+      "url": "https://wiki.runarcana.org/en/runarcana-plus/garden-of-shadows/creatures/executioners/",
+      "anchor": null,
+      "language": "en",
+      "sha256": "d7fbf9d86a64175f20191a1764b9ffa390c88f5ce761b06eaee36305f8a02a30",
+      "collectedAt": "2026-10-12T18:53:07.746021+00:00",
+      "rulesVersion": null,
+      "wikiBuild": "0.157",
+      "collectionStatus": "collected",
+      "documents": [
+        "Compendium.runarcana.creature-features.Item.c4aed676466d1de7"
+      ],
+      "uuids": [
+        "Compendium.runarcana.creature-features.Item.c4aed676466d1de7"
+      ],
+      "test": "tests/corpus.test.mjs",
+      "status": "partial",
+      "textual": "complete",
+      "mechanical": "partial",
+      "redistribution": "permission-confirmed-by-maintainer",
+      "kind": "creature-feature",
+      "limit": "Legacy published attack statistics converted where exact; conditional effects and runes remain manual.",
+      "referenceUuid": "Compendium.runarcana.references.JournalEntry.0eac61270b9894d8"
+    },
+    {
+      "id": "/en/runarcana-plus/garden-of-shadows/creatures/executioners/#stat-block-1#traits-shadow-mist-recharge-4-6",
+      "part": 0,
+      "chapter": "runarcana-plus/garden-of-shadows/creatures",
+      "url": "https://wiki.runarcana.org/en/runarcana-plus/garden-of-shadows/creatures/executioners/",
+      "anchor": null,
+      "language": "en",
+      "sha256": "d7fbf9d86a64175f20191a1764b9ffa390c88f5ce761b06eaee36305f8a02a30",
+      "collectedAt": "2026-10-12T18:53:07.746021+00:00",
+      "rulesVersion": null,
+      "wikiBuild": "0.157",
+      "collectionStatus": "collected",
+      "documents": [
+        "Compendium.runarcana.creature-features.Item.2e054037d6478df1"
+      ],
+      "uuids": [
+        "Compendium.runarcana.creature-features.Item.2e054037d6478df1"
+      ],
+      "test": "tests/corpus.test.mjs",
+      "status": "partial",
+      "textual": "complete",
+      "mechanical": "partial",
+      "redistribution": "permission-confirmed-by-maintainer",
+      "kind": "creature-feature",
+      "limit": "Legacy published attack statistics converted where exact; conditional effects and runes remain manual.",
+      "referenceUuid": "Compendium.runarcana.references.JournalEntry.0eac61270b9894d8"
+    },
+    {
+      "id": "/en/runarcana-plus/garden-of-shadows/creatures/executioners/#stat-block-1#actions-multiattack",
+      "part": 0,
+      "chapter": "runarcana-plus/garden-of-shadows/creatures",
+      "url": "https://wiki.runarcana.org/en/runarcana-plus/garden-of-shadows/creatures/executioners/",
+      "anchor": null,
+      "language": "en",
+      "sha256": "d7fbf9d86a64175f20191a1764b9ffa390c88f5ce761b06eaee36305f8a02a30",
+      "collectedAt": "2026-10-12T18:53:07.746021+00:00",
+      "rulesVersion": null,
+      "wikiBuild": "0.157",
+      "collectionStatus": "collected",
+      "documents": [
+        "Compendium.runarcana.creature-features.Item.80094ebed00b1ac8"
+      ],
+      "uuids": [
+        "Compendium.runarcana.creature-features.Item.80094ebed00b1ac8"
+      ],
+      "test": "tests/corpus.test.mjs",
+      "status": "partial",
+      "textual": "complete",
+      "mechanical": "partial",
+      "redistribution": "permission-confirmed-by-maintainer",
+      "kind": "creature-feature",
+      "limit": "Legacy published attack statistics converted where exact; conditional effects and runes remain manual.",
+      "referenceUuid": "Compendium.runarcana.references.JournalEntry.0eac61270b9894d8"
+    },
+    {
+      "id": "/en/runarcana-plus/garden-of-shadows/creatures/executioners/#stat-block-1#actions-bite",
+      "part": 0,
+      "chapter": "runarcana-plus/garden-of-shadows/creatures",
+      "url": "https://wiki.runarcana.org/en/runarcana-plus/garden-of-shadows/creatures/executioners/",
+      "anchor": null,
+      "language": "en",
+      "sha256": "d7fbf9d86a64175f20191a1764b9ffa390c88f5ce761b06eaee36305f8a02a30",
+      "collectedAt": "2026-10-12T18:53:07.746021+00:00",
+      "rulesVersion": null,
+      "wikiBuild": "0.157",
+      "collectionStatus": "collected",
+      "documents": [
+        "Compendium.runarcana.creature-features.Item.a65de69d385bdc52"
+      ],
+      "uuids": [
+        "Compendium.runarcana.creature-features.Item.a65de69d385bdc52"
+      ],
+      "test": "tests/corpus.test.mjs",
+      "status": "partial",
+      "textual": "complete",
+      "mechanical": "partial",
+      "redistribution": "permission-confirmed-by-maintainer",
+      "kind": "creature-feature",
+      "limit": "Legacy published attack statistics converted where exact; conditional effects and runes remain manual.",
+      "referenceUuid": "Compendium.runarcana.references.JournalEntry.0eac61270b9894d8"
+    },
+    {
+      "id": "/en/runarcana-plus/garden-of-shadows/creatures/executioners/#stat-block-1#actions-hooves",
+      "part": 0,
+      "chapter": "runarcana-plus/garden-of-shadows/creatures",
+      "url": "https://wiki.runarcana.org/en/runarcana-plus/garden-of-shadows/creatures/executioners/",
+      "anchor": null,
+      "language": "en",
+      "sha256": "d7fbf9d86a64175f20191a1764b9ffa390c88f5ce761b06eaee36305f8a02a30",
+      "collectedAt": "2026-10-12T18:53:07.746021+00:00",
+      "rulesVersion": null,
+      "wikiBuild": "0.157",
+      "collectionStatus": "collected",
+      "documents": [
+        "Compendium.runarcana.creature-features.Item.745257edbec2a685"
+      ],
+      "uuids": [
+        "Compendium.runarcana.creature-features.Item.745257edbec2a685"
+      ],
+      "test": "tests/corpus.test.mjs",
+      "status": "partial",
+      "textual": "complete",
+      "mechanical": "partial",
+      "redistribution": "permission-confirmed-by-maintainer",
+      "kind": "creature-feature",
+      "limit": "Legacy published attack statistics converted where exact; conditional effects and runes remain manual.",
+      "referenceUuid": "Compendium.runarcana.references.JournalEntry.0eac61270b9894d8"
+    },
+    {
+      "id": "/en/runarcana-plus/garden-of-shadows/creatures/executioners/#stat-block-1#actions-shadow-run",
+      "part": 0,
+      "chapter": "runarcana-plus/garden-of-shadows/creatures",
+      "url": "https://wiki.runarcana.org/en/runarcana-plus/garden-of-shadows/creatures/executioners/",
+      "anchor": null,
+      "language": "en",
+      "sha256": "d7fbf9d86a64175f20191a1764b9ffa390c88f5ce761b06eaee36305f8a02a30",
+      "collectedAt": "2026-10-12T18:53:07.746021+00:00",
+      "rulesVersion": null,
+      "wikiBuild": "0.157",
+      "collectionStatus": "collected",
+      "documents": [
+        "Compendium.runarcana.creature-features.Item.95a64f7c559496a5"
+      ],
+      "uuids": [
+        "Compendium.runarcana.creature-features.Item.95a64f7c559496a5"
+      ],
+      "test": "tests/corpus.test.mjs",
+      "status": "partial",
+      "textual": "complete",
+      "mechanical": "partial",
+      "redistribution": "permission-confirmed-by-maintainer",
+      "kind": "creature-feature",
+      "limit": "Legacy published attack statistics converted where exact; conditional effects and runes remain manual.",
+      "referenceUuid": "Compendium.runarcana.references.JournalEntry.0eac61270b9894d8"
+    },
+    {
+      "id": "/en/runarcana-plus/garden-of-shadows/creatures/executioners/#stat-block-1#actions-intimidating-presence",
+      "part": 0,
+      "chapter": "runarcana-plus/garden-of-shadows/creatures",
+      "url": "https://wiki.runarcana.org/en/runarcana-plus/garden-of-shadows/creatures/executioners/",
+      "anchor": null,
+      "language": "en",
+      "sha256": "d7fbf9d86a64175f20191a1764b9ffa390c88f5ce761b06eaee36305f8a02a30",
+      "collectedAt": "2026-10-12T18:53:07.746021+00:00",
+      "rulesVersion": null,
+      "wikiBuild": "0.157",
+      "collectionStatus": "collected",
+      "documents": [
+        "Compendium.runarcana.creature-features.Item.0126462d0654f576"
+      ],
+      "uuids": [
+        "Compendium.runarcana.creature-features.Item.0126462d0654f576"
+      ],
+      "test": "tests/corpus.test.mjs",
+      "status": "partial",
+      "textual": "complete",
+      "mechanical": "partial",
+      "redistribution": "permission-confirmed-by-maintainer",
+      "kind": "creature-feature",
+      "limit": "Legacy published attack statistics converted where exact; conditional effects and runes remain manual.",
+      "referenceUuid": "Compendium.runarcana.references.JournalEntry.0eac61270b9894d8"
+    },
+    {
+      "id": "/en/runarcana-plus/garden-of-shadows/creatures/executioners/#stat-block-1#runes-runic-pulse",
+      "part": 0,
+      "chapter": "runarcana-plus/garden-of-shadows/creatures",
+      "url": "https://wiki.runarcana.org/en/runarcana-plus/garden-of-shadows/creatures/executioners/",
+      "anchor": null,
+      "language": "en",
+      "sha256": "d7fbf9d86a64175f20191a1764b9ffa390c88f5ce761b06eaee36305f8a02a30",
+      "collectedAt": "2026-10-12T18:53:07.746021+00:00",
+      "rulesVersion": null,
+      "wikiBuild": "0.157",
+      "collectionStatus": "collected",
+      "documents": [
+        "Compendium.runarcana.creature-features.Item.7698c4005766048e"
+      ],
+      "uuids": [
+        "Compendium.runarcana.creature-features.Item.7698c4005766048e"
+      ],
+      "test": "tests/corpus.test.mjs",
+      "status": "partial",
+      "textual": "complete",
+      "mechanical": "partial",
+      "redistribution": "permission-confirmed-by-maintainer",
+      "kind": "creature-feature",
+      "limit": "Legacy published attack statistics converted where exact; conditional effects and runes remain manual.",
+      "referenceUuid": "Compendium.runarcana.references.JournalEntry.0eac61270b9894d8"
+    },
+    {
+      "id": "/en/runarcana-plus/garden-of-shadows/creatures/executioners/#stat-block-1#runes-runic-spark",
+      "part": 0,
+      "chapter": "runarcana-plus/garden-of-shadows/creatures",
+      "url": "https://wiki.runarcana.org/en/runarcana-plus/garden-of-shadows/creatures/executioners/",
+      "anchor": null,
+      "language": "en",
+      "sha256": "d7fbf9d86a64175f20191a1764b9ffa390c88f5ce761b06eaee36305f8a02a30",
+      "collectedAt": "2026-10-12T18:53:07.746021+00:00",
+      "rulesVersion": null,
+      "wikiBuild": "0.157",
+      "collectionStatus": "collected",
+      "documents": [
+        "Compendium.runarcana.creature-features.Item.084cd1114f460d41"
+      ],
+      "uuids": [
+        "Compendium.runarcana.creature-features.Item.084cd1114f460d41"
+      ],
+      "test": "tests/corpus.test.mjs",
+      "status": "partial",
+      "textual": "complete",
+      "mechanical": "partial",
+      "redistribution": "permission-confirmed-by-maintainer",
+      "kind": "creature-feature",
+      "limit": "Legacy published attack statistics converted where exact; conditional effects and runes remain manual.",
+      "referenceUuid": "Compendium.runarcana.references.JournalEntry.0eac61270b9894d8"
+    },
+    {
+      "id": "/en/runarcana-plus/garden-of-shadows/creatures/executioners/#stat-block-1",
+      "part": 0,
+      "chapter": "runarcana-plus/garden-of-shadows/creatures",
+      "url": "https://wiki.runarcana.org/en/runarcana-plus/garden-of-shadows/creatures/executioners/",
+      "anchor": null,
+      "language": "en",
+      "sha256": "d7fbf9d86a64175f20191a1764b9ffa390c88f5ce761b06eaee36305f8a02a30",
+      "collectedAt": "2026-10-12T18:53:07.746021+00:00",
+      "rulesVersion": null,
+      "wikiBuild": "0.157",
+      "collectionStatus": "collected",
+      "documents": [
+        "Compendium.runarcana.bestiary.Actor.5d9840c02a51cd87"
+      ],
+      "uuids": [
+        "Compendium.runarcana.bestiary.Actor.5d9840c02a51cd87"
+      ],
+      "test": "tests/corpus.test.mjs",
+      "status": "partial",
+      "textual": "complete",
+      "mechanical": "partial",
+      "redistribution": "permission-confirmed-by-maintainer",
+      "kind": "creature-stat-block",
+      "limit": "Separate native Actor for this published legacy variant; conditional abilities remain manual.",
+      "referenceUuid": "Compendium.runarcana.references.JournalEntry.0eac61270b9894d8"
+    },
+    {
       "id": "/en/runarcana-plus/garden-of-shadows/creatures/executioners/",
       "part": 0,
       "chapter": "runarcana-plus/garden-of-shadows/creatures",
@@ -288902,10 +289444,12 @@
       "wikiBuild": "0.157",
       "collectionStatus": "collected",
       "documents": [
-        "Compendium.runarcana.references.JournalEntry.0eac61270b9894d8"
+        "Compendium.runarcana.references.JournalEntry.0eac61270b9894d8",
+        "Compendium.runarcana.bestiary.Actor.4fc1eafadef8d040"
       ],
       "uuids": [
-        "Compendium.runarcana.references.JournalEntry.0eac61270b9894d8"
+        "Compendium.runarcana.references.JournalEntry.0eac61270b9894d8",
+        "Compendium.runarcana.bestiary.Actor.4fc1eafadef8d040"
       ],
       "test": "tests/corpus.test.mjs",
       "status": "partial",
@@ -289078,6 +289622,303 @@
       "referenceUuid": "Compendium.runarcana.references.JournalEntry.e6a54569d706230a"
     },
     {
+      "id": "/en/runarcana-plus/garden-of-shadows/creatures/megaera/#traits-innate-spellcasting",
+      "part": 0,
+      "chapter": "runarcana-plus/garden-of-shadows/creatures",
+      "url": "https://wiki.runarcana.org/en/runarcana-plus/garden-of-shadows/creatures/megaera/",
+      "anchor": null,
+      "language": "en",
+      "sha256": "d7ec9c59580bdac180a3e319ab2595cacda0afad5a50fd551c05d3e3e617a8d0",
+      "collectedAt": "2026-10-12T18:52:42.277766+00:00",
+      "rulesVersion": null,
+      "wikiBuild": "0.157",
+      "collectionStatus": "collected",
+      "documents": [
+        "Compendium.runarcana.creature-features.Item.defac9240aee67c0"
+      ],
+      "uuids": [
+        "Compendium.runarcana.creature-features.Item.defac9240aee67c0"
+      ],
+      "test": "tests/corpus.test.mjs",
+      "status": "partial",
+      "textual": "complete",
+      "mechanical": "partial",
+      "redistribution": "permission-confirmed-by-maintainer",
+      "kind": "creature-feature",
+      "limit": "Legacy published attack statistics converted where exact; conditional effects and runes remain manual.",
+      "referenceUuid": "Compendium.runarcana.references.JournalEntry.e6a54569d706230a"
+    },
+    {
+      "id": "/en/runarcana-plus/garden-of-shadows/creatures/megaera/#traits-legendary-resistance-3-day",
+      "part": 0,
+      "chapter": "runarcana-plus/garden-of-shadows/creatures",
+      "url": "https://wiki.runarcana.org/en/runarcana-plus/garden-of-shadows/creatures/megaera/",
+      "anchor": null,
+      "language": "en",
+      "sha256": "d7ec9c59580bdac180a3e319ab2595cacda0afad5a50fd551c05d3e3e617a8d0",
+      "collectedAt": "2026-10-12T18:52:42.277766+00:00",
+      "rulesVersion": null,
+      "wikiBuild": "0.157",
+      "collectionStatus": "collected",
+      "documents": [
+        "Compendium.runarcana.creature-features.Item.a84c1769a7e8cdb5"
+      ],
+      "uuids": [
+        "Compendium.runarcana.creature-features.Item.a84c1769a7e8cdb5"
+      ],
+      "test": "tests/corpus.test.mjs",
+      "status": "partial",
+      "textual": "complete",
+      "mechanical": "partial",
+      "redistribution": "permission-confirmed-by-maintainer",
+      "kind": "creature-feature",
+      "limit": "Legacy published attack statistics converted where exact; conditional effects and runes remain manual.",
+      "referenceUuid": "Compendium.runarcana.references.JournalEntry.e6a54569d706230a"
+    },
+    {
+      "id": "/en/runarcana-plus/garden-of-shadows/creatures/megaera/#traits-magic-resistance",
+      "part": 0,
+      "chapter": "runarcana-plus/garden-of-shadows/creatures",
+      "url": "https://wiki.runarcana.org/en/runarcana-plus/garden-of-shadows/creatures/megaera/",
+      "anchor": null,
+      "language": "en",
+      "sha256": "d7ec9c59580bdac180a3e319ab2595cacda0afad5a50fd551c05d3e3e617a8d0",
+      "collectedAt": "2026-10-12T18:52:42.277766+00:00",
+      "rulesVersion": null,
+      "wikiBuild": "0.157",
+      "collectionStatus": "collected",
+      "documents": [
+        "Compendium.runarcana.creature-features.Item.2f8abadb62287c90"
+      ],
+      "uuids": [
+        "Compendium.runarcana.creature-features.Item.2f8abadb62287c90"
+      ],
+      "test": "tests/corpus.test.mjs",
+      "status": "partial",
+      "textual": "complete",
+      "mechanical": "partial",
+      "redistribution": "permission-confirmed-by-maintainer",
+      "kind": "creature-feature",
+      "limit": "Legacy published attack statistics converted where exact; conditional effects and runes remain manual.",
+      "referenceUuid": "Compendium.runarcana.references.JournalEntry.e6a54569d706230a"
+    },
+    {
+      "id": "/en/runarcana-plus/garden-of-shadows/creatures/megaera/#traits-umbral-sight",
+      "part": 0,
+      "chapter": "runarcana-plus/garden-of-shadows/creatures",
+      "url": "https://wiki.runarcana.org/en/runarcana-plus/garden-of-shadows/creatures/megaera/",
+      "anchor": null,
+      "language": "en",
+      "sha256": "d7ec9c59580bdac180a3e319ab2595cacda0afad5a50fd551c05d3e3e617a8d0",
+      "collectedAt": "2026-10-12T18:52:42.277766+00:00",
+      "rulesVersion": null,
+      "wikiBuild": "0.157",
+      "collectionStatus": "collected",
+      "documents": [
+        "Compendium.runarcana.creature-features.Item.89cceae185a957b2"
+      ],
+      "uuids": [
+        "Compendium.runarcana.creature-features.Item.89cceae185a957b2"
+      ],
+      "test": "tests/corpus.test.mjs",
+      "status": "partial",
+      "textual": "complete",
+      "mechanical": "partial",
+      "redistribution": "permission-confirmed-by-maintainer",
+      "kind": "creature-feature",
+      "limit": "Legacy published attack statistics converted where exact; conditional effects and runes remain manual.",
+      "referenceUuid": "Compendium.runarcana.references.JournalEntry.e6a54569d706230a"
+    },
+    {
+      "id": "/en/runarcana-plus/garden-of-shadows/creatures/megaera/#actions-multiattack",
+      "part": 0,
+      "chapter": "runarcana-plus/garden-of-shadows/creatures",
+      "url": "https://wiki.runarcana.org/en/runarcana-plus/garden-of-shadows/creatures/megaera/",
+      "anchor": null,
+      "language": "en",
+      "sha256": "d7ec9c59580bdac180a3e319ab2595cacda0afad5a50fd551c05d3e3e617a8d0",
+      "collectedAt": "2026-10-12T18:52:42.277766+00:00",
+      "rulesVersion": null,
+      "wikiBuild": "0.157",
+      "collectionStatus": "collected",
+      "documents": [
+        "Compendium.runarcana.creature-features.Item.2780946bd837dd25"
+      ],
+      "uuids": [
+        "Compendium.runarcana.creature-features.Item.2780946bd837dd25"
+      ],
+      "test": "tests/corpus.test.mjs",
+      "status": "partial",
+      "textual": "complete",
+      "mechanical": "partial",
+      "redistribution": "permission-confirmed-by-maintainer",
+      "kind": "creature-feature",
+      "limit": "Legacy published attack statistics converted where exact; conditional effects and runes remain manual.",
+      "referenceUuid": "Compendium.runarcana.references.JournalEntry.e6a54569d706230a"
+    },
+    {
+      "id": "/en/runarcana-plus/garden-of-shadows/creatures/megaera/#actions-claws",
+      "part": 0,
+      "chapter": "runarcana-plus/garden-of-shadows/creatures",
+      "url": "https://wiki.runarcana.org/en/runarcana-plus/garden-of-shadows/creatures/megaera/",
+      "anchor": null,
+      "language": "en",
+      "sha256": "d7ec9c59580bdac180a3e319ab2595cacda0afad5a50fd551c05d3e3e617a8d0",
+      "collectedAt": "2026-10-12T18:52:42.277766+00:00",
+      "rulesVersion": null,
+      "wikiBuild": "0.157",
+      "collectionStatus": "collected",
+      "documents": [
+        "Compendium.runarcana.creature-features.Item.4740d7956cda8caa"
+      ],
+      "uuids": [
+        "Compendium.runarcana.creature-features.Item.4740d7956cda8caa"
+      ],
+      "test": "tests/corpus.test.mjs",
+      "status": "partial",
+      "textual": "complete",
+      "mechanical": "partial",
+      "redistribution": "permission-confirmed-by-maintainer",
+      "kind": "creature-feature",
+      "limit": "Legacy published attack statistics converted where exact; conditional effects and runes remain manual.",
+      "referenceUuid": "Compendium.runarcana.references.JournalEntry.e6a54569d706230a"
+    },
+    {
+      "id": "/en/runarcana-plus/garden-of-shadows/creatures/megaera/#actions-deadly-gaze",
+      "part": 0,
+      "chapter": "runarcana-plus/garden-of-shadows/creatures",
+      "url": "https://wiki.runarcana.org/en/runarcana-plus/garden-of-shadows/creatures/megaera/",
+      "anchor": null,
+      "language": "en",
+      "sha256": "d7ec9c59580bdac180a3e319ab2595cacda0afad5a50fd551c05d3e3e617a8d0",
+      "collectedAt": "2026-10-12T18:52:42.277766+00:00",
+      "rulesVersion": null,
+      "wikiBuild": "0.157",
+      "collectionStatus": "collected",
+      "documents": [
+        "Compendium.runarcana.creature-features.Item.e1714ddf35e337e2"
+      ],
+      "uuids": [
+        "Compendium.runarcana.creature-features.Item.e1714ddf35e337e2"
+      ],
+      "test": "tests/corpus.test.mjs",
+      "status": "partial",
+      "textual": "complete",
+      "mechanical": "partial",
+      "redistribution": "permission-confirmed-by-maintainer",
+      "kind": "creature-feature",
+      "limit": "Legacy published attack statistics converted where exact; conditional effects and runes remain manual.",
+      "referenceUuid": "Compendium.runarcana.references.JournalEntry.e6a54569d706230a"
+    },
+    {
+      "id": "/en/runarcana-plus/garden-of-shadows/creatures/megaera/#runes-runic-pulse",
+      "part": 0,
+      "chapter": "runarcana-plus/garden-of-shadows/creatures",
+      "url": "https://wiki.runarcana.org/en/runarcana-plus/garden-of-shadows/creatures/megaera/",
+      "anchor": null,
+      "language": "en",
+      "sha256": "d7ec9c59580bdac180a3e319ab2595cacda0afad5a50fd551c05d3e3e617a8d0",
+      "collectedAt": "2026-10-12T18:52:42.277766+00:00",
+      "rulesVersion": null,
+      "wikiBuild": "0.157",
+      "collectionStatus": "collected",
+      "documents": [
+        "Compendium.runarcana.creature-features.Item.919232e3f2ffe8fe"
+      ],
+      "uuids": [
+        "Compendium.runarcana.creature-features.Item.919232e3f2ffe8fe"
+      ],
+      "test": "tests/corpus.test.mjs",
+      "status": "partial",
+      "textual": "complete",
+      "mechanical": "partial",
+      "redistribution": "permission-confirmed-by-maintainer",
+      "kind": "creature-feature",
+      "limit": "Legacy published attack statistics converted where exact; conditional effects and runes remain manual.",
+      "referenceUuid": "Compendium.runarcana.references.JournalEntry.e6a54569d706230a"
+    },
+    {
+      "id": "/en/runarcana-plus/garden-of-shadows/creatures/megaera/#runes-runic-spark",
+      "part": 0,
+      "chapter": "runarcana-plus/garden-of-shadows/creatures",
+      "url": "https://wiki.runarcana.org/en/runarcana-plus/garden-of-shadows/creatures/megaera/",
+      "anchor": null,
+      "language": "en",
+      "sha256": "d7ec9c59580bdac180a3e319ab2595cacda0afad5a50fd551c05d3e3e617a8d0",
+      "collectedAt": "2026-10-12T18:52:42.277766+00:00",
+      "rulesVersion": null,
+      "wikiBuild": "0.157",
+      "collectionStatus": "collected",
+      "documents": [
+        "Compendium.runarcana.creature-features.Item.7eceb7cad0401bdc"
+      ],
+      "uuids": [
+        "Compendium.runarcana.creature-features.Item.7eceb7cad0401bdc"
+      ],
+      "test": "tests/corpus.test.mjs",
+      "status": "partial",
+      "textual": "complete",
+      "mechanical": "partial",
+      "redistribution": "permission-confirmed-by-maintainer",
+      "kind": "creature-feature",
+      "limit": "Legacy published attack statistics converted where exact; conditional effects and runes remain manual.",
+      "referenceUuid": "Compendium.runarcana.references.JournalEntry.e6a54569d706230a"
+    },
+    {
+      "id": "/en/runarcana-plus/garden-of-shadows/creatures/megaera/#runes-runic-flow",
+      "part": 0,
+      "chapter": "runarcana-plus/garden-of-shadows/creatures",
+      "url": "https://wiki.runarcana.org/en/runarcana-plus/garden-of-shadows/creatures/megaera/",
+      "anchor": null,
+      "language": "en",
+      "sha256": "d7ec9c59580bdac180a3e319ab2595cacda0afad5a50fd551c05d3e3e617a8d0",
+      "collectedAt": "2026-10-12T18:52:42.277766+00:00",
+      "rulesVersion": null,
+      "wikiBuild": "0.157",
+      "collectionStatus": "collected",
+      "documents": [
+        "Compendium.runarcana.creature-features.Item.54ffd2e32aa66082"
+      ],
+      "uuids": [
+        "Compendium.runarcana.creature-features.Item.54ffd2e32aa66082"
+      ],
+      "test": "tests/corpus.test.mjs",
+      "status": "partial",
+      "textual": "complete",
+      "mechanical": "partial",
+      "redistribution": "permission-confirmed-by-maintainer",
+      "kind": "creature-feature",
+      "limit": "Legacy published attack statistics converted where exact; conditional effects and runes remain manual.",
+      "referenceUuid": "Compendium.runarcana.references.JournalEntry.e6a54569d706230a"
+    },
+    {
+      "id": "/en/runarcana-plus/garden-of-shadows/creatures/megaera/#runes-runic-vortex",
+      "part": 0,
+      "chapter": "runarcana-plus/garden-of-shadows/creatures",
+      "url": "https://wiki.runarcana.org/en/runarcana-plus/garden-of-shadows/creatures/megaera/",
+      "anchor": null,
+      "language": "en",
+      "sha256": "d7ec9c59580bdac180a3e319ab2595cacda0afad5a50fd551c05d3e3e617a8d0",
+      "collectedAt": "2026-10-12T18:52:42.277766+00:00",
+      "rulesVersion": null,
+      "wikiBuild": "0.157",
+      "collectionStatus": "collected",
+      "documents": [
+        "Compendium.runarcana.creature-features.Item.541f034800698192"
+      ],
+      "uuids": [
+        "Compendium.runarcana.creature-features.Item.541f034800698192"
+      ],
+      "test": "tests/corpus.test.mjs",
+      "status": "partial",
+      "textual": "complete",
+      "mechanical": "partial",
+      "redistribution": "permission-confirmed-by-maintainer",
+      "kind": "creature-feature",
+      "limit": "Legacy published attack statistics converted where exact; conditional effects and runes remain manual.",
+      "referenceUuid": "Compendium.runarcana.references.JournalEntry.e6a54569d706230a"
+    },
+    {
       "id": "/en/runarcana-plus/garden-of-shadows/creatures/megaera/",
       "part": 0,
       "chapter": "runarcana-plus/garden-of-shadows/creatures",
@@ -289090,10 +289931,12 @@
       "wikiBuild": "0.157",
       "collectionStatus": "collected",
       "documents": [
-        "Compendium.runarcana.references.JournalEntry.e6a54569d706230a"
+        "Compendium.runarcana.references.JournalEntry.e6a54569d706230a",
+        "Compendium.runarcana.bestiary.Actor.cbfdd7b47b434ef4"
       ],
       "uuids": [
-        "Compendium.runarcana.references.JournalEntry.e6a54569d706230a"
+        "Compendium.runarcana.references.JournalEntry.e6a54569d706230a",
+        "Compendium.runarcana.bestiary.Actor.cbfdd7b47b434ef4"
       ],
       "test": "tests/corpus.test.mjs",
       "status": "partial",
@@ -289542,6 +290385,492 @@
       "referenceUuid": "Compendium.runarcana.references.JournalEntry.19b3d4e9af39bba3"
     },
     {
+      "id": "/en/runarcana-plus/garden-of-shadows/creatures/nyxis/#traits-nimble-escape",
+      "part": 0,
+      "chapter": "runarcana-plus/garden-of-shadows/creatures",
+      "url": "https://wiki.runarcana.org/en/runarcana-plus/garden-of-shadows/creatures/nyxis/",
+      "anchor": null,
+      "language": "en",
+      "sha256": "29a3ac2ab621086036a310219e7f7c22bdcc1c0100ec2cdf434619153c8ee47d",
+      "collectedAt": "2026-10-12T18:52:29.558992+00:00",
+      "rulesVersion": null,
+      "wikiBuild": "0.157",
+      "collectionStatus": "collected",
+      "documents": [
+        "Compendium.runarcana.creature-features.Item.0ab7c92c820be1fd"
+      ],
+      "uuids": [
+        "Compendium.runarcana.creature-features.Item.0ab7c92c820be1fd"
+      ],
+      "test": "tests/corpus.test.mjs",
+      "status": "partial",
+      "textual": "complete",
+      "mechanical": "partial",
+      "redistribution": "permission-confirmed-by-maintainer",
+      "kind": "creature-feature",
+      "limit": "Legacy published attack statistics converted where exact; conditional effects and runes remain manual.",
+      "referenceUuid": "Compendium.runarcana.references.JournalEntry.19b3d4e9af39bba3"
+    },
+    {
+      "id": "/en/runarcana-plus/garden-of-shadows/creatures/nyxis/#traits-shadow-split-recharge-5-6",
+      "part": 0,
+      "chapter": "runarcana-plus/garden-of-shadows/creatures",
+      "url": "https://wiki.runarcana.org/en/runarcana-plus/garden-of-shadows/creatures/nyxis/",
+      "anchor": null,
+      "language": "en",
+      "sha256": "29a3ac2ab621086036a310219e7f7c22bdcc1c0100ec2cdf434619153c8ee47d",
+      "collectedAt": "2026-10-12T18:52:29.558992+00:00",
+      "rulesVersion": null,
+      "wikiBuild": "0.157",
+      "collectionStatus": "collected",
+      "documents": [
+        "Compendium.runarcana.creature-features.Item.996db58146b98438"
+      ],
+      "uuids": [
+        "Compendium.runarcana.creature-features.Item.996db58146b98438"
+      ],
+      "test": "tests/corpus.test.mjs",
+      "status": "partial",
+      "textual": "complete",
+      "mechanical": "partial",
+      "redistribution": "permission-confirmed-by-maintainer",
+      "kind": "creature-feature",
+      "limit": "Legacy published attack statistics converted where exact; conditional effects and runes remain manual.",
+      "referenceUuid": "Compendium.runarcana.references.JournalEntry.19b3d4e9af39bba3"
+    },
+    {
+      "id": "/en/runarcana-plus/garden-of-shadows/creatures/nyxis/#actions-claws",
+      "part": 0,
+      "chapter": "runarcana-plus/garden-of-shadows/creatures",
+      "url": "https://wiki.runarcana.org/en/runarcana-plus/garden-of-shadows/creatures/nyxis/",
+      "anchor": null,
+      "language": "en",
+      "sha256": "29a3ac2ab621086036a310219e7f7c22bdcc1c0100ec2cdf434619153c8ee47d",
+      "collectedAt": "2026-10-12T18:52:29.558992+00:00",
+      "rulesVersion": null,
+      "wikiBuild": "0.157",
+      "collectionStatus": "collected",
+      "documents": [
+        "Compendium.runarcana.creature-features.Item.10d7345930a8a59e"
+      ],
+      "uuids": [
+        "Compendium.runarcana.creature-features.Item.10d7345930a8a59e"
+      ],
+      "test": "tests/corpus.test.mjs",
+      "status": "partial",
+      "textual": "complete",
+      "mechanical": "partial",
+      "redistribution": "permission-confirmed-by-maintainer",
+      "kind": "creature-feature",
+      "limit": "Legacy published attack statistics converted where exact; conditional effects and runes remain manual.",
+      "referenceUuid": "Compendium.runarcana.references.JournalEntry.19b3d4e9af39bba3"
+    },
+    {
+      "id": "/en/runarcana-plus/garden-of-shadows/creatures/nyxis/#actions-shadow-dart",
+      "part": 0,
+      "chapter": "runarcana-plus/garden-of-shadows/creatures",
+      "url": "https://wiki.runarcana.org/en/runarcana-plus/garden-of-shadows/creatures/nyxis/",
+      "anchor": null,
+      "language": "en",
+      "sha256": "29a3ac2ab621086036a310219e7f7c22bdcc1c0100ec2cdf434619153c8ee47d",
+      "collectedAt": "2026-10-12T18:52:29.558992+00:00",
+      "rulesVersion": null,
+      "wikiBuild": "0.157",
+      "collectionStatus": "collected",
+      "documents": [
+        "Compendium.runarcana.creature-features.Item.a283768d75c46394"
+      ],
+      "uuids": [
+        "Compendium.runarcana.creature-features.Item.a283768d75c46394"
+      ],
+      "test": "tests/corpus.test.mjs",
+      "status": "partial",
+      "textual": "complete",
+      "mechanical": "partial",
+      "redistribution": "permission-confirmed-by-maintainer",
+      "kind": "creature-feature",
+      "limit": "Legacy published attack statistics converted where exact; conditional effects and runes remain manual.",
+      "referenceUuid": "Compendium.runarcana.references.JournalEntry.19b3d4e9af39bba3"
+    },
+    {
+      "id": "/en/runarcana-plus/garden-of-shadows/creatures/nyxis/#runes-runic-pulse",
+      "part": 0,
+      "chapter": "runarcana-plus/garden-of-shadows/creatures",
+      "url": "https://wiki.runarcana.org/en/runarcana-plus/garden-of-shadows/creatures/nyxis/",
+      "anchor": null,
+      "language": "en",
+      "sha256": "29a3ac2ab621086036a310219e7f7c22bdcc1c0100ec2cdf434619153c8ee47d",
+      "collectedAt": "2026-10-12T18:52:29.558992+00:00",
+      "rulesVersion": null,
+      "wikiBuild": "0.157",
+      "collectionStatus": "collected",
+      "documents": [
+        "Compendium.runarcana.creature-features.Item.99b1ab557a93b813"
+      ],
+      "uuids": [
+        "Compendium.runarcana.creature-features.Item.99b1ab557a93b813"
+      ],
+      "test": "tests/corpus.test.mjs",
+      "status": "partial",
+      "textual": "complete",
+      "mechanical": "partial",
+      "redistribution": "permission-confirmed-by-maintainer",
+      "kind": "creature-feature",
+      "limit": "Legacy published attack statistics converted where exact; conditional effects and runes remain manual.",
+      "referenceUuid": "Compendium.runarcana.references.JournalEntry.19b3d4e9af39bba3"
+    },
+    {
+      "id": "/en/runarcana-plus/garden-of-shadows/creatures/nyxis/#stat-block-1#traits-shadow-split-recharge-5-6",
+      "part": 0,
+      "chapter": "runarcana-plus/garden-of-shadows/creatures",
+      "url": "https://wiki.runarcana.org/en/runarcana-plus/garden-of-shadows/creatures/nyxis/",
+      "anchor": null,
+      "language": "en",
+      "sha256": "29a3ac2ab621086036a310219e7f7c22bdcc1c0100ec2cdf434619153c8ee47d",
+      "collectedAt": "2026-10-12T18:52:29.558992+00:00",
+      "rulesVersion": null,
+      "wikiBuild": "0.157",
+      "collectionStatus": "collected",
+      "documents": [
+        "Compendium.runarcana.creature-features.Item.9b1c271636ad5427"
+      ],
+      "uuids": [
+        "Compendium.runarcana.creature-features.Item.9b1c271636ad5427"
+      ],
+      "test": "tests/corpus.test.mjs",
+      "status": "partial",
+      "textual": "complete",
+      "mechanical": "partial",
+      "redistribution": "permission-confirmed-by-maintainer",
+      "kind": "creature-feature",
+      "limit": "Legacy published attack statistics converted where exact; conditional effects and runes remain manual.",
+      "referenceUuid": "Compendium.runarcana.references.JournalEntry.19b3d4e9af39bba3"
+    },
+    {
+      "id": "/en/runarcana-plus/garden-of-shadows/creatures/nyxis/#stat-block-1#traits-martial-advantage",
+      "part": 0,
+      "chapter": "runarcana-plus/garden-of-shadows/creatures",
+      "url": "https://wiki.runarcana.org/en/runarcana-plus/garden-of-shadows/creatures/nyxis/",
+      "anchor": null,
+      "language": "en",
+      "sha256": "29a3ac2ab621086036a310219e7f7c22bdcc1c0100ec2cdf434619153c8ee47d",
+      "collectedAt": "2026-10-12T18:52:29.558992+00:00",
+      "rulesVersion": null,
+      "wikiBuild": "0.157",
+      "collectionStatus": "collected",
+      "documents": [
+        "Compendium.runarcana.creature-features.Item.834128018ed42cf4"
+      ],
+      "uuids": [
+        "Compendium.runarcana.creature-features.Item.834128018ed42cf4"
+      ],
+      "test": "tests/corpus.test.mjs",
+      "status": "partial",
+      "textual": "complete",
+      "mechanical": "partial",
+      "redistribution": "permission-confirmed-by-maintainer",
+      "kind": "creature-feature",
+      "limit": "Legacy published attack statistics converted where exact; conditional effects and runes remain manual.",
+      "referenceUuid": "Compendium.runarcana.references.JournalEntry.19b3d4e9af39bba3"
+    },
+    {
+      "id": "/en/runarcana-plus/garden-of-shadows/creatures/nyxis/#stat-block-1#actions-claws",
+      "part": 0,
+      "chapter": "runarcana-plus/garden-of-shadows/creatures",
+      "url": "https://wiki.runarcana.org/en/runarcana-plus/garden-of-shadows/creatures/nyxis/",
+      "anchor": null,
+      "language": "en",
+      "sha256": "29a3ac2ab621086036a310219e7f7c22bdcc1c0100ec2cdf434619153c8ee47d",
+      "collectedAt": "2026-10-12T18:52:29.558992+00:00",
+      "rulesVersion": null,
+      "wikiBuild": "0.157",
+      "collectionStatus": "collected",
+      "documents": [
+        "Compendium.runarcana.creature-features.Item.44feec27d017445b"
+      ],
+      "uuids": [
+        "Compendium.runarcana.creature-features.Item.44feec27d017445b"
+      ],
+      "test": "tests/corpus.test.mjs",
+      "status": "partial",
+      "textual": "complete",
+      "mechanical": "partial",
+      "redistribution": "permission-confirmed-by-maintainer",
+      "kind": "creature-feature",
+      "limit": "Legacy published attack statistics converted where exact; conditional effects and runes remain manual.",
+      "referenceUuid": "Compendium.runarcana.references.JournalEntry.19b3d4e9af39bba3"
+    },
+    {
+      "id": "/en/runarcana-plus/garden-of-shadows/creatures/nyxis/#stat-block-1#runes-runic-pulse",
+      "part": 0,
+      "chapter": "runarcana-plus/garden-of-shadows/creatures",
+      "url": "https://wiki.runarcana.org/en/runarcana-plus/garden-of-shadows/creatures/nyxis/",
+      "anchor": null,
+      "language": "en",
+      "sha256": "29a3ac2ab621086036a310219e7f7c22bdcc1c0100ec2cdf434619153c8ee47d",
+      "collectedAt": "2026-10-12T18:52:29.558992+00:00",
+      "rulesVersion": null,
+      "wikiBuild": "0.157",
+      "collectionStatus": "collected",
+      "documents": [
+        "Compendium.runarcana.creature-features.Item.5886dc23dabb44e0"
+      ],
+      "uuids": [
+        "Compendium.runarcana.creature-features.Item.5886dc23dabb44e0"
+      ],
+      "test": "tests/corpus.test.mjs",
+      "status": "partial",
+      "textual": "complete",
+      "mechanical": "partial",
+      "redistribution": "permission-confirmed-by-maintainer",
+      "kind": "creature-feature",
+      "limit": "Legacy published attack statistics converted where exact; conditional effects and runes remain manual.",
+      "referenceUuid": "Compendium.runarcana.references.JournalEntry.19b3d4e9af39bba3"
+    },
+    {
+      "id": "/en/runarcana-plus/garden-of-shadows/creatures/nyxis/#stat-block-1",
+      "part": 0,
+      "chapter": "runarcana-plus/garden-of-shadows/creatures",
+      "url": "https://wiki.runarcana.org/en/runarcana-plus/garden-of-shadows/creatures/nyxis/",
+      "anchor": null,
+      "language": "en",
+      "sha256": "29a3ac2ab621086036a310219e7f7c22bdcc1c0100ec2cdf434619153c8ee47d",
+      "collectedAt": "2026-10-12T18:52:29.558992+00:00",
+      "rulesVersion": null,
+      "wikiBuild": "0.157",
+      "collectionStatus": "collected",
+      "documents": [
+        "Compendium.runarcana.bestiary.Actor.0699d42547a71470"
+      ],
+      "uuids": [
+        "Compendium.runarcana.bestiary.Actor.0699d42547a71470"
+      ],
+      "test": "tests/corpus.test.mjs",
+      "status": "partial",
+      "textual": "complete",
+      "mechanical": "partial",
+      "redistribution": "permission-confirmed-by-maintainer",
+      "kind": "creature-stat-block",
+      "limit": "Separate native Actor for this published legacy variant; conditional abilities remain manual.",
+      "referenceUuid": "Compendium.runarcana.references.JournalEntry.19b3d4e9af39bba3"
+    },
+    {
+      "id": "/en/runarcana-plus/garden-of-shadows/creatures/nyxis/#stat-block-2#traits-surprise-attack",
+      "part": 0,
+      "chapter": "runarcana-plus/garden-of-shadows/creatures",
+      "url": "https://wiki.runarcana.org/en/runarcana-plus/garden-of-shadows/creatures/nyxis/",
+      "anchor": null,
+      "language": "en",
+      "sha256": "29a3ac2ab621086036a310219e7f7c22bdcc1c0100ec2cdf434619153c8ee47d",
+      "collectedAt": "2026-10-12T18:52:29.558992+00:00",
+      "rulesVersion": null,
+      "wikiBuild": "0.157",
+      "collectionStatus": "collected",
+      "documents": [
+        "Compendium.runarcana.creature-features.Item.be11b3b16d0af5d8"
+      ],
+      "uuids": [
+        "Compendium.runarcana.creature-features.Item.be11b3b16d0af5d8"
+      ],
+      "test": "tests/corpus.test.mjs",
+      "status": "partial",
+      "textual": "complete",
+      "mechanical": "partial",
+      "redistribution": "permission-confirmed-by-maintainer",
+      "kind": "creature-feature",
+      "limit": "Legacy published attack statistics converted where exact; conditional effects and runes remain manual.",
+      "referenceUuid": "Compendium.runarcana.references.JournalEntry.19b3d4e9af39bba3"
+    },
+    {
+      "id": "/en/runarcana-plus/garden-of-shadows/creatures/nyxis/#stat-block-2#traits-shadow-split-recharge-5-6",
+      "part": 0,
+      "chapter": "runarcana-plus/garden-of-shadows/creatures",
+      "url": "https://wiki.runarcana.org/en/runarcana-plus/garden-of-shadows/creatures/nyxis/",
+      "anchor": null,
+      "language": "en",
+      "sha256": "29a3ac2ab621086036a310219e7f7c22bdcc1c0100ec2cdf434619153c8ee47d",
+      "collectedAt": "2026-10-12T18:52:29.558992+00:00",
+      "rulesVersion": null,
+      "wikiBuild": "0.157",
+      "collectionStatus": "collected",
+      "documents": [
+        "Compendium.runarcana.creature-features.Item.456a06d523244916"
+      ],
+      "uuids": [
+        "Compendium.runarcana.creature-features.Item.456a06d523244916"
+      ],
+      "test": "tests/corpus.test.mjs",
+      "status": "partial",
+      "textual": "complete",
+      "mechanical": "partial",
+      "redistribution": "permission-confirmed-by-maintainer",
+      "kind": "creature-feature",
+      "limit": "Legacy published attack statistics converted where exact; conditional effects and runes remain manual.",
+      "referenceUuid": "Compendium.runarcana.references.JournalEntry.19b3d4e9af39bba3"
+    },
+    {
+      "id": "/en/runarcana-plus/garden-of-shadows/creatures/nyxis/#stat-block-2#traits-martial-advantage",
+      "part": 0,
+      "chapter": "runarcana-plus/garden-of-shadows/creatures",
+      "url": "https://wiki.runarcana.org/en/runarcana-plus/garden-of-shadows/creatures/nyxis/",
+      "anchor": null,
+      "language": "en",
+      "sha256": "29a3ac2ab621086036a310219e7f7c22bdcc1c0100ec2cdf434619153c8ee47d",
+      "collectedAt": "2026-10-12T18:52:29.558992+00:00",
+      "rulesVersion": null,
+      "wikiBuild": "0.157",
+      "collectionStatus": "collected",
+      "documents": [
+        "Compendium.runarcana.creature-features.Item.4bcc11eb3d1b7ed4"
+      ],
+      "uuids": [
+        "Compendium.runarcana.creature-features.Item.4bcc11eb3d1b7ed4"
+      ],
+      "test": "tests/corpus.test.mjs",
+      "status": "partial",
+      "textual": "complete",
+      "mechanical": "partial",
+      "redistribution": "permission-confirmed-by-maintainer",
+      "kind": "creature-feature",
+      "limit": "Legacy published attack statistics converted where exact; conditional effects and runes remain manual.",
+      "referenceUuid": "Compendium.runarcana.references.JournalEntry.19b3d4e9af39bba3"
+    },
+    {
+      "id": "/en/runarcana-plus/garden-of-shadows/creatures/nyxis/#stat-block-2#traits-umbral-sight",
+      "part": 0,
+      "chapter": "runarcana-plus/garden-of-shadows/creatures",
+      "url": "https://wiki.runarcana.org/en/runarcana-plus/garden-of-shadows/creatures/nyxis/",
+      "anchor": null,
+      "language": "en",
+      "sha256": "29a3ac2ab621086036a310219e7f7c22bdcc1c0100ec2cdf434619153c8ee47d",
+      "collectedAt": "2026-10-12T18:52:29.558992+00:00",
+      "rulesVersion": null,
+      "wikiBuild": "0.157",
+      "collectionStatus": "collected",
+      "documents": [
+        "Compendium.runarcana.creature-features.Item.deea6606fd4bad09"
+      ],
+      "uuids": [
+        "Compendium.runarcana.creature-features.Item.deea6606fd4bad09"
+      ],
+      "test": "tests/corpus.test.mjs",
+      "status": "partial",
+      "textual": "complete",
+      "mechanical": "partial",
+      "redistribution": "permission-confirmed-by-maintainer",
+      "kind": "creature-feature",
+      "limit": "Legacy published attack statistics converted where exact; conditional effects and runes remain manual.",
+      "referenceUuid": "Compendium.runarcana.references.JournalEntry.19b3d4e9af39bba3"
+    },
+    {
+      "id": "/en/runarcana-plus/garden-of-shadows/creatures/nyxis/#stat-block-2#actions-claws",
+      "part": 0,
+      "chapter": "runarcana-plus/garden-of-shadows/creatures",
+      "url": "https://wiki.runarcana.org/en/runarcana-plus/garden-of-shadows/creatures/nyxis/",
+      "anchor": null,
+      "language": "en",
+      "sha256": "29a3ac2ab621086036a310219e7f7c22bdcc1c0100ec2cdf434619153c8ee47d",
+      "collectedAt": "2026-10-12T18:52:29.558992+00:00",
+      "rulesVersion": null,
+      "wikiBuild": "0.157",
+      "collectionStatus": "collected",
+      "documents": [
+        "Compendium.runarcana.creature-features.Item.8d52da93b2954ab9"
+      ],
+      "uuids": [
+        "Compendium.runarcana.creature-features.Item.8d52da93b2954ab9"
+      ],
+      "test": "tests/corpus.test.mjs",
+      "status": "partial",
+      "textual": "complete",
+      "mechanical": "partial",
+      "redistribution": "permission-confirmed-by-maintainer",
+      "kind": "creature-feature",
+      "limit": "Legacy published attack statistics converted where exact; conditional effects and runes remain manual.",
+      "referenceUuid": "Compendium.runarcana.references.JournalEntry.19b3d4e9af39bba3"
+    },
+    {
+      "id": "/en/runarcana-plus/garden-of-shadows/creatures/nyxis/#stat-block-2#runes-runic-pulse",
+      "part": 0,
+      "chapter": "runarcana-plus/garden-of-shadows/creatures",
+      "url": "https://wiki.runarcana.org/en/runarcana-plus/garden-of-shadows/creatures/nyxis/",
+      "anchor": null,
+      "language": "en",
+      "sha256": "29a3ac2ab621086036a310219e7f7c22bdcc1c0100ec2cdf434619153c8ee47d",
+      "collectedAt": "2026-10-12T18:52:29.558992+00:00",
+      "rulesVersion": null,
+      "wikiBuild": "0.157",
+      "collectionStatus": "collected",
+      "documents": [
+        "Compendium.runarcana.creature-features.Item.305a1163979ca0b4"
+      ],
+      "uuids": [
+        "Compendium.runarcana.creature-features.Item.305a1163979ca0b4"
+      ],
+      "test": "tests/corpus.test.mjs",
+      "status": "partial",
+      "textual": "complete",
+      "mechanical": "partial",
+      "redistribution": "permission-confirmed-by-maintainer",
+      "kind": "creature-feature",
+      "limit": "Legacy published attack statistics converted where exact; conditional effects and runes remain manual.",
+      "referenceUuid": "Compendium.runarcana.references.JournalEntry.19b3d4e9af39bba3"
+    },
+    {
+      "id": "/en/runarcana-plus/garden-of-shadows/creatures/nyxis/#stat-block-2#runes-runic-spark",
+      "part": 0,
+      "chapter": "runarcana-plus/garden-of-shadows/creatures",
+      "url": "https://wiki.runarcana.org/en/runarcana-plus/garden-of-shadows/creatures/nyxis/",
+      "anchor": null,
+      "language": "en",
+      "sha256": "29a3ac2ab621086036a310219e7f7c22bdcc1c0100ec2cdf434619153c8ee47d",
+      "collectedAt": "2026-10-12T18:52:29.558992+00:00",
+      "rulesVersion": null,
+      "wikiBuild": "0.157",
+      "collectionStatus": "collected",
+      "documents": [
+        "Compendium.runarcana.creature-features.Item.2fcf536644e9b9f7"
+      ],
+      "uuids": [
+        "Compendium.runarcana.creature-features.Item.2fcf536644e9b9f7"
+      ],
+      "test": "tests/corpus.test.mjs",
+      "status": "partial",
+      "textual": "complete",
+      "mechanical": "partial",
+      "redistribution": "permission-confirmed-by-maintainer",
+      "kind": "creature-feature",
+      "limit": "Legacy published attack statistics converted where exact; conditional effects and runes remain manual.",
+      "referenceUuid": "Compendium.runarcana.references.JournalEntry.19b3d4e9af39bba3"
+    },
+    {
+      "id": "/en/runarcana-plus/garden-of-shadows/creatures/nyxis/#stat-block-2",
+      "part": 0,
+      "chapter": "runarcana-plus/garden-of-shadows/creatures",
+      "url": "https://wiki.runarcana.org/en/runarcana-plus/garden-of-shadows/creatures/nyxis/",
+      "anchor": null,
+      "language": "en",
+      "sha256": "29a3ac2ab621086036a310219e7f7c22bdcc1c0100ec2cdf434619153c8ee47d",
+      "collectedAt": "2026-10-12T18:52:29.558992+00:00",
+      "rulesVersion": null,
+      "wikiBuild": "0.157",
+      "collectionStatus": "collected",
+      "documents": [
+        "Compendium.runarcana.bestiary.Actor.0877782cd2ce3561"
+      ],
+      "uuids": [
+        "Compendium.runarcana.bestiary.Actor.0877782cd2ce3561"
+      ],
+      "test": "tests/corpus.test.mjs",
+      "status": "partial",
+      "textual": "complete",
+      "mechanical": "partial",
+      "redistribution": "permission-confirmed-by-maintainer",
+      "kind": "creature-stat-block",
+      "limit": "Separate native Actor for this published legacy variant; conditional abilities remain manual.",
+      "referenceUuid": "Compendium.runarcana.references.JournalEntry.19b3d4e9af39bba3"
+    },
+    {
       "id": "/en/runarcana-plus/garden-of-shadows/creatures/nyxis/",
       "part": 0,
       "chapter": "runarcana-plus/garden-of-shadows/creatures",
@@ -289554,10 +290883,12 @@
       "wikiBuild": "0.157",
       "collectionStatus": "collected",
       "documents": [
-        "Compendium.runarcana.references.JournalEntry.19b3d4e9af39bba3"
+        "Compendium.runarcana.references.JournalEntry.19b3d4e9af39bba3",
+        "Compendium.runarcana.bestiary.Actor.09dabe838aab7caa"
       ],
       "uuids": [
-        "Compendium.runarcana.references.JournalEntry.19b3d4e9af39bba3"
+        "Compendium.runarcana.references.JournalEntry.19b3d4e9af39bba3",
+        "Compendium.runarcana.bestiary.Actor.09dabe838aab7caa"
       ],
       "test": "tests/corpus.test.mjs",
       "status": "partial",
@@ -289684,6 +291015,222 @@
       "referenceUuid": "Compendium.runarcana.references.JournalEntry.e0773d6c682428ad"
     },
     {
+      "id": "/en/runarcana-plus/garden-of-shadows/creatures/stygian/#traits-echolocation",
+      "part": 0,
+      "chapter": "runarcana-plus/garden-of-shadows/creatures",
+      "url": "https://wiki.runarcana.org/en/runarcana-plus/garden-of-shadows/creatures/stygian/",
+      "anchor": null,
+      "language": "en",
+      "sha256": "09d904ca746c301be6de5dc08e19b25d669871584472ef4522edff80d55681e1",
+      "collectedAt": "2026-10-12T18:52:55.004283+00:00",
+      "rulesVersion": null,
+      "wikiBuild": "0.157",
+      "collectionStatus": "collected",
+      "documents": [
+        "Compendium.runarcana.creature-features.Item.7d6a06a95bc68d26"
+      ],
+      "uuids": [
+        "Compendium.runarcana.creature-features.Item.7d6a06a95bc68d26"
+      ],
+      "test": "tests/corpus.test.mjs",
+      "status": "partial",
+      "textual": "complete",
+      "mechanical": "partial",
+      "redistribution": "permission-confirmed-by-maintainer",
+      "kind": "creature-feature",
+      "limit": "Legacy published attack statistics converted where exact; conditional effects and runes remain manual.",
+      "referenceUuid": "Compendium.runarcana.references.JournalEntry.e0773d6c682428ad"
+    },
+    {
+      "id": "/en/runarcana-plus/garden-of-shadows/creatures/stygian/#traits-magic-resistance",
+      "part": 0,
+      "chapter": "runarcana-plus/garden-of-shadows/creatures",
+      "url": "https://wiki.runarcana.org/en/runarcana-plus/garden-of-shadows/creatures/stygian/",
+      "anchor": null,
+      "language": "en",
+      "sha256": "09d904ca746c301be6de5dc08e19b25d669871584472ef4522edff80d55681e1",
+      "collectedAt": "2026-10-12T18:52:55.004283+00:00",
+      "rulesVersion": null,
+      "wikiBuild": "0.157",
+      "collectionStatus": "collected",
+      "documents": [
+        "Compendium.runarcana.creature-features.Item.bb8b75c2a94632c1"
+      ],
+      "uuids": [
+        "Compendium.runarcana.creature-features.Item.bb8b75c2a94632c1"
+      ],
+      "test": "tests/corpus.test.mjs",
+      "status": "partial",
+      "textual": "complete",
+      "mechanical": "partial",
+      "redistribution": "permission-confirmed-by-maintainer",
+      "kind": "creature-feature",
+      "limit": "Legacy published attack statistics converted where exact; conditional effects and runes remain manual.",
+      "referenceUuid": "Compendium.runarcana.references.JournalEntry.e0773d6c682428ad"
+    },
+    {
+      "id": "/en/runarcana-plus/garden-of-shadows/creatures/stygian/#traits-flyby",
+      "part": 0,
+      "chapter": "runarcana-plus/garden-of-shadows/creatures",
+      "url": "https://wiki.runarcana.org/en/runarcana-plus/garden-of-shadows/creatures/stygian/",
+      "anchor": null,
+      "language": "en",
+      "sha256": "09d904ca746c301be6de5dc08e19b25d669871584472ef4522edff80d55681e1",
+      "collectedAt": "2026-10-12T18:52:55.004283+00:00",
+      "rulesVersion": null,
+      "wikiBuild": "0.157",
+      "collectionStatus": "collected",
+      "documents": [
+        "Compendium.runarcana.creature-features.Item.f547c79139fce069"
+      ],
+      "uuids": [
+        "Compendium.runarcana.creature-features.Item.f547c79139fce069"
+      ],
+      "test": "tests/corpus.test.mjs",
+      "status": "partial",
+      "textual": "complete",
+      "mechanical": "partial",
+      "redistribution": "permission-confirmed-by-maintainer",
+      "kind": "creature-feature",
+      "limit": "Legacy published attack statistics converted where exact; conditional effects and runes remain manual.",
+      "referenceUuid": "Compendium.runarcana.references.JournalEntry.e0773d6c682428ad"
+    },
+    {
+      "id": "/en/runarcana-plus/garden-of-shadows/creatures/stygian/#traits-umbral-sight",
+      "part": 0,
+      "chapter": "runarcana-plus/garden-of-shadows/creatures",
+      "url": "https://wiki.runarcana.org/en/runarcana-plus/garden-of-shadows/creatures/stygian/",
+      "anchor": null,
+      "language": "en",
+      "sha256": "09d904ca746c301be6de5dc08e19b25d669871584472ef4522edff80d55681e1",
+      "collectedAt": "2026-10-12T18:52:55.004283+00:00",
+      "rulesVersion": null,
+      "wikiBuild": "0.157",
+      "collectionStatus": "collected",
+      "documents": [
+        "Compendium.runarcana.creature-features.Item.971783f4668efa7f"
+      ],
+      "uuids": [
+        "Compendium.runarcana.creature-features.Item.971783f4668efa7f"
+      ],
+      "test": "tests/corpus.test.mjs",
+      "status": "partial",
+      "textual": "complete",
+      "mechanical": "partial",
+      "redistribution": "permission-confirmed-by-maintainer",
+      "kind": "creature-feature",
+      "limit": "Legacy published attack statistics converted where exact; conditional effects and runes remain manual.",
+      "referenceUuid": "Compendium.runarcana.references.JournalEntry.e0773d6c682428ad"
+    },
+    {
+      "id": "/en/runarcana-plus/garden-of-shadows/creatures/stygian/#actions-beak",
+      "part": 0,
+      "chapter": "runarcana-plus/garden-of-shadows/creatures",
+      "url": "https://wiki.runarcana.org/en/runarcana-plus/garden-of-shadows/creatures/stygian/",
+      "anchor": null,
+      "language": "en",
+      "sha256": "09d904ca746c301be6de5dc08e19b25d669871584472ef4522edff80d55681e1",
+      "collectedAt": "2026-10-12T18:52:55.004283+00:00",
+      "rulesVersion": null,
+      "wikiBuild": "0.157",
+      "collectionStatus": "collected",
+      "documents": [
+        "Compendium.runarcana.creature-features.Item.54557e114ec56302"
+      ],
+      "uuids": [
+        "Compendium.runarcana.creature-features.Item.54557e114ec56302"
+      ],
+      "test": "tests/corpus.test.mjs",
+      "status": "partial",
+      "textual": "complete",
+      "mechanical": "partial",
+      "redistribution": "permission-confirmed-by-maintainer",
+      "kind": "creature-feature",
+      "limit": "Legacy published attack statistics converted where exact; conditional effects and runes remain manual.",
+      "referenceUuid": "Compendium.runarcana.references.JournalEntry.e0773d6c682428ad"
+    },
+    {
+      "id": "/en/runarcana-plus/garden-of-shadows/creatures/stygian/#actions-claws",
+      "part": 0,
+      "chapter": "runarcana-plus/garden-of-shadows/creatures",
+      "url": "https://wiki.runarcana.org/en/runarcana-plus/garden-of-shadows/creatures/stygian/",
+      "anchor": null,
+      "language": "en",
+      "sha256": "09d904ca746c301be6de5dc08e19b25d669871584472ef4522edff80d55681e1",
+      "collectedAt": "2026-10-12T18:52:55.004283+00:00",
+      "rulesVersion": null,
+      "wikiBuild": "0.157",
+      "collectionStatus": "collected",
+      "documents": [
+        "Compendium.runarcana.creature-features.Item.05021992f49fa537"
+      ],
+      "uuids": [
+        "Compendium.runarcana.creature-features.Item.05021992f49fa537"
+      ],
+      "test": "tests/corpus.test.mjs",
+      "status": "partial",
+      "textual": "complete",
+      "mechanical": "partial",
+      "redistribution": "permission-confirmed-by-maintainer",
+      "kind": "creature-feature",
+      "limit": "Legacy published attack statistics converted where exact; conditional effects and runes remain manual.",
+      "referenceUuid": "Compendium.runarcana.references.JournalEntry.e0773d6c682428ad"
+    },
+    {
+      "id": "/en/runarcana-plus/garden-of-shadows/creatures/stygian/#runes-runic-pulse",
+      "part": 0,
+      "chapter": "runarcana-plus/garden-of-shadows/creatures",
+      "url": "https://wiki.runarcana.org/en/runarcana-plus/garden-of-shadows/creatures/stygian/",
+      "anchor": null,
+      "language": "en",
+      "sha256": "09d904ca746c301be6de5dc08e19b25d669871584472ef4522edff80d55681e1",
+      "collectedAt": "2026-10-12T18:52:55.004283+00:00",
+      "rulesVersion": null,
+      "wikiBuild": "0.157",
+      "collectionStatus": "collected",
+      "documents": [
+        "Compendium.runarcana.creature-features.Item.5e1cce87bf84927a"
+      ],
+      "uuids": [
+        "Compendium.runarcana.creature-features.Item.5e1cce87bf84927a"
+      ],
+      "test": "tests/corpus.test.mjs",
+      "status": "partial",
+      "textual": "complete",
+      "mechanical": "partial",
+      "redistribution": "permission-confirmed-by-maintainer",
+      "kind": "creature-feature",
+      "limit": "Legacy published attack statistics converted where exact; conditional effects and runes remain manual.",
+      "referenceUuid": "Compendium.runarcana.references.JournalEntry.e0773d6c682428ad"
+    },
+    {
+      "id": "/en/runarcana-plus/garden-of-shadows/creatures/stygian/#runes-runic-spark",
+      "part": 0,
+      "chapter": "runarcana-plus/garden-of-shadows/creatures",
+      "url": "https://wiki.runarcana.org/en/runarcana-plus/garden-of-shadows/creatures/stygian/",
+      "anchor": null,
+      "language": "en",
+      "sha256": "09d904ca746c301be6de5dc08e19b25d669871584472ef4522edff80d55681e1",
+      "collectedAt": "2026-10-12T18:52:55.004283+00:00",
+      "rulesVersion": null,
+      "wikiBuild": "0.157",
+      "collectionStatus": "collected",
+      "documents": [
+        "Compendium.runarcana.creature-features.Item.533fd878ad2b19f8"
+      ],
+      "uuids": [
+        "Compendium.runarcana.creature-features.Item.533fd878ad2b19f8"
+      ],
+      "test": "tests/corpus.test.mjs",
+      "status": "partial",
+      "textual": "complete",
+      "mechanical": "partial",
+      "redistribution": "permission-confirmed-by-maintainer",
+      "kind": "creature-feature",
+      "limit": "Legacy published attack statistics converted where exact; conditional effects and runes remain manual.",
+      "referenceUuid": "Compendium.runarcana.references.JournalEntry.e0773d6c682428ad"
+    },
+    {
       "id": "/en/runarcana-plus/garden-of-shadows/creatures/stygian/",
       "part": 0,
       "chapter": "runarcana-plus/garden-of-shadows/creatures",
@@ -289696,10 +291243,12 @@
       "wikiBuild": "0.157",
       "collectionStatus": "collected",
       "documents": [
-        "Compendium.runarcana.references.JournalEntry.e0773d6c682428ad"
+        "Compendium.runarcana.references.JournalEntry.e0773d6c682428ad",
+        "Compendium.runarcana.bestiary.Actor.7f3110d169a62e50"
       ],
       "uuids": [
-        "Compendium.runarcana.references.JournalEntry.e0773d6c682428ad"
+        "Compendium.runarcana.references.JournalEntry.e0773d6c682428ad",
+        "Compendium.runarcana.bestiary.Actor.7f3110d169a62e50"
       ],
       "test": "tests/corpus.test.mjs",
       "status": "partial",
@@ -290629,8 +292178,8 @@
     "spells": 558,
     "companions": 1,
     "creature-rules": 164,
-    "creature-features": 2973,
-    "bestiary": 232,
+    "creature-features": 3027,
+    "bestiary": 240,
     "rituals": 47,
     "techmaturgy": 127,
     "devices": 13,

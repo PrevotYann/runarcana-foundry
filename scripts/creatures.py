@@ -35,7 +35,7 @@ def attack_fields(feature):
     attack=re.search(r'\b(Melee|Ranged)\s+(?:Natural\s+)?(Weapon|Spell)\s+Attack\s*[,.:]\s*([+-]\d+)\s+to hit\b',text,re.I)
     if not attack:return None
     remainder=text[attack.end():]
-    damage=re.search(r'\b(?:deals|takes)\s+(\d+)\s*\(([^)]+)\)\s*([A-Za-z]+)\s+damage',remainder,re.I)
+    damage=re.search(r'\b(?:deals|takes|Hit:)\s+(\d+)\s*\(([^)]+)\)\s*([A-Za-z]+)\s+damage',remainder,re.I)
     if not damage or damage[3].casefold() not in DAMAGE_TYPES:return None
     if re.search(r'\b(?:saving throw|DC\s*\d+|failure|failed|if)\b',remainder[:damage.start()],re.I):return None
     formula=re.sub(r'\s+','',damage[2])

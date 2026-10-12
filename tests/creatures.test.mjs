@@ -3,6 +3,62 @@ import assert from 'node:assert/strict';
 import {spawnSync} from 'node:child_process';
 import fs from 'node:fs/promises';
 
+test('legacy tables preserve fractional CR and split traits without treating unrelated tables as monsters',()=>{
+  const script=String.raw`import sys
+sys.path.insert(0,'scripts')
+from bs4 import BeautifulSoup
+from legacy_creatures import legacy_creatures
+from creatures import attack_fields,number
+row=dict(id='/test/',url='https://wiki.runarcana.org/en/test/')
+source='''<div><table><caption><strong>Ignore</strong><em>Price</em></caption><tr><td>10</td></tr></table>
+<table><caption><strong>Test</strong><em>Fiend (Umbrinata) Small, Chaotic Evil</em></caption>
+<tr><th><strong>Armor Class:</strong>13<strong>Hit Points:</strong>24 (8d6)<strong>Speed:</strong>30 feet, fly 60 feet</th></tr>
+<tr><td><strong>STR</strong>8 (-1)</td><td><strong>DEX</strong>13 (+1)</td><td><strong>CON</strong>10 (0)</td><td><strong>INT</strong>10 (0)</td><td><strong>WIS</strong>8 (-1)</td><td><strong>CHA</strong>9 (-1)</td></tr>
+<tr><td><strong>Challenge Rating:</strong>&frac14; (50 XP)<strong>Senses:</strong>Darkvision 60 feet</td></tr>
+<tr><td><strong>Escape.</strong>Can hide.<strong>Split (Recharge 5-6).</strong>Creates a copy.</td></tr>
+<tr><td><strong>Actions</strong></td></tr>
+<tr><td><strong>Claws.</strong>Melee Weapon Attack: +3 to hit, 5 ft. reach. Hit: 4 (1d6 + 1) Slashing damage. On a hit, pushes the target.<strong>Dart.</strong>Ranged Weapon Attack: +3 to hit, range 80/250 ft., one target. Hit: 4 (1d6 + 1) Shadow damage.</td></tr></table></div>'''
+creatures=legacy_creatures(BeautifulSoup(source,'html.parser'),row,lambda n,u:str(n))
+assert len(creatures)==1
+c=creatures[0]
+assert number(c['tags']['CR'])==0.25 and c['abilities']['str']==8
+assert c['extra']['Speed']=='30 feet walking, 60 feet flying'
+assert c['extra']['Published Speed']=='30 feet, fly 60 feet'
+assert [f['name'] for f in c['features']]==['Escape','Split (Recharge 5-6)','Claws','Dart']
+assert c['features'][1]['category']=='Traits'
+claws=attack_fields(c['features'][2]);dart=attack_fields(c['features'][3])
+assert claws['damageFormula']=='1d6+1' and claws['manualRiders']
+assert dart['range']['value']=='80' and '250' in dart['range']['special']
+assert dart['damageType']=='shadow'
+`;
+  const result=spawnSync('python',['-c',script],{encoding:'utf8'});
+  assert.equal(result.status,0,result.stderr);
+});
+
+test('Garden of Shadows generates all eight published monsters with their exact statistics and separate attacks',async()=>{
+  const index=JSON.parse(await fs.readFile('data/build-index.json','utf8'));
+  const expected={Argoi:[152,14,4,'lg',40],Doombeast:[144,13,3,'lg',40],Duskrider:[176,13,5,'lg',60],Megaera:[434,14,12,'med',45],Nyxie:[24,13,0.25,'sm',30],Archnyx:[45,18,0.5,'med',30],Tyranyx:[70,16,1,'med',30],Stygian:[84,13,2,'sm',20]};
+  const rows=index.documents.filter(d=>d.pack==='bestiary'&&d.sourceId.includes('/garden-of-shadows/creatures/'));
+  assert.equal(rows.length,8);
+  for(const row of rows){
+    const actor=JSON.parse(await fs.readFile(`packs-src/release/bestiary/${row.id}.json`,'utf8'));
+    const [hp,ac,cr,size,walk]=expected[actor.name];
+    assert.equal(actor.system.attributes.hp.max,hp);
+    assert.equal(actor.system.attributes.ac.override,ac);
+    assert.equal(actor.system.details.cr,cr);
+    assert.equal(actor.system.traits.size,size);
+    assert.equal(Number(actor.system.attributes.movement.speeds.walk),walk);
+    assert.equal(actor.system.details.type.value,'fiend');
+    assert.equal(actor.system.details.type.subtype,'Umbrinata');
+    assert.equal(actor.flags.runarcana.legacyStatBlock,true);
+    assert.equal(actor.flags.runarcana.manualDefenses,true);
+    assert.ok(actor.items.some(i=>Object.values(i.system.activities).some(a=>a.type==='attack')),`Missing attack: ${actor.name}`);
+    assert.ok(actor.items.every(i=>i.flags.runarcana.manualEffects));
+    if(actor.name==='Duskrider')assert.equal(Number(actor.system.attributes.movement.speeds.fly),90);
+    if(actor.name==='Megaera')assert.equal(actor.system.abilities.cha.value,18);
+  }
+});
+
 test('creature conversion preserves flat attacks and leaves conditional riders manual',()=>{
   const script=String.raw`import sys
 sys.path.insert(0,'scripts')
