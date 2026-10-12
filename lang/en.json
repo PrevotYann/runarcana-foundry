@@ -65,7 +65,8 @@
       "Skill": "Chosen skill",
       "Resistance": "Second damage resistance",
       "Training": "Skill or Craft proficiency",
-      "Specialty": "Map type, route, vehicle or card game"
+      "Specialty": "Map type, route, vehicle or card game",
+      "Weapon": "Weapon proficiency"
     },
     "Import": {
       "Policy": "Preview before applying. Imports create native folders. Unedited copies can update; local edits and duplicates are skipped. Existing world copies require an explicit reimport after translation. A backup is stored for updates.",

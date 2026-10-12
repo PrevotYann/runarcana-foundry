@@ -12,6 +12,9 @@ def heritage_metadata(page,section):
     requirement=next((p.get_text(' ',strip=True) for p in soup.find_all('p') if re.match(r'prerequis',p.get_text(' ',strip=True),re.I)),'')
     # The universal cost and repeat rule are stated at the beginning of this source page.
     result={'schema':1,'cost':1,'maxCount':2 if re.search(r'(?:chosen|choose|taken) (?:a )?second time',text,re.I) else 1,'requirement':re.sub(r'^prerequis\w*\s*[:>]\s*','',requirement,flags=re.I),'initial':bool(re.search(r'\b(?:initial|starter)\b',requirement,re.I)),'name':section['name']}
+    if re.search(r'This Heritage can be (?:chosen|acquired) more than once',text,re.I):
+        result['maxCount']=None
+        if section['name']!='Discipline is Strength':result['repeatReviewRequired']=True
     mechanics={'Arcanist Acolyte':{'skills':{'arc':1}},'Lunar Sight':{'skills':{'ins':1},'expertiseIfKnown':['ins'],'sensesAdd':{'darkvision':15}},'Valor of the Protector':{'skills':{'inv':1},'expertiseIfKnown':['inv']},'Perceptive':{'sensesMinimum':{'blindsight':10},'passivePerception':'floor(@prof / 2)'}}
     # Reviewed permanent clauses only. Spell grants, counters and situational abilities remain in the full text.
     for name,skill in {'Bioenergy':'tec','Blessed Healer':'med','Cautious Traveler':'sur','Celestial Encouragement':'arc','Draconic Resilience':'sur','Extrovert':'his','Ice Breaker':'sur','Killer Instinct':'med','Manatouched':'arc','Natural Medicine':'med','Nomadic Life':'sur','Ottrani Healing':'med','Simian Skill':'ath','Soul of the Hunt':'sur','Truth Seeker':'prc'}.items():
@@ -25,6 +28,10 @@ def heritage_metadata(page,section):
     mechanics['Master Artisan']={'trainingChoice':{'count':1,'skills':[],'crafts':'all','expert':True}}
     mechanics['Hospitable']={'fixedCrafts':['cook']}
     mechanics['Cautious Traveler']['trainingChoice']={'count':1,'skills':[],'crafts':'guide'}
+    mechanics['Discipline is Strength']={'weaponChoice':{'kind':'any','distinct':True,'damagePicks':2}}
+    mechanics['Ferromancer']={'weaponChoice':{'kind':'regionalMartial'}}
+    mechanics['Weapon Scholar']={'weaponChoice':{'kind':'regional'}}
+    mechanics['Sulfur, Saltpeter and Charcoal']={'weaponChoice':{'kind':'firearm'}}
     for name,skills in {'Alpha Authority':['itm','per'],'Commander':['itm','per'],'Insightful Mind':['inv','ins'],'Mediator':['dec','itm','ins','per'],'Natural Propulsion':['nat','sur'],'Thick Feet':['ath','sur'],'Wealthy':list(SKILLS.values())}.items():
         mechanics[name]={'skillChoice':{'count':1,'options':skills,'expertiseIfKnown':True}}
     mechanics['Scout']={'skillChoice':{'count':1,'options':['ins','inv','prc','slt'],'advantageIfKnown':True},'passivePerception':'floor(@prof / 2)'}
@@ -66,6 +73,9 @@ def generate(pages,documents,root):
         slug=normalized(d['name']);compact=slug.replace(' ','');key=aliases.get(slug,compact if compact in core else 'runarcana-'+slug.replace(' ','-'))
         d['system']['type']['baseItem']=key
         entry={'id':key,'name':d['name'],'uuid':'Compendium.runarcana.equipment.Item.'+d['_id'],'category':'firearm' if '#table-firearms' in d['flags']['runarcana']['canonicalId'] else 'simple' if d['system']['type']['value'].startswith('simple') else 'martial'}
+        published=re.search(r'\bregional\s*\(([^)]+)\)',d['flags']['runarcana'].get('sourceColumns',{}).get('properties',''),re.I)
+        entry['regions']=[r.strip() for r in published[1].split(',')] if published else []
+        d['flags']['runarcana']['weaponRegions']=entry['regions']
         weapons.append(entry);by_name[compact]=key;by_name[slug]=key
     for name,key in aliases.items():
         match=next((w for w in weapons if w['id']==key or normalized(w['name']).replace(' ','')==key),None)

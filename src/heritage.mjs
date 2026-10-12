@@ -1,13 +1,15 @@
 import {trainingOptions} from './crafts.mjs';
+import {heritageWeaponSelection,hasFirearmProficiency} from './heritage-weapons.mjs';
 /** Universal heritage cost, pool restrictions and conservative prerequisite checks. */
 const norm=value=>String(value).normalize('NFKD').replaceAll('æ','ae').toLowerCase().replace(/[^a-z0-9]+/g,' ').trim();
 const origins={antroplant:'Antroplantae',antroplantae:'Antroplantae',chirean:'Chireans',chireans:'Chireans',chireano:'Chireans',chireanos:'Chireans',construct:'Construct',constructs:'Construct',human:'Human',humans:'Human',minotaur:'Minotaur',minotaurs:'Minotaur','half dragon':'Half-Dragon',troll:'Troll',vastaya:'Vastaya',vastayas:'Vastaya',yordle:'Yordle'};
 const regions={bilgewater:'Bilgewater',bilgewatrian:'Bilgewater',bandlecity:'Bandle City',bandopolitense:'Bandle City',demacian:'Demacia',freljordan:'Freljord',freljordian:'Freljord',ionian:'Ionia',ixtali:'Ixtal',nazumite:'Nazumah',noxian:'Noxus',piltovan:'Piltover',shuriman:'Shurima',targonian:'Targon',zaunite:'Zaun'};
 const variants={floral:'Floral',shimon:'Shimon',vesani:'Vesani',marai:'Marai',ottrani:'Ottrani',fauhwoon:'Fauhwoon',lhotlan:'Lhotlan',kiilash:'Kiilash',kiilashi:'Kiilash','aurochs minotaur':'Aurochs','auroch minotaur':'Aurochs','aelus minotaur':'Aelus','alnuk minotaur':'Alnuk','ocean half dragon':'Ocean Elemental','glacial half dragon':'Glacial Elemental','infernal half dragon':'Infernal Elemental','mountain half dragon':'Mountain Elemental','clouds half dragon':'Cloud Elemental','brutal construct':'Brutal','envoy construct':'Envoy','nimble construct':'Nimble','ice troll':'Ice Troll','sand troll':'Sand Troll','jungle troll':'Jungle Troll','aquatic yordle':'Aquatic','fuzzy yordle':'Fluffy'};
-export function heritageEligibility(rules,{origin,variant,region,level,initial,classes=[],abilities={},pool='origin',count=0,existingNames=[]}) {
+export function heritageEligibility(rules,{origin,variant,region,level,initial,classes=[],abilities={},pool='origin',count=0,existingNames=[],weaponProficiencies=[]}) {
   const errors=[],manual=[];
   if(rules?.schema!==1)return {valid:false,errors:['RUNARCANA.Error.Source'],manual:[]};
-  if(count>=rules.maxCount)errors.push('RUNARCANA.Error.DuplicateChoice');
+  if(rules.maxCount!==null&&count>=rules.maxCount)errors.push('RUNARCANA.Error.DuplicateChoice');
+  if(count>0&&rules.repeatReviewRequired)manual.push('A different tribal form is required; form selection and transformation require GM review.');
   if((rules.initial||rules.repeatInitial&&count>0||pool==='region')&&!initial)errors.push('RUNARCANA.Error.InitialHeritage');
   if(pool==='origin'&&!rules.general&&!rules.origins.length&&!rules.unlisted||pool==='region'&&!rules.general&&!rules.regions.length&&!rules.unlisted)errors.push('RUNARCANA.Error.HeritagePool');
   if(rules.unlisted)manual.push('Not classified by the source heritage index.');
@@ -19,7 +21,9 @@ export function heritageEligibility(rules,{origin,variant,region,level,initial,c
     const n=norm(raw);if(origins[n])return origins[n]===origin;if(regions[n])return regions[n]===region;
     const v=n.replace(/^vastaya /,'').replace(/ antroplantae$/,'');if(variants[v])return variants[v]===variant;
     if(['acolyte','arcanist','bodhisattva','brute','combatant','hunter','marksman','mercurial','shaman'].includes(n))return classes.some(c=>norm(c)===n);
-    if(['initial','starter'].includes(n))return initial;return null;
+    if(['initial','starter'].includes(n))return initial;
+    if(n==='proficiency with a firearm')return hasFirearmProficiency(weaponProficiencies);
+    return null;
   };
   const req=rules.requirement;
   if(req){
@@ -44,12 +48,13 @@ export function heritageOptions(rules,options={},context={}) {
   const choice=rules.mechanics?.skillChoice,skills=options.skills??[];
   const resistance=rules.mechanics?.resistanceChoice;
   const training=trainingOptions(rules,options,context);
-  const valid=training.valid&&Array.isArray(skills)&&(!choice?skills.length===0:skills.length===choice.count&&new Set(skills).size===skills.length&&skills.every(s=>choice.options.includes(s)))&&(!resistance?!options.damage:resistance.includes(options.damage)&&!context.resistance?.includes(options.damage));
-  return {valid,errors:valid?[]:['RUNARCANA.Error.Choices'],options:{skills:valid?[...skills]:[],...(valid&&resistance?{damage:options.damage}:{}),...(valid&&rules.mechanics?.trainingChoice?{training:training.rows}:{})}};
+  const weapon=heritageWeaponSelection(rules,options,context);
+  const valid=weapon.valid&&training.valid&&Array.isArray(skills)&&(!choice?skills.length===0:skills.length===choice.count&&new Set(skills).size===skills.length&&skills.every(s=>choice.options.includes(s)))&&(!resistance?!options.damage:resistance.includes(options.damage)&&!context.resistance?.includes(options.damage));
+  return {valid,errors:valid?[]:['RUNARCANA.Error.Choices'],options:{skills:valid?[...skills]:[],...(valid&&resistance?{damage:options.damage}:{}),...(valid&&rules.mechanics?.trainingChoice?{training:training.rows}:{}),...(valid&&weapon.weapon?{weapon:weapon.weapon}:{})}};
 }
-export function heritageEffects(rules,{skills={},options={}}={}) {
+export function heritageEffects(rules,{skills={},options={},context={}}={}) {
   const m=rules.mechanics;if(!m)return [];
-  const selection=heritageOptions(rules,options);if(!selection.valid)throw new Error('RUNARCANA.Error.Choices');
+  const selection=heritageOptions(rules,options,context);if(!selection.valid)throw new Error('RUNARCANA.Error.Choices');
   const changes=[];const add=(key,value,type='add')=>changes.push({_id:'rcHeritage'+String(changes.length).padStart(6,'0'),key,value:String(value),type,phase:'initial',priority:30});
   for(const [key,value]of Object.entries(m.skills??{}))add('system.skills.'+key+'.value',m.expertiseIfKnown?.includes(key)&&skills[key]>=1?2:value,'upgrade');
   for(const key of selection.options.skills){
@@ -58,6 +63,7 @@ export function heritageEffects(rules,{skills={},options={}}={}) {
   }
   for(const row of selection.options.training??[])if(row.kind==='skill')add('system.skills.'+row.id+'.value',1,'upgrade');
   for(const key of m.weapons??[])add('system.traits.weaponProf.value',key);
+  if(selection.options.weapon)add('system.traits.weaponProf.value',selection.options.weapon);
   if(m.resistanceChoice)add('system.traits.dr.value',selection.options.damage);
   for(const [key,value]of Object.entries(m.sensesAdd??{}))add('system.attributes.senses.ranges.'+key,value);
   for(const [key,value]of Object.entries(m.sensesMinimum??{}))add('system.attributes.senses.ranges.'+key,value,'upgrade');

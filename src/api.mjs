@@ -3,6 +3,7 @@ import {characterPlan,originEffects,originHeritageBudget,ABILITIES} from './char
 import {naturalWeapon} from './origin-weapons.mjs';
 import {heritageEligibility,heritageEffects,heritageOptions} from './heritage.mjs';
 import {knownCrafts,heritageTools,craftFromName} from './crafts.mjs';
+import {explicitWeaponProficiencies} from './heritage-weapons.mjs';
 
 const queues=new Map();
 export async function serialized(key,operation) {
@@ -20,7 +21,7 @@ export function assertGM() {
 }
 export function createApi() {
   return Object.freeze({
-    version:game.modules?.get('runarcana')?.version??'0.9.0', manaCost,scaleDice,creatureStatistics,
+    version:game.modules?.get('runarcana')?.version??'0.10.0', manaCost,scaleDice,creatureStatistics,
     async enableActor(actor) {
       assertGM();
       if(!game.settings.get('runarcana','enabled'))throw new Error('RUNARCANA.Error.WorldDisabled');
@@ -120,18 +121,21 @@ export function createApi() {
       const itemCounts=new Map();for(const item of actor.items){const id=item.getFlag?.('runarcana','canonicalId')??item.flags?.runarcana?.canonicalId;if(id)itemCounts.set(id,(itemCounts.get(id)??0)+1);}for(const [id,n]of itemCounts)counts.set(id,Math.max(counts.get(id)??0,n));
       const context={...origin,level:actor.system.details.level,initial:!!actor.getFlag('runarcana','creationDraft')&&!actor.getFlag('runarcana','creationComplete')&&actor.system.details.level<=1,classes:actor.items.filter(i=>i.type==='class').map(i=>i.system?.identifier??i.name),abilities:Object.fromEntries(Object.entries(actor.system.abilities).map(([k,v])=>[k,v.value])),pool,existingNames:actor.items.map(i=>i.getFlag?.('runarcana','heritageRules')?.name??i.getFlag?.('runarcana','canonicalId')?.split('#')[1]??i.name)};
       const choices=[],errors=[],manual=[],mechanicalErrors=[];
+      context.weaponProficiencies=[...explicitWeaponProficiencies(actor,origin)];
       const trainingContext={...origin,skills:Object.fromEntries(Object.entries(actor.system.skills??{}).map(([k,v])=>[k,v.value])),crafts:knownCrafts(actor.items)};
       for(const row of plan.choices){
         const source=await fromUuid(row.uuid),rules=source?.getFlag('runarcana','heritageRules');
         const sourceId=source?.getFlag('runarcana','canonicalId');if(source?.type!=='feat'||rules?.schema!==1||!sourceId)throw new Error('RUNARCANA.Error.Source');
         const count=counts.get(sourceId)??0,result=heritageEligibility(rules,{...context,count});counts.set(sourceId,count+1);context.existingNames.push(rules.name);
         errors.push(...result.errors);manual.push(...result.manual.map(text=>source.name+': '+text));
+        trainingContext.previousWeapons=[...normalizedPrevious,...choices].filter(c=>c.sourceId===sourceId).map(c=>c.options?.weapon).filter(Boolean);
+        for(const item of actor.items)if((item.getFlag?.('runarcana','canonicalId')??item.flags?.runarcana?.canonicalId)===sourceId){const weapon=item.getFlag?.('runarcana','heritageSelection')?.weapon??item.flags?.runarcana?.heritageSelection?.weapon;if(weapon)trainingContext.previousWeapons.push(weapon);}
         const selection=heritageOptions(rules,row.options,trainingContext);errors.push(...selection.errors);mechanicalErrors.push(...selection.errors);
         if(selection.valid){
-          for(const effect of heritageEffects(rules,{skills:trainingContext.skills,options:selection.options}))for(const change of effect.system.changes){const match=change.key.match(/^system\.skills\.([a-z]+)\.value$/);if(match)trainingContext.skills[match[1]]=Math.max(trainingContext.skills[match[1]]??0,Number(change.value));}
+          for(const effect of heritageEffects(rules,{skills:trainingContext.skills,options:selection.options,context:{region:origin.region}}))for(const change of effect.system.changes){const match=change.key.match(/^system\.skills\.([a-z]+)\.value$/);if(match)trainingContext.skills[match[1]]=Math.max(trainingContext.skills[match[1]]??0,Number(change.value));if(change.key==='system.traits.weaponProf.value'&&!context.weaponProficiencies.includes(change.value))context.weaponProficiencies.push(change.value);}
           for(const tool of heritageTools(rules,selection.options,{known:trainingContext.crafts}))trainingContext.crafts.push({id:tool.flags.runarcana.craftId,specialty:tool.flags.runarcana.craftSpecialty,multiplier:tool.system.proficient});
         }
-        choices.push({id:sourceId+'@pick-'+(count+1),sourceId,uuid:row.uuid,cost:rules.cost,pool,name:source.name,options:selection.options});
+        choices.push({id:sourceId+'@pick-'+(count+1),sourceId,uuid:row.uuid,cost:rules.cost,pool,name:source.name,options:selection.options,...(rules.mechanics?.weaponChoice?.damagePicks?{weaponDamageBonus:count<rules.mechanics.weaponChoice.damagePicks}:{})});
       }
       const spent=[...normalizedPrevious.filter(c=>(c.pool??'origin')===pool),...choices].reduce((n,c)=>n+c.cost,0);
       if(!Number.isFinite(spent))throw new Error('RUNARCANA.Error.Cost');if(spent>budget)errors.push('RUNARCANA.Error.Budget');
@@ -146,7 +150,8 @@ export function createApi() {
         const crafts=knownCrafts(actor.items);
         const data=[];for(const choice of result.choices){
           const source=await fromUuid(choice.uuid),d=source.toObject();delete d._id;delete d._key;delete d.folder;d.flags.runarcana.heritageChoice=choice.id;d.flags.runarcana.heritageSelection=choice.options;
-          const effects=heritageEffects(source.getFlag('runarcana','heritageRules'),{skills,options:choice.options});
+          if(choice.weaponDamageBonus)d.flags.runarcana.heritageWeaponDamage=choice.options.weapon;
+          const effects=heritageEffects(source.getFlag('runarcana','heritageRules'),{skills,options:choice.options,context:{region:actor.getFlag('runarcana','originSelection').plan.region}});
           d.effects=[...(d.effects??[]),...effects];data.push(d);
           const tools=heritageTools(source.getFlag('runarcana','heritageRules'),choice.options,{known:crafts,choiceId:choice.id});data.push(...tools);
           for(const tool of tools)crafts.push({id:tool.flags.runarcana.craftId,specialty:tool.flags.runarcana.craftSpecialty,multiplier:tool.system.proficient});

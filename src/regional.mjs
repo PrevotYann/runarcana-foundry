@@ -1,5 +1,8 @@
 import {REGIONAL_RULES,EQUIPMENT_WEAPONS} from './generated/character-options.mjs';
 export {REGIONAL_RULES,EQUIPMENT_WEAPONS};
+export function regionalWeaponAllowed(weapon,group,region){
+  return (group.weapons.includes(weapon.id)||group.categories.includes(weapon.category))&&(!weapon.regions?.length||weapon.regions.includes(region));
+}
 
 export function applyRegionalChoices(plan,selection,{native=false}={}) {
   const rules=REGIONAL_RULES[plan.region];
@@ -18,7 +21,7 @@ export function applyRegionalChoices(plan,selection,{native=false}={}) {
     for(const c of choices){
       if(c.kind==='weapon'){
         const weapon=EQUIPMENT_WEAPONS.find(w=>w.id===c.id);
-        if(!weapon||!group.weapons.includes(c.id)&&!group.categories.includes(weapon.category))fail();
+        if(!weapon||!regionalWeaponAllowed(weapon,group,plan.region))fail();
         if(selected.has('weapon:'+c.id))throw new Error('RUNARCANA.Error.DuplicateChoice');selected.add('weapon:'+c.id);
         plan.weapons??=[];plan.weapons.push(c.id);
       }else if(c.kind==='craft'){

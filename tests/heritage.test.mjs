@@ -50,7 +50,7 @@ test('additional reviewed heritage clauses grant their published skills without 
   assert.equal(heritageEffects(rule('Pickpocketer'),{skills:{slt:1}})[0].system.changes[0].value,'1');
   assert.ok(heritageEffects(rule('Truth Seeker'))[0].system.changes.some(c=>c.key==='system.skills.prc.bonuses.passive'&&c.value==='1'));
   assert.deepEqual(heritageEffects(rule('Sea Style'))[0].system.changes.map(c=>[c.key,c.value]),['net','spear','trident'].map(k=>['system.traits.weaponProf.value',k]));
-  assert.equal(rows.filter(d=>d.flags.runarcana.heritageRules.mechanics).length,33);
+  assert.equal(rows.filter(d=>d.flags.runarcana.heritageRules.mechanics).length,37);
 });
 
 test('heritage skill choices validate published options and distinguish expertise from Scout advantage',()=>{
@@ -96,7 +96,7 @@ test('heritage application ignores submitted costs, enforces eligibility and res
   const update=actor.update;actor.update=async()=>{throw Error('persist failed');};const before=actor.items.length;
   await assert.rejects(api.applyHeritages(actor,{pool:'origin',choices:[choice('Perceptive')]}),/persist failed/);assert.equal(actor.items.length,before);actor.update=update;
   await api.finishCharacter(actor);assert.equal(flags.creationComplete,true);
-  await assert.rejects(api.applyHeritages(actor,{pool:'origin',choices:[choice('Ferromancer')]}),/InitialHeritage/);
+  await assert.rejects(api.applyHeritages(actor,{pool:'origin',choices:[{...choice('Ferromancer'),options:{weapon:'longsword'}}]}),/InitialHeritage/);
   const batch={pool:'origin',choices:[{...choice('Commander'),options:{skills:['ins']}},{...choice('Mediator'),options:{skills:['ins']}}]};
   await assert.rejects(api.applyHeritages(actor,batch),/Choices/);
   batch.choices[0].options.skills=['itm'];batch.choices[1].options.skills=['itm'];

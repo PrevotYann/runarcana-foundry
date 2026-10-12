@@ -41,7 +41,7 @@ def generate_equipment(page,entries,helpers):
                     for label,code in [('finesse','fin'),('light','lgt'),('heavy','hvy'),('two-handed','two'),('thrown','thr'),('versatile','ver'),('ammunition','amm'),('reach','rch')]:
                         if re.search(r'\b'+label+r'\b',properties,re.I):native.append(code)
                     ranged='ranged' in category.casefold() or 'misfire' in columns
-                    system.update(properties=native,type={'value':'martialR' if ranged else 'simpleM' if 'simple' in category.lower() else 'martialM'},mastery=columns.get('mastery','').lower())
+                    system.update(properties=native,type={'value':('simple' if 'simple' in category.lower() else 'martial')+('R' if ranged else 'M')},mastery=columns.get('mastery','').lower())
                     # Multiple mastery labels and bespoke masteries remain literal metadata.
                     if not re.fullmatch(r'[a-z]+',system['mastery']):system['mastery']=''
                     crit=columns.get('crit','');mult=re.search(r'x(\d+)',crit,re.I);threshold=re.search(r'\b(1[89]|20)\b',crit)

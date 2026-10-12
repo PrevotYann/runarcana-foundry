@@ -1,5 +1,5 @@
 import {ABILITIES,SKILLS,REGIONS,MARTIAL_WEAPONS,WEAPONS} from './character.mjs';
-import {REGIONAL_RULES,EQUIPMENT_WEAPONS} from './regional.mjs';
+import {REGIONAL_RULES,EQUIPMENT_WEAPONS,regionalWeaponAllowed} from './regional.mjs';
 
 export async function renderCharacterForm(root,{actor,onCreated}={}) {
   const api=game.modules.get('runarcana').api,t=k=>game.i18n.localize('RUNARCANA.'+k);
@@ -61,7 +61,7 @@ export async function renderCharacterForm(root,{actor,onCreated}={}) {
         let extraLanguage;if(rules.languages.choices.length)extraLanguage=label(regionalArea,t('Creation.AdditionalLanguage'),select(rules.languages.choices.map(l=>[l,l]),saved?.language));
         const readers={};
         for(const group of rules.groups){readers[group.id]=[];
-          const options=[...EQUIPMENT_WEAPONS.filter(w=>group.weapons.includes(w.id)||group.categories.includes(w.category)).map(w=>['weapon:'+w.id,w.name]),...group.crafts.map(c=>['craft:'+c,c])];
+          const options=[...EQUIPMENT_WEAPONS.filter(w=>regionalWeaponAllowed(w,group,region.value)).map(w=>['weapon:'+w.id,w.name]),...group.crafts.map(c=>['craft:'+c,c])];
           for(let i=0;i<group.count;i++){
             const prior=saved?.activities?.[group.id]?.[i],pick=label(regionalArea,t('Creation.RegionalActivity')+' '+(i+1),select(options,prior?prior.kind+':'+prior.id:options[i%options.length]?.[0]));
             const specialty=label(regionalArea,t('Creation.CraftSpecialty'),input('text',prior?.specialty));

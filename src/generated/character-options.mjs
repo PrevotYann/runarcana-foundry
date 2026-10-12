@@ -636,433 +636,551 @@ export const EQUIPMENT_WEAPONS=[
     "id": "runarcana-ancient-rifle",
     "name": "Ancient Rifle",
     "uuid": "Compendium.runarcana.equipment.Item.81aba027e6c9f455",
-    "category": "firearm"
+    "category": "firearm",
+    "regions": []
   },
   {
     "id": "runarcana-arquebus",
     "name": "Arquebus",
     "uuid": "Compendium.runarcana.equipment.Item.53d66d75ebbfa2ae",
-    "category": "firearm"
+    "category": "firearm",
+    "regions": []
   },
   {
     "id": "runarcana-automatic",
     "name": "Automatic",
     "uuid": "Compendium.runarcana.equipment.Item.0a36860a049d762d",
-    "category": "firearm"
+    "category": "firearm",
+    "regions": []
   },
   {
     "id": "runarcana-automatic-shotgun",
     "name": "Automatic Shotgun",
     "uuid": "Compendium.runarcana.equipment.Item.c88ca8a49c5a6c2c",
-    "category": "firearm"
+    "category": "firearm",
+    "regions": []
   },
   {
     "id": "runarcana-automatic-pistol",
     "name": "Automatic pistol",
     "uuid": "Compendium.runarcana.equipment.Item.8874dd30c6bd20c9",
-    "category": "firearm"
+    "category": "firearm",
+    "regions": []
   },
   {
     "id": "runarcana-axe-cannon",
     "name": "Axe Cannon",
     "uuid": "Compendium.runarcana.equipment.Item.e5b60b0d039428a7",
-    "category": "firearm"
+    "category": "firearm",
+    "regions": []
   },
   {
     "id": "greatclub",
     "name": "Big Club",
     "uuid": "Compendium.runarcana.equipment.Item.b4159484e6fc7a84",
-    "category": "simple"
+    "category": "simple",
+    "regions": []
   },
   {
     "id": "runarcana-bladed-revolver",
     "name": "Bladed Revolver",
     "uuid": "Compendium.runarcana.equipment.Item.973a0713dbfdfd28",
-    "category": "firearm"
+    "category": "firearm",
+    "regions": []
   },
   {
     "id": "runarcana-blades-of-chaos",
     "name": "Blades of Chaos",
     "uuid": "Compendium.runarcana.equipment.Item.62af650810732ff1",
-    "category": "martial"
+    "category": "martial",
+    "regions": [
+      "Noxus"
+    ]
   },
   {
     "id": "blowgun",
     "name": "Blowgun",
     "uuid": "Compendium.runarcana.equipment.Item.276a0ddf45bbe8fe",
-    "category": "martial"
+    "category": "martial",
+    "regions": []
   },
   {
     "id": "runarcana-boar-sword",
     "name": "Boar Sword",
     "uuid": "Compendium.runarcana.equipment.Item.d9ef645532874a70",
-    "category": "martial"
+    "category": "martial",
+    "regions": [
+      "Freljord"
+    ]
   },
   {
     "id": "runarcana-bola",
     "name": "Bola",
     "uuid": "Compendium.runarcana.equipment.Item.4b65657df74a6f37",
-    "category": "martial"
+    "category": "martial",
+    "regions": []
   },
   {
     "id": "runarcana-carbine",
     "name": "Carbine",
     "uuid": "Compendium.runarcana.equipment.Item.fe47ba168d68bede",
-    "category": "firearm"
+    "category": "firearm",
+    "regions": []
   },
   {
     "id": "runarcana-chain-dagger",
     "name": "Chain Dagger",
     "uuid": "Compendium.runarcana.equipment.Item.3dc701fcb81ca489",
-    "category": "martial"
+    "category": "martial",
+    "regions": [
+      "Ionia"
+    ]
   },
   {
     "id": "runarcana-chain-sickle",
     "name": "Chain Sickle",
     "uuid": "Compendium.runarcana.equipment.Item.abe4e94c1442525d",
-    "category": "martial"
+    "category": "martial",
+    "regions": [
+      "Ionia"
+    ]
   },
   {
     "id": "club",
     "name": "Club",
     "uuid": "Compendium.runarcana.equipment.Item.075ad86c9b2e884e",
-    "category": "simple"
+    "category": "simple",
+    "regions": []
   },
   {
     "id": "runarcana-compact",
     "name": "Compact",
     "uuid": "Compendium.runarcana.equipment.Item.43b2a8df9bf1b0f8",
-    "category": "firearm"
+    "category": "firearm",
+    "regions": []
   },
   {
     "id": "runarcana-crescent-cleaver",
     "name": "Crescent Cleaver",
     "uuid": "Compendium.runarcana.equipment.Item.27902b57d43cd68c",
-    "category": "martial"
+    "category": "martial",
+    "regions": [
+      "Shurima"
+    ]
   },
   {
     "id": "dagger",
     "name": "Dagger",
     "uuid": "Compendium.runarcana.equipment.Item.44774546069119d5",
-    "category": "simple"
+    "category": "simple",
+    "regions": []
   },
   {
     "id": "dart",
     "name": "Dart",
     "uuid": "Compendium.runarcana.equipment.Item.c357288ba4cf9242",
-    "category": "martial"
+    "category": "simple",
+    "regions": []
   },
   {
     "id": "runarcana-derringer",
     "name": "Derringer",
     "uuid": "Compendium.runarcana.equipment.Item.9f2c6cbc770c936a",
-    "category": "firearm"
+    "category": "firearm",
+    "regions": []
   },
   {
     "id": "runarcana-drakebane",
     "name": "Drakebane",
     "uuid": "Compendium.runarcana.equipment.Item.842ffd66482a7849",
-    "category": "martial"
+    "category": "martial",
+    "regions": [
+      "Demacia"
+    ]
   },
   {
     "id": "runarcana-drakehound",
     "name": "Drakehound",
     "uuid": "Compendium.runarcana.equipment.Item.35090db283a9ccfd",
-    "category": "martial"
+    "category": "martial",
+    "regions": [
+      "Noxus"
+    ]
   },
   {
     "id": "runarcana-drum-carbine",
     "name": "Drum Carbine",
     "uuid": "Compendium.runarcana.equipment.Item.0963dfcf6c48b8c6",
-    "category": "firearm"
+    "category": "firearm",
+    "regions": []
   },
   {
     "id": "runarcana-fire-spear",
     "name": "Fire Spear",
     "uuid": "Compendium.runarcana.equipment.Item.36b3cc1f5e33a54e",
-    "category": "firearm"
+    "category": "firearm",
+    "regions": []
   },
   {
     "id": "runarcana-firespitter",
     "name": "Firespitter",
     "uuid": "Compendium.runarcana.equipment.Item.5291c76829fad908",
-    "category": "firearm"
+    "category": "firearm",
+    "regions": []
   },
   {
     "id": "flail",
     "name": "Flail",
     "uuid": "Compendium.runarcana.equipment.Item.216f11e818a823e1",
-    "category": "martial"
+    "category": "martial",
+    "regions": []
   },
   {
     "id": "runarcana-garrucha",
     "name": "Garrucha",
     "uuid": "Compendium.runarcana.equipment.Item.9811bae27168bc0b",
-    "category": "firearm"
+    "category": "firearm",
+    "regions": []
   },
   {
     "id": "runarcana-gauntlet-with-chain",
     "name": "Gauntlet with Chain",
     "uuid": "Compendium.runarcana.equipment.Item.2ead757858bf2a01",
-    "category": "martial"
+    "category": "martial",
+    "regions": []
   },
   {
     "id": "glaive",
     "name": "Glaive",
     "uuid": "Compendium.runarcana.equipment.Item.3477291eca8170bf",
-    "category": "martial"
+    "category": "martial",
+    "regions": []
   },
   {
     "id": "runarcana-great-chakram",
     "name": "Great Chakram",
     "uuid": "Compendium.runarcana.equipment.Item.93130c889c26d58b",
-    "category": "martial"
+    "category": "martial",
+    "regions": [
+      "Ixtal"
+    ]
   },
   {
     "id": "greataxe",
     "name": "Greataxe",
     "uuid": "Compendium.runarcana.equipment.Item.bea531b5d29d8d65",
-    "category": "martial"
+    "category": "martial",
+    "regions": []
   },
   {
     "id": "greatsword",
     "name": "Greatsword",
     "uuid": "Compendium.runarcana.equipment.Item.7609cae4a81bf9b0",
-    "category": "martial"
+    "category": "martial",
+    "regions": []
   },
   {
     "id": "runarcana-gromp-bazooka",
     "name": "Gromp Bazooka",
     "uuid": "Compendium.runarcana.equipment.Item.1bb81d11fac333e3",
-    "category": "firearm"
+    "category": "firearm",
+    "regions": []
   },
   {
     "id": "halberd",
     "name": "Halberd",
     "uuid": "Compendium.runarcana.equipment.Item.0fa67a9507bbdde4",
-    "category": "martial"
+    "category": "martial",
+    "regions": []
   },
   {
     "id": "runarcana-han-kote",
     "name": "Han Kote",
     "uuid": "Compendium.runarcana.equipment.Item.98b85e778d392f41",
-    "category": "martial"
+    "category": "martial",
+    "regions": [
+      "Ionia"
+    ]
   },
   {
     "id": "handcrossbow",
     "name": "Hand Crossbow",
     "uuid": "Compendium.runarcana.equipment.Item.1c6052a2b9ef43bc",
-    "category": "martial"
+    "category": "martial",
+    "regions": []
   },
   {
     "id": "handaxe",
     "name": "Handaxe",
     "uuid": "Compendium.runarcana.equipment.Item.209062f235e3fa64",
-    "category": "simple"
+    "category": "simple",
+    "regions": []
   },
   {
     "id": "runarcana-handcannon",
     "name": "Handcannon",
     "uuid": "Compendium.runarcana.equipment.Item.16cb2ba5496be8a5",
-    "category": "firearm"
+    "category": "firearm",
+    "regions": []
   },
   {
     "id": "runarcana-harpoon",
     "name": "Harpoon",
     "uuid": "Compendium.runarcana.equipment.Item.0f54df45f859a52c",
-    "category": "simple"
+    "category": "simple",
+    "regions": []
   },
   {
     "id": "runarcana-heavy-cannon",
     "name": "Heavy Cannon",
     "uuid": "Compendium.runarcana.equipment.Item.445a15713c6182bd",
-    "category": "firearm"
+    "category": "firearm",
+    "regions": []
   },
   {
     "id": "heavycrossbow",
     "name": "Heavy Crossbow",
     "uuid": "Compendium.runarcana.equipment.Item.c0d7636a4e395c01",
-    "category": "martial"
+    "category": "martial",
+    "regions": []
   },
   {
     "id": "runarcana-heavy-grenade-launcher",
     "name": "Heavy Grenade Launcher",
     "uuid": "Compendium.runarcana.equipment.Item.6547a86e682e3cbc",
-    "category": "firearm"
+    "category": "firearm",
+    "regions": []
   },
   {
     "id": "runarcana-heavy-repeating-crossbow",
     "name": "Heavy Repeating Crossbow",
     "uuid": "Compendium.runarcana.equipment.Item.e08ee47bc38b3ce3",
-    "category": "martial"
+    "category": "martial",
+    "regions": [
+      "Demacia",
+      "Piltover",
+      "Zaun"
+    ]
   },
   {
     "id": "runarcana-huge-cannon",
     "name": "Huge Cannon",
     "uuid": "Compendium.runarcana.equipment.Item.4c1f1267d95cfd35",
-    "category": "firearm"
+    "category": "firearm",
+    "regions": []
   },
   {
     "id": "runarcana-idol-of-the-elder-god",
     "name": "Idol of the Elder God",
     "uuid": "Compendium.runarcana.equipment.Item.6ddd811ab77f3248",
-    "category": "martial"
+    "category": "martial",
+    "regions": [
+      "Bilgewater"
+    ]
   },
   {
     "id": "javelin",
     "name": "Javelin",
     "uuid": "Compendium.runarcana.equipment.Item.980c60c2ac4c2397",
-    "category": "simple"
+    "category": "simple",
+    "regions": []
   },
   {
     "id": "runarcana-katana",
     "name": "Katana",
     "uuid": "Compendium.runarcana.equipment.Item.d433f78c0d64966c",
-    "category": "martial"
+    "category": "martial",
+    "regions": [
+      "Ionia"
+    ]
   },
   {
     "id": "runarcana-katar",
     "name": "Katar",
     "uuid": "Compendium.runarcana.equipment.Item.135b63e7384022c5",
-    "category": "martial"
+    "category": "martial",
+    "regions": [
+      "Ionia",
+      "Noxus",
+      "Shurima"
+    ]
   },
   {
     "id": "runarcana-khopesh",
     "name": "Khopesh",
     "uuid": "Compendium.runarcana.equipment.Item.b05f6de58a2190c1",
-    "category": "martial"
+    "category": "martial",
+    "regions": [
+      "Ionia",
+      "Targon",
+      "Shurima"
+    ]
   },
   {
     "id": "runarcana-knife-pistol",
     "name": "Knife Pistol",
     "uuid": "Compendium.runarcana.equipment.Item.6a6cfd5af36a52e0",
-    "category": "firearm"
+    "category": "firearm",
+    "regions": []
   },
   {
     "id": "runarcana-krug-shotgun",
     "name": "Krug Shotgun",
     "uuid": "Compendium.runarcana.equipment.Item.48494ed298dac016",
-    "category": "firearm"
+    "category": "firearm",
+    "regions": []
   },
   {
     "id": "lightcrossbow",
     "name": "Light Crossbow",
     "uuid": "Compendium.runarcana.equipment.Item.ae7eec00788cac9f",
-    "category": "martial"
+    "category": "simple",
+    "regions": []
   },
   {
     "id": "lighthammer",
     "name": "Light Hammer",
     "uuid": "Compendium.runarcana.equipment.Item.fdfb5923b491b4c1",
-    "category": "simple"
+    "category": "simple",
+    "regions": []
   },
   {
     "id": "runarcana-long-spear",
     "name": "Long Spear",
     "uuid": "Compendium.runarcana.equipment.Item.9ac87678ea106b29",
-    "category": "martial"
+    "category": "martial",
+    "regions": []
   },
   {
     "id": "longbow",
     "name": "Longbow",
     "uuid": "Compendium.runarcana.equipment.Item.c0551f4dd4845dd2",
-    "category": "martial"
+    "category": "martial",
+    "regions": []
   },
   {
     "id": "longsword",
     "name": "Longsword",
     "uuid": "Compendium.runarcana.equipment.Item.f587728d54af8b27",
-    "category": "martial"
+    "category": "martial",
+    "regions": []
   },
   {
     "id": "mace",
     "name": "Mace",
     "uuid": "Compendium.runarcana.equipment.Item.b42826d94128a898",
-    "category": "simple"
+    "category": "simple",
+    "regions": []
   },
   {
     "id": "maul",
     "name": "Maul",
     "uuid": "Compendium.runarcana.equipment.Item.331b79fed34a89f0",
-    "category": "martial"
+    "category": "martial",
+    "regions": []
   },
   {
     "id": "runarcana-mechanical",
     "name": "Mechanical",
     "uuid": "Compendium.runarcana.equipment.Item.ae7df6c206398cf5",
-    "category": "firearm"
+    "category": "firearm",
+    "regions": []
   },
   {
     "id": "runarcana-medium-cannon",
     "name": "Medium Cannon",
     "uuid": "Compendium.runarcana.equipment.Item.df610e0139a0fffc",
-    "category": "firearm"
+    "category": "firearm",
+    "regions": []
   },
   {
     "id": "runarcana-medium-chakram",
     "name": "Medium Chakram",
     "uuid": "Compendium.runarcana.equipment.Item.668c2f5596722ae3",
-    "category": "martial"
+    "category": "martial",
+    "regions": [
+      "Shurima"
+    ]
   },
   {
     "id": "runarcana-medium-grenade-launcher",
     "name": "Medium Grenade Launcher",
     "uuid": "Compendium.runarcana.equipment.Item.1e51f4d0b869a260",
-    "category": "firearm"
+    "category": "firearm",
+    "regions": []
   },
   {
     "id": "runarcana-meteor-hammer",
     "name": "Meteor Hammer",
     "uuid": "Compendium.runarcana.equipment.Item.470d8de043fd7086",
-    "category": "martial"
+    "category": "martial",
+    "regions": [
+      "Ionia"
+    ]
   },
   {
     "id": "morningstar",
     "name": "Morningstar",
     "uuid": "Compendium.runarcana.equipment.Item.b8662a00a9275e9c",
-    "category": "martial"
+    "category": "martial",
+    "regions": []
   },
   {
     "id": "musket",
     "name": "Musket",
     "uuid": "Compendium.runarcana.equipment.Item.6d38702c3a2cdd02",
-    "category": "firearm"
+    "category": "firearm",
+    "regions": []
   },
   {
     "id": "runarcana-nashor-bombard",
     "name": "Nashor Bombard",
     "uuid": "Compendium.runarcana.equipment.Item.10bbfa9e13f07be4",
-    "category": "firearm"
+    "category": "firearm",
+    "regions": []
   },
   {
     "id": "runarcana-navori-blave",
     "name": "Navori Blave",
     "uuid": "Compendium.runarcana.equipment.Item.01f224e47e328c5b",
-    "category": "martial"
+    "category": "martial",
+    "regions": [
+      "Ionia"
+    ]
   },
   {
     "id": "net",
     "name": "Net",
     "uuid": "Compendium.runarcana.equipment.Item.37819810ab44c876",
-    "category": "martial"
+    "category": "martial",
+    "regions": []
   },
   {
     "id": "runarcana-nodachi",
     "name": "Nodachi",
     "uuid": "Compendium.runarcana.equipment.Item.c35f25935db404e5",
-    "category": "martial"
+    "category": "martial",
+    "regions": [
+      "Ionia"
+    ]
   },
   {
     "id": "runarcana-ntofo",
     "name": "Ntofo",
     "uuid": "Compendium.runarcana.equipment.Item.693c9bc1c482c98c",
-    "category": "martial"
+    "category": "martial",
+    "regions": [
+      "Nazumah"
+    ]
   },
   {
     "id": "runarcana-nunchaku",
     "name": "Nunchaku",
     "uuid": "Compendium.runarcana.equipment.Item.c4bb3d8defdd6c17",
-    "category": "martial"
+    "category": "martial",
+    "regions": [
+      "Ionia"
+    ]
   },
   {
     "id": "pike",
@@ -1075,247 +1193,307 @@ export const EQUIPMENT_WEAPONS=[
     "id": "pistol",
     "name": "Pistol",
     "uuid": "Compendium.runarcana.equipment.Item.6dcc53c036923813",
-    "category": "firearm"
+    "category": "firearm",
+    "regions": []
   },
   {
     "id": "runarcana-portable",
     "name": "Portable",
     "uuid": "Compendium.runarcana.equipment.Item.e20627d4099ca264",
-    "category": "firearm"
+    "category": "firearm",
+    "regions": []
   },
   {
     "id": "rapier",
     "name": "Rapier",
     "uuid": "Compendium.runarcana.equipment.Item.bd7084ca5b906a3b",
-    "category": "martial"
+    "category": "martial",
+    "regions": []
   },
   {
     "id": "runarcana-reinforced",
     "name": "Reinforced",
     "uuid": "Compendium.runarcana.equipment.Item.ab1fd2350dd8f966",
-    "category": "firearm"
+    "category": "firearm",
+    "regions": []
   },
   {
     "id": "runarcana-repeater",
     "name": "Repeater",
     "uuid": "Compendium.runarcana.equipment.Item.d85309b3952e43b6",
-    "category": "firearm"
+    "category": "firearm",
+    "regions": []
   },
   {
     "id": "runarcana-repeating-arbalest",
     "name": "Repeating Arbalest",
     "uuid": "Compendium.runarcana.equipment.Item.fb301069eb6d69d7",
-    "category": "martial"
+    "category": "martial",
+    "regions": [
+      "Demacia"
+    ]
   },
   {
     "id": "runarcana-repeating-crossbow",
     "name": "Repeating Crossbow",
     "uuid": "Compendium.runarcana.equipment.Item.c142132a8527d6ec",
-    "category": "martial"
+    "category": "martial",
+    "regions": [
+      "Demacia",
+      "Piltover",
+      "Zaun"
+    ]
   },
   {
     "id": "runarcana-revolver",
     "name": "Revolver",
     "uuid": "Compendium.runarcana.equipment.Item.4f44e56615984411",
-    "category": "firearm"
+    "category": "firearm",
+    "regions": []
   },
   {
     "id": "runarcana-revolving-rifle",
     "name": "Revolving Rifle",
     "uuid": "Compendium.runarcana.equipment.Item.1eff1662cafbcd7c",
-    "category": "firearm"
+    "category": "firearm",
+    "regions": []
   },
   {
     "id": "lance",
     "name": "Riding Lance",
     "uuid": "Compendium.runarcana.equipment.Item.ffcd7fb845aaf473",
-    "category": "martial"
+    "category": "martial",
+    "regions": []
   },
   {
     "id": "runarcana-rifle",
     "name": "Rifle",
     "uuid": "Compendium.runarcana.equipment.Item.ba1286181fd0b385",
-    "category": "firearm"
+    "category": "firearm",
+    "regions": []
   },
   {
     "id": "runarcana-sai",
     "name": "Sai",
     "uuid": "Compendium.runarcana.equipment.Item.24028b7f6118e50f",
-    "category": "martial"
+    "category": "martial",
+    "regions": []
   },
   {
     "id": "scimitar",
     "name": "Scimitar",
     "uuid": "Compendium.runarcana.equipment.Item.e43ae8f0c673af51",
-    "category": "martial"
+    "category": "martial",
+    "regions": []
   },
   {
     "id": "runarcana-scythe",
     "name": "Scythe",
     "uuid": "Compendium.runarcana.equipment.Item.b8b776faf505874b",
-    "category": "martial"
+    "category": "martial",
+    "regions": []
   },
   {
     "id": "runarcana-semiautomatic-pistol",
     "name": "Semiautomatic pistol",
     "uuid": "Compendium.runarcana.equipment.Item.8bbc92dfa457a960",
-    "category": "firearm"
+    "category": "firearm",
+    "regions": []
   },
   {
     "id": "shortbow",
     "name": "Shortbow",
     "uuid": "Compendium.runarcana.equipment.Item.3f9fb96049642a54",
-    "category": "martial"
+    "category": "simple",
+    "regions": []
   },
   {
     "id": "shortsword",
     "name": "Shortsword",
     "uuid": "Compendium.runarcana.equipment.Item.6fae3f749e39e7d1",
-    "category": "martial"
+    "category": "martial",
+    "regions": []
   },
   {
     "id": "runarcana-shotgun",
     "name": "Shotgun",
     "uuid": "Compendium.runarcana.equipment.Item.05783cceed20c609",
-    "category": "firearm"
+    "category": "firearm",
+    "regions": []
   },
   {
     "id": "runarcana-shuriken",
     "name": "Shuriken",
     "uuid": "Compendium.runarcana.equipment.Item.a84d124ed156b4e3",
-    "category": "martial"
+    "category": "martial",
+    "regions": [
+      "Ionia"
+    ]
   },
   {
     "id": "sickle",
     "name": "Sickle",
     "uuid": "Compendium.runarcana.equipment.Item.8d90ca7865fc48d1",
-    "category": "simple"
+    "category": "simple",
+    "regions": []
   },
   {
     "id": "runarcana-silverwing-pistol",
     "name": "Silverwing Pistol",
     "uuid": "Compendium.runarcana.equipment.Item.82663d7a69bc2da8",
-    "category": "firearm"
+    "category": "firearm",
+    "regions": []
   },
   {
     "id": "runarcana-simple",
     "name": "Simple",
     "uuid": "Compendium.runarcana.equipment.Item.9f9d8a5ccbe13aff",
-    "category": "firearm"
+    "category": "firearm",
+    "regions": []
   },
   {
     "id": "runarcana-simple-grenade-launcher",
     "name": "Simple Grenade Launcher",
     "uuid": "Compendium.runarcana.equipment.Item.74ae1867ee994dff",
-    "category": "firearm"
+    "category": "firearm",
+    "regions": []
   },
   {
     "id": "sling",
     "name": "Sling",
     "uuid": "Compendium.runarcana.equipment.Item.f876bafefb94bea9",
-    "category": "martial"
+    "category": "simple",
+    "regions": []
   },
   {
     "id": "runarcana-slingshot",
     "name": "Slingshot",
     "uuid": "Compendium.runarcana.equipment.Item.ad8740845872e314",
-    "category": "martial"
+    "category": "simple",
+    "regions": []
   },
   {
     "id": "runarcana-small-chakram",
     "name": "Small Chakram",
     "uuid": "Compendium.runarcana.equipment.Item.ac367dfaf5d37af8",
-    "category": "martial"
+    "category": "martial",
+    "regions": [
+      "Targon"
+    ]
   },
   {
     "id": "runarcana-sniper-rifle",
     "name": "Sniper Rifle",
     "uuid": "Compendium.runarcana.equipment.Item.ad5b2e0dd286e05a",
-    "category": "firearm"
+    "category": "firearm",
+    "regions": []
   },
   {
     "id": "spear",
     "name": "Spear",
     "uuid": "Compendium.runarcana.equipment.Item.306758759b8543b0",
-    "category": "simple"
+    "category": "simple",
+    "regions": []
   },
   {
     "id": "runarcana-spinning-axe",
     "name": "Spinning Axe",
     "uuid": "Compendium.runarcana.equipment.Item.22d83d2f7aa3d80b",
-    "category": "martial"
+    "category": "martial",
+    "regions": [
+      "Noxus"
+    ]
   },
   {
     "id": "quarterstaff",
     "name": "Staff",
     "uuid": "Compendium.runarcana.equipment.Item.144128baf6192662",
-    "category": "simple"
+    "category": "simple",
+    "regions": []
   },
   {
     "id": "runarcana-sword-arquebus",
     "name": "Sword Arquebus",
     "uuid": "Compendium.runarcana.equipment.Item.18075a892b45e18a",
-    "category": "firearm"
+    "category": "firearm",
+    "regions": []
   },
   {
     "id": "runarcana-thorn-chain",
     "name": "Thorn Chain",
     "uuid": "Compendium.runarcana.equipment.Item.8ceaa9be27c5d3ab",
-    "category": "martial"
+    "category": "martial",
+    "regions": [
+      "Noxus"
+    ]
   },
   {
     "id": "runarcana-tonfa",
     "name": "Tonfa",
     "uuid": "Compendium.runarcana.equipment.Item.3e28c5c2d101ad6d",
-    "category": "martial"
+    "category": "martial",
+    "regions": [
+      "Ionia",
+      "Nazumah"
+    ]
   },
   {
     "id": "trident",
     "name": "Trident",
     "uuid": "Compendium.runarcana.equipment.Item.d89425f9ab38c8d8",
-    "category": "martial"
+    "category": "martial",
+    "regions": []
   },
   {
     "id": "runarcana-unitary",
     "name": "Unitary",
     "uuid": "Compendium.runarcana.equipment.Item.98fdf9d1b42894ed",
-    "category": "firearm"
+    "category": "firearm",
+    "regions": []
   },
   {
     "id": "battleaxe",
     "name": "War Axe",
     "uuid": "Compendium.runarcana.equipment.Item.56f08a0aff6330ed",
-    "category": "martial"
+    "category": "martial",
+    "regions": []
   },
   {
     "id": "runarcana-war-gauntlet",
     "name": "War Gauntlet",
     "uuid": "Compendium.runarcana.equipment.Item.df000cb7c0c7cbf7",
-    "category": "martial"
+    "category": "martial",
+    "regions": []
   },
   {
     "id": "warpick",
     "name": "War pick",
     "uuid": "Compendium.runarcana.equipment.Item.c712b9b71d948187",
-    "category": "martial"
+    "category": "martial",
+    "regions": []
   },
   {
     "id": "runarcana-warfan",
     "name": "Warfan",
     "uuid": "Compendium.runarcana.equipment.Item.372035db058b2bfa",
-    "category": "martial"
+    "category": "martial",
+    "regions": [
+      "Ionia"
+    ]
   },
   {
     "id": "warhammer",
     "name": "Warhammer",
     "uuid": "Compendium.runarcana.equipment.Item.f9d2ca299f9bb232",
-    "category": "martial"
+    "category": "martial",
+    "regions": []
   },
   {
     "id": "whip",
     "name": "Whip",
     "uuid": "Compendium.runarcana.equipment.Item.326e937a327f04f2",
-    "category": "martial"
+    "category": "martial",
+    "regions": []
   }
 ];
 export const CRAFTS=[

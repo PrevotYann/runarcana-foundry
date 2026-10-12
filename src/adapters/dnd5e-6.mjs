@@ -2,6 +2,7 @@ import {damageComponents,MAGIC_BASE,manaCost,resourceValue} from '../rules.mjs';
 import {isMarked,serialized,originContext} from '../api.mjs';
 import {originEffects} from '../character.mjs';
 import {naturalWeapon} from '../origin-weapons.mjs';
+import {disciplineDamageBonus} from '../heritage-weapons.mjs';
 
 export function installDnd5eAdapter() {
   const refreshOrigin=async(actor,updateWeapons=false)=>{
@@ -80,6 +81,10 @@ export function installDnd5eAdapter() {
     if(!isMarked(activity?.actor))return;
     const multiplier=activity.item?.getFlag('runarcana','criticalMultiplier');
     if(Number.isInteger(multiplier)&&multiplier>=2){config.critical??={};config.critical.multiplier=multiplier;}
+    const bonus=activity.type==='attack'&&activity.item?.type==='weapon'?disciplineDamageBonus(activity.actor,activity.item):0;
+    if(bonus&&config.rolls?.[0]&&!config.runarcanaDiscipline){
+      config.rolls[0].parts.push(String(bonus));config.runarcanaDiscipline=true;
+    }
   });
   Hooks.on('dnd5e.preCalculateDamage',(actor,parts,options)=>{
     if(!isMarked(actor))return;
