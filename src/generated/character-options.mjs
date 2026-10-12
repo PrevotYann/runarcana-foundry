@@ -1933,3 +1933,209 @@ export const CRAFTS=[
     "abilityReviewRequired": false
   }
 ];
+export const LANGUAGES=[
+  {
+    "name": "Buhru",
+    "category": "common",
+    "sourceUrl": "https://wiki.runarcana.org/en/characters/detailing/languages/",
+    "sourceHash": "fd3213f1f5183fb494911b46865003b396e5d68ced362a5e7a13466cf7e9dc3b"
+  },
+  {
+    "name": "Demacian",
+    "category": "common",
+    "sourceUrl": "https://wiki.runarcana.org/en/characters/detailing/languages/",
+    "sourceHash": "fd3213f1f5183fb494911b46865003b396e5d68ced362a5e7a13466cf7e9dc3b"
+  },
+  {
+    "name": "Freljordan",
+    "category": "common",
+    "sourceUrl": "https://wiki.runarcana.org/en/characters/detailing/languages/",
+    "sourceHash": "fd3213f1f5183fb494911b46865003b396e5d68ced362a5e7a13466cf7e9dc3b"
+  },
+  {
+    "name": "Ionian",
+    "category": "common",
+    "sourceUrl": "https://wiki.runarcana.org/en/characters/detailing/languages/",
+    "sourceHash": "fd3213f1f5183fb494911b46865003b396e5d68ced362a5e7a13466cf7e9dc3b"
+  },
+  {
+    "name": "Ixtali",
+    "category": "common",
+    "sourceUrl": "https://wiki.runarcana.org/en/characters/detailing/languages/",
+    "sourceHash": "fd3213f1f5183fb494911b46865003b396e5d68ced362a5e7a13466cf7e9dc3b"
+  },
+  {
+    "name": "Minotauric",
+    "category": "common",
+    "sourceUrl": "https://wiki.runarcana.org/en/characters/detailing/languages/",
+    "sourceHash": "fd3213f1f5183fb494911b46865003b396e5d68ced362a5e7a13466cf7e9dc3b"
+  },
+  {
+    "name": "Noxian",
+    "category": "common",
+    "sourceUrl": "https://wiki.runarcana.org/en/characters/detailing/languages/",
+    "sourceHash": "fd3213f1f5183fb494911b46865003b396e5d68ced362a5e7a13466cf7e9dc3b"
+  },
+  {
+    "name": "Bilgewateran",
+    "category": "common",
+    "sourceUrl": "https://wiki.runarcana.org/en/characters/detailing/languages/",
+    "sourceHash": "fd3213f1f5183fb494911b46865003b396e5d68ced362a5e7a13466cf7e9dc3b"
+  },
+  {
+    "name": "Shuriman",
+    "category": "common",
+    "sourceUrl": "https://wiki.runarcana.org/en/characters/detailing/languages/",
+    "sourceHash": "fd3213f1f5183fb494911b46865003b396e5d68ced362a5e7a13466cf7e9dc3b"
+  },
+  {
+    "name": "Targonian",
+    "category": "common",
+    "sourceUrl": "https://wiki.runarcana.org/en/characters/detailing/languages/",
+    "sourceHash": "fd3213f1f5183fb494911b46865003b396e5d68ced362a5e7a13466cf7e9dc3b"
+  },
+  {
+    "name": "Vastayan",
+    "category": "common",
+    "sourceUrl": "https://wiki.runarcana.org/en/characters/detailing/languages/",
+    "sourceHash": "fd3213f1f5183fb494911b46865003b396e5d68ced362a5e7a13466cf7e9dc3b"
+  },
+  {
+    "name": "Yordle",
+    "category": "common",
+    "sourceUrl": "https://wiki.runarcana.org/en/characters/detailing/languages/",
+    "sourceHash": "fd3213f1f5183fb494911b46865003b396e5d68ced362a5e7a13466cf7e9dc3b"
+  },
+  {
+    "name": "Zaunite",
+    "category": "common",
+    "sourceUrl": "https://wiki.runarcana.org/en/characters/detailing/languages/",
+    "sourceHash": "fd3213f1f5183fb494911b46865003b396e5d68ced362a5e7a13466cf7e9dc3b"
+  },
+  {
+    "name": "Celestial",
+    "category": "exotic",
+    "sourceUrl": "https://wiki.runarcana.org/en/characters/detailing/languages/",
+    "sourceHash": "fd3213f1f5183fb494911b46865003b396e5d68ced362a5e7a13466cf7e9dc3b"
+  },
+  {
+    "name": "Draconic",
+    "category": "exotic",
+    "sourceUrl": "https://wiki.runarcana.org/en/characters/detailing/languages/",
+    "sourceHash": "fd3213f1f5183fb494911b46865003b396e5d68ced362a5e7a13466cf7e9dc3b"
+  },
+  {
+    "name": "Demonic",
+    "category": "exotic",
+    "sourceUrl": "https://wiki.runarcana.org/en/characters/detailing/languages/",
+    "sourceHash": "fd3213f1f5183fb494911b46865003b396e5d68ced362a5e7a13466cf7e9dc3b"
+  },
+  {
+    "name": "Spiritual",
+    "category": "exotic",
+    "sourceUrl": "https://wiki.runarcana.org/en/characters/detailing/languages/",
+    "sourceHash": "fd3213f1f5183fb494911b46865003b396e5d68ced362a5e7a13466cf7e9dc3b"
+  },
+  {
+    "name": "Elemental",
+    "category": "exotic",
+    "sourceUrl": "https://wiki.runarcana.org/en/characters/detailing/languages/",
+    "sourceHash": "fd3213f1f5183fb494911b46865003b396e5d68ced362a5e7a13466cf7e9dc3b"
+  },
+  {
+    "name": "Faeric",
+    "category": "exotic",
+    "sourceUrl": "https://wiki.runarcana.org/en/characters/detailing/languages/",
+    "sourceHash": "fd3213f1f5183fb494911b46865003b396e5d68ced362a5e7a13466cf7e9dc3b"
+  },
+  {
+    "name": "Helian",
+    "category": "exotic",
+    "sourceUrl": "https://wiki.runarcana.org/en/characters/detailing/languages/",
+    "sourceHash": "fd3213f1f5183fb494911b46865003b396e5d68ced362a5e7a13466cf7e9dc3b"
+  },
+  {
+    "name": "Icathian",
+    "category": "exotic",
+    "sourceUrl": "https://wiki.runarcana.org/en/characters/detailing/languages/",
+    "sourceHash": "fd3213f1f5183fb494911b46865003b396e5d68ced362a5e7a13466cf7e9dc3b"
+  },
+  {
+    "name": "Ochnun",
+    "category": "exotic",
+    "sourceUrl": "https://wiki.runarcana.org/en/characters/detailing/languages/",
+    "sourceHash": "fd3213f1f5183fb494911b46865003b396e5d68ced362a5e7a13466cf7e9dc3b"
+  },
+  {
+    "name": "Primordial",
+    "category": "exotic",
+    "sourceUrl": "https://wiki.runarcana.org/en/characters/detailing/languages/",
+    "sourceHash": "fd3213f1f5183fb494911b46865003b396e5d68ced362a5e7a13466cf7e9dc3b"
+  },
+  {
+    "name": "Runic",
+    "category": "exotic",
+    "sourceUrl": "https://wiki.runarcana.org/en/characters/detailing/languages/",
+    "sourceHash": "fd3213f1f5183fb494911b46865003b396e5d68ced362a5e7a13466cf7e9dc3b"
+  },
+  {
+    "name": "Ancient Shuriman",
+    "category": "exotic",
+    "sourceUrl": "https://wiki.runarcana.org/en/characters/detailing/languages/",
+    "sourceHash": "fd3213f1f5183fb494911b46865003b396e5d68ced362a5e7a13466cf7e9dc3b"
+  },
+  {
+    "name": "Sylvan",
+    "category": "exotic",
+    "sourceUrl": "https://wiki.runarcana.org/en/characters/detailing/languages/",
+    "sourceHash": "fd3213f1f5183fb494911b46865003b396e5d68ced362a5e7a13466cf7e9dc3b"
+  },
+  {
+    "name": "Troll",
+    "category": "exotic",
+    "sourceUrl": "https://wiki.runarcana.org/en/characters/detailing/languages/",
+    "sourceHash": "fd3213f1f5183fb494911b46865003b396e5d68ced362a5e7a13466cf7e9dc3b"
+  },
+  {
+    "name": "Ancient Demacian",
+    "category": "dead",
+    "sourceUrl": "https://wiki.runarcana.org/en/characters/detailing/languages/",
+    "sourceHash": "fd3213f1f5183fb494911b46865003b396e5d68ced362a5e7a13466cf7e9dc3b"
+  },
+  {
+    "name": "Vorrijaardian",
+    "category": "dead",
+    "sourceUrl": "https://wiki.runarcana.org/en/characters/detailing/languages/",
+    "sourceHash": "fd3213f1f5183fb494911b46865003b396e5d68ced362a5e7a13466cf7e9dc3b"
+  },
+  {
+    "name": "Old Freljordian",
+    "category": "dead",
+    "sourceUrl": "https://wiki.runarcana.org/en/characters/detailing/languages/",
+    "sourceHash": "fd3213f1f5183fb494911b46865003b396e5d68ced362a5e7a13466cf7e9dc3b"
+  },
+  {
+    "name": "Old Ionian",
+    "category": "dead",
+    "sourceUrl": "https://wiki.runarcana.org/en/characters/detailing/languages/",
+    "sourceHash": "fd3213f1f5183fb494911b46865003b396e5d68ced362a5e7a13466cf7e9dc3b"
+  },
+  {
+    "name": "Ur’Nox",
+    "category": "dead",
+    "sourceUrl": "https://wiki.runarcana.org/en/characters/detailing/languages/",
+    "sourceHash": "fd3213f1f5183fb494911b46865003b396e5d68ced362a5e7a13466cf7e9dc3b"
+  },
+  {
+    "name": "Vasthayshai’rei",
+    "category": "dead",
+    "sourceUrl": "https://wiki.runarcana.org/en/characters/detailing/languages/",
+    "sourceHash": "fd3213f1f5183fb494911b46865003b396e5d68ced362a5e7a13466cf7e9dc3b"
+  },
+  {
+    "name": "Yeti",
+    "category": "dead",
+    "sourceUrl": "https://wiki.runarcana.org/en/characters/detailing/languages/",
+    "sourceHash": "fd3213f1f5183fb494911b46865003b396e5d68ced362a5e7a13466cf7e9dc3b"
+  }
+];

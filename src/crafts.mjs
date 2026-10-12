@@ -28,9 +28,10 @@ export function trainingOptions(rules,options={},context={}){
       if(!choice.skills.includes(row.id)||choice.newOnly&&(context.skills?.[row.id]??0)>=1)return {valid:false,rows:[]};
       const key='skill:'+row.id;if(seen.has(key))return {valid:false,rows:[]};seen.add(key);selected.push({kind:'skill',id:row.id});
     }else{
-      const c=CRAFTS.find(c=>c.id===row.id);if(!c||!(choice.crafts==='all'||choice.crafts==='guide'&&c.craft==='Guide'))return {valid:false,rows:[]};
+      const c=CRAFTS.find(c=>c.id===row.id);if(!c||!(choice.crafts==='all'||choice.crafts==='guide'&&c.craft==='Guide'||Array.isArray(choice.crafts)&&choice.crafts.includes(c.id)))return {valid:false,rows:[]};
       const specialty=typeof row.specialty==='string'?row.specialty.trim():'';
       if(c.specialtyRequired?(!specialty||specialty.length>100):!!specialty)return {valid:false,rows:[]};
+      if(choice.specialtyOptions?.[c.id]&&!choice.specialtyOptions[c.id].includes(specialty))return {valid:false,rows:[]};
       const result={kind:'craft',id:c.id,...(specialty?{specialty}:{})},key=craftIdentity(result);
       if(seen.has(key)||choice.newOnly&&context.crafts?.some(c=>craftIdentity(c)===key))return {valid:false,rows:[]};
       seen.add(key);selected.push(result);
@@ -42,7 +43,7 @@ export function heritageTools(rules,options,{known=[],choiceId}={}){
   const rows=[...(options.training??[]).filter(r=>r.kind==='craft'),...(rules.mechanics?.fixedCrafts??[]).map(id=>({id}))];
   return rows.map(row=>{
     const c=CRAFTS.find(c=>c.id===row.id);if(!c)throw Error('RUNARCANA.Error.Source');
-    const previous=known.filter(k=>craftIdentity(k)===craftIdentity(row)),expert=!!rules.mechanics.trainingChoice?.expert;
+    const previous=known.filter(k=>craftIdentity(k)===craftIdentity(row)),expert=!!rules.mechanics.trainingChoice?.expert||!!rules.mechanics.craftExpertiseIfKnown&&previous.some(k=>k.multiplier>0);
     const proficient=Math.max(expert?1:0.5,...previous.map(k=>k.multiplier));
     const name=c.name+(row.specialty?' ('+row.specialty+')':'');
     const esc=value=>String(value).replace(/[&<>"']/g,ch=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[ch]));

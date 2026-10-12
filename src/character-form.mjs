@@ -1,5 +1,6 @@
 import {ABILITIES,SKILLS,REGIONS,MARTIAL_WEAPONS,WEAPONS} from './character.mjs';
 import {REGIONAL_RULES,EQUIPMENT_WEAPONS,regionalWeaponAllowed} from './regional.mjs';
+import {LANGUAGES} from './languages.mjs';
 
 export async function renderCharacterForm(root,{actor,onCreated}={}) {
   const api=game.modules.get('runarcana').api,t=k=>game.i18n.localize('RUNARCANA.'+k);
@@ -31,6 +32,10 @@ export async function renderCharacterForm(root,{actor,onCreated}={}) {
     if(c.type==='skill')e=select(skillOptions(c.options),value);
     else if(['ability','damage'].includes(c.type))e=select(c.options.map(k=>[k,c.type==='ability'?t('Creation.'+k):game.i18n.localize(CONFIG.DND5E.damageTypes[k]?.label??k)]),value);
     else if(c.type==='option')e=select([...(c.optional?[['',t('Creation.None')]]:[]),...c.options.map(o=>[o.id,o.name])],value);
+    else if(c.type==='languages'){
+      const group=node('span'),mode=select([['exotic',t('Creation.OneExotic')],['common',t('Creation.TwoCommon')]],value?.length===2||value?.length===1&&LANGUAGES.some(l=>l.name===value[0]&&l.category==='common')?'common':'exotic'),area=node('span');let picks=[];
+      const update=()=>{picks=Array.from({length:mode.value==='common'?2:1},(_,i)=>select([['',t('Creation.None')],...LANGUAGES.filter(l=>l.category===mode.value).map(l=>[l.name,l.name])],value?.[i]));area.replaceChildren(...picks);};mode.addEventListener('change',update);update();group.append(mode,area);label(parent,t('Creation.Choice.'+c.id),group);return ()=>picks.map(p=>p.value);
+    }
     else if(c.type==='proficiency'){
       const group=node('span'),kind=select([['skill','Skill'],['craft','Craft'],['weapon','Martial weapon']].filter(([k])=>!c.kinds||c.kinds.includes(k)),value?.split(':')[0]??'skill'),area=node('span');let detail;
       const update=()=>{detail=kind.value==='skill'?select(skillOptions(),value?.split(':').slice(1).join(':')):kind.value==='weapon'?select(MARTIAL_WEAPONS.map(k=>[k,k]),value?.split(':').slice(1).join(':')):input('text',value?.split(':').slice(1).join(':'));area.replaceChildren(detail);};kind.addEventListener('change',update);update();group.append(kind,area);label(parent,t('Creation.Choice.'+c.id),group);return ()=>kind.value+':'+detail.value;

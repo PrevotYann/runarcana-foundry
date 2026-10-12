@@ -66,7 +66,8 @@
       "Resistance": "Second damage resistance",
       "Training": "Skill or Craft proficiency",
       "Specialty": "Map type, route, vehicle or card game",
-      "Weapon": "Weapon proficiency"
+      "Weapon": "Weapon proficiency",
+      "Language": "Additional common language"
     },
     "Import": {
       "Policy": "Preview before applying. Imports create native folders. Unedited copies can update; local edits and duplicates are skipped. Existing world copies require an explicit reimport after translation. A backup is stored for updates.",
@@ -231,7 +232,9 @@
       "AdditionalLanguage": "Regional language choice",
       "RegionalRules": "Published regional creation rules",
       "RegionReview": "No regional creation grants are described in the collected source. Review this region with the GM.",
-      "NativeRegionHint": "Runeborn gains these proficiencies only with the Native trait. Regional languages still require a communication trait."
+      "NativeRegionHint": "Runeborn gains these proficiencies only with the Native trait. Regional languages still require a communication trait.",
+      "OneExotic": "One exotic language",
+      "TwoCommon": "Two common languages"
     },
     "SkillTechnology": "Technology",
     "Craft": "Craft"

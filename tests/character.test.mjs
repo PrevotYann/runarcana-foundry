@@ -10,7 +10,7 @@ const docs=(await Promise.all((await fs.readdir('packs-src/release/origins')).ma
 const profiles=Object.fromEntries(docs.map(d=>[d.name,d.flags.runarcana.creation]));
 function selection(origin,variant) {
   const p=profiles[origin],v=p.variants.find(v=>v.name===variant),region=v?.region??p.region??'Ionia';
-  const choices={};for(const c of [...p.choices,...(v?.choices??[])])choices[c.id]=c.type==='option'?c.optional?'':c.options[0].id:c.type==='languages'?['Demacian']:c.type==='craft'?'Smithing':c.type==='proficiency'?'skill:ath':c.options[0];
+  const choices={};for(const c of [...p.choices,...(v?.choices??[])])choices[c.id]=c.type==='option'?c.optional?'':c.options[0].id:c.type==='languages'?['Celestial']:c.type==='craft'?'Smithing':c.type==='proficiency'?'skill:ath':c.options[0];
   const rules=REGIONAL_RULES[region],regional=rules?{skill:rules.skills[0],language:rules.languages.choices[0],activities:Object.fromEntries(rules.groups.map(g=>[g.id,Array.from({length:g.count},(_,i)=>{const weapons=EQUIPMENT_WEAPONS.filter(w=>regionalWeaponAllowed(w,g,region));return weapons[i]?{kind:'weapon',id:weapons[i].id}:{kind:'craft',id:g.crafts[i],specialty:'Smithing'};})]))}:undefined;
   return {abilities:Object.fromEntries(ABILITIES.map(k=>[k,10])),plusTwo:'str',plusOne:'con',variant:v?.id??'',size:(v?.sizes??p.sizes)[0],region,regionLanguage:REGIONS[region][0],regional,choices,armorMode:'light',runebornPower:'controlled',traits:[]};
 }

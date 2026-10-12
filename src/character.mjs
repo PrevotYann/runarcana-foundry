@@ -1,4 +1,5 @@
 import {applyRegionalChoices,REGIONAL_RULES} from './regional.mjs';
+import {ooviLanguages} from './languages.mjs';
 export const ABILITIES=['str','dex','con','int','wis','cha'];
 export const SKILLS=['acr','ani','arc','ath','dec','his','ins','itm','inv','med','nat','prc','prf','per','rel','slt','ste','sur','tec'];
 export const MARTIAL_WEAPONS=['battleaxe','blowgun','flail','glaive','greataxe','greatsword','halberd','handcrossbow','heavycrossbow','lance','longbow','longsword','maul','morningstar','pike','rapier','scimitar','shortsword','trident','warpick','warhammer','whip'];
@@ -42,7 +43,7 @@ export function characterPlan(profile,selection,{knownSkills={},knownCrafts=[]}=
     else if(c.type==='ability') {if(!c.options.includes(value))fail();p.castingAbility=value;}
     else if(c.type==='damage') {if(!c.options.includes(value))fail();p.resistance.push(value);}
     else if(c.type==='option') {const o=c.options.find(o=>o.id===value);if(!o)fail();p.selectedOptions.push(o);}
-    else if(c.type==='languages') {const v=array(value).map(s=>String(s).trim()).filter(Boolean);if(v.length!==1&&v.length!==2||new Set(v).size!==v.length)fail();p.languages.push(...v);}
+    else if(c.type==='languages') {const v=ooviLanguages(value,p.languages);if(!v)fail();p.languages.push(...v);}
     else if(c.type==='proficiency') {
       if(typeof value!=='string')fail();
       const [kind,...parts]=value.split(':');const key=parts.join(':');

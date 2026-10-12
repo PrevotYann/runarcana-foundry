@@ -28,6 +28,10 @@ def heritage_metadata(page,section):
     mechanics['Master Artisan']={'trainingChoice':{'count':1,'skills':[],'crafts':'all','expert':True}}
     mechanics['Hospitable']={'fixedCrafts':['cook']}
     mechanics['Cautious Traveler']['trainingChoice']={'count':1,'skills':[],'crafts':'guide'}
+    mechanics['Extrovert']['languageChoice']={'count':1,'category':'common'}
+    mechanics['Prodigy Musician']={'fixedCrafts':['artist-musician'],'craftExpertiseIfKnown':True}
+    if normalized(section['name']) in ['mountains shepherd','mountain s shepherd']:
+        mechanics[section['name']]={'skills':{'ani':1},'expertiseIfKnown':['ani'],'trainingChoice':{'count':1,'skills':[],'crafts':['guide-pilot','apothecary'],'specialtyOptions':{'guide-pilot':['Rickshaw','Cart','Wagon','Carriage','Horse','Motorbike','Car']}}}
     mechanics['Discipline is Strength']={'weaponChoice':{'kind':'any','distinct':True,'damagePicks':2}}
     mechanics['Ferromancer']={'weaponChoice':{'kind':'regionalMartial'}}
     mechanics['Weapon Scholar']={'weaponChoice':{'kind':'regional'}}
@@ -41,6 +45,12 @@ def heritage_metadata(page,section):
     return result
 
 def generate(pages,documents,root):
+    languages=[]
+    language_page=next(p for p in pages if p['url'].endswith('/detailing/languages/'))
+    for table in language_page['tables']:
+        category=next((kind for kind in ['common','exotic','dead'] if '#table-'+kind+'-languages' in table['id']),None)
+        if category:
+            for row in table['rows'][1:]:languages.append({'name':row[0],'category':category,'sourceUrl':language_page['url'],'sourceHash':language_page['sha256']})
     craft_catalog=[]
     abilities={'strength':'str','dexterity':'dex','constitution':'con','intelligence':'int','wisdom':'wis','charisma':'cha'}
     def ability(text):
@@ -156,4 +166,4 @@ def generate(pages,documents,root):
             names,categories,crafts=activities[p['title']];groups=[{'id':'activities','count':2,'weapons':ids(names),'categories':categories,'crafts':crafts}]
         regions[p['title']]={'name':p['title'],'sourceUrl':p['url'],'sourceHash':p['sha256'],'skills':skills,'languages':{'fixed':fixed,'choices':choices},'groups':groups,'sourceRules':'\n'.join(fields.values())}
     dest=root/'src/generated/character-options.mjs';dest.parent.mkdir(parents=True,exist_ok=True)
-    dest.write_text('// Generated from the collected official source snapshot.\nexport const REGIONAL_RULES='+json.dumps(regions,ensure_ascii=False,indent=2)+';\nexport const EQUIPMENT_WEAPONS='+json.dumps(sorted(weapons,key=lambda w:w['name']),ensure_ascii=False,indent=2)+';\nexport const CRAFTS='+json.dumps(sorted(craft_catalog,key=lambda c:c['name']),ensure_ascii=False,indent=2)+';\n',encoding='utf8')
+    dest.write_text('// Generated from the collected official source snapshot.\nexport const REGIONAL_RULES='+json.dumps(regions,ensure_ascii=False,indent=2)+';\nexport const EQUIPMENT_WEAPONS='+json.dumps(sorted(weapons,key=lambda w:w['name']),ensure_ascii=False,indent=2)+';\nexport const CRAFTS='+json.dumps(sorted(craft_catalog,key=lambda c:c['name']),ensure_ascii=False,indent=2)+';\nexport const LANGUAGES='+json.dumps(languages,ensure_ascii=False,indent=2)+';\n',encoding='utf8')

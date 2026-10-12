@@ -21,7 +21,7 @@ export function assertGM() {
 }
 export function createApi() {
   return Object.freeze({
-    version:game.modules?.get('runarcana')?.version??'0.10.0', manaCost,scaleDice,creatureStatistics,
+    version:game.modules?.get('runarcana')?.version??'0.11.0', manaCost,scaleDice,creatureStatistics,
     async enableActor(actor) {
       assertGM();
       if(!game.settings.get('runarcana','enabled'))throw new Error('RUNARCANA.Error.WorldDisabled');
@@ -122,7 +122,7 @@ export function createApi() {
       const context={...origin,level:actor.system.details.level,initial:!!actor.getFlag('runarcana','creationDraft')&&!actor.getFlag('runarcana','creationComplete')&&actor.system.details.level<=1,classes:actor.items.filter(i=>i.type==='class').map(i=>i.system?.identifier??i.name),abilities:Object.fromEntries(Object.entries(actor.system.abilities).map(([k,v])=>[k,v.value])),pool,existingNames:actor.items.map(i=>i.getFlag?.('runarcana','heritageRules')?.name??i.getFlag?.('runarcana','canonicalId')?.split('#')[1]??i.name)};
       const choices=[],errors=[],manual=[],mechanicalErrors=[];
       context.weaponProficiencies=[...explicitWeaponProficiencies(actor,origin)];
-      const trainingContext={...origin,skills:Object.fromEntries(Object.entries(actor.system.skills??{}).map(([k,v])=>[k,v.value])),crafts:knownCrafts(actor.items)};
+      const trainingContext={...origin,skills:Object.fromEntries(Object.entries(actor.system.skills??{}).map(([k,v])=>[k,v.value])),crafts:knownCrafts(actor.items),languages:[...(origin.languages??[]),...(actor.system.traits?.languages?.value??[]),...(actor.system.traits?.languages?.custom??'').split(';').map(s=>s.trim()).filter(Boolean)]};
       for(const row of plan.choices){
         const source=await fromUuid(row.uuid),rules=source?.getFlag('runarcana','heritageRules');
         const sourceId=source?.getFlag('runarcana','canonicalId');if(source?.type!=='feat'||rules?.schema!==1||!sourceId)throw new Error('RUNARCANA.Error.Source');
@@ -132,6 +132,7 @@ export function createApi() {
         for(const item of actor.items)if((item.getFlag?.('runarcana','canonicalId')??item.flags?.runarcana?.canonicalId)===sourceId){const weapon=item.getFlag?.('runarcana','heritageSelection')?.weapon??item.flags?.runarcana?.heritageSelection?.weapon;if(weapon)trainingContext.previousWeapons.push(weapon);}
         const selection=heritageOptions(rules,row.options,trainingContext);errors.push(...selection.errors);mechanicalErrors.push(...selection.errors);
         if(selection.valid){
+          trainingContext.languages.push(...(selection.options.languages??[]));
           for(const effect of heritageEffects(rules,{skills:trainingContext.skills,options:selection.options,context:{region:origin.region}}))for(const change of effect.system.changes){const match=change.key.match(/^system\.skills\.([a-z]+)\.value$/);if(match)trainingContext.skills[match[1]]=Math.max(trainingContext.skills[match[1]]??0,Number(change.value));if(change.key==='system.traits.weaponProf.value'&&!context.weaponProficiencies.includes(change.value))context.weaponProficiencies.push(change.value);}
           for(const tool of heritageTools(rules,selection.options,{known:trainingContext.crafts}))trainingContext.crafts.push({id:tool.flags.runarcana.craftId,specialty:tool.flags.runarcana.craftSpecialty,multiplier:tool.system.proficient});
         }

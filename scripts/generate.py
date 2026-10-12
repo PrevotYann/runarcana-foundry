@@ -89,7 +89,7 @@ def spell(page):
     if not fields: return
     text=BeautifulSoup(page['html'],'html.parser').get_text(' ',strip=True)
     published_level=fields.get('Level','');number=re.search(r'\d+',published_level)
-    if published_level.casefold()=='cantrip':level=0
+    if re.match(r'^cantrip\b',published_level,re.I):level=0
     elif number and 0<=int(number[0])<=9:level=int(number[0])
     else:raise ValueError(f'Unrecognized spell level: {page["id"]}: {published_level}')
     key=page['id']
@@ -97,6 +97,7 @@ def spell(page):
     system.update(level=level,school='',properties=[],method='spell',prepared=0)
     components=fields.get('Components','')
     system['properties']=[v for k,v in [('V','vocal'),('S','somatic'),('M','material')] if re.search(r'\b'+k+r'\b',components)]
+    if re.search(r'\britual\b',published_level,re.I):system['properties'].append('ritual')
     duration=fields.get('Duration',''); concentration='concentration' in duration.lower()
     if concentration: system['properties'].append('concentration')
     match=re.search(r'(\d+)\s*(round|minute|hour|day)s?',duration,re.I)
