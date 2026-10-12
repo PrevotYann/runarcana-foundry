@@ -8,10 +8,11 @@
     "Namespaced rule API and opt-in V14 workbench",
     "Conservative world importer",
     "Babele templates/converters and static/unit validations",
-    "Authorized content included in all 26 public compendiums"
+    "Authorized content included in all 26 public compendiums",
+    "Source-backed character creation and repeatable origin customization with validated choices"
   ],
   "inProgress": [
-    "Complete source collection and compendium text import; further mechanical logic deferred by maintainer"
+    "Complete source collection; finish conditional origin mechanics and runtime validation"
   ],
   "blocked": [
     "Wiki HTTP 429 rate limiting: use slow resumes/local export",
@@ -20,14 +21,14 @@
   "next": [
     "Resume collector with --delay 12 --priority-core --priority-part 4",
     "Normalize collected pages and rebuild content compendiums",
-    "Review partial mechanics after the text import is complete",
+    "Finish source-driven origin conditional effects; other mechanics remain deferred",
     "Run clean V14 runtime/Babele/two-client checks"
   ],
   "snapshot": {
     "discoveredPages": 899,
-    "collectedPages": 396,
-    "missingPages": 503,
-    "documents": 5573,
+    "collectedPages": 455,
+    "missingPages": 444,
+    "documents": 6532,
     "runtimeVerified": false
   }
 }

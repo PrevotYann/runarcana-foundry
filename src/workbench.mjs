@@ -1,4 +1,5 @@
 import {isMarked} from './api.mjs';
+import {renderCharacterForm} from './character-form.mjs';
 
 const t=key=>game.i18n.localize('RUNARCANA.'+key);
 const el=(tag,text,cls)=>{const node=document.createElement(tag);if(text!==undefined)node.textContent=text;if(cls)node.className=cls;return node;};
@@ -18,31 +19,15 @@ export class Workbench extends foundry.applications.api.ApplicationV2 {
     if(!game.modules.get('runarcana').api){root.append(el('p',t('Error.Version')));return root;}
     if(this.mode==='catalog')await this.catalog(root);
     if(this.mode==='creation')await this.creationPanel(root);
+    if(this.mode==='customization')await this.creationPanel(root,this.actor);
     if(this.mode==='actor')await this.actorPanel(root);
     if(this.mode==='import')await this.importPanel(root);
     if(this.mode==='creature')await this.creaturePanel(root);
     return root;
   }
   _replaceHTML(result,content){content.replaceChildren(result);}
-  async creationPanel(root) {
-    root.append(el('p',t('Creation.Hint')));
-    const form=el('div',undefined,'runarcana-form');
-    const name=field(form,'Creature.Name',input('text',''));
-    const origin=field(form,'Creation.Origin',select([['',t('Creation.Select')]]));
-    const cls=field(form,'Creation.Class',select([['',t('Creation.Select')]]));
-    for(const [packName,control]of [['origins',origin],['classes',cls]]) {
-      const pack=game.packs.get('runarcana.'+packName);
-      if(pack)for(const row of await pack.getIndex()) {const o=el('option',row.name);o.value=`Compendium.runarcana.${packName}.Item.${row._id}`;control.append(o);}
-    }
-    const scores={};
-    for(const ability of ['str','dex','con','int','wis','cha'])scores[ability]=field(form,'Creation.'+ability,input('number',10));
-    const output=el('p');let preview;
-    form.append(button('Preview',()=>{
-      if(!name.value||!origin.value||!cls.value)throw new Error('RUNARCANA.Error.Choices');
-      preview={name:name.value,originUuid:origin.value,classUuid:cls.value,abilities:Object.fromEntries(Object.entries(scores).map(([k,v])=>[k,Number(v.value)]))};
-      output.textContent=`${preview.name}: ${origin.selectedOptions[0].textContent}, ${cls.selectedOptions[0].textContent}; ${Object.entries(preview.abilities).map(([k,v])=>k.toUpperCase()+': '+v).join(', ')}`;
-    }),button('Creation.Create',async()=>{if(!preview)throw new Error('RUNARCANA.Error.Preview');this.actor=await game.modules.get('runarcana').api.beginCharacter(preview);}));
-    root.append(form,output);
+  async creationPanel(root,actor) {
+    await renderCharacterForm(root,{actor,onCreated:async a=>{this.actor=a;this.mode='actor';await this.render(true);}});
   }
   async catalog(root) {
     const packs=[...game.packs].filter(p=>p.metadata.packageName==='runarcana');
@@ -78,7 +63,7 @@ export class Workbench extends foundry.applications.api.ApplicationV2 {
     for(const type of ['race','background','class','subclass']){
       summary.append(el('dt',game.i18n.localize('TYPES.Item.'+type)),el('dd',actor.items.filter(i=>i.type===type).map(i=>`${i.name}${i.type==='class'?` (${i.system.levels})`:''}`).join(', ')));
     }
-    root.append(summary);
+    root.append(summary,button('Creation.Customize',()=>{this.mode='customization';return this.render(true);}));
     for(const [id,r]of Object.entries(actor.getFlag('runarcana','resources')??{})) {
       const row=el('div',undefined,'runarcana-resource');row.append(el('span',`${r.label??id}: ${r.value}/${r.max}`),button('SpendOne',async()=>{await api.spendResource(actor,id,1,{operationId:crypto.randomUUID()});this.render(true);}));root.append(row);
     }

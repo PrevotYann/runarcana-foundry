@@ -39,3 +39,12 @@ test('unmarked actors keep native rests and damage',()=>{
   hooks.get('dnd5e.preCalculateDamage')(actor,parts,options);
   assert.deepEqual(parts,[{type:'fire',value:15}]);assert.deepEqual(options,{});
 });
+test('Alnuk damage reduction respects multipliers, true damage and an explicit GM bypass',()=>{
+  const hooks=new Map();globalThis.Hooks={on:(name,fn)=>hooks.set(name,fn)};
+  globalThis.CONFIG={DND5E:{activityConsumptionTypes:{},damageTypes:{},healingTypes:{healing:{}}}};
+  globalThis.game={settings:{get:()=>true}};installDnd5eAdapter();
+  const actor={system:{abilities:{str:{mod:3}}},getFlag:(scope,key)=>key==='enabled'?true:key==='originSelection'?{plan:{strengthReduction:true}}:undefined};
+  const damage=[{type:'fire',value:10},{type:'true',value:10},{type:'healing',value:10}],options={multiplier:2};
+  hooks.get('dnd5e.preCalculateDamage')(actor,damage,options);assert.equal(damage[0].value*options.multiplier,17);assert.equal(damage[1].value,10);assert.equal(damage[2].value,10);
+  const bypass=[{type:'fire',value:10}];hooks.get('dnd5e.preCalculateDamage')(actor,bypass,{runarcana:{ignoreOriginReduction:true}});assert.equal(bypass[0].value,10);
+});

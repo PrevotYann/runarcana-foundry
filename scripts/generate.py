@@ -160,8 +160,10 @@ def class_origin(page):
     text=BeautifulSoup(page['html'],'html.parser').get_text(' ',strip=True)
     if typ=='race':origin_advancements(page,doc)
     if typ=='class':
-        match=re.search(r'Hit Dice:?\s*1d(\d+)',text,re.I)
-        if match: doc['system']['hd']={'denomination':'d'+match[1],'spent':0}
+        match=re.search(r'Hit Dice\s*:?\s*1d(\d+)',text,re.I)
+        if match:
+            doc['system']['hd']={'denomination':'d'+match[1],'spent':0}
+            doc['system']['advancement'].append({'_id':uid(key+'@hit-points'),'type':'HitPoints','configuration':{},'value':{}})
         doc['system']['levels']=1
         doc['system']['spellcasting']={'progression':'none','ability':''}
         progression=next((t['rows'] for t in page['tables'] if t['rows'] and t['rows'][0][0].lower()=='level' and len(t['rows'])>=20),[])
@@ -241,14 +243,17 @@ def origin_advancements(page,doc):
             m=re.search(r'(?:have|receive)\s+(\d+)\s+(?:Origin |Region )?Heritage points?',text,re.I)
             if m:doc['flags']['runarcana']['initial'+name+'Points']=int(m[1])
     if grants:doc['system']['advancement'].append({'_id':uid(key+'@origin-grants'),'type':'ItemGrant','level':0,'title':'Origin features','configuration':{'items':[{'uuid':u,'optional':False} for u in grants],'optional':False},'value':{}})
-    pools={'Antroplantae':'lineages','Chireans':'colonies','Construct':'models','Half-Dragon':'draconic-essences','Troll':'pack','Vastaya':'tribes','Yordle':'cradle'}
-    heading=pools.get(page['title']);variants=[]
+    from origins import POOLS, creation, variant
+    heading=POOLS.get(page['title']);variants=[];profiles=[]
     for s in page['sections']:
         if not heading or s['level']!=3 or s.get('parentH2')!=heading:continue
         feat=item(s['name'],'feat',s['html']);feat['system']['type']={'value':'race','subtype':''}
         feat['flags']=provenance(page,s['id']);feat['flags']['runarcana'].update(originVariant=True,manualEffects=True,requiresReview=True)
-        variants.append(add('features',feat,s['id'],page,folder('features',key+'@variants',page['title']+' variants')))
+        u=add('features',feat,s['id'],page,folder('features',key+'@variants',page['title']+' variants'))
+        variants.append(u);profiles.append(variant(page,s,u))
     if variants:doc['system']['advancement'].append({'_id':uid(key+'@variant-choice'),'type':'ItemChoice','title':heading.replace('-',' ').title(),'configuration':{'allowDrops':False,'type':'feat','choices':{'0':{'count':1,'replacement':False}},'pool':[{'uuid':u} for u in variants],'restriction':{'type':'race'}},'value':{}})
+    doc['flags']['runarcana']['creation']=creation(page,profiles)
+    doc['flags']['runarcana']['manualAttributeAllocation']=False
 def npc(page,cr):
     key=cr['id']; stats=cr['vitals']; tags=cr['tags']; extra=cr['extra']
     num=number

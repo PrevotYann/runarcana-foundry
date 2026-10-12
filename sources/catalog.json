@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "collectedAt": "2026-10-11T15:35:16.219358+00:00",
+  "collectedAt": "2026-10-11T15:55:28.516724+00:00",
   "discoveryComplete": false,
   "pages": [
     {
@@ -18285,9 +18285,16 @@
       "part": 2,
       "language": "en",
       "anchors": [],
-      "status": "pending",
+      "status": "collected",
       "attemptedAt": "2026-10-11T14:05:31.983681+00:00",
-      "cacheAvailable": false
+      "cacheAvailable": false,
+      "resolvedUrl": "https://wiki.runarcana.org/en/magic/spells/acid-arrow/",
+      "collectedAt": "2026-10-11T15:54:38.314952+00:00",
+      "sha256": "cea673aa6b7a4ddd552e42269cf9f53b482a1e3bb19067c511a4e1a8fc54337f",
+      "cache": "sources/cache/b06aa536b5297850f2a6cba1398a6ff8f89dde959cc45d40b4e361f232160042.html",
+      "title": "Acid Arrow",
+      "rulesVersion": null,
+      "wikiBuild": "0.157"
     },
     {
       "id": "/en/magic/spells/acid-splash/",
@@ -18369,9 +18376,16 @@
       "part": 2,
       "language": "en",
       "anchors": [],
-      "status": "pending",
+      "status": "collected",
       "attemptedAt": "2026-10-11T14:05:32.155243+00:00",
-      "cacheAvailable": false
+      "cacheAvailable": false,
+      "resolvedUrl": "https://wiki.runarcana.org/en/magic/spells/alter-self/",
+      "collectedAt": "2026-10-11T15:54:50.783212+00:00",
+      "sha256": "a0417261c893cdc3ccf199fda182fbf4e1014d6932a212487d0cf0fe5aeb8326",
+      "cache": "sources/cache/f3a2742e6fb83e95a76d771c9928f632a197fc2e80298eec8ae822030f5f40b2.html",
+      "title": "Alter Self",
+      "rulesVersion": null,
+      "wikiBuild": "0.157"
     },
     {
       "id": "/en/magic/spells/animal-friendship/",
@@ -18469,9 +18483,16 @@
       "part": 2,
       "language": "en",
       "anchors": [],
-      "status": "pending",
+      "status": "collected",
       "attemptedAt": "2026-10-11T14:05:32.233484+00:00",
-      "cacheAvailable": false
+      "cacheAvailable": false,
+      "resolvedUrl": "https://wiki.runarcana.org/en/magic/spells/arcane-eye/",
+      "collectedAt": "2026-10-11T15:55:03.418879+00:00",
+      "sha256": "4a63a7944a713d1551b9a1e7d83276de0a4800582071bdc03a491a6784361785",
+      "cache": "sources/cache/08a10760b3f1f3b377770c89dc1bbc892a17d3acde733e7a8a680b568a3ea3fe.html",
+      "title": "Arcane Eye",
+      "rulesVersion": null,
+      "wikiBuild": "0.157"
     },
     {
       "id": "/en/magic/spells/arcane-hand/",
@@ -18697,9 +18718,16 @@
       "part": 2,
       "language": "en",
       "anchors": [],
-      "status": "pending",
+      "status": "collected",
       "attemptedAt": "2026-10-11T14:05:32.478428+00:00",
-      "cacheAvailable": false
+      "cacheAvailable": false,
+      "resolvedUrl": "https://wiki.runarcana.org/en/magic/spells/banishment/",
+      "collectedAt": "2026-10-11T15:55:16.067556+00:00",
+      "sha256": "0654c39e92041505f9e72899551483ab909a459442af142d85aa1a858f4cbcc4",
+      "cache": "sources/cache/f584f55a02b5c366743e821cbe09b57338cbab80f744f683102d94eff92ce5f3.html",
+      "title": "Banishment",
+      "rulesVersion": null,
+      "wikiBuild": "0.157"
     },
     {
       "id": "/en/magic/spells/banshee-wail/",
@@ -18754,9 +18782,10 @@
       "part": 2,
       "language": "en",
       "anchors": [],
-      "status": "pending",
-      "attemptedAt": "2026-10-11T14:05:32.517303+00:00",
-      "cacheAvailable": false
+      "status": "source-unavailable",
+      "attemptedAt": "2026-10-11T15:55:28.516624+00:00",
+      "cacheAvailable": false,
+      "error": "HTTP Error 429: Too Many Requests"
     },
     {
       "id": "/en/magic/spells/bend-metal/",
@@ -21539,10 +21568,16 @@
       "part": 2,
       "language": "en",
       "anchors": [],
-      "status": "source-unavailable",
+      "status": "collected",
       "attemptedAt": "2026-10-11T14:44:37.321686+00:00",
       "cacheAvailable": false,
-      "error": "HTTP Error 429: Too Many Requests"
+      "resolvedUrl": "https://wiki.runarcana.org/en/magic/spells/incendium/",
+      "collectedAt": "2026-10-11T15:51:28.154278+00:00",
+      "sha256": "5a7bcf059cc78e3811504d4943796153372b6095242e5e22ae8b5e320d63026a",
+      "cache": "sources/cache/c99dca09c7e90a8f530f8c640d3a5d48dd3063cb8489e76df7048435ed8979a6.html",
+      "title": "Incendium",
+      "rulesVersion": null,
+      "wikiBuild": "0.157"
     },
     {
       "id": "/en/magic/spells/inception/",
@@ -21550,9 +21585,16 @@
       "part": 2,
       "language": "en",
       "anchors": [],
-      "status": "pending",
+      "status": "collected",
       "attemptedAt": "2026-10-11T14:05:35.555415+00:00",
-      "cacheAvailable": false
+      "cacheAvailable": false,
+      "resolvedUrl": "https://wiki.runarcana.org/en/magic/spells/inception/",
+      "collectedAt": "2026-10-11T15:51:40.868957+00:00",
+      "sha256": "d984c3bf263cac112e54e22cf08c4be931a912151bafd60a8087d81dcd16fb48",
+      "cache": "sources/cache/43bbd3e2f6e4dd97698678e797b72537c48f586afb04d310b4cfb29aa5942234.html",
+      "title": "Inception",
+      "rulesVersion": null,
+      "wikiBuild": "0.157"
     },
     {
       "id": "/en/magic/spells/infernal-blessing/",
@@ -21952,9 +21994,16 @@
       "part": 2,
       "language": "en",
       "anchors": [],
-      "status": "pending",
+      "status": "collected",
       "attemptedAt": "2026-10-11T14:05:35.989424+00:00",
-      "cacheAvailable": false
+      "cacheAvailable": false,
+      "resolvedUrl": "https://wiki.runarcana.org/en/magic/spells/mage-hand/",
+      "collectedAt": "2026-10-11T15:51:53.510678+00:00",
+      "sha256": "729945bea97281495208c9922240885ca62b18ca24ca157fde9b357808297467",
+      "cache": "sources/cache/6915d89dc3395989b7ebdd9775f52148634c22ce565f024b0b187094aa5bb0ee.html",
+      "title": "Mage Hand",
+      "rulesVersion": null,
+      "wikiBuild": "0.157"
     },
     {
       "id": "/en/magic/spells/magic-circle/",
@@ -22730,9 +22779,16 @@
       "part": 2,
       "language": "en",
       "anchors": [],
-      "status": "pending",
+      "status": "collected",
       "attemptedAt": "2026-10-11T14:05:36.689458+00:00",
-      "cacheAvailable": false
+      "cacheAvailable": false,
+      "resolvedUrl": "https://wiki.runarcana.org/en/magic/spells/pyroclasm/",
+      "collectedAt": "2026-10-11T15:52:06.166468+00:00",
+      "sha256": "31aacd675324b722ed2c93296a4975f9ced10d42650254f4743b3741f07c445b",
+      "cache": "sources/cache/75449e88e22679e9d9c5d8a75309de13287fea9c390522f8e27411f279581917.html",
+      "title": "Pyroclasm",
+      "rulesVersion": null,
+      "wikiBuild": "0.157"
     },
     {
       "id": "/en/magic/spells/ray-of-sickness/",
@@ -22991,9 +23047,16 @@
       "part": 2,
       "language": "en",
       "anchors": [],
-      "status": "pending",
+      "status": "collected",
       "attemptedAt": "2026-10-11T14:05:36.898968+00:00",
-      "cacheAvailable": false
+      "cacheAvailable": false,
+      "resolvedUrl": "https://wiki.runarcana.org/en/magic/spells/sanctuary/",
+      "collectedAt": "2026-10-11T15:52:18.798845+00:00",
+      "sha256": "8e79b5262bbd143db7a4a1029a8a5bf7f7fb611a92a49ce75eeeb34ad75516c6",
+      "cache": "sources/cache/0526923c06462c28ba0bd4ceb4e8249e44a1f51f58c84b95a5f3290d9479286b.html",
+      "title": "Sanctuary",
+      "rulesVersion": null,
+      "wikiBuild": "0.157"
     },
     {
       "id": "/en/magic/spells/sand-arc/",
@@ -23078,9 +23141,16 @@
       "part": 2,
       "language": "en",
       "anchors": [],
-      "status": "pending",
+      "status": "collected",
       "attemptedAt": "2026-10-11T14:05:36.972188+00:00",
-      "cacheAvailable": false
+      "cacheAvailable": false,
+      "resolvedUrl": "https://wiki.runarcana.org/en/magic/spells/sandstorm/",
+      "collectedAt": "2026-10-11T15:52:31.463287+00:00",
+      "sha256": "015dbc7abca226f46b2bca3044a26675a1bebf2ee8620fa0cac3b948cd4f3898",
+      "cache": "sources/cache/dc7f00df46444e4be4be6015ebbc651206d73248aaf26c30e92d503f5456cd42.html",
+      "title": "Sandstorm",
+      "rulesVersion": null,
+      "wikiBuild": "0.157"
     },
     {
       "id": "/en/magic/spells/sanguine-pool/",
@@ -23219,9 +23289,16 @@
       "part": 2,
       "language": "en",
       "anchors": [],
-      "status": "pending",
+      "status": "collected",
       "attemptedAt": "2026-10-11T14:05:37.078386+00:00",
-      "cacheAvailable": false
+      "cacheAvailable": false,
+      "resolvedUrl": "https://wiki.runarcana.org/en/magic/spells/sequester/",
+      "collectedAt": "2026-10-11T15:52:44.153466+00:00",
+      "sha256": "01583285b2e3f2c9159962ab09a52e6cbc6c8e85a43b0e3d1bea1c841947530c",
+      "cache": "sources/cache/5992197e07fbbf50237434381871f2af971e1c0480fdeee162f49c3829d77484.html",
+      "title": "Sequester",
+      "rulesVersion": null,
+      "wikiBuild": "0.157"
     },
     {
       "id": "/en/magic/spells/shackles-of-the-soul/",
@@ -23396,9 +23473,16 @@
       "part": 2,
       "language": "en",
       "anchors": [],
-      "status": "pending",
+      "status": "collected",
       "attemptedAt": "2026-10-11T14:05:37.199307+00:00",
-      "cacheAvailable": false
+      "cacheAvailable": false,
+      "resolvedUrl": "https://wiki.runarcana.org/en/magic/spells/shrapnels/",
+      "collectedAt": "2026-10-11T15:52:56.832798+00:00",
+      "sha256": "a03391528342ff447e62f3252cd3c28e280da6246dc26b453241dafb37e0ddd0",
+      "cache": "sources/cache/f735b88a593eceeaee422d8189c1ef16c25fff8ac2fa1cbb71d441914431c047.html",
+      "title": "Shrapnels",
+      "rulesVersion": null,
+      "wikiBuild": "0.157"
     },
     {
       "id": "/en/magic/spells/silence/",
@@ -23719,9 +23803,16 @@
       "part": 2,
       "language": "en",
       "anchors": [],
-      "status": "pending",
+      "status": "collected",
       "attemptedAt": "2026-10-11T14:05:37.485643+00:00",
-      "cacheAvailable": false
+      "cacheAvailable": false,
+      "resolvedUrl": "https://wiki.runarcana.org/en/magic/spells/stoneskin/",
+      "collectedAt": "2026-10-11T15:53:09.509352+00:00",
+      "sha256": "a8b6f05d6e72e5d765916f3d90f1e2718bf38bd10890529918f5eb076318aefa",
+      "cache": "sources/cache/2f92380babacebc6521373ce0270e03a102294077be01e94d4ae5821cf62c48c.html",
+      "title": "Stoneskin",
+      "rulesVersion": null,
+      "wikiBuild": "0.157"
     },
     {
       "id": "/en/magic/spells/storm-devourer/",
@@ -23896,9 +23987,16 @@
       "part": 2,
       "language": "en",
       "anchors": [],
-      "status": "pending",
+      "status": "collected",
       "attemptedAt": "2026-10-11T14:05:37.666934+00:00",
-      "cacheAvailable": false
+      "cacheAvailable": false,
+      "resolvedUrl": "https://wiki.runarcana.org/en/magic/spells/telepathy/",
+      "collectedAt": "2026-10-11T15:53:22.187582+00:00",
+      "sha256": "a8e27985c49512bb7d338a51657f7b3113c9921961f2794a15bd2c9b01e6e3e0",
+      "cache": "sources/cache/eface68677dc99d64d77a87a7e1f70a30566296f935d2c18b509180130f09419.html",
+      "title": "Telepathy",
+      "rulesVersion": null,
+      "wikiBuild": "0.157"
     },
     {
       "id": "/en/magic/spells/teleport/",
@@ -23933,9 +24031,16 @@
       "part": 2,
       "language": "en",
       "anchors": [],
-      "status": "pending",
+      "status": "collected",
       "attemptedAt": "2026-10-11T14:05:37.695487+00:00",
-      "cacheAvailable": false
+      "cacheAvailable": false,
+      "resolvedUrl": "https://wiki.runarcana.org/en/magic/spells/terralogy/",
+      "collectedAt": "2026-10-11T15:53:34.873020+00:00",
+      "sha256": "fd7045c7e3da022df7c0f21c2eae301ed6b3658117466b0822e989cba70e1c8f",
+      "cache": "sources/cache/dbdafafca410bbfade96cecf6f42fbd8e700b5c2f8cffc0d0835934376526a9d.html",
+      "title": "Terralogy",
+      "rulesVersion": null,
+      "wikiBuild": "0.157"
     },
     {
       "id": "/en/magic/spells/terrify/",
@@ -24010,9 +24115,16 @@
       "part": 2,
       "language": "en",
       "anchors": [],
-      "status": "pending",
+      "status": "collected",
       "attemptedAt": "2026-10-11T14:05:37.755873+00:00",
-      "cacheAvailable": false
+      "cacheAvailable": false,
+      "resolvedUrl": "https://wiki.runarcana.org/en/magic/spells/time-bomb/",
+      "collectedAt": "2026-10-11T15:53:47.514235+00:00",
+      "sha256": "a52a380639acd79b387f9869822f106703d6f8b1bd6412c1ed629e2144aa3f82",
+      "cache": "sources/cache/f341eeccf876600c9d575b38e563b2da949dab87e0bbeac18aece4a0a9a34bec.html",
+      "title": "Time Bomb",
+      "rulesVersion": null,
+      "wikiBuild": "0.157"
     },
     {
       "id": "/en/magic/spells/time-bubble/",
@@ -24030,9 +24142,16 @@
       "part": 2,
       "language": "en",
       "anchors": [],
-      "status": "pending",
+      "status": "collected",
       "attemptedAt": "2026-10-11T14:05:37.772302+00:00",
-      "cacheAvailable": false
+      "cacheAvailable": false,
+      "resolvedUrl": "https://wiki.runarcana.org/en/magic/spells/time-stop/",
+      "collectedAt": "2026-10-11T15:54:00.267906+00:00",
+      "sha256": "936f8954ad868f4a9f05183356372e8daebc4bc0734c6753bc4316cc2ee6c2d9",
+      "cache": "sources/cache/4241834d8c85ab717a87609bcbb8416f34a75e9d0ac563cbafb57049cb91a495.html",
+      "title": "Time Stop",
+      "rulesVersion": null,
+      "wikiBuild": "0.157"
     },
     {
       "id": "/en/magic/spells/torn-memory/",
@@ -24334,9 +24453,16 @@
       "part": 2,
       "language": "en",
       "anchors": [],
-      "status": "pending",
+      "status": "collected",
       "attemptedAt": "2026-10-11T14:05:38.036016+00:00",
-      "cacheAvailable": false
+      "cacheAvailable": false,
+      "resolvedUrl": "https://wiki.runarcana.org/en/magic/spells/water-jet/",
+      "collectedAt": "2026-10-11T15:54:12.944612+00:00",
+      "sha256": "7d430c36d4dc0cb21338390e19425f9707aeee6aeebfbe9fed48a6c678e3d998",
+      "cache": "sources/cache/61f1cc469b857a5a0fe55625ef3265b3f5791d89f14b07e2132d83e7a54326a5.html",
+      "title": "Water Jet",
+      "rulesVersion": null,
+      "wikiBuild": "0.157"
     },
     {
       "id": "/en/magic/spells/water-walk/",
@@ -24407,9 +24533,16 @@
       "part": 2,
       "language": "en",
       "anchors": [],
-      "status": "pending",
+      "status": "collected",
       "attemptedAt": "2026-10-11T14:05:38.125967+00:00",
-      "cacheAvailable": false
+      "cacheAvailable": false,
+      "resolvedUrl": "https://wiki.runarcana.org/en/magic/spells/wind-walk/",
+      "collectedAt": "2026-10-11T15:54:25.621132+00:00",
+      "sha256": "142e6eb8d975576455061cc3c1ad7f100b54a30bd890243586467f49576e8438",
+      "cache": "sources/cache/619a790dab1e2bf102f2a47f8fca863dae9559a9d75dbeab11777945ba27962e.html",
+      "title": "Wind Walk",
+      "rulesVersion": null,
+      "wikiBuild": "0.157"
     },
     {
       "id": "/en/magic/spells/wish/",
@@ -25810,9 +25943,16 @@
       "part": 4,
       "language": "en",
       "anchors": [],
-      "status": "pending",
+      "status": "collected",
       "attemptedAt": "2026-10-11T14:05:38.594284+00:00",
-      "cacheAvailable": false
+      "cacheAvailable": false,
+      "resolvedUrl": "https://wiki.runarcana.org/en/monsters-and-creatures/creatures/arachnid-brood-spawn/",
+      "collectedAt": "2026-10-11T15:50:12.078742+00:00",
+      "sha256": "3b0ec06bcd27412c2f6b0b3fb519afca2611763269f712b63d9eb886787c0dfa",
+      "cache": "sources/cache/1ccb8de987f7aec7317ee54628139607a735a59df76582216892ab4da8803b74.html",
+      "title": "Arachnid Brood Spawn",
+      "rulesVersion": null,
+      "wikiBuild": "0.157"
     },
     {
       "id": "/en/monsters-and-creatures/creatures/arachnid-terror/",
@@ -25820,29 +25960,87 @@
       "part": 4,
       "language": "en",
       "anchors": [],
-      "status": "pending",
+      "status": "collected",
       "attemptedAt": "2026-10-11T14:05:38.603046+00:00",
-      "cacheAvailable": false
+      "cacheAvailable": false,
+      "resolvedUrl": "https://wiki.runarcana.org/en/monsters-and-creatures/creatures/arachnid-terror/",
+      "collectedAt": "2026-10-11T15:43:52.305667+00:00",
+      "sha256": "f5156cc6b1df6461d72b4d7392819b675ae85745543253e3ed7cd33e4209fea5",
+      "cache": "sources/cache/61cd2d93e2bae308657bf1586df650b50d9579039460d100cf67cc08ded2746b.html",
+      "title": "Arachnid Terror",
+      "rulesVersion": null,
+      "wikiBuild": "0.157"
     },
     {
       "id": "/en/monsters-and-creatures/creatures/arachnid-watcher/",
       "url": "https://wiki.runarcana.org/en/monsters-and-creatures/creatures/arachnid-watcher/",
       "part": 4,
       "language": "en",
-      "anchors": [],
-      "status": "pending",
+      "anchors": [
+        {
+          "id": "rewards",
+          "title": "Rewards",
+          "level": 2
+        },
+        {
+          "id": "venom",
+          "title": "Venom",
+          "level": 3
+        },
+        {
+          "id": "venom-effects",
+          "title": "Venom Effects",
+          "level": 4
+        },
+        {
+          "id": "arachnid-watcher-statblock",
+          "title": "Arachnid Watcher Statblock",
+          "level": 2
+        }
+      ],
+      "status": "collected",
       "attemptedAt": "2026-10-11T14:05:38.612169+00:00",
-      "cacheAvailable": false
+      "cacheAvailable": false,
+      "resolvedUrl": "https://wiki.runarcana.org/en/monsters-and-creatures/creatures/arachnid-watcher/",
+      "collectedAt": "2026-10-11T15:45:58.915425+00:00",
+      "sha256": "3dcfa53db72d979e1a0c49dc368c39ebfb2f525e3e37f469506f43100992e415",
+      "cache": "sources/cache/2bde79028c6074f265e07d5090e2c76766d6b06ea00bf5ad67fc1ec815b7b953.html",
+      "title": "Arachnid Watcher",
+      "rulesVersion": null,
+      "wikiBuild": "0.157"
     },
     {
       "id": "/en/monsters-and-creatures/creatures/armored-tuskbeast-mount/",
       "url": "https://wiki.runarcana.org/en/monsters-and-creatures/creatures/armored-tuskbeast-mount/",
       "part": 4,
       "language": "en",
-      "anchors": [],
-      "status": "pending",
+      "anchors": [
+        {
+          "id": "armored-tuskbeast-statblocks",
+          "title": "Armored Tuskbeast Statblocks",
+          "level": 2
+        },
+        {
+          "id": "warrior",
+          "title": "Warrior",
+          "level": 3
+        },
+        {
+          "id": "war-beast",
+          "title": "War Beast",
+          "level": 3
+        }
+      ],
+      "status": "collected",
       "attemptedAt": "2026-10-11T14:05:38.622115+00:00",
-      "cacheAvailable": false
+      "cacheAvailable": false,
+      "resolvedUrl": "https://wiki.runarcana.org/en/monsters-and-creatures/creatures/armored-tuskbeast-mount/",
+      "collectedAt": "2026-10-11T15:51:02.823180+00:00",
+      "sha256": "9ca22bfaeff740433f4ed8a488046e25bc72979a37c3f423d97bebfb9343b6fe",
+      "cache": "sources/cache/043f34301ea37eeaa5e70ef4fa738bc9aa73aa108e281d640fbc4e4ad0321d02.html",
+      "title": "Armored Tuskbeast",
+      "rulesVersion": null,
+      "wikiBuild": "0.157"
     },
     {
       "id": "/en/monsters-and-creatures/creatures/azurite-eagle/",
@@ -26259,10 +26457,23 @@
       "url": "https://wiki.runarcana.org/en/monsters-and-creatures/creatures/camouflaged-horror/",
       "part": 4,
       "language": "en",
-      "anchors": [],
-      "status": "pending",
+      "anchors": [
+        {
+          "id": "camouflaged-horror-statblock",
+          "title": "Camouflaged Horror Statblock",
+          "level": 2
+        }
+      ],
+      "status": "collected",
       "attemptedAt": "2026-10-11T14:05:38.757067+00:00",
-      "cacheAvailable": false
+      "cacheAvailable": false,
+      "resolvedUrl": "https://wiki.runarcana.org/en/monsters-and-creatures/creatures/camouflaged-horror/",
+      "collectedAt": "2026-10-11T15:48:43.331079+00:00",
+      "sha256": "857836746f3585f63e213ea26333e11a753dd94a8f0755fce0b221e4be4c2527",
+      "cache": "sources/cache/053d09d41073f9519f9e370f6b9b0dcbd3cb5323a5e35ca71e92c97b48be475c.html",
+      "title": "Camouflaged Horror",
+      "rulesVersion": null,
+      "wikiBuild": "0.157"
     },
     {
       "id": "/en/monsters-and-creatures/creatures/cannoneer/",
@@ -26378,10 +26589,23 @@
       "url": "https://wiki.runarcana.org/en/monsters-and-creatures/creatures/chilopod-voidling/",
       "part": 4,
       "language": "en",
-      "anchors": [],
-      "status": "pending",
+      "anchors": [
+        {
+          "id": "chilopod-voidling-sheet",
+          "title": "Chilopod Voidling Sheet",
+          "level": 2
+        }
+      ],
+      "status": "collected",
       "attemptedAt": "2026-10-11T14:05:38.805215+00:00",
-      "cacheAvailable": false
+      "cacheAvailable": false,
+      "resolvedUrl": "https://wiki.runarcana.org/en/monsters-and-creatures/creatures/chilopod-voidling/",
+      "collectedAt": "2026-10-11T15:47:27.611043+00:00",
+      "sha256": "2ddbe3c345a9f34b7ccc19dc483320a2b14bc0226ec4164fb6ee1e274305729f",
+      "cache": "sources/cache/938b537ff753f7c05fc9474ec86c9c0b9aa7d0802a62b0705a7aea920031c804.html",
+      "title": "Chilopod Voidling",
+      "rulesVersion": null,
+      "wikiBuild": "0.157"
     },
     {
       "id": "/en/monsters-and-creatures/creatures/clawstrider/",
@@ -26512,20 +26736,66 @@
       "url": "https://wiki.runarcana.org/en/monsters-and-creatures/creatures/crimson-bloodletter/",
       "part": 4,
       "language": "en",
-      "anchors": [],
-      "status": "pending",
+      "anchors": [
+        {
+          "id": "rewards",
+          "title": "Rewards",
+          "level": 2
+        },
+        {
+          "id": "item-crafting",
+          "title": "Item Crafting",
+          "level": 3
+        },
+        {
+          "id": "crimson-bloodletter-statblocks",
+          "title": "Crimson Bloodletter Statblocks",
+          "level": 2
+        },
+        {
+          "id": "domesticated",
+          "title": "Domesticated",
+          "level": 3
+        },
+        {
+          "id": "wild",
+          "title": "Wild",
+          "level": 3
+        }
+      ],
+      "status": "collected",
       "attemptedAt": "2026-10-11T14:05:38.839489+00:00",
-      "cacheAvailable": false
+      "cacheAvailable": false,
+      "resolvedUrl": "https://wiki.runarcana.org/en/monsters-and-creatures/creatures/crimson-bloodletter/",
+      "collectedAt": "2026-10-11T15:49:59.369124+00:00",
+      "sha256": "8c58b7f1f881753db222c4e015ef75dc5fd3b60761dc51783d0dce75798fcbb5",
+      "cache": "sources/cache/237f23539d6d79dce7ec57de3ad2ccf2c49b55252af8134900b6fcc93000084e.html",
+      "title": "Crimson Bloodletter",
+      "rulesVersion": null,
+      "wikiBuild": "0.157"
     },
     {
       "id": "/en/monsters-and-creatures/creatures/crimson-pigeon/",
       "url": "https://wiki.runarcana.org/en/monsters-and-creatures/creatures/crimson-pigeon/",
       "part": 4,
       "language": "en",
-      "anchors": [],
-      "status": "pending",
+      "anchors": [
+        {
+          "id": "crimson-pigeon-statblocks",
+          "title": "Crimson Pigeon Statblocks",
+          "level": 2
+        }
+      ],
+      "status": "collected",
       "attemptedAt": "2026-10-11T14:05:38.849235+00:00",
-      "cacheAvailable": false
+      "cacheAvailable": false,
+      "resolvedUrl": "https://wiki.runarcana.org/en/monsters-and-creatures/creatures/crimson-pigeon/",
+      "collectedAt": "2026-10-11T15:43:14.336319+00:00",
+      "sha256": "96f307341c4519ac363ab0fd2f6205624a470f1b9eca703c5773bbac2082d0c5",
+      "cache": "sources/cache/e99d160efb4cf4f036381049568078cbfc7b4c93ea265548fb598b2a9177ef9f.html",
+      "title": "Crimson Pigeon",
+      "rulesVersion": null,
+      "wikiBuild": "0.157"
     },
     {
       "id": "/en/monsters-and-creatures/creatures/crocodile/",
@@ -26573,9 +26843,16 @@
       "part": 4,
       "language": "en",
       "anchors": [],
-      "status": "pending",
+      "status": "collected",
       "attemptedAt": "2026-10-11T14:05:38.874939+00:00",
-      "cacheAvailable": false
+      "cacheAvailable": false,
+      "resolvedUrl": "https://wiki.runarcana.org/en/monsters-and-creatures/creatures/dancing-droplet/",
+      "collectedAt": "2026-10-11T15:44:04.971474+00:00",
+      "sha256": "c528917bbd5b940cdad1606fd7a1586639e3c42d2ab2591d63e89565ff7234d4",
+      "cache": "sources/cache/544c481028a0b7d481e4c910f31ac7dbc7718e0a34c52fb2dd10ed7cef945c92.html",
+      "title": "Dancing Droplet",
+      "rulesVersion": null,
+      "wikiBuild": "0.157"
     },
     {
       "id": "/en/monsters-and-creatures/creatures/deck-hunter/",
@@ -26605,10 +26882,23 @@
       "url": "https://wiki.runarcana.org/en/monsters-and-creatures/creatures/defender-captain/",
       "part": 4,
       "language": "en",
-      "anchors": [],
-      "status": "pending",
+      "anchors": [
+        {
+          "id": "enforcer-captain-sheet",
+          "title": "Enforcer Captain Sheet",
+          "level": 2
+        }
+      ],
+      "status": "collected",
       "attemptedAt": "2026-10-11T14:05:38.888696+00:00",
-      "cacheAvailable": false
+      "cacheAvailable": false,
+      "resolvedUrl": "https://wiki.runarcana.org/en/monsters-and-creatures/creatures/defender-captain/",
+      "collectedAt": "2026-10-11T15:46:11.572384+00:00",
+      "sha256": "fc2671195bf1a2061301b6bc83b498ef7e80edd92f41dbeac3f7fe05405623a5",
+      "cache": "sources/cache/f7b43515d6a02ad45d9f7371fed1b756e9c0755a598949a221c20ec11e11d345.html",
+      "title": "Enforcer Captain",
+      "rulesVersion": null,
+      "wikiBuild": "0.157"
     },
     {
       "id": "/en/monsters-and-creatures/creatures/demacian-horse/",
@@ -26616,9 +26906,16 @@
       "part": 4,
       "language": "en",
       "anchors": [],
-      "status": "pending",
+      "status": "collected",
       "attemptedAt": "2026-10-11T14:05:38.894743+00:00",
-      "cacheAvailable": false
+      "cacheAvailable": false,
+      "resolvedUrl": "https://wiki.runarcana.org/en/monsters-and-creatures/creatures/demacian-horse/",
+      "collectedAt": "2026-10-11T15:43:27.003949+00:00",
+      "sha256": "d209683caade9b6c3258df66fafa285343e540727db824f0e65157f6eea524ea",
+      "cache": "sources/cache/65744321c2bd53e2d424315894afb928ac87349aef0ce2b0b5bb436f428e733d.html",
+      "title": "Demacian Horse",
+      "rulesVersion": null,
+      "wikiBuild": "0.157"
     },
     {
       "id": "/en/monsters-and-creatures/creatures/demolisher/",
@@ -26717,10 +27014,23 @@
       "url": "https://wiki.runarcana.org/en/monsters-and-creatures/creatures/domesticated-raxinim/",
       "part": 4,
       "language": "en",
-      "anchors": [],
-      "status": "pending",
+      "anchors": [
+        {
+          "id": "house-whump-statblock",
+          "title": "House Whump Statblock",
+          "level": 2
+        }
+      ],
+      "status": "collected",
       "attemptedAt": "2026-10-11T14:05:38.939706+00:00",
-      "cacheAvailable": false
+      "cacheAvailable": false,
+      "resolvedUrl": "https://wiki.runarcana.org/en/monsters-and-creatures/creatures/domesticated-raxinim/",
+      "collectedAt": "2026-10-11T15:50:24.746413+00:00",
+      "sha256": "5c3fe86ebf8b0ed36f3792ffc47930b3c63049bd5baad6e730dc8af4185eca52",
+      "cache": "sources/cache/f6f346e4fdd5634111070df959f7bd917fed6606593df10a6a2f8f7b422652c4.html",
+      "title": "House Whump",
+      "rulesVersion": null,
+      "wikiBuild": "0.157"
     },
     {
       "id": "/en/monsters-and-creatures/creatures/donkey-mule/",
@@ -26983,10 +27293,23 @@
       "url": "https://wiki.runarcana.org/en/monsters-and-creatures/creatures/enthralling-snake/",
       "part": 4,
       "language": "en",
-      "anchors": [],
-      "status": "pending",
+      "anchors": [
+        {
+          "id": "beguiling-cobra-sheet",
+          "title": "Beguiling Cobra Sheet",
+          "level": 2
+        }
+      ],
+      "status": "collected",
       "attemptedAt": "2026-10-11T14:05:39.043750+00:00",
-      "cacheAvailable": false
+      "cacheAvailable": false,
+      "resolvedUrl": "https://wiki.runarcana.org/en/monsters-and-creatures/creatures/enthralling-snake/",
+      "collectedAt": "2026-10-11T15:47:40.292783+00:00",
+      "sha256": "636a7d8d4dff964c433ba8f9d3f42207a60934da1dafc5e5f04255ad0fb58e78",
+      "cache": "sources/cache/11deeb4238f762c3e409642efa7a7d716c14944cb6b79f54d2d57f8c591b59c7.html",
+      "title": "Beguiling Cobra",
+      "rulesVersion": null,
+      "wikiBuild": "0.157"
     },
     {
       "id": "/en/monsters-and-creatures/creatures/falcon/",
@@ -27016,10 +27339,33 @@
       "url": "https://wiki.runarcana.org/en/monsters-and-creatures/creatures/ferocious-razorfin/",
       "part": 4,
       "language": "en",
-      "anchors": [],
-      "status": "pending",
+      "anchors": [
+        {
+          "id": "razorfin-sheets",
+          "title": "Razorfin Sheets",
+          "level": 2
+        },
+        {
+          "id": "common",
+          "title": "Common",
+          "level": 3
+        },
+        {
+          "id": "leader",
+          "title": "Leader",
+          "level": 3
+        }
+      ],
+      "status": "collected",
       "attemptedAt": "2026-10-11T14:05:39.059806+00:00",
-      "cacheAvailable": false
+      "cacheAvailable": false,
+      "resolvedUrl": "https://wiki.runarcana.org/en/monsters-and-creatures/creatures/ferocious-razorfin/",
+      "collectedAt": "2026-10-11T15:48:56.020248+00:00",
+      "sha256": "f4792f257dce7d98ed31dfc533bcb35160bf0d78ce4d076e4cf015df13d84935",
+      "cache": "sources/cache/571652a6eae506e74e41338cd03fd5219ab4bea16343e9d5e16d19930e261b5d.html",
+      "title": "Ferocious Razorfin",
+      "rulesVersion": null,
+      "wikiBuild": "0.157"
     },
     {
       "id": "/en/monsters-and-creatures/creatures/fleefeather/",
@@ -27072,10 +27418,38 @@
       "url": "https://wiki.runarcana.org/en/monsters-and-creatures/creatures/frenzied-skitterer/",
       "part": 4,
       "language": "en",
-      "anchors": [],
-      "status": "pending",
+      "anchors": [
+        {
+          "id": "rewards",
+          "title": "Rewards",
+          "level": 2
+        },
+        {
+          "id": "venom",
+          "title": "Venom",
+          "level": 3
+        },
+        {
+          "id": "venom-effects",
+          "title": "Venom Effects",
+          "level": 4
+        },
+        {
+          "id": "frenzied-skitterer-statblock",
+          "title": "Frenzied Skitterer Statblock",
+          "level": 2
+        }
+      ],
+      "status": "collected",
       "attemptedAt": "2026-10-11T14:05:39.083596+00:00",
-      "cacheAvailable": false
+      "cacheAvailable": false,
+      "resolvedUrl": "https://wiki.runarcana.org/en/monsters-and-creatures/creatures/frenzied-skitterer/",
+      "collectedAt": "2026-10-11T15:49:08.666835+00:00",
+      "sha256": "f3d229bb117a2a0d7fcc4722175233587b317f99b3c625d75553de97bea34931",
+      "cache": "sources/cache/983c06b176adea85f46b89b35d6f18901aade9fa2736371f8a692e269764326c.html",
+      "title": "Frenzied Skitterer",
+      "rulesVersion": null,
+      "wikiBuild": "0.157"
     },
     {
       "id": "/en/monsters-and-creatures/creatures/frogs/",
@@ -27129,9 +27503,16 @@
       "part": 4,
       "language": "en",
       "anchors": [],
-      "status": "pending",
+      "status": "collected",
       "attemptedAt": "2026-10-11T14:05:39.110234+00:00",
-      "cacheAvailable": false
+      "cacheAvailable": false,
+      "resolvedUrl": "https://wiki.runarcana.org/en/monsters-and-creatures/creatures/giant-constrictor-snake/",
+      "collectedAt": "2026-10-11T15:51:15.507250+00:00",
+      "sha256": "0bcf32e8905916e7a209d960d97fad318e69cb5b916e847ab657ea11dda207e4",
+      "cache": "sources/cache/150d4609db7750156be0e0b63849924ec906cc08decb6e27632926fd7a579a09.html",
+      "title": "Giant Constrictor Snake",
+      "rulesVersion": null,
+      "wikiBuild": "0.157"
     },
     {
       "id": "/en/monsters-and-creatures/creatures/giant-crab/",
@@ -27336,10 +27717,33 @@
       "url": "https://wiki.runarcana.org/en/monsters-and-creatures/creatures/grave-companion/",
       "part": 4,
       "language": "en",
-      "anchors": [],
-      "status": "pending",
+      "anchors": [
+        {
+          "id": "grave-companion-sheets",
+          "title": "Grave Companion Sheets",
+          "level": 2
+        },
+        {
+          "id": "individual",
+          "title": "Individual",
+          "level": 3
+        },
+        {
+          "id": "pack",
+          "title": "Pack",
+          "level": 3
+        }
+      ],
+      "status": "collected",
       "attemptedAt": "2026-10-11T14:05:39.198162+00:00",
-      "cacheAvailable": false
+      "cacheAvailable": false,
+      "resolvedUrl": "https://wiki.runarcana.org/en/monsters-and-creatures/creatures/grave-companion/",
+      "collectedAt": "2026-10-11T15:44:17.624498+00:00",
+      "sha256": "e3f9a7c7721af4401b95cf2b36e0e5586eb621e9b526ec4540f6477ad1d6738b",
+      "cache": "sources/cache/c3c18e4f0d81382d1deebf70681b7938394a2959f11e19819f1925788c6f3b06.html",
+      "title": "Grave Companion",
+      "rulesVersion": null,
+      "wikiBuild": "0.157"
     },
     {
       "id": "/en/monsters-and-creatures/creatures/great-white-shark/",
@@ -27347,9 +27751,16 @@
       "part": 4,
       "language": "en",
       "anchors": [],
-      "status": "pending",
+      "status": "collected",
       "attemptedAt": "2026-10-11T14:05:39.204112+00:00",
-      "cacheAvailable": false
+      "cacheAvailable": false,
+      "resolvedUrl": "https://wiki.runarcana.org/en/monsters-and-creatures/creatures/great-white-shark/",
+      "collectedAt": "2026-10-11T15:47:52.982111+00:00",
+      "sha256": "84d27e6b7f16eccb472bca1b5d45a94a7724f9f05db297158a2b1b422706f2d3",
+      "cache": "sources/cache/c7985f3c8db60b21602f5b4891e4c26f9e41a3ab8f1912c2bc4bbc3cb581ab3a.html",
+      "title": "Great White Shark",
+      "rulesVersion": null,
+      "wikiBuild": "0.157"
     },
     {
       "id": "/en/monsters-and-creatures/creatures/gromp/",
@@ -27411,20 +27822,81 @@
       "url": "https://wiki.runarcana.org/en/monsters-and-creatures/creatures/herald-of-spring/",
       "part": 4,
       "language": "en",
-      "anchors": [],
-      "status": "pending",
+      "anchors": [
+        {
+          "id": "lair",
+          "title": "Lair",
+          "level": 2
+        },
+        {
+          "id": "regional-effects",
+          "title": "Regional Effects",
+          "level": 3
+        },
+        {
+          "id": "lair-actions",
+          "title": "Lair Actions",
+          "level": 3
+        },
+        {
+          "id": "rewards",
+          "title": "Rewards",
+          "level": 2
+        },
+        {
+          "id": "item-crafting",
+          "title": "Item Crafting",
+          "level": 3
+        },
+        {
+          "id": "formulas",
+          "title": "Formulas",
+          "level": 3
+        },
+        {
+          "id": "spiritual-infusion-potion-50-ml",
+          "title": "Spiritual Infusion Potion (50 ml)",
+          "level": 4
+        },
+        {
+          "id": "herald-of-spring-sheet",
+          "title": "Herald of Spring Sheet",
+          "level": 2
+        }
+      ],
+      "status": "collected",
       "attemptedAt": "2026-10-11T14:05:39.226737+00:00",
-      "cacheAvailable": false
+      "cacheAvailable": false,
+      "resolvedUrl": "https://wiki.runarcana.org/en/monsters-and-creatures/creatures/herald-of-spring/",
+      "collectedAt": "2026-10-11T15:46:24.225983+00:00",
+      "sha256": "5c303c38efb1bb9dc01b9763763e86098632cc2ed3e6ca762a918de1b69f7cbc",
+      "cache": "sources/cache/1c3f88e07a572510bd040131a362d6b21e2bc339141d2009cfa198f3a6e0f50d.html",
+      "title": "Herald of Spring",
+      "rulesVersion": null,
+      "wikiBuild": "0.157"
     },
     {
       "id": "/en/monsters-and-creatures/creatures/herald-of-the-vale/",
       "url": "https://wiki.runarcana.org/en/monsters-and-creatures/creatures/herald-of-the-vale/",
       "part": 4,
       "language": "en",
-      "anchors": [],
-      "status": "pending",
+      "anchors": [
+        {
+          "id": "rift-herald-sheet",
+          "title": "Rift Herald Sheet",
+          "level": 2
+        }
+      ],
+      "status": "collected",
       "attemptedAt": "2026-10-11T14:05:39.234182+00:00",
-      "cacheAvailable": false
+      "cacheAvailable": false,
+      "resolvedUrl": "https://wiki.runarcana.org/en/monsters-and-creatures/creatures/herald-of-the-vale/",
+      "collectedAt": "2026-10-11T15:49:21.332828+00:00",
+      "sha256": "9c1597c9235ef71b935c15585ad478319811c97a45e57a7297689173d5a1ed55",
+      "cache": "sources/cache/03be1a39aa115d367ebd044c942af834b64287d719dfb56c3cbfbe675d4998db.html",
+      "title": "Rift Herald",
+      "rulesVersion": null,
+      "wikiBuild": "0.157"
     },
     {
       "id": "/en/monsters-and-creatures/creatures/hive-herald/",
@@ -27862,19 +28334,49 @@
       "part": 4,
       "language": "en",
       "anchors": [],
-      "status": "pending",
+      "status": "collected",
       "attemptedAt": "2026-10-11T14:05:39.358116+00:00",
-      "cacheAvailable": false
+      "cacheAvailable": false,
+      "resolvedUrl": "https://wiki.runarcana.org/en/monsters-and-creatures/creatures/navori-longtail/",
+      "collectedAt": "2026-10-11T15:44:30.290542+00:00",
+      "sha256": "7ced2eff223ef20c7ad4308217e13242dcaf6bf73f1b01f338c92ecb2808d98a",
+      "cache": "sources/cache/cfa948987a7ac4f4b678b10385b89fdbab8ab27abdd2c989e7314976a13c8e83.html",
+      "title": "Navori Longtail",
+      "rulesVersion": null,
+      "wikiBuild": "0.157"
     },
     {
       "id": "/en/monsters-and-creatures/creatures/necrotic-arachnoid/",
       "url": "https://wiki.runarcana.org/en/monsters-and-creatures/creatures/necrotic-arachnoid/",
       "part": 4,
       "language": "en",
-      "anchors": [],
-      "status": "pending",
+      "anchors": [
+        {
+          "id": "necrotic-arachnoid-sheets",
+          "title": "Necrotic Arachnoid Sheets",
+          "level": 2
+        },
+        {
+          "id": "broodmother",
+          "title": "Broodmother",
+          "level": 3
+        },
+        {
+          "id": "nestlings",
+          "title": "Nestlings",
+          "level": 3
+        }
+      ],
+      "status": "collected",
       "attemptedAt": "2026-10-11T14:05:39.364828+00:00",
-      "cacheAvailable": false
+      "cacheAvailable": false,
+      "resolvedUrl": "https://wiki.runarcana.org/en/monsters-and-creatures/creatures/necrotic-arachnoid/",
+      "collectedAt": "2026-10-11T15:49:33.992889+00:00",
+      "sha256": "c15a2bf7d26706e0a5014fed663710db413ffc38856d82c5e3bae52be64761f2",
+      "cache": "sources/cache/d25fa1f4db2ba9c9e97718c358c6cf6eaa6a1484a2da10fc78c8ae8cfea56f37.html",
+      "title": "Necrotic Arachnoid",
+      "rulesVersion": null,
+      "wikiBuild": "0.157"
     },
     {
       "id": "/en/monsters-and-creatures/creatures/noxian-risen/",
@@ -27905,19 +28407,39 @@
       "part": 4,
       "language": "en",
       "anchors": [],
-      "status": "pending",
+      "status": "collected",
       "attemptedAt": "2026-10-11T14:05:39.381020+00:00",
-      "cacheAvailable": false
+      "cacheAvailable": false,
+      "resolvedUrl": "https://wiki.runarcana.org/en/monsters-and-creatures/creatures/ophidian-brood-spawn/",
+      "collectedAt": "2026-10-11T15:50:37.427648+00:00",
+      "sha256": "b15cff6df9468b735e102c0f08a46c8ff6648d2ae8a609a78ea86c5306dbf9f0",
+      "cache": "sources/cache/47e12b2ace3b794421f5cba582e3c040c519815568c5651f3b199d71ad7ca4c6.html",
+      "title": "Ophidian Brood Spawn",
+      "rulesVersion": null,
+      "wikiBuild": "0.157"
     },
     {
       "id": "/en/monsters-and-creatures/creatures/overgrown-snapvine/",
       "url": "https://wiki.runarcana.org/en/monsters-and-creatures/creatures/overgrown-snapvine/",
       "part": 4,
       "language": "en",
-      "anchors": [],
-      "status": "pending",
+      "anchors": [
+        {
+          "id": "overgrown-snapvine-statblock",
+          "title": "Overgrown Snapvine Statblock",
+          "level": 2
+        }
+      ],
+      "status": "collected",
       "attemptedAt": "2026-10-11T14:05:39.388191+00:00",
-      "cacheAvailable": false
+      "cacheAvailable": false,
+      "resolvedUrl": "https://wiki.runarcana.org/en/monsters-and-creatures/creatures/overgrown-snapvine/",
+      "collectedAt": "2026-10-11T15:49:46.683456+00:00",
+      "sha256": "a86298595a5832d45fbe326e2319081be74f37769411a702afbd2ea2cc47287e",
+      "cache": "sources/cache/759059f90cf976b20edd6347c82aa7a0d71dd261dbf5d9ec3d796f5f32a04255.html",
+      "title": "Overgrown Snapvine",
+      "rulesVersion": null,
+      "wikiBuild": "0.157"
     },
     {
       "id": "/en/monsters-and-creatures/creatures/owl/",
@@ -28080,10 +28602,23 @@
       "url": "https://wiki.runarcana.org/en/monsters-and-creatures/creatures/public-guardian/",
       "part": 4,
       "language": "en",
-      "anchors": [],
-      "status": "pending",
+      "anchors": [
+        {
+          "id": "public-guardian-statblock",
+          "title": "Public Guardian Statblock",
+          "level": 2
+        }
+      ],
+      "status": "collected",
       "attemptedAt": "2026-10-11T14:05:39.448612+00:00",
-      "cacheAvailable": false
+      "cacheAvailable": false,
+      "resolvedUrl": "https://wiki.runarcana.org/en/monsters-and-creatures/creatures/public-guardian/",
+      "collectedAt": "2026-10-11T15:44:42.998851+00:00",
+      "sha256": "6f7a375a2795f2f0f71ec0fe9677be36a05fcb091456b9a8136b000330366fb8",
+      "cache": "sources/cache/db9fd448c8da9e8b53b83df7f4a233f44d1c724c15d4b04771a59793c061c39d.html",
+      "title": "Public Guardian",
+      "rulesVersion": null,
+      "wikiBuild": "0.157"
     },
     {
       "id": "/en/monsters-and-creatures/creatures/rabbit/",
@@ -28231,10 +28766,28 @@
       "url": "https://wiki.runarcana.org/en/monsters-and-creatures/creatures/raven-of-secrets/",
       "part": 4,
       "language": "en",
-      "anchors": [],
-      "status": "pending",
+      "anchors": [
+        {
+          "id": "raven-of-secrets-sheets",
+          "title": "Raven of Secrets Sheets",
+          "level": 2
+        },
+        {
+          "id": "group",
+          "title": "Group",
+          "level": 3
+        }
+      ],
+      "status": "collected",
       "attemptedAt": "2026-10-11T14:05:39.490938+00:00",
-      "cacheAvailable": false
+      "cacheAvailable": false,
+      "resolvedUrl": "https://wiki.runarcana.org/en/monsters-and-creatures/creatures/raven-of-secrets/",
+      "collectedAt": "2026-10-11T15:46:36.890588+00:00",
+      "sha256": "33d22057c421e11c5990d7fb65da181238caa9323e1d7afd10c228c1120a1e6f",
+      "cache": "sources/cache/61cb25950660f785dc68a4f6834ea35bfc55148f05e2d2d59a3896d37c5679ee.html",
+      "title": "Raven of Secrets",
+      "rulesVersion": null,
+      "wikiBuild": "0.157"
     },
     {
       "id": "/en/monsters-and-creatures/creatures/raven/",
@@ -28264,10 +28817,33 @@
       "url": "https://wiki.runarcana.org/en/monsters-and-creatures/creatures/ravenous-butcher/",
       "part": 4,
       "language": "en",
-      "anchors": [],
-      "status": "pending",
+      "anchors": [
+        {
+          "id": "ravenous-butcher-sheets",
+          "title": "Ravenous Butcher Sheets",
+          "level": 2
+        },
+        {
+          "id": "butcher",
+          "title": "Butcher",
+          "level": 3
+        },
+        {
+          "id": "gluttony-wraith",
+          "title": "Gluttony Wraith",
+          "level": 3
+        }
+      ],
+      "status": "collected",
       "attemptedAt": "2026-10-11T14:05:39.507464+00:00",
-      "cacheAvailable": false
+      "cacheAvailable": false,
+      "resolvedUrl": "https://wiki.runarcana.org/en/monsters-and-creatures/creatures/ravenous-butcher/",
+      "collectedAt": "2026-10-11T15:46:49.564493+00:00",
+      "sha256": "5131bbd0400158d881fc3131a4effe50cb04a55331d42a4c3edb607aa06f57bf",
+      "cache": "sources/cache/f01cf46afb80bcb4e5a6782d6c638836c5f30d7d729c76605da189bdef48d25f.html",
+      "title": "Ravenous Butcher",
+      "rulesVersion": null,
+      "wikiBuild": "0.157"
     },
     {
       "id": "/en/monsters-and-creatures/creatures/razorfin/",
@@ -28307,10 +28883,23 @@
       "url": "https://wiki.runarcana.org/en/monsters-and-creatures/creatures/red-brambleback/",
       "part": 4,
       "language": "en",
-      "anchors": [],
-      "status": "pending",
+      "anchors": [
+        {
+          "id": "red-brambleback-statblock",
+          "title": "Red Brambleback Statblock",
+          "level": 2
+        }
+      ],
+      "status": "collected",
       "attemptedAt": "2026-10-11T14:05:39.525510+00:00",
-      "cacheAvailable": false
+      "cacheAvailable": false,
+      "resolvedUrl": "https://wiki.runarcana.org/en/monsters-and-creatures/creatures/red-brambleback/",
+      "collectedAt": "2026-10-11T15:44:55.641598+00:00",
+      "sha256": "9b2c49c17c9e98501b1271558c18317b2d81d97a3cd0b256d9582b07f06e3649",
+      "cache": "sources/cache/3176ec3622bc7b3346bceaf0c1854cc9464171fe5651894fece4042cc527d20c.html",
+      "title": "Red Brambleback",
+      "rulesVersion": null,
+      "wikiBuild": "0.157"
     },
     {
       "id": "/en/monsters-and-creatures/creatures/rhinoceros/",
@@ -28382,10 +28971,23 @@
       "url": "https://wiki.runarcana.org/en/monsters-and-creatures/creatures/ruined-razorfin/",
       "part": 4,
       "language": "en",
-      "anchors": [],
-      "status": "pending",
+      "anchors": [
+        {
+          "id": "ruined-razorfin-sheet",
+          "title": "Ruined Razorfin Sheet",
+          "level": 2
+        }
+      ],
+      "status": "collected",
       "attemptedAt": "2026-10-11T14:05:39.555171+00:00",
-      "cacheAvailable": false
+      "cacheAvailable": false,
+      "resolvedUrl": "https://wiki.runarcana.org/en/monsters-and-creatures/creatures/ruined-razorfin/",
+      "collectedAt": "2026-10-11T15:45:08.289325+00:00",
+      "sha256": "9c80d4d959d39f8bba120b0fa588452b158d6dc90cef4a0498f3f2abb0bcf986",
+      "cache": "sources/cache/8eb71a62d6f3117219315d6737227ef4a3c9fd19217efff0af2ceface83df9ee.html",
+      "title": "Ruined Razorfin",
+      "rulesVersion": null,
+      "wikiBuild": "0.157"
     },
     {
       "id": "/en/monsters-and-creatures/creatures/sand-swimmer/",
@@ -28409,10 +29011,68 @@
       "url": "https://wiki.runarcana.org/en/monsters-and-creatures/creatures/screeching-dragon/",
       "part": 4,
       "language": "en",
-      "anchors": [],
-      "status": "pending",
+      "anchors": [
+        {
+          "id": "lair",
+          "title": "Lair",
+          "level": 2
+        },
+        {
+          "id": "regional-effects",
+          "title": "Regional Effects",
+          "level": 3
+        },
+        {
+          "id": "lair-actions",
+          "title": "Lair Actions",
+          "level": 3
+        },
+        {
+          "id": "rewards",
+          "title": "Rewards",
+          "level": 2
+        },
+        {
+          "id": "item-crafting",
+          "title": "Item Crafting",
+          "level": 3
+        },
+        {
+          "id": "screeching-dragon-sheets",
+          "title": "Screeching Dragon Sheets",
+          "level": 2
+        },
+        {
+          "id": "hatchling",
+          "title": "Hatchling",
+          "level": 3
+        },
+        {
+          "id": "young",
+          "title": "Young",
+          "level": 3
+        },
+        {
+          "id": "adult",
+          "title": "Adult",
+          "level": 3
+        },
+        {
+          "id": "elder",
+          "title": "Elder",
+          "level": 3
+        }
+      ],
+      "status": "collected",
       "attemptedAt": "2026-10-11T14:05:39.574536+00:00",
-      "cacheAvailable": false
+      "cacheAvailable": false,
+      "resolvedUrl": "https://wiki.runarcana.org/en/monsters-and-creatures/creatures/screeching-dragon/",
+      "collectedAt": "2026-10-11T15:48:05.658565+00:00",
+      "sha256": "c1a87fbd059150f89fe02f82766b99ade241ebd368eba2481f1681a4895236f3",
+      "cache": "sources/cache/9e908dd3d62b280234dcf733f4fff33338bdf376a030c5ea15643ec396b0f10c.html",
+      "title": "Screeching Dragon",
+      "rulesVersion": null,
+      "wikiBuild": "0.157"
     },
     {
       "id": "/en/monsters-and-creatures/creatures/scuttle-crab/",
@@ -28530,10 +29190,23 @@
       "url": "https://wiki.runarcana.org/en/monsters-and-creatures/creatures/skulking-string-puller/",
       "part": 4,
       "language": "en",
-      "anchors": [],
-      "status": "pending",
+      "anchors": [
+        {
+          "id": "skulking-string-puller-statblock",
+          "title": "Skulking String-Puller Statblock",
+          "level": 2
+        }
+      ],
+      "status": "collected",
       "attemptedAt": "2026-10-11T14:05:39.623114+00:00",
-      "cacheAvailable": false
+      "cacheAvailable": false,
+      "resolvedUrl": "https://wiki.runarcana.org/en/monsters-and-creatures/creatures/skulking-string-puller/",
+      "collectedAt": "2026-10-11T15:50:50.127311+00:00",
+      "sha256": "722e33dfab7f927648c03b983f70cb78d6af0385487398d990b623278baa017d",
+      "cache": "sources/cache/d1bb788e4bd6d2fbcfc658ce8af103e0302548e89b6fe06e9489b7c33cb41052.html",
+      "title": "Skulking String-Puller",
+      "rulesVersion": null,
+      "wikiBuild": "0.157"
     },
     {
       "id": "/en/monsters-and-creatures/creatures/snakes/",
@@ -28667,20 +29340,56 @@
       "url": "https://wiki.runarcana.org/en/monsters-and-creatures/creatures/spectral-knight/",
       "part": 4,
       "language": "en",
-      "anchors": [],
-      "status": "pending",
+      "anchors": [
+        {
+          "id": "spectral-knight-sheet",
+          "title": "Spectral Knight Sheet",
+          "level": 2
+        }
+      ],
+      "status": "collected",
       "attemptedAt": "2026-10-11T14:05:39.669676+00:00",
-      "cacheAvailable": false
+      "cacheAvailable": false,
+      "resolvedUrl": "https://wiki.runarcana.org/en/monsters-and-creatures/creatures/spectral-knight/",
+      "collectedAt": "2026-10-11T15:45:20.940534+00:00",
+      "sha256": "60802e3d0471323ec5c6f2888444f7dabbff49fb32acd5a75cf9ccc387cf5eab",
+      "cache": "sources/cache/70506524fb9f540ac2ad6d72edf3902a9966fffd929d4f9785e9defccd8b7b62.html",
+      "title": "Spectral Knight",
+      "rulesVersion": null,
+      "wikiBuild": "0.157"
     },
     {
       "id": "/en/monsters-and-creatures/creatures/spectral-sharks/",
       "url": "https://wiki.runarcana.org/en/monsters-and-creatures/creatures/spectral-sharks/",
       "part": 4,
       "language": "en",
-      "anchors": [],
-      "status": "pending",
+      "anchors": [
+        {
+          "id": "spectral-shark-statblocks",
+          "title": "Spectral Shark Statblocks",
+          "level": 2
+        },
+        {
+          "id": "pup",
+          "title": "Pup",
+          "level": 3
+        },
+        {
+          "id": "adult",
+          "title": "Adult",
+          "level": 3
+        }
+      ],
+      "status": "collected",
       "attemptedAt": "2026-10-11T14:05:39.679583+00:00",
-      "cacheAvailable": false
+      "cacheAvailable": false,
+      "resolvedUrl": "https://wiki.runarcana.org/en/monsters-and-creatures/creatures/spectral-sharks/",
+      "collectedAt": "2026-10-11T15:45:33.581509+00:00",
+      "sha256": "49b2f4a60c0874702501190a9aeb41a0c90ae8b005f616cee66bca1117e3db7d",
+      "cache": "sources/cache/658e7cb42faef6c8538b5373ef60b7be49219cf203cff13b171cacb4b90ca5db.html",
+      "title": "Spectral Sharks",
+      "rulesVersion": null,
+      "wikiBuild": "0.157"
     },
     {
       "id": "/en/monsters-and-creatures/creatures/spiders/",
@@ -28776,10 +29485,23 @@
       "url": "https://wiki.runarcana.org/en/monsters-and-creatures/creatures/stone-elemental/",
       "part": 4,
       "language": "en",
-      "anchors": [],
-      "status": "pending",
+      "anchors": [
+        {
+          "id": "stone-elemental-sheet",
+          "title": "Stone Elemental Sheet",
+          "level": 2
+        }
+      ],
+      "status": "collected",
       "attemptedAt": "2026-10-11T14:05:39.716203+00:00",
-      "cacheAvailable": false
+      "cacheAvailable": false,
+      "resolvedUrl": "https://wiki.runarcana.org/en/monsters-and-creatures/creatures/stone-elemental/",
+      "collectedAt": "2026-10-11T15:45:46.245948+00:00",
+      "sha256": "a14550e7fe7adc227382eaa31894b217386b13343135477b215044688d437208",
+      "cache": "sources/cache/1bbdff1d31e7f5a1eabfa99398e341232a608dc817885cf57aff7a9401093709.html",
+      "title": "Stone Elemental",
+      "rulesVersion": null,
+      "wikiBuild": "0.157"
     },
     {
       "id": "/en/monsters-and-creatures/creatures/stonehorn/",
@@ -28898,10 +29620,23 @@
       "url": "https://wiki.runarcana.org/en/monsters-and-creatures/creatures/the-great-beyond/",
       "part": 4,
       "language": "en",
-      "anchors": [],
-      "status": "pending",
+      "anchors": [
+        {
+          "id": "aspect-of-the-great-beyond-statblock",
+          "title": "Aspect of the Great Beyond Statblock",
+          "level": 2
+        }
+      ],
+      "status": "collected",
       "attemptedAt": "2026-10-11T14:05:39.753257+00:00",
-      "cacheAvailable": false
+      "cacheAvailable": false,
+      "resolvedUrl": "https://wiki.runarcana.org/en/monsters-and-creatures/creatures/the-great-beyond/",
+      "collectedAt": "2026-10-11T15:47:02.276620+00:00",
+      "sha256": "ddf7323f592b28f3e8d8ad27322442b8c803bc0883b2dc7e865cfb0e25f4fa4f",
+      "cache": "sources/cache/7bd31c38bce1644958215fba7e3ed190c42e6bf0d6c90b877f2368ce8e33cfe6.html",
+      "title": "The Great Beyond",
+      "rulesVersion": null,
+      "wikiBuild": "0.157"
     },
     {
       "id": "/en/monsters-and-creatures/creatures/the-immortal/",
@@ -28931,21 +29666,46 @@
       "url": "https://wiki.runarcana.org/en/monsters-and-creatures/creatures/thorn-spitter/",
       "part": 4,
       "language": "en",
-      "anchors": [],
-      "status": "source-unavailable",
+      "anchors": [
+        {
+          "id": "thorn-spitter-sheet",
+          "title": "Thorn Spitter Sheet",
+          "level": 2
+        }
+      ],
+      "status": "collected",
       "attemptedAt": "2026-10-11T15:35:16.219261+00:00",
       "cacheAvailable": false,
-      "error": "HTTP Error 429: Too Many Requests"
+      "resolvedUrl": "https://wiki.runarcana.org/en/monsters-and-creatures/creatures/thorn-spitter/",
+      "collectedAt": "2026-10-11T15:43:01.658383+00:00",
+      "sha256": "ba900ea3306ea6c85e80d6d30631bd3f3649719094cb1c3ef78d524f6004f176",
+      "cache": "sources/cache/edeafbf3e61ae92b1e7ef9727ca308a10135539563a0e5157ab4778ff42c6f5d.html",
+      "title": "Thorn Spitter",
+      "rulesVersion": null,
+      "wikiBuild": "0.157"
     },
     {
       "id": "/en/monsters-and-creatures/creatures/thrashing-snapper/",
       "url": "https://wiki.runarcana.org/en/monsters-and-creatures/creatures/thrashing-snapper/",
       "part": 4,
       "language": "en",
-      "anchors": [],
-      "status": "pending",
+      "anchors": [
+        {
+          "id": "thrashing-snapper-statblock",
+          "title": "Thrashing Snapper Statblock",
+          "level": 2
+        }
+      ],
+      "status": "collected",
       "attemptedAt": "2026-10-11T14:05:39.775223+00:00",
-      "cacheAvailable": false
+      "cacheAvailable": false,
+      "resolvedUrl": "https://wiki.runarcana.org/en/monsters-and-creatures/creatures/thrashing-snapper/",
+      "collectedAt": "2026-10-11T15:48:18.321861+00:00",
+      "sha256": "229da19da8681f53938b656d123197494cf12032b3e4af170f1f227abc6a3e23",
+      "cache": "sources/cache/490cf8d48a7ef0fc716a478285f8c0fa9bd1b1e22b5790b03ecb10ee665d5d3b.html",
+      "title": "Thrashing Snapper",
+      "rulesVersion": null,
+      "wikiBuild": "0.157"
     },
     {
       "id": "/en/monsters-and-creatures/creatures/tiger/",
@@ -28969,20 +29729,56 @@
       "url": "https://wiki.runarcana.org/en/monsters-and-creatures/creatures/tortured-prodigy/",
       "part": 4,
       "language": "en",
-      "anchors": [],
-      "status": "pending",
+      "anchors": [
+        {
+          "id": "tortured-prodigy-statblock",
+          "title": "Tortured Prodigy Statblock",
+          "level": 2
+        }
+      ],
+      "status": "collected",
       "attemptedAt": "2026-10-11T14:05:39.787610+00:00",
-      "cacheAvailable": false
+      "cacheAvailable": false,
+      "resolvedUrl": "https://wiki.runarcana.org/en/monsters-and-creatures/creatures/tortured-prodigy/",
+      "collectedAt": "2026-10-11T15:47:14.930532+00:00",
+      "sha256": "11268d86e022bf4ae5cd99b43c4b1af489f8c5be868a680bc0147e964d03808f",
+      "cache": "sources/cache/26a916c856e901c94acbd1cb539723aa13c192465227c09c8946c3dd29df1d6a.html",
+      "title": "Tortured Prodigy",
+      "rulesVersion": null,
+      "wikiBuild": "0.157"
     },
     {
       "id": "/en/monsters-and-creatures/creatures/tufted-webspinner/",
       "url": "https://wiki.runarcana.org/en/monsters-and-creatures/creatures/tufted-webspinner/",
       "part": 4,
       "language": "en",
-      "anchors": [],
-      "status": "pending",
+      "anchors": [
+        {
+          "id": "tufted-webspinner-sheets",
+          "title": "Tufted Webspinner Sheets",
+          "level": 2
+        },
+        {
+          "id": "tarantula",
+          "title": "Tarantula",
+          "level": 3
+        },
+        {
+          "id": "broodlings",
+          "title": "Broodlings",
+          "level": 3
+        }
+      ],
+      "status": "collected",
       "attemptedAt": "2026-10-11T14:05:39.793554+00:00",
-      "cacheAvailable": false
+      "cacheAvailable": false,
+      "resolvedUrl": "https://wiki.runarcana.org/en/monsters-and-creatures/creatures/tufted-webspinner/",
+      "collectedAt": "2026-10-11T15:48:30.986419+00:00",
+      "sha256": "a0117dcc04e059e98e7c38a1913a624aa3adea743350bfd10a3bc6b3c56a81b4",
+      "cache": "sources/cache/71d1d3b2850610a3df4e3e42743ff5282617b4d127dfc8898e79c43e593dae62.html",
+      "title": "Tufted Webspinner",
+      "rulesVersion": null,
+      "wikiBuild": "0.157"
     },
     {
       "id": "/en/monsters-and-creatures/creatures/tuskbeast/",
@@ -29029,10 +29825,23 @@
       "url": "https://wiki.runarcana.org/en/monsters-and-creatures/creatures/vine-elemental/",
       "part": 4,
       "language": "en",
-      "anchors": [],
-      "status": "pending",
+      "anchors": [
+        {
+          "id": "vine-elemental-sheet",
+          "title": "Vine Elemental Sheet",
+          "level": 2
+        }
+      ],
+      "status": "collected",
       "attemptedAt": "2026-10-11T14:05:39.811923+00:00",
-      "cacheAvailable": false
+      "cacheAvailable": false,
+      "resolvedUrl": "https://wiki.runarcana.org/en/monsters-and-creatures/creatures/vine-elemental/",
+      "collectedAt": "2026-10-11T15:43:39.655846+00:00",
+      "sha256": "bbe249679d0f5197752d5e304f95cc6b2bd25d33d6b099bb160bf0a890360959",
+      "cache": "sources/cache/4885d7d0608a672c32d0ea20aa4ff951616f2f43374e0daa394a8953dd17a5e2.html",
+      "title": "Vine Elemental",
+      "rulesVersion": null,
+      "wikiBuild": "0.157"
     },
     {
       "id": "/en/monsters-and-creatures/creatures/vine-lasher/",
@@ -33446,7 +34255,7 @@
     "https://runarcana.org/en/runarcana-0-96-update/",
     "https://bit.ly/runarcana_santangelo"
   ],
-  "pending": 503,
+  "pending": 444,
   "rateLimited": true,
   "retryAfter": null
 }

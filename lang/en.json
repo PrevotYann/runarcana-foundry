@@ -143,10 +143,11 @@
       "Pack": "Unknown Runarcana compendium.",
       "Preview": "Create a preview first.",
       "ShortHitDie": "Only one short-rest hit die may be spent before the next long rest.",
-      "LevelLimit": "No verified next level exists in this class source table."
+      "LevelLimit": "No verified next level exists in this class source table.",
+      "ExistingOrigin": "This actor already has an unmanaged origin. Remove it through its native advancement workflow before assigning a workbench origin."
     },
     "Creation": {
-      "Hint": "Choose an origin and class, and enter ability scores already validated against the creation rules. Preview creates a draft character and opens the native origin and class advancement workflows. Regions, Pasts, equipment, multiclass restrictions and unresolved choices require GM review.",
+      "Hint": "Choose base ability scores, then assign +2 and +1 to different abilities. Select the origin, lineage/clan, size, region and required traits. Preview the resulting statistics before creating or customizing. Permanent traits are applied; conditional actions retain their source instructions. Class advancement opens after creation. Pasts, equipment and class-specific choices are completed separately.",
       "Origin": "Origin",
       "Class": "Class",
       "Select": "Select source item",
@@ -156,7 +157,62 @@
       "con": "Constitution",
       "int": "Intelligence",
       "wis": "Wisdom",
-      "cha": "Charisma"
-    }
+      "cha": "Charisma",
+      "PlusTwo": "+2 ability",
+      "PlusOne": "+1 ability",
+      "Variant": "Lineage / tribe / clan / model",
+      "Region": "Region",
+      "RegionLanguage": "Regional language",
+      "None": "None",
+      "Customize": "Customize origin",
+      "ArmorMode": "Construct protection",
+      "RunebornPower": "Runeborn starting trait budget",
+      "ConvertMinor": "Convert one minor trait (1 point)",
+      "ConvertMajor": "Convert one major trait (2 points)",
+      "AddTrait": "Add trait / disadvantage",
+      "Remove": "Remove",
+      "TraitValue": "Choice, craft or language when required",
+      "SourceRules": "Complete origin and variant rules",
+      "RunebornHint": "Choose traits with the GM. Budget, repetitions and named prerequisites are checked. Conditional actions and traits requiring a GM ruling retain their source text. Skill/Craft expertise requires existing proficiency.",
+      "Languages": "Languages",
+      "Proficiencies": "Proficiencies",
+      "Heritage": "Origin / Region Heritage points",
+      "Choice": {
+        "skill": "Skill proficiency",
+        "craft": "Craft proficiency (name)",
+        "functional": "Functional proficiency",
+        "resistance": "Damage resistance",
+        "botany": "Fiber / Florescence",
+        "languages": "Two common languages or one exotic language (separate with ;)",
+        "castingAbility": "Origin spellcasting ability"
+      },
+      "Armor": {
+        "null": "Null (+1 AC)",
+        "light": "Light (13 + Dex)",
+        "medium": "Medium (16 + Dex, max 2; DR 1)",
+        "heavy": "Heavy (19; DR 2)"
+      },
+      "Proficient": {
+        "medium": "Medium armor proficiency confirmed by GM",
+        "heavy": "Heavy armor proficiency confirmed by GM"
+      },
+      "Power": {
+        "controlled": "Controlled: 3 minor, 2 major",
+        "moderate": "Moderate: 4 minor, 3 major",
+        "strong": "Strong: 6 minor, 4 major"
+      },
+      "MethodLabel": "Ability generation method",
+      "Method": {
+        "standard": "Fixed values: 15, 14, 13, 12, 10, 8",
+        "pointBuy": "27-point buy (8?15)",
+        "rolling": "Rolled values (4d6, keep highest 3)",
+        "manual": "GM-approved manual values"
+      },
+      "Roll": "Roll six ability scores (4d6kh3)",
+      "Defenses": "Resistances / immunities",
+      "BonusHP": "Accumulated bonus HP",
+      "PointsRemaining": "Point-buy points remaining"
+    },
+    "SkillTechnology": "Technology"
   }
 }

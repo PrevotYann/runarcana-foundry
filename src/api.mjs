@@ -1,4 +1,5 @@
 import {resourceValue,validateChoices,creatureStatistics,scaleDice,manaCost} from './rules.mjs';
+import {characterPlan,originEffects,ABILITIES} from './character.mjs';
 
 const queues=new Map();
 export async function serialized(key,operation) {
@@ -16,24 +17,76 @@ export function assertGM() {
 }
 export function createApi() {
   return Object.freeze({
-    version:game.modules?.get('runarcana')?.version??'0.4.0', manaCost,scaleDice,creatureStatistics,
+    version:game.modules?.get('runarcana')?.version??'0.5.0', manaCost,scaleDice,creatureStatistics,
     async enableActor(actor) {
       assertGM();
       if(!game.settings.get('runarcana','enabled'))throw new Error('RUNARCANA.Error.WorldDisabled');
       await actor.setFlag('runarcana','enabled',true);return actor;
     },
-    async beginCharacter({name,originUuid,classUuid,abilities}) {
+    async previewCharacter(selection,actor) {
+      if(actor)assertOwner(actor);
+      const origin=await fromUuid(selection.originUuid);
+      if(origin?.type!=='race'||!origin.getFlag('runarcana','canonicalId'))throw new Error('RUNARCANA.Error.Source');
+      const knownSkills=Object.fromEntries(Object.entries(actor?._source.system.skills??{}).map(([k,v])=>[k,v.value]));
+      return characterPlan(origin.getFlag('runarcana','creation'),selection,{knownSkills});
+    },
+    async customizeOrigin(actor,selection) {
+      assertGM();assertOwner(actor);
+      return serialized(actor.uuid,async()=>{
+        const plan=await this.previewCharacter(selection,actor),origin=await fromUuid(selection.originUuid);
+        const old=actor.items.filter(i=>i.getFlag('runarcana','originManaged'));
+        if(actor.items.some(i=>i.type==='race'&&!i.getFlag('runarcana','originManaged')))throw new Error('RUNARCANA.Error.ExistingOrigin');
+        const documents=[origin.toObject()];
+        for(const advancement of origin.system.advancement??[])if(advancement.type==='ItemGrant')for(const grant of advancement.configuration.items??[]) {
+          const d=await fromUuid(grant.uuid);if(!d)throw new Error('RUNARCANA.Error.Source');documents.push(d.toObject());
+        }
+        if(plan.variantUuid){const d=await fromUuid(plan.variantUuid);if(!d)throw new Error('RUNARCANA.Error.Source');documents.push(d.toObject());}
+        for(const name of plan.customProficiencies)documents.push({name,type:'tool',system:{proficient:1,ability:'int',description:{value:escapeHtml(name)},activities:{rcOriginCheck001:{_id:'rcOriginCheck001',type:'check',name,activation:{type:'action',value:1},check:{ability:'int',associated:[],dc:{calculation:'',formula:''}}}}},flags:{runarcana:{originManaged:true,creationProficiency:true}}});
+        for(const o of plan.selectedOptions)documents.push({name:o.name,type:'feat',system:{description:{value:escapeHtml(o.description)},type:{value:'race'}},flags:{runarcana:{originManaged:true}}});
+        for(const d of documents){delete d._id;delete d._key;delete d.folder;d.flags??={};d.flags.runarcana??={};d.flags.runarcana.originManaged=true;}
+        // The workbench resolves origin choices itself, so native advancements must not grant them again.
+        documents[0].system.advancement=[];delete documents[0].system.movement;delete documents[0].system.senses;
+        if(plan.origin==='Antroplantae')documents[0].system.type={value:'plant'};
+        for(const d of documents)if(['Inspiration','Energy','Masters of Glamour'].includes(d.name)){
+          d.system.uses={max:'floor(@prof / 2)',spent:old.find(i=>i.getFlag('runarcana','canonicalId')===d.flags.runarcana.canonicalId)?.system.uses?.spent??0,recovery:[]};
+          d.flags.runarcana.originRecovery=d.name==='Masters of Glamour'?'full':'long';
+        }
+        documents[0].effects=originEffects(plan,{level:actor.system.details?.level??1});
+        const previous=actor.getFlag('runarcana','originSelection');
+        const snapshot=Object.fromEntries(ABILITIES.map(k=>[`system.abilities.${k}.value`,actor._source.system.abilities[k].value]));
+        snapshot['flags.runarcana.originSelection']=previous??null;
+        snapshot['system.attributes.ac.formulas']=actor._source.system.attributes?.ac?.formulas??[];
+        const updates={'flags.runarcana.originSelection':{selection,plan}};
+        const formulas=snapshot['system.attributes.ac.formulas'].filter(f=>!(previous?.plan.ac&&f.label==='Runarcana Origin'&&f.formula===previous.plan.ac));
+        updates['system.attributes.ac.formulas']=[...formulas,...(plan.ac?[{formula:plan.ac,label:'Runarcana Origin',armored:false}]:[])];
+        for(const k of ABILITIES){
+          // Preserve score changes made since creation; only replace this origin's recorded boosts.
+          const value=actor._source.system.abilities[k].value-(previous?.plan.boosts[k]??0)+plan.boosts[k];
+          if(!Number.isInteger(value)||value<1||value>30)throw new Error('RUNARCANA.Error.Choices');updates[`system.abilities.${k}.value`]=value;
+        }
+        const originals=old.map(i=>i.toObject());let created=[];
+        try {
+          // Species are singletons in dnd5e; remove the previous managed species before inserting its replacement.
+          if(old.length)await actor.deleteEmbeddedDocuments('Item',old.map(i=>i.id));
+          created=await actor.createEmbeddedDocuments('Item',documents);
+          if(created.length!==documents.length)throw new Error('RUNARCANA.Error.Source');
+          await actor.update(updates);
+        }
+        catch(error){if(created.length)await actor.deleteEmbeddedDocuments('Item',created.map(i=>i.id));const missing=originals.filter(d=>!actor.items.get(d._id));if(missing.length)await actor.createEmbeddedDocuments('Item',missing,{keepId:true});await actor.update(snapshot);throw error;}
+        return plan;
+      });
+    },
+    async beginCharacter(selection) {
+      const {name,classUuid,abilities}=selection;
       assertGM();if(!game.settings.get('runarcana','enabled'))throw new Error('RUNARCANA.Error.WorldDisabled');
       if(!name?.trim()||Object.keys(abilities??{}).sort().join(',')!=='cha,con,dex,int,str,wis'||Object.values(abilities).some(v=>!Number.isInteger(v)||v<1||v>30))throw new Error('RUNARCANA.Error.Choices');
-      const origin=await fromUuid(originUuid),cls=await fromUuid(classUuid);
-      if(origin?.type!=='race'||cls?.type!=='class'||!origin.getFlag('runarcana','canonicalId')||!cls.getFlag('runarcana','canonicalId'))throw new Error('RUNARCANA.Error.Source');
-      const actor=await Actor.create({name:name.trim(),type:'character',system:{abilities:Object.fromEntries(Object.entries(abilities).map(([k,value])=>[k,{value}]))},flags:{runarcana:{enabled:true,creationDraft:{originUuid,classUuid,manualAbilities:true}}}});
+      await this.previewCharacter(selection);
+      const cls=await fromUuid(classUuid);
+      if(cls?.type!=='class'||!cls.getFlag('runarcana','canonicalId'))throw new Error('RUNARCANA.Error.Source');
+      const actor=await Actor.create({name:name.trim(),type:'character',system:{abilities:Object.fromEntries(Object.entries(abilities).map(([k,value])=>[k,{value}]))},flags:{runarcana:{enabled:true,creationDraft:{classUuid}}}});
+      try {await this.customizeOrigin(actor,selection);}catch(error){await actor.delete();throw error;}
       const Manager=game.dnd5e.applications.advancement.AdvancementManager;
-      const originManager=Manager.forNewItem(actor,origin.toObject());
-      originManager.addEventListener('close',()=>{
-        if(actor.items.some(i=>i.getFlag('runarcana','canonicalId')===origin.getFlag('runarcana','canonicalId')))Manager.forNewItem(actor,cls.toObject()).render(true);
-      },{once:true});
-      originManager.render(true);return actor;
+      Manager.forNewItem(actor,cls.toObject()).render(true);actor.sheet.render(true);return actor;
     },
     async setResource(actor,id,resource) {
       assertGM();assertOwner(actor);checkResourceId(id);resourceValue(resource,0);
@@ -89,6 +142,7 @@ export function createApi() {
         const updates={},resources=actor.getFlag('runarcana','resources')??{};
         for(const [id,r]of Object.entries(resources))if(r.recovery===type)updates[`flags.runarcana.resources.${id}.value`]=r.max;
         const itemUpdates=[];
+        for(const item of actor.items)if(item.getFlag?.('runarcana','originManaged')&&item.getFlag('runarcana','originRecovery')===type)itemUpdates.push({_id:item.id,'system.uses.spent':0});
         if(type==='full') {
           updates['system.attributes.hp.value']=actor.system.attributes.hp.max;
           if(exhaustionRecovery)updates['system.attributes.exhaustion']=0;
@@ -165,3 +219,4 @@ export function createApi() {
   });
 }
 function checkResourceId(id){if(!/^[a-z][a-z0-9-]*$/.test(id))throw new Error('RUNARCANA.Error.Resource');}
+function escapeHtml(text){return String(text).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));}

@@ -1,13 +1,62 @@
 {
-  "checkedAt": "2026-10-11",
+  "checkedAt": "2026-10-12",
   "target": {
-    "foundry": {"minimum": "14.367", "major": 14, "runtimeTested": false, "api": "https://foundryvtt.com/api/"},
-    "dnd5e": {"version": "6.0.6", "tag": "release-6.0.6", "commit": "87e94dbd9f930135e0694cd7e7d49f210603cd2c", "manifestAndCodeInspected": true, "runtimeTested": false, "source": "https://github.com/foundryvtt/dnd5e/tree/release-6.0.6"},
-    "babele": {"version": "2.9.1", "manifestAndCodeInspected": true, "runtimeTested": false, "source": "https://gitlab.com/riccisi/foundryvtt-babele", "requires": ["lib-wrapper"]},
-    "lib-wrapper": {"versionTested": null, "runtimeTested": false}
+    "foundry": {
+      "minimum": "14.367",
+      "major": 14,
+      "runtimeTested": false,
+      "api": "https://foundryvtt.com/api/"
+    },
+    "dnd5e": {
+      "version": "6.0.6",
+      "tag": "release-6.0.6",
+      "commit": "87e94dbd9f930135e0694cd7e7d49f210603cd2c",
+      "manifestAndCodeInspected": true,
+      "runtimeTested": false,
+      "source": "https://github.com/foundryvtt/dnd5e/tree/release-6.0.6"
+    },
+    "babele": {
+      "version": "2.9.1",
+      "manifestAndCodeInspected": true,
+      "runtimeTested": false,
+      "source": "https://gitlab.com/riccisi/foundryvtt-babele",
+      "requires": [
+        "lib-wrapper"
+      ]
+    },
+    "lib-wrapper": {
+      "versionTested": null,
+      "runtimeTested": false
+    }
   },
-  "localInstallationObserved": {"foundry": "12.343", "dnd5e": "4.4.4", "babele": "2.6.2", "usedForModuleRuntimeTests": false, "modified": false},
-  "buildAndUnitTests": {"node": "24.13.1", "python": "3.14.3", "foundryvtt-cli": "3.0.5", "beautifulsoup4": "4.14.3", "validation": "unit tests with mocks and static compiled-LevelDB checks"},
-  "wiki": {"source": "https://wiki.runarcana.org/en/", "observedRulesVersions": ["0.96"], "observedBuilds": ["0.157"], "perPageMetadata": "sources/catalog.json", "nullVersionMeans": "not stated on this source; no version assumed"},
-  "module": {"version": "0.4.0", "runtimeVerified": false, "complete": false}
+  "localInstallationObserved": {
+    "foundry": "12.343",
+    "dnd5e": "4.4.4",
+    "babele": "2.6.2",
+    "usedForModuleRuntimeTests": false,
+    "modified": false
+  },
+  "buildAndUnitTests": {
+    "node": "24.13.1",
+    "python": "3.14.3",
+    "foundryvtt-cli": "3.0.5",
+    "beautifulsoup4": "4.14.3",
+    "validation": "unit tests with mocks and static compiled-LevelDB checks"
+  },
+  "wiki": {
+    "source": "https://wiki.runarcana.org/en/",
+    "observedRulesVersions": [
+      "0.96"
+    ],
+    "observedBuilds": [
+      "0.157"
+    ],
+    "perPageMetadata": "sources/catalog.json",
+    "nullVersionMeans": "not stated on this source; no version assumed"
+  },
+  "module": {
+    "version": "0.5.0",
+    "runtimeVerified": false,
+    "complete": false
+  }
 }

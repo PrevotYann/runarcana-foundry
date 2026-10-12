@@ -22,22 +22,8 @@
       "error": null
     },
     {
-      "id": "/en/magic/spells/acid-arrow/",
-      "url": "https://wiki.runarcana.org/en/magic/spells/acid-arrow/",
-      "part": 2,
-      "status": "pending",
-      "error": null
-    },
-    {
       "id": "/en/magic/spells/acid-splash/",
       "url": "https://wiki.runarcana.org/en/magic/spells/acid-splash/",
-      "part": 2,
-      "status": "pending",
-      "error": null
-    },
-    {
-      "id": "/en/magic/spells/alter-self/",
-      "url": "https://wiki.runarcana.org/en/magic/spells/alter-self/",
       "part": 2,
       "status": "pending",
       "error": null
@@ -101,13 +87,6 @@
     {
       "id": "/en/magic/spells/arcane-armor/",
       "url": "https://wiki.runarcana.org/en/magic/spells/arcane-armor/",
-      "part": 2,
-      "status": "pending",
-      "error": null
-    },
-    {
-      "id": "/en/magic/spells/arcane-eye/",
-      "url": "https://wiki.runarcana.org/en/magic/spells/arcane-eye/",
       "part": 2,
       "status": "pending",
       "error": null
@@ -232,13 +211,6 @@
       "error": null
     },
     {
-      "id": "/en/magic/spells/banishment/",
-      "url": "https://wiki.runarcana.org/en/magic/spells/banishment/",
-      "part": 2,
-      "status": "pending",
-      "error": null
-    },
-    {
       "id": "/en/magic/spells/banshee-wail/",
       "url": "https://wiki.runarcana.org/en/magic/spells/banshee-wail/",
       "part": 2,
@@ -263,8 +235,8 @@
       "id": "/en/magic/spells/bend-armor/",
       "url": "https://wiki.runarcana.org/en/magic/spells/bend-armor/",
       "part": 2,
-      "status": "pending",
-      "error": null
+      "status": "source-unavailable",
+      "error": "HTTP Error 429: Too Many Requests"
     },
     {
       "id": "/en/magic/spells/bend-metal/",
@@ -1583,20 +1555,6 @@
       "error": null
     },
     {
-      "id": "/en/magic/spells/incendium/",
-      "url": "https://wiki.runarcana.org/en/magic/spells/incendium/",
-      "part": 2,
-      "status": "source-unavailable",
-      "error": "HTTP Error 429: Too Many Requests"
-    },
-    {
-      "id": "/en/magic/spells/inception/",
-      "url": "https://wiki.runarcana.org/en/magic/spells/inception/",
-      "part": 2,
-      "status": "pending",
-      "error": null
-    },
-    {
       "id": "/en/magic/spells/infernal-blessing/",
       "url": "https://wiki.runarcana.org/en/magic/spells/infernal-blessing/",
       "part": 2,
@@ -1809,13 +1767,6 @@
     {
       "id": "/en/magic/spells/luminary-punishment/",
       "url": "https://wiki.runarcana.org/en/magic/spells/luminary-punishment/",
-      "part": 2,
-      "status": "pending",
-      "error": null
-    },
-    {
-      "id": "/en/magic/spells/mage-hand/",
-      "url": "https://wiki.runarcana.org/en/magic/spells/mage-hand/",
       "part": 2,
       "status": "pending",
       "error": null
@@ -2276,13 +2227,6 @@
       "error": null
     },
     {
-      "id": "/en/magic/spells/pyroclasm/",
-      "url": "https://wiki.runarcana.org/en/magic/spells/pyroclasm/",
-      "part": 2,
-      "status": "pending",
-      "error": null
-    },
-    {
       "id": "/en/magic/spells/ray-of-sickness/",
       "url": "https://wiki.runarcana.org/en/magic/spells/ray-of-sickness/",
       "part": 2,
@@ -2423,13 +2367,6 @@
       "error": null
     },
     {
-      "id": "/en/magic/spells/sanctuary/",
-      "url": "https://wiki.runarcana.org/en/magic/spells/sanctuary/",
-      "part": 2,
-      "status": "pending",
-      "error": null
-    },
-    {
       "id": "/en/magic/spells/sand-coffin/",
       "url": "https://wiki.runarcana.org/en/magic/spells/sand-coffin/",
       "part": 2,
@@ -2467,13 +2404,6 @@
     {
       "id": "/en/magic/spells/sand-whirlwind/",
       "url": "https://wiki.runarcana.org/en/magic/spells/sand-whirlwind/",
-      "part": 2,
-      "status": "pending",
-      "error": null
-    },
-    {
-      "id": "/en/magic/spells/sandstorm/",
-      "url": "https://wiki.runarcana.org/en/magic/spells/sandstorm/",
       "part": 2,
       "status": "pending",
       "error": null
@@ -2530,13 +2460,6 @@
     {
       "id": "/en/magic/spells/seismic-shove/",
       "url": "https://wiki.runarcana.org/en/magic/spells/seismic-shove/",
-      "part": 2,
-      "status": "pending",
-      "error": null
-    },
-    {
-      "id": "/en/magic/spells/sequester/",
-      "url": "https://wiki.runarcana.org/en/magic/spells/sequester/",
       "part": 2,
       "status": "pending",
       "error": null
@@ -2642,13 +2565,6 @@
     {
       "id": "/en/magic/spells/shocking-touch/",
       "url": "https://wiki.runarcana.org/en/magic/spells/shocking-touch/",
-      "part": 2,
-      "status": "pending",
-      "error": null
-    },
-    {
-      "id": "/en/magic/spells/shrapnels/",
-      "url": "https://wiki.runarcana.org/en/magic/spells/shrapnels/",
       "part": 2,
       "status": "pending",
       "error": null
@@ -2815,13 +2731,6 @@
       "error": null
     },
     {
-      "id": "/en/magic/spells/stoneskin/",
-      "url": "https://wiki.runarcana.org/en/magic/spells/stoneskin/",
-      "part": 2,
-      "status": "pending",
-      "error": null
-    },
-    {
       "id": "/en/magic/spells/storm-devourer/",
       "url": "https://wiki.runarcana.org/en/magic/spells/storm-devourer/",
       "part": 2,
@@ -2892,22 +2801,8 @@
       "error": null
     },
     {
-      "id": "/en/magic/spells/telepathy/",
-      "url": "https://wiki.runarcana.org/en/magic/spells/telepathy/",
-      "part": 2,
-      "status": "pending",
-      "error": null
-    },
-    {
       "id": "/en/magic/spells/teleportation-circle/",
       "url": "https://wiki.runarcana.org/en/magic/spells/teleportation-circle/",
-      "part": 2,
-      "status": "pending",
-      "error": null
-    },
-    {
-      "id": "/en/magic/spells/terralogy/",
-      "url": "https://wiki.runarcana.org/en/magic/spells/terralogy/",
       "part": 2,
       "status": "pending",
       "error": null
@@ -2948,22 +2843,8 @@
       "error": null
     },
     {
-      "id": "/en/magic/spells/time-bomb/",
-      "url": "https://wiki.runarcana.org/en/magic/spells/time-bomb/",
-      "part": 2,
-      "status": "pending",
-      "error": null
-    },
-    {
       "id": "/en/magic/spells/time-bubble/",
       "url": "https://wiki.runarcana.org/en/magic/spells/time-bubble/",
-      "part": 2,
-      "status": "pending",
-      "error": null
-    },
-    {
-      "id": "/en/magic/spells/time-stop/",
-      "url": "https://wiki.runarcana.org/en/magic/spells/time-stop/",
       "part": 2,
       "status": "pending",
       "error": null
@@ -3151,13 +3032,6 @@
       "error": null
     },
     {
-      "id": "/en/magic/spells/water-jet/",
-      "url": "https://wiki.runarcana.org/en/magic/spells/water-jet/",
-      "part": 2,
-      "status": "pending",
-      "error": null
-    },
-    {
       "id": "/en/magic/spells/water-walk/",
       "url": "https://wiki.runarcana.org/en/magic/spells/water-walk/",
       "part": 2,
@@ -3174,13 +3048,6 @@
     {
       "id": "/en/magic/spells/whirlwind-razor/",
       "url": "https://wiki.runarcana.org/en/magic/spells/whirlwind-razor/",
-      "part": 2,
-      "status": "pending",
-      "error": null
-    },
-    {
-      "id": "/en/magic/spells/wind-walk/",
-      "url": "https://wiki.runarcana.org/en/magic/spells/wind-walk/",
       "part": 2,
       "status": "pending",
       "error": null
@@ -3203,286 +3070,6 @@
       "id": "/en/magic/spells/zone-of-truth/",
       "url": "https://wiki.runarcana.org/en/magic/spells/zone-of-truth/",
       "part": 2,
-      "status": "pending",
-      "error": null
-    },
-    {
-      "id": "/en/monsters-and-creatures/creatures/arachnid-brood-spawn/",
-      "url": "https://wiki.runarcana.org/en/monsters-and-creatures/creatures/arachnid-brood-spawn/",
-      "part": 4,
-      "status": "pending",
-      "error": null
-    },
-    {
-      "id": "/en/monsters-and-creatures/creatures/arachnid-terror/",
-      "url": "https://wiki.runarcana.org/en/monsters-and-creatures/creatures/arachnid-terror/",
-      "part": 4,
-      "status": "pending",
-      "error": null
-    },
-    {
-      "id": "/en/monsters-and-creatures/creatures/arachnid-watcher/",
-      "url": "https://wiki.runarcana.org/en/monsters-and-creatures/creatures/arachnid-watcher/",
-      "part": 4,
-      "status": "pending",
-      "error": null
-    },
-    {
-      "id": "/en/monsters-and-creatures/creatures/armored-tuskbeast-mount/",
-      "url": "https://wiki.runarcana.org/en/monsters-and-creatures/creatures/armored-tuskbeast-mount/",
-      "part": 4,
-      "status": "pending",
-      "error": null
-    },
-    {
-      "id": "/en/monsters-and-creatures/creatures/camouflaged-horror/",
-      "url": "https://wiki.runarcana.org/en/monsters-and-creatures/creatures/camouflaged-horror/",
-      "part": 4,
-      "status": "pending",
-      "error": null
-    },
-    {
-      "id": "/en/monsters-and-creatures/creatures/chilopod-voidling/",
-      "url": "https://wiki.runarcana.org/en/monsters-and-creatures/creatures/chilopod-voidling/",
-      "part": 4,
-      "status": "pending",
-      "error": null
-    },
-    {
-      "id": "/en/monsters-and-creatures/creatures/crimson-bloodletter/",
-      "url": "https://wiki.runarcana.org/en/monsters-and-creatures/creatures/crimson-bloodletter/",
-      "part": 4,
-      "status": "pending",
-      "error": null
-    },
-    {
-      "id": "/en/monsters-and-creatures/creatures/crimson-pigeon/",
-      "url": "https://wiki.runarcana.org/en/monsters-and-creatures/creatures/crimson-pigeon/",
-      "part": 4,
-      "status": "pending",
-      "error": null
-    },
-    {
-      "id": "/en/monsters-and-creatures/creatures/dancing-droplet/",
-      "url": "https://wiki.runarcana.org/en/monsters-and-creatures/creatures/dancing-droplet/",
-      "part": 4,
-      "status": "pending",
-      "error": null
-    },
-    {
-      "id": "/en/monsters-and-creatures/creatures/defender-captain/",
-      "url": "https://wiki.runarcana.org/en/monsters-and-creatures/creatures/defender-captain/",
-      "part": 4,
-      "status": "pending",
-      "error": null
-    },
-    {
-      "id": "/en/monsters-and-creatures/creatures/demacian-horse/",
-      "url": "https://wiki.runarcana.org/en/monsters-and-creatures/creatures/demacian-horse/",
-      "part": 4,
-      "status": "pending",
-      "error": null
-    },
-    {
-      "id": "/en/monsters-and-creatures/creatures/domesticated-raxinim/",
-      "url": "https://wiki.runarcana.org/en/monsters-and-creatures/creatures/domesticated-raxinim/",
-      "part": 4,
-      "status": "pending",
-      "error": null
-    },
-    {
-      "id": "/en/monsters-and-creatures/creatures/enthralling-snake/",
-      "url": "https://wiki.runarcana.org/en/monsters-and-creatures/creatures/enthralling-snake/",
-      "part": 4,
-      "status": "pending",
-      "error": null
-    },
-    {
-      "id": "/en/monsters-and-creatures/creatures/ferocious-razorfin/",
-      "url": "https://wiki.runarcana.org/en/monsters-and-creatures/creatures/ferocious-razorfin/",
-      "part": 4,
-      "status": "pending",
-      "error": null
-    },
-    {
-      "id": "/en/monsters-and-creatures/creatures/frenzied-skitterer/",
-      "url": "https://wiki.runarcana.org/en/monsters-and-creatures/creatures/frenzied-skitterer/",
-      "part": 4,
-      "status": "pending",
-      "error": null
-    },
-    {
-      "id": "/en/monsters-and-creatures/creatures/giant-constrictor-snake/",
-      "url": "https://wiki.runarcana.org/en/monsters-and-creatures/creatures/giant-constrictor-snake/",
-      "part": 4,
-      "status": "pending",
-      "error": null
-    },
-    {
-      "id": "/en/monsters-and-creatures/creatures/grave-companion/",
-      "url": "https://wiki.runarcana.org/en/monsters-and-creatures/creatures/grave-companion/",
-      "part": 4,
-      "status": "pending",
-      "error": null
-    },
-    {
-      "id": "/en/monsters-and-creatures/creatures/great-white-shark/",
-      "url": "https://wiki.runarcana.org/en/monsters-and-creatures/creatures/great-white-shark/",
-      "part": 4,
-      "status": "pending",
-      "error": null
-    },
-    {
-      "id": "/en/monsters-and-creatures/creatures/herald-of-spring/",
-      "url": "https://wiki.runarcana.org/en/monsters-and-creatures/creatures/herald-of-spring/",
-      "part": 4,
-      "status": "pending",
-      "error": null
-    },
-    {
-      "id": "/en/monsters-and-creatures/creatures/herald-of-the-vale/",
-      "url": "https://wiki.runarcana.org/en/monsters-and-creatures/creatures/herald-of-the-vale/",
-      "part": 4,
-      "status": "pending",
-      "error": null
-    },
-    {
-      "id": "/en/monsters-and-creatures/creatures/navori-longtail/",
-      "url": "https://wiki.runarcana.org/en/monsters-and-creatures/creatures/navori-longtail/",
-      "part": 4,
-      "status": "pending",
-      "error": null
-    },
-    {
-      "id": "/en/monsters-and-creatures/creatures/necrotic-arachnoid/",
-      "url": "https://wiki.runarcana.org/en/monsters-and-creatures/creatures/necrotic-arachnoid/",
-      "part": 4,
-      "status": "pending",
-      "error": null
-    },
-    {
-      "id": "/en/monsters-and-creatures/creatures/ophidian-brood-spawn/",
-      "url": "https://wiki.runarcana.org/en/monsters-and-creatures/creatures/ophidian-brood-spawn/",
-      "part": 4,
-      "status": "pending",
-      "error": null
-    },
-    {
-      "id": "/en/monsters-and-creatures/creatures/overgrown-snapvine/",
-      "url": "https://wiki.runarcana.org/en/monsters-and-creatures/creatures/overgrown-snapvine/",
-      "part": 4,
-      "status": "pending",
-      "error": null
-    },
-    {
-      "id": "/en/monsters-and-creatures/creatures/public-guardian/",
-      "url": "https://wiki.runarcana.org/en/monsters-and-creatures/creatures/public-guardian/",
-      "part": 4,
-      "status": "pending",
-      "error": null
-    },
-    {
-      "id": "/en/monsters-and-creatures/creatures/raven-of-secrets/",
-      "url": "https://wiki.runarcana.org/en/monsters-and-creatures/creatures/raven-of-secrets/",
-      "part": 4,
-      "status": "pending",
-      "error": null
-    },
-    {
-      "id": "/en/monsters-and-creatures/creatures/ravenous-butcher/",
-      "url": "https://wiki.runarcana.org/en/monsters-and-creatures/creatures/ravenous-butcher/",
-      "part": 4,
-      "status": "pending",
-      "error": null
-    },
-    {
-      "id": "/en/monsters-and-creatures/creatures/red-brambleback/",
-      "url": "https://wiki.runarcana.org/en/monsters-and-creatures/creatures/red-brambleback/",
-      "part": 4,
-      "status": "pending",
-      "error": null
-    },
-    {
-      "id": "/en/monsters-and-creatures/creatures/ruined-razorfin/",
-      "url": "https://wiki.runarcana.org/en/monsters-and-creatures/creatures/ruined-razorfin/",
-      "part": 4,
-      "status": "pending",
-      "error": null
-    },
-    {
-      "id": "/en/monsters-and-creatures/creatures/screeching-dragon/",
-      "url": "https://wiki.runarcana.org/en/monsters-and-creatures/creatures/screeching-dragon/",
-      "part": 4,
-      "status": "pending",
-      "error": null
-    },
-    {
-      "id": "/en/monsters-and-creatures/creatures/skulking-string-puller/",
-      "url": "https://wiki.runarcana.org/en/monsters-and-creatures/creatures/skulking-string-puller/",
-      "part": 4,
-      "status": "pending",
-      "error": null
-    },
-    {
-      "id": "/en/monsters-and-creatures/creatures/spectral-knight/",
-      "url": "https://wiki.runarcana.org/en/monsters-and-creatures/creatures/spectral-knight/",
-      "part": 4,
-      "status": "pending",
-      "error": null
-    },
-    {
-      "id": "/en/monsters-and-creatures/creatures/spectral-sharks/",
-      "url": "https://wiki.runarcana.org/en/monsters-and-creatures/creatures/spectral-sharks/",
-      "part": 4,
-      "status": "pending",
-      "error": null
-    },
-    {
-      "id": "/en/monsters-and-creatures/creatures/stone-elemental/",
-      "url": "https://wiki.runarcana.org/en/monsters-and-creatures/creatures/stone-elemental/",
-      "part": 4,
-      "status": "pending",
-      "error": null
-    },
-    {
-      "id": "/en/monsters-and-creatures/creatures/the-great-beyond/",
-      "url": "https://wiki.runarcana.org/en/monsters-and-creatures/creatures/the-great-beyond/",
-      "part": 4,
-      "status": "pending",
-      "error": null
-    },
-    {
-      "id": "/en/monsters-and-creatures/creatures/thorn-spitter/",
-      "url": "https://wiki.runarcana.org/en/monsters-and-creatures/creatures/thorn-spitter/",
-      "part": 4,
-      "status": "source-unavailable",
-      "error": "HTTP Error 429: Too Many Requests"
-    },
-    {
-      "id": "/en/monsters-and-creatures/creatures/thrashing-snapper/",
-      "url": "https://wiki.runarcana.org/en/monsters-and-creatures/creatures/thrashing-snapper/",
-      "part": 4,
-      "status": "pending",
-      "error": null
-    },
-    {
-      "id": "/en/monsters-and-creatures/creatures/tortured-prodigy/",
-      "url": "https://wiki.runarcana.org/en/monsters-and-creatures/creatures/tortured-prodigy/",
-      "part": 4,
-      "status": "pending",
-      "error": null
-    },
-    {
-      "id": "/en/monsters-and-creatures/creatures/tufted-webspinner/",
-      "url": "https://wiki.runarcana.org/en/monsters-and-creatures/creatures/tufted-webspinner/",
-      "part": 4,
-      "status": "pending",
-      "error": null
-    },
-    {
-      "id": "/en/monsters-and-creatures/creatures/vine-elemental/",
-      "url": "https://wiki.runarcana.org/en/monsters-and-creatures/creatures/vine-elemental/",
-      "part": 4,
       "status": "pending",
       "error": null
     },

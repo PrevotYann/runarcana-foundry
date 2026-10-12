@@ -9,7 +9,7 @@ def main():
     if validation['errors']:raise SystemExit('Validation errors prevent packaging.')
     dest=ROOT/'dist';dest.mkdir(exist_ok=True)
     name='runarcana-'+manifest['version']+('-local' if args.local else '')+'.zip'
-    files=[ROOT/'module.json',ROOT/'README.md',ROOT/'LICENSE',ROOT/'STATE.json',ROOT/'docs/credits.md',ROOT/'docs/babele.md',ROOT/'docs/coverage.md',ROOT/'docs/rule-differences.md',ROOT/'sources/coverage.json',ROOT/'sources/validation.json',ROOT/'sources/catalog.json',ROOT/'sources/missing.json',ROOT/'sources/versions.json',ROOT/'sources/ids.json',ROOT/'sources/mechanics-reviewed.json']
+    files=[ROOT/'module.json',ROOT/'README.md',ROOT/'LICENSE',ROOT/'STATE.json',ROOT/'docs/credits.md',ROOT/'docs/babele.md',ROOT/'docs/coverage.md',ROOT/'docs/rule-differences.md',ROOT/'docs/character-creation.md',ROOT/'sources/coverage.json',ROOT/'sources/validation.json',ROOT/'sources/catalog.json',ROOT/'sources/missing.json',ROOT/'sources/versions.json',ROOT/'sources/ids.json',ROOT/'sources/mechanics-reviewed.json']
     for directory in ['src','styles','lang','assets','packs','translations/templates']:
         files.extend(x for x in (ROOT/directory).rglob('*') if x.is_file() and x.name not in ['LOCK','LOG','LOG.old'])
     if args.source:

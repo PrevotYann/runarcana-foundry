@@ -1,7 +1,15 @@
 import {damageComponents,MAGIC_BASE,manaCost,resourceValue} from '../rules.mjs';
 import {isMarked} from '../api.mjs';
+import {originEffects} from '../character.mjs';
 
 export function installDnd5eAdapter() {
+  const refreshOrigin=async item=>{
+    const actor=item.parent;if(item.type!=='class'||!isMarked(actor)||!game.user.isGM||game.users.activeGM?.id!==game.user.id)return;
+    const plan=actor.getFlag('runarcana','originSelection')?.plan;if(!plan)return;
+    const effect=actor.items.find(i=>i.type==='race'&&i.getFlag('runarcana','originManaged'))?.effects.find(e=>e.getFlag('runarcana','originManaged'));
+    if(effect)await effect.update({'system.changes':originEffects(plan,{level:actor.system.details.level})[0].system.changes});
+  };
+  for(const event of ['createItem','updateItem','deleteItem'])Hooks.on(event,item=>{refreshOrigin(item).catch(e=>console.error('Runarcana origin progression',e));});
   CONFIG.DND5E.activityConsumptionTypes.runarcanaResource={
     label:'RUNARCANA.Resources',targetRequiresEmbedded:true,
     validTargets(){return Object.entries(this.actor?.getFlag('runarcana','resources')??{}).map(([value,r])=>({value,label:r.label??value}));},
@@ -52,6 +60,11 @@ export function installDnd5eAdapter() {
   });
   Hooks.on('dnd5e.preCalculateDamage',(actor,parts,options)=>{
     if(!isMarked(actor))return;
+    const plan=actor.getFlag('runarcana','originSelection')?.plan;
+    if(plan?.strengthReduction&&!options.runarcana?.ignoreOriginReduction&&options.ignore!==true){
+      const reduction=Math.max(0,actor.system.abilities.str.mod),multiplier=options.multiplier??1;
+      if(multiplier>0)for(const part of parts)if(part.value>0&&part.type!=='true'&&!(part.type in CONFIG.DND5E.healingTypes))part.value=Math.max(0,part.value*multiplier-reduction)/multiplier;
+    }
     const defense=actor.getFlag('runarcana','defenses');
     if(!defense?.reviewed || options.ignore===true)return;
     const damageParts=parts.filter(p=>p.value>=0 && !(p.type in CONFIG.DND5E.healingTypes));
