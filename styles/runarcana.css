@@ -1,6 +1,7 @@
 .runarcana-content {display:flex;flex-direction:column;gap:.65rem;padding:1rem;overflow:auto;height:100%;}
 .runarcana-content nav {display:flex;gap:.5rem;flex-wrap:wrap;}
 .runarcana-content label {display:flex;flex-direction:column;gap:.25rem;}
+.runarcana-content [hidden] {display:none !important;}
 .runarcana-content button {min-height:2rem;}
 .runarcana-results {display:flex;flex-direction:column;gap:.3rem;max-height:26rem;overflow:auto;}
 .runarcana-results button {text-align:left;}
