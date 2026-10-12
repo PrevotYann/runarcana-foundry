@@ -65,6 +65,10 @@ export function installDnd5eAdapter() {
     CONFIG.DND5E.damageTypes[type]??={label:'RUNARCANA.Damage.'+type,isPhysical:['lacerating','incisive','crushing'].includes(type)};
   }
   Hooks.on('dnd5e.preUseActivity',(activity,usage)=>{
+    const minimum=activity.item?.getFlag('runarcana','originActionLevel');
+    if(isMarked(activity.actor)&&minimum&&(activity.actor.system.details?.level??0)<minimum){
+      ui.notifications.warn(game.i18n.format('RUNARCANA.OriginActionLevel',{level:minimum}));return false;
+    }
     const targets=activity.consumption.targets;
     if(targets.some(t=>t.type==='runarcanaResource')) {
       if(!isMarked(activity.actor)){ui.notifications.warn(game.i18n.localize('RUNARCANA.Error.NotMarked'));return false;}

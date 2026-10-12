@@ -4,6 +4,7 @@ import fs from 'node:fs/promises';
 import {characterPlan,originEffects,ABILITIES,REGIONS,validateAbilityGeneration} from '../src/character.mjs';
 import {createApi,originContext} from '../src/api.mjs';
 import {naturalWeapon} from '../src/origin-weapons.mjs';
+import {originAction} from '../src/origin-actions.mjs';
 import {REGIONAL_RULES,EQUIPMENT_WEAPONS,regionalWeaponAllowed} from '../src/regional.mjs';
 
 const docs=(await Promise.all((await fs.readdir('packs-src/release/origins')).map(async f=>JSON.parse(await fs.readFile('packs-src/release/origins/'+f,'utf8'))))).filter(d=>d.type==='race');
@@ -20,6 +21,43 @@ test('all ten origins and all 29 named lineages have valid, source-backed creati
   for(const d of docs)for(const variant of d.flags.runarcana.creation.variants.length?d.flags.runarcana.creation.variants:[null]){
     const p=characterPlan(profiles[d.name],selection(d.name,variant?.name));assert.equal(p.abilities.str,12);assert.equal(p.abilities.con,11);
     for(const effect of originEffects(p)) {assert.equal(effect.type,'base');assert.ok(effect.system.changes.every(c=>c._id.length===16&&c.type&&c.phase&&typeof c.value==='string'));assert.equal(effect.changes,undefined);}
+  }
+});
+
+test('all five Half-Dragon breaths preserve source areas, dynamic Constitution DC, damage and full-rest uses',()=>{
+  const expected={'Glacial Elemental':['cold','cone',15],'Infernal Elemental':['fire','cone',15],'Mountain Elemental':['thunder','cone',15],'Cloud Elemental':['lightning','line',20],'Ocean Elemental':['acid','line',20]};
+  for(const [name,[type,shape,size]]of Object.entries(expected)){
+    const plan=characterPlan(profiles['Half-Dragon'],selection('Half-Dragon',name));
+    assert.equal(plan.actions.length,1);
+    const item=originAction(plan.actions[0],{canonicalId:'origin',spent:2});
+    const activity=Object.values(item.system.activities)[0];
+    assert.deepEqual(activity.save.ability,['dex']);
+    assert.equal(activity.save.dc.formula,'8 + @abilities.con.mod + @prof');
+    assert.equal(activity.damage.parts[0].custom.formula,'(@prof)d6');
+    assert.deepEqual(activity.damage.parts[0].types,[type]);
+    assert.equal(activity.damage.onSave,'half');
+    assert.equal(activity.target.template.type,shape);
+    assert.equal(Number(activity.target.template.size),size);
+    if(shape==='line')assert.equal(activity.target.template.width,'5');
+    assert.equal(item.system.uses.max,'@prof');assert.equal(item.system.uses.spent,2);
+    assert.deepEqual(item.system.uses.recovery,[]);
+    assert.equal(item.flags.runarcana.originRecovery,'full');
+    assert.equal(item.flags.runarcana.originActionLevel,2);
+    assert.deepEqual(activity.consumption.targets,[{type:'itemUses',target:'',value:'1'}]);
+  }
+});
+
+test('Vastaya minor transformation grants a Constitution plus proficiency check without changing tribal statistics',()=>{
+  for(const variant of profiles.Vastaya.variants){
+    const plan=characterPlan(profiles.Vastaya,selection('Vastaya',variant.name));
+    assert.equal(plan.actions.length,1);
+    const item=originAction(plan.actions[0],{canonicalId:'vastaya'}),activity=Object.values(item.system.activities)[0];
+    assert.equal(activity.type,'check');assert.equal(activity.activation.type,'bonus');
+    assert.equal(activity.check.ability,'con');assert.equal(activity.check.bonus,'@prof');
+    assert.equal(activity.check.dc.formula,'15');assert.deepEqual(activity.check.associated,[]);
+    assert.equal(activity.target.affects.type,'self');assert.equal(item.system.uses,undefined);
+    assert.equal(item.flags.runarcana.cosmeticOnly,true);assert.equal(item.flags.runarcana.manualMagicZone,true);
+    assert.equal(item.effects,undefined);
   }
 });
 test('thirteen published regional profiles grant their listed skill and training choices',()=>{
@@ -159,4 +197,25 @@ test('origin customization is idempotent, preserves later score gains and rolls 
   actor.update=async u=>{if(fail){fail=false;throw Error('update failed');}return update(u);};
   await assert.rejects(api.customizeOrigin(actor,s),/update failed/);
   assert.deepEqual(actor.items.map(i=>i.toObject()),before);assert.deepEqual(actor.getFlag('runarcana','originSelection'),selectionBefore);assert.equal(actor._source.system.abilities.dex.value,12);
+});
+
+test('Half-Dragon customization preserves breath expenditure across essences and restores it after failed replacement',async()=>{
+  globalThis.game={settings:{get:()=>true},user:{id:'gm',isGM:true},users:{activeGM:{id:'gm'}},modules:new Map(),time:{worldTime:0}};
+  const origin=structuredClone(docs.find(d=>d.name==='Half-Dragon'));origin.system.advancement=[];
+  globalThis.fromUuid=async uuid=>{
+    const d=uuid==='dragon'?origin:{name:'Essence',type:'feat',system:{},flags:{runarcana:{}}};
+    return {...d,getFlag(scope,k){return d.flags?.[scope]?.[k];},toObject(){return structuredClone(d);}};
+  };
+  const actor=mockActor(),api=createApi();
+  const s={...selection('Half-Dragon','Glacial Elemental'),originUuid:'dragon'};
+  await api.customizeOrigin(actor,s);
+  actor.items.find(i=>i.getFlag('runarcana','originAction')).system.uses.spent=2;
+  await api.customizeOrigin(actor,{...selection('Half-Dragon','Ocean Elemental'),originUuid:'dragon'});
+  const breath=actor.items.filter(i=>i.getFlag('runarcana','originAction'));
+  assert.equal(breath.length,1);assert.equal(breath[0].system.uses.spent,2);
+  assert.deepEqual(Object.values(breath[0].system.activities)[0].damage.parts[0].types,['acid']);
+  const before=actor.items.map(i=>i.toObject()),update=actor.update;let fail=true;
+  actor.update=async u=>{if(fail){fail=false;throw Error('update failed');}return update(u);};
+  await assert.rejects(api.customizeOrigin(actor,s),/update failed/);
+  assert.deepEqual(actor.items.map(i=>i.toObject()),before);
 });

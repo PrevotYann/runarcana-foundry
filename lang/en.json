@@ -234,9 +234,12 @@
       "RegionReview": "No regional creation grants are described in the collected source. Review this region with the GM.",
       "NativeRegionHint": "Runeborn gains these proficiencies only with the Native trait. Regional languages still require a communication trait.",
       "OneExotic": "One exotic language",
-      "TwoCommon": "Two common languages"
+      "TwoCommon": "Two common languages",
+      "Actions": "Origin actions",
+      "ActionsReview": "Origin action rules changed in the source; their automation requires review."
     },
     "SkillTechnology": "Technology",
-    "Craft": "Craft"
+    "Craft": "Craft",
+    "OriginActionLevel": "This origin action requires level {level}."
   }
 }

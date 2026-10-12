@@ -42,6 +42,10 @@ def creation(page,variants):
     if page['title']=='Minotaur':result['hpOverall']='min(8, @details.level) + 2 * max(0, min(8, @details.level - 8)) + 3 * max(0, @details.level - 16)'
     if page['title']=='Minotaur':result['naturalWeapons']=[weapon('Horns','1d8','piercing',bonus='@prof',bonus_action=True,criticalThreshold=19,criticalMultiplier=3,bonusCondition='After making another melee attack.')]
     if page['title']=='Troll':result['naturalWeapons']=[weapon('Bite','1d6','piercing',bonus='@prof',bonus_action=True,upgrade={'level':6,'denomination':8,'magical':True})]
+    if page['title']=='Vastaya':
+        if page['sha256']=='ba0f213b54803c361e6d92c65eef2af3ee0bc141f48e649dd9e9623eaea4efa5':
+            result['actions']=[{'id':'vastaya-transformation','name':'Transformation','kind':'transformation','level':1,'description':result['notes'],'sourceHash':page['sha256']}]
+        else:result['actionsReviewRequired']=True
     if page['title']=='Runeborn':
         gallery=next(s for s in page['sections'] if s['anchor']=='trait-gallery')
         result['runeborn']=[]
@@ -77,6 +81,11 @@ def variant(page,section,uuid):
         if name=='Aurochs':result['ac']='11 + @abilities.dex.mod'
         if name=='Alnuk':result['strengthReduction']=True
     if origin=='Half-Dragon':
+        if page['sha256']=='bebd09c75f8e0301b066e11b1bd2f655c3225b8f7036a51f7f9b6efcb8283462':
+            damage,shape={'Glacial Elemental':('cold','cone'),'Infernal Elemental':('fire','cone'),'Mountain Elemental':('thunder','cone'),'Cloud Elemental':('lightning','line'),'Ocean Elemental':('acid','line')}[name]
+            result['actions']=[{'id':'draconic-breath','name':damage.title()+' Breath Weapon','kind':'breath','level':2,'damageType':damage,'shape':shape,'size':15 if shape=='cone' else 20,'width':5 if shape=='line' else None,'description':result['notes'],'sourceHash':page['sha256']}]
+        else:
+            result['actionsReviewRequired']=True
         result['elementalDefense']={'Glacial Elemental':['cold','glacial','fire'],'Infernal Elemental':['fire','incinerating','cold'],'Mountain Elemental':['thunder','vibrational','acid'],'Cloud Elemental':['lightning','plasma','cold'],'Ocean Elemental':['acid','antimonic','lightning']}[name]
         result['resistance']=[result['elementalDefense'][0]]
         result['naturalWeapons']={

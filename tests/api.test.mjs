@@ -44,6 +44,16 @@ test('short-rest resource recovery does not grant native long-rest HP or mana',a
   assert.equal(actor.flags.runarcana.resources.ki.value,5);assert.equal(actor.flags.runarcana.resources.mana.value,4);
   assert.equal(actor.system.attributes.hp.value,12);
 });
+
+test('origin breath expenditure recovers only at full rest, not short or long rest',async()=>{
+  const {actor,api}=setup();
+  const item={id:'breath',type:'feat',system:{uses:{spent:2}},getFlag:(scope,key)=>key==='originManaged'?true:key==='originRecovery'?'full':undefined};
+  actor.items.push(item);
+  await api.rest(actor,'short');assert.equal(item.system.uses.spent,2);
+  await api.rest(actor,'long');assert.equal(item.system.uses.spent,2);
+  game.time.worldTime=86400;await api.rest(actor,'long');assert.equal(item.system.uses.spent,2);
+  game.time.worldTime=172800;await api.rest(actor,'full');assert.equal(item.system.uses.spent,0);
+});
 test('an update failure during hit-die spending restores the class die',async()=>{
   const {actor,api}=setup();actor.items[0].system.hd.spent=0;
   globalThis.Roll=class{constructor(){this.total=6;}async evaluate(){return this;}async toMessage(){}};

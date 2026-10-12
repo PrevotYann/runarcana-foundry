@@ -3,6 +3,21 @@ import assert from 'node:assert/strict';
 import {installDnd5eAdapter} from '../src/adapters/dnd5e-6.mjs';
 import {serialized} from '../src/api.mjs';
 
+test('reviewed origin actions reject use below their published level without blocking other actors',()=>{
+  const hooks=new Map();globalThis.Hooks={on:(name,fn)=>hooks.set(name,fn)};
+  globalThis.CONFIG={DND5E:{activityConsumptionTypes:{},damageTypes:{},healingTypes:{}}};
+  const warnings=[];globalThis.ui={notifications:{warn:m=>warnings.push(m)}};
+  globalThis.game={settings:{get:()=>true},i18n:{format:(k,v)=>`${k}:${v.level}`}};
+  installDnd5eAdapter();
+  let marked=true;
+  const actor={system:{details:{level:1}},getFlag:()=>marked};
+  const activity={actor,item:{getFlag:()=>2},consumption:{targets:[]}};
+  const use=hooks.get('dnd5e.preUseActivity');
+  assert.equal(use(activity,{}),false);assert.equal(warnings.length,1);
+  actor.system.details.level=2;assert.equal(use(activity,{}),undefined);
+  actor.system.details.level=1;marked=false;assert.equal(use(activity,{}),undefined);
+});
+
 test('mana consumption stages native updates and does not debit a cancelled workflow',async()=>{
   const hooks=new Map();
   globalThis.Hooks={on:(name,fn)=>hooks.set(name,fn)};

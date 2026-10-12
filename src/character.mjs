@@ -64,6 +64,8 @@ export function characterPlan(profile,selection,{knownSkills={},knownCrafts=[]}=
   p.hpOverall=profile.hpOverall;
   p.underwaterVision=variant?.underwaterVision;p.heavyWeaponSpeed=variant?.heavyWeaponSpeed;
   p.naturalWeapons=[...array(profile.naturalWeapons),...array(variant?.naturalWeapons)].map(w=>({...w}));
+  p.actions=[...array(profile.actions),...array(variant?.actions)].map(a=>({...a}));
+  p.actionsReviewRequired=Boolean(profile.actionsReviewRequired||variant?.actionsReviewRequired);
   p.generation=generation;
   p.elementalDefense=variant?.elementalDefense;p.initiativeAdvantage=variant?.initiativeAdvantage;p.strengthReduction=variant?.strengthReduction;
   if(profile.origin==='Runeborn')runebornPlan(profile,selection,p,choice,knownSkills,knownCrafts);

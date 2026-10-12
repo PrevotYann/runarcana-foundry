@@ -1,6 +1,7 @@
 import {resourceValue,validateChoices,creatureStatistics,scaleDice,manaCost} from './rules.mjs';
 import {characterPlan,originEffects,originHeritageBudget,ABILITIES} from './character.mjs';
 import {naturalWeapon} from './origin-weapons.mjs';
+import {originAction} from './origin-actions.mjs';
 import {heritageEligibility,heritageEffects,heritageOptions,savingProficiencies,advanceHeritageProficiencies} from './heritage.mjs';
 import {knownCrafts,heritageTools,craftFromName} from './crafts.mjs';
 import {explicitWeaponProficiencies} from './heritage-weapons.mjs';
@@ -21,7 +22,7 @@ export function assertGM() {
 }
 export function createApi() {
   return Object.freeze({
-    version:game.modules?.get('runarcana')?.version??'0.14.0', manaCost,scaleDice,creatureStatistics,
+    version:game.modules?.get('runarcana')?.version??'0.15.0', manaCost,scaleDice,creatureStatistics,
     async enableActor(actor) {
       assertGM();
       if(!game.settings.get('runarcana','enabled'))throw new Error('RUNARCANA.Error.WorldDisabled');
@@ -47,6 +48,10 @@ export function createApi() {
         }
         if(plan.variantUuid){const d=await fromUuid(plan.variantUuid);if(!d)throw new Error('RUNARCANA.Error.Source');documents.push(d.toObject());}
         for(const definition of plan.naturalWeapons)documents.push(naturalWeapon(definition,{level:actor.system.details?.level??1,canonicalId:origin.getFlag('runarcana','canonicalId'),sourceUrl:origin.getFlag('runarcana','sourceUrl'),sourceHash:origin.getFlag('runarcana','sourceHash')}));
+        for(const definition of plan.actions??[]){
+          const previous=old.find(i=>i.getFlag('runarcana','originAction')===definition.id);
+          documents.push(originAction(definition,{canonicalId:origin.getFlag('runarcana','canonicalId'),sourceUrl:origin.getFlag('runarcana','sourceUrl'),spent:previous?.system.uses?.spent??0}));
+        }
         for(const name of plan.customProficiencies){
           const match=craftFromName(name),ability=match?.craft.ability??'int';
           documents.push({name,type:'tool',system:{type:{value:'',baseItem:'runarcanaCraft'},proficient:0.5,ability,description:{value:escapeHtml(name)},activities:{rcOriginCheck001:{_id:'rcOriginCheck001',type:'check',name,activation:{type:'action',value:1},check:{ability,associated:['runarcanaCraft'],dc:{calculation:'',formula:''}}}}},flags:{runarcana:{originManaged:true,creationProficiency:true,...(match?{craftId:match.craft.id,craftSpecialty:match.specialty,sourceUrl:match.craft.sourceUrl,sourceHash:match.craft.sourceHash}:{craftReviewRequired:true})}}});
