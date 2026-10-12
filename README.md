@@ -22,7 +22,7 @@ For manual installation, close Foundry, extract the ZIP into `Data/modules/`, th
 
 Use **Runarcana → Catalog** for lazy compendium browsing. **World import** previews creates/updates/conflicts; local edits and duplicates are skipped. Updating or translating a compendium does not automatically update world copies. Reimport voluntarily to refresh unedited copies. The importer saves a pre-update backup in `flags.runarcana.import.backup`; restore it manually through a document update/export if needed.
 
-The active primary GM performs shared resource, rest, creation and import mutations. Native Activities use native ownership checks and staged consumption. Character creation supports all 10 origins and their 29 named lineages, tribes, clans and models. Choose fixed values, 27-point buy, rolls or GM-approved scores, then allocate the origin's +2/+1 and its required choices. The preview shows the resulting scores, size, movement, senses and proficiencies. Creation applies permanent origin traits and opens native class advancement, including Hit Points. **Character → Customize origin** replaces a workbench-managed origin without stacking its boosts; later score changes are preserved. See [creation and customization](docs/character-creation.md) for supported effects and remaining limits.
+The active primary GM performs shared resource, rest, creation and import mutations. Native Activities use native ownership checks and staged consumption. Character creation supports all 10 origins and their 29 named lineages, tribes, clans and models. Choose fixed values, 27-point buy, rolls or GM-approved scores, then allocate the origin's +2/+1 and its required choices. The preview shows the resulting scores, size, movement, senses and proficiencies. Creation applies permanent origin traits and opens native class advancement, including Hit Points. Supported natural weapons are added as native attack Items; Troll bite upgrades at level 6. Fluffy Yordle movement follows heavy-weapon equipment, and underwater origin vision can be toggled in the Character tab. **Character → Customize origin** replaces a workbench-managed origin without stacking its boosts; later score changes are preserved. See [creation and customization](docs/character-creation.md) for supported effects and remaining limits.
 
 ## Build and resume
 
@@ -53,7 +53,7 @@ The export must contain `en/.../index.html`. Full pages and normalized local tex
 
 A fresh clone builds from the committed `data/corpus.json.gz` snapshot: install dependencies, then run `npm run build`, `npm run translations`, `npm test`, `npm run validate`, `python scripts/report.py` and `python scripts/package.py`. No wiki network access is needed. After collecting more sources, normalization updates that snapshot.
 
-`npm run build -- --references` is an optional reference-only diagnostic profile. Default releases include content. `python scripts/package.py --source` packages code, build tools and the authorized source snapshot. Inspect installable archives with `node scripts/validate-archive.mjs dist/runarcana-0.5.0.zip`.
+`npm run build -- --references` is an optional reference-only diagnostic profile. Default releases include content. `python scripts/package.py --source` packages code, build tools and the authorized source snapshot. Inspect installable archives with `node scripts/validate-archive.mjs dist/runarcana-0.6.0.zip`.
 
 ## API
 

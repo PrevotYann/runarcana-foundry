@@ -1,5 +1,6 @@
 import {isMarked} from './api.mjs';
 import {renderCharacterForm} from './character-form.mjs';
+import {originHeritageBudget} from './character.mjs';
 
 const t=key=>game.i18n.localize('RUNARCANA.'+key);
 const el=(tag,text,cls)=>{const node=document.createElement(tag);if(text!==undefined)node.textContent=text;if(cls)node.className=cls;return node;};
@@ -64,6 +65,10 @@ export class Workbench extends foundry.applications.api.ApplicationV2 {
       summary.append(el('dt',game.i18n.localize('TYPES.Item.'+type)),el('dd',actor.items.filter(i=>i.type===type).map(i=>`${i.name}${i.type==='class'?` (${i.system.levels})`:''}`).join(', ')));
     }
     root.append(summary,button('Creation.Customize',()=>{this.mode='customization';return this.render(true);}));
+    if(actor.getFlag('runarcana','originSelection')?.plan.underwaterVision){
+      const underwater=field(root,'Creation.Underwater',input('checkbox'));underwater.checked=actor.getFlag('runarcana','originContext')?.underwater===true;
+      root.append(button('Apply',async()=>{await api.setOriginContext(actor,{underwater:underwater.checked});this.render(true);}));
+    }
     for(const [id,r]of Object.entries(actor.getFlag('runarcana','resources')??{})) {
       const row=el('div',undefined,'runarcana-resource');row.append(el('span',`${r.label??id}: ${r.value}/${r.max}`),button('SpendOne',async()=>{await api.spendResource(actor,id,1,{operationId:crypto.randomUUID()});this.render(true);}));root.append(row);
     }
@@ -93,6 +98,9 @@ export class Workbench extends foundry.applications.api.ApplicationV2 {
     }),el('span',c.name));
     const heritage=el('section');heritage.append(el('h3',t('Choices.Title')));
     const budget=field(heritage,'Choices.Budget',input('number',0));budget.min=0;
+    const pool=field(heritage,'Choices.Pool',select([['origin',t('Choices.OriginPool')],['region',t('Choices.RegionPool')]]));
+    const originPlan=actor.getFlag('runarcana','originSelection')?.plan;
+    const updateBudget=()=>{if(originPlan){budget.value=originHeritageBudget(originPlan,actor.system.details.level,pool.value);budget.readOnly=true;}};pool.addEventListener('change',updateBudget);updateBudget();
     const choose=field(heritage,'Choices.Document',select([['',t('Choices.Select')]]));
     const hp=game.packs.get('runarcana.heritages');
     if(hp){const ix=await hp.getIndex();for(const e of ix){const o=el('option',e.name);o.value=e._id;choose.append(o);}}
@@ -100,9 +108,10 @@ export class Workbench extends foundry.applications.api.ApplicationV2 {
     const reason=field(heritage,'Choices.OverrideReason',input('text',''));
     const preview=el('p');heritage.append(preview);
     let plan;
+    for(const event of ['input','change'])heritage.addEventListener(event,()=>{plan=null;preview.textContent='';});
     heritage.append(button('Preview',()=>{
       if(!choose.value)throw new Error('RUNARCANA.Error.Choices');
-      plan={budget:Number(budget.value),choices:[{id:choose.value,uuid:`Compendium.runarcana.heritages.Item.${choose.value}`,cost:Number(cost.value)}]};
+      plan={pool:pool.value,budget:Number(budget.value),choices:[{id:choose.value,uuid:`Compendium.runarcana.heritages.Item.${choose.value}`,cost:Number(cost.value)}]};
       const result=api.previewChoices(actor,plan);preview.textContent=`${t('Choices.Spent')}: ${result.spent}; ${result.errors.map(k=>game.i18n.localize(k)).join(', ')}`;
     }),button('Apply',async()=>{if(!plan)throw new Error('RUNARCANA.Error.Preview');await api.applyChoices(actor,plan,{overrideReason:reason.value});this.render(true);}));root.append(heritage);
   }

@@ -6,6 +6,10 @@ POOLS={'Antroplantae':'lineages','Chireans':'colonies','Construct':'models','Hal
 SKILLS={'Acrobatics':'acr','Sleight of Hand':'slt','Stealth':'ste','Perception':'prc','Athletics':'ath','Animal Handling':'ani','Arcana':'arc','Deception':'dec','History':'his','Insight':'ins','Intimidation':'itm','Investigation':'inv','Medicine':'med','Nature':'nat','Performance':'prf','Persuasion':'per','Religion':'rel','Survival':'sur'}
 SKILLS['Technology']='tec'
 
+def weapon(name,dice,damage,ability='str',bonus='',bonus_action=False,**extra):
+    n,d=map(int,dice.split('d'))
+    return {'id':name.lower().replace(' ','-'),'name':name,'number':n,'denomination':d,'damageType':damage,'ability':ability,'bonus':bonus,'bonusAction':bonus_action,**extra}
+
 def stats(html):
     soup=BeautifulSoup(html,'html.parser');text=soup.get_text(' ',strip=True)
     result={'movement':{},'senses':{},'skills':{},'choices':[],'notes':text}
@@ -36,6 +40,8 @@ def creation(page,variants):
     if page['title']=='Human':result['choices']=[{'id':'skill','type':'skill','options':list(SKILLS.values())},{'id':'craft','type':'craft'}]
     if page['title']=='Construct':result['resistance']=['poison'];result['armorModes']=['null','light','medium','heavy']
     if page['title']=='Minotaur':result['hpOverall']='min(8, @details.level) + 2 * max(0, min(8, @details.level - 8)) + 3 * max(0, @details.level - 16)'
+    if page['title']=='Minotaur':result['naturalWeapons']=[weapon('Horns','1d8','piercing',bonus='@prof',bonus_action=True,criticalThreshold=19,criticalMultiplier=3,bonusCondition='After making another melee attack.')]
+    if page['title']=='Troll':result['naturalWeapons']=[weapon('Bite','1d6','piercing',bonus='@prof',bonus_action=True,upgrade={'level':6,'denomination':8,'magical':True})]
     if page['title']=='Runeborn':
         gallery=next(s for s in page['sections'] if s['anchor']=='trait-gallery')
         result['runeborn']=[]
@@ -73,8 +79,15 @@ def variant(page,section,uuid):
     if origin=='Half-Dragon':
         result['elementalDefense']={'Glacial Elemental':['cold','glacial','fire'],'Infernal Elemental':['fire','incinerating','cold'],'Mountain Elemental':['thunder','vibrational','acid'],'Cloud Elemental':['lightning','plasma','cold'],'Ocean Elemental':['acid','antimonic','lightning']}[name]
         result['resistance']=[result['elementalDefense'][0]]
+        result['naturalWeapons']={
+            'Glacial Elemental':[weapon('Bite','1d4','piercing'),weapon('Claws','1d6','slashing',ability=''),weapon('Horns','1d4','piercing')],
+            'Infernal Elemental':[weapon('Horns','1d6','piercing'),weapon('Tail','1d4','bludgeoning'),weapon('Claws','1d4','piercing',ability='dex')],
+            'Mountain Elemental':[weapon('Tail','1d6','bludgeoning'),weapon('Claws','1d4','slashing',ability=''),weapon('Bite','1d4','piercing')],
+            'Cloud Elemental':[weapon('Horns','1d6','bludgeoning'),weapon('Tail','1d4','bludgeoning',ability=''),weapon('Bite','1d4','piercing')],
+            'Ocean Elemental':[weapon('Tail','1d4','slashing',ability=''),weapon('Claws','1d4','piercing'),weapon('Bite','1d6','piercing')]
+        }[name]
     if origin=='Troll':
-        result['region']={'Sand Troll':'Shurima','Ice Troll':'Freljord','Jungle Troll':'Ixtal'}[name]
+        result['region']={'Sand Troll':'Shurima','Ice Troll':'Freljord','Jungle Troll':'Kumungu'}[name]
         if name=='Sand Troll':result['skills']['ste']=1
         if name=='Jungle Troll':result['immunity']=['poison'];result['conditionImmunity']=['poisoned'];result['senses']['darkvision']=120
     if origin=='Vastaya':
@@ -82,9 +95,12 @@ def variant(page,section,uuid):
         if name=='Oovi-Kat':result['languages']=['Vastayashai’rei'];result['choices']=[{'id':'languages','type':'languages'}]
         if name=='Shimon':result['choices']=[{'id':'skill','type':'skill','options':list(SKILLS.values())},{'id':'craft','type':'craft'}]
         if name=='Vesani':result['choices']=[{'id':'castingAbility','type':'ability','options':['cha','wis']}]
+        if name=='Fauhwoon':result['naturalWeapons']=[weapon('Horns','1d8','bludgeoning')]
+        if name=='Kiilash':result['naturalWeapons']=[weapon('Claws','1d6','slashing',ability='',bonus='@prof'),weapon('Bite','2d4','piercing',bonus='@prof')]
+        if name=='Marai':result['underwaterVision']=60
         # Underwater-only darkvision remains a situational instruction on Marai.
     if origin=='Yordle':
-        if name=='Aquatic':result['resistance']=['bludgeoning'];result['acBonus']='@prof'
+        if name=='Aquatic':result['resistance']=['bludgeoning'];result['acBonus']='@prof';result['underwaterVision']=120
         if name=='Faeric':result['movement']['fly']=30
-        # Fluffy's 40-foot speed is conditional on not wielding a heavy weapon.
+        if name=='Fluffy':result['movement']['walk']=40;result['heavyWeaponSpeed']=30
     return result

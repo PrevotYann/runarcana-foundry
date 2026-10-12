@@ -59,3 +59,11 @@ test('a second short-rest hit die is refused until a long rest',async()=>{
   await assert.rejects(api.spendHitDie(actor,'short','d8'),/ShortHitDie/);
   await api.rest(actor,'long');await api.spendHitDie(actor,'short','d8');assert.equal(actor.system.attributes.hp.value,24);
 });
+test('heritage budgets come from the origin and track regional spending separately',()=>{
+  const {actor,api}=setup();actor.flags.runarcana.originSelection={plan:{heritagePoints:3,regionPoints:2}};
+  actor.flags.runarcana.choices={choices:[{id:'regional',cost:2,pool:'region'}]};
+  const origin=api.previewChoices(actor,{pool:'origin',budget:999,choices:[{id:'origin',cost:3}]});assert.equal(origin.budget,3);assert.equal(origin.valid,true);
+  assert.equal(api.previewChoices(actor,{pool:'origin',budget:999,choices:[{id:'over',cost:4}]}).valid,false);
+  assert.equal(api.previewChoices(actor,{pool:'region',budget:999,choices:[{id:'more',cost:1}]}).valid,false);
+  actor.system.details.level=5;assert.equal(api.previewChoices(actor,{pool:'origin',budget:0,choices:[]}).budget,4);assert.equal(api.previewChoices(actor,{pool:'region',budget:0,choices:[]}).budget,2);
+});

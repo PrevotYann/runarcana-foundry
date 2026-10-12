@@ -1,10 +1,10 @@
-import {ABILITIES,SKILLS,REGIONS,MARTIAL_WEAPONS} from './character.mjs';
+import {ABILITIES,SKILLS,REGIONS,MARTIAL_WEAPONS,WEAPONS} from './character.mjs';
 
 export async function renderCharacterForm(root,{actor,onCreated}={}) {
   const api=game.modules.get('runarcana').api,t=k=>game.i18n.localize('RUNARCANA.'+k);
   const node=(tag,text)=>{const e=document.createElement(tag);if(text!==undefined)e.textContent=text;return e;};
   const input=(type,value)=>{const e=node('input');e.type=type;e.value=value??'';return e;};
-  const select=(options,value)=>{const e=node('select');for(const [v,label]of options){const o=node('option',label);o.value=v;e.append(o);}if(value!==undefined)e.value=value;return e;};
+  const select=(options,value)=>{const e=node('select');for(const [v,label]of options){const o=node('option',label);o.value=v;e.append(o);}if(value!==undefined&&options.some(([v])=>v===value))e.value=value;return e;};
   const label=(parent,text,control)=>{const e=node('label',text);e.append(control);parent.append(e);return control;};
   const saved=actor?.getFlag('runarcana','originSelection'),initial=saved?.selection??{};
   const form=node('div');form.className='runarcana-form';root.append(node('p',t('Creation.Hint')),form);
@@ -31,7 +31,7 @@ export async function renderCharacterForm(root,{actor,onCreated}={}) {
     else if(['ability','damage'].includes(c.type))e=select(c.options.map(k=>[k,c.type==='ability'?t('Creation.'+k):game.i18n.localize(CONFIG.DND5E.damageTypes[k]?.label??k)]),value);
     else if(c.type==='option')e=select([...(c.optional?[['',t('Creation.None')]]:[]),...c.options.map(o=>[o.id,o.name])],value);
     else if(c.type==='proficiency'){
-      const group=node('span'),kind=select([['skill','Skill'],['craft','Craft'],['weapon','Martial weapon']],value?.split(':')[0]??'skill'),area=node('span');let detail;
+      const group=node('span'),kind=select([['skill','Skill'],['craft','Craft'],['weapon','Martial weapon']].filter(([k])=>!c.kinds||c.kinds.includes(k)),value?.split(':')[0]??'skill'),area=node('span');let detail;
       const update=()=>{detail=kind.value==='skill'?select(skillOptions(),value?.split(':').slice(1).join(':')):kind.value==='weapon'?select(MARTIAL_WEAPONS.map(k=>[k,k]),value?.split(':').slice(1).join(':')):input('text',value?.split(':').slice(1).join(':'));area.replaceChildren(detail);};kind.addEventListener('change',update);update();group.append(kind,area);label(parent,t('Creation.Choice.'+c.id),group);return ()=>kind.value+':'+detail.value;
     }
     else e=input('text',Array.isArray(value)?value.join('; '):value);
@@ -61,13 +61,15 @@ export async function renderCharacterForm(root,{actor,onCreated}={}) {
         minor=label(details,t('Creation.ConvertMinor'),input('checkbox'));major=label(details,t('Creation.ConvertMajor'),input('checkbox'));minor.checked=!!initial.conversions?.minor;major.checked=!!initial.conversions?.major;
         const selected=node('div');details.append(selected);
         const addTrait=(row={})=>{
-          const line=node('div'),pick=select(p.runeborn.map(r=>[r.id,`${r.category} — ${r.name}`]),row.id),valueArea=node('span'),description=node('p'),remove=node('button',t('Creation.Remove'));remove.type='button';let value;
+          const line=node('div'),pick=select(p.runeborn.map(r=>[r.id,`${r.category} — ${r.name}`]),row.id),valueArea=node('span'),description=node('p'),remove=node('button',t('Creation.Remove'));remove.type='button';let value,readChoice;
           const updateTrait=()=>{const trait=p.runeborn.find(r=>r.id===pick.value),name=trait.name;description.textContent=trait.description;
             const options=['Skill','Specialist'].includes(name)?skillOptions():name==='Natural Armor'?abilityOptions.filter(([k])=>k!=='dex'):name==='Natural Resistance'?Object.entries(CONFIG.DND5E.damageTypes).map(([k,v])=>[k,game.i18n.localize(v.label)]):name==='Breath Weapon'?['acid','lightning','cold','fire','thunder','poison'].map(k=>[k,k]):name==='Special Senses'?['blindsight','tremorsense'].map(k=>[k,k]):name==='Sharp Senses'?['hearing','smell','sight'].map(k=>[k,k]):name.includes('Spellcasting')?abilityOptions.filter(([k])=>name==='Innate Spellcasting'||['int','wis','cha'].includes(k)):trait.group==='Attribute Reduction'?abilityOptions:null;
-            value=options?select(options,row.value):input('text',row.value);value.placeholder=t('Creation.TraitValue');valueArea.replaceChildren(value);
+            const weaponOptions=name==='Military'?WEAPONS.map(k=>[k,k]):['Tail','Horns','Claws'].includes(name)?(name==='Claws'?['slashing','piercing']:['bludgeoning','piercing']).map(k=>[k,game.i18n.localize(CONFIG.DND5E.damageTypes[k]?.label??k)]):null;
+            if(name==='Skillfull'){valueArea.replaceChildren();readChoice=controlFor(valueArea,{id:'skillfull',type:'proficiency',kinds:['skill','craft']},row.value);}
+            else{value=weaponOptions?select(weaponOptions,row.value):options?select(options,row.value):input('text',row.value);value.placeholder=t('Creation.TraitValue');valueArea.replaceChildren(value);readChoice=()=>value.value;}
           };updateTrait();pick.addEventListener('change',updateTrait);
           line.append(pick,valueArea,remove,description);selected.append(line);
-          const read=()=>({id:pick.value,value:value.value});traitReaders.push(read);remove.addEventListener('click',()=>{traitReaders.splice(traitReaders.indexOf(read),1);line.remove();invalidate();});
+          const read=()=>({id:pick.value,value:readChoice()});traitReaders.push(read);remove.addEventListener('click',()=>{traitReaders.splice(traitReaders.indexOf(read),1);line.remove();invalidate();});
         };
         for(const row of initial.traits??[])addTrait(row);
         const add=node('button',t('Creation.AddTrait'));add.type='button';add.addEventListener('click',()=>{addTrait();invalidate();});details.append(add,node('p',t('Creation.RunebornHint')));

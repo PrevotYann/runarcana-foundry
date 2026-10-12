@@ -2,7 +2,8 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import fs from 'node:fs/promises';
 import {characterPlan,originEffects,ABILITIES,REGIONS,validateAbilityGeneration} from '../src/character.mjs';
-import {createApi} from '../src/api.mjs';
+import {createApi,originContext} from '../src/api.mjs';
+import {naturalWeapon} from '../src/origin-weapons.mjs';
 
 const docs=(await Promise.all((await fs.readdir('packs-src/release/origins')).map(async f=>JSON.parse(await fs.readFile('packs-src/release/origins/'+f,'utf8'))))).filter(d=>d.type==='race');
 const profiles=Object.fromEntries(docs.map(d=>[d.name,d.flags.runarcana.creation]));
@@ -77,6 +78,44 @@ test('Runeborn budgets, conversion, repeat limits and prerequisites constrain re
   assert.throws(()=>characterPlan(p,{...s,traits:[row('Amphibian'),row('Amphibian')]}),/Choices/);
   assert.equal(characterPlan(p,{...s,traits:[row('Winged'),row('Winged')]}).movement.fly,30);
 });
+test('natural weapons preserve published dice, attack abilities, proficiency damage and critical data',()=>{
+  const minotaur=characterPlan(profiles.Minotaur,selection('Minotaur','Aelus'));
+  const horns=naturalWeapon(minotaur.naturalWeapons[0]);
+  assert.equal(horns.system.damage.base.denomination,8);assert.equal(horns.system.damage.base.bonus,'@prof');assert.equal(horns.flags.runarcana.criticalMultiplier,3);
+  assert.equal(Object.values(horns.system.activities)[0].attack.critical.threshold,19);assert.equal(Object.values(horns.system.activities)[1].activation.condition,'After making another melee attack.');
+  const feline=characterPlan(profiles.Vastaya,selection('Vastaya','Kiilash'));
+  assert.equal(feline.naturalWeapons.find(w=>w.name==='Bite').number,2);assert.equal(feline.naturalWeapons.find(w=>w.name==='Claws').ability,'');
+  const dragon=characterPlan(profiles['Half-Dragon'],selection('Half-Dragon','Infernal Elemental'));
+  assert.equal(dragon.naturalWeapons.length,3);assert.equal(dragon.naturalWeapons.find(w=>w.name==='Claws').ability,'dex');
+  const troll=characterPlan(profiles.Troll,selection('Troll','Ice Troll')).naturalWeapons[0];
+  assert.equal(naturalWeapon(troll,{level:5}).system.damage.base.denomination,6);
+  assert.equal(naturalWeapon(troll,{level:6}).system.damage.base.denomination,8);assert.deepEqual(naturalWeapon(troll,{level:6}).system.properties,['mgc']);
+  assert.deepEqual(naturalWeapon(troll,{level:4}).system.properties,[]);
+});
+test('conditional movement and darkvision use actual equipment and explicit underwater context',()=>{
+  const fluffy=characterPlan(profiles.Yordle,selection('Yordle','Fluffy'));
+  const speed=context=>originEffects(fluffy,context)[0].system.changes.find(c=>c.key==='system.attributes.movement.speeds.walk').value;
+  assert.equal(speed({heavyWeapon:false}),'40');assert.equal(speed({heavyWeapon:true}),'30');
+  const actor={system:{details:{level:4}},getFlag:()=>({underwater:true}),items:[{type:'weapon',system:{equipped:true,properties:new Set(['hvy'])}}]};
+  assert.deepEqual(originContext(actor),{level:4,underwater:true,heavyWeapon:true});actor.items[0].system.equipped=false;assert.equal(originContext(actor).heavyWeapon,false);
+  const marai=characterPlan(profiles.Vastaya,selection('Vastaya','Marai'));
+  assert.ok(!originEffects(marai,{underwater:false})[0].system.changes.some(c=>c.key==='system.attributes.senses.ranges.darkvision'));
+  assert.equal(originEffects(marai,{underwater:true})[0].system.changes.find(c=>c.key==='system.attributes.senses.ranges.darkvision').value,'60');
+  const aquatic=characterPlan(profiles.Yordle,selection('Yordle','Aquatic'));
+  assert.equal(originEffects(aquatic,{underwater:true})[0].system.changes.find(c=>c.key==='system.attributes.senses.ranges.darkvision').value,'120');
+});
+test('Runeborn proficiency choices are independent of row order and weapon choices stay weapons',()=>{
+  const p=profiles.Runeborn,s=selection('Runeborn'),row=(name,value)=>({id:p.runeborn.find(t=>t.name===name).id,value});
+  for(const traits of [[row('Specialist','ath'),row('Skill','ath')],[row('Skill','ath'),row('Specialist','ath')]])assert.equal(characterPlan(p,{...s,traits}).skills.ath,2);
+  assert.equal(characterPlan(p,{...s,traits:[row('Specialist','ath')]},{knownSkills:{ath:1}}).skills.ath,2);
+  assert.throws(()=>characterPlan(p,{...s,traits:[row('Specialist','ath')]}),/Prerequisite/);
+  const military=characterPlan(p,{...s,traits:[row('Military','handcrossbow')]});assert.deepEqual(military.weapons,['handcrossbow']);assert.deepEqual(military.customProficiencies,[]);
+  assert.throws(()=>characterPlan(p,{...s,traits:[row('Military','Smithing')]}),/Choices/);
+  const armed=characterPlan(p,{...s,traits:[row('Tail','piercing'),row('Claws','slashing')]});assert.equal(armed.naturalWeapons[0].reach,10);assert.equal(armed.naturalWeapons[1].ability,'');
+  assert.throws(()=>characterPlan(p,{...s,traits:[row('Horns','fire')]}),/Choices/);
+  assert.equal(characterPlan(p,{...s,traits:[row('Skillfull','skill:ath'),row('Skill','ath')]}).skillAdvantages[0],'ath');
+  assert.throws(()=>characterPlan(p,{...s,traits:[row('Skillfull','skill:ath')]}),/Prerequisite/);
+});
 
 function mockActor() {
   let n=0;const data={system:{abilities:Object.fromEntries(ABILITIES.map(k=>[k,{value:10}])),skills:{},attributes:{ac:{formulas:[]}}},flags:{runarcana:{enabled:true}}};
@@ -91,6 +130,8 @@ test('origin customization is idempotent, preserves later score gains and rolls 
   globalThis.fromUuid=async()=>({...human,getFlag(scope,k){return this.flags[scope][k];},toObject(){return structuredClone(human);}});
   const actor=mockActor(),api=createApi(),s={...selection('Human'),originUuid:'human'};
   await api.customizeOrigin(actor,s);assert.equal(actor._source.system.abilities.str.value,12);const length=actor.items.length;
+  const tool=actor.items.find(i=>i.type==='tool');assert.equal(tool.system.type.baseItem,'runarcanaCraft');assert.deepEqual(tool.system.activities.rcOriginCheck001.check.associated,['runarcanaCraft']);
+  assert.ok(actor.items.find(i=>i.type==='race').effects[0].system.changes.some(c=>c.key==='system.tools.runarcanaCraft.value'&&c.value==='1'));
   await api.customizeOrigin(actor,s);assert.equal(actor.items.length,length);assert.equal(actor._source.system.abilities.str.value,12);
   actor._source.system.abilities.str.value+=1;
   await api.customizeOrigin(actor,{...s,plusTwo:'dex'});assert.equal(actor._source.system.abilities.str.value,11);assert.equal(actor._source.system.abilities.dex.value,12);

@@ -58,7 +58,10 @@
       "Select": "Select heritage",
       "Cost": "Source point cost",
       "OverrideReason": "GM override reason",
-      "Spent": "Points spent"
+      "Spent": "Points spent",
+      "Pool": "Heritage pool",
+      "OriginPool": "Origin Heritage",
+      "RegionPool": "Region Heritage"
     },
     "Import": {
       "Policy": "Preview before applying. Imports create native folders. Unedited copies can update; local edits and duplicates are skipped. Existing world copies require an explicit reimport after translation. A backup is stored for updates.",
@@ -184,7 +187,8 @@
         "resistance": "Damage resistance",
         "botany": "Fiber / Florescence",
         "languages": "Two common languages or one exotic language (separate with ;)",
-        "castingAbility": "Origin spellcasting ability"
+        "castingAbility": "Origin spellcasting ability",
+        "skillfull": "Skill or Craft for advantage"
       },
       "Armor": {
         "null": "Null (+1 AC)",
@@ -211,8 +215,10 @@
       "Roll": "Roll six ability scores (4d6kh3)",
       "Defenses": "Resistances / immunities",
       "BonusHP": "Accumulated bonus HP",
-      "PointsRemaining": "Point-buy points remaining"
+      "PointsRemaining": "Point-buy points remaining",
+      "Underwater": "Underwater (conditional origin vision)"
     },
-    "SkillTechnology": "Technology"
+    "SkillTechnology": "Technology",
+    "Craft": "Craft"
   }
 }

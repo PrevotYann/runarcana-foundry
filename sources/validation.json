@@ -1,8 +1,8 @@
 {
   "profile": "release",
-  "indexedDocuments": 6532,
-  "embeddedDocuments": 4814,
-  "uuidLinks": 2925,
+  "indexedDocuments": 6650,
+  "embeddedDocuments": 4873,
+  "uuidLinks": 3539,
   "packKeys": {
     "start": 2,
     "origins": 20,
@@ -16,8 +16,8 @@
     "crafts": 445,
     "equipment": 395,
     "characters": 634,
-    "rules": 354,
-    "spells": 129,
+    "rules": 472,
+    "spells": 188,
     "rituals": 49,
     "techmaturgy": 133,
     "companions": 5,

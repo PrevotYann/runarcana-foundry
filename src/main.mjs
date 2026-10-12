@@ -7,7 +7,11 @@ import {Workbench} from './workbench.mjs';
 Hooks.on('babele.init',registerBabele);
 Hooks.once('init',()=>{
   game.settings.register('runarcana','enabled',{name:'RUNARCANA.Settings.Enabled',hint:'RUNARCANA.Settings.EnabledHint',scope:'world',config:true,type:Boolean,default:false,requiresReload:true});
-  if(game.settings.get('runarcana','enabled'))CONFIG.DND5E.skills.tec??={label:'RUNARCANA.SkillTechnology',ability:'int',fullKey:'technology'};
+  if(game.settings.get('runarcana','enabled')){
+    CONFIG.DND5E.skills.tec??={label:'RUNARCANA.SkillTechnology',ability:'int',fullKey:'technology'};
+    CONFIG.DND5E.tools.runarcanaCraft??={ability:'int'};
+    CONFIG.DND5E.toolProficiencies.runarcanaCraft??='RUNARCANA.Craft';
+  }
   game.settings.registerMenu('runarcana','workbench',{name:'RUNARCANA.Workbench',label:'RUNARCANA.OpenWorkbench',hint:'RUNARCANA.Settings.WorkbenchHint',icon:'fas fa-book-open',type:Workbench,restricted:false});
 });
 Hooks.once('setup',()=>{

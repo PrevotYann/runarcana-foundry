@@ -1,6 +1,7 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import {installDnd5eAdapter} from '../src/adapters/dnd5e-6.mjs';
+import {serialized} from '../src/api.mjs';
 
 test('mana consumption stages native updates and does not debit a cancelled workflow',async()=>{
   const hooks=new Map();
@@ -47,4 +48,18 @@ test('Alnuk damage reduction respects multipliers, true damage and an explicit G
   const damage=[{type:'fire',value:10},{type:'true',value:10},{type:'healing',value:10}],options={multiplier:2};
   hooks.get('dnd5e.preCalculateDamage')(actor,damage,options);assert.equal(damage[0].value*options.multiplier,17);assert.equal(damage[1].value,10);assert.equal(damage[2].value,10);
   const bypass=[{type:'fire',value:10}];hooks.get('dnd5e.preCalculateDamage')(actor,bypass,{runarcana:{ignoreOriginReduction:true}});assert.equal(bypass[0].value,10);
+});
+test('class progression refreshes the Troll bite without erasing other weapon properties',async()=>{
+  const hooks=new Map();globalThis.Hooks={on:(name,fn)=>hooks.set(name,fn)};
+  globalThis.CONFIG={DND5E:{activityConsumptionTypes:{},damageTypes:{},healingTypes:{}}};
+  globalThis.game={settings:{get:()=>true},user:{isGM:true,id:'gm'},users:{activeGM:{id:'gm'}}};installDnd5eAdapter();
+  const plan={origin:'Troll',size:'med',movement:{walk:30},senses:{},skills:{},resistance:[],immunity:[],conditionImmunity:[],languages:[]};
+  const definition={id:'bite',name:'Bite',number:1,denomination:6,damageType:'piercing',ability:'str',bonus:'@prof',upgrade:{level:6,denomination:8,magical:true}};
+  const flags={originManaged:true,weaponDefinition:definition,originWeaponMagical:false};
+  const weapon={id:'bite',type:'weapon',system:{properties:new Set(['fin'])},getFlag:(_,key)=>flags[key]};
+  let changes;const effect={getFlag:()=>true,update:async u=>{changes=u;}};
+  const actor={uuid:'Actor.troll',system:{details:{level:6}},items:[{type:'race',getFlag:()=>true,effects:[effect]},weapon],getFlag:(_,key)=>key==='enabled'?true:key==='originSelection'?{plan}:undefined,updateEmbeddedDocuments:async(type,rows)=>{for(const row of rows){weapon.denomination=row['system.damage.base.denomination'];weapon.system.properties=new Set(row['system.properties']);flags.originWeaponMagical=row['flags.runarcana.originWeaponMagical'];}}};
+  const cls={type:'class',parent:actor};hooks.get('updateItem')(cls);await serialized(actor.uuid,async()=>{});
+  assert.ok(changes['system.changes'].length>0);assert.equal(weapon.denomination,8);assert.deepEqual([...weapon.system.properties],['fin','mgc']);
+  actor.system.details.level=5;hooks.get('updateItem')(cls);await serialized(actor.uuid,async()=>{});assert.equal(weapon.denomination,6);assert.deepEqual([...weapon.system.properties],['fin']);
 });

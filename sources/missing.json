@@ -22,13 +22,6 @@
       "error": null
     },
     {
-      "id": "/en/magic/spells/acid-splash/",
-      "url": "https://wiki.runarcana.org/en/magic/spells/acid-splash/",
-      "part": 2,
-      "status": "pending",
-      "error": null
-    },
-    {
       "id": "/en/magic/spells/animal-friendship/",
       "url": "https://wiki.runarcana.org/en/magic/spells/animal-friendship/",
       "part": 2,
@@ -92,29 +85,8 @@
       "error": null
     },
     {
-      "id": "/en/magic/spells/arcane-hand/",
-      "url": "https://wiki.runarcana.org/en/magic/spells/arcane-hand/",
-      "part": 2,
-      "status": "pending",
-      "error": null
-    },
-    {
-      "id": "/en/magic/spells/arcane-lock/",
-      "url": "https://wiki.runarcana.org/en/magic/spells/arcane-lock/",
-      "part": 2,
-      "status": "pending",
-      "error": null
-    },
-    {
       "id": "/en/magic/spells/arcane-ritual/",
       "url": "https://wiki.runarcana.org/en/magic/spells/arcane-ritual/",
-      "part": 2,
-      "status": "pending",
-      "error": null
-    },
-    {
-      "id": "/en/magic/spells/arcane-shot/",
-      "url": "https://wiki.runarcana.org/en/magic/spells/arcane-shot/",
       "part": 2,
       "status": "pending",
       "error": null
@@ -190,13 +162,6 @@
       "error": null
     },
     {
-      "id": "/en/magic/spells/arctic-skin/",
-      "url": "https://wiki.runarcana.org/en/magic/spells/arctic-skin/",
-      "part": 2,
-      "status": "pending",
-      "error": null
-    },
-    {
       "id": "/en/magic/spells/astral-projection/",
       "url": "https://wiki.runarcana.org/en/magic/spells/astral-projection/",
       "part": 2,
@@ -220,27 +185,6 @@
     {
       "id": "/en/magic/spells/beacon-of-hope/",
       "url": "https://wiki.runarcana.org/en/magic/spells/beacon-of-hope/",
-      "part": 2,
-      "status": "pending",
-      "error": null
-    },
-    {
-      "id": "/en/magic/spells/beast-sense/",
-      "url": "https://wiki.runarcana.org/en/magic/spells/beast-sense/",
-      "part": 2,
-      "status": "pending",
-      "error": null
-    },
-    {
-      "id": "/en/magic/spells/bend-armor/",
-      "url": "https://wiki.runarcana.org/en/magic/spells/bend-armor/",
-      "part": 2,
-      "status": "source-unavailable",
-      "error": "HTTP Error 429: Too Many Requests"
-    },
-    {
-      "id": "/en/magic/spells/bend-metal/",
-      "url": "https://wiki.runarcana.org/en/magic/spells/bend-metal/",
       "part": 2,
       "status": "pending",
       "error": null
@@ -288,22 +232,8 @@
       "error": null
     },
     {
-      "id": "/en/magic/spells/blood-boil/",
-      "url": "https://wiki.runarcana.org/en/magic/spells/blood-boil/",
-      "part": 2,
-      "status": "pending",
-      "error": null
-    },
-    {
       "id": "/en/magic/spells/blood-manipulation/",
       "url": "https://wiki.runarcana.org/en/magic/spells/blood-manipulation/",
-      "part": 2,
-      "status": "pending",
-      "error": null
-    },
-    {
-      "id": "/en/magic/spells/blood-tide/",
-      "url": "https://wiki.runarcana.org/en/magic/spells/blood-tide/",
       "part": 2,
       "status": "pending",
       "error": null
@@ -358,13 +288,6 @@
       "error": null
     },
     {
-      "id": "/en/magic/spells/cause-fear/",
-      "url": "https://wiki.runarcana.org/en/magic/spells/cause-fear/",
-      "part": 2,
-      "status": "pending",
-      "error": null
-    },
-    {
       "id": "/en/magic/spells/caustic-wave/",
       "url": "https://wiki.runarcana.org/en/magic/spells/caustic-wave/",
       "part": 2,
@@ -381,13 +304,6 @@
     {
       "id": "/en/magic/spells/charm-person/",
       "url": "https://wiki.runarcana.org/en/magic/spells/charm-person/",
-      "part": 2,
-      "status": "pending",
-      "error": null
-    },
-    {
-      "id": "/en/magic/spells/chill-touch/",
-      "url": "https://wiki.runarcana.org/en/magic/spells/chill-touch/",
       "part": 2,
       "status": "pending",
       "error": null
@@ -451,13 +367,6 @@
     {
       "id": "/en/magic/spells/comprehend-languages/",
       "url": "https://wiki.runarcana.org/en/magic/spells/comprehend-languages/",
-      "part": 2,
-      "status": "pending",
-      "error": null
-    },
-    {
-      "id": "/en/magic/spells/compulsion/",
-      "url": "https://wiki.runarcana.org/en/magic/spells/compulsion/",
       "part": 2,
       "status": "pending",
       "error": null
@@ -556,13 +465,6 @@
     {
       "id": "/en/magic/spells/consume-water/",
       "url": "https://wiki.runarcana.org/en/magic/spells/consume-water/",
-      "part": 2,
-      "status": "pending",
-      "error": null
-    },
-    {
-      "id": "/en/magic/spells/contingency/",
-      "url": "https://wiki.runarcana.org/en/magic/spells/contingency/",
       "part": 2,
       "status": "pending",
       "error": null
@@ -680,36 +582,8 @@
       "error": null
     },
     {
-      "id": "/en/magic/spells/cure-wounds/",
-      "url": "https://wiki.runarcana.org/en/magic/spells/cure-wounds/",
-      "part": 2,
-      "status": "pending",
-      "error": null
-    },
-    {
       "id": "/en/magic/spells/dancing-lights/",
       "url": "https://wiki.runarcana.org/en/magic/spells/dancing-lights/",
-      "part": 2,
-      "status": "pending",
-      "error": null
-    },
-    {
-      "id": "/en/magic/spells/dark-matter/",
-      "url": "https://wiki.runarcana.org/en/magic/spells/dark-matter/",
-      "part": 2,
-      "status": "pending",
-      "error": null
-    },
-    {
-      "id": "/en/magic/spells/darkvision/",
-      "url": "https://wiki.runarcana.org/en/magic/spells/darkvision/",
-      "part": 2,
-      "status": "pending",
-      "error": null
-    },
-    {
-      "id": "/en/magic/spells/death-ward/",
-      "url": "https://wiki.runarcana.org/en/magic/spells/death-ward/",
       "part": 2,
       "status": "pending",
       "error": null
@@ -806,13 +680,6 @@
       "error": null
     },
     {
-      "id": "/en/magic/spells/divination/",
-      "url": "https://wiki.runarcana.org/en/magic/spells/divination/",
-      "part": 2,
-      "status": "pending",
-      "error": null
-    },
-    {
       "id": "/en/magic/spells/divine-favor/",
       "url": "https://wiki.runarcana.org/en/magic/spells/divine-favor/",
       "part": 2,
@@ -855,43 +722,8 @@
       "error": null
     },
     {
-      "id": "/en/magic/spells/dragon-soul/",
-      "url": "https://wiki.runarcana.org/en/magic/spells/dragon-soul/",
-      "part": 2,
-      "status": "pending",
-      "error": null
-    },
-    {
       "id": "/en/magic/spells/dream-devastator/",
       "url": "https://wiki.runarcana.org/en/magic/spells/dream-devastator/",
-      "part": 2,
-      "status": "pending",
-      "error": null
-    },
-    {
-      "id": "/en/magic/spells/dream-dome/",
-      "url": "https://wiki.runarcana.org/en/magic/spells/dream-dome/",
-      "part": 2,
-      "status": "pending",
-      "error": null
-    },
-    {
-      "id": "/en/magic/spells/druidcraft/",
-      "url": "https://wiki.runarcana.org/en/magic/spells/druidcraft/",
-      "part": 2,
-      "status": "pending",
-      "error": null
-    },
-    {
-      "id": "/en/magic/spells/earth-chain/",
-      "url": "https://wiki.runarcana.org/en/magic/spells/earth-chain/",
-      "part": 2,
-      "status": "pending",
-      "error": null
-    },
-    {
-      "id": "/en/magic/spells/earthquake/",
-      "url": "https://wiki.runarcana.org/en/magic/spells/earthquake/",
       "part": 2,
       "status": "pending",
       "error": null
@@ -969,13 +801,6 @@
     {
       "id": "/en/magic/spells/elemental-touch/",
       "url": "https://wiki.runarcana.org/en/magic/spells/elemental-touch/",
-      "part": 2,
-      "status": "pending",
-      "error": null
-    },
-    {
-      "id": "/en/magic/spells/energy-wall/",
-      "url": "https://wiki.runarcana.org/en/magic/spells/energy-wall/",
       "part": 2,
       "status": "pending",
       "error": null
@@ -1065,29 +890,8 @@
       "error": null
     },
     {
-      "id": "/en/magic/spells/faerie-fire/",
-      "url": "https://wiki.runarcana.org/en/magic/spells/faerie-fire/",
-      "part": 2,
-      "status": "pending",
-      "error": null
-    },
-    {
       "id": "/en/magic/spells/faithful-hound/",
       "url": "https://wiki.runarcana.org/en/magic/spells/faithful-hound/",
-      "part": 2,
-      "status": "pending",
-      "error": null
-    },
-    {
-      "id": "/en/magic/spells/false-lady/",
-      "url": "https://wiki.runarcana.org/en/magic/spells/false-lady/",
-      "part": 2,
-      "status": "pending",
-      "error": null
-    },
-    {
-      "id": "/en/magic/spells/false-life/",
-      "url": "https://wiki.runarcana.org/en/magic/spells/false-life/",
       "part": 2,
       "status": "pending",
       "error": null
@@ -1107,20 +911,6 @@
       "error": null
     },
     {
-      "id": "/en/magic/spells/feeblemind/",
-      "url": "https://wiki.runarcana.org/en/magic/spells/feeblemind/",
-      "part": 2,
-      "status": "pending",
-      "error": null
-    },
-    {
-      "id": "/en/magic/spells/feign-death/",
-      "url": "https://wiki.runarcana.org/en/magic/spells/feign-death/",
-      "part": 2,
-      "status": "pending",
-      "error": null
-    },
-    {
       "id": "/en/magic/spells/fiery-devastation/",
       "url": "https://wiki.runarcana.org/en/magic/spells/fiery-devastation/",
       "part": 2,
@@ -1128,29 +918,8 @@
       "error": null
     },
     {
-      "id": "/en/magic/spells/final-spark/",
-      "url": "https://wiki.runarcana.org/en/magic/spells/final-spark/",
-      "part": 2,
-      "status": "pending",
-      "error": null
-    },
-    {
-      "id": "/en/magic/spells/find-steed/",
-      "url": "https://wiki.runarcana.org/en/magic/spells/find-steed/",
-      "part": 2,
-      "status": "pending",
-      "error": null
-    },
-    {
       "id": "/en/magic/spells/find-the-path/",
       "url": "https://wiki.runarcana.org/en/magic/spells/find-the-path/",
-      "part": 2,
-      "status": "pending",
-      "error": null
-    },
-    {
-      "id": "/en/magic/spells/find-traps/",
-      "url": "https://wiki.runarcana.org/en/magic/spells/find-traps/",
       "part": 2,
       "status": "pending",
       "error": null
@@ -1166,15 +935,8 @@
       "id": "/en/magic/spells/fire-domain/",
       "url": "https://wiki.runarcana.org/en/magic/spells/fire-domain/",
       "part": 2,
-      "status": "pending",
-      "error": null
-    },
-    {
-      "id": "/en/magic/spells/fire-storm/",
-      "url": "https://wiki.runarcana.org/en/magic/spells/fire-storm/",
-      "part": 2,
-      "status": "pending",
-      "error": null
+      "status": "source-unavailable",
+      "error": "HTTP Error 429: Too Many Requests"
     },
     {
       "id": "/en/magic/spells/flame-blade/",
@@ -1254,20 +1016,6 @@
       "error": null
     },
     {
-      "id": "/en/magic/spells/frost-barb/",
-      "url": "https://wiki.runarcana.org/en/magic/spells/frost-barb/",
-      "part": 2,
-      "status": "pending",
-      "error": null
-    },
-    {
-      "id": "/en/magic/spells/frost-rain/",
-      "url": "https://wiki.runarcana.org/en/magic/spells/frost-rain/",
-      "part": 2,
-      "status": "pending",
-      "error": null
-    },
-    {
       "id": "/en/magic/spells/frost-rooting/",
       "url": "https://wiki.runarcana.org/en/magic/spells/frost-rooting/",
       "part": 2,
@@ -1277,13 +1025,6 @@
     {
       "id": "/en/magic/spells/frost-stinger/",
       "url": "https://wiki.runarcana.org/en/magic/spells/frost-stinger/",
-      "part": 2,
-      "status": "pending",
-      "error": null
-    },
-    {
-      "id": "/en/magic/spells/frost-veil/",
-      "url": "https://wiki.runarcana.org/en/magic/spells/frost-veil/",
       "part": 2,
       "status": "pending",
       "error": null
@@ -1429,22 +1170,8 @@
       "error": null
     },
     {
-      "id": "/en/magic/spells/heat-metal/",
-      "url": "https://wiki.runarcana.org/en/magic/spells/heat-metal/",
-      "part": 2,
-      "status": "pending",
-      "error": null
-    },
-    {
       "id": "/en/magic/spells/hellish-rebuke/",
       "url": "https://wiki.runarcana.org/en/magic/spells/hellish-rebuke/",
-      "part": 2,
-      "status": "pending",
-      "error": null
-    },
-    {
-      "id": "/en/magic/spells/hemoplague/",
-      "url": "https://wiki.runarcana.org/en/magic/spells/hemoplague/",
       "part": 2,
       "status": "pending",
       "error": null
@@ -1522,13 +1249,6 @@
     {
       "id": "/en/magic/spells/imbue-element/",
       "url": "https://wiki.runarcana.org/en/magic/spells/imbue-element/",
-      "part": 2,
-      "status": "pending",
-      "error": null
-    },
-    {
-      "id": "/en/magic/spells/imbue-life/",
-      "url": "https://wiki.runarcana.org/en/magic/spells/imbue-life/",
       "part": 2,
       "status": "pending",
       "error": null
@@ -1618,13 +1338,6 @@
       "error": null
     },
     {
-      "id": "/en/magic/spells/invigorate/",
-      "url": "https://wiki.runarcana.org/en/magic/spells/invigorate/",
-      "part": 2,
-      "status": "pending",
-      "error": null
-    },
-    {
       "id": "/en/magic/spells/invisibility/",
       "url": "https://wiki.runarcana.org/en/magic/spells/invisibility/",
       "part": 2,
@@ -1648,13 +1361,6 @@
     {
       "id": "/en/magic/spells/languages-spell/",
       "url": "https://wiki.runarcana.org/en/magic/spells/languages-spell/",
-      "part": 2,
-      "status": "pending",
-      "error": null
-    },
-    {
-      "id": "/en/magic/spells/lava-burst/",
-      "url": "https://wiki.runarcana.org/en/magic/spells/lava-burst/",
       "part": 2,
       "status": "pending",
       "error": null
@@ -1940,13 +1646,6 @@
       "error": null
     },
     {
-      "id": "/en/magic/spells/mind-blank/",
-      "url": "https://wiki.runarcana.org/en/magic/spells/mind-blank/",
-      "part": 2,
-      "status": "pending",
-      "error": null
-    },
-    {
       "id": "/en/magic/spells/minor-illusion/",
       "url": "https://wiki.runarcana.org/en/magic/spells/minor-illusion/",
       "part": 2,
@@ -1968,13 +1667,6 @@
       "error": null
     },
     {
-      "id": "/en/magic/spells/misty-step/",
-      "url": "https://wiki.runarcana.org/en/magic/spells/misty-step/",
-      "part": 2,
-      "status": "pending",
-      "error": null
-    },
-    {
       "id": "/en/magic/spells/modify-memory/",
       "url": "https://wiki.runarcana.org/en/magic/spells/modify-memory/",
       "part": 2,
@@ -1991,13 +1683,6 @@
     {
       "id": "/en/magic/spells/moment-of-prescience/",
       "url": "https://wiki.runarcana.org/en/magic/spells/moment-of-prescience/",
-      "part": 2,
-      "status": "pending",
-      "error": null
-    },
-    {
-      "id": "/en/magic/spells/move-earth/",
-      "url": "https://wiki.runarcana.org/en/magic/spells/move-earth/",
       "part": 2,
       "status": "pending",
       "error": null
@@ -2241,20 +1926,6 @@
       "error": null
     },
     {
-      "id": "/en/magic/spells/realm-leap/",
-      "url": "https://wiki.runarcana.org/en/magic/spells/realm-leap/",
-      "part": 2,
-      "status": "pending",
-      "error": null
-    },
-    {
-      "id": "/en/magic/spells/realm-warp/",
-      "url": "https://wiki.runarcana.org/en/magic/spells/realm-warp/",
-      "part": 2,
-      "status": "pending",
-      "error": null
-    },
-    {
       "id": "/en/magic/spells/regeneration/",
       "url": "https://wiki.runarcana.org/en/magic/spells/regeneration/",
       "part": 2,
@@ -2290,13 +1961,6 @@
       "error": null
     },
     {
-      "id": "/en/magic/spells/resistance/",
-      "url": "https://wiki.runarcana.org/en/magic/spells/resistance/",
-      "part": 2,
-      "status": "pending",
-      "error": null
-    },
-    {
       "id": "/en/magic/spells/resonant-image/",
       "url": "https://wiki.runarcana.org/en/magic/spells/resonant-image/",
       "part": 2,
@@ -2318,29 +1982,8 @@
       "error": null
     },
     {
-      "id": "/en/magic/spells/revitalize/",
-      "url": "https://wiki.runarcana.org/en/magic/spells/revitalize/",
-      "part": 2,
-      "status": "pending",
-      "error": null
-    },
-    {
       "id": "/en/magic/spells/rock-surfing/",
       "url": "https://wiki.runarcana.org/en/magic/spells/rock-surfing/",
-      "part": 2,
-      "status": "pending",
-      "error": null
-    },
-    {
-      "id": "/en/magic/spells/root-marsh/",
-      "url": "https://wiki.runarcana.org/en/magic/spells/root-marsh/",
-      "part": 2,
-      "status": "pending",
-      "error": null
-    },
-    {
-      "id": "/en/magic/spells/rope-trick/",
-      "url": "https://wiki.runarcana.org/en/magic/spells/rope-trick/",
       "part": 2,
       "status": "pending",
       "error": null
@@ -2514,13 +2157,6 @@
       "error": null
     },
     {
-      "id": "/en/magic/spells/shape-fire/",
-      "url": "https://wiki.runarcana.org/en/magic/spells/shape-fire/",
-      "part": 2,
-      "status": "pending",
-      "error": null
-    },
-    {
       "id": "/en/magic/spells/shape-water/",
       "url": "https://wiki.runarcana.org/en/magic/spells/shape-water/",
       "part": 2,
@@ -2549,20 +2185,6 @@
       "error": null
     },
     {
-      "id": "/en/magic/spells/shillelagh/",
-      "url": "https://wiki.runarcana.org/en/magic/spells/shillelagh/",
-      "part": 2,
-      "status": "pending",
-      "error": null
-    },
-    {
-      "id": "/en/magic/spells/shock-wave/",
-      "url": "https://wiki.runarcana.org/en/magic/spells/shock-wave/",
-      "part": 2,
-      "status": "pending",
-      "error": null
-    },
-    {
       "id": "/en/magic/spells/shocking-touch/",
       "url": "https://wiki.runarcana.org/en/magic/spells/shocking-touch/",
       "part": 2,
@@ -2572,13 +2194,6 @@
     {
       "id": "/en/magic/spells/silent-image/",
       "url": "https://wiki.runarcana.org/en/magic/spells/silent-image/",
-      "part": 2,
-      "status": "pending",
-      "error": null
-    },
-    {
-      "id": "/en/magic/spells/simulacrum/",
-      "url": "https://wiki.runarcana.org/en/magic/spells/simulacrum/",
       "part": 2,
       "status": "pending",
       "error": null
@@ -2614,13 +2229,6 @@
     {
       "id": "/en/magic/spells/snowball-barrage/",
       "url": "https://wiki.runarcana.org/en/magic/spells/snowball-barrage/",
-      "part": 2,
-      "status": "pending",
-      "error": null
-    },
-    {
-      "id": "/en/magic/spells/solar-shot/",
-      "url": "https://wiki.runarcana.org/en/magic/spells/solar-shot/",
       "part": 2,
       "status": "pending",
       "error": null
@@ -2663,13 +2271,6 @@
     {
       "id": "/en/magic/spells/speak-with-plants/",
       "url": "https://wiki.runarcana.org/en/magic/spells/speak-with-plants/",
-      "part": 2,
-      "status": "pending",
-      "error": null
-    },
-    {
-      "id": "/en/magic/spells/spell-flow/",
-      "url": "https://wiki.runarcana.org/en/magic/spells/spell-flow/",
       "part": 2,
       "status": "pending",
       "error": null
@@ -2747,13 +2348,6 @@
     {
       "id": "/en/magic/spells/strident-palm/",
       "url": "https://wiki.runarcana.org/en/magic/spells/strident-palm/",
-      "part": 2,
-      "status": "pending",
-      "error": null
-    },
-    {
-      "id": "/en/magic/spells/suggestion/",
-      "url": "https://wiki.runarcana.org/en/magic/spells/suggestion/",
       "part": 2,
       "status": "pending",
       "error": null
@@ -3027,13 +2621,6 @@
     {
       "id": "/en/magic/spells/water-breathing/",
       "url": "https://wiki.runarcana.org/en/magic/spells/water-breathing/",
-      "part": 2,
-      "status": "pending",
-      "error": null
-    },
-    {
-      "id": "/en/magic/spells/water-walk/",
-      "url": "https://wiki.runarcana.org/en/magic/spells/water-walk/",
       "part": 2,
       "status": "pending",
       "error": null

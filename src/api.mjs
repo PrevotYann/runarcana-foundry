@@ -1,5 +1,6 @@
 import {resourceValue,validateChoices,creatureStatistics,scaleDice,manaCost} from './rules.mjs';
-import {characterPlan,originEffects,ABILITIES} from './character.mjs';
+import {characterPlan,originEffects,originHeritageBudget,ABILITIES} from './character.mjs';
+import {naturalWeapon} from './origin-weapons.mjs';
 
 const queues=new Map();
 export async function serialized(key,operation) {
@@ -17,7 +18,7 @@ export function assertGM() {
 }
 export function createApi() {
   return Object.freeze({
-    version:game.modules?.get('runarcana')?.version??'0.5.0', manaCost,scaleDice,creatureStatistics,
+    version:game.modules?.get('runarcana')?.version??'0.6.0', manaCost,scaleDice,creatureStatistics,
     async enableActor(actor) {
       assertGM();
       if(!game.settings.get('runarcana','enabled'))throw new Error('RUNARCANA.Error.WorldDisabled');
@@ -28,7 +29,8 @@ export function createApi() {
       const origin=await fromUuid(selection.originUuid);
       if(origin?.type!=='race'||!origin.getFlag('runarcana','canonicalId'))throw new Error('RUNARCANA.Error.Source');
       const knownSkills=Object.fromEntries(Object.entries(actor?._source.system.skills??{}).map(([k,v])=>[k,v.value]));
-      return characterPlan(origin.getFlag('runarcana','creation'),selection,{knownSkills});
+      const knownCrafts=(actor?.items??[]).filter(i=>i.type==='tool'&&!i.getFlag('runarcana','originManaged')&&i.system.proficiencyMultiplier>=1).map(i=>i.name);
+      return characterPlan(origin.getFlag('runarcana','creation'),selection,{knownSkills,knownCrafts});
     },
     async customizeOrigin(actor,selection) {
       assertGM();assertOwner(actor);
@@ -41,7 +43,8 @@ export function createApi() {
           const d=await fromUuid(grant.uuid);if(!d)throw new Error('RUNARCANA.Error.Source');documents.push(d.toObject());
         }
         if(plan.variantUuid){const d=await fromUuid(plan.variantUuid);if(!d)throw new Error('RUNARCANA.Error.Source');documents.push(d.toObject());}
-        for(const name of plan.customProficiencies)documents.push({name,type:'tool',system:{proficient:1,ability:'int',description:{value:escapeHtml(name)},activities:{rcOriginCheck001:{_id:'rcOriginCheck001',type:'check',name,activation:{type:'action',value:1},check:{ability:'int',associated:[],dc:{calculation:'',formula:''}}}}},flags:{runarcana:{originManaged:true,creationProficiency:true}}});
+        for(const definition of plan.naturalWeapons)documents.push(naturalWeapon(definition,{level:actor.system.details?.level??1,canonicalId:origin.getFlag('runarcana','canonicalId'),sourceUrl:origin.getFlag('runarcana','sourceUrl'),sourceHash:origin.getFlag('runarcana','sourceHash')}));
+        for(const name of plan.customProficiencies)documents.push({name,type:'tool',system:{type:{value:'',baseItem:'runarcanaCraft'},proficient:1,ability:'int',description:{value:escapeHtml(name)},activities:{rcOriginCheck001:{_id:'rcOriginCheck001',type:'check',name,activation:{type:'action',value:1},check:{ability:'int',associated:['runarcanaCraft'],dc:{calculation:'',formula:''}}}}},flags:{runarcana:{originManaged:true,creationProficiency:true}}});
         for(const o of plan.selectedOptions)documents.push({name:o.name,type:'feat',system:{description:{value:escapeHtml(o.description)},type:{value:'race'}},flags:{runarcana:{originManaged:true}}});
         for(const d of documents){delete d._id;delete d._key;delete d.folder;d.flags??={};d.flags.runarcana??={};d.flags.runarcana.originManaged=true;}
         // The workbench resolves origin choices itself, so native advancements must not grant them again.
@@ -51,7 +54,7 @@ export function createApi() {
           d.system.uses={max:'floor(@prof / 2)',spent:old.find(i=>i.getFlag('runarcana','canonicalId')===d.flags.runarcana.canonicalId)?.system.uses?.spent??0,recovery:[]};
           d.flags.runarcana.originRecovery=d.name==='Masters of Glamour'?'full':'long';
         }
-        documents[0].effects=originEffects(plan,{level:actor.system.details?.level??1});
+        documents[0].effects=originEffects(plan,originContext(actor));
         const previous=actor.getFlag('runarcana','originSelection');
         const snapshot=Object.fromEntries(ABILITIES.map(k=>[`system.abilities.${k}.value`,actor._source.system.abilities[k].value]));
         snapshot['flags.runarcana.originSelection']=previous??null;
@@ -93,6 +96,10 @@ export function createApi() {
       if(!['none','short','long','full'].includes(resource.recovery??'none'))throw new Error('RUNARCANA.Error.Resource');
       await actor.update({[`flags.runarcana.resources.${id}`]:{...resource,recovery:resource.recovery??'none'}});
     },
+    async setOriginContext(actor,{underwater}) {
+      assertGM();assertOwner(actor);if(typeof underwater!=='boolean'||!actor.getFlag('runarcana','originSelection'))throw new Error('RUNARCANA.Error.Choices');
+      return serialized(actor.uuid,()=>actor.update({'flags.runarcana.originContext':{underwater}}));
+    },
     async spendResource(actor,id,amount,{operationId}={}) {
       assertGM();assertOwner(actor);checkResourceId(id);
       if(!Number.isFinite(amount)||amount<0)throw new Error('RUNARCANA.Error.Cost');
@@ -108,8 +115,11 @@ export function createApi() {
     },
     previewChoices(actor,plan) {
       assertOwner(actor);
-      const previous=actor.getFlag('runarcana','choices')?.choices??[];
-      return validateChoices({...plan,choices:[...previous,...plan.choices],actor:{level:actor.system.details.level,abilities:Object.fromEntries(Object.entries(actor.system.abilities).map(([k,v])=>[k,v.value]))}});
+      const pool=plan.pool??'origin';if(!['origin','region'].includes(pool))throw new Error('RUNARCANA.Error.Choices');
+      const previous=(actor.getFlag('runarcana','choices')?.choices??[]).filter(c=>(c.pool??'origin')===pool);
+      const origin=actor.getFlag('runarcana','originSelection')?.plan;
+      const budget=origin?originHeritageBudget(origin,actor.system.details.level,pool):plan.budget;
+      return {...validateChoices({...plan,budget,choices:[...previous,...plan.choices],actor:{level:actor.system.details.level,abilities:Object.fromEntries(Object.entries(actor.system.abilities).map(([k,v])=>[k,v.value]))}}),budget,pool};
     },
     async applyChoices(actor,plan,{overrideReason}={}) {
       assertGM();assertOwner(actor);
@@ -125,7 +135,7 @@ export function createApi() {
         }
         const created=await actor.createEmbeddedDocuments('Item',resolved.map(d=>{delete d._id;delete d.folder;return d;}));
         try {
-          await actor.update({'flags.runarcana.choices':{...plan,choices:[...(actor.getFlag('runarcana','choices')?.choices??[]),...plan.choices]},'flags.runarcana.choiceOverride':overrideReason?{reason:overrideReason,user:game.user.id,time:game.time.worldTime}:null});
+          await actor.update({'flags.runarcana.choices':{...plan,budget:result.budget,pool:result.pool,choices:[...(actor.getFlag('runarcana','choices')?.choices??[]),...plan.choices.map(c=>({...c,pool:result.pool}))]},'flags.runarcana.choiceOverride':overrideReason?{reason:overrideReason,user:game.user.id,time:game.time.worldTime}:null});
         } catch(error) {await actor.deleteEmbeddedDocuments('Item',created.map(d=>d.id));throw error;}
         return {created:created.length,...result};
       });
@@ -193,7 +203,7 @@ export function createApi() {
     async craft(actor,recipe,{operationId,overrideReason}={}) {
       assertGM();assertOwner(actor);
       if(!recipe.reviewed||!recipe.sourceUrl)throw new Error('RUNARCANA.Error.UnreviewedRecipe');
-      const validation=this.previewChoices(actor,{budget:0,choices:[{id:recipe.id,cost:0,prerequisites:recipe.prerequisites??[]}]});
+      const validation=validateChoices({budget:0,choices:[...(actor.getFlag('runarcana','choices')?.choices??[]).map(c=>({...c,cost:0})),{id:recipe.id,cost:0,prerequisites:recipe.prerequisites??[]}],actor:{level:actor.system.details.level,abilities:Object.fromEntries(Object.entries(actor.system.abilities).map(([k,v])=>[k,v.value]))}});
       if(!validation.valid&&!overrideReason?.trim())throw new Error(validation.errors[0]);
       // Use one resource debit update and compensate if output creation fails.
       return serialized(actor.uuid,async()=>{
@@ -220,3 +230,6 @@ export function createApi() {
 }
 function checkResourceId(id){if(!/^[a-z][a-z0-9-]*$/.test(id))throw new Error('RUNARCANA.Error.Resource');}
 function escapeHtml(text){return String(text).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));}
+export function originContext(actor) {
+  return {level:actor.system.details?.level??1,underwater:actor.getFlag('runarcana','originContext')?.underwater===true,heavyWeapon:actor.items.some(i=>i.type==='weapon'&&i.system.equipped&&(i.system.properties?.has?.('hvy')||Array.isArray(i.system.properties)&&i.system.properties.includes('hvy')))};
+}

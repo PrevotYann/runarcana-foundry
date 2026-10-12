@@ -1,15 +1,38 @@
 import {damageComponents,MAGIC_BASE,manaCost,resourceValue} from '../rules.mjs';
-import {isMarked} from '../api.mjs';
+import {isMarked,serialized,originContext} from '../api.mjs';
 import {originEffects} from '../character.mjs';
+import {naturalWeapon} from '../origin-weapons.mjs';
 
 export function installDnd5eAdapter() {
-  const refreshOrigin=async item=>{
-    const actor=item.parent;if(item.type!=='class'||!isMarked(actor)||!game.user.isGM||game.users.activeGM?.id!==game.user.id)return;
+  const refreshOrigin=async(actor,updateWeapons=false)=>{
+    if(!isMarked(actor)||!game.user.isGM||game.users.activeGM?.id!==game.user.id)return;
+    return serialized(actor.uuid,async()=>{
     const plan=actor.getFlag('runarcana','originSelection')?.plan;if(!plan)return;
     const effect=actor.items.find(i=>i.type==='race'&&i.getFlag('runarcana','originManaged'))?.effects.find(e=>e.getFlag('runarcana','originManaged'));
-    if(effect)await effect.update({'system.changes':originEffects(plan,{level:actor.system.details.level})[0].system.changes});
+    if(effect)await effect.update({'system.changes':originEffects(plan,originContext(actor))[0].system.changes});
+    const updates=[];
+    for(const weapon of updateWeapons?actor.items.filter(i=>i.getFlag('runarcana','originManaged')&&i.getFlag('runarcana','weaponDefinition')?.upgrade):[]) {
+      const native=naturalWeapon(weapon.getFlag('runarcana','weaponDefinition'),{level:actor.system.details.level});
+      const properties=new Set(weapon.system.properties);
+      if(native.flags.runarcana.originWeaponMagical)properties.add('mgc');
+      else if(weapon.getFlag('runarcana','originWeaponMagical'))properties.delete('mgc');
+      updates.push({_id:weapon.id,'system.damage.base.denomination':native.system.damage.base.denomination,'system.properties':[...properties],'flags.runarcana.originWeaponMagical':native.flags.runarcana.originWeaponMagical});
+    }
+    if(updates.length)await actor.updateEmbeddedDocuments('Item',updates);
+    });
   };
-  for(const event of ['createItem','updateItem','deleteItem'])Hooks.on(event,item=>{refreshOrigin(item).catch(e=>console.error('Runarcana origin progression',e));});
+  for(const event of ['createItem','updateItem','deleteItem'])Hooks.on(event,item=>{
+    if(item.type!=='class'&&(item.type!=='weapon'||item.getFlag('runarcana','originManaged')))return;
+    refreshOrigin(item.parent,item.type==='class').catch(e=>console.error('Runarcana origin progression',e));
+  });
+  Hooks.on('updateActor',(actor,changes)=>{
+    if(!changes.flags?.runarcana?.originContext&&!changes.flags?.runarcana?.originSelection)return;
+    refreshOrigin(actor).catch(e=>console.error('Runarcana origin context',e));
+  });
+  Hooks.on('dnd5e.preRollToolV2',config=>{
+    const actor=config.subject;if(!isMarked(actor)||!config.item)return;
+    if(actor.getFlag('runarcana','originSelection')?.plan.craftAdvantages?.includes(config.item.name))config.advantage=true;
+  });
   CONFIG.DND5E.activityConsumptionTypes.runarcanaResource={
     label:'RUNARCANA.Resources',targetRequiresEmbedded:true,
     validTargets(){return Object.entries(this.actor?.getFlag('runarcana','resources')??{}).map(([value,r])=>({value,label:r.label??value}));},
