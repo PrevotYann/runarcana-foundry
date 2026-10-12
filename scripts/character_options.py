@@ -30,6 +30,10 @@ def heritage_metadata(page,section):
     mechanics['Cautious Traveler']['trainingChoice']={'count':1,'skills':[],'crafts':'guide'}
     mechanics['Extrovert']['languageChoice']={'count':1,'category':'common'}
     mechanics['Prodigy Musician']={'fixedCrafts':['artist-musician'],'craftExpertiseIfKnown':True}
+    mechanics['Amphibious Constitution']={'movementMinimum':{'swim':35}}
+    mechanics['Vastayan Blood']={'skillAdvantages':['med']}
+    mechanics['Primal Fighter']={'skillChoice':{'count':1,'options':['itm','ani','nat','sur'],'expertiseIfKnown':True}}
+    mechanics['Graciousness']={'saves':['cha'],'saveExpertiseIfKnown':True}
     if normalized(section['name']) in ['mountains shepherd','mountain s shepherd']:
         mechanics[section['name']]={'skills':{'ani':1},'expertiseIfKnown':['ani'],'trainingChoice':{'count':1,'skills':[],'crafts':['guide-pilot','apothecary'],'specialtyOptions':{'guide-pilot':['Rickshaw','Cart','Wagon','Carriage','Horse','Motorbike','Car']}}}
     mechanics['Discipline is Strength']={'weaponChoice':{'kind':'any','distinct':True,'damagePicks':2}}

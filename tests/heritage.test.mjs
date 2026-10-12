@@ -50,7 +50,7 @@ test('additional reviewed heritage clauses grant their published skills without 
   assert.equal(heritageEffects(rule('Pickpocketer'),{skills:{slt:1}})[0].system.changes[0].value,'1');
   assert.ok(heritageEffects(rule('Truth Seeker'))[0].system.changes.some(c=>c.key==='system.skills.prc.bonuses.passive'&&c.value==='1'));
   assert.deepEqual(heritageEffects(rule('Sea Style'))[0].system.changes.map(c=>[c.key,c.value]),['net','spear','trident'].map(k=>['system.traits.weaponProf.value',k]));
-  assert.equal(rows.filter(d=>d.flags.runarcana.heritageRules.mechanics).length,39);
+  assert.equal(rows.filter(d=>d.flags.runarcana.heritageRules.mechanics).length,43);
 });
 
 test('heritage skill choices validate published options and distinguish expertise from Scout advantage',()=>{

@@ -26,9 +26,9 @@
   ],
   "snapshot": {
     "discoveredPages": 899,
-    "collectedPages": 813,
-    "missingPages": 86,
-    "documents": 7248,
+    "collectedPages": 868,
+    "missingPages": 31,
+    "documents": 7358,
     "runtimeVerified": false
   }
 }

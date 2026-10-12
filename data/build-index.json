@@ -19149,6 +19149,13 @@
     {
       "pack": "rules",
       "type": "JournalEntry",
+      "id": "96181cc5ed52a8bd",
+      "name": "Antipathy/Sympathy",
+      "sourceId": "/en/magic/spells/antipathy-sympathy/@journal"
+    },
+    {
+      "pack": "rules",
+      "type": "JournalEntry",
       "id": "b44e53c8831940c5",
       "name": "Arcane Armor",
       "sourceId": "/en/magic/spells/arcane-armor/@journal"
@@ -19212,6 +19219,13 @@
     {
       "pack": "rules",
       "type": "JournalEntry",
+      "id": "095d69976666df69",
+      "name": "Arcanist's Magic Aura",
+      "sourceId": "/en/magic/spells/arcanists-magic-aura/@journal"
+    },
+    {
+      "pack": "rules",
+      "type": "JournalEntry",
       "id": "7e1689e36ca9f09f",
       "name": "Arcanum Feint",
       "sourceId": "/en/magic/spells/arcanum-feint/@journal"
@@ -19236,6 +19250,13 @@
       "id": "9e270da09e184b02",
       "name": "Arctic Light Jet",
       "sourceId": "/en/magic/spells/arctic-light-jet/@journal"
+    },
+    {
+      "pack": "rules",
+      "type": "JournalEntry",
+      "id": "3d961e80a57a50fd",
+      "name": "Arctic Manifestation",
+      "sourceId": "/en/magic/spells/arctic-manifestation/@journal"
     },
     {
       "pack": "rules",
@@ -19380,6 +19401,20 @@
     {
       "pack": "rules",
       "type": "JournalEntry",
+      "id": "12d81da074d95ae5",
+      "name": "Blindness/Deafness",
+      "sourceId": "/en/magic/spells/blindness-deafness/@journal"
+    },
+    {
+      "pack": "rules",
+      "type": "JournalEntry",
+      "id": "c80850ee895f8753",
+      "name": "Blinking of the Void",
+      "sourceId": "/en/magic/spells/blinking-of-the-void/@journal"
+    },
+    {
+      "pack": "rules",
+      "type": "JournalEntry",
       "id": "bdde50095f4800f3",
       "name": "Blinking",
       "sourceId": "/en/magic/spells/blinking/@journal"
@@ -19404,6 +19439,13 @@
       "id": "2c49d8993ea7555f",
       "name": "Blood Boil",
       "sourceId": "/en/magic/spells/blood-boil/@journal"
+    },
+    {
+      "pack": "rules",
+      "type": "JournalEntry",
+      "id": "97ee97d5bf0521d1",
+      "name": "Blood Manipulation",
+      "sourceId": "/en/magic/spells/blood-manipulation/@journal"
     },
     {
       "pack": "rules",
@@ -19590,6 +19632,13 @@
     {
       "pack": "rules",
       "type": "JournalEntry",
+      "id": "87987c24e9974eca",
+      "name": "Commune with Nature",
+      "sourceId": "/en/magic/spells/commune-with-nature/@journal"
+    },
+    {
+      "pack": "rules",
+      "type": "JournalEntry",
       "id": "7d4237a5f09f4749",
       "name": "Commune",
       "sourceId": "/en/magic/spells/commune/@journal"
@@ -19600,6 +19649,13 @@
       "id": "daae95aa053122e5",
       "name": "Complete Heal",
       "sourceId": "/en/magic/spells/complete-heal/@journal"
+    },
+    {
+      "pack": "rules",
+      "type": "JournalEntry",
+      "id": "7c7f421fefd59366",
+      "name": "Comprehend Languages",
+      "sourceId": "/en/magic/spells/comprehend-languages/@journal"
     },
     {
       "pack": "rules",
@@ -19758,6 +19814,13 @@
     {
       "pack": "rules",
       "type": "JournalEntry",
+      "id": "ed5b8f440c6b0c74",
+      "name": "Create Element (Spell)",
+      "sourceId": "/en/magic/spells/create-element-spell/@journal"
+    },
+    {
+      "pack": "rules",
+      "type": "JournalEntry",
       "id": "90fa5674ab5018f4",
       "name": "Create Sapling",
       "sourceId": "/en/magic/spells/create-sapling/@journal"
@@ -19870,6 +19933,13 @@
     {
       "pack": "rules",
       "type": "JournalEntry",
+      "id": "9bb10a547c27538c",
+      "name": "Detect Good and Evil",
+      "sourceId": "/en/magic/spells/detect-good-and-evil/@journal"
+    },
+    {
+      "pack": "rules",
+      "type": "JournalEntry",
       "id": "8e830de8e4f0390d",
       "name": "Detect Magic",
       "sourceId": "/en/magic/spells/detect-magic/@journal"
@@ -19936,6 +20006,13 @@
       "id": "742d3b8691a53e5d",
       "name": "Dispel Magic",
       "sourceId": "/en/magic/spells/dispel-magic/@journal"
+    },
+    {
+      "pack": "rules",
+      "type": "JournalEntry",
+      "id": "a4795019e12097d2",
+      "name": "Dissonant Vibration",
+      "sourceId": "/en/magic/spells/dissonant-vibration/@journal"
     },
     {
       "pack": "rules",
@@ -20073,6 +20150,13 @@
     {
       "pack": "rules",
       "type": "JournalEntry",
+      "id": "27fb02ab28e21917",
+      "name": "Elemental Emanation",
+      "sourceId": "/en/magic/spells/elemental-emanation/@journal"
+    },
+    {
+      "pack": "rules",
+      "type": "JournalEntry",
       "id": "e0035c9dceba0463",
       "name": "Elemental Fury",
       "sourceId": "/en/magic/spells/elemental-fury/@journal"
@@ -20178,6 +20262,13 @@
     {
       "pack": "rules",
       "type": "JournalEntry",
+      "id": "1bfb30b78b2f103a",
+      "name": "Expeditious Retreat",
+      "sourceId": "/en/magic/spells/expeditious-retreat/@journal"
+    },
+    {
+      "pack": "rules",
+      "type": "JournalEntry",
       "id": "95c71b7f43ecf826",
       "name": "Extract Toxin",
       "sourceId": "/en/magic/spells/extract-toxin/@journal"
@@ -20188,6 +20279,20 @@
       "id": "9bb6902b03975593",
       "name": "Extraplanar Ally",
       "sourceId": "/en/magic/spells/extraplanar-ally/@journal"
+    },
+    {
+      "pack": "rules",
+      "type": "JournalEntry",
+      "id": "9f88184b9f346c48",
+      "name": "Extraplanar Contact",
+      "sourceId": "/en/magic/spells/extraplanar-contact/@journal"
+    },
+    {
+      "pack": "rules",
+      "type": "JournalEntry",
+      "id": "d9a082b49cfae5be",
+      "name": "Eye of Destruction",
+      "sourceId": "/en/magic/spells/eye-of-destruction/@journal"
     },
     {
       "pack": "rules",
@@ -20402,6 +20507,13 @@
     {
       "pack": "rules",
       "type": "JournalEntry",
+      "id": "a61212095a4e3965",
+      "name": "Freedom of Movement",
+      "sourceId": "/en/magic/spells/freedom-of-movement/@journal"
+    },
+    {
+      "pack": "rules",
+      "type": "JournalEntry",
       "id": "987c9d1217c28aef",
       "name": "Freezing Sphere",
       "sourceId": "/en/magic/spells/freezing-sphere/@journal"
@@ -20521,6 +20633,13 @@
     {
       "pack": "rules",
       "type": "JournalEntry",
+      "id": "aea46e8cee2f3012",
+      "name": "Glacial Retribution",
+      "sourceId": "/en/magic/spells/glacial-retribution/@journal"
+    },
+    {
+      "pack": "rules",
+      "type": "JournalEntry",
       "id": "b0fddb914eb51a9d",
       "name": "Glacial Storm",
       "sourceId": "/en/magic/spells/glacial-storm/@journal"
@@ -20552,6 +20671,34 @@
       "id": "07dd0a2972065e67",
       "name": "Goodberry",
       "sourceId": "/en/magic/spells/goodberry/@journal"
+    },
+    {
+      "pack": "rules",
+      "type": "JournalEntry",
+      "id": "b04da93c274a85fc",
+      "name": "Gravitational Shot",
+      "sourceId": "/en/magic/spells/gravitational-shot/@journal"
+    },
+    {
+      "pack": "rules",
+      "type": "JournalEntry",
+      "id": "7cae411dfbffbe3a",
+      "name": "Gravitational Spark",
+      "sourceId": "/en/magic/spells/gravitational-spark/@journal"
+    },
+    {
+      "pack": "rules",
+      "type": "JournalEntry",
+      "id": "386fb787557d4e25",
+      "name": "Greater Invisibility",
+      "sourceId": "/en/magic/spells/greater-invisibility/@journal"
+    },
+    {
+      "pack": "rules",
+      "type": "JournalEntry",
+      "id": "65c62c883cb5189e",
+      "name": "Greater Restoration",
+      "sourceId": "/en/magic/spells/greater-restoration/@journal"
     },
     {
       "pack": "rules",
@@ -20745,6 +20892,13 @@
     {
       "pack": "rules",
       "type": "JournalEntry",
+      "id": "0690812222d6e25d",
+      "name": "Illusory Animation",
+      "sourceId": "/en/magic/spells/illusory-animation/@journal"
+    },
+    {
+      "pack": "rules",
+      "type": "JournalEntry",
       "id": "ef8c04606c8096bf",
       "name": "Illusory Script",
       "sourceId": "/en/magic/spells/illusory-script/@journal"
@@ -20885,6 +21039,13 @@
     {
       "pack": "rules",
       "type": "JournalEntry",
+      "id": "937ddbff82faf971",
+      "name": "Irresistible Dance",
+      "sourceId": "/en/magic/spells/irresistible-dance/@journal"
+    },
+    {
+      "pack": "rules",
+      "type": "JournalEntry",
       "id": "0f98f495a968f5c1",
       "name": "Jet Pinnacle",
       "sourceId": "/en/magic/spells/jet-pinnacle/@journal"
@@ -20941,6 +21102,13 @@
     {
       "pack": "rules",
       "type": "JournalEntry",
+      "id": "c96d62336e9131b4",
+      "name": "Lesser Restoration",
+      "sourceId": "/en/magic/spells/lesser-restoration/@journal"
+    },
+    {
+      "pack": "rules",
+      "type": "JournalEntry",
       "id": "5f059a66238f70b9",
       "name": "Levitate",
       "sourceId": "/en/magic/spells/levitate/@journal"
@@ -20976,6 +21144,20 @@
     {
       "pack": "rules",
       "type": "JournalEntry",
+      "id": "43cae7ba52649976",
+      "name": "Lightning Projectile",
+      "sourceId": "/en/magic/spells/lightning-projectile/@journal"
+    },
+    {
+      "pack": "rules",
+      "type": "JournalEntry",
+      "id": "3a3d664acfd0d118",
+      "name": "Lightning Raiment",
+      "sourceId": "/en/magic/spells/lightning-raiment/@journal"
+    },
+    {
+      "pack": "rules",
+      "type": "JournalEntry",
       "id": "8ee37d82728f958d",
       "name": "Locate Creature",
       "sourceId": "/en/magic/spells/locate-creature/@journal"
@@ -21000,6 +21182,27 @@
       "id": "a87bf27d30bef3f4",
       "name": "Longstrider",
       "sourceId": "/en/magic/spells/longstrider/@journal"
+    },
+    {
+      "pack": "rules",
+      "type": "JournalEntry",
+      "id": "ba12d0ef7a51e331",
+      "name": "Lucent Singularity",
+      "sourceId": "/en/magic/spells/lucent-singularity/@journal"
+    },
+    {
+      "pack": "rules",
+      "type": "JournalEntry",
+      "id": "faa92885d954e1d9",
+      "name": "Luminary Devastation",
+      "sourceId": "/en/magic/spells/luminary-devastation/@journal"
+    },
+    {
+      "pack": "rules",
+      "type": "JournalEntry",
+      "id": "80b8fb73ca024fc7",
+      "name": "Luminary Punishment",
+      "sourceId": "/en/magic/spells/luminary-punishment/@journal"
     },
     {
       "pack": "rules",
@@ -21046,6 +21249,13 @@
     {
       "pack": "rules",
       "type": "JournalEntry",
+      "id": "2f3f041ebdf484c3",
+      "name": "Magistrate's Decree",
+      "sourceId": "/en/magic/spells/magistrate-s-decree/@journal"
+    },
+    {
+      "pack": "rules",
+      "type": "JournalEntry",
       "id": "edbec151a21a6a72",
       "name": "Magma Aegis",
       "sourceId": "/en/magic/spells/magma-aegis/@journal"
@@ -21056,6 +21266,13 @@
       "id": "b38562b7946eb439",
       "name": "Magmatic Touch",
       "sourceId": "/en/magic/spells/magmatic-touch/@journal"
+    },
+    {
+      "pack": "rules",
+      "type": "JournalEntry",
+      "id": "fc435e7ac698c135",
+      "name": "Magnificent Mansion",
+      "sourceId": "/en/magic/spells/magnificent-mansion/@journal"
     },
     {
       "pack": "rules",
@@ -21074,6 +21291,13 @@
     {
       "pack": "rules",
       "type": "JournalEntry",
+      "id": "b75b4d42c64aed0f",
+      "name": "Mark of Punishment",
+      "sourceId": "/en/magic/spells/mark-of-punishment/@journal"
+    },
+    {
+      "pack": "rules",
+      "type": "JournalEntry",
       "id": "74add5e5610c03b2",
       "name": "Mass Cure Wounds",
       "sourceId": "/en/magic/spells/mass-cure-wounds/@journal"
@@ -21088,6 +21312,13 @@
     {
       "pack": "rules",
       "type": "JournalEntry",
+      "id": "647ad133f23b762b",
+      "name": "Mass Healing Word",
+      "sourceId": "/en/magic/spells/mass-healing-word/@journal"
+    },
+    {
+      "pack": "rules",
+      "type": "JournalEntry",
       "id": "05329d25dd36886c",
       "name": "Mass Suggestion",
       "sourceId": "/en/magic/spells/mass-suggestion/@journal"
@@ -21098,6 +21329,13 @@
       "id": "30153dfb26bf256e",
       "name": "Maze",
       "sourceId": "/en/magic/spells/maze/@journal"
+    },
+    {
+      "pack": "rules",
+      "type": "JournalEntry",
+      "id": "c5bad6777b13de34",
+      "name": "Meld into Shadows",
+      "sourceId": "/en/magic/spells/meld-into-shadows/@journal"
     },
     {
       "pack": "rules",
@@ -21119,6 +21357,13 @@
       "id": "0d077dcc58670e0a",
       "name": "Mending",
       "sourceId": "/en/magic/spells/mending/@journal"
+    },
+    {
+      "pack": "rules",
+      "type": "JournalEntry",
+      "id": "a9af6a878728290f",
+      "name": "Mental Devastation",
+      "sourceId": "/en/magic/spells/mental-devastation/@journal"
     },
     {
       "pack": "rules",
@@ -21214,6 +21459,13 @@
     {
       "pack": "rules",
       "type": "JournalEntry",
+      "id": "10a3033dfad9d79a",
+      "name": "Moment of Prescience",
+      "sourceId": "/en/magic/spells/moment-of-prescience/@journal"
+    },
+    {
+      "pack": "rules",
+      "type": "JournalEntry",
       "id": "0a53c5d69c08ac06",
       "name": "Monolith",
       "sourceId": "/en/magic/spells/monolith/@journal"
@@ -21235,9 +21487,30 @@
     {
       "pack": "rules",
       "type": "JournalEntry",
+      "id": "b1f134416fdbab4a",
+      "name": "Overcharge Summoning",
+      "sourceId": "/en/magic/spells/overcharge-summoning/@journal"
+    },
+    {
+      "pack": "rules",
+      "type": "JournalEntry",
       "id": "4dba1b9bad191434",
       "name": "Pain Barrier",
       "sourceId": "/en/magic/spells/pain-barrier/@journal"
+    },
+    {
+      "pack": "rules",
+      "type": "JournalEntry",
+      "id": "260f4eca3a69e9a8",
+      "name": "Paradox Acceleration",
+      "sourceId": "/en/magic/spells/paradox-acceleration/@journal"
+    },
+    {
+      "pack": "rules",
+      "type": "JournalEntry",
+      "id": "e1c89ea8f437c014",
+      "name": "Pass without Trace",
+      "sourceId": "/en/magic/spells/pass-without-trace/@journal"
     },
     {
       "pack": "rules",
@@ -21256,6 +21529,13 @@
     {
       "pack": "rules",
       "type": "JournalEntry",
+      "id": "94bb55740ac3b8b0",
+      "name": "Phantasmal Killer",
+      "sourceId": "/en/magic/spells/phantasmal-killer/@journal"
+    },
+    {
+      "pack": "rules",
+      "type": "JournalEntry",
       "id": "a73a1ebdeb1e38ac",
       "name": "Phantom Steed",
       "sourceId": "/en/magic/spells/phantom-steed/@journal"
@@ -21266,6 +21546,13 @@
       "id": "119414a7b95086c6",
       "name": "Planar Binding",
       "sourceId": "/en/magic/spells/planar-binding/@journal"
+    },
+    {
+      "pack": "rules",
+      "type": "JournalEntry",
+      "id": "3d31293a5c1144c3",
+      "name": "Planar Devastation",
+      "sourceId": "/en/magic/spells/planar-devastation/@journal"
     },
     {
       "pack": "rules",
@@ -21319,6 +21606,20 @@
     {
       "pack": "rules",
       "type": "JournalEntry",
+      "id": "5bf26af0019e97e5",
+      "name": "Primordial Explosion",
+      "sourceId": "/en/magic/spells/primordial-explosion/@journal"
+    },
+    {
+      "pack": "rules",
+      "type": "JournalEntry",
+      "id": "c17a8f98e582eaa0",
+      "name": "Prismatic Barrier",
+      "sourceId": "/en/magic/spells/prismatic-barrier/@journal"
+    },
+    {
+      "pack": "rules",
+      "type": "JournalEntry",
       "id": "17c6d1f6403fd2ad",
       "name": "Prismatic Spray",
       "sourceId": "/en/magic/spells/prismatic-spray/@journal"
@@ -21340,6 +21641,13 @@
     {
       "pack": "rules",
       "type": "JournalEntry",
+      "id": "f137d167af2593b2",
+      "name": "Programmed Illusion",
+      "sourceId": "/en/magic/spells/programmed-illusion/@journal"
+    },
+    {
+      "pack": "rules",
+      "type": "JournalEntry",
       "id": "136f72c89bfd6ae4",
       "name": "Project Image",
       "sourceId": "/en/magic/spells/project-image/@journal"
@@ -21350,6 +21658,13 @@
       "id": "cab40096ba02a00f",
       "name": "Protect Fortress",
       "sourceId": "/en/magic/spells/protect-fortress/@journal"
+    },
+    {
+      "pack": "rules",
+      "type": "JournalEntry",
+      "id": "ec4a95fd35f83c9d",
+      "name": "Psychic Devastation",
+      "sourceId": "/en/magic/spells/psychic-devastation/@journal"
     },
     {
       "pack": "rules",
@@ -21392,6 +21707,13 @@
       "id": "8202d19b9fd5e3c6",
       "name": "Regeneration",
       "sourceId": "/en/magic/spells/regeneration/@journal"
+    },
+    {
+      "pack": "rules",
+      "type": "JournalEntry",
+      "id": "cde49b35dd0dfda9",
+      "name": "Relentless Huntress",
+      "sourceId": "/en/magic/spells/relentless-huntress/@journal"
     },
     {
       "pack": "rules",
@@ -21662,6 +21984,13 @@
     {
       "pack": "rules",
       "type": "JournalEntry",
+      "id": "c92b0ddab79efa97",
+      "name": "Shackles of the Soul",
+      "sourceId": "/en/magic/spells/shackles-of-the-soul/@journal"
+    },
+    {
+      "pack": "rules",
+      "type": "JournalEntry",
       "id": "aefa61acae5fe361",
       "name": "Shadow Barrage",
       "sourceId": "/en/magic/spells/shadow-barrage/@journal"
@@ -21886,9 +22215,23 @@
     {
       "pack": "rules",
       "type": "JournalEntry",
+      "id": "5d39655ec3bd0c5a",
+      "name": "Speak with Animals",
+      "sourceId": "/en/magic/spells/speak-with-animals/@journal"
+    },
+    {
+      "pack": "rules",
+      "type": "JournalEntry",
       "id": "b972ad25c74f40df",
       "name": "Speak with Dead",
       "sourceId": "/en/magic/spells/speak-with-dead/@journal"
+    },
+    {
+      "pack": "rules",
+      "type": "JournalEntry",
+      "id": "8edcb99e41f10ce1",
+      "name": "Speak with Plants",
+      "sourceId": "/en/magic/spells/speak-with-plants/@journal"
     },
     {
       "pack": "rules",
@@ -21970,6 +22313,13 @@
     {
       "pack": "rules",
       "type": "JournalEntry",
+      "id": "38fbb9ed1fd5cc2b",
+      "name": "Storm of Vengeance",
+      "sourceId": "/en/magic/spells/storm-of-vengeance/@journal"
+    },
+    {
+      "pack": "rules",
+      "type": "JournalEntry",
       "id": "104ba66e3e9fb1ee",
       "name": "Strident Palm",
       "sourceId": "/en/magic/spells/strident-palm/@journal"
@@ -22019,9 +22369,23 @@
     {
       "pack": "rules",
       "type": "JournalEntry",
+      "id": "baa7efe78664d272",
+      "name": "Symbol of Protection",
+      "sourceId": "/en/magic/spells/symbol-of-protection/@journal"
+    },
+    {
+      "pack": "rules",
+      "type": "JournalEntry",
       "id": "88d7ae6eabdbc0c9",
       "name": "Symbol",
       "sourceId": "/en/magic/spells/symbol/@journal"
+    },
+    {
+      "pack": "rules",
+      "type": "JournalEntry",
+      "id": "6287829ec5a77075",
+      "name": "T.ulips, P.aper, K.iwi",
+      "sourceId": "/en/magic/spells/t-ulips-p-aper-k-iwi/@journal"
     },
     {
       "pack": "rules",
@@ -22050,6 +22414,13 @@
       "id": "99ca7744dbeb7d28",
       "name": "Teleport",
       "sourceId": "/en/magic/spells/teleport/@journal"
+    },
+    {
+      "pack": "rules",
+      "type": "JournalEntry",
+      "id": "f67ac77c9aa9e4a5",
+      "name": "Teleportation Circle",
+      "sourceId": "/en/magic/spells/teleportation-circle/@journal"
     },
     {
       "pack": "rules",
@@ -22208,6 +22579,13 @@
     {
       "pack": "rules",
       "type": "JournalEntry",
+      "id": "ca1ce8255858733d",
+      "name": "Vacuum Bombardment",
+      "sourceId": "/en/magic/spells/vacuum-bombardment/@journal"
+    },
+    {
+      "pack": "rules",
+      "type": "JournalEntry",
       "id": "2534c63d81e9ca3f",
       "name": "Vampiric Touch",
       "sourceId": "/en/magic/spells/vampiric-touch/@journal"
@@ -22351,6 +22729,13 @@
       "id": "87859b120796cb94",
       "name": "Wish",
       "sourceId": "/en/magic/spells/wish/@journal"
+    },
+    {
+      "pack": "rules",
+      "type": "JournalEntry",
+      "id": "defa79742b410092",
+      "name": "Word of Remembrance",
+      "sourceId": "/en/magic/spells/word-of-remembrance/@journal"
     },
     {
       "pack": "rules",
@@ -22621,6 +23006,13 @@
     {
       "pack": "spells",
       "type": "Item",
+      "id": "367f56a084ff91f2",
+      "name": "Antipathy/Sympathy",
+      "sourceId": "/en/magic/spells/antipathy-sympathy/"
+    },
+    {
+      "pack": "spells",
+      "type": "Item",
       "id": "318c4fdffd59abfd",
       "name": "Arcane Armor",
       "sourceId": "/en/magic/spells/arcane-armor/"
@@ -22684,6 +23076,13 @@
     {
       "pack": "spells",
       "type": "Item",
+      "id": "bbd0a354a2712148",
+      "name": "Arcanist's Magic Aura",
+      "sourceId": "/en/magic/spells/arcanists-magic-aura/"
+    },
+    {
+      "pack": "spells",
+      "type": "Item",
       "id": "3e9d20007a833e0a",
       "name": "Arcanum Feint",
       "sourceId": "/en/magic/spells/arcanum-feint/"
@@ -22708,6 +23107,13 @@
       "id": "dadc4b4e715b593f",
       "name": "Arctic Light Jet",
       "sourceId": "/en/magic/spells/arctic-light-jet/"
+    },
+    {
+      "pack": "spells",
+      "type": "Item",
+      "id": "50371dacd6174f22",
+      "name": "Arctic Manifestation",
+      "sourceId": "/en/magic/spells/arctic-manifestation/"
     },
     {
       "pack": "spells",
@@ -22852,6 +23258,20 @@
     {
       "pack": "spells",
       "type": "Item",
+      "id": "07883650e7504d63",
+      "name": "Blindness/Deafness",
+      "sourceId": "/en/magic/spells/blindness-deafness/"
+    },
+    {
+      "pack": "spells",
+      "type": "Item",
+      "id": "4ad7e3302290395a",
+      "name": "Blinking of the Void",
+      "sourceId": "/en/magic/spells/blinking-of-the-void/"
+    },
+    {
+      "pack": "spells",
+      "type": "Item",
       "id": "6ffdfa872ba4b292",
       "name": "Blinking",
       "sourceId": "/en/magic/spells/blinking/"
@@ -22876,6 +23296,13 @@
       "id": "5c5e735c5b2eadae",
       "name": "Blood Boil",
       "sourceId": "/en/magic/spells/blood-boil/"
+    },
+    {
+      "pack": "spells",
+      "type": "Item",
+      "id": "5048f0796cdd512b",
+      "name": "Blood Manipulation",
+      "sourceId": "/en/magic/spells/blood-manipulation/"
     },
     {
       "pack": "spells",
@@ -23062,6 +23489,13 @@
     {
       "pack": "spells",
       "type": "Item",
+      "id": "da9b99b0d44b47c5",
+      "name": "Commune with Nature",
+      "sourceId": "/en/magic/spells/commune-with-nature/"
+    },
+    {
+      "pack": "spells",
+      "type": "Item",
       "id": "91b2c0ab5cde03fe",
       "name": "Commune",
       "sourceId": "/en/magic/spells/commune/"
@@ -23072,6 +23506,13 @@
       "id": "06f16b9aab9b9301",
       "name": "Complete Heal",
       "sourceId": "/en/magic/spells/complete-heal/"
+    },
+    {
+      "pack": "spells",
+      "type": "Item",
+      "id": "68f287fbeb514ad9",
+      "name": "Comprehend Languages",
+      "sourceId": "/en/magic/spells/comprehend-languages/"
     },
     {
       "pack": "spells",
@@ -23230,6 +23671,13 @@
     {
       "pack": "spells",
       "type": "Item",
+      "id": "027cabb22f7010e0",
+      "name": "Create Element (Spell)",
+      "sourceId": "/en/magic/spells/create-element-spell/"
+    },
+    {
+      "pack": "spells",
+      "type": "Item",
       "id": "60258a483338716f",
       "name": "Create Sapling",
       "sourceId": "/en/magic/spells/create-sapling/"
@@ -23342,6 +23790,13 @@
     {
       "pack": "spells",
       "type": "Item",
+      "id": "3222d601c927450e",
+      "name": "Detect Good and Evil",
+      "sourceId": "/en/magic/spells/detect-good-and-evil/"
+    },
+    {
+      "pack": "spells",
+      "type": "Item",
       "id": "6302f4d44d5bd600",
       "name": "Detect Magic",
       "sourceId": "/en/magic/spells/detect-magic/"
@@ -23408,6 +23863,13 @@
       "id": "621276a6e9208c10",
       "name": "Dispel Magic",
       "sourceId": "/en/magic/spells/dispel-magic/"
+    },
+    {
+      "pack": "spells",
+      "type": "Item",
+      "id": "aac75cfbd90ccf47",
+      "name": "Dissonant Vibration",
+      "sourceId": "/en/magic/spells/dissonant-vibration/"
     },
     {
       "pack": "spells",
@@ -23545,6 +24007,13 @@
     {
       "pack": "spells",
       "type": "Item",
+      "id": "507d4381c7f698f5",
+      "name": "Elemental Emanation",
+      "sourceId": "/en/magic/spells/elemental-emanation/"
+    },
+    {
+      "pack": "spells",
+      "type": "Item",
       "id": "1a3d4501bbdd68e1",
       "name": "Elemental Fury",
       "sourceId": "/en/magic/spells/elemental-fury/"
@@ -23650,6 +24119,13 @@
     {
       "pack": "spells",
       "type": "Item",
+      "id": "1e180cef7bf44159",
+      "name": "Expeditious Retreat",
+      "sourceId": "/en/magic/spells/expeditious-retreat/"
+    },
+    {
+      "pack": "spells",
+      "type": "Item",
       "id": "e5bf44d2287a7f36",
       "name": "Extract Toxin",
       "sourceId": "/en/magic/spells/extract-toxin/"
@@ -23660,6 +24136,20 @@
       "id": "a27b0739f6594f17",
       "name": "Extraplanar Ally",
       "sourceId": "/en/magic/spells/extraplanar-ally/"
+    },
+    {
+      "pack": "spells",
+      "type": "Item",
+      "id": "58c70d9aabf3a538",
+      "name": "Extraplanar Contact",
+      "sourceId": "/en/magic/spells/extraplanar-contact/"
+    },
+    {
+      "pack": "spells",
+      "type": "Item",
+      "id": "906f3f8eec19e7d1",
+      "name": "Eye of Destruction",
+      "sourceId": "/en/magic/spells/eye-of-destruction/"
     },
     {
       "pack": "spells",
@@ -23874,6 +24364,13 @@
     {
       "pack": "spells",
       "type": "Item",
+      "id": "74a835a64b19e78c",
+      "name": "Freedom of Movement",
+      "sourceId": "/en/magic/spells/freedom-of-movement/"
+    },
+    {
+      "pack": "spells",
+      "type": "Item",
       "id": "a439ee3b74afc791",
       "name": "Freezing Sphere",
       "sourceId": "/en/magic/spells/freezing-sphere/"
@@ -23993,6 +24490,13 @@
     {
       "pack": "spells",
       "type": "Item",
+      "id": "4cd723c7e1c4bc36",
+      "name": "Glacial Retribution",
+      "sourceId": "/en/magic/spells/glacial-retribution/"
+    },
+    {
+      "pack": "spells",
+      "type": "Item",
       "id": "63b0b1e1229ac62d",
       "name": "Glacial Storm",
       "sourceId": "/en/magic/spells/glacial-storm/"
@@ -24024,6 +24528,34 @@
       "id": "92bbde2911b6c6b0",
       "name": "Goodberry",
       "sourceId": "/en/magic/spells/goodberry/"
+    },
+    {
+      "pack": "spells",
+      "type": "Item",
+      "id": "3bf48240f3e32778",
+      "name": "Gravitational Shot",
+      "sourceId": "/en/magic/spells/gravitational-shot/"
+    },
+    {
+      "pack": "spells",
+      "type": "Item",
+      "id": "0fe1feaa47ba986f",
+      "name": "Gravitational Spark",
+      "sourceId": "/en/magic/spells/gravitational-spark/"
+    },
+    {
+      "pack": "spells",
+      "type": "Item",
+      "id": "c0b33425ed07c9a4",
+      "name": "Greater Invisibility",
+      "sourceId": "/en/magic/spells/greater-invisibility/"
+    },
+    {
+      "pack": "spells",
+      "type": "Item",
+      "id": "37d33987679f6629",
+      "name": "Greater Restoration",
+      "sourceId": "/en/magic/spells/greater-restoration/"
     },
     {
       "pack": "spells",
@@ -24217,6 +24749,13 @@
     {
       "pack": "spells",
       "type": "Item",
+      "id": "3f6e0231a1fdf14b",
+      "name": "Illusory Animation",
+      "sourceId": "/en/magic/spells/illusory-animation/"
+    },
+    {
+      "pack": "spells",
+      "type": "Item",
       "id": "13f19bb56c72815a",
       "name": "Illusory Script",
       "sourceId": "/en/magic/spells/illusory-script/"
@@ -24357,6 +24896,13 @@
     {
       "pack": "spells",
       "type": "Item",
+      "id": "ec8990a3003f2bfc",
+      "name": "Irresistible Dance",
+      "sourceId": "/en/magic/spells/irresistible-dance/"
+    },
+    {
+      "pack": "spells",
+      "type": "Item",
       "id": "db506f87ebed81e5",
       "name": "Jet Pinnacle",
       "sourceId": "/en/magic/spells/jet-pinnacle/"
@@ -24413,6 +24959,13 @@
     {
       "pack": "spells",
       "type": "Item",
+      "id": "1f6dec22b2b8ccf5",
+      "name": "Lesser Restoration",
+      "sourceId": "/en/magic/spells/lesser-restoration/"
+    },
+    {
+      "pack": "spells",
+      "type": "Item",
       "id": "96eb2a49538baa69",
       "name": "Levitate",
       "sourceId": "/en/magic/spells/levitate/"
@@ -24448,6 +25001,20 @@
     {
       "pack": "spells",
       "type": "Item",
+      "id": "90afc25dd120e362",
+      "name": "Lightning Projectile",
+      "sourceId": "/en/magic/spells/lightning-projectile/"
+    },
+    {
+      "pack": "spells",
+      "type": "Item",
+      "id": "d603568ba2d97c0f",
+      "name": "Lightning Raiment",
+      "sourceId": "/en/magic/spells/lightning-raiment/"
+    },
+    {
+      "pack": "spells",
+      "type": "Item",
       "id": "076edeb6a52c54c8",
       "name": "Locate Creature",
       "sourceId": "/en/magic/spells/locate-creature/"
@@ -24472,6 +25039,27 @@
       "id": "2b5643ae7cb5e5fa",
       "name": "Longstrider",
       "sourceId": "/en/magic/spells/longstrider/"
+    },
+    {
+      "pack": "spells",
+      "type": "Item",
+      "id": "f3fa892d2c759e14",
+      "name": "Lucent Singularity",
+      "sourceId": "/en/magic/spells/lucent-singularity/"
+    },
+    {
+      "pack": "spells",
+      "type": "Item",
+      "id": "444ef17b2b457772",
+      "name": "Luminary Devastation",
+      "sourceId": "/en/magic/spells/luminary-devastation/"
+    },
+    {
+      "pack": "spells",
+      "type": "Item",
+      "id": "9e764ab4b874a8fd",
+      "name": "Luminary Punishment",
+      "sourceId": "/en/magic/spells/luminary-punishment/"
     },
     {
       "pack": "spells",
@@ -24518,6 +25106,13 @@
     {
       "pack": "spells",
       "type": "Item",
+      "id": "fbb69084eebf5710",
+      "name": "Magistrate's Decree",
+      "sourceId": "/en/magic/spells/magistrate-s-decree/"
+    },
+    {
+      "pack": "spells",
+      "type": "Item",
       "id": "7b26ae941ea4d7fe",
       "name": "Magma Aegis",
       "sourceId": "/en/magic/spells/magma-aegis/"
@@ -24528,6 +25123,13 @@
       "id": "f9abc5517e2927ca",
       "name": "Magmatic Touch",
       "sourceId": "/en/magic/spells/magmatic-touch/"
+    },
+    {
+      "pack": "spells",
+      "type": "Item",
+      "id": "f4c4ce6a1a52e86a",
+      "name": "Magnificent Mansion",
+      "sourceId": "/en/magic/spells/magnificent-mansion/"
     },
     {
       "pack": "spells",
@@ -24546,6 +25148,13 @@
     {
       "pack": "spells",
       "type": "Item",
+      "id": "327dc5933f2bb09f",
+      "name": "Mark of Punishment",
+      "sourceId": "/en/magic/spells/mark-of-punishment/"
+    },
+    {
+      "pack": "spells",
+      "type": "Item",
       "id": "a567c5ca1aad4ff7",
       "name": "Mass Cure Wounds",
       "sourceId": "/en/magic/spells/mass-cure-wounds/"
@@ -24560,6 +25169,13 @@
     {
       "pack": "spells",
       "type": "Item",
+      "id": "67fd4bf9d8493d7c",
+      "name": "Mass Healing Word",
+      "sourceId": "/en/magic/spells/mass-healing-word/"
+    },
+    {
+      "pack": "spells",
+      "type": "Item",
       "id": "387fab7cb64bfb51",
       "name": "Mass Suggestion",
       "sourceId": "/en/magic/spells/mass-suggestion/"
@@ -24570,6 +25186,13 @@
       "id": "c79c6e20deffe568",
       "name": "Maze",
       "sourceId": "/en/magic/spells/maze/"
+    },
+    {
+      "pack": "spells",
+      "type": "Item",
+      "id": "d1c91940fdaf895d",
+      "name": "Meld into Shadows",
+      "sourceId": "/en/magic/spells/meld-into-shadows/"
     },
     {
       "pack": "spells",
@@ -24591,6 +25214,13 @@
       "id": "f81c973764b5cb7f",
       "name": "Mending",
       "sourceId": "/en/magic/spells/mending/"
+    },
+    {
+      "pack": "spells",
+      "type": "Item",
+      "id": "50246c0f934b38ee",
+      "name": "Mental Devastation",
+      "sourceId": "/en/magic/spells/mental-devastation/"
     },
     {
       "pack": "spells",
@@ -24686,6 +25316,13 @@
     {
       "pack": "spells",
       "type": "Item",
+      "id": "1e28d27feaee1782",
+      "name": "Moment of Prescience",
+      "sourceId": "/en/magic/spells/moment-of-prescience/"
+    },
+    {
+      "pack": "spells",
+      "type": "Item",
       "id": "f118679e3de0a1b7",
       "name": "Monolith",
       "sourceId": "/en/magic/spells/monolith/"
@@ -24707,9 +25344,30 @@
     {
       "pack": "spells",
       "type": "Item",
+      "id": "a9ee88262555d248",
+      "name": "Overcharge Summoning",
+      "sourceId": "/en/magic/spells/overcharge-summoning/"
+    },
+    {
+      "pack": "spells",
+      "type": "Item",
       "id": "0a28fab9bbbfe5e0",
       "name": "Pain Barrier",
       "sourceId": "/en/magic/spells/pain-barrier/"
+    },
+    {
+      "pack": "spells",
+      "type": "Item",
+      "id": "2d01517d5bc07fa0",
+      "name": "Paradox Acceleration",
+      "sourceId": "/en/magic/spells/paradox-acceleration/"
+    },
+    {
+      "pack": "spells",
+      "type": "Item",
+      "id": "9d1bc0eee96348ee",
+      "name": "Pass without Trace",
+      "sourceId": "/en/magic/spells/pass-without-trace/"
     },
     {
       "pack": "spells",
@@ -24728,6 +25386,13 @@
     {
       "pack": "spells",
       "type": "Item",
+      "id": "9e085d72a32db060",
+      "name": "Phantasmal Killer",
+      "sourceId": "/en/magic/spells/phantasmal-killer/"
+    },
+    {
+      "pack": "spells",
+      "type": "Item",
       "id": "e4485d503fa3b24e",
       "name": "Phantom Steed",
       "sourceId": "/en/magic/spells/phantom-steed/"
@@ -24738,6 +25403,13 @@
       "id": "7e93ddab403fd9c1",
       "name": "Planar Binding",
       "sourceId": "/en/magic/spells/planar-binding/"
+    },
+    {
+      "pack": "spells",
+      "type": "Item",
+      "id": "cb6eef58d5843f53",
+      "name": "Planar Devastation",
+      "sourceId": "/en/magic/spells/planar-devastation/"
     },
     {
       "pack": "spells",
@@ -24791,6 +25463,20 @@
     {
       "pack": "spells",
       "type": "Item",
+      "id": "af84e4a23e5dd3f9",
+      "name": "Primordial Explosion",
+      "sourceId": "/en/magic/spells/primordial-explosion/"
+    },
+    {
+      "pack": "spells",
+      "type": "Item",
+      "id": "e043371b755c98c8",
+      "name": "Prismatic Barrier",
+      "sourceId": "/en/magic/spells/prismatic-barrier/"
+    },
+    {
+      "pack": "spells",
+      "type": "Item",
       "id": "14baaa2493a5c838",
       "name": "Prismatic Spray",
       "sourceId": "/en/magic/spells/prismatic-spray/"
@@ -24812,6 +25498,13 @@
     {
       "pack": "spells",
       "type": "Item",
+      "id": "3750f4529aad54f2",
+      "name": "Programmed Illusion",
+      "sourceId": "/en/magic/spells/programmed-illusion/"
+    },
+    {
+      "pack": "spells",
+      "type": "Item",
       "id": "aa16700cddfc18a6",
       "name": "Project Image",
       "sourceId": "/en/magic/spells/project-image/"
@@ -24822,6 +25515,13 @@
       "id": "17a9b7df8895af1e",
       "name": "Protect Fortress",
       "sourceId": "/en/magic/spells/protect-fortress/"
+    },
+    {
+      "pack": "spells",
+      "type": "Item",
+      "id": "54659cba66ce45aa",
+      "name": "Psychic Devastation",
+      "sourceId": "/en/magic/spells/psychic-devastation/"
     },
     {
       "pack": "spells",
@@ -24864,6 +25564,13 @@
       "id": "7ebcd6787ee2a28a",
       "name": "Regeneration",
       "sourceId": "/en/magic/spells/regeneration/"
+    },
+    {
+      "pack": "spells",
+      "type": "Item",
+      "id": "06bf2f6e658500b6",
+      "name": "Relentless Huntress",
+      "sourceId": "/en/magic/spells/relentless-huntress/"
     },
     {
       "pack": "spells",
@@ -25134,6 +25841,13 @@
     {
       "pack": "spells",
       "type": "Item",
+      "id": "35e564350bb647f4",
+      "name": "Shackles of the Soul",
+      "sourceId": "/en/magic/spells/shackles-of-the-soul/"
+    },
+    {
+      "pack": "spells",
+      "type": "Item",
       "id": "6c40d7e7096a8b58",
       "name": "Shadow Barrage",
       "sourceId": "/en/magic/spells/shadow-barrage/"
@@ -25358,9 +26072,23 @@
     {
       "pack": "spells",
       "type": "Item",
+      "id": "af0afa9e2c738953",
+      "name": "Speak with Animals",
+      "sourceId": "/en/magic/spells/speak-with-animals/"
+    },
+    {
+      "pack": "spells",
+      "type": "Item",
       "id": "cd561138b2c134c8",
       "name": "Speak with Dead",
       "sourceId": "/en/magic/spells/speak-with-dead/"
+    },
+    {
+      "pack": "spells",
+      "type": "Item",
+      "id": "90bb861513c2adcb",
+      "name": "Speak with Plants",
+      "sourceId": "/en/magic/spells/speak-with-plants/"
     },
     {
       "pack": "spells",
@@ -25442,6 +26170,13 @@
     {
       "pack": "spells",
       "type": "Item",
+      "id": "6ab4a6df9f9d396c",
+      "name": "Storm of Vengeance",
+      "sourceId": "/en/magic/spells/storm-of-vengeance/"
+    },
+    {
+      "pack": "spells",
+      "type": "Item",
       "id": "73ffa53126252b7e",
       "name": "Strident Palm",
       "sourceId": "/en/magic/spells/strident-palm/"
@@ -25491,9 +26226,23 @@
     {
       "pack": "spells",
       "type": "Item",
+      "id": "3fe88f3319db61b3",
+      "name": "Symbol of Protection",
+      "sourceId": "/en/magic/spells/symbol-of-protection/"
+    },
+    {
+      "pack": "spells",
+      "type": "Item",
       "id": "16909fe3035bad72",
       "name": "Symbol",
       "sourceId": "/en/magic/spells/symbol/"
+    },
+    {
+      "pack": "spells",
+      "type": "Item",
+      "id": "7ee8f60daa26bfb6",
+      "name": "T.ulips, P.aper, K.iwi",
+      "sourceId": "/en/magic/spells/t-ulips-p-aper-k-iwi/"
     },
     {
       "pack": "spells",
@@ -25522,6 +26271,13 @@
       "id": "6bd2e46a41340afe",
       "name": "Teleport",
       "sourceId": "/en/magic/spells/teleport/"
+    },
+    {
+      "pack": "spells",
+      "type": "Item",
+      "id": "f63560d31a20ab8e",
+      "name": "Teleportation Circle",
+      "sourceId": "/en/magic/spells/teleportation-circle/"
     },
     {
       "pack": "spells",
@@ -25680,6 +26436,13 @@
     {
       "pack": "spells",
       "type": "Item",
+      "id": "18877deb81027bf3",
+      "name": "Vacuum Bombardment",
+      "sourceId": "/en/magic/spells/vacuum-bombardment/"
+    },
+    {
+      "pack": "spells",
+      "type": "Item",
       "id": "1c0077012a02bbbd",
       "name": "Vampiric Touch",
       "sourceId": "/en/magic/spells/vampiric-touch/"
@@ -25823,6 +26586,13 @@
       "id": "4ce8474ac53ad6bc",
       "name": "Wish",
       "sourceId": "/en/magic/spells/wish/"
+    },
+    {
+      "pack": "spells",
+      "type": "Item",
+      "id": "28c3656d59274331",
+      "name": "Word of Remembrance",
+      "sourceId": "/en/magic/spells/word-of-remembrance/"
     },
     {
       "pack": "spells",

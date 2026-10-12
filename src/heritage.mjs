@@ -64,6 +64,13 @@ export function heritageEffects(rules,{skills={},options={},context={}}={}) {
     if(m.skillChoice.advantageIfKnown&&skills[key]>=1)add('system.skills.'+key+'.roll.mode',1,'upgrade');
   }
   for(const row of selection.options.training??[])if(row.kind==='skill')add('system.skills.'+row.id+'.value',1,'upgrade');
+  for(const key of m.skillAdvantages??[])add('system.skills.'+key+'.roll.mode',1,'upgrade');
+  for(const key of m.saves??[]){
+    add('system.abilities.'+key+'.proficient',1,'upgrade');
+    if(m.saveExpertiseIfKnown&&context.saves?.[key]===1)add('system.abilities.'+key+'.save.roll.bonus','@prof');
+  }
+  for(const [key,value]of Object.entries(m.movementMinimum??{}))add('system.attributes.movement.speeds.'+key,value,'upgrade');
+  if(m.movementMinimum)add('system.attributes.movement.units','ft','override');
   for(const key of m.weapons??[])add('system.traits.weaponProf.value',key);
   if(selection.options.weapon)add('system.traits.weaponProf.value',selection.options.weapon);
   if(selection.options.languages?.length)add('system.traits.languages.custom','; '+selection.options.languages.join('; '));
@@ -73,4 +80,21 @@ export function heritageEffects(rules,{skills={},options={},context={}}={}) {
   if(m.sensesAdd||m.sensesMinimum)add('system.attributes.senses.units','ft','override');
   if(m.passivePerception)add('system.skills.prc.bonuses.passive',m.passivePerception);
   return changes.length?[{name:rules.name,type:'base',transfer:true,system:{changes},flags:{runarcana:{heritageManaged:true}}}]:[];
+}
+
+export function savingProficiencies(actor){
+  const saves=Object.fromEntries(Object.entries(actor.system.abilities??{}).map(([k,v])=>[k,v.save?.prof?.multiplier??v.proficient??0]));
+  for(const item of actor.items)for(const effect of item.effects??[]){
+    if(effect.disabled||effect.isSuppressed||!effect.flags?.runarcana?.heritageManaged)continue;
+    for(const change of effect.system?.changes??[]){const match=change.key.match(/^system\.abilities\.([a-z]+)\.save\.roll\.bonus$/);if(match&&change.value==='@prof')saves[match[1]]=Math.max(saves[match[1]]??0,2);}
+  }
+  return saves;
+}
+export function advanceHeritageProficiencies(effects,{skills,saves,weaponProficiencies}={}){
+  for(const effect of effects)for(const change of effect.system.changes){
+    const skill=change.key.match(/^system\.skills\.([a-z]+)\.value$/);if(skill&&skills)skills[skill[1]]=Math.max(skills[skill[1]]??0,Number(change.value));
+    const save=change.key.match(/^system\.abilities\.([a-z]+)\.(proficient|save\.roll\.bonus)$/);
+    if(save&&saves)saves[save[1]]=Math.max(saves[save[1]]??0,save[2]==='proficient'?Number(change.value):change.value==='@prof'?2:0);
+    if(change.key==='system.traits.weaponProf.value'&&weaponProficiencies&&!weaponProficiencies.includes(change.value))weaponProficiencies.push(change.value);
+  }
 }

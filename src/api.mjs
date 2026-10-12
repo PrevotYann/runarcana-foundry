@@ -1,7 +1,7 @@
 import {resourceValue,validateChoices,creatureStatistics,scaleDice,manaCost} from './rules.mjs';
 import {characterPlan,originEffects,originHeritageBudget,ABILITIES} from './character.mjs';
 import {naturalWeapon} from './origin-weapons.mjs';
-import {heritageEligibility,heritageEffects,heritageOptions} from './heritage.mjs';
+import {heritageEligibility,heritageEffects,heritageOptions,savingProficiencies,advanceHeritageProficiencies} from './heritage.mjs';
 import {knownCrafts,heritageTools,craftFromName} from './crafts.mjs';
 import {explicitWeaponProficiencies} from './heritage-weapons.mjs';
 
@@ -21,7 +21,7 @@ export function assertGM() {
 }
 export function createApi() {
   return Object.freeze({
-    version:game.modules?.get('runarcana')?.version??'0.11.0', manaCost,scaleDice,creatureStatistics,
+    version:game.modules?.get('runarcana')?.version??'0.12.0', manaCost,scaleDice,creatureStatistics,
     async enableActor(actor) {
       assertGM();
       if(!game.settings.get('runarcana','enabled'))throw new Error('RUNARCANA.Error.WorldDisabled');
@@ -122,7 +122,7 @@ export function createApi() {
       const context={...origin,level:actor.system.details.level,initial:!!actor.getFlag('runarcana','creationDraft')&&!actor.getFlag('runarcana','creationComplete')&&actor.system.details.level<=1,classes:actor.items.filter(i=>i.type==='class').map(i=>i.system?.identifier??i.name),abilities:Object.fromEntries(Object.entries(actor.system.abilities).map(([k,v])=>[k,v.value])),pool,existingNames:actor.items.map(i=>i.getFlag?.('runarcana','heritageRules')?.name??i.getFlag?.('runarcana','canonicalId')?.split('#')[1]??i.name)};
       const choices=[],errors=[],manual=[],mechanicalErrors=[];
       context.weaponProficiencies=[...explicitWeaponProficiencies(actor,origin)];
-      const trainingContext={...origin,skills:Object.fromEntries(Object.entries(actor.system.skills??{}).map(([k,v])=>[k,v.value])),crafts:knownCrafts(actor.items),languages:[...(origin.languages??[]),...(actor.system.traits?.languages?.value??[]),...(actor.system.traits?.languages?.custom??'').split(';').map(s=>s.trim()).filter(Boolean)]};
+      const trainingContext={...origin,skills:Object.fromEntries(Object.entries(actor.system.skills??{}).map(([k,v])=>[k,v.value])),saves:savingProficiencies(actor),crafts:knownCrafts(actor.items),languages:[...(origin.languages??[]),...(actor.system.traits?.languages?.value??[]),...(actor.system.traits?.languages?.custom??'').split(';').map(s=>s.trim()).filter(Boolean)]};
       for(const row of plan.choices){
         const source=await fromUuid(row.uuid),rules=source?.getFlag('runarcana','heritageRules');
         const sourceId=source?.getFlag('runarcana','canonicalId');if(source?.type!=='feat'||rules?.schema!==1||!sourceId)throw new Error('RUNARCANA.Error.Source');
@@ -133,7 +133,7 @@ export function createApi() {
         const selection=heritageOptions(rules,row.options,trainingContext);errors.push(...selection.errors);mechanicalErrors.push(...selection.errors);
         if(selection.valid){
           trainingContext.languages.push(...(selection.options.languages??[]));
-          for(const effect of heritageEffects(rules,{skills:trainingContext.skills,options:selection.options,context:{region:origin.region}}))for(const change of effect.system.changes){const match=change.key.match(/^system\.skills\.([a-z]+)\.value$/);if(match)trainingContext.skills[match[1]]=Math.max(trainingContext.skills[match[1]]??0,Number(change.value));if(change.key==='system.traits.weaponProf.value'&&!context.weaponProficiencies.includes(change.value))context.weaponProficiencies.push(change.value);}
+          advanceHeritageProficiencies(heritageEffects(rules,{skills:trainingContext.skills,options:selection.options,context:{region:origin.region,saves:trainingContext.saves}}),{skills:trainingContext.skills,saves:trainingContext.saves,weaponProficiencies:context.weaponProficiencies});
           for(const tool of heritageTools(rules,selection.options,{known:trainingContext.crafts}))trainingContext.crafts.push({id:tool.flags.runarcana.craftId,specialty:tool.flags.runarcana.craftSpecialty,multiplier:tool.system.proficient});
         }
         choices.push({id:sourceId+'@pick-'+(count+1),sourceId,uuid:row.uuid,cost:rules.cost,pool,name:source.name,options:selection.options,...(rules.mechanics?.weaponChoice?.damagePicks?{weaponDamageBonus:count<rules.mechanics.weaponChoice.damagePicks}:{})});
@@ -149,15 +149,16 @@ export function createApi() {
         if(!result.valid&&!overrideReason?.trim())throw new Error(result.errors[0]);
         const skills=Object.fromEntries(Object.entries(actor.system.skills??{}).map(([k,v])=>[k,v.value]));
         const crafts=knownCrafts(actor.items);
+        const saves=savingProficiencies(actor);
         const data=[];for(const choice of result.choices){
           const source=await fromUuid(choice.uuid),d=source.toObject();delete d._id;delete d._key;delete d.folder;d.flags.runarcana.heritageChoice=choice.id;d.flags.runarcana.heritageSelection=choice.options;
           if(choice.weaponDamageBonus)d.flags.runarcana.heritageWeaponDamage=choice.options.weapon;
-          const effects=heritageEffects(source.getFlag('runarcana','heritageRules'),{skills,options:choice.options,context:{region:actor.getFlag('runarcana','originSelection').plan.region}});
+          const effects=heritageEffects(source.getFlag('runarcana','heritageRules'),{skills,options:choice.options,context:{region:actor.getFlag('runarcana','originSelection').plan.region,saves}});
           d.effects=[...(d.effects??[]),...effects];data.push(d);
           const tools=heritageTools(source.getFlag('runarcana','heritageRules'),choice.options,{known:crafts,choiceId:choice.id});data.push(...tools);
           for(const tool of tools)crafts.push({id:tool.flags.runarcana.craftId,specialty:tool.flags.runarcana.craftSpecialty,multiplier:tool.system.proficient});
           // Later choices in the same transaction see proficiencies granted by earlier choices.
-          for(const effect of effects)for(const c of effect.system.changes){const match=c.key.match(/^system\.skills\.([a-z]+)\.value$/);if(match)skills[match[1]]=Math.max(skills[match[1]]??0,Number(c.value));}
+          advanceHeritageProficiencies(effects,{skills,saves});
         }
         const created=await actor.createEmbeddedDocuments('Item',data);
         const override=overrideReason?{reason:overrideReason,user:game.user.id,time:game.time.worldTime,errors:result.errors,manual:result.manual}:null;
