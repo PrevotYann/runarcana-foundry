@@ -1,8 +1,9 @@
+import {applyRegionalChoices,REGIONAL_RULES} from './regional.mjs';
 export const ABILITIES=['str','dex','con','int','wis','cha'];
 export const SKILLS=['acr','ani','arc','ath','dec','his','ins','itm','inv','med','nat','prc','prf','per','rel','slt','ste','sur','tec'];
 export const MARTIAL_WEAPONS=['battleaxe','blowgun','flail','glaive','greataxe','greatsword','halberd','handcrossbow','heavycrossbow','lance','longbow','longsword','maul','morningstar','pike','rapier','scimitar','shortsword','trident','warpick','warhammer','whip'];
 export const WEAPONS=[...MARTIAL_WEAPONS,'club','dagger','dart','greatclub','handaxe','javelin','lightcrossbow','lighthammer','mace','musket','pistol','quarterstaff','sickle','spear','shortbow','sling'];
-export const REGIONS={'Bilgewater':['Bilgewatrian','Buhru'],'Demacia':['Demacian'],'Freljord':['Freljordian'],'Ionia':['Ionian'],'Ixtal':['Ixtali'],'Kumungu':['Ixtali'],'Noxus':['Noxian'],'Piltover':['Zaunite'],'Shurima':['Shuriman','Noxian'],'Targon':['Targonian','Rakkor'],'Zaun':['Zaunite'],'Bandle City':['Yordle']};
+export const REGIONS={'Bilgewater':['Bilgewatrian','Buhru'],'Demacia':['Demacian'],'Freljord':['Freljordian'],'Ionia':['Ionian'],'Ixtal':['Ixtali'],'Kumungu':['Ixtali'],'Noxus':['Noxian'],'Piltover':['Zaunite'],'Shurima':['Shuriman','Noxian'],'Targon':['Targonian','Rakkor'],'Zaun':['Zaunite'],'Bandle City':['Yordle'],'Nazumah':['Nazumite'],'Shadow Isles':['Helian','Spiritual']};
 const fail=()=>{throw new Error('RUNARCANA.Error.Choices');};
 const array=x=>Array.isArray(x)?x:[];
 export function originHeritageBudget(plan,level,pool='origin') {
@@ -31,12 +32,13 @@ export function characterPlan(profile,selection,{knownSkills={},knownCrafts=[]}=
   if(profile.variants.length&&!variant||!profile.variants.length&&selection.variant)fail();
   if(!(variant?.sizes??profile.sizes).includes(size)||!REGIONS[region]||(variant?.region??profile.region)&&region!==(variant?.region??profile.region))fail();
   const p={origin:profile.origin,variant:variant?.name,size,region,abilities:{...abilities},boosts:Object.fromEntries(ABILITIES.map(k=>[k,k===plusTwo?2:k===plusOne?1:0])),movement:{...profile.movement,...variant?.movement},senses:{...profile.senses,...variant?.senses},skills:{...profile.skills,...variant?.skills},languages:[...array(profile.languages),...array(variant?.languages)],customProficiencies:[...array(variant?.customProficiencies)],resistance:[...array(profile.resistance),...array(variant?.resistance)],immunity:array(variant?.immunity),conditionImmunity:array(variant?.conditionImmunity),heritagePoints:profile.heritagePoints,regionPoints:profile.regionPoints,ac:variant?.ac,hpPerLevel:profile.hpPerLevel,acBonus:variant?.acBonus,selectedOptions:[],notes:[profile.notes,variant?.notes].filter(Boolean),variantUuid:variant?.uuid};
-  if(profile.origin!=='Runeborn'&&profile.origin!=='Chireans') {
+  if(profile.origin!=='Runeborn'&&profile.origin!=='Chireans'&&!REGIONAL_RULES[region]) {
     if(!REGIONS[region].includes(regionLanguage))fail();p.languages.push(regionLanguage);
   }
+  if(profile.origin!=='Runeborn')applyRegionalChoices(p,selection.regional);
   function choice(c,value) {
     if((value===undefined||value==='')&&c.optional)return;
-    if(c.type==='skill') {if(!(c.options??SKILLS).includes(value))fail();p.skills[value]=c.expertiseIfKnown&&Number(knownSkills[value])>=1?2:1;}
+    if(c.type==='skill') {if(!(c.options??SKILLS).includes(value))fail();p.skills[value]=c.expertiseIfKnown&&(Number(knownSkills[value])>=1||p.skills[value]>=1)?2:Math.max(p.skills[value]??0,1);}
     else if(c.type==='ability') {if(!c.options.includes(value))fail();p.castingAbility=value;}
     else if(c.type==='damage') {if(!c.options.includes(value))fail();p.resistance.push(value);}
     else if(c.type==='option') {const o=c.options.find(o=>o.id===value);if(!o)fail();p.selectedOptions.push(o);}
@@ -64,6 +66,7 @@ export function characterPlan(profile,selection,{knownSkills={},knownCrafts=[]}=
   p.generation=generation;
   p.elementalDefense=variant?.elementalDefense;p.initiativeAdvantage=variant?.initiativeAdvantage;p.strengthReduction=variant?.strengthReduction;
   if(profile.origin==='Runeborn')runebornPlan(profile,selection,p,choice,knownSkills,knownCrafts);
+  if(profile.origin==='Runeborn'&&p.selectedOptions.some(o=>o.name==='Native'))applyRegionalChoices(p,selection.regional,{native:true});
   for(const k of ABILITIES){p.abilities[k]+=p.boosts[k];if(p.abilities[k]>30)fail();}
   p.languages=[...new Set(p.languages)];return p;
 }

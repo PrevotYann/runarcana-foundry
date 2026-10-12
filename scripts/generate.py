@@ -303,6 +303,10 @@ def sections(page):
         if s['kind'] not in routing:continue
         pack,typ=routing[s['kind']]
         doc=item(s['name'],typ,s['html']);doc['flags']=provenance(page,s['id']);doc['flags']['runarcana'].update(category=s['kind'],manualEffects=True,requiresReview=True)
+        if s['kind']=='heritage':
+            from character_options import heritage_metadata
+            metadata=heritage_metadata(page,s)
+            if metadata:doc['flags']['runarcana']['heritageRules']=metadata
         add(pack,doc,s['id'],page,folder(pack,page['id'],page['title']))
 def rolltables(page):
     for t in page['tables']:
@@ -390,6 +394,9 @@ def main():
         generate_equipment(page,[e for e in corpus['entries'] if e.get('page')==page['id'] and e.get('kind')=='table-entry'],(add,item,activity,damage_part,folder,provenance))
     index={'id':'runarcana:start','url':'https://wiki.runarcana.org/en/','part':0,'title':'Runarcana — Start Here','html':'<p>Runarcana for dnd5e 6.0.6 / Foundry V14. This build has partial mechanical coverage and static validation only.</p><p>Use the Runarcana workbench to browse packs, preview imports and manage marked actors. Read the included coverage report before play.</p>'+''.join(f'<h2>{html.escape(label)}</h2><ul>'+''.join(f'<li>@UUID[{u}]{{{html.escape(next(p["title"] for p in corpus["pages"] if p["url"]==url))}}}</li>' for url,u in PAGE_UUIDS.items() if next(p['part'] for p in corpus['pages'] if p['url']==url)==part)+'</ul>' for part,label in GROUPS.items() if part!=90),'sha256':None}
     add('start',{'name':index['title'],'pages':[{'_id':uid('runarcana:start#overview'),'name':'Welcome','type':'text','text':{'content':index['html'],'format':1},'sort':100000}]},'runarcana:start',index)
+    if content:
+        from character_options import generate as generate_character_options
+        generate_character_options(corpus['pages'],DOCUMENTS,ROOT)
     rewrite_links()
     target=ROOT/'packs-src'/('local' if args.local else 'release')
     # Only generator-owned JSON files are replaced; other workspace files are preserved.

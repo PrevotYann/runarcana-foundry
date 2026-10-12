@@ -1,6 +1,7 @@
 import {resourceValue,validateChoices,creatureStatistics,scaleDice,manaCost} from './rules.mjs';
 import {characterPlan,originEffects,originHeritageBudget,ABILITIES} from './character.mjs';
 import {naturalWeapon} from './origin-weapons.mjs';
+import {heritageEligibility,heritageEffects} from './heritage.mjs';
 
 const queues=new Map();
 export async function serialized(key,operation) {
@@ -18,7 +19,7 @@ export function assertGM() {
 }
 export function createApi() {
   return Object.freeze({
-    version:game.modules?.get('runarcana')?.version??'0.6.0', manaCost,scaleDice,creatureStatistics,
+    version:game.modules?.get('runarcana')?.version??'0.7.0', manaCost,scaleDice,creatureStatistics,
     async enableActor(actor) {
       assertGM();
       if(!game.settings.get('runarcana','enabled'))throw new Error('RUNARCANA.Error.WorldDisabled');
@@ -99,6 +100,44 @@ export function createApi() {
     async setOriginContext(actor,{underwater}) {
       assertGM();assertOwner(actor);if(typeof underwater!=='boolean'||!actor.getFlag('runarcana','originSelection'))throw new Error('RUNARCANA.Error.Choices');
       return serialized(actor.uuid,()=>actor.update({'flags.runarcana.originContext':{underwater}}));
+    },
+    async finishCharacter(actor) {
+      assertGM();assertOwner(actor);
+      if(!actor.getFlag('runarcana','originSelection')||!actor.items.some(i=>i.type==='class'))throw new Error('RUNARCANA.Error.Choices');
+      await serialized(actor.uuid,()=>actor.setFlag('runarcana','creationComplete',true));
+    },
+    async previewHeritages(actor,plan) {
+      assertOwner(actor);const pool=plan.pool??'origin';if(!['origin','region'].includes(pool)||!Array.isArray(plan.choices))throw new Error('RUNARCANA.Error.Choices');
+      const origin=actor.getFlag('runarcana','originSelection')?.plan;if(!origin)throw new Error('RUNARCANA.Error.ExistingOrigin');
+      const previous=actor.getFlag('runarcana','choices')?.choices??[],normalizedPrevious=[];
+      for(const row of previous){const source=row.uuid?await fromUuid(row.uuid):null;normalizedPrevious.push({...row,sourceId:source?.getFlag('runarcana','canonicalId')??row.sourceId??row.uuid,cost:source?.getFlag('runarcana','heritageRules')?.cost??row.cost});}
+      const budget=originHeritageBudget(origin,actor.system.details.level,pool),counts=new Map();
+      for(const row of normalizedPrevious)counts.set(row.sourceId,(counts.get(row.sourceId)??0)+1);
+      const itemCounts=new Map();for(const item of actor.items){const id=item.getFlag?.('runarcana','canonicalId')??item.flags?.runarcana?.canonicalId;if(id)itemCounts.set(id,(itemCounts.get(id)??0)+1);}for(const [id,n]of itemCounts)counts.set(id,Math.max(counts.get(id)??0,n));
+      const context={...origin,level:actor.system.details.level,initial:!!actor.getFlag('runarcana','creationDraft')&&!actor.getFlag('runarcana','creationComplete')&&actor.system.details.level<=1,classes:actor.items.filter(i=>i.type==='class').map(i=>i.system?.identifier??i.name),abilities:Object.fromEntries(Object.entries(actor.system.abilities).map(([k,v])=>[k,v.value])),pool,existingNames:actor.items.map(i=>i.getFlag?.('runarcana','heritageRules')?.name??i.getFlag?.('runarcana','canonicalId')?.split('#')[1]??i.name)};
+      const choices=[],errors=[],manual=[];
+      for(const row of plan.choices){
+        const source=await fromUuid(row.uuid),rules=source?.getFlag('runarcana','heritageRules');
+        const sourceId=source?.getFlag('runarcana','canonicalId');if(source?.type!=='feat'||rules?.schema!==1||!sourceId)throw new Error('RUNARCANA.Error.Source');
+        const count=counts.get(sourceId)??0,result=heritageEligibility(rules,{...context,count});counts.set(sourceId,count+1);context.existingNames.push(rules.name);
+        errors.push(...result.errors);manual.push(...result.manual.map(text=>source.name+': '+text));
+        choices.push({id:sourceId+'@pick-'+(count+1),sourceId,uuid:row.uuid,cost:rules.cost,pool,name:source.name});
+      }
+      const spent=[...normalizedPrevious.filter(c=>(c.pool??'origin')===pool),...choices].reduce((n,c)=>n+c.cost,0);
+      if(!Number.isFinite(spent))throw new Error('RUNARCANA.Error.Cost');if(spent>budget)errors.push('RUNARCANA.Error.Budget');
+      return {valid:!errors.length,errors:[...new Set(errors)],manual,budget,spent,remaining:budget-spent,pool,choices,previousChoices:normalizedPrevious};
+    },
+    async applyHeritages(actor,plan,{overrideReason}={}) {
+      assertGM();assertOwner(actor);return serialized(actor.uuid,async()=>{
+        const result=await this.previewHeritages(actor,plan);
+        if(!result.valid&&!overrideReason?.trim())throw new Error(result.errors[0]);
+        const data=[];for(const choice of result.choices){const source=await fromUuid(choice.uuid),d=source.toObject();delete d._id;delete d._key;delete d.folder;d.flags.runarcana.heritageChoice=choice.id;d.effects=[...(d.effects??[]),...heritageEffects(source.getFlag('runarcana','heritageRules'),{skills:Object.fromEntries(Object.entries(actor.system.skills??{}).map(([k,v])=>[k,v.value]))})];data.push(d);}
+        const created=await actor.createEmbeddedDocuments('Item',data);
+        const override=overrideReason?{reason:overrideReason,user:game.user.id,time:game.time.worldTime,errors:result.errors,manual:result.manual}:null;
+        try {if(created.length!==data.length)throw new Error('RUNARCANA.Error.Source');await actor.update({'flags.runarcana.choices':{pool:result.pool,budget:result.budget,choices:[...result.previousChoices,...result.choices.map(c=>({...c,override}))]},'flags.runarcana.choiceOverride':override});}
+        catch(error){await actor.deleteEmbeddedDocuments('Item',created.map(i=>i.id));throw error;}
+        return {...result,created:created.length};
+      });
     },
     async spendResource(actor,id,amount,{operationId}={}) {
       assertGM();assertOwner(actor);checkResourceId(id);

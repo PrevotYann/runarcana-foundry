@@ -3,6 +3,7 @@ import {registerBabele} from './translation.mjs';
 import {installDnd5eAdapter} from './adapters/dnd5e-6.mjs';
 import {previewImport,applyImport} from './importer.mjs';
 import {Workbench} from './workbench.mjs';
+import {EQUIPMENT_WEAPONS} from './regional.mjs';
 
 Hooks.on('babele.init',registerBabele);
 Hooks.once('init',()=>{
@@ -11,6 +12,7 @@ Hooks.once('init',()=>{
     CONFIG.DND5E.skills.tec??={label:'RUNARCANA.SkillTechnology',ability:'int',fullKey:'technology'};
     CONFIG.DND5E.tools.runarcanaCraft??={ability:'int'};
     CONFIG.DND5E.toolProficiencies.runarcanaCraft??='RUNARCANA.Craft';
+    for(const weapon of EQUIPMENT_WEAPONS)if(weapon.uuid)CONFIG.DND5E.weaponIds[weapon.id]??=weapon.uuid;
   }
   game.settings.registerMenu('runarcana','workbench',{name:'RUNARCANA.Workbench',label:'RUNARCANA.OpenWorkbench',hint:'RUNARCANA.Settings.WorkbenchHint',icon:'fas fa-book-open',type:Workbench,restricted:false});
 });

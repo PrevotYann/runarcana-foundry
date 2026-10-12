@@ -4,13 +4,15 @@ import fs from 'node:fs/promises';
 import {characterPlan,originEffects,ABILITIES,REGIONS,validateAbilityGeneration} from '../src/character.mjs';
 import {createApi,originContext} from '../src/api.mjs';
 import {naturalWeapon} from '../src/origin-weapons.mjs';
+import {REGIONAL_RULES,EQUIPMENT_WEAPONS} from '../src/regional.mjs';
 
 const docs=(await Promise.all((await fs.readdir('packs-src/release/origins')).map(async f=>JSON.parse(await fs.readFile('packs-src/release/origins/'+f,'utf8'))))).filter(d=>d.type==='race');
 const profiles=Object.fromEntries(docs.map(d=>[d.name,d.flags.runarcana.creation]));
 function selection(origin,variant) {
   const p=profiles[origin],v=p.variants.find(v=>v.name===variant),region=v?.region??p.region??'Ionia';
   const choices={};for(const c of [...p.choices,...(v?.choices??[])])choices[c.id]=c.type==='option'?c.optional?'':c.options[0].id:c.type==='languages'?['Demacian']:c.type==='craft'?'Smithing':c.type==='proficiency'?'skill:ath':c.options[0];
-  return {abilities:Object.fromEntries(ABILITIES.map(k=>[k,10])),plusTwo:'str',plusOne:'con',variant:v?.id??'',size:(v?.sizes??p.sizes)[0],region,regionLanguage:REGIONS[region][0],choices,armorMode:'light',runebornPower:'controlled',traits:[]};
+  const rules=REGIONAL_RULES[region],regional=rules?{skill:rules.skills[0],language:rules.languages.choices[0],activities:Object.fromEntries(rules.groups.map(g=>[g.id,Array.from({length:g.count},(_,i)=>{const weapons=EQUIPMENT_WEAPONS.filter(w=>g.weapons.includes(w.id)||g.categories.includes(w.category));return weapons[i]?{kind:'weapon',id:weapons[i].id}:{kind:'craft',id:g.crafts[i],specialty:'Smithing'};})]))}:undefined;
+  return {abilities:Object.fromEntries(ABILITIES.map(k=>[k,10])),plusTwo:'str',plusOne:'con',variant:v?.id??'',size:(v?.sizes??p.sizes)[0],region,regionLanguage:REGIONS[region][0],regional,choices,armorMode:'light',runebornPower:'controlled',traits:[]};
 }
 
 test('all ten origins and all 29 named lineages have valid, source-backed creation choices',()=>{
@@ -19,6 +21,23 @@ test('all ten origins and all 29 named lineages have valid, source-backed creati
     const p=characterPlan(profiles[d.name],selection(d.name,variant?.name));assert.equal(p.abilities.str,12);assert.equal(p.abilities.con,11);
     for(const effect of originEffects(p)) {assert.equal(effect.type,'base');assert.ok(effect.system.changes.every(c=>c._id.length===16&&c.type&&c.phase&&typeof c.value==='string'));assert.equal(effect.changes,undefined);}
   }
+});
+test('thirteen published regional profiles grant their listed skill and training choices',()=>{
+  assert.equal(Object.keys(REGIONAL_RULES).length,13);
+  for(const [region,rules]of Object.entries(REGIONAL_RULES)){
+    const s=selection('Human'),weapons=new Set();s.region=region;s.regionLanguage=REGIONS[region][0];
+    s.regional={skill:rules.skills[0],language:rules.languages.choices[0],activities:Object.fromEntries(rules.groups.map(g=>[g.id,Array.from({length:g.count},(_,i)=>{const candidates=EQUIPMENT_WEAPONS.filter(w=>!weapons.has(w.id)&&(g.weapons.includes(w.id)||g.categories.includes(w.category)));if(candidates.length){weapons.add(candidates[0].id);return {kind:'weapon',id:candidates[0].id};}return {kind:'craft',id:g.crafts[i],specialty:'Smithing'};})]))};
+    const p=characterPlan(profiles.Human,s);assert.ok(p.skills[rules.skills[0]]>=1);assert.ok(p.regionalRules.sourceHash);
+    if(region==='Noxus')assert.deepEqual(p.languages,['Noxian','Minotauric']);
+    if(region==='Bandle City'){assert.equal(p.weapons.length,2);assert.ok(p.customProficiencies.includes('Artisan'));}
+  }
+});
+test('regional constraints reject missing choices and invalid weapons; Runeborn Native grants no language',()=>{
+  const s=selection('Human');assert.throws(()=>characterPlan(profiles.Human,{...s,regional:undefined}),/Choices/);
+  const bad=structuredClone(s);bad.regional.activities.activities[0]={kind:'weapon',id:'musket'};assert.throws(()=>characterPlan(profiles.Human,bad),/Choices/);
+  const r=selection('Runeborn'),native=profiles.Runeborn.runeborn.find(t=>t.name==='Native');
+  const p=characterPlan(profiles.Runeborn,{...r,traits:[{id:native.id}]});assert.ok(p.regionalRules);assert.deepEqual(p.languages,[]);
+  assert.equal(characterPlan(profiles.Runeborn,r).regionalRules,undefined);
 });
 test('origin validation rejects duplicate boosts, foreign variants, missing mandatory choices and overflow',()=>{
   const p=profiles.Human,s=selection('Human');

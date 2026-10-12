@@ -138078,20 +138078,27 @@
       "url": "https://wiki.runarcana.org/en/magic/spells/animate-dead/",
       "anchor": null,
       "language": "en",
-      "sha256": null,
-      "collectedAt": null,
+      "sha256": "539db011b50df48d745ed747b378a74f636628863febead6e821212ff1c937ff",
+      "collectedAt": "2026-10-12T14:04:10.618731+00:00",
       "rulesVersion": null,
-      "wikiBuild": null,
-      "collectionStatus": "pending",
-      "documents": [],
-      "uuids": [],
+      "wikiBuild": "0.157",
+      "collectionStatus": "collected",
+      "documents": [
+        "Compendium.runarcana.rules.JournalEntry.e68c9655bd87016b",
+        "Compendium.runarcana.spells.Item.f594f181b94dc4cb"
+      ],
+      "uuids": [
+        "Compendium.runarcana.rules.JournalEntry.e68c9655bd87016b",
+        "Compendium.runarcana.spells.Item.f594f181b94dc4cb"
+      ],
       "test": "tests/corpus.test.mjs",
       "status": "partial",
-      "textual": "missing",
+      "textual": "complete",
       "mechanical": "manual",
       "redistribution": "permission-confirmed-by-maintainer",
-      "limit": "Full source not yet collected.",
-      "referenceUuid": null
+      "kind": "spell",
+      "limit": "Full source text included under the recorded permission; mechanical coverage remains separate.",
+      "referenceUuid": "Compendium.runarcana.rules.JournalEntry.e68c9655bd87016b"
     },
     {
       "id": "/en/magic/spells/animate-objects/",
@@ -138188,20 +138195,27 @@
       "url": "https://wiki.runarcana.org/en/magic/spells/arcane-armor/",
       "anchor": null,
       "language": "en",
-      "sha256": null,
-      "collectedAt": null,
+      "sha256": "d5615873d8037dc6293fe65bb1e8200b2e76f6466b801c818a318a730f53df8a",
+      "collectedAt": "2026-10-12T14:04:23.268903+00:00",
       "rulesVersion": null,
-      "wikiBuild": null,
-      "collectionStatus": "pending",
-      "documents": [],
-      "uuids": [],
+      "wikiBuild": "0.157",
+      "collectionStatus": "collected",
+      "documents": [
+        "Compendium.runarcana.rules.JournalEntry.b44e53c8831940c5",
+        "Compendium.runarcana.spells.Item.318c4fdffd59abfd"
+      ],
+      "uuids": [
+        "Compendium.runarcana.rules.JournalEntry.b44e53c8831940c5",
+        "Compendium.runarcana.spells.Item.318c4fdffd59abfd"
+      ],
       "test": "tests/corpus.test.mjs",
       "status": "partial",
-      "textual": "missing",
+      "textual": "complete",
       "mechanical": "manual",
       "redistribution": "permission-confirmed-by-maintainer",
-      "limit": "Full source not yet collected.",
-      "referenceUuid": null
+      "kind": "spell",
+      "limit": "Full source text included under the recorded permission; mechanical coverage remains separate.",
+      "referenceUuid": "Compendium.runarcana.rules.JournalEntry.b44e53c8831940c5"
     },
     {
       "id": "/en/magic/spells/arcane-eye/",
@@ -138348,20 +138362,27 @@
       "url": "https://wiki.runarcana.org/en/magic/spells/arcane-sword/",
       "anchor": null,
       "language": "en",
-      "sha256": null,
-      "collectedAt": null,
+      "sha256": "f7b519dbbfeb1919187b76a6ee11dfb281a92f3a52704b9d6c22512b5419b624",
+      "collectedAt": "2026-10-12T14:04:35.993236+00:00",
       "rulesVersion": null,
-      "wikiBuild": null,
-      "collectionStatus": "pending",
-      "documents": [],
-      "uuids": [],
+      "wikiBuild": "0.157",
+      "collectionStatus": "collected",
+      "documents": [
+        "Compendium.runarcana.rules.JournalEntry.b22c72eb9cd9fa81",
+        "Compendium.runarcana.spells.Item.ef12d7da63a1208b"
+      ],
+      "uuids": [
+        "Compendium.runarcana.rules.JournalEntry.b22c72eb9cd9fa81",
+        "Compendium.runarcana.spells.Item.ef12d7da63a1208b"
+      ],
       "test": "tests/corpus.test.mjs",
       "status": "partial",
-      "textual": "missing",
+      "textual": "complete",
       "mechanical": "manual",
       "redistribution": "permission-confirmed-by-maintainer",
-      "limit": "Full source not yet collected.",
-      "referenceUuid": null
+      "kind": "spell",
+      "limit": "Full source text included under the recorded permission; mechanical coverage remains separate.",
+      "referenceUuid": "Compendium.runarcana.rules.JournalEntry.b22c72eb9cd9fa81"
     },
     {
       "id": "/en/magic/spells/arcane-touch/",
@@ -138370,20 +138391,27 @@
       "url": "https://wiki.runarcana.org/en/magic/spells/arcane-touch/",
       "anchor": null,
       "language": "en",
-      "sha256": null,
-      "collectedAt": null,
+      "sha256": "029b76f7c2319e89ed8cf53a9ddca0fd1d639f679d9997ae94e00bb13136bc0b",
+      "collectedAt": "2026-10-12T14:04:48.665741+00:00",
       "rulesVersion": null,
-      "wikiBuild": null,
-      "collectionStatus": "pending",
-      "documents": [],
-      "uuids": [],
+      "wikiBuild": "0.157",
+      "collectionStatus": "collected",
+      "documents": [
+        "Compendium.runarcana.rules.JournalEntry.3ee9210429751056",
+        "Compendium.runarcana.spells.Item.c122f0699a532973"
+      ],
+      "uuids": [
+        "Compendium.runarcana.rules.JournalEntry.3ee9210429751056",
+        "Compendium.runarcana.spells.Item.c122f0699a532973"
+      ],
       "test": "tests/corpus.test.mjs",
       "status": "partial",
-      "textual": "missing",
+      "textual": "complete",
       "mechanical": "manual",
       "redistribution": "permission-confirmed-by-maintainer",
-      "limit": "Full source not yet collected.",
-      "referenceUuid": null
+      "kind": "spell",
+      "limit": "Full source text included under the recorded permission; mechanical coverage remains separate.",
+      "referenceUuid": "Compendium.runarcana.rules.JournalEntry.3ee9210429751056"
     },
     {
       "id": "/en/magic/spells/arcane-vessel/",
@@ -138480,20 +138508,27 @@
       "url": "https://wiki.runarcana.org/en/magic/spells/arctic-crown/",
       "anchor": null,
       "language": "en",
-      "sha256": null,
-      "collectedAt": null,
+      "sha256": "524a301f65fe1fba7e8121a39e1cd064f813a389d7758ca8ad96a9b599fbf518",
+      "collectedAt": "2026-10-12T14:05:01.338495+00:00",
       "rulesVersion": null,
-      "wikiBuild": null,
-      "collectionStatus": "pending",
-      "documents": [],
-      "uuids": [],
+      "wikiBuild": "0.157",
+      "collectionStatus": "collected",
+      "documents": [
+        "Compendium.runarcana.rules.JournalEntry.7729085ff581a053",
+        "Compendium.runarcana.spells.Item.e145169b00e31e96"
+      ],
+      "uuids": [
+        "Compendium.runarcana.rules.JournalEntry.7729085ff581a053",
+        "Compendium.runarcana.spells.Item.e145169b00e31e96"
+      ],
       "test": "tests/corpus.test.mjs",
       "status": "partial",
-      "textual": "missing",
+      "textual": "complete",
       "mechanical": "manual",
       "redistribution": "permission-confirmed-by-maintainer",
-      "limit": "Full source not yet collected.",
-      "referenceUuid": null
+      "kind": "spell",
+      "limit": "Full source text included under the recorded permission; mechanical coverage remains separate.",
+      "referenceUuid": "Compendium.runarcana.rules.JournalEntry.7729085ff581a053"
     },
     {
       "id": "/en/magic/spells/arctic-light-jet/",
@@ -138546,20 +138581,27 @@
       "url": "https://wiki.runarcana.org/en/magic/spells/arctic-pulse/",
       "anchor": null,
       "language": "en",
-      "sha256": null,
-      "collectedAt": null,
+      "sha256": "1d9902eaad7d43fffc906126aabed5b6f132a293d12b9b0c11863a6f232c7c9c",
+      "collectedAt": "2026-10-12T14:05:13.993793+00:00",
       "rulesVersion": null,
-      "wikiBuild": null,
-      "collectionStatus": "pending",
-      "documents": [],
-      "uuids": [],
+      "wikiBuild": "0.157",
+      "collectionStatus": "collected",
+      "documents": [
+        "Compendium.runarcana.rules.JournalEntry.b5f818889a308e59",
+        "Compendium.runarcana.spells.Item.ac2a8689332082e7"
+      ],
+      "uuids": [
+        "Compendium.runarcana.rules.JournalEntry.b5f818889a308e59",
+        "Compendium.runarcana.spells.Item.ac2a8689332082e7"
+      ],
       "test": "tests/corpus.test.mjs",
       "status": "partial",
-      "textual": "missing",
+      "textual": "complete",
       "mechanical": "manual",
       "redistribution": "permission-confirmed-by-maintainer",
-      "limit": "Full source not yet collected.",
-      "referenceUuid": null
+      "kind": "spell",
+      "limit": "Full source text included under the recorded permission; mechanical coverage remains separate.",
+      "referenceUuid": "Compendium.runarcana.rules.JournalEntry.b5f818889a308e59"
     },
     {
       "id": "/en/magic/spells/arctic-skin/",
@@ -138757,20 +138799,27 @@
       "url": "https://wiki.runarcana.org/en/magic/spells/banshee-wail/",
       "anchor": null,
       "language": "en",
-      "sha256": null,
-      "collectedAt": null,
+      "sha256": "7ebb48c7677fd72672633cb2f85cd9b3b869c379edc1ebc7fb66e88b762fbcb6",
+      "collectedAt": "2026-10-12T14:05:26.696828+00:00",
       "rulesVersion": null,
-      "wikiBuild": null,
-      "collectionStatus": "pending",
-      "documents": [],
-      "uuids": [],
+      "wikiBuild": "0.157",
+      "collectionStatus": "collected",
+      "documents": [
+        "Compendium.runarcana.rules.JournalEntry.afde335176b6985a",
+        "Compendium.runarcana.spells.Item.fda238775444cd6c"
+      ],
+      "uuids": [
+        "Compendium.runarcana.rules.JournalEntry.afde335176b6985a",
+        "Compendium.runarcana.spells.Item.fda238775444cd6c"
+      ],
       "test": "tests/corpus.test.mjs",
       "status": "partial",
-      "textual": "missing",
+      "textual": "complete",
       "mechanical": "manual",
       "redistribution": "permission-confirmed-by-maintainer",
-      "limit": "Full source not yet collected.",
-      "referenceUuid": null
+      "kind": "spell",
+      "limit": "Full source text included under the recorded permission; mechanical coverage remains separate.",
+      "referenceUuid": "Compendium.runarcana.rules.JournalEntry.afde335176b6985a"
     },
     {
       "id": "/en/magic/spells/barkskin/",
@@ -138917,20 +138966,27 @@
       "url": "https://wiki.runarcana.org/en/magic/spells/bestow-curse/",
       "anchor": null,
       "language": "en",
-      "sha256": null,
-      "collectedAt": null,
+      "sha256": "5bd76129707db8011369cc5c00ad5ad81e43316fa40043b3832d840ff5e3dc6d",
+      "collectedAt": "2026-10-12T14:05:39.374044+00:00",
       "rulesVersion": null,
-      "wikiBuild": null,
-      "collectionStatus": "pending",
-      "documents": [],
-      "uuids": [],
+      "wikiBuild": "0.157",
+      "collectionStatus": "collected",
+      "documents": [
+        "Compendium.runarcana.rules.JournalEntry.36ea43910f0add77",
+        "Compendium.runarcana.spells.Item.e306844c99127fc8"
+      ],
+      "uuids": [
+        "Compendium.runarcana.rules.JournalEntry.36ea43910f0add77",
+        "Compendium.runarcana.spells.Item.e306844c99127fc8"
+      ],
       "test": "tests/corpus.test.mjs",
       "status": "partial",
-      "textual": "missing",
+      "textual": "complete",
       "mechanical": "manual",
       "redistribution": "permission-confirmed-by-maintainer",
-      "limit": "Full source not yet collected.",
-      "referenceUuid": null
+      "kind": "spell",
+      "limit": "Full source text included under the recorded permission; mechanical coverage remains separate.",
+      "referenceUuid": "Compendium.runarcana.rules.JournalEntry.36ea43910f0add77"
     },
     {
       "id": "/en/magic/spells/blade-barrier/",
@@ -139274,20 +139330,27 @@
       "url": "https://wiki.runarcana.org/en/magic/spells/blood-weapon/",
       "anchor": null,
       "language": "en",
-      "sha256": null,
-      "collectedAt": null,
+      "sha256": "4b7696397c1b5da9c3d339b8457b99f904e012001d9951ebab7d69f68b08ac1a",
+      "collectedAt": "2026-10-12T14:05:52.041919+00:00",
       "rulesVersion": null,
-      "wikiBuild": null,
-      "collectionStatus": "pending",
-      "documents": [],
-      "uuids": [],
+      "wikiBuild": "0.157",
+      "collectionStatus": "collected",
+      "documents": [
+        "Compendium.runarcana.rules.JournalEntry.b74ae97e79d500f6",
+        "Compendium.runarcana.spells.Item.a2c2de5b622235ac"
+      ],
+      "uuids": [
+        "Compendium.runarcana.rules.JournalEntry.b74ae97e79d500f6",
+        "Compendium.runarcana.spells.Item.a2c2de5b622235ac"
+      ],
       "test": "tests/corpus.test.mjs",
       "status": "partial",
-      "textual": "missing",
+      "textual": "complete",
       "mechanical": "manual",
       "redistribution": "permission-confirmed-by-maintainer",
-      "limit": "Full source not yet collected.",
-      "referenceUuid": null
+      "kind": "spell",
+      "limit": "Full source text included under the recorded permission; mechanical coverage remains separate.",
+      "referenceUuid": "Compendium.runarcana.rules.JournalEntry.b74ae97e79d500f6"
     },
     {
       "id": "/en/magic/spells/blooming-burst/",
@@ -139369,20 +139432,27 @@
       "url": "https://wiki.runarcana.org/en/magic/spells/burning-dust/",
       "anchor": null,
       "language": "en",
-      "sha256": null,
-      "collectedAt": null,
+      "sha256": "64627c4fd44f205d740a6be2a005f49ca041b75204d18babcf5b8b7af31e4476",
+      "collectedAt": "2026-10-12T14:06:04.760883+00:00",
       "rulesVersion": null,
-      "wikiBuild": null,
-      "collectionStatus": "pending",
-      "documents": [],
-      "uuids": [],
+      "wikiBuild": "0.157",
+      "collectionStatus": "collected",
+      "documents": [
+        "Compendium.runarcana.rules.JournalEntry.160439e445396d3e",
+        "Compendium.runarcana.spells.Item.7d3e8cb463b20f4c"
+      ],
+      "uuids": [
+        "Compendium.runarcana.rules.JournalEntry.160439e445396d3e",
+        "Compendium.runarcana.spells.Item.7d3e8cb463b20f4c"
+      ],
       "test": "tests/corpus.test.mjs",
       "status": "partial",
-      "textual": "missing",
+      "textual": "complete",
       "mechanical": "manual",
       "redistribution": "permission-confirmed-by-maintainer",
-      "limit": "Full source not yet collected.",
-      "referenceUuid": null
+      "kind": "spell",
+      "limit": "Full source text included under the recorded permission; mechanical coverage remains separate.",
+      "referenceUuid": "Compendium.runarcana.rules.JournalEntry.160439e445396d3e"
     },
     {
       "id": "/en/magic/spells/burning-hands/",
@@ -139544,20 +139614,27 @@
       "url": "https://wiki.runarcana.org/en/magic/spells/caustic-wave/",
       "anchor": null,
       "language": "en",
-      "sha256": null,
-      "collectedAt": null,
+      "sha256": "fa305a8a50060f2c99dfd2dce22b4fc3cadba3ec1172e917ee199e865abb175e",
+      "collectedAt": "2026-10-12T14:06:17.427094+00:00",
       "rulesVersion": null,
-      "wikiBuild": null,
-      "collectionStatus": "pending",
-      "documents": [],
-      "uuids": [],
+      "wikiBuild": "0.157",
+      "collectionStatus": "collected",
+      "documents": [
+        "Compendium.runarcana.rules.JournalEntry.994a54674d99ecfc",
+        "Compendium.runarcana.spells.Item.9c52ff162d375585"
+      ],
+      "uuids": [
+        "Compendium.runarcana.rules.JournalEntry.994a54674d99ecfc",
+        "Compendium.runarcana.spells.Item.9c52ff162d375585"
+      ],
       "test": "tests/corpus.test.mjs",
       "status": "partial",
-      "textual": "missing",
+      "textual": "complete",
       "mechanical": "manual",
       "redistribution": "permission-confirmed-by-maintainer",
-      "limit": "Full source not yet collected.",
-      "referenceUuid": null
+      "kind": "spell",
+      "limit": "Full source text included under the recorded permission; mechanical coverage remains separate.",
+      "referenceUuid": "Compendium.runarcana.rules.JournalEntry.994a54674d99ecfc"
     },
     {
       "id": "/en/magic/spells/cauterize/",
@@ -139617,20 +139694,27 @@
       "url": "https://wiki.runarcana.org/en/magic/spells/charm-person/",
       "anchor": null,
       "language": "en",
-      "sha256": null,
-      "collectedAt": null,
+      "sha256": "584c79d50de75a19b57c6688ca07567b54051cc45df8ede3bf1a8901e836f754",
+      "collectedAt": "2026-10-12T14:06:30.088658+00:00",
       "rulesVersion": null,
-      "wikiBuild": null,
-      "collectionStatus": "pending",
-      "documents": [],
-      "uuids": [],
+      "wikiBuild": "0.157",
+      "collectionStatus": "collected",
+      "documents": [
+        "Compendium.runarcana.rules.JournalEntry.ddec749158c5f1c9",
+        "Compendium.runarcana.spells.Item.1f155c5a25a7ec54"
+      ],
+      "uuids": [
+        "Compendium.runarcana.rules.JournalEntry.ddec749158c5f1c9",
+        "Compendium.runarcana.spells.Item.1f155c5a25a7ec54"
+      ],
       "test": "tests/corpus.test.mjs",
       "status": "partial",
-      "textual": "missing",
+      "textual": "complete",
       "mechanical": "manual",
       "redistribution": "permission-confirmed-by-maintainer",
-      "limit": "Full source not yet collected.",
-      "referenceUuid": null
+      "kind": "spell",
+      "limit": "Full source text included under the recorded permission; mechanical coverage remains separate.",
+      "referenceUuid": "Compendium.runarcana.rules.JournalEntry.ddec749158c5f1c9"
     },
     {
       "id": "/en/magic/spells/chill-touch/",
@@ -139756,20 +139840,27 @@
       "url": "https://wiki.runarcana.org/en/magic/spells/clairvoyance/",
       "anchor": null,
       "language": "en",
-      "sha256": null,
-      "collectedAt": null,
+      "sha256": "eeddd10e7765c12794d1517246256ef530b57b26b11988dc5b7f98ddfda49eea",
+      "collectedAt": "2026-10-12T14:06:42.750383+00:00",
       "rulesVersion": null,
-      "wikiBuild": null,
-      "collectionStatus": "pending",
-      "documents": [],
-      "uuids": [],
+      "wikiBuild": "0.157",
+      "collectionStatus": "collected",
+      "documents": [
+        "Compendium.runarcana.rules.JournalEntry.8172d154cab9e7b0",
+        "Compendium.runarcana.spells.Item.9ba8cc71908b2e7b"
+      ],
+      "uuids": [
+        "Compendium.runarcana.rules.JournalEntry.8172d154cab9e7b0",
+        "Compendium.runarcana.spells.Item.9ba8cc71908b2e7b"
+      ],
       "test": "tests/corpus.test.mjs",
       "status": "partial",
-      "textual": "missing",
+      "textual": "complete",
       "mechanical": "manual",
       "redistribution": "permission-confirmed-by-maintainer",
-      "limit": "Full source not yet collected.",
-      "referenceUuid": null
+      "kind": "spell",
+      "limit": "Full source text included under the recorded permission; mechanical coverage remains separate.",
+      "referenceUuid": "Compendium.runarcana.rules.JournalEntry.8172d154cab9e7b0"
     },
     {
       "id": "/en/magic/spells/clone/",
@@ -140011,20 +140102,27 @@
       "url": "https://wiki.runarcana.org/en/magic/spells/cone-of-cold/",
       "anchor": null,
       "language": "en",
-      "sha256": null,
-      "collectedAt": null,
+      "sha256": "e6353331bb22cfa66c001c38410e211becf168a6c0cfadf831e10d6a93e81cfb",
+      "collectedAt": "2026-10-12T14:06:55.467485+00:00",
       "rulesVersion": null,
-      "wikiBuild": null,
-      "collectionStatus": "pending",
-      "documents": [],
-      "uuids": [],
+      "wikiBuild": "0.157",
+      "collectionStatus": "collected",
+      "documents": [
+        "Compendium.runarcana.rules.JournalEntry.b412c947f0b8c48d",
+        "Compendium.runarcana.spells.Item.a46cbee196c30042"
+      ],
+      "uuids": [
+        "Compendium.runarcana.rules.JournalEntry.b412c947f0b8c48d",
+        "Compendium.runarcana.spells.Item.a46cbee196c30042"
+      ],
       "test": "tests/corpus.test.mjs",
       "status": "partial",
-      "textual": "missing",
+      "textual": "complete",
       "mechanical": "manual",
       "redistribution": "permission-confirmed-by-maintainer",
-      "limit": "Full source not yet collected.",
-      "referenceUuid": null
+      "kind": "spell",
+      "limit": "Full source text included under the recorded permission; mechanical coverage remains separate.",
+      "referenceUuid": "Compendium.runarcana.rules.JournalEntry.b412c947f0b8c48d"
     },
     {
       "id": "/en/magic/spells/conflagration/",
@@ -140304,20 +140402,27 @@
       "url": "https://wiki.runarcana.org/en/magic/spells/constriction/",
       "anchor": null,
       "language": "en",
-      "sha256": null,
-      "collectedAt": null,
+      "sha256": "87a40652efff9e11bb3f7d6005ec378226328dee3088d5ea1e501ef747bb81bf",
+      "collectedAt": "2026-10-12T14:07:08.178762+00:00",
       "rulesVersion": null,
-      "wikiBuild": null,
-      "collectionStatus": "pending",
-      "documents": [],
-      "uuids": [],
+      "wikiBuild": "0.157",
+      "collectionStatus": "collected",
+      "documents": [
+        "Compendium.runarcana.rules.JournalEntry.eadc04e2c6eeb2e5",
+        "Compendium.runarcana.spells.Item.5ee497347b1d51e2"
+      ],
+      "uuids": [
+        "Compendium.runarcana.rules.JournalEntry.eadc04e2c6eeb2e5",
+        "Compendium.runarcana.spells.Item.5ee497347b1d51e2"
+      ],
       "test": "tests/corpus.test.mjs",
       "status": "partial",
-      "textual": "missing",
+      "textual": "complete",
       "mechanical": "manual",
       "redistribution": "permission-confirmed-by-maintainer",
-      "limit": "Full source not yet collected.",
-      "referenceUuid": null
+      "kind": "spell",
+      "limit": "Full source text included under the recorded permission; mechanical coverage remains separate.",
+      "referenceUuid": "Compendium.runarcana.rules.JournalEntry.eadc04e2c6eeb2e5"
     },
     {
       "id": "/en/magic/spells/consume-water/",
@@ -140545,20 +140650,27 @@
       "url": "https://wiki.runarcana.org/en/magic/spells/counterspell/",
       "anchor": null,
       "language": "en",
-      "sha256": null,
-      "collectedAt": null,
+      "sha256": "6807703c2ee753ef3d5c41ac1670b7244ac7d7291717d8c38561cbf4142fc8a9",
+      "collectedAt": "2026-10-12T14:07:20.880875+00:00",
       "rulesVersion": null,
-      "wikiBuild": null,
-      "collectionStatus": "pending",
-      "documents": [],
-      "uuids": [],
+      "wikiBuild": "0.157",
+      "collectionStatus": "collected",
+      "documents": [
+        "Compendium.runarcana.rules.JournalEntry.d5905c5a9ee670fb",
+        "Compendium.runarcana.spells.Item.5ffc9db69182219e"
+      ],
+      "uuids": [
+        "Compendium.runarcana.rules.JournalEntry.d5905c5a9ee670fb",
+        "Compendium.runarcana.spells.Item.5ffc9db69182219e"
+      ],
       "test": "tests/corpus.test.mjs",
       "status": "partial",
-      "textual": "missing",
+      "textual": "complete",
       "mechanical": "manual",
       "redistribution": "permission-confirmed-by-maintainer",
-      "limit": "Full source not yet collected.",
-      "referenceUuid": null
+      "kind": "spell",
+      "limit": "Full source text included under the recorded permission; mechanical coverage remains separate.",
+      "referenceUuid": "Compendium.runarcana.rules.JournalEntry.d5905c5a9ee670fb"
     },
     {
       "id": "/en/magic/spells/crackling-ray/",
@@ -140938,20 +141050,27 @@
       "url": "https://wiki.runarcana.org/en/magic/spells/crystal-soul/",
       "anchor": null,
       "language": "en",
-      "sha256": null,
-      "collectedAt": null,
+      "sha256": "beaa47864c55e6838bb537b5b8c5764fee6940d3ba68e5b1aab4bae198274ad0",
+      "collectedAt": "2026-10-12T14:07:33.600003+00:00",
       "rulesVersion": null,
-      "wikiBuild": null,
-      "collectionStatus": "pending",
-      "documents": [],
-      "uuids": [],
+      "wikiBuild": "0.157",
+      "collectionStatus": "collected",
+      "documents": [
+        "Compendium.runarcana.rules.JournalEntry.b284bf5a785fa4ec",
+        "Compendium.runarcana.spells.Item.437bbda725619a9e"
+      ],
+      "uuids": [
+        "Compendium.runarcana.rules.JournalEntry.b284bf5a785fa4ec",
+        "Compendium.runarcana.spells.Item.437bbda725619a9e"
+      ],
       "test": "tests/corpus.test.mjs",
       "status": "partial",
-      "textual": "missing",
+      "textual": "complete",
       "mechanical": "manual",
       "redistribution": "permission-confirmed-by-maintainer",
-      "limit": "Full source not yet collected.",
-      "referenceUuid": null
+      "kind": "spell",
+      "limit": "Full source text included under the recorded permission; mechanical coverage remains separate.",
+      "referenceUuid": "Compendium.runarcana.rules.JournalEntry.b284bf5a785fa4ec"
     },
     {
       "id": "/en/magic/spells/cure-wounds/",
@@ -141207,20 +141326,27 @@
       "url": "https://wiki.runarcana.org/en/magic/spells/detect-magic/",
       "anchor": null,
       "language": "en",
-      "sha256": null,
-      "collectedAt": null,
+      "sha256": "367c2f7fb63205a6e805f37906542a6ee84244013898f994d9f3d893b2e4f29b",
+      "collectedAt": "2026-10-12T14:07:46.269804+00:00",
       "rulesVersion": null,
-      "wikiBuild": null,
-      "collectionStatus": "pending",
-      "documents": [],
-      "uuids": [],
+      "wikiBuild": "0.157",
+      "collectionStatus": "collected",
+      "documents": [
+        "Compendium.runarcana.rules.JournalEntry.8e830de8e4f0390d",
+        "Compendium.runarcana.spells.Item.6302f4d44d5bd600"
+      ],
+      "uuids": [
+        "Compendium.runarcana.rules.JournalEntry.8e830de8e4f0390d",
+        "Compendium.runarcana.spells.Item.6302f4d44d5bd600"
+      ],
       "test": "tests/corpus.test.mjs",
       "status": "partial",
-      "textual": "missing",
+      "textual": "complete",
       "mechanical": "manual",
       "redistribution": "permission-confirmed-by-maintainer",
-      "limit": "Full source not yet collected.",
-      "referenceUuid": null
+      "kind": "spell",
+      "limit": "Full source text included under the recorded permission; mechanical coverage remains separate.",
+      "referenceUuid": "Compendium.runarcana.rules.JournalEntry.8e830de8e4f0390d"
     },
     {
       "id": "/en/magic/spells/detect-poison-and-disease/",
@@ -141448,20 +141574,27 @@
       "url": "https://wiki.runarcana.org/en/magic/spells/disintegrate/",
       "anchor": null,
       "language": "en",
-      "sha256": null,
-      "collectedAt": null,
+      "sha256": "07a404c944107c944ead8501575c3ea17c3349fd406cfffcbc1c40bea8bd2fe6",
+      "collectedAt": "2026-10-12T14:07:58.971602+00:00",
       "rulesVersion": null,
-      "wikiBuild": null,
-      "collectionStatus": "pending",
-      "documents": [],
-      "uuids": [],
+      "wikiBuild": "0.157",
+      "collectionStatus": "collected",
+      "documents": [
+        "Compendium.runarcana.rules.JournalEntry.6ecb81b720f8219f",
+        "Compendium.runarcana.spells.Item.827691296ed45d5a"
+      ],
+      "uuids": [
+        "Compendium.runarcana.rules.JournalEntry.6ecb81b720f8219f",
+        "Compendium.runarcana.spells.Item.827691296ed45d5a"
+      ],
       "test": "tests/corpus.test.mjs",
       "status": "partial",
-      "textual": "missing",
+      "textual": "complete",
       "mechanical": "manual",
       "redistribution": "permission-confirmed-by-maintainer",
-      "limit": "Full source not yet collected.",
-      "referenceUuid": null
+      "kind": "spell",
+      "limit": "Full source text included under the recorded permission; mechanical coverage remains separate.",
+      "referenceUuid": "Compendium.runarcana.rules.JournalEntry.6ecb81b720f8219f"
     },
     {
       "id": "/en/magic/spells/disintegration-mantra/",
@@ -141492,20 +141625,27 @@
       "url": "https://wiki.runarcana.org/en/magic/spells/dispel-magic/",
       "anchor": null,
       "language": "en",
-      "sha256": null,
-      "collectedAt": null,
+      "sha256": "80c1e3eab46b933cd849bef0383dec43b344ddf78f8b1d567ab8c23d5fa9a8dd",
+      "collectedAt": "2026-10-12T14:08:11.677411+00:00",
       "rulesVersion": null,
-      "wikiBuild": null,
-      "collectionStatus": "pending",
-      "documents": [],
-      "uuids": [],
+      "wikiBuild": "0.157",
+      "collectionStatus": "collected",
+      "documents": [
+        "Compendium.runarcana.rules.JournalEntry.742d3b8691a53e5d",
+        "Compendium.runarcana.spells.Item.621276a6e9208c10"
+      ],
+      "uuids": [
+        "Compendium.runarcana.rules.JournalEntry.742d3b8691a53e5d",
+        "Compendium.runarcana.spells.Item.621276a6e9208c10"
+      ],
       "test": "tests/corpus.test.mjs",
       "status": "partial",
-      "textual": "missing",
+      "textual": "complete",
       "mechanical": "manual",
       "redistribution": "permission-confirmed-by-maintainer",
-      "limit": "Full source not yet collected.",
-      "referenceUuid": null
+      "kind": "spell",
+      "limit": "Full source text included under the recorded permission; mechanical coverage remains separate.",
+      "referenceUuid": "Compendium.runarcana.rules.JournalEntry.742d3b8691a53e5d"
     },
     {
       "id": "/en/magic/spells/dispell-good-and-evil/",
@@ -141587,20 +141727,27 @@
       "url": "https://wiki.runarcana.org/en/magic/spells/divine-favor/",
       "anchor": null,
       "language": "en",
-      "sha256": null,
-      "collectedAt": null,
+      "sha256": "6b872ba382091599923248f047ae095f8513226cdcbf557de09b4f6cd7af2264",
+      "collectedAt": "2026-10-12T14:08:24.374779+00:00",
       "rulesVersion": null,
-      "wikiBuild": null,
-      "collectionStatus": "pending",
-      "documents": [],
-      "uuids": [],
+      "wikiBuild": "0.157",
+      "collectionStatus": "collected",
+      "documents": [
+        "Compendium.runarcana.rules.JournalEntry.d513eac8810704d0",
+        "Compendium.runarcana.spells.Item.a9d0ebe9e89e8832"
+      ],
+      "uuids": [
+        "Compendium.runarcana.rules.JournalEntry.d513eac8810704d0",
+        "Compendium.runarcana.spells.Item.a9d0ebe9e89e8832"
+      ],
       "test": "tests/corpus.test.mjs",
       "status": "partial",
-      "textual": "missing",
+      "textual": "complete",
       "mechanical": "manual",
       "redistribution": "permission-confirmed-by-maintainer",
-      "limit": "Full source not yet collected.",
-      "referenceUuid": null
+      "kind": "spell",
+      "limit": "Full source text included under the recorded permission; mechanical coverage remains separate.",
+      "referenceUuid": "Compendium.runarcana.rules.JournalEntry.d513eac8810704d0"
     },
     {
       "id": "/en/magic/spells/do-you-want-to-play-in-the-snow/",
@@ -142354,20 +142501,27 @@
       "url": "https://wiki.runarcana.org/en/magic/spells/etherealness/",
       "anchor": null,
       "language": "en",
-      "sha256": null,
-      "collectedAt": null,
+      "sha256": "d70c5665941801976fc00aa2416242430410b0f2f03b5cf876c3ee912f1895bd",
+      "collectedAt": "2026-10-12T14:08:37.066005+00:00",
       "rulesVersion": null,
-      "wikiBuild": null,
-      "collectionStatus": "pending",
-      "documents": [],
-      "uuids": [],
+      "wikiBuild": "0.157",
+      "collectionStatus": "collected",
+      "documents": [
+        "Compendium.runarcana.rules.JournalEntry.f2bc5c8cc547cf35",
+        "Compendium.runarcana.spells.Item.24f3ea26e2b168f5"
+      ],
+      "uuids": [
+        "Compendium.runarcana.rules.JournalEntry.f2bc5c8cc547cf35",
+        "Compendium.runarcana.spells.Item.24f3ea26e2b168f5"
+      ],
       "test": "tests/corpus.test.mjs",
       "status": "partial",
-      "textual": "missing",
+      "textual": "complete",
       "mechanical": "manual",
       "redistribution": "permission-confirmed-by-maintainer",
-      "limit": "Full source not yet collected.",
-      "referenceUuid": null
+      "kind": "spell",
+      "limit": "Full source text included under the recorded permission; mechanical coverage remains separate.",
+      "referenceUuid": "Compendium.runarcana.rules.JournalEntry.f2bc5c8cc547cf35"
     },
     {
       "id": "/en/magic/spells/etna/",
@@ -142755,20 +142909,27 @@
       "url": "https://wiki.runarcana.org/en/magic/spells/feather-fall/",
       "anchor": null,
       "language": "en",
-      "sha256": null,
-      "collectedAt": null,
+      "sha256": "3c46465cfca35c8cf3060c159891d0d003a28dc0704f75f0e98264d1f5baa032",
+      "collectedAt": "2026-10-12T14:08:49.736264+00:00",
       "rulesVersion": null,
-      "wikiBuild": null,
-      "collectionStatus": "pending",
-      "documents": [],
-      "uuids": [],
+      "wikiBuild": "0.157",
+      "collectionStatus": "collected",
+      "documents": [
+        "Compendium.runarcana.rules.JournalEntry.ed0e9ba210a3d870",
+        "Compendium.runarcana.spells.Item.ea4cc1169b871dfb"
+      ],
+      "uuids": [
+        "Compendium.runarcana.rules.JournalEntry.ed0e9ba210a3d870",
+        "Compendium.runarcana.spells.Item.ea4cc1169b871dfb"
+      ],
       "test": "tests/corpus.test.mjs",
       "status": "partial",
-      "textual": "missing",
+      "textual": "complete",
       "mechanical": "manual",
       "redistribution": "permission-confirmed-by-maintainer",
-      "limit": "Full source not yet collected.",
-      "referenceUuid": null
+      "kind": "spell",
+      "limit": "Full source text included under the recorded permission; mechanical coverage remains separate.",
+      "referenceUuid": "Compendium.runarcana.rules.JournalEntry.ed0e9ba210a3d870"
     },
     {
       "id": "/en/magic/spells/feeblemind/",
@@ -142988,20 +143149,27 @@
       "url": "https://wiki.runarcana.org/en/magic/spells/fire-domain/",
       "anchor": null,
       "language": "en",
-      "sha256": null,
-      "collectedAt": null,
+      "sha256": "1443b08eda044021852c507cd1ee004da0b5ec1e36b93b6822c439ee7ba330fa",
+      "collectedAt": "2026-10-12T13:57:12.004500+00:00",
       "rulesVersion": null,
-      "wikiBuild": null,
-      "collectionStatus": "source-unavailable",
-      "documents": [],
-      "uuids": [],
+      "wikiBuild": "0.157",
+      "collectionStatus": "collected",
+      "documents": [
+        "Compendium.runarcana.rules.JournalEntry.f79b2c5084c66576",
+        "Compendium.runarcana.spells.Item.220b2dbd8c144664"
+      ],
+      "uuids": [
+        "Compendium.runarcana.rules.JournalEntry.f79b2c5084c66576",
+        "Compendium.runarcana.spells.Item.220b2dbd8c144664"
+      ],
       "test": "tests/corpus.test.mjs",
-      "status": "source-unavailable",
-      "textual": "missing",
+      "status": "partial",
+      "textual": "complete",
       "mechanical": "manual",
       "redistribution": "permission-confirmed-by-maintainer",
-      "limit": "HTTP Error 429: Too Many Requests",
-      "referenceUuid": null
+      "kind": "spell",
+      "limit": "Full source text included under the recorded permission; mechanical coverage remains separate.",
+      "referenceUuid": "Compendium.runarcana.rules.JournalEntry.f79b2c5084c66576"
     },
     {
       "id": "/en/magic/spells/fire-storm/",
@@ -143039,20 +143207,27 @@
       "url": "https://wiki.runarcana.org/en/magic/spells/flame-blade/",
       "anchor": null,
       "language": "en",
-      "sha256": null,
-      "collectedAt": null,
+      "sha256": "7a01d8c211774c5cd483a5872dc8d6beca526eceaab8b262190a55d75a738545",
+      "collectedAt": "2026-10-12T13:57:24.679211+00:00",
       "rulesVersion": null,
-      "wikiBuild": null,
-      "collectionStatus": "pending",
-      "documents": [],
-      "uuids": [],
+      "wikiBuild": "0.157",
+      "collectionStatus": "collected",
+      "documents": [
+        "Compendium.runarcana.rules.JournalEntry.4102162b34fd7ffa",
+        "Compendium.runarcana.spells.Item.57de8ffd9d36effd"
+      ],
+      "uuids": [
+        "Compendium.runarcana.rules.JournalEntry.4102162b34fd7ffa",
+        "Compendium.runarcana.spells.Item.57de8ffd9d36effd"
+      ],
       "test": "tests/corpus.test.mjs",
       "status": "partial",
-      "textual": "missing",
+      "textual": "complete",
       "mechanical": "manual",
       "redistribution": "permission-confirmed-by-maintainer",
-      "limit": "Full source not yet collected.",
-      "referenceUuid": null
+      "kind": "spell",
+      "limit": "Full source text included under the recorded permission; mechanical coverage remains separate.",
+      "referenceUuid": "Compendium.runarcana.rules.JournalEntry.4102162b34fd7ffa"
     },
     {
       "id": "/en/magic/spells/flaming-sphere/",
@@ -143207,20 +143382,27 @@
       "url": "https://wiki.runarcana.org/en/magic/spells/forbiddance/",
       "anchor": null,
       "language": "en",
-      "sha256": null,
-      "collectedAt": null,
+      "sha256": "9cf099000dacdfe9616fa8ecfa22485212958d1efcd5671a2a24db3649324030",
+      "collectedAt": "2026-10-12T13:57:37.368512+00:00",
       "rulesVersion": null,
-      "wikiBuild": null,
-      "collectionStatus": "pending",
-      "documents": [],
-      "uuids": [],
+      "wikiBuild": "0.157",
+      "collectionStatus": "collected",
+      "documents": [
+        "Compendium.runarcana.rules.JournalEntry.8711f88f3fb8e9c5",
+        "Compendium.runarcana.spells.Item.47acb8c6fdd55fa9"
+      ],
+      "uuids": [
+        "Compendium.runarcana.rules.JournalEntry.8711f88f3fb8e9c5",
+        "Compendium.runarcana.spells.Item.47acb8c6fdd55fa9"
+      ],
       "test": "tests/corpus.test.mjs",
       "status": "partial",
-      "textual": "missing",
+      "textual": "complete",
       "mechanical": "manual",
       "redistribution": "permission-confirmed-by-maintainer",
-      "limit": "Full source not yet collected.",
-      "referenceUuid": null
+      "kind": "spell",
+      "limit": "Full source text included under the recorded permission; mechanical coverage remains separate.",
+      "referenceUuid": "Compendium.runarcana.rules.JournalEntry.8711f88f3fb8e9c5"
     },
     {
       "id": "/en/magic/spells/forcecage/",
@@ -143375,20 +143557,27 @@
       "url": "https://wiki.runarcana.org/en/magic/spells/frost-armor/",
       "anchor": null,
       "language": "en",
-      "sha256": null,
-      "collectedAt": null,
+      "sha256": "48b5c3b2f6eaa453b5c68a0d0a09e9bdcda67864d6f39058f30f5048f6eac5d5",
+      "collectedAt": "2026-10-12T13:57:50.041063+00:00",
       "rulesVersion": null,
-      "wikiBuild": null,
-      "collectionStatus": "pending",
-      "documents": [],
-      "uuids": [],
+      "wikiBuild": "0.157",
+      "collectionStatus": "collected",
+      "documents": [
+        "Compendium.runarcana.rules.JournalEntry.150aea5357cb94f4",
+        "Compendium.runarcana.spells.Item.2314fa487d185065"
+      ],
+      "uuids": [
+        "Compendium.runarcana.rules.JournalEntry.150aea5357cb94f4",
+        "Compendium.runarcana.spells.Item.2314fa487d185065"
+      ],
       "test": "tests/corpus.test.mjs",
       "status": "partial",
-      "textual": "missing",
+      "textual": "complete",
       "mechanical": "manual",
       "redistribution": "permission-confirmed-by-maintainer",
-      "limit": "Full source not yet collected.",
-      "referenceUuid": null
+      "kind": "spell",
+      "limit": "Full source text included under the recorded permission; mechanical coverage remains separate.",
+      "referenceUuid": "Compendium.runarcana.rules.JournalEntry.150aea5357cb94f4"
     },
     {
       "id": "/en/magic/spells/frost-barb/",
@@ -143615,20 +143804,27 @@
       "url": "https://wiki.runarcana.org/en/magic/spells/gaseous-form/",
       "anchor": null,
       "language": "en",
-      "sha256": null,
-      "collectedAt": null,
+      "sha256": "5a64ed3c5541dbc96e2169fd1cd47d89cb4e50123f68bf3a42b81a3e4dd88500",
+      "collectedAt": "2026-10-12T14:09:02.426502+00:00",
       "rulesVersion": null,
-      "wikiBuild": null,
-      "collectionStatus": "pending",
-      "documents": [],
-      "uuids": [],
+      "wikiBuild": "0.157",
+      "collectionStatus": "collected",
+      "documents": [
+        "Compendium.runarcana.rules.JournalEntry.d9a5034b2a48d4ee",
+        "Compendium.runarcana.spells.Item.26791a29ac7603a1"
+      ],
+      "uuids": [
+        "Compendium.runarcana.rules.JournalEntry.d9a5034b2a48d4ee",
+        "Compendium.runarcana.spells.Item.26791a29ac7603a1"
+      ],
       "test": "tests/corpus.test.mjs",
       "status": "partial",
-      "textual": "missing",
+      "textual": "complete",
       "mechanical": "manual",
       "redistribution": "permission-confirmed-by-maintainer",
-      "limit": "Full source not yet collected.",
-      "referenceUuid": null
+      "kind": "spell",
+      "limit": "Full source text included under the recorded permission; mechanical coverage remains separate.",
+      "referenceUuid": "Compendium.runarcana.rules.JournalEntry.d9a5034b2a48d4ee"
     },
     {
       "id": "/en/magic/spells/gate/",
@@ -143695,20 +143891,27 @@
       "url": "https://wiki.runarcana.org/en/magic/spells/giant-insect/",
       "anchor": null,
       "language": "en",
-      "sha256": null,
-      "collectedAt": null,
+      "sha256": "397df1060e7ab4250607afcf48683c14d3b9afeee541082ee150b2dae7c8db2b",
+      "collectedAt": "2026-10-12T14:09:15.080286+00:00",
       "rulesVersion": null,
-      "wikiBuild": null,
-      "collectionStatus": "pending",
-      "documents": [],
-      "uuids": [],
+      "wikiBuild": "0.157",
+      "collectionStatus": "collected",
+      "documents": [
+        "Compendium.runarcana.rules.JournalEntry.858798d16c29fa7a",
+        "Compendium.runarcana.spells.Item.9bc708df3cdb1c65"
+      ],
+      "uuids": [
+        "Compendium.runarcana.rules.JournalEntry.858798d16c29fa7a",
+        "Compendium.runarcana.spells.Item.9bc708df3cdb1c65"
+      ],
       "test": "tests/corpus.test.mjs",
       "status": "partial",
-      "textual": "missing",
+      "textual": "complete",
       "mechanical": "manual",
       "redistribution": "permission-confirmed-by-maintainer",
-      "limit": "Full source not yet collected.",
-      "referenceUuid": null
+      "kind": "spell",
+      "limit": "Full source text included under the recorded permission; mechanical coverage remains separate.",
+      "referenceUuid": "Compendium.runarcana.rules.JournalEntry.858798d16c29fa7a"
     },
     {
       "id": "/en/magic/spells/glacial-breath/",
@@ -143831,15 +144034,15 @@
       "collectedAt": null,
       "rulesVersion": null,
       "wikiBuild": null,
-      "collectionStatus": "pending",
+      "collectionStatus": "source-unavailable",
       "documents": [],
       "uuids": [],
       "test": "tests/corpus.test.mjs",
-      "status": "partial",
+      "status": "source-unavailable",
       "textual": "missing",
       "mechanical": "manual",
       "redistribution": "permission-confirmed-by-maintainer",
-      "limit": "Full source not yet collected.",
+      "limit": "HTTP Error 429: Too Many Requests",
       "referenceUuid": null
     },
     {
@@ -144542,20 +144745,27 @@
       "url": "https://wiki.runarcana.org/en/magic/spells/hold-person/",
       "anchor": null,
       "language": "en",
-      "sha256": null,
-      "collectedAt": null,
+      "sha256": "b8b48313038bb8a3566b0d272aa39173107b02d72489886ce79e269ac99dc4e5",
+      "collectedAt": "2026-10-12T13:58:02.810193+00:00",
       "rulesVersion": null,
-      "wikiBuild": null,
-      "collectionStatus": "pending",
-      "documents": [],
-      "uuids": [],
+      "wikiBuild": "0.157",
+      "collectionStatus": "collected",
+      "documents": [
+        "Compendium.runarcana.rules.JournalEntry.3176a9ef7dd14df0",
+        "Compendium.runarcana.spells.Item.bef54509e6816366"
+      ],
+      "uuids": [
+        "Compendium.runarcana.rules.JournalEntry.3176a9ef7dd14df0",
+        "Compendium.runarcana.spells.Item.bef54509e6816366"
+      ],
       "test": "tests/corpus.test.mjs",
       "status": "partial",
-      "textual": "missing",
+      "textual": "complete",
       "mechanical": "manual",
       "redistribution": "permission-confirmed-by-maintainer",
-      "limit": "Full source not yet collected.",
-      "referenceUuid": null
+      "kind": "spell",
+      "limit": "Full source text included under the recorded permission; mechanical coverage remains separate.",
+      "referenceUuid": "Compendium.runarcana.rules.JournalEntry.3176a9ef7dd14df0"
     },
     {
       "id": "/en/magic/spells/holy-aura/",
@@ -145471,20 +145681,27 @@
       "url": "https://wiki.runarcana.org/en/magic/spells/legend-lore/",
       "anchor": null,
       "language": "en",
-      "sha256": null,
-      "collectedAt": null,
+      "sha256": "a3ba9a84c080a121f53ac104c958a73abe7e1a93fed35c77a220ed3dc2a40e9d",
+      "collectedAt": "2026-10-12T13:58:15.492370+00:00",
       "rulesVersion": null,
-      "wikiBuild": null,
-      "collectionStatus": "pending",
-      "documents": [],
-      "uuids": [],
+      "wikiBuild": "0.157",
+      "collectionStatus": "collected",
+      "documents": [
+        "Compendium.runarcana.rules.JournalEntry.85a571fa6f6297f6",
+        "Compendium.runarcana.spells.Item.b5779efccd0e08b8"
+      ],
+      "uuids": [
+        "Compendium.runarcana.rules.JournalEntry.85a571fa6f6297f6",
+        "Compendium.runarcana.spells.Item.b5779efccd0e08b8"
+      ],
       "test": "tests/corpus.test.mjs",
       "status": "partial",
-      "textual": "missing",
+      "textual": "complete",
       "mechanical": "manual",
       "redistribution": "permission-confirmed-by-maintainer",
-      "limit": "Full source not yet collected.",
-      "referenceUuid": null
+      "kind": "spell",
+      "limit": "Full source text included under the recorded permission; mechanical coverage remains separate.",
+      "referenceUuid": "Compendium.runarcana.rules.JournalEntry.85a571fa6f6297f6"
     },
     {
       "id": "/en/magic/spells/lesser-flask/",
@@ -145793,20 +146010,27 @@
       "url": "https://wiki.runarcana.org/en/magic/spells/longstrider/",
       "anchor": null,
       "language": "en",
-      "sha256": null,
-      "collectedAt": null,
+      "sha256": "ebc26ad92c9e448dcc5aaa9ac2372531c61df37d066f67cd50899842d02ebbaf",
+      "collectedAt": "2026-10-12T13:58:28.150700+00:00",
       "rulesVersion": null,
-      "wikiBuild": null,
-      "collectionStatus": "pending",
-      "documents": [],
-      "uuids": [],
+      "wikiBuild": "0.157",
+      "collectionStatus": "collected",
+      "documents": [
+        "Compendium.runarcana.rules.JournalEntry.a87bf27d30bef3f4",
+        "Compendium.runarcana.spells.Item.2b5643ae7cb5e5fa"
+      ],
+      "uuids": [
+        "Compendium.runarcana.rules.JournalEntry.a87bf27d30bef3f4",
+        "Compendium.runarcana.spells.Item.2b5643ae7cb5e5fa"
+      ],
       "test": "tests/corpus.test.mjs",
       "status": "partial",
-      "textual": "missing",
+      "textual": "complete",
       "mechanical": "manual",
       "redistribution": "permission-confirmed-by-maintainer",
-      "limit": "Full source not yet collected.",
-      "referenceUuid": null
+      "kind": "spell",
+      "limit": "Full source text included under the recorded permission; mechanical coverage remains separate.",
+      "referenceUuid": "Compendium.runarcana.rules.JournalEntry.a87bf27d30bef3f4"
     },
     {
       "id": "/en/magic/spells/lucent-singularity/",
@@ -145976,20 +146200,27 @@
       "url": "https://wiki.runarcana.org/en/magic/spells/magic-mouth/",
       "anchor": null,
       "language": "en",
-      "sha256": null,
-      "collectedAt": null,
+      "sha256": "1c89d8719990a11d9a78e56a467cacc2a1017d4fea8036f8f91778f0d9538501",
+      "collectedAt": "2026-10-12T13:58:40.821379+00:00",
       "rulesVersion": null,
-      "wikiBuild": null,
-      "collectionStatus": "pending",
-      "documents": [],
-      "uuids": [],
+      "wikiBuild": "0.157",
+      "collectionStatus": "collected",
+      "documents": [
+        "Compendium.runarcana.rules.JournalEntry.feabfb7488c91f97",
+        "Compendium.runarcana.spells.Item.8f9079e2e416cee7"
+      ],
+      "uuids": [
+        "Compendium.runarcana.rules.JournalEntry.feabfb7488c91f97",
+        "Compendium.runarcana.spells.Item.8f9079e2e416cee7"
+      ],
       "test": "tests/corpus.test.mjs",
       "status": "partial",
-      "textual": "missing",
+      "textual": "complete",
       "mechanical": "manual",
       "redistribution": "permission-confirmed-by-maintainer",
-      "limit": "Full source not yet collected.",
-      "referenceUuid": null
+      "kind": "spell",
+      "limit": "Full source text included under the recorded permission; mechanical coverage remains separate.",
+      "referenceUuid": "Compendium.runarcana.rules.JournalEntry.feabfb7488c91f97"
     },
     {
       "id": "/en/magic/spells/magic-weapon/",
@@ -146042,20 +146273,27 @@
       "url": "https://wiki.runarcana.org/en/magic/spells/magma-aegis/",
       "anchor": null,
       "language": "en",
-      "sha256": null,
-      "collectedAt": null,
+      "sha256": "37058148890a1424ea146dc42604499fb74836df59fd3eda4be84be168607565",
+      "collectedAt": "2026-10-12T13:58:53.472823+00:00",
       "rulesVersion": null,
-      "wikiBuild": null,
-      "collectionStatus": "pending",
-      "documents": [],
-      "uuids": [],
+      "wikiBuild": "0.157",
+      "collectionStatus": "collected",
+      "documents": [
+        "Compendium.runarcana.rules.JournalEntry.edbec151a21a6a72",
+        "Compendium.runarcana.spells.Item.7b26ae941ea4d7fe"
+      ],
+      "uuids": [
+        "Compendium.runarcana.rules.JournalEntry.edbec151a21a6a72",
+        "Compendium.runarcana.spells.Item.7b26ae941ea4d7fe"
+      ],
       "test": "tests/corpus.test.mjs",
       "status": "partial",
-      "textual": "missing",
+      "textual": "complete",
       "mechanical": "manual",
       "redistribution": "permission-confirmed-by-maintainer",
-      "limit": "Full source not yet collected.",
-      "referenceUuid": null
+      "kind": "spell",
+      "limit": "Full source text included under the recorded permission; mechanical coverage remains separate.",
+      "referenceUuid": "Compendium.runarcana.rules.JournalEntry.edbec151a21a6a72"
     },
     {
       "id": "/en/magic/spells/magmatic-touch/",
@@ -146108,20 +146346,27 @@
       "url": "https://wiki.runarcana.org/en/magic/spells/major-image/",
       "anchor": null,
       "language": "en",
-      "sha256": null,
-      "collectedAt": null,
+      "sha256": "58ecbb00e7f39b1eda68f75480eab0a9ff9d559cb292c9fcde822d846e93b329",
+      "collectedAt": "2026-10-12T13:59:06.160134+00:00",
       "rulesVersion": null,
-      "wikiBuild": null,
-      "collectionStatus": "pending",
-      "documents": [],
-      "uuids": [],
+      "wikiBuild": "0.157",
+      "collectionStatus": "collected",
+      "documents": [
+        "Compendium.runarcana.rules.JournalEntry.52085fd1ca2169e1",
+        "Compendium.runarcana.spells.Item.0770d798abdb3251"
+      ],
+      "uuids": [
+        "Compendium.runarcana.rules.JournalEntry.52085fd1ca2169e1",
+        "Compendium.runarcana.spells.Item.0770d798abdb3251"
+      ],
       "test": "tests/corpus.test.mjs",
       "status": "partial",
-      "textual": "missing",
+      "textual": "complete",
       "mechanical": "manual",
       "redistribution": "permission-confirmed-by-maintainer",
-      "limit": "Full source not yet collected.",
-      "referenceUuid": null
+      "kind": "spell",
+      "limit": "Full source text included under the recorded permission; mechanical coverage remains separate.",
+      "referenceUuid": "Compendium.runarcana.rules.JournalEntry.52085fd1ca2169e1"
     },
     {
       "id": "/en/magic/spells/manifest-effigy/",
@@ -146459,20 +146704,27 @@
       "url": "https://wiki.runarcana.org/en/magic/spells/metal-steed/",
       "anchor": null,
       "language": "en",
-      "sha256": null,
-      "collectedAt": null,
+      "sha256": "fa45fb53e3b8954306a5b993d78006565c83e76f22bb740d11017dad6e065984",
+      "collectedAt": "2026-10-12T13:59:18.836218+00:00",
       "rulesVersion": null,
-      "wikiBuild": null,
-      "collectionStatus": "pending",
-      "documents": [],
-      "uuids": [],
+      "wikiBuild": "0.157",
+      "collectionStatus": "collected",
+      "documents": [
+        "Compendium.runarcana.rules.JournalEntry.f61b9d183129895a",
+        "Compendium.runarcana.spells.Item.c69a867c9bc9f27b"
+      ],
+      "uuids": [
+        "Compendium.runarcana.rules.JournalEntry.f61b9d183129895a",
+        "Compendium.runarcana.spells.Item.c69a867c9bc9f27b"
+      ],
       "test": "tests/corpus.test.mjs",
       "status": "partial",
-      "textual": "missing",
+      "textual": "complete",
       "mechanical": "manual",
       "redistribution": "permission-confirmed-by-maintainer",
-      "limit": "Full source not yet collected.",
-      "referenceUuid": null
+      "kind": "spell",
+      "limit": "Full source text included under the recorded permission; mechanical coverage remains separate.",
+      "referenceUuid": "Compendium.runarcana.rules.JournalEntry.f61b9d183129895a"
     },
     {
       "id": "/en/magic/spells/metamorphosis/",
@@ -147080,20 +147332,27 @@
       "url": "https://wiki.runarcana.org/en/magic/spells/plane-shift/",
       "anchor": null,
       "language": "en",
-      "sha256": null,
-      "collectedAt": null,
+      "sha256": "150fd08ad9a13d91d7b30b55f2d2e83265bbd1b49af66cb33fac346aa8713553",
+      "collectedAt": "2026-10-12T13:59:31.578244+00:00",
       "rulesVersion": null,
-      "wikiBuild": null,
-      "collectionStatus": "pending",
-      "documents": [],
-      "uuids": [],
+      "wikiBuild": "0.157",
+      "collectionStatus": "collected",
+      "documents": [
+        "Compendium.runarcana.rules.JournalEntry.d0a0991f03c2f1da",
+        "Compendium.runarcana.spells.Item.75a45505e22acdc8"
+      ],
+      "uuids": [
+        "Compendium.runarcana.rules.JournalEntry.d0a0991f03c2f1da",
+        "Compendium.runarcana.spells.Item.75a45505e22acdc8"
+      ],
       "test": "tests/corpus.test.mjs",
       "status": "partial",
-      "textual": "missing",
+      "textual": "complete",
       "mechanical": "manual",
       "redistribution": "permission-confirmed-by-maintainer",
-      "limit": "Full source not yet collected.",
-      "referenceUuid": null
+      "kind": "spell",
+      "limit": "Full source text included under the recorded permission; mechanical coverage remains separate.",
+      "referenceUuid": "Compendium.runarcana.rules.JournalEntry.d0a0991f03c2f1da"
     },
     {
       "id": "/en/magic/spells/plant-growth/",
@@ -148096,20 +148355,27 @@
       "url": "https://wiki.runarcana.org/en/magic/spells/rune-prison/",
       "anchor": null,
       "language": "en",
-      "sha256": null,
-      "collectedAt": null,
+      "sha256": "51a8d6a8aff9c66d2bd9dc7b4ffd72e803e39820efa2f6fc70aa8e6386e76393",
+      "collectedAt": "2026-10-12T13:59:44.243664+00:00",
       "rulesVersion": null,
-      "wikiBuild": null,
-      "collectionStatus": "pending",
-      "documents": [],
-      "uuids": [],
+      "wikiBuild": "0.157",
+      "collectionStatus": "collected",
+      "documents": [
+        "Compendium.runarcana.rules.JournalEntry.c1116595ce214f1d",
+        "Compendium.runarcana.spells.Item.c1b4f5f7c66d9c3e"
+      ],
+      "uuids": [
+        "Compendium.runarcana.rules.JournalEntry.c1116595ce214f1d",
+        "Compendium.runarcana.spells.Item.c1b4f5f7c66d9c3e"
+      ],
       "test": "tests/corpus.test.mjs",
       "status": "partial",
-      "textual": "missing",
+      "textual": "complete",
       "mechanical": "manual",
       "redistribution": "permission-confirmed-by-maintainer",
-      "limit": "Full source not yet collected.",
-      "referenceUuid": null
+      "kind": "spell",
+      "limit": "Full source text included under the recorded permission; mechanical coverage remains separate.",
+      "referenceUuid": "Compendium.runarcana.rules.JournalEntry.c1116595ce214f1d"
     },
     {
       "id": "/en/magic/spells/runic-blast/",
@@ -148118,20 +148384,27 @@
       "url": "https://wiki.runarcana.org/en/magic/spells/runic-blast/",
       "anchor": null,
       "language": "en",
-      "sha256": null,
-      "collectedAt": null,
+      "sha256": "aa43a6f4b7e30cf7570b4f7445c1960a74df4b5ca961fb636316bbfef03b3591",
+      "collectedAt": "2026-10-12T13:59:56.922739+00:00",
       "rulesVersion": null,
-      "wikiBuild": null,
-      "collectionStatus": "pending",
-      "documents": [],
-      "uuids": [],
+      "wikiBuild": "0.157",
+      "collectionStatus": "collected",
+      "documents": [
+        "Compendium.runarcana.rules.JournalEntry.53ebd300535e8206",
+        "Compendium.runarcana.spells.Item.ab8a03c0c80f7161"
+      ],
+      "uuids": [
+        "Compendium.runarcana.rules.JournalEntry.53ebd300535e8206",
+        "Compendium.runarcana.spells.Item.ab8a03c0c80f7161"
+      ],
       "test": "tests/corpus.test.mjs",
       "status": "partial",
-      "textual": "missing",
+      "textual": "complete",
       "mechanical": "manual",
       "redistribution": "permission-confirmed-by-maintainer",
-      "limit": "Full source not yet collected.",
-      "referenceUuid": null
+      "kind": "spell",
+      "limit": "Full source text included under the recorded permission; mechanical coverage remains separate.",
+      "referenceUuid": "Compendium.runarcana.rules.JournalEntry.53ebd300535e8206"
     },
     {
       "id": "/en/magic/spells/sacred-flame/",
@@ -148220,20 +148493,50 @@
       "url": "https://wiki.runarcana.org/en/magic/spells/sand-coffin/",
       "anchor": null,
       "language": "en",
-      "sha256": null,
-      "collectedAt": null,
+      "sha256": "62c75e34d04387a6506f80ab387a4a6075d46549cbb37037375cb545b130eac7",
+      "collectedAt": "2026-10-12T14:00:09.629562+00:00",
       "rulesVersion": null,
-      "wikiBuild": null,
-      "collectionStatus": "pending",
+      "wikiBuild": "0.157",
+      "collectionStatus": "collected",
+      "documents": [
+        "Compendium.runarcana.rules.JournalEntry.d46d4304963f4ba1",
+        "Compendium.runarcana.spells.Item.014e667c6ebde8f9"
+      ],
+      "uuids": [
+        "Compendium.runarcana.rules.JournalEntry.d46d4304963f4ba1",
+        "Compendium.runarcana.spells.Item.014e667c6ebde8f9"
+      ],
+      "test": "tests/corpus.test.mjs",
+      "status": "partial",
+      "textual": "complete",
+      "mechanical": "manual",
+      "redistribution": "permission-confirmed-by-maintainer",
+      "kind": "spell",
+      "limit": "Full source text included under the recorded permission; mechanical coverage remains separate.",
+      "referenceUuid": "Compendium.runarcana.rules.JournalEntry.d46d4304963f4ba1"
+    },
+    {
+      "id": "/en/magic/spells/sand-dragon/#table-sand-dragon-elemental-construct-huge",
+      "part": 2,
+      "chapter": "magic/spells",
+      "url": "https://wiki.runarcana.org/en/magic/spells/sand-dragon/",
+      "anchor": null,
+      "language": "en",
+      "sha256": "9514842a4b2a340643ae3cd6c7e38509dad64d701a5df7e552eb331de2769ecf",
+      "collectedAt": "2026-10-12T14:00:22.354918+00:00",
+      "rulesVersion": null,
+      "wikiBuild": "0.157",
+      "collectionStatus": "collected",
       "documents": [],
       "uuids": [],
       "test": "tests/corpus.test.mjs",
       "status": "partial",
-      "textual": "missing",
-      "mechanical": "manual",
+      "textual": "complete",
+      "mechanical": "partial",
       "redistribution": "permission-confirmed-by-maintainer",
-      "limit": "Full source not yet collected.",
-      "referenceUuid": null
+      "kind": "source-table",
+      "limit": "Native RollTable only for an exact dice/range table; other source tables stay in full journals and metadata.",
+      "referenceUuid": "Compendium.runarcana.rules.JournalEntry.071c3447f092b80f"
     },
     {
       "id": "/en/magic/spells/sand-dragon/",
@@ -148242,20 +148545,27 @@
       "url": "https://wiki.runarcana.org/en/magic/spells/sand-dragon/",
       "anchor": null,
       "language": "en",
-      "sha256": null,
-      "collectedAt": null,
+      "sha256": "9514842a4b2a340643ae3cd6c7e38509dad64d701a5df7e552eb331de2769ecf",
+      "collectedAt": "2026-10-12T14:00:22.354918+00:00",
       "rulesVersion": null,
-      "wikiBuild": null,
-      "collectionStatus": "pending",
-      "documents": [],
-      "uuids": [],
+      "wikiBuild": "0.157",
+      "collectionStatus": "collected",
+      "documents": [
+        "Compendium.runarcana.rules.JournalEntry.071c3447f092b80f",
+        "Compendium.runarcana.spells.Item.70f2eea7bcde71d9"
+      ],
+      "uuids": [
+        "Compendium.runarcana.rules.JournalEntry.071c3447f092b80f",
+        "Compendium.runarcana.spells.Item.70f2eea7bcde71d9"
+      ],
       "test": "tests/corpus.test.mjs",
       "status": "partial",
-      "textual": "missing",
+      "textual": "complete",
       "mechanical": "manual",
       "redistribution": "permission-confirmed-by-maintainer",
-      "limit": "Full source not yet collected.",
-      "referenceUuid": null
+      "kind": "spell",
+      "limit": "Full source text included under the recorded permission; mechanical coverage remains separate.",
+      "referenceUuid": "Compendium.runarcana.rules.JournalEntry.071c3447f092b80f"
     },
     {
       "id": "/en/magic/spells/sand-gravitation/",
@@ -148308,20 +148618,27 @@
       "url": "https://wiki.runarcana.org/en/magic/spells/sand-pillar/",
       "anchor": null,
       "language": "en",
-      "sha256": null,
-      "collectedAt": null,
+      "sha256": "383e238717b2b9211f62b53ce3425922f4486bf231b2f667143f8e5c3d32f806",
+      "collectedAt": "2026-10-12T14:00:35.025935+00:00",
       "rulesVersion": null,
-      "wikiBuild": null,
-      "collectionStatus": "pending",
-      "documents": [],
-      "uuids": [],
+      "wikiBuild": "0.157",
+      "collectionStatus": "collected",
+      "documents": [
+        "Compendium.runarcana.rules.JournalEntry.81e70dd91f450063",
+        "Compendium.runarcana.spells.Item.6092d615e68ae100"
+      ],
+      "uuids": [
+        "Compendium.runarcana.rules.JournalEntry.81e70dd91f450063",
+        "Compendium.runarcana.spells.Item.6092d615e68ae100"
+      ],
       "test": "tests/corpus.test.mjs",
       "status": "partial",
-      "textual": "missing",
+      "textual": "complete",
       "mechanical": "manual",
       "redistribution": "permission-confirmed-by-maintainer",
-      "limit": "Full source not yet collected.",
-      "referenceUuid": null
+      "kind": "spell",
+      "limit": "Full source text included under the recorded permission; mechanical coverage remains separate.",
+      "referenceUuid": "Compendium.runarcana.rules.JournalEntry.81e70dd91f450063"
     },
     {
       "id": "/en/magic/spells/sand-whirlwind/",
@@ -148901,20 +149218,27 @@
       "url": "https://wiki.runarcana.org/en/magic/spells/shadow-mask/",
       "anchor": null,
       "language": "en",
-      "sha256": null,
-      "collectedAt": null,
+      "sha256": "489ed93025be6ffaa4684de0d493c00d635605111c272cdd26c34cf7bbad6ff1",
+      "collectedAt": "2026-10-12T14:00:47.715595+00:00",
       "rulesVersion": null,
-      "wikiBuild": null,
-      "collectionStatus": "pending",
-      "documents": [],
-      "uuids": [],
+      "wikiBuild": "0.157",
+      "collectionStatus": "collected",
+      "documents": [
+        "Compendium.runarcana.rules.JournalEntry.e973dceb1f344f56",
+        "Compendium.runarcana.spells.Item.2dc24bd922a3c392"
+      ],
+      "uuids": [
+        "Compendium.runarcana.rules.JournalEntry.e973dceb1f344f56",
+        "Compendium.runarcana.spells.Item.2dc24bd922a3c392"
+      ],
       "test": "tests/corpus.test.mjs",
       "status": "partial",
-      "textual": "missing",
+      "textual": "complete",
       "mechanical": "manual",
       "redistribution": "permission-confirmed-by-maintainer",
-      "limit": "Full source not yet collected.",
-      "referenceUuid": null
+      "kind": "spell",
+      "limit": "Full source text included under the recorded permission; mechanical coverage remains separate.",
+      "referenceUuid": "Compendium.runarcana.rules.JournalEntry.e973dceb1f344f56"
     },
     {
       "id": "/en/magic/spells/shadow-pulse/",
@@ -148989,20 +149313,27 @@
       "url": "https://wiki.runarcana.org/en/magic/spells/shape-earth/",
       "anchor": null,
       "language": "en",
-      "sha256": null,
-      "collectedAt": null,
+      "sha256": "ec2bbc179221cdfba909de1ca471318e3c8a3ef1285d4a9fe4372cb5ffd88352",
+      "collectedAt": "2026-10-12T14:01:00.391548+00:00",
       "rulesVersion": null,
-      "wikiBuild": null,
-      "collectionStatus": "pending",
-      "documents": [],
-      "uuids": [],
+      "wikiBuild": "0.157",
+      "collectionStatus": "collected",
+      "documents": [
+        "Compendium.runarcana.rules.JournalEntry.18ca098e394e2895",
+        "Compendium.runarcana.spells.Item.a8d7d716f9afe77b"
+      ],
+      "uuids": [
+        "Compendium.runarcana.rules.JournalEntry.18ca098e394e2895",
+        "Compendium.runarcana.spells.Item.a8d7d716f9afe77b"
+      ],
       "test": "tests/corpus.test.mjs",
       "status": "partial",
-      "textual": "missing",
+      "textual": "complete",
       "mechanical": "manual",
       "redistribution": "permission-confirmed-by-maintainer",
-      "limit": "Full source not yet collected.",
-      "referenceUuid": null
+      "kind": "spell",
+      "limit": "Full source text included under the recorded permission; mechanical coverage remains separate.",
+      "referenceUuid": "Compendium.runarcana.rules.JournalEntry.18ca098e394e2895"
     },
     {
       "id": "/en/magic/spells/shape-fire/",
@@ -149040,20 +149371,27 @@
       "url": "https://wiki.runarcana.org/en/magic/spells/shape-water/",
       "anchor": null,
       "language": "en",
-      "sha256": null,
-      "collectedAt": null,
+      "sha256": "4b23cdfdf134e6d823450e302ae2117c649af2abe388045b63aa4b3123ca33fe",
+      "collectedAt": "2026-10-12T14:01:13.056196+00:00",
       "rulesVersion": null,
-      "wikiBuild": null,
-      "collectionStatus": "pending",
-      "documents": [],
-      "uuids": [],
+      "wikiBuild": "0.157",
+      "collectionStatus": "collected",
+      "documents": [
+        "Compendium.runarcana.rules.JournalEntry.877909534075c5bc",
+        "Compendium.runarcana.spells.Item.6761c0a0f828e588"
+      ],
+      "uuids": [
+        "Compendium.runarcana.rules.JournalEntry.877909534075c5bc",
+        "Compendium.runarcana.spells.Item.6761c0a0f828e588"
+      ],
       "test": "tests/corpus.test.mjs",
       "status": "partial",
-      "textual": "missing",
+      "textual": "complete",
       "mechanical": "manual",
       "redistribution": "permission-confirmed-by-maintainer",
-      "limit": "Full source not yet collected.",
-      "referenceUuid": null
+      "kind": "spell",
+      "limit": "Full source text included under the recorded permission; mechanical coverage remains separate.",
+      "referenceUuid": "Compendium.runarcana.rules.JournalEntry.877909534075c5bc"
     },
     {
       "id": "/en/magic/spells/shapechange/",
@@ -149062,20 +149400,27 @@
       "url": "https://wiki.runarcana.org/en/magic/spells/shapechange/",
       "anchor": null,
       "language": "en",
-      "sha256": null,
-      "collectedAt": null,
+      "sha256": "269387d3d26ee0343672570e2a95abb2271076dcf0351fb3e2114a43d259ecba",
+      "collectedAt": "2026-10-12T14:01:25.742137+00:00",
       "rulesVersion": null,
-      "wikiBuild": null,
-      "collectionStatus": "pending",
-      "documents": [],
-      "uuids": [],
+      "wikiBuild": "0.157",
+      "collectionStatus": "collected",
+      "documents": [
+        "Compendium.runarcana.rules.JournalEntry.5eda17b070e083d1",
+        "Compendium.runarcana.spells.Item.413284030dd92a19"
+      ],
+      "uuids": [
+        "Compendium.runarcana.rules.JournalEntry.5eda17b070e083d1",
+        "Compendium.runarcana.spells.Item.413284030dd92a19"
+      ],
       "test": "tests/corpus.test.mjs",
       "status": "partial",
-      "textual": "missing",
+      "textual": "complete",
       "mechanical": "manual",
       "redistribution": "permission-confirmed-by-maintainer",
-      "limit": "Full source not yet collected.",
-      "referenceUuid": null
+      "kind": "spell",
+      "limit": "Full source text included under the recorded permission; mechanical coverage remains separate.",
+      "referenceUuid": "Compendium.runarcana.rules.JournalEntry.5eda17b070e083d1"
     },
     {
       "id": "/en/magic/spells/shatter/",
@@ -149346,20 +149691,27 @@
       "url": "https://wiki.runarcana.org/en/magic/spells/sixth-sense/",
       "anchor": null,
       "language": "en",
-      "sha256": null,
-      "collectedAt": null,
+      "sha256": "5a9d35347f5658fae7227b5ec6b94fcc30cf660b2afbbcf0d92ba0abebbd51c1",
+      "collectedAt": "2026-10-12T14:01:38.418214+00:00",
       "rulesVersion": null,
-      "wikiBuild": null,
-      "collectionStatus": "pending",
-      "documents": [],
-      "uuids": [],
+      "wikiBuild": "0.157",
+      "collectionStatus": "collected",
+      "documents": [
+        "Compendium.runarcana.rules.JournalEntry.be4ab736f4fc5a15",
+        "Compendium.runarcana.spells.Item.428a65fa299fdd0b"
+      ],
+      "uuids": [
+        "Compendium.runarcana.rules.JournalEntry.be4ab736f4fc5a15",
+        "Compendium.runarcana.spells.Item.428a65fa299fdd0b"
+      ],
       "test": "tests/corpus.test.mjs",
       "status": "partial",
-      "textual": "missing",
+      "textual": "complete",
       "mechanical": "manual",
       "redistribution": "permission-confirmed-by-maintainer",
-      "limit": "Full source not yet collected.",
-      "referenceUuid": null
+      "kind": "spell",
+      "limit": "Full source text included under the recorded permission; mechanical coverage remains separate.",
+      "referenceUuid": "Compendium.runarcana.rules.JournalEntry.be4ab736f4fc5a15"
     },
     {
       "id": "/en/magic/spells/sky-splitter/",
@@ -149916,20 +150268,27 @@
       "url": "https://wiki.runarcana.org/en/magic/spells/stone-shape/",
       "anchor": null,
       "language": "en",
-      "sha256": null,
-      "collectedAt": null,
+      "sha256": "3e7fec5595427783494142bdad513a834987aec87948c030dfe27b804398fd4a",
+      "collectedAt": "2026-10-12T14:01:51.123760+00:00",
       "rulesVersion": null,
-      "wikiBuild": null,
-      "collectionStatus": "pending",
-      "documents": [],
-      "uuids": [],
+      "wikiBuild": "0.157",
+      "collectionStatus": "collected",
+      "documents": [
+        "Compendium.runarcana.rules.JournalEntry.ce36e3e89dd23e1d",
+        "Compendium.runarcana.spells.Item.7e6e111d181a59a8"
+      ],
+      "uuids": [
+        "Compendium.runarcana.rules.JournalEntry.ce36e3e89dd23e1d",
+        "Compendium.runarcana.spells.Item.7e6e111d181a59a8"
+      ],
       "test": "tests/corpus.test.mjs",
       "status": "partial",
-      "textual": "missing",
+      "textual": "complete",
       "mechanical": "manual",
       "redistribution": "permission-confirmed-by-maintainer",
-      "limit": "Full source not yet collected.",
-      "referenceUuid": null
+      "kind": "spell",
+      "limit": "Full source text included under the recorded permission; mechanical coverage remains separate.",
+      "referenceUuid": "Compendium.runarcana.rules.JournalEntry.ce36e3e89dd23e1d"
     },
     {
       "id": "/en/magic/spells/stoneskin/",
@@ -150266,20 +150625,27 @@
       "url": "https://wiki.runarcana.org/en/magic/spells/telekinesis/",
       "anchor": null,
       "language": "en",
-      "sha256": null,
-      "collectedAt": null,
+      "sha256": "0f0f2094be3a173a32cb97f907e794885d163ec9921f30b5c5043c07b02443d1",
+      "collectedAt": "2026-10-12T14:02:03.854036+00:00",
       "rulesVersion": null,
-      "wikiBuild": null,
-      "collectionStatus": "pending",
-      "documents": [],
-      "uuids": [],
+      "wikiBuild": "0.157",
+      "collectionStatus": "collected",
+      "documents": [
+        "Compendium.runarcana.rules.JournalEntry.af8d4325ff5fa44e",
+        "Compendium.runarcana.spells.Item.37f544014164475b"
+      ],
+      "uuids": [
+        "Compendium.runarcana.rules.JournalEntry.af8d4325ff5fa44e",
+        "Compendium.runarcana.spells.Item.37f544014164475b"
+      ],
       "test": "tests/corpus.test.mjs",
       "status": "partial",
-      "textual": "missing",
+      "textual": "complete",
       "mechanical": "manual",
       "redistribution": "permission-confirmed-by-maintainer",
-      "limit": "Full source not yet collected.",
-      "referenceUuid": null
+      "kind": "spell",
+      "limit": "Full source text included under the recorded permission; mechanical coverage remains separate.",
+      "referenceUuid": "Compendium.runarcana.rules.JournalEntry.af8d4325ff5fa44e"
     },
     {
       "id": "/en/magic/spells/telepathic-bond/",
@@ -150632,20 +150998,27 @@
       "url": "https://wiki.runarcana.org/en/magic/spells/thaumaturgy/",
       "anchor": null,
       "language": "en",
-      "sha256": null,
-      "collectedAt": null,
+      "sha256": "1183c11c0b8e87d639b4d2e64276c2c11da827f70eb887f66cf3acccb890aec2",
+      "collectedAt": "2026-10-12T14:02:16.508100+00:00",
       "rulesVersion": null,
-      "wikiBuild": null,
-      "collectionStatus": "pending",
-      "documents": [],
-      "uuids": [],
+      "wikiBuild": "0.157",
+      "collectionStatus": "collected",
+      "documents": [
+        "Compendium.runarcana.rules.JournalEntry.768e23dfd75c13fd",
+        "Compendium.runarcana.spells.Item.ffc5fd25215929fd"
+      ],
+      "uuids": [
+        "Compendium.runarcana.rules.JournalEntry.768e23dfd75c13fd",
+        "Compendium.runarcana.spells.Item.ffc5fd25215929fd"
+      ],
       "test": "tests/corpus.test.mjs",
       "status": "partial",
-      "textual": "missing",
+      "textual": "complete",
       "mechanical": "manual",
       "redistribution": "permission-confirmed-by-maintainer",
-      "limit": "Full source not yet collected.",
-      "referenceUuid": null
+      "kind": "spell",
+      "limit": "Full source text included under the recorded permission; mechanical coverage remains separate.",
+      "referenceUuid": "Compendium.runarcana.rules.JournalEntry.768e23dfd75c13fd"
     },
     {
       "id": "/en/magic/spells/threaded-volley/",
@@ -150698,20 +151071,27 @@
       "url": "https://wiki.runarcana.org/en/magic/spells/thunderclap/",
       "anchor": null,
       "language": "en",
-      "sha256": null,
-      "collectedAt": null,
+      "sha256": "71b4d9cc08b6c1fe8bdff800868edb085aaab76d798b98011f919eb5fde55958",
+      "collectedAt": "2026-10-12T14:02:29.164247+00:00",
       "rulesVersion": null,
-      "wikiBuild": null,
-      "collectionStatus": "pending",
-      "documents": [],
-      "uuids": [],
+      "wikiBuild": "0.157",
+      "collectionStatus": "collected",
+      "documents": [
+        "Compendium.runarcana.rules.JournalEntry.c742c73d7695deb8",
+        "Compendium.runarcana.spells.Item.6e1c4f73d63cc97f"
+      ],
+      "uuids": [
+        "Compendium.runarcana.rules.JournalEntry.c742c73d7695deb8",
+        "Compendium.runarcana.spells.Item.6e1c4f73d63cc97f"
+      ],
       "test": "tests/corpus.test.mjs",
       "status": "partial",
-      "textual": "missing",
+      "textual": "complete",
       "mechanical": "manual",
       "redistribution": "permission-confirmed-by-maintainer",
-      "limit": "Full source not yet collected.",
-      "referenceUuid": null
+      "kind": "spell",
+      "limit": "Full source text included under the recorded permission; mechanical coverage remains separate.",
+      "referenceUuid": "Compendium.runarcana.rules.JournalEntry.c742c73d7695deb8"
     },
     {
       "id": "/en/magic/spells/thunderous-devastation/",
@@ -150771,20 +151151,27 @@
       "url": "https://wiki.runarcana.org/en/magic/spells/time-bubble/",
       "anchor": null,
       "language": "en",
-      "sha256": null,
-      "collectedAt": null,
+      "sha256": "9a21fa65ac71667cc222cfb87bf45685b5fd6a2f0eb8d3617912683632f232d6",
+      "collectedAt": "2026-10-12T14:02:41.847899+00:00",
       "rulesVersion": null,
-      "wikiBuild": null,
-      "collectionStatus": "pending",
-      "documents": [],
-      "uuids": [],
+      "wikiBuild": "0.157",
+      "collectionStatus": "collected",
+      "documents": [
+        "Compendium.runarcana.rules.JournalEntry.9df25bc7c19f3196",
+        "Compendium.runarcana.spells.Item.3abcf5a6da102e3c"
+      ],
+      "uuids": [
+        "Compendium.runarcana.rules.JournalEntry.9df25bc7c19f3196",
+        "Compendium.runarcana.spells.Item.3abcf5a6da102e3c"
+      ],
       "test": "tests/corpus.test.mjs",
       "status": "partial",
-      "textual": "missing",
+      "textual": "complete",
       "mechanical": "manual",
       "redistribution": "permission-confirmed-by-maintainer",
-      "limit": "Full source not yet collected.",
-      "referenceUuid": null
+      "kind": "spell",
+      "limit": "Full source text included under the recorded permission; mechanical coverage remains separate.",
+      "referenceUuid": "Compendium.runarcana.rules.JournalEntry.9df25bc7c19f3196"
     },
     {
       "id": "/en/magic/spells/time-stop/",
@@ -150822,20 +151209,27 @@
       "url": "https://wiki.runarcana.org/en/magic/spells/torn-memory/",
       "anchor": null,
       "language": "en",
-      "sha256": null,
-      "collectedAt": null,
+      "sha256": "d109e918ff108dda6a2583019b01646198596d4eb79cf8e1d491e56c8f8d2571",
+      "collectedAt": "2026-10-12T14:02:54.526970+00:00",
       "rulesVersion": null,
-      "wikiBuild": null,
-      "collectionStatus": "pending",
-      "documents": [],
-      "uuids": [],
+      "wikiBuild": "0.157",
+      "collectionStatus": "collected",
+      "documents": [
+        "Compendium.runarcana.rules.JournalEntry.34b1696d540b3c3a",
+        "Compendium.runarcana.spells.Item.3315ef65e14869ab"
+      ],
+      "uuids": [
+        "Compendium.runarcana.rules.JournalEntry.34b1696d540b3c3a",
+        "Compendium.runarcana.spells.Item.3315ef65e14869ab"
+      ],
       "test": "tests/corpus.test.mjs",
       "status": "partial",
-      "textual": "missing",
+      "textual": "complete",
       "mechanical": "manual",
       "redistribution": "permission-confirmed-by-maintainer",
-      "limit": "Full source not yet collected.",
-      "referenceUuid": null
+      "kind": "spell",
+      "limit": "Full source text included under the recorded permission; mechanical coverage remains separate.",
+      "referenceUuid": "Compendium.runarcana.rules.JournalEntry.34b1696d540b3c3a"
     },
     {
       "id": "/en/magic/spells/toxin-pillar/",
@@ -150888,20 +151282,27 @@
       "url": "https://wiki.runarcana.org/en/magic/spells/transfusion/",
       "anchor": null,
       "language": "en",
-      "sha256": null,
-      "collectedAt": null,
+      "sha256": "c9ad6b3ceb051430637136090d3b44c21e90d95678ad141a11f15ddf62bcb66a",
+      "collectedAt": "2026-10-12T14:03:07.197543+00:00",
       "rulesVersion": null,
-      "wikiBuild": null,
-      "collectionStatus": "pending",
-      "documents": [],
-      "uuids": [],
+      "wikiBuild": "0.157",
+      "collectionStatus": "collected",
+      "documents": [
+        "Compendium.runarcana.rules.JournalEntry.50c051aff7369f4e",
+        "Compendium.runarcana.spells.Item.85e5f3f5227f152d"
+      ],
+      "uuids": [
+        "Compendium.runarcana.rules.JournalEntry.50c051aff7369f4e",
+        "Compendium.runarcana.spells.Item.85e5f3f5227f152d"
+      ],
       "test": "tests/corpus.test.mjs",
       "status": "partial",
-      "textual": "missing",
+      "textual": "complete",
       "mechanical": "manual",
       "redistribution": "permission-confirmed-by-maintainer",
-      "limit": "Full source not yet collected.",
-      "referenceUuid": null
+      "kind": "spell",
+      "limit": "Full source text included under the recorded permission; mechanical coverage remains separate.",
+      "referenceUuid": "Compendium.runarcana.rules.JournalEntry.50c051aff7369f4e"
     },
     {
       "id": "/en/magic/spells/transport-via-plants/",
@@ -150932,20 +151333,27 @@
       "url": "https://wiki.runarcana.org/en/magic/spells/tree-stride/",
       "anchor": null,
       "language": "en",
-      "sha256": null,
-      "collectedAt": null,
+      "sha256": "d56f5c717787045508d527bea0b3ebd6cdcf573319e409f90a8940e85a869069",
+      "collectedAt": "2026-10-12T14:03:19.876993+00:00",
       "rulesVersion": null,
-      "wikiBuild": null,
-      "collectionStatus": "pending",
-      "documents": [],
-      "uuids": [],
+      "wikiBuild": "0.157",
+      "collectionStatus": "collected",
+      "documents": [
+        "Compendium.runarcana.rules.JournalEntry.fb3f191a825ea988",
+        "Compendium.runarcana.spells.Item.ba2549e79c32c652"
+      ],
+      "uuids": [
+        "Compendium.runarcana.rules.JournalEntry.fb3f191a825ea988",
+        "Compendium.runarcana.spells.Item.ba2549e79c32c652"
+      ],
       "test": "tests/corpus.test.mjs",
       "status": "partial",
-      "textual": "missing",
+      "textual": "complete",
       "mechanical": "manual",
       "redistribution": "permission-confirmed-by-maintainer",
-      "limit": "Full source not yet collected.",
-      "referenceUuid": null
+      "kind": "spell",
+      "limit": "Full source text included under the recorded permission; mechanical coverage remains separate.",
+      "referenceUuid": "Compendium.runarcana.rules.JournalEntry.fb3f191a825ea988"
     },
     {
       "id": "/en/magic/spells/true-polymorph/",
@@ -150976,20 +151384,27 @@
       "url": "https://wiki.runarcana.org/en/magic/spells/true-seeing/",
       "anchor": null,
       "language": "en",
-      "sha256": null,
-      "collectedAt": null,
+      "sha256": "bc684e1c583dc6d1013edb2efd707a1206afcc7fb93cf8ddcab137ac7d55cc81",
+      "collectedAt": "2026-10-12T14:03:32.565393+00:00",
       "rulesVersion": null,
-      "wikiBuild": null,
-      "collectionStatus": "pending",
-      "documents": [],
-      "uuids": [],
+      "wikiBuild": "0.157",
+      "collectionStatus": "collected",
+      "documents": [
+        "Compendium.runarcana.rules.JournalEntry.48b9fdcf21c90e78",
+        "Compendium.runarcana.spells.Item.c151e7d31946c346"
+      ],
+      "uuids": [
+        "Compendium.runarcana.rules.JournalEntry.48b9fdcf21c90e78",
+        "Compendium.runarcana.spells.Item.c151e7d31946c346"
+      ],
       "test": "tests/corpus.test.mjs",
       "status": "partial",
-      "textual": "missing",
+      "textual": "complete",
       "mechanical": "manual",
       "redistribution": "permission-confirmed-by-maintainer",
-      "limit": "Full source not yet collected.",
-      "referenceUuid": null
+      "kind": "spell",
+      "limit": "Full source text included under the recorded permission; mechanical coverage remains separate.",
+      "referenceUuid": "Compendium.runarcana.rules.JournalEntry.48b9fdcf21c90e78"
     },
     {
       "id": "/en/magic/spells/true-strike/",
@@ -150998,20 +151413,27 @@
       "url": "https://wiki.runarcana.org/en/magic/spells/true-strike/",
       "anchor": null,
       "language": "en",
-      "sha256": null,
-      "collectedAt": null,
+      "sha256": "8281dd0a2fd52c7a4d3f622e525d0416b25e3e72f1a84f822311dcdceccd402d",
+      "collectedAt": "2026-10-12T14:03:45.235536+00:00",
       "rulesVersion": null,
-      "wikiBuild": null,
-      "collectionStatus": "pending",
-      "documents": [],
-      "uuids": [],
+      "wikiBuild": "0.157",
+      "collectionStatus": "collected",
+      "documents": [
+        "Compendium.runarcana.rules.JournalEntry.74292e7bbfc5d309",
+        "Compendium.runarcana.spells.Item.c0f4e80cc8426dd1"
+      ],
+      "uuids": [
+        "Compendium.runarcana.rules.JournalEntry.74292e7bbfc5d309",
+        "Compendium.runarcana.spells.Item.c0f4e80cc8426dd1"
+      ],
       "test": "tests/corpus.test.mjs",
       "status": "partial",
-      "textual": "missing",
+      "textual": "complete",
       "mechanical": "manual",
       "redistribution": "permission-confirmed-by-maintainer",
-      "limit": "Full source not yet collected.",
-      "referenceUuid": null
+      "kind": "spell",
+      "limit": "Full source text included under the recorded permission; mechanical coverage remains separate.",
+      "referenceUuid": "Compendium.runarcana.rules.JournalEntry.74292e7bbfc5d309"
     },
     {
       "id": "/en/magic/spells/tsunami/",
@@ -151320,20 +151742,27 @@
       "url": "https://wiki.runarcana.org/en/magic/spells/wall-of-ice/",
       "anchor": null,
       "language": "en",
-      "sha256": null,
-      "collectedAt": null,
+      "sha256": "693838ccc05c15a00cf2f5c24692b1a12767ab2e8ddc8e14dd9893ef5e1c7a49",
+      "collectedAt": "2026-10-12T14:03:57.910514+00:00",
       "rulesVersion": null,
-      "wikiBuild": null,
-      "collectionStatus": "pending",
-      "documents": [],
-      "uuids": [],
+      "wikiBuild": "0.157",
+      "collectionStatus": "collected",
+      "documents": [
+        "Compendium.runarcana.rules.JournalEntry.d09305fd2f1e69f0",
+        "Compendium.runarcana.spells.Item.2b1a654b479410e8"
+      ],
+      "uuids": [
+        "Compendium.runarcana.rules.JournalEntry.d09305fd2f1e69f0",
+        "Compendium.runarcana.spells.Item.2b1a654b479410e8"
+      ],
       "test": "tests/corpus.test.mjs",
       "status": "partial",
-      "textual": "missing",
+      "textual": "complete",
       "mechanical": "manual",
       "redistribution": "permission-confirmed-by-maintainer",
-      "limit": "Full source not yet collected.",
-      "referenceUuid": null
+      "kind": "spell",
+      "limit": "Full source text included under the recorded permission; mechanical coverage remains separate.",
+      "referenceUuid": "Compendium.runarcana.rules.JournalEntry.d09305fd2f1e69f0"
     },
     {
       "id": "/en/magic/spells/wall-of-stone/",
@@ -286450,7 +286879,7 @@
     {
       "part": 2,
       "kind": "spell",
-      "pages": 178
+      "pages": 236
     },
     {
       "part": 3,
@@ -286486,8 +286915,8 @@
     "gm": 21,
     "rewards": 177,
     "afflictions": 165,
-    "rules": 198,
-    "spells": 178,
+    "rules": 256,
+    "spells": 236,
     "companions": 1,
     "creature-rules": 164,
     "creature-features": 2973,

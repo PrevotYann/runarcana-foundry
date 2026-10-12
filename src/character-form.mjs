@@ -1,4 +1,5 @@
 import {ABILITIES,SKILLS,REGIONS,MARTIAL_WEAPONS,WEAPONS} from './character.mjs';
+import {REGIONAL_RULES,EQUIPMENT_WEAPONS} from './regional.mjs';
 
 export async function renderCharacterForm(root,{actor,onCreated}={}) {
   const api=game.modules.get('runarcana').api,t=k=>game.i18n.localize('RUNARCANA.'+k);
@@ -51,6 +52,26 @@ export async function renderCharacterForm(root,{actor,onCreated}={}) {
       const region=label(details,t('Creation.Region'),select((fixed?[fixed]:Object.keys(REGIONS)).map(k=>[k,k]),initial.region));
       const language=label(details,t('Creation.RegionLanguage'),select([]));
       const languageUpdate=()=>{language.replaceChildren(...REGIONS[region.value].map(l=>{const o=node('option',l);o.value=l;return o;}));if(REGIONS[region.value].includes(initial.regionLanguage))language.value=initial.regionLanguage;};region.addEventListener('change',languageUpdate);languageUpdate();language.disabled=p.origin==='Runeborn'||p.origin==='Chireans';
+      const regionalArea=node('section');details.append(regionalArea);let readRegional=()=>undefined;
+      const regionalUpdate=()=>{
+        regionalArea.replaceChildren();const rules=REGIONAL_RULES[region.value];language.parentElement.hidden=!!rules;if(!rules){regionalArea.append(node('p',t('Creation.RegionReview')));readRegional=()=>undefined;return;}
+        regionalArea.append(node('h3',t('Creation.RegionalTraits')));if(p.origin==='Runeborn')regionalArea.append(node('p',t('Creation.NativeRegionHint')));
+        const saved=initial.region===region.value?initial.regional:undefined;
+        const skill=label(regionalArea,t('Creation.Choice.skill'),select(skillOptions(rules.skills),saved?.skill));
+        let extraLanguage;if(rules.languages.choices.length)extraLanguage=label(regionalArea,t('Creation.AdditionalLanguage'),select(rules.languages.choices.map(l=>[l,l]),saved?.language));
+        const readers={};
+        for(const group of rules.groups){readers[group.id]=[];
+          const options=[...EQUIPMENT_WEAPONS.filter(w=>group.weapons.includes(w.id)||group.categories.includes(w.category)).map(w=>['weapon:'+w.id,w.name]),...group.crafts.map(c=>['craft:'+c,c])];
+          for(let i=0;i<group.count;i++){
+            const prior=saved?.activities?.[group.id]?.[i],pick=label(regionalArea,t('Creation.RegionalActivity')+' '+(i+1),select(options,prior?prior.kind+':'+prior.id:options[i%options.length]?.[0]));
+            const specialty=label(regionalArea,t('Creation.CraftSpecialty'),input('text',prior?.specialty));
+            const updateSpecialty=()=>{const id=pick.value.slice(6);specialty.disabled=!pick.value.startsWith('craft:')||!(['Minor craft','Craft','Forger discipline'].includes(id)||id.includes(':'));};pick.addEventListener('change',updateSpecialty);updateSpecialty();
+            readers[group.id].push(()=>{const [kind,...parts]=pick.value.split(':');return {kind,id:parts.join(':'),specialty:specialty.value};});
+          }
+        }
+        const source=node('details');source.append(node('summary',t('Creation.RegionalRules')),node('p',rules.sourceRules));regionalArea.append(source);
+        readRegional=()=>({skill:skill.value,language:extraLanguage?.value,activities:Object.fromEntries(Object.entries(readers).map(([k,rows])=>[k,rows.map(read=>read())]))});
+      };region.addEventListener('change',regionalUpdate);regionalUpdate();
       const choices={};for(const c of [...p.choices,...(v?.choices??[])])choices[c.id]=controlFor(details,c,initial.choices?.[c.id]);
       let armorMode,armorProficiencies=[];
       if(p.armorModes){armorMode=label(details,t('Creation.ArmorMode'),select(p.armorModes.filter(m=>m!=='heavy'||['Brutal','Envoy'].includes(v.name)).map(m=>[m,t('Creation.Armor.'+m)]),initial.armorMode??'light'));
@@ -75,7 +96,7 @@ export async function renderCharacterForm(root,{actor,onCreated}={}) {
         const add=node('button',t('Creation.AddTrait'));add.type='button';add.addEventListener('click',()=>{addTrait();invalidate();});details.append(add,node('p',t('Creation.RunebornHint')));
       }
       const rules=node('details');rules.append(node('summary',t('Creation.SourceRules')),node('p',p.notes),node('p',v?.notes??''));details.append(rules);
-      readExtras=()=>({variant:variant.value,size:size.value,region:region.value,regionLanguage:language.value,choices:Object.fromEntries(Object.entries(choices).map(([k,read])=>[k,read()])),...(armorMode?{armorMode:armorMode.value,armorProficiencies:armorProficiencies.filter(([,e])=>e.checked).map(([k])=>k)}:{}),...(power?{runebornPower:power.value,conversions:{minor:Number(minor.checked),major:Number(major.checked)},traits:traitReaders.map(read=>read())}:{})});
+      readExtras=()=>({variant:variant.value,size:size.value,region:region.value,regionLanguage:language.value,regional:readRegional(),choices:Object.fromEntries(Object.entries(choices).map(([k,read])=>[k,read()])),...(armorMode?{armorMode:armorMode.value,armorProficiencies:armorProficiencies.filter(([,e])=>e.checked).map(([k])=>k)}:{}),...(power?{runebornPower:power.value,conversions:{minor:Number(minor.checked),major:Number(major.checked)},traits:traitReaders.map(read=>read())}:{})});
     };
     variant.addEventListener('change',update);update();
   }

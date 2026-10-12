@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "collectedAt": "2026-10-12T13:47:27.438240+00:00",
+  "collectedAt": "2026-10-12T14:09:27.534951+00:00",
   "discoveryComplete": false,
   "pages": [
     {
@@ -18430,9 +18430,16 @@
       "part": 2,
       "language": "en",
       "anchors": [],
-      "status": "pending",
+      "status": "collected",
       "attemptedAt": "2026-10-11T14:05:32.191506+00:00",
-      "cacheAvailable": false
+      "cacheAvailable": false,
+      "resolvedUrl": "https://wiki.runarcana.org/en/magic/spells/animate-dead/",
+      "collectedAt": "2026-10-12T14:04:10.618731+00:00",
+      "sha256": "539db011b50df48d745ed747b378a74f636628863febead6e821212ff1c937ff",
+      "cache": "sources/cache/776ec4be96052a24b3e7235e796198f96964411f070d23f52e3d222bfadab3d2.html",
+      "title": "Animate Dead",
+      "rulesVersion": null,
+      "wikiBuild": "0.157"
     },
     {
       "id": "/en/magic/spells/animate-objects/",
@@ -18480,9 +18487,16 @@
       "part": 2,
       "language": "en",
       "anchors": [],
-      "status": "pending",
+      "status": "collected",
       "attemptedAt": "2026-10-11T14:05:32.227476+00:00",
-      "cacheAvailable": false
+      "cacheAvailable": false,
+      "resolvedUrl": "https://wiki.runarcana.org/en/magic/spells/arcane-armor/",
+      "collectedAt": "2026-10-12T14:04:23.268903+00:00",
+      "sha256": "d5615873d8037dc6293fe65bb1e8200b2e76f6466b801c818a318a730f53df8a",
+      "cache": "sources/cache/ada7a1139e542b2376bb4554c2f8d96e79e45f623304da3fdd73a9f457fee1c8.html",
+      "title": "Arcane Armor",
+      "rulesVersion": null,
+      "wikiBuild": "0.157"
     },
     {
       "id": "/en/magic/spells/arcane-eye/",
@@ -18568,9 +18582,16 @@
       "part": 2,
       "language": "en",
       "anchors": [],
-      "status": "pending",
+      "status": "collected",
       "attemptedAt": "2026-10-11T14:05:32.268164+00:00",
-      "cacheAvailable": false
+      "cacheAvailable": false,
+      "resolvedUrl": "https://wiki.runarcana.org/en/magic/spells/arcane-sword/",
+      "collectedAt": "2026-10-12T14:04:35.993236+00:00",
+      "sha256": "f7b519dbbfeb1919187b76a6ee11dfb281a92f3a52704b9d6c22512b5419b624",
+      "cache": "sources/cache/ee6e766c1953ee75e71b310dab2b88d25e6bff3d0f02933ea9a4912579e0446a.html",
+      "title": "Arcane Sword",
+      "rulesVersion": null,
+      "wikiBuild": "0.157"
     },
     {
       "id": "/en/magic/spells/arcane-touch/",
@@ -18578,9 +18599,16 @@
       "part": 2,
       "language": "en",
       "anchors": [],
-      "status": "pending",
+      "status": "collected",
       "attemptedAt": "2026-10-11T14:05:32.274025+00:00",
-      "cacheAvailable": false
+      "cacheAvailable": false,
+      "resolvedUrl": "https://wiki.runarcana.org/en/magic/spells/arcane-touch/",
+      "collectedAt": "2026-10-12T14:04:48.665741+00:00",
+      "sha256": "029b76f7c2319e89ed8cf53a9ddca0fd1d639f679d9997ae94e00bb13136bc0b",
+      "cache": "sources/cache/30d6776ba995800a09bbf896a314eba44f501f0b23055d0975daa16048fa0428.html",
+      "title": "Arcane Touch",
+      "rulesVersion": null,
+      "wikiBuild": "0.157"
     },
     {
       "id": "/en/magic/spells/arcane-vessel/",
@@ -18628,9 +18656,16 @@
       "part": 2,
       "language": "en",
       "anchors": [],
-      "status": "pending",
+      "status": "collected",
       "attemptedAt": "2026-10-11T14:05:32.303959+00:00",
-      "cacheAvailable": false
+      "cacheAvailable": false,
+      "resolvedUrl": "https://wiki.runarcana.org/en/magic/spells/arctic-crown/",
+      "collectedAt": "2026-10-12T14:05:01.338495+00:00",
+      "sha256": "524a301f65fe1fba7e8121a39e1cd064f813a389d7758ca8ad96a9b599fbf518",
+      "cache": "sources/cache/58b9c5bfc21d3c3a7c0ba1aac33853de8b1ac49d283c5390e0cfd6da43a4cbb3.html",
+      "title": "Arctic Crown",
+      "rulesVersion": null,
+      "wikiBuild": "0.157"
     },
     {
       "id": "/en/magic/spells/arctic-light-jet/",
@@ -18658,9 +18693,16 @@
       "part": 2,
       "language": "en",
       "anchors": [],
-      "status": "pending",
+      "status": "collected",
       "attemptedAt": "2026-10-11T14:05:32.324461+00:00",
-      "cacheAvailable": false
+      "cacheAvailable": false,
+      "resolvedUrl": "https://wiki.runarcana.org/en/magic/spells/arctic-pulse/",
+      "collectedAt": "2026-10-12T14:05:13.993793+00:00",
+      "sha256": "1d9902eaad7d43fffc906126aabed5b6f132a293d12b9b0c11863a6f232c7c9c",
+      "cache": "sources/cache/80573a5446bce1d757a1915c41397cef1625d3cf375ba2492d02f7d0306c0385.html",
+      "title": "Arctic Pulse",
+      "rulesVersion": null,
+      "wikiBuild": "0.157"
     },
     {
       "id": "/en/magic/spells/arctic-skin/",
@@ -18770,9 +18812,16 @@
       "part": 2,
       "language": "en",
       "anchors": [],
-      "status": "pending",
+      "status": "collected",
       "attemptedAt": "2026-10-11T14:05:32.484688+00:00",
-      "cacheAvailable": false
+      "cacheAvailable": false,
+      "resolvedUrl": "https://wiki.runarcana.org/en/magic/spells/banshee-wail/",
+      "collectedAt": "2026-10-12T14:05:26.696828+00:00",
+      "sha256": "7ebb48c7677fd72672633cb2f85cd9b3b869c379edc1ebc7fb66e88b762fbcb6",
+      "cache": "sources/cache/6aa5e2f1a12bd1eaa5db33f5677657fd610af2262e8f83174906dceade79be5a.html",
+      "title": "Banshee Wail",
+      "rulesVersion": null,
+      "wikiBuild": "0.157"
     },
     {
       "id": "/en/magic/spells/barkskin/",
@@ -18858,9 +18907,16 @@
       "part": 2,
       "language": "en",
       "anchors": [],
-      "status": "pending",
+      "status": "collected",
       "attemptedAt": "2026-10-11T14:05:32.533598+00:00",
-      "cacheAvailable": false
+      "cacheAvailable": false,
+      "resolvedUrl": "https://wiki.runarcana.org/en/magic/spells/bestow-curse/",
+      "collectedAt": "2026-10-12T14:05:39.374044+00:00",
+      "sha256": "5bd76129707db8011369cc5c00ad5ad81e43316fa40043b3832d840ff5e3dc6d",
+      "cache": "sources/cache/67c2d858b032d0d82a234f69b514aa6291d3718e7fd22ee6c6b02077caad2227.html",
+      "title": "Bestow Curse",
+      "rulesVersion": null,
+      "wikiBuild": "0.157"
     },
     {
       "id": "/en/magic/spells/blade-barrier/",
@@ -19045,9 +19101,16 @@
       "part": 2,
       "language": "en",
       "anchors": [],
-      "status": "pending",
+      "status": "collected",
       "attemptedAt": "2026-10-11T14:05:32.716901+00:00",
-      "cacheAvailable": false
+      "cacheAvailable": false,
+      "resolvedUrl": "https://wiki.runarcana.org/en/magic/spells/blood-weapon/",
+      "collectedAt": "2026-10-12T14:05:52.041919+00:00",
+      "sha256": "4b7696397c1b5da9c3d339b8457b99f904e012001d9951ebab7d69f68b08ac1a",
+      "cache": "sources/cache/9a18938aa79a0cac104bc088432aa3fb0eaf20c6e91c79f0b18ebd44cbd069a2.html",
+      "title": "Blood Weapon",
+      "rulesVersion": null,
+      "wikiBuild": "0.157"
     },
     {
       "id": "/en/magic/spells/blooming-burst/",
@@ -19091,9 +19154,16 @@
       "part": 2,
       "language": "en",
       "anchors": [],
-      "status": "pending",
+      "status": "collected",
       "attemptedAt": "2026-10-11T14:05:32.803993+00:00",
-      "cacheAvailable": false
+      "cacheAvailable": false,
+      "resolvedUrl": "https://wiki.runarcana.org/en/magic/spells/burning-dust/",
+      "collectedAt": "2026-10-12T14:06:04.760883+00:00",
+      "sha256": "64627c4fd44f205d740a6be2a005f49ca041b75204d18babcf5b8b7af31e4476",
+      "cache": "sources/cache/defd05a431ec652f650c6f86501a821b2cb6a5b93aa29e447124379f6f146365.html",
+      "title": "Burning Dust",
+      "rulesVersion": null,
+      "wikiBuild": "0.157"
     },
     {
       "id": "/en/magic/spells/burning-hands/",
@@ -19182,9 +19252,16 @@
       "part": 2,
       "language": "en",
       "anchors": [],
-      "status": "pending",
+      "status": "collected",
       "attemptedAt": "2026-10-11T14:05:32.876000+00:00",
-      "cacheAvailable": false
+      "cacheAvailable": false,
+      "resolvedUrl": "https://wiki.runarcana.org/en/magic/spells/caustic-wave/",
+      "collectedAt": "2026-10-12T14:06:17.427094+00:00",
+      "sha256": "fa305a8a50060f2c99dfd2dce22b4fc3cadba3ec1172e917ee199e865abb175e",
+      "cache": "sources/cache/6edc7c8f52826eaa5e5238236c48cfad770c519b316dbf3fe1e7971708f538b4.html",
+      "title": "Caustic Wave",
+      "rulesVersion": null,
+      "wikiBuild": "0.157"
     },
     {
       "id": "/en/magic/spells/cauterize/",
@@ -19219,9 +19296,16 @@
       "part": 2,
       "language": "en",
       "anchors": [],
-      "status": "pending",
+      "status": "collected",
       "attemptedAt": "2026-10-11T14:05:32.906330+00:00",
-      "cacheAvailable": false
+      "cacheAvailable": false,
+      "resolvedUrl": "https://wiki.runarcana.org/en/magic/spells/charm-person/",
+      "collectedAt": "2026-10-12T14:06:30.088658+00:00",
+      "sha256": "584c79d50de75a19b57c6688ca07567b54051cc45df8ede3bf1a8901e836f754",
+      "cache": "sources/cache/7ba5a1ed031043a888f8ec9e158a150c9eb341fe571ea4d7c948f28bc0ed9e33.html",
+      "title": "Charm Person",
+      "rulesVersion": null,
+      "wikiBuild": "0.157"
     },
     {
       "id": "/en/magic/spells/chill-touch/",
@@ -19286,9 +19370,16 @@
       "part": 2,
       "language": "en",
       "anchors": [],
-      "status": "pending",
+      "status": "collected",
       "attemptedAt": "2026-10-11T14:05:32.958879+00:00",
-      "cacheAvailable": false
+      "cacheAvailable": false,
+      "resolvedUrl": "https://wiki.runarcana.org/en/magic/spells/clairvoyance/",
+      "collectedAt": "2026-10-12T14:06:42.750383+00:00",
+      "sha256": "eeddd10e7765c12794d1517246256ef530b57b26b11988dc5b7f98ddfda49eea",
+      "cache": "sources/cache/f14a32dc769107ddd12a0b6cb506feb5124585b7f707ffd5360ecc969656082e.html",
+      "title": "Clairvoyance",
+      "rulesVersion": null,
+      "wikiBuild": "0.157"
     },
     {
       "id": "/en/magic/spells/clone/",
@@ -19418,9 +19509,16 @@
       "part": 2,
       "language": "en",
       "anchors": [],
-      "status": "pending",
+      "status": "collected",
       "attemptedAt": "2026-10-11T14:05:33.191070+00:00",
-      "cacheAvailable": false
+      "cacheAvailable": false,
+      "resolvedUrl": "https://wiki.runarcana.org/en/magic/spells/cone-of-cold/",
+      "collectedAt": "2026-10-12T14:06:55.467485+00:00",
+      "sha256": "e6353331bb22cfa66c001c38410e211becf168a6c0cfadf831e10d6a93e81cfb",
+      "cache": "sources/cache/f0d8846bba0ba72343414a7d1a724972ab8c9ab5d23c4afb6362a1d4b47876f9.html",
+      "title": "Cone of Cold",
+      "rulesVersion": null,
+      "wikiBuild": "0.157"
     },
     {
       "id": "/en/magic/spells/conflagration/",
@@ -19555,9 +19653,16 @@
       "part": 2,
       "language": "en",
       "anchors": [],
-      "status": "pending",
+      "status": "collected",
       "attemptedAt": "2026-10-11T14:05:33.292189+00:00",
-      "cacheAvailable": false
+      "cacheAvailable": false,
+      "resolvedUrl": "https://wiki.runarcana.org/en/magic/spells/constriction/",
+      "collectedAt": "2026-10-12T14:07:08.178762+00:00",
+      "sha256": "87a40652efff9e11bb3f7d6005ec378226328dee3088d5ea1e501ef747bb81bf",
+      "cache": "sources/cache/34716f04f75a77b5036d64e8ee4b46a8c1629d77520014bae3814880086b8353.html",
+      "title": "Constriction",
+      "rulesVersion": null,
+      "wikiBuild": "0.157"
     },
     {
       "id": "/en/magic/spells/consume-water/",
@@ -19676,9 +19781,16 @@
       "part": 2,
       "language": "en",
       "anchors": [],
-      "status": "pending",
+      "status": "collected",
       "attemptedAt": "2026-10-11T14:05:33.371189+00:00",
-      "cacheAvailable": false
+      "cacheAvailable": false,
+      "resolvedUrl": "https://wiki.runarcana.org/en/magic/spells/counterspell/",
+      "collectedAt": "2026-10-12T14:07:20.880875+00:00",
+      "sha256": "6807703c2ee753ef3d5c41ac1670b7244ac7d7291717d8c38561cbf4142fc8a9",
+      "cache": "sources/cache/63bbd406bcf9604004e75e655bc9b3b1dfe1a1fcd27bace1b316d9223beb8798.html",
+      "title": "Counterspell",
+      "rulesVersion": null,
+      "wikiBuild": "0.157"
     },
     {
       "id": "/en/magic/spells/crackling-ray/",
@@ -19809,9 +19921,16 @@
       "part": 2,
       "language": "en",
       "anchors": [],
-      "status": "pending",
+      "status": "collected",
       "attemptedAt": "2026-10-11T14:05:33.510922+00:00",
-      "cacheAvailable": false
+      "cacheAvailable": false,
+      "resolvedUrl": "https://wiki.runarcana.org/en/magic/spells/crystal-soul/",
+      "collectedAt": "2026-10-12T14:07:33.600003+00:00",
+      "sha256": "beaa47864c55e6838bb537b5b8c5764fee6940d3ba68e5b1aab4bae198274ad0",
+      "cache": "sources/cache/5e2014fc12830b74ecd714afb1d4f25a56bcd0737c19ab9ab3c0cdc946521880.html",
+      "title": "Crystal Soul",
+      "rulesVersion": null,
+      "wikiBuild": "0.157"
     },
     {
       "id": "/en/magic/spells/cure-wounds/",
@@ -19958,9 +20077,16 @@
       "part": 2,
       "language": "en",
       "anchors": [],
-      "status": "pending",
+      "status": "collected",
       "attemptedAt": "2026-10-11T14:05:33.601201+00:00",
-      "cacheAvailable": false
+      "cacheAvailable": false,
+      "resolvedUrl": "https://wiki.runarcana.org/en/magic/spells/detect-magic/",
+      "collectedAt": "2026-10-12T14:07:46.269804+00:00",
+      "sha256": "367c2f7fb63205a6e805f37906542a6ee84244013898f994d9f3d893b2e4f29b",
+      "cache": "sources/cache/db9715cf0205963aa143d4969358929c27ea17bcb723862c065d98ac4717252e.html",
+      "title": "Detect Magic",
+      "rulesVersion": null,
+      "wikiBuild": "0.157"
     },
     {
       "id": "/en/magic/spells/detect-poison-and-disease/",
@@ -20079,9 +20205,16 @@
       "part": 2,
       "language": "en",
       "anchors": [],
-      "status": "pending",
+      "status": "collected",
       "attemptedAt": "2026-10-11T14:05:33.690695+00:00",
-      "cacheAvailable": false
+      "cacheAvailable": false,
+      "resolvedUrl": "https://wiki.runarcana.org/en/magic/spells/disintegrate/",
+      "collectedAt": "2026-10-12T14:07:58.971602+00:00",
+      "sha256": "07a404c944107c944ead8501575c3ea17c3349fd406cfffcbc1c40bea8bd2fe6",
+      "cache": "sources/cache/440554e8d3ed2abd133f1227c72fb9a034be68261f3cf37a6ad4384ca153cae5.html",
+      "title": "Disintegrate",
+      "rulesVersion": null,
+      "wikiBuild": "0.157"
     },
     {
       "id": "/en/magic/spells/disintegration-mantra/",
@@ -20099,9 +20232,16 @@
       "part": 2,
       "language": "en",
       "anchors": [],
-      "status": "pending",
+      "status": "collected",
       "attemptedAt": "2026-10-11T14:05:33.710140+00:00",
-      "cacheAvailable": false
+      "cacheAvailable": false,
+      "resolvedUrl": "https://wiki.runarcana.org/en/magic/spells/dispel-magic/",
+      "collectedAt": "2026-10-12T14:08:11.677411+00:00",
+      "sha256": "80c1e3eab46b933cd849bef0383dec43b344ddf78f8b1d567ab8c23d5fa9a8dd",
+      "cache": "sources/cache/1ce2b1fe5b615cc591f7904475b7b58132e1b3f027f47f39cb9eb8ae9ea7286a.html",
+      "title": "Dispel Magic",
+      "rulesVersion": null,
+      "wikiBuild": "0.157"
     },
     {
       "id": "/en/magic/spells/dispell-good-and-evil/",
@@ -20146,9 +20286,16 @@
       "part": 2,
       "language": "en",
       "anchors": [],
-      "status": "pending",
+      "status": "collected",
       "attemptedAt": "2026-10-11T14:05:33.749968+00:00",
-      "cacheAvailable": false
+      "cacheAvailable": false,
+      "resolvedUrl": "https://wiki.runarcana.org/en/magic/spells/divine-favor/",
+      "collectedAt": "2026-10-12T14:08:24.374779+00:00",
+      "sha256": "6b872ba382091599923248f047ae095f8513226cdcbf557de09b4f6cd7af2264",
+      "cache": "sources/cache/064e0bb7f3719dd7f560441e84e764ab7967276dc398c353f2e0f8786cab5463.html",
+      "title": "Divine Favor",
+      "rulesVersion": null,
+      "wikiBuild": "0.157"
     },
     {
       "id": "/en/magic/spells/do-you-want-to-play-in-the-snow/",
@@ -20527,9 +20674,16 @@
       "part": 2,
       "language": "en",
       "anchors": [],
-      "status": "pending",
+      "status": "collected",
       "attemptedAt": "2026-10-11T14:05:34.116869+00:00",
-      "cacheAvailable": false
+      "cacheAvailable": false,
+      "resolvedUrl": "https://wiki.runarcana.org/en/magic/spells/etherealness/",
+      "collectedAt": "2026-10-12T14:08:37.066005+00:00",
+      "sha256": "d70c5665941801976fc00aa2416242430410b0f2f03b5cf876c3ee912f1895bd",
+      "cache": "sources/cache/16efdcc26c1c22aa0542157256cd67beea6dd95d57845fc972bb7c17380c0bee.html",
+      "title": "Etherealness",
+      "rulesVersion": null,
+      "wikiBuild": "0.157"
     },
     {
       "id": "/en/magic/spells/etna/",
@@ -20733,9 +20887,16 @@
       "part": 2,
       "language": "en",
       "anchors": [],
-      "status": "pending",
+      "status": "collected",
       "attemptedAt": "2026-10-11T14:05:34.366225+00:00",
-      "cacheAvailable": false
+      "cacheAvailable": false,
+      "resolvedUrl": "https://wiki.runarcana.org/en/magic/spells/feather-fall/",
+      "collectedAt": "2026-10-12T14:08:49.736264+00:00",
+      "sha256": "3c46465cfca35c8cf3060c159891d0d003a28dc0704f75f0e98264d1f5baa032",
+      "cache": "sources/cache/d7c12761397339f72584d306cd0bb905bac95751015a4d01bea6e8c238d45ab6.html",
+      "title": "Feather Fall",
+      "rulesVersion": null,
+      "wikiBuild": "0.157"
     },
     {
       "id": "/en/magic/spells/feeblemind/",
@@ -20858,10 +21019,16 @@
       "part": 2,
       "language": "en",
       "anchors": [],
-      "status": "source-unavailable",
+      "status": "collected",
       "attemptedAt": "2026-10-12T13:47:27.438064+00:00",
       "cacheAvailable": false,
-      "error": "HTTP Error 429: Too Many Requests"
+      "resolvedUrl": "https://wiki.runarcana.org/en/magic/spells/fire-domain/",
+      "collectedAt": "2026-10-12T13:57:12.004500+00:00",
+      "sha256": "1443b08eda044021852c507cd1ee004da0b5ec1e36b93b6822c439ee7ba330fa",
+      "cache": "sources/cache/c42ddd17353b37d588534ca10106c385870d2a71fecacb751720673b01c8849e.html",
+      "title": "Fire Domain",
+      "rulesVersion": null,
+      "wikiBuild": "0.157"
     },
     {
       "id": "/en/magic/spells/fire-storm/",
@@ -20886,9 +21053,16 @@
       "part": 2,
       "language": "en",
       "anchors": [],
-      "status": "pending",
+      "status": "collected",
       "attemptedAt": "2026-10-11T14:05:34.468468+00:00",
-      "cacheAvailable": false
+      "cacheAvailable": false,
+      "resolvedUrl": "https://wiki.runarcana.org/en/magic/spells/flame-blade/",
+      "collectedAt": "2026-10-12T13:57:24.679211+00:00",
+      "sha256": "7a01d8c211774c5cd483a5872dc8d6beca526eceaab8b262190a55d75a738545",
+      "cache": "sources/cache/1fe7a4a971cd4d07a8976621dace9f3e9b0d655d0fbd5d32eb2b8dc9f341da40.html",
+      "title": "Flame Blade",
+      "rulesVersion": null,
+      "wikiBuild": "0.157"
     },
     {
       "id": "/en/magic/spells/flaming-sphere/",
@@ -20969,9 +21143,16 @@
       "part": 2,
       "language": "en",
       "anchors": [],
-      "status": "pending",
+      "status": "collected",
       "attemptedAt": "2026-10-11T14:05:34.567838+00:00",
-      "cacheAvailable": false
+      "cacheAvailable": false,
+      "resolvedUrl": "https://wiki.runarcana.org/en/magic/spells/forbiddance/",
+      "collectedAt": "2026-10-12T13:57:37.368512+00:00",
+      "sha256": "9cf099000dacdfe9616fa8ecfa22485212958d1efcd5671a2a24db3649324030",
+      "cache": "sources/cache/5534732aac402f787e4fa3ef651f36debdf0308a68d3fa4e4167c492052173cb.html",
+      "title": "Forbiddance",
+      "rulesVersion": null,
+      "wikiBuild": "0.157"
     },
     {
       "id": "/en/magic/spells/forcecage/",
@@ -21053,9 +21234,16 @@
       "part": 2,
       "language": "en",
       "anchors": [],
-      "status": "pending",
+      "status": "collected",
       "attemptedAt": "2026-10-11T14:05:34.629865+00:00",
-      "cacheAvailable": false
+      "cacheAvailable": false,
+      "resolvedUrl": "https://wiki.runarcana.org/en/magic/spells/frost-armor/",
+      "collectedAt": "2026-10-12T13:57:50.041063+00:00",
+      "sha256": "48b5c3b2f6eaa453b5c68a0d0a09e9bdcda67864d6f39058f30f5048f6eac5d5",
+      "cache": "sources/cache/59fa878a24fde0af1ad9765e7cdeacde2faffd4520504b6584cc89924412d295.html",
+      "title": "Frost Armor",
+      "rulesVersion": null,
+      "wikiBuild": "0.157"
     },
     {
       "id": "/en/magic/spells/frost-barb/",
@@ -21182,9 +21370,16 @@
       "part": 2,
       "language": "en",
       "anchors": [],
-      "status": "pending",
+      "status": "collected",
       "attemptedAt": "2026-10-11T14:05:34.751813+00:00",
-      "cacheAvailable": false
+      "cacheAvailable": false,
+      "resolvedUrl": "https://wiki.runarcana.org/en/magic/spells/gaseous-form/",
+      "collectedAt": "2026-10-12T14:09:02.426502+00:00",
+      "sha256": "5a64ed3c5541dbc96e2169fd1cd47d89cb4e50123f68bf3a42b81a3e4dd88500",
+      "cache": "sources/cache/dfa49684e86221ea1375a77672a2a287104707fd7ad03e8142bf395d949317b1.html",
+      "title": "Gaseous Form",
+      "rulesVersion": null,
+      "wikiBuild": "0.157"
     },
     {
       "id": "/en/magic/spells/gate/",
@@ -21224,9 +21419,16 @@
       "part": 2,
       "language": "en",
       "anchors": [],
-      "status": "pending",
+      "status": "collected",
       "attemptedAt": "2026-10-11T14:05:34.851668+00:00",
-      "cacheAvailable": false
+      "cacheAvailable": false,
+      "resolvedUrl": "https://wiki.runarcana.org/en/magic/spells/giant-insect/",
+      "collectedAt": "2026-10-12T14:09:15.080286+00:00",
+      "sha256": "397df1060e7ab4250607afcf48683c14d3b9afeee541082ee150b2dae7c8db2b",
+      "cache": "sources/cache/5c9c4a34be4365a6de5cc4393fde6c99516b1b0a5c6b29da57040b6ac528627d.html",
+      "title": "Giant Insect",
+      "rulesVersion": null,
+      "wikiBuild": "0.157"
     },
     {
       "id": "/en/magic/spells/glacial-breath/",
@@ -21284,9 +21486,10 @@
       "part": 2,
       "language": "en",
       "anchors": [],
-      "status": "pending",
-      "attemptedAt": "2026-10-11T14:05:34.904152+00:00",
-      "cacheAvailable": false
+      "status": "source-unavailable",
+      "attemptedAt": "2026-10-12T14:09:27.534680+00:00",
+      "cacheAvailable": false,
+      "error": "HTTP Error 429: Too Many Requests"
     },
     {
       "id": "/en/magic/spells/glibness/",
@@ -21646,9 +21849,16 @@
       "part": 2,
       "language": "en",
       "anchors": [],
-      "status": "pending",
+      "status": "collected",
       "attemptedAt": "2026-10-11T14:05:35.405875+00:00",
-      "cacheAvailable": false
+      "cacheAvailable": false,
+      "resolvedUrl": "https://wiki.runarcana.org/en/magic/spells/hold-person/",
+      "collectedAt": "2026-10-12T13:58:02.810193+00:00",
+      "sha256": "b8b48313038bb8a3566b0d272aa39173107b02d72489886ce79e269ac99dc4e5",
+      "cache": "sources/cache/de18aa0baca391f633b6465b19babdf822e09cd25e88877d2112dbaf323b4f46.html",
+      "title": "Hold Person",
+      "rulesVersion": null,
+      "wikiBuild": "0.157"
     },
     {
       "id": "/en/magic/spells/holy-aura/",
@@ -22095,9 +22305,16 @@
       "part": 2,
       "language": "en",
       "anchors": [],
-      "status": "pending",
+      "status": "collected",
       "attemptedAt": "2026-10-11T14:05:35.774630+00:00",
-      "cacheAvailable": false
+      "cacheAvailable": false,
+      "resolvedUrl": "https://wiki.runarcana.org/en/magic/spells/legend-lore/",
+      "collectedAt": "2026-10-12T13:58:15.492370+00:00",
+      "sha256": "a3ba9a84c080a121f53ac104c958a73abe7e1a93fed35c77a220ed3dc2a40e9d",
+      "cache": "sources/cache/40c7b55913cac977af7e2b5676f153402ca9cc3e3be993908b00020c0305cd38.html",
+      "title": "Legend Lore",
+      "rulesVersion": null,
+      "wikiBuild": "0.157"
     },
     {
       "id": "/en/magic/spells/lesser-flask/",
@@ -22248,9 +22465,16 @@
       "part": 2,
       "language": "en",
       "anchors": [],
-      "status": "pending",
+      "status": "collected",
       "attemptedAt": "2026-10-11T14:05:35.951604+00:00",
-      "cacheAvailable": false
+      "cacheAvailable": false,
+      "resolvedUrl": "https://wiki.runarcana.org/en/magic/spells/longstrider/",
+      "collectedAt": "2026-10-12T13:58:28.150700+00:00",
+      "sha256": "ebc26ad92c9e448dcc5aaa9ac2372531c61df37d066f67cd50899842d02ebbaf",
+      "cache": "sources/cache/7f9e2d594bcb2e7801507393f02812fe021b6f9c12b9c71b7444c5162bbcab38.html",
+      "title": "Longstrider",
+      "rulesVersion": null,
+      "wikiBuild": "0.157"
     },
     {
       "id": "/en/magic/spells/lucent-singularity/",
@@ -22335,9 +22559,16 @@
       "part": 2,
       "language": "en",
       "anchors": [],
-      "status": "pending",
+      "status": "collected",
       "attemptedAt": "2026-10-11T14:05:36.024934+00:00",
-      "cacheAvailable": false
+      "cacheAvailable": false,
+      "resolvedUrl": "https://wiki.runarcana.org/en/magic/spells/magic-mouth/",
+      "collectedAt": "2026-10-12T13:58:40.821379+00:00",
+      "sha256": "1c89d8719990a11d9a78e56a467cacc2a1017d4fea8036f8f91778f0d9538501",
+      "cache": "sources/cache/55713339e8cddec7d5e254e68e2f0291e07874a968d48b8cdb504e752adec97b.html",
+      "title": "Magic Mouth",
+      "rulesVersion": null,
+      "wikiBuild": "0.157"
     },
     {
       "id": "/en/magic/spells/magic-weapon/",
@@ -22365,9 +22596,16 @@
       "part": 2,
       "language": "en",
       "anchors": [],
-      "status": "pending",
+      "status": "collected",
       "attemptedAt": "2026-10-11T14:05:36.051910+00:00",
-      "cacheAvailable": false
+      "cacheAvailable": false,
+      "resolvedUrl": "https://wiki.runarcana.org/en/magic/spells/magma-aegis/",
+      "collectedAt": "2026-10-12T13:58:53.472823+00:00",
+      "sha256": "37058148890a1424ea146dc42604499fb74836df59fd3eda4be84be168607565",
+      "cache": "sources/cache/23d0ca82876f791bb670422703d4b6a73f8611650b1ada3f4e11629139dbfc8e.html",
+      "title": "Magma Aegis",
+      "rulesVersion": null,
+      "wikiBuild": "0.157"
     },
     {
       "id": "/en/magic/spells/magmatic-touch/",
@@ -22395,9 +22633,16 @@
       "part": 2,
       "language": "en",
       "anchors": [],
-      "status": "pending",
+      "status": "collected",
       "attemptedAt": "2026-10-11T14:05:36.080104+00:00",
-      "cacheAvailable": false
+      "cacheAvailable": false,
+      "resolvedUrl": "https://wiki.runarcana.org/en/magic/spells/major-image/",
+      "collectedAt": "2026-10-12T13:59:06.160134+00:00",
+      "sha256": "58ecbb00e7f39b1eda68f75480eab0a9ff9d559cb292c9fcde822d846e93b329",
+      "cache": "sources/cache/4dc231c890084e84671d520877eccf8dac320a42237aff4bb71bb5ab04759bd1.html",
+      "title": "Major Image",
+      "rulesVersion": null,
+      "wikiBuild": "0.157"
     },
     {
       "id": "/en/magic/spells/manifest-effigy/",
@@ -22565,9 +22810,16 @@
       "part": 2,
       "language": "en",
       "anchors": [],
-      "status": "pending",
+      "status": "collected",
       "attemptedAt": "2026-10-11T14:05:36.256778+00:00",
-      "cacheAvailable": false
+      "cacheAvailable": false,
+      "resolvedUrl": "https://wiki.runarcana.org/en/magic/spells/metal-steed/",
+      "collectedAt": "2026-10-12T13:59:18.836218+00:00",
+      "sha256": "fa45fb53e3b8954306a5b993d78006565c83e76f22bb740d11017dad6e065984",
+      "cache": "sources/cache/e1571a4d54797f8a842746db7dfa6a387005bba2e388cde50fd0e21f3e6a9fcd.html",
+      "title": "Metal Steed",
+      "rulesVersion": null,
+      "wikiBuild": "0.157"
     },
     {
       "id": "/en/magic/spells/metamorphosis/",
@@ -22874,9 +23126,16 @@
       "part": 2,
       "language": "en",
       "anchors": [],
-      "status": "pending",
+      "status": "collected",
       "attemptedAt": "2026-10-11T14:05:36.491304+00:00",
-      "cacheAvailable": false
+      "cacheAvailable": false,
+      "resolvedUrl": "https://wiki.runarcana.org/en/magic/spells/plane-shift/",
+      "collectedAt": "2026-10-12T13:59:31.578244+00:00",
+      "sha256": "150fd08ad9a13d91d7b30b55f2d2e83265bbd1b49af66cb33fac346aa8713553",
+      "cache": "sources/cache/dacdaab2c42705565bc2c78411e946cdef131a1a1bcc5bb9bd57f27cdaabcc1b.html",
+      "title": "Plane Shift",
+      "rulesVersion": null,
+      "wikiBuild": "0.157"
     },
     {
       "id": "/en/magic/spells/plant-growth/",
@@ -23374,9 +23633,16 @@
       "part": 2,
       "language": "en",
       "anchors": [],
-      "status": "pending",
+      "status": "collected",
       "attemptedAt": "2026-10-11T14:05:36.871257+00:00",
-      "cacheAvailable": false
+      "cacheAvailable": false,
+      "resolvedUrl": "https://wiki.runarcana.org/en/magic/spells/rune-prison/",
+      "collectedAt": "2026-10-12T13:59:44.243664+00:00",
+      "sha256": "51a8d6a8aff9c66d2bd9dc7b4ffd72e803e39820efa2f6fc70aa8e6386e76393",
+      "cache": "sources/cache/c7318be612b79f85835e848d4440f9700879e24bc5bafb37ccebcde4fd897a94.html",
+      "title": "Rune Prison",
+      "rulesVersion": null,
+      "wikiBuild": "0.157"
     },
     {
       "id": "/en/magic/spells/runic-blast/",
@@ -23384,9 +23650,16 @@
       "part": 2,
       "language": "en",
       "anchors": [],
-      "status": "pending",
+      "status": "collected",
       "attemptedAt": "2026-10-11T14:05:36.880411+00:00",
-      "cacheAvailable": false
+      "cacheAvailable": false,
+      "resolvedUrl": "https://wiki.runarcana.org/en/magic/spells/runic-blast/",
+      "collectedAt": "2026-10-12T13:59:56.922739+00:00",
+      "sha256": "aa43a6f4b7e30cf7570b4f7445c1960a74df4b5ca961fb636316bbfef03b3591",
+      "cache": "sources/cache/f12cd72aa92e4634513f63e61313c0241ec8adc20e4b516c85aada7dd502bd2c.html",
+      "title": "Runic Blast",
+      "rulesVersion": null,
+      "wikiBuild": "0.157"
     },
     {
       "id": "/en/magic/spells/sacred-flame/",
@@ -23438,9 +23711,16 @@
       "part": 2,
       "language": "en",
       "anchors": [],
-      "status": "pending",
+      "status": "collected",
       "attemptedAt": "2026-10-11T14:05:36.917788+00:00",
-      "cacheAvailable": false
+      "cacheAvailable": false,
+      "resolvedUrl": "https://wiki.runarcana.org/en/magic/spells/sand-coffin/",
+      "collectedAt": "2026-10-12T14:00:09.629562+00:00",
+      "sha256": "62c75e34d04387a6506f80ab387a4a6075d46549cbb37037375cb545b130eac7",
+      "cache": "sources/cache/19e6f7ed594396d437303df68893f860c7b9baa5b4addb335488233bfd62e5e2.html",
+      "title": "Sand Coffin",
+      "rulesVersion": null,
+      "wikiBuild": "0.157"
     },
     {
       "id": "/en/magic/spells/sand-dragon/",
@@ -23448,9 +23728,16 @@
       "part": 2,
       "language": "en",
       "anchors": [],
-      "status": "pending",
+      "status": "collected",
       "attemptedAt": "2026-10-11T14:05:36.926749+00:00",
-      "cacheAvailable": false
+      "cacheAvailable": false,
+      "resolvedUrl": "https://wiki.runarcana.org/en/magic/spells/sand-dragon/",
+      "collectedAt": "2026-10-12T14:00:22.354918+00:00",
+      "sha256": "9514842a4b2a340643ae3cd6c7e38509dad64d701a5df7e552eb331de2769ecf",
+      "cache": "sources/cache/8471fbeb975cd68f3fd4ea28d96488d78b65adb6a4e8001f09fdbc12d9257177.html",
+      "title": "Sand Dragon",
+      "rulesVersion": null,
+      "wikiBuild": "0.157"
     },
     {
       "id": "/en/magic/spells/sand-gravitation/",
@@ -23478,9 +23765,16 @@
       "part": 2,
       "language": "en",
       "anchors": [],
-      "status": "pending",
+      "status": "collected",
       "attemptedAt": "2026-10-11T14:05:36.954575+00:00",
-      "cacheAvailable": false
+      "cacheAvailable": false,
+      "resolvedUrl": "https://wiki.runarcana.org/en/magic/spells/sand-pillar/",
+      "collectedAt": "2026-10-12T14:00:35.025935+00:00",
+      "sha256": "383e238717b2b9211f62b53ce3425922f4486bf231b2f667143f8e5c3d32f806",
+      "cache": "sources/cache/33ae7559b952ab0ee6d04a01bb95345afb3dba761f2f4c0974cb0a5510007e19.html",
+      "title": "Sand Pillar",
+      "rulesVersion": null,
+      "wikiBuild": "0.157"
     },
     {
       "id": "/en/magic/spells/sand-whirlwind/",
@@ -23683,9 +23977,16 @@
       "part": 2,
       "language": "en",
       "anchors": [],
-      "status": "pending",
+      "status": "collected",
       "attemptedAt": "2026-10-11T14:05:37.106635+00:00",
-      "cacheAvailable": false
+      "cacheAvailable": false,
+      "resolvedUrl": "https://wiki.runarcana.org/en/magic/spells/shadow-mask/",
+      "collectedAt": "2026-10-12T14:00:47.715595+00:00",
+      "sha256": "489ed93025be6ffaa4684de0d493c00d635605111c272cdd26c34cf7bbad6ff1",
+      "cache": "sources/cache/3c1f658ffcfc2242190f192e1a9560308f4d712f22aabe44c70cea8d49ec8d42.html",
+      "title": "Shadow Mask",
+      "rulesVersion": null,
+      "wikiBuild": "0.157"
     },
     {
       "id": "/en/magic/spells/shadow-pulse/",
@@ -23723,9 +24024,16 @@
       "part": 2,
       "language": "en",
       "anchors": [],
-      "status": "pending",
+      "status": "collected",
       "attemptedAt": "2026-10-11T14:05:37.131592+00:00",
-      "cacheAvailable": false
+      "cacheAvailable": false,
+      "resolvedUrl": "https://wiki.runarcana.org/en/magic/spells/shape-earth/",
+      "collectedAt": "2026-10-12T14:01:00.391548+00:00",
+      "sha256": "ec2bbc179221cdfba909de1ca471318e3c8a3ef1285d4a9fe4372cb5ffd88352",
+      "cache": "sources/cache/300269192ad4f2c39ffefab577257376d9df9e0a56aef69f838651cfd9b667da.html",
+      "title": "Shape Earth",
+      "rulesVersion": null,
+      "wikiBuild": "0.157"
     },
     {
       "id": "/en/magic/spells/shape-fire/",
@@ -23750,9 +24058,16 @@
       "part": 2,
       "language": "en",
       "anchors": [],
-      "status": "pending",
+      "status": "collected",
       "attemptedAt": "2026-10-11T14:05:37.146227+00:00",
-      "cacheAvailable": false
+      "cacheAvailable": false,
+      "resolvedUrl": "https://wiki.runarcana.org/en/magic/spells/shape-water/",
+      "collectedAt": "2026-10-12T14:01:13.056196+00:00",
+      "sha256": "4b23cdfdf134e6d823450e302ae2117c649af2abe388045b63aa4b3123ca33fe",
+      "cache": "sources/cache/1177078e912b80f9807c6163852c5f911c9581042b1256f9ebe041a284a293e7.html",
+      "title": "Shape Water",
+      "rulesVersion": null,
+      "wikiBuild": "0.157"
     },
     {
       "id": "/en/magic/spells/shapechange/",
@@ -23760,9 +24075,16 @@
       "part": 2,
       "language": "en",
       "anchors": [],
-      "status": "pending",
+      "status": "collected",
       "attemptedAt": "2026-10-11T14:05:37.155857+00:00",
-      "cacheAvailable": false
+      "cacheAvailable": false,
+      "resolvedUrl": "https://wiki.runarcana.org/en/magic/spells/shapechange/",
+      "collectedAt": "2026-10-12T14:01:25.742137+00:00",
+      "sha256": "269387d3d26ee0343672570e2a95abb2271076dcf0351fb3e2114a43d259ecba",
+      "cache": "sources/cache/d6cf828bfc4da5d240ed35d24ab1a84d1fe34cd0976a1fde6fec014dda67ad3d.html",
+      "title": "Shapechange",
+      "rulesVersion": null,
+      "wikiBuild": "0.157"
     },
     {
       "id": "/en/magic/spells/shatter/",
@@ -23912,9 +24234,16 @@
       "part": 2,
       "language": "en",
       "anchors": [],
-      "status": "pending",
+      "status": "collected",
       "attemptedAt": "2026-10-11T14:05:37.230606+00:00",
-      "cacheAvailable": false
+      "cacheAvailable": false,
+      "resolvedUrl": "https://wiki.runarcana.org/en/magic/spells/sixth-sense/",
+      "collectedAt": "2026-10-12T14:01:38.418214+00:00",
+      "sha256": "5a9d35347f5658fae7227b5ec6b94fcc30cf660b2afbbcf0d92ba0abebbd51c1",
+      "cache": "sources/cache/6f5e6d6f103c310cce7dbf73c8e890dc9caebf16fefa7a29b2060ba73cac3459.html",
+      "title": "Sixth Sense",
+      "rulesVersion": null,
+      "wikiBuild": "0.157"
     },
     {
       "id": "/en/magic/spells/sky-splitter/",
@@ -24192,9 +24521,16 @@
       "part": 2,
       "language": "en",
       "anchors": [],
-      "status": "pending",
+      "status": "collected",
       "attemptedAt": "2026-10-11T14:05:37.478808+00:00",
-      "cacheAvailable": false
+      "cacheAvailable": false,
+      "resolvedUrl": "https://wiki.runarcana.org/en/magic/spells/stone-shape/",
+      "collectedAt": "2026-10-12T14:01:51.123760+00:00",
+      "sha256": "3e7fec5595427783494142bdad513a834987aec87948c030dfe27b804398fd4a",
+      "cache": "sources/cache/88dfce14312cdbfe8662d6e5050daf01c3ba029bda634ea446795d92baca5537.html",
+      "title": "Stone Shape",
+      "rulesVersion": null,
+      "wikiBuild": "0.157"
     },
     {
       "id": "/en/magic/spells/stoneskin/",
@@ -24373,9 +24709,16 @@
       "part": 2,
       "language": "en",
       "anchors": [],
-      "status": "pending",
+      "status": "collected",
       "attemptedAt": "2026-10-11T14:05:37.646782+00:00",
-      "cacheAvailable": false
+      "cacheAvailable": false,
+      "resolvedUrl": "https://wiki.runarcana.org/en/magic/spells/telekinesis/",
+      "collectedAt": "2026-10-12T14:02:03.854036+00:00",
+      "sha256": "0f0f2094be3a173a32cb97f907e794885d163ec9921f30b5c5043c07b02443d1",
+      "cache": "sources/cache/ad5f63136df5a2866089c2c3ff700060e027f57a3e06a4212fc0913b1df73708.html",
+      "title": "Telekinesis",
+      "rulesVersion": null,
+      "wikiBuild": "0.157"
     },
     {
       "id": "/en/magic/spells/telepathic-bond/",
@@ -24471,9 +24814,16 @@
       "part": 2,
       "language": "en",
       "anchors": [],
-      "status": "pending",
+      "status": "collected",
       "attemptedAt": "2026-10-11T14:05:37.712603+00:00",
-      "cacheAvailable": false
+      "cacheAvailable": false,
+      "resolvedUrl": "https://wiki.runarcana.org/en/magic/spells/thaumaturgy/",
+      "collectedAt": "2026-10-12T14:02:16.508100+00:00",
+      "sha256": "1183c11c0b8e87d639b4d2e64276c2c11da827f70eb887f66cf3acccb890aec2",
+      "cache": "sources/cache/d1a0aded6dad112a3da98238424bca66cbf32abb4a43fc0e9e85cb9b66dc537f.html",
+      "title": "Thaumaturgy",
+      "rulesVersion": null,
+      "wikiBuild": "0.157"
     },
     {
       "id": "/en/magic/spells/threaded-volley/",
@@ -24501,9 +24851,16 @@
       "part": 2,
       "language": "en",
       "anchors": [],
-      "status": "pending",
+      "status": "collected",
       "attemptedAt": "2026-10-11T14:05:37.736675+00:00",
-      "cacheAvailable": false
+      "cacheAvailable": false,
+      "resolvedUrl": "https://wiki.runarcana.org/en/magic/spells/thunderclap/",
+      "collectedAt": "2026-10-12T14:02:29.164247+00:00",
+      "sha256": "71b4d9cc08b6c1fe8bdff800868edb085aaab76d798b98011f919eb5fde55958",
+      "cache": "sources/cache/89ebcaa9e1c9f9d19166a7dd9ee7b803d5e2584156afeb3762c903386dc73bc6.html",
+      "title": "Thunderclap",
+      "rulesVersion": null,
+      "wikiBuild": "0.157"
     },
     {
       "id": "/en/magic/spells/thunderous-devastation/",
@@ -24538,9 +24895,16 @@
       "part": 2,
       "language": "en",
       "anchors": [],
-      "status": "pending",
+      "status": "collected",
       "attemptedAt": "2026-10-11T14:05:37.764231+00:00",
-      "cacheAvailable": false
+      "cacheAvailable": false,
+      "resolvedUrl": "https://wiki.runarcana.org/en/magic/spells/time-bubble/",
+      "collectedAt": "2026-10-12T14:02:41.847899+00:00",
+      "sha256": "9a21fa65ac71667cc222cfb87bf45685b5fd6a2f0eb8d3617912683632f232d6",
+      "cache": "sources/cache/8a8f0e28ad5c77f303a264381a4f303443eb84f3855c73c7e89daf8967fb5e68.html",
+      "title": "Time Bubble",
+      "rulesVersion": null,
+      "wikiBuild": "0.157"
     },
     {
       "id": "/en/magic/spells/time-stop/",
@@ -24565,9 +24929,16 @@
       "part": 2,
       "language": "en",
       "anchors": [],
-      "status": "pending",
+      "status": "collected",
       "attemptedAt": "2026-10-11T14:05:37.781432+00:00",
-      "cacheAvailable": false
+      "cacheAvailable": false,
+      "resolvedUrl": "https://wiki.runarcana.org/en/magic/spells/torn-memory/",
+      "collectedAt": "2026-10-12T14:02:54.526970+00:00",
+      "sha256": "d109e918ff108dda6a2583019b01646198596d4eb79cf8e1d491e56c8f8d2571",
+      "cache": "sources/cache/a92369c96af210f0774e649eb831700cbdf9376c08dc93cf379e1225b43ecee4.html",
+      "title": "Torn Memory",
+      "rulesVersion": null,
+      "wikiBuild": "0.157"
     },
     {
       "id": "/en/magic/spells/toxin-pillar/",
@@ -24595,9 +24966,16 @@
       "part": 2,
       "language": "en",
       "anchors": [],
-      "status": "pending",
+      "status": "collected",
       "attemptedAt": "2026-10-11T14:05:37.804869+00:00",
-      "cacheAvailable": false
+      "cacheAvailable": false,
+      "resolvedUrl": "https://wiki.runarcana.org/en/magic/spells/transfusion/",
+      "collectedAt": "2026-10-12T14:03:07.197543+00:00",
+      "sha256": "c9ad6b3ceb051430637136090d3b44c21e90d95678ad141a11f15ddf62bcb66a",
+      "cache": "sources/cache/92c3ff4414be289de618d097a23687237ebc29b569e4036c50288e8df02c9cf6.html",
+      "title": "Transfusion",
+      "rulesVersion": null,
+      "wikiBuild": "0.157"
     },
     {
       "id": "/en/magic/spells/transport-via-plants/",
@@ -24615,9 +24993,16 @@
       "part": 2,
       "language": "en",
       "anchors": [],
-      "status": "pending",
+      "status": "collected",
       "attemptedAt": "2026-10-11T14:05:37.823431+00:00",
-      "cacheAvailable": false
+      "cacheAvailable": false,
+      "resolvedUrl": "https://wiki.runarcana.org/en/magic/spells/tree-stride/",
+      "collectedAt": "2026-10-12T14:03:19.876993+00:00",
+      "sha256": "d56f5c717787045508d527bea0b3ebd6cdcf573319e409f90a8940e85a869069",
+      "cache": "sources/cache/d5a6681509cd0d54f9f89f08cc45a75879eccf6f29b7fb6f22d1fb70b3b88cd8.html",
+      "title": "Tree Stride",
+      "rulesVersion": null,
+      "wikiBuild": "0.157"
     },
     {
       "id": "/en/magic/spells/true-polymorph/",
@@ -24635,9 +25020,16 @@
       "part": 2,
       "language": "en",
       "anchors": [],
-      "status": "pending",
+      "status": "collected",
       "attemptedAt": "2026-10-11T14:05:37.839714+00:00",
-      "cacheAvailable": false
+      "cacheAvailable": false,
+      "resolvedUrl": "https://wiki.runarcana.org/en/magic/spells/true-seeing/",
+      "collectedAt": "2026-10-12T14:03:32.565393+00:00",
+      "sha256": "bc684e1c583dc6d1013edb2efd707a1206afcc7fb93cf8ddcab137ac7d55cc81",
+      "cache": "sources/cache/b13e436c43c3854210f15ffb69ef236de373ab79ddbe9303da0c6bc8c41f0a0c.html",
+      "title": "True Seeing",
+      "rulesVersion": null,
+      "wikiBuild": "0.157"
     },
     {
       "id": "/en/magic/spells/true-strike/",
@@ -24645,9 +25037,16 @@
       "part": 2,
       "language": "en",
       "anchors": [],
-      "status": "pending",
+      "status": "collected",
       "attemptedAt": "2026-10-11T14:05:37.848093+00:00",
-      "cacheAvailable": false
+      "cacheAvailable": false,
+      "resolvedUrl": "https://wiki.runarcana.org/en/magic/spells/true-strike/",
+      "collectedAt": "2026-10-12T14:03:45.235536+00:00",
+      "sha256": "8281dd0a2fd52c7a4d3f622e525d0416b25e3e72f1a84f822311dcdceccd402d",
+      "cache": "sources/cache/d79dcea9024d51c3e32dadd33d5abee725d0ee6bec2bdfaed0bff30ff8261c2b.html",
+      "title": "True Strike",
+      "rulesVersion": null,
+      "wikiBuild": "0.157"
     },
     {
       "id": "/en/magic/spells/tsunami/",
@@ -24799,9 +25198,16 @@
       "part": 2,
       "language": "en",
       "anchors": [],
-      "status": "pending",
+      "status": "collected",
       "attemptedAt": "2026-10-11T14:05:37.983346+00:00",
-      "cacheAvailable": false
+      "cacheAvailable": false,
+      "resolvedUrl": "https://wiki.runarcana.org/en/magic/spells/wall-of-ice/",
+      "collectedAt": "2026-10-12T14:03:57.910514+00:00",
+      "sha256": "693838ccc05c15a00cf2f5c24692b1a12767ab2e8ddc8e14dd9893ef5e1c7a49",
+      "cache": "sources/cache/acf0069126b0351aac3f974c536150762d5e886e7a7b14f472b99f5d46659902.html",
+      "title": "Wall of Ice",
+      "rulesVersion": null,
+      "wikiBuild": "0.157"
     },
     {
       "id": "/en/magic/spells/wall-of-stone/",
@@ -34668,7 +35074,7 @@
     "https://runarcana.org/en/runarcana-0-96-update/",
     "https://bit.ly/runarcana_santangelo"
   ],
-  "pending": 385,
+  "pending": 327,
   "rateLimited": true,
   "retryAfter": null
 }

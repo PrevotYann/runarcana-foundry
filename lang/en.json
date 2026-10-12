@@ -147,7 +147,9 @@
       "Preview": "Create a preview first.",
       "ShortHitDie": "Only one short-rest hit die may be spent before the next long rest.",
       "LevelLimit": "No verified next level exists in this class source table.",
-      "ExistingOrigin": "This actor already has an unmanaged origin. Remove it through its native advancement workflow before assigning a workbench origin."
+      "ExistingOrigin": "This actor already has an unmanaged origin. Remove it through its native advancement workflow before assigning a workbench origin.",
+      "InitialHeritage": "This Heritage or Region point is available only during character creation.",
+      "HeritagePool": "This Heritage is not listed for the selected point pool."
     },
     "Creation": {
       "Hint": "Choose base ability scores, then assign +2 and +1 to different abilities. Select the origin, lineage/clan, size, region and required traits. Preview the resulting statistics before creating or customizing. Permanent traits are applied; conditional actions retain their source instructions. Class advancement opens after creation. Pasts, equipment and class-specific choices are completed separately.",
@@ -216,7 +218,15 @@
       "Defenses": "Resistances / immunities",
       "BonusHP": "Accumulated bonus HP",
       "PointsRemaining": "Point-buy points remaining",
-      "Underwater": "Underwater (conditional origin vision)"
+      "Underwater": "Underwater (conditional origin vision)",
+      "Finish": "Finish character creation",
+      "RegionalTraits": "Regional proficiencies",
+      "RegionalActivity": "Regional training choice",
+      "CraftSpecialty": "Craft discipline / specialty",
+      "AdditionalLanguage": "Regional language choice",
+      "RegionalRules": "Published regional creation rules",
+      "RegionReview": "No regional creation grants are described in the collected source. Review this region with the GM.",
+      "NativeRegionHint": "Runeborn gains these proficiencies only with the Native trait. Regional languages still require a communication trait."
     },
     "SkillTechnology": "Technology",
     "Craft": "Craft"
