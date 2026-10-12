@@ -240,6 +240,18 @@
     },
     "SkillTechnology": "Technology",
     "Craft": "Craft",
-    "OriginActionLevel": "This origin action requires level {level}."
+    "OriginActionLevel": "This origin action requires level {level}.",
+    "OriginActionLevel8": "Draconic Form requires level 8.",
+    "Dragon": {
+      "Title": "Draconic Form",
+      "Hint": "Up to three hours. Returning is a bonus action. The GM decides whether equipment is worn, dropped or merged; token resizing and equipment changes are manual. Temporary extra breath uses are spent before ordinary uses. Return before resting or customizing your origin.",
+      "Uses": "Transformations spent: {spent}/{max} (full-rest recovery)",
+      "Enter": "Enter Draconic Form",
+      "Leave": "Return to normal form",
+      "Gear": "Equipment decisions reviewed with the GM",
+      "EquipmentRequired": "Review equipment before transforming.",
+      "ReturnFirst": "Return to normal form before resting or customizing your origin.",
+      "Materials": "Draconic Form cannot cast spells that consume material components."
+    }
   }
 }

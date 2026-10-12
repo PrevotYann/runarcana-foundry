@@ -25,10 +25,30 @@ export function installDnd5eAdapter() {
   for(const event of ['createItem','updateItem','deleteItem'])Hooks.on(event,item=>{
     if(item.type!=='class'&&(item.type!=='weapon'||item.getFlag('runarcana','originManaged')))return;
     refreshOrigin(item.parent,item.type==='class').catch(e=>console.error('Runarcana origin progression',e));
+    if(item.type==='class')expireDragon(item.parent);
   });
   Hooks.on('updateActor',(actor,changes)=>{
     if(!changes.flags?.runarcana?.originContext&&!changes.flags?.runarcana?.originSelection)return;
     refreshOrigin(actor).catch(e=>console.error('Runarcana origin context',e));
+  });
+  const expireDragon=actor=>{
+    if(!isMarked(actor)||!game.user.isGM||game.users.activeGM?.id!==game.user.id)return;
+    const state=actor.getFlag('runarcana','draconicForm');
+    if(state?.active&&(actor.system.attributes.hp.value<=0||actor.system.details.level<8||game.time.worldTime>=state.expires))
+      game.modules?.get('runarcana')?.api?.setDraconicForm(actor,false).catch(e=>console.error('Runarcana draconic form',e));
+  };
+  Hooks.on('updateActor',expireDragon);
+  const expireDragons=()=>{
+    const actors=new Set(game.actors??[]);
+    for(const scene of game.scenes??[])for(const token of scene.tokens??[])if(token.actor)actors.add(token.actor);
+    for(const actor of actors)expireDragon(actor);
+  };
+  Hooks.on('updateWorldTime',expireDragons);
+  Hooks.on('ready',expireDragons);
+  Hooks.on('deleteItem',item=>{
+    const actor=item.parent;
+    if(item.type==='race'&&item.getFlag?.('runarcana','originManaged')&&actor?.getFlag('runarcana','draconicForm')?.active&&isMarked(actor)&&game.user.isGM&&game.users.activeGM?.id===game.user.id)
+      game.modules?.get('runarcana')?.api?.setDraconicForm(actor,false).catch(e=>console.error('Runarcana draconic form',e));
   });
   Hooks.on('dnd5e.preRollToolV2',config=>{
     const actor=config.subject;if(!isMarked(actor)||!config.item)return;
@@ -65,6 +85,9 @@ export function installDnd5eAdapter() {
     CONFIG.DND5E.damageTypes[type]??={label:'RUNARCANA.Damage.'+type,isPhysical:['lacerating','incisive','crushing'].includes(type)};
   }
   Hooks.on('dnd5e.preUseActivity',(activity,usage)=>{
+    if(isMarked(activity.actor)&&activity.actor.getFlag('runarcana','draconicForm')?.active&&activity.item?.type==='spell'&&activity.item.system.materials?.consumed){
+      ui.notifications.warn(game.i18n.localize('RUNARCANA.Dragon.Materials'));return false;
+    }
     const minimum=activity.item?.getFlag('runarcana','originActionLevel');
     if(isMarked(activity.actor)&&minimum&&(activity.actor.system.details?.level??0)<minimum){
       ui.notifications.warn(game.i18n.format('RUNARCANA.OriginActionLevel',{level:minimum}));return false;

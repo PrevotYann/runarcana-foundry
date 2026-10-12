@@ -1,5 +1,6 @@
-/** Reviewed base origin actions. Transformations and conditional riders remain manual. */
+/** Reviewed origin actions; equipment decisions and conditional riders remain manual. */
 export function originAction(definition,{canonicalId,sourceUrl,spent=0}={}) {
+  if(definition.kind==='draconicForm')return {name:definition.name,type:'feat',img:'icons/svg/wing.svg',system:{type:{value:'race'},description:{value:'<p>From level 8, use the Character tab to enter or leave Draconic Form. Half proficiency (rounded down) uses per full rest; up to three hours. The GM reviews equipment. Consumed spell material components are prohibited in this form.</p><p>'+escapeHtml(definition.description)+'</p>'},uses:{max:'floor(@prof / 2)',spent,recovery:[]},activities:{}},flags:{runarcana:{originManaged:true,originAction:definition.id,originForm:definition,originRecovery:'full',canonicalId:canonicalId?canonicalId+'#action-'+definition.id:undefined,sourceUrl,sourceHash:definition.sourceHash}}};
   if(definition.kind==='transformation'){
     const id='rcOriginChange01';
     return {name:definition.name,type:'feat',img:'icons/svg/mystery-man.svg',system:{type:{value:'race'},
@@ -14,13 +15,13 @@ export function originAction(definition,{canonicalId,sourceUrl,spent=0}={}) {
   if(definition.width)template.width=String(definition.width);
   const id='rcOriginBreath01';
   return {name:definition.name,type:'feat',img:'icons/svg/fire.svg',system:{
-    type:{value:'race'},description:{value:'<p>Base form only. Starting at level 2: proficiency bonus uses per full rest; Dexterity save DC 8 + Constitution modifier + proficiency bonus; proficiency bonus d6 damage, half on a success. Draconic Form changes require manual adjustment.</p><p>'+escapeHtml(definition.description)+'</p>'},
+    type:{value:'race'},description:{value:'<p>Starting at level 2: proficiency bonus uses per full rest; Dexterity save DC 8 + Constitution modifier + proficiency bonus; proficiency bonus d6 damage, half on a success. The Character tab manages Draconic Form modifiers.</p><p>'+escapeHtml(definition.description)+'</p>'},
     uses:{max:'@prof',spent,recovery:[]},
-    activities:{[id]:{_id:id,name:definition.name,type:'save',activation:{type:'action',value:1,condition:'Requires Half-Dragon level 2; base form.'},
+    activities:{[id]:{_id:id,name:definition.name,type:'save',activation:{type:'action',value:1,condition:'Requires Half-Dragon level 2.'},
       consumption:{spellSlot:false,targets:[{type:'itemUses',target:'',value:'1'}]},
       save:{ability:['dex'],dc:{calculation:'',formula:'8 + @abilities.con.mod + @prof'}},
       damage:{onSave:'half',parts:[{custom:{enabled:true,formula:'(@prof)d6'},types:[definition.damageType],scaling:{mode:'',number:1,formula:''}}]},
       range:{override:true,units:'self',value:''},target:{override:true,template,affects:{type:'creature',count:''},prompt:true}}}
-  },flags:{runarcana:{originManaged:true,originAction:definition.id,originActionLevel:definition.level,originRecovery:'full',canonicalId:canonicalId?canonicalId+'#action-'+definition.id:undefined,sourceUrl,sourceHash:definition.sourceHash,manualTransformation:true}}};
+  },flags:{runarcana:{originManaged:true,originAction:definition.id,originActionLevel:definition.level,originRecovery:'full',canonicalId:canonicalId?canonicalId+'#action-'+definition.id:undefined,sourceUrl,sourceHash:definition.sourceHash,managedDraconicForm:true}}};
 }
 function escapeHtml(value){return String(value??'').replaceAll('&','&amp;').replaceAll('<','&lt;').replaceAll('>','&gt;').replaceAll('"','&quot;');}

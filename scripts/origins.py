@@ -84,6 +84,7 @@ def variant(page,section,uuid):
         if page['sha256']=='bebd09c75f8e0301b066e11b1bd2f655c3225b8f7036a51f7f9b6efcb8283462':
             damage,shape={'Glacial Elemental':('cold','cone'),'Infernal Elemental':('fire','cone'),'Mountain Elemental':('thunder','cone'),'Cloud Elemental':('lightning','line'),'Ocean Elemental':('acid','line')}[name]
             result['actions']=[{'id':'draconic-breath','name':damage.title()+' Breath Weapon','kind':'breath','level':2,'damageType':damage,'shape':shape,'size':15 if shape=='cone' else 20,'width':5 if shape=='line' else None,'description':result['notes'],'sourceHash':page['sha256']}]
+            result['actions'].append({'id':'draconic-form','name':'Draconic Form','kind':'draconicForm','level':8,'ability':'str' if name=='Infernal Elemental' else 'dex' if name=='Cloud Elemental' else 'con','fly':70 if name=='Cloud Elemental' else 60,'extraBreathDie':name=='Infernal Elemental','bonusClaws':name=='Glacial Elemental','description':result['notes'],'sourceHash':page['sha256']})
         else:
             result['actionsReviewRequired']=True
         result['elementalDefense']={'Glacial Elemental':['cold','glacial','fire'],'Infernal Elemental':['fire','incinerating','cold'],'Mountain Elemental':['thunder','vibrational','acid'],'Cloud Elemental':['lightning','plasma','cold'],'Ocean Elemental':['acid','antimonic','lightning']}[name]

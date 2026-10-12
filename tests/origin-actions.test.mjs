@@ -10,7 +10,7 @@ from origins import creation,variant
 pages=json.loads(gzip.decompress(Path('data/corpus.json.gz').read_bytes()))['pages']
 dragon=next(p for p in pages if p['kind']=='origin' and p['title']=='Half-Dragon')
 section=next(s for s in dragon['sections'] if s['anchor']=='glacial-elemental')
-assert len(variant(dragon,section,'uuid')['actions'])==1
+assert len(variant(dragon,section,'uuid')['actions'])==2
 dragon['sha256']='changed'
 profile=variant(dragon,section,'uuid')
 assert not profile.get('actions') and profile['actionsReviewRequired']

@@ -2,6 +2,7 @@ import {resourceValue,validateChoices,creatureStatistics,scaleDice,manaCost} fro
 import {characterPlan,originEffects,originHeritageBudget,ABILITIES} from './character.mjs';
 import {naturalWeapon} from './origin-weapons.mjs';
 import {originAction} from './origin-actions.mjs';
+import {transformDragon} from './draconic-form.mjs';
 import {heritageEligibility,heritageEffects,heritageOptions,savingProficiencies,advanceHeritageProficiencies} from './heritage.mjs';
 import {knownCrafts,heritageTools,craftFromName} from './crafts.mjs';
 import {explicitWeaponProficiencies} from './heritage-weapons.mjs';
@@ -22,7 +23,7 @@ export function assertGM() {
 }
 export function createApi() {
   return Object.freeze({
-    version:game.modules?.get('runarcana')?.version??'0.15.0', manaCost,scaleDice,creatureStatistics,
+    version:game.modules?.get('runarcana')?.version??'0.16.0', manaCost,scaleDice,creatureStatistics,
     async enableActor(actor) {
       assertGM();
       if(!game.settings.get('runarcana','enabled'))throw new Error('RUNARCANA.Error.WorldDisabled');
@@ -39,6 +40,7 @@ export function createApi() {
     async customizeOrigin(actor,selection) {
       assertGM();assertOwner(actor);
       return serialized(actor.uuid,async()=>{
+        if(actor.getFlag('runarcana','draconicForm')?.active)throw Error('RUNARCANA.Dragon.ReturnFirst');
         const plan=await this.previewCharacter(selection,actor),origin=await fromUuid(selection.originUuid);
         const old=actor.items.filter(i=>i.getFlag('runarcana','originManaged'));
         if(actor.items.some(i=>i.type==='race'&&!i.getFlag('runarcana','originManaged')))throw new Error('RUNARCANA.Error.ExistingOrigin');
@@ -110,6 +112,10 @@ export function createApi() {
     async setOriginContext(actor,{underwater}) {
       assertGM();assertOwner(actor);if(typeof underwater!=='boolean'||!actor.getFlag('runarcana','originSelection'))throw new Error('RUNARCANA.Error.Choices');
       return serialized(actor.uuid,()=>actor.update({'flags.runarcana.originContext':{underwater}}));
+    },
+    async setDraconicForm(actor,active,options={}) {
+      assertGM();assertOwner(actor);
+      return serialized(actor.uuid,()=>transformDragon(actor,active,options));
     },
     async finishCharacter(actor) {
       assertGM();assertOwner(actor);
@@ -216,6 +222,7 @@ export function createApi() {
       assertGM();assertOwner(actor);
       return serialized(actor.uuid,async()=>{
         if(!['short','long','full'].includes(type))throw new Error('RUNARCANA.Error.Rest');
+        if(actor.getFlag('runarcana','draconicForm')?.active)throw Error('RUNARCANA.Dragon.ReturnFirst');
         const state=actor.getFlag('runarcana','rest')??{longCount:0,shortDieUsed:false};
         if(operationId&&state.lastOperation===operationId)return state;
         if(type==='full'&&state.longCount<2)throw new Error('RUNARCANA.Error.FullRest');

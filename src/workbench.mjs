@@ -73,6 +73,18 @@ export class Workbench extends foundry.applications.api.ApplicationV2 {
       const underwater=field(root,'Creation.Underwater',input('checkbox'));underwater.checked=actor.getFlag('runarcana','originContext')?.underwater===true;
       root.append(button('Apply',async()=>{await api.setOriginContext(actor,{underwater:underwater.checked});this.render(true);}));
     }
+    const dragon=actor.items.find(i=>i.getFlag?.('runarcana','originForm'));
+    if(dragon){
+      const section=el('section');section.append(el('h3',t('Dragon.Title')),el('p',t('Dragon.Hint')));
+      const state=actor.getFlag('runarcana','draconicForm');
+      section.append(el('p',game.i18n.format('RUNARCANA.Dragon.Uses',{spent:dragon.system.uses.spent,max:Math.floor(actor.system.attributes.prof/2)})));
+      if(state?.active)section.append(button('Dragon.Leave',async()=>{await api.setDraconicForm(actor,false);this.render(true);}));
+      else{
+        const gear=field(section,'Dragon.Gear',input('checkbox'));
+        section.append(button('Dragon.Enter',async()=>{await api.setDraconicForm(actor,true,{equipmentConfirmed:gear.checked});this.render(true);}));
+      }
+      root.append(section);
+    }
     for(const [id,r]of Object.entries(actor.getFlag('runarcana','resources')??{})) {
       const row=el('div',undefined,'runarcana-resource');row.append(el('span',`${r.label??id}: ${r.value}/${r.max}`),button('SpendOne',async()=>{await api.spendResource(actor,id,1,{operationId:crypto.randomUUID()});this.render(true);}));root.append(row);
     }

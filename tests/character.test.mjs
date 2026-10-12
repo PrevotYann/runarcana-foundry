@@ -28,8 +28,8 @@ test('all five Half-Dragon breaths preserve source areas, dynamic Constitution D
   const expected={'Glacial Elemental':['cold','cone',15],'Infernal Elemental':['fire','cone',15],'Mountain Elemental':['thunder','cone',15],'Cloud Elemental':['lightning','line',20],'Ocean Elemental':['acid','line',20]};
   for(const [name,[type,shape,size]]of Object.entries(expected)){
     const plan=characterPlan(profiles['Half-Dragon'],selection('Half-Dragon',name));
-    assert.equal(plan.actions.length,1);
-    const item=originAction(plan.actions[0],{canonicalId:'origin',spent:2});
+    assert.equal(plan.actions.filter(a=>a.kind==='breath').length,1);
+    const item=originAction(plan.actions.find(a=>a.kind==='breath'),{canonicalId:'origin',spent:2});
     const activity=Object.values(item.system.activities)[0];
     assert.deepEqual(activity.save.ability,['dex']);
     assert.equal(activity.save.dc.formula,'8 + @abilities.con.mod + @prof');
@@ -209,9 +209,9 @@ test('Half-Dragon customization preserves breath expenditure across essences and
   const actor=mockActor(),api=createApi();
   const s={...selection('Half-Dragon','Glacial Elemental'),originUuid:'dragon'};
   await api.customizeOrigin(actor,s);
-  actor.items.find(i=>i.getFlag('runarcana','originAction')).system.uses.spent=2;
+  actor.items.find(i=>i.getFlag('runarcana','originAction')==='draconic-breath').system.uses.spent=2;
   await api.customizeOrigin(actor,{...selection('Half-Dragon','Ocean Elemental'),originUuid:'dragon'});
-  const breath=actor.items.filter(i=>i.getFlag('runarcana','originAction'));
+  const breath=actor.items.filter(i=>i.getFlag('runarcana','originAction')==='draconic-breath');
   assert.equal(breath.length,1);assert.equal(breath[0].system.uses.spent,2);
   assert.deepEqual(Object.values(breath[0].system.activities)[0].damage.parts[0].types,['acid']);
   const before=actor.items.map(i=>i.toObject()),update=actor.update;let fail=true;
