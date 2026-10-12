@@ -2,23 +2,23 @@
 
 Profile: **authorized-content**. This module is **incomplete**. It has no Foundry V14 runtime verification.
 
-899 canonical page URLs discovered; 396 complete responses cached; 503 sources not collected. Missing pages are not claimed to be permanently unavailable: HTTP 429 throttling interrupted earlier passes. Collection is resumable from its saved checkpoint; unvisited entries require a resumed crawl or a local export.
+899 canonical page URLs discovered; 455 complete responses cached; 444 sources not collected. Missing pages are not claimed to be permanently unavailable: HTTP 429 throttling interrupted earlier passes. Collection is resumable from its saved checkpoint; unvisited entries require a resumed crawl or a local export.
 
-10405 page/anchor/table/catalog coverage records. Entry discovery is not exhaustive until every source is available and reviewed.
+11320 page/anchor/table/catalog coverage records. Entry discovery is not exhaustive until every source is available and reviewed.
 
 | Part | Discovered pages | Collected pages | Missing pages |
 | --- | ---: | ---: | ---: |
 | Introduction, appendices, projects | 38 | 33 | 5 |
 | Characters | 98 | 98 | 0 |
-| Rules | 578 | 120 | 458 |
+| Rules | 578 | 139 | 439 |
 | Game Mastering | 21 | 21 | 0 |
-| Monsters & Creatures | 164 | 124 | 40 |
+| Monsters & Creatures | 164 | 164 | 0 |
 
 | Pack | Generated native documents |
 | --- | ---: |
 | references | 33 |
 | characters | 98 |
-| features | 515 |
+| features | 518 |
 | subclasses | 38 |
 | classes | 9 |
 | resources | 308 |
@@ -32,12 +32,12 @@ Profile: **authorized-content**. This module is **incomplete**. It has no Foundr
 | gm | 21 |
 | rewards | 177 |
 | afflictions | 165 |
-| rules | 120 |
-| spells | 100 |
+| rules | 139 |
+| spells | 119 |
 | companions | 1 |
-| creature-rules | 124 |
-| creature-features | 2150 |
-| bestiary | 177 |
+| creature-rules | 164 |
+| creature-features | 2973 |
+| bestiary | 232 |
 | rituals | 47 |
 | techmaturgy | 127 |
 | devices | 13 |
@@ -45,9 +45,9 @@ Profile: **authorized-content**. This module is **incomplete**. It has no Foundr
 
 ## Mechanical support
 
-Implemented: namespaced resources and staged native Activity consumption; published mana costs; native origin feature grants/variant choices and explicit size/speed/senses; native matched class grants and numeric scale advancements; native source attack bonuses, saving throws, initiative, skill checks, passive perception and numeric senses for structured NPCs; weapon attack/crit metadata; source RollTables; heritage budget preview and recorded GM overrides; explicit rest recovery; a native creation/progression workflow; source-based creature HP calculator; conservative import updates and backups; Babele converters and translation templates. Six source snapshots have reviewed base spell Activities (including the Snowman companion); these adapters fall back to manual casting if their source hash changes. Spell effects, triggers and augmentation remain partial.
+Implemented: namespaced resources and staged native Activity consumption; published mana costs; source-backed creation for 10 origins and 29 named lineages, tribes, clans and models; fixed/27-point/4d6 ability methods and validated +2/+1 allocation; replaceable origin effects for permanent size/movement/senses/proficiencies/defenses; botanical choices, construct armor prerequisites and Runeborn trait budgets/conversions; cumulative Minotaur HP; native class HitPoints advancements; native matched class grants and numeric scale advancements; native source attack bonuses, saving throws, initiative, skill checks, passive perception and numeric senses for structured NPCs; weapon attack/crit metadata; source RollTables; heritage budget preview and recorded GM overrides; explicit rest recovery; a native creation/progression workflow; source-based creature HP calculator; conservative import updates and backups; Babele converters and translation templates. Six source snapshots have reviewed base spell Activities (including the Snowman companion); these adapters fall back to manual casting if their source hash changes. Spell effects, triggers and augmentation remain partial.
 
-Manual or incomplete: ability-generation methods and origin attribute choices; exhaustive origin traits/variants; multiclass calculation and restrictions; automatic class resource initialization/recalculation; class-specific recovery exceptions; ritual casting procedures; most spell damage, effects and augmentation; familiars/summons/Feral Forms; condition expirations and weakness; DR exceptions; firearm misfires/reloads/ammunition; runes and conditional effects; comprehensive crafting catalogs; Mecha pilots/developments/fuel; Echo applications; reward charges/effects/evolution. Some extracted feature items provide text and native inventory support only and are explicitly partial.
+Manual or incomplete: conditional origin actions and exhaustive trait-effect conversion; Runeborn GM rulings, disadvantage effects and advanced trait interactions; regional proficiency catalogs and heritage effect conversion; multiclass calculation and restrictions; automatic class resource initialization/recalculation; class-specific recovery exceptions; ritual casting procedures; most spell damage, effects and augmentation; familiars/summons/Feral Forms; condition expirations and weakness; DR exceptions; firearm misfires/reloads/ammunition; runes and conditional effects; comprehensive crafting catalogs; Mecha pilots/developments/fuel; Echo applications; reward charges/effects/evolution. Some extracted feature items provide text and native inventory support only and are explicitly partial.
 
 The spell catalog exposes 558 distinct spell cards. Their metadata is inventoried separately from complete spell pages. A spell card or search summary does not count as a collected spell. At this checkpoint only cached full pages produce spell items.
 
