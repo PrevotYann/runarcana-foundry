@@ -3,8 +3,12 @@ import {isMarked,serialized,originContext} from '../api.mjs';
 import {originEffects} from '../character.mjs';
 import {naturalWeapon} from '../origin-weapons.mjs';
 import {disciplineDamageBonus} from '../heritage-weapons.mjs';
+import {originSpellGrant} from '../origin-spells.mjs';
+import {installOriginEvents} from '../origin-events.mjs';
+import {damageRecoveryFacts} from '../origin-recovery.mjs';
 
 export function installDnd5eAdapter() {
+  installOriginEvents();
   const refreshOrigin=async(actor,updateWeapons=false)=>{
     if(!isMarked(actor)||!game.user.isGM||game.users.activeGM?.id!==game.user.id)return;
     return serialized(actor.uuid,async()=>{
@@ -18,6 +22,13 @@ export function installDnd5eAdapter() {
       if(native.flags.runarcana.originWeaponMagical)properties.add('mgc');
       else if(weapon.getFlag('runarcana','originWeaponMagical'))properties.delete('mgc');
       updates.push({_id:weapon.id,'system.damage.base.denomination':native.system.damage.base.denomination,'system.properties':[...properties],'flags.runarcana.originWeaponMagical':native.flags.runarcana.originWeaponMagical});
+    }
+    if(updateWeapons)for(const spell of actor.items.filter(i=>i.type==='spell'&&i.getFlag?.('runarcana','originSpellGrant'))){
+      const definition=spell.getFlag('runarcana','originSpellGrant');
+      const refreshed=originSpellGrant(spell,definition,{castingAbility:plan.castingAbility,level:actor.system.details.level,spent:spell.system.uses?.spent??0});
+      const update={_id:spell.id,'system.level':refreshed.system.level};
+      for(const [id,a]of Object.entries(refreshed.system.activities))if(a.type==='save'&&(id==='rcOriginCast0001'||id==='rcSaplingBurst01'))update[`system.activities.${id}`]=a;
+      updates.push(update);
     }
     if(updates.length)await actor.updateEmbeddedDocuments('Item',updates);
     });
@@ -112,13 +123,29 @@ export function installDnd5eAdapter() {
     if(bonus&&config.rolls?.[0]&&!config.runarcanaDiscipline){
       config.rolls[0].parts.push(String(bonus));config.runarcanaDiscipline=true;
     }
+    const plan=activity.actor.getFlag('runarcana','originSelection')?.plan;
+    if(activity.type==='attack'&&activity.item?.type==='weapon'&&activity.item.system.type?.value==='natural'&&plan?.naturalDamageBonus&&config.rolls?.[0]&&!config.runarcanaSequoia){
+      config.rolls[0].parts.push('floor(@prof / 2)');config.runarcanaSequoia=true;
+    }
+  });
+  Hooks.on('dnd5e.preRollAttackV2',config=>{
+    const activity=config.subject,actor=activity?.actor;if(!isMarked(actor)||activity.item?.type!=='weapon')return;
+    const plan=actor.getFlag('runarcana','originSelection')?.plan,weapon=activity.item;
+    if(plan?.origin==='Chireans'&&plan.variant==='Fulgor'&&(activity.attack?.type?.value==='ranged'||weapon.system.properties?.has?.('fin')||weapon.system.properties?.includes?.('fin'))&&config.rolls?.[0]&&!config.runarcanaPrecision){
+      config.rolls[0].parts.push('floor(@prof / 2)');config.runarcanaPrecision=true;
+    }
   });
   Hooks.on('dnd5e.preCalculateDamage',(actor,parts,options)=>{
     if(!isMarked(actor))return;
     const plan=actor.getFlag('runarcana','originSelection')?.plan;
+    if(plan?.origin==='Construct'||plan?.constructed){
+      const uuid=options.origin?.system?.item?.uuid;
+      const source=uuid&&typeof fromUuidSync==='function'?fromUuidSync(uuid):options.origin?.item;
+      if(source?.getFlag?.('runarcana','canonicalId')!=='/en/magic/spells/repair-damage/')for(const part of parts)if(part.type==='healing')part.value=Math.trunc(part.value/2);
+    }
     if(plan?.strengthReduction&&!options.runarcana?.ignoreOriginReduction&&options.ignore!==true){
       const reduction=Math.max(0,actor.system.abilities.str.mod),multiplier=options.multiplier??1;
-      if(multiplier>0)for(const part of parts)if(part.value>0&&part.type!=='true'&&!(part.type in CONFIG.DND5E.healingTypes))part.value=Math.max(0,part.value*multiplier-reduction)/multiplier;
+      if(multiplier>0)for(const part of parts)if(part.value>0&&!['true','disruptive','gravitational','cronal'].includes(part.type)&&!(part.type in CONFIG.DND5E.healingTypes))part.value=Math.max(0,part.value*multiplier-reduction)/multiplier;
     }
     const defense=actor.getFlag('runarcana','defenses');
     if(!defense?.reviewed || options.ignore===true)return;
@@ -128,5 +155,17 @@ export function installDnd5eAdapter() {
     options.multiplier=1;
     options.ignore={...options.ignore,immunity:true,resistance:true,vulnerability:true,modification:true};
     // Threshold and HP/temp-HP application stay in the native damage workflow.
+  });
+  Hooks.on('dnd5e.calculateDamage',(actor,parts,options)=>{
+    if(isMarked(actor))options.runarcanaDamageParts=parts.map(p=>({type:p.type,value:p.value}));
+  });
+  Hooks.on('dnd5e.preApplyDamage',(actor,amount,updates,options)=>{
+    if(!isMarked(actor))return;
+    const plan=actor.getFlag('runarcana','originSelection')?.plan;if(!plan)return;
+    const treatment=options.origin?.system?.item?.type==='spell'||['medical','magical'].includes(options.runarcana?.treatment);
+    const facts=damageRecoveryFacts(plan,options.runarcanaDamageParts??[],{amount,hpBefore:actor.system.attributes.hp.value,hpAfter:updates['system.attributes.hp.value'],hpMax:actor.system.attributes.hp.max,material:options.runarcana?.material,unregenerableHP:options.runarcana?.unregenerableHP,treatment});
+    if(!facts.blocked&&!facts.treated&&!facts.weaknessDamage&&!facts.deferTrollDowned)return;
+    if(actor.statuses?.has('unconscious')||actor.statuses?.has('dead')||(actor.system.attributes.death?.failure??0)>=3)facts.deferTrollDowned=false;
+    updates['flags.runarcana.pendingOriginDamage']={...facts,id:crypto.randomUUID(),actor:actor.uuid,continuous:options.runarcana?.continuous===true};
   });
 }

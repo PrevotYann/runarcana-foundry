@@ -3,6 +3,12 @@ import {characterPlan,originEffects,originHeritageBudget,ABILITIES} from './char
 import {naturalWeapon} from './origin-weapons.mjs';
 import {originAction} from './origin-actions.mjs';
 import {transformDragon} from './draconic-form.mjs';
+import {originSpellGrant} from './origin-spells.mjs';
+import {performOriginPower} from './managed-origin-powers.mjs';
+import {originRollModifiers} from './origin-checks.mjs';
+import {expireOriginArtifacts} from './origin-lifecycle.mjs';
+import {processRecoveryDamage,advanceTrollRecovery} from './origin-recovery.mjs';
+import {resolveOriginWeakness} from './origin-weakness.mjs';
 import {heritageEligibility,heritageEffects,heritageOptions,savingProficiencies,advanceHeritageProficiencies} from './heritage.mjs';
 import {knownCrafts,heritageTools,craftFromName} from './crafts.mjs';
 import {explicitWeaponProficiencies} from './heritage-weapons.mjs';
@@ -12,6 +18,11 @@ export async function serialized(key,operation) {
   const previous=queues.get(key)??Promise.resolve();
   const next=previous.catch(()=>{}).then(operation);queues.set(key,next);
   try{return await next;}finally{if(queues.get(key)===next)queues.delete(key);}
+}
+export async function serializedMany(keys,operation){
+  let run=operation;
+  for(const key of [...new Set(keys)].sort().reverse()){const next=run;run=()=>serialized(key,next);}
+  return run();
 }
 export function isMarked(actor) {return game.settings.get('runarcana','enabled') && actor?.getFlag('runarcana','enabled')===true;}
 export function assertOwner(actor) {
@@ -54,6 +65,11 @@ export function createApi() {
           const previous=old.find(i=>i.getFlag('runarcana','originAction')===definition.id);
           documents.push(originAction(definition,{canonicalId:origin.getFlag('runarcana','canonicalId'),sourceUrl:origin.getFlag('runarcana','sourceUrl'),spent:previous?.system.uses?.spent??0}));
         }
+        for(const definition of plan.spellGrants??[]){
+          const spell=await fromUuid(definition.uuid);if(!spell)throw Error('RUNARCANA.Error.Source');
+          const previous=old.find(i=>i.getFlag('runarcana','originAction')==='innate-'+definition.spell);
+          documents.push(originSpellGrant(spell,definition,{castingAbility:plan.castingAbility,level:actor.system.details?.level??1,spent:previous?.system.uses?.spent??0}));
+        }
         for(const name of plan.customProficiencies){
           const match=craftFromName(name),ability=match?.craft.ability??'int';
           documents.push({name,type:'tool',system:{type:{value:'',baseItem:'runarcanaCraft'},proficient:0.5,ability,description:{value:escapeHtml(name)},activities:{rcOriginCheck001:{_id:'rcOriginCheck001',type:'check',name,activation:{type:'action',value:1},check:{ability,associated:['runarcanaCraft'],dc:{calculation:'',formula:''}}}}},flags:{runarcana:{originManaged:true,creationProficiency:true,...(match?{craftId:match.craft.id,craftSpecialty:match.specialty,sourceUrl:match.craft.sourceUrl,sourceHash:match.craft.sourceHash}:{craftReviewRequired:true})}}});
@@ -73,6 +89,10 @@ export function createApi() {
         snapshot['flags.runarcana.originSelection']=previous??null;
         snapshot['system.attributes.ac.formulas']=actor._source.system.attributes?.ac?.formulas??[];
         const updates={'flags.runarcana.originSelection':{selection,plan}};
+        if(plan.origin==='Troll'&&(previous?.plan.origin!=='Troll'||!actor.getFlag('runarcana','originLife'))){
+          snapshot['flags.runarcana.originLife']=actor.getFlag('runarcana','originLife')??null;
+          updates['flags.runarcana.originLife']={blocked:0,turns:0,lastTime:game.time.worldTime,processed:[]};
+        }
         const formulas=snapshot['system.attributes.ac.formulas'].filter(f=>!(previous?.plan.ac&&f.label==='Runarcana Origin'&&f.formula===previous.plan.ac));
         updates['system.attributes.ac.formulas']=[...formulas,...(plan.ac?[{formula:plan.ac,label:'Runarcana Origin',armored:false}]:[])];
         for(const k of ABILITIES){
@@ -116,6 +136,49 @@ export function createApi() {
     async setDraconicForm(actor,active,options={}) {
       assertGM();assertOwner(actor);
       return serialized(actor.uuid,()=>transformDragon(actor,active,options));
+    },
+    async useOriginPower(actor,itemId,options={}){
+      assertGM();assertOwner(actor);
+      const target=options.targetUuid?await fromUuid(options.targetUuid):null;
+      return serializedMany([actor.uuid,...(target?[target.uuid]:[])],()=>performOriginPower(actor,actor.items.get(itemId),target,options));
+    },
+    async repairConstruct(actor,{hours,confirmed}={}){
+      assertGM();assertOwner(actor);
+      return serialized(actor.uuid,async()=>{
+        const plan=actor.getFlag('runarcana','originSelection')?.plan;
+        if(!(plan?.origin==='Construct'||plan?.constructed)||confirmed!==true||!Number.isFinite(hours)||hours<6||actor.statuses?.has('dead'))throw Error('RUNARCANA.Powers.RepairRequirements');
+        await actor.update({'system.attributes.hp.value':actor.system.attributes.hp.max,'flags.runarcana.constructRepair':{hours,time:game.time.worldTime,user:game.user.id}});
+      });
+    },
+    async rollOriginCheck(actor,{kind='save',key='con',target,circumstance='ordinary',poisonLevel,properEquipment=false,alreadyAdvantage=false,configure=true}={}){
+      assertOwner(actor);
+      if(kind==='skill'&&!actor.system.skills?.[key]||kind!=='skill'&&!ABILITIES.includes(key)||target!==undefined&&(!Number.isFinite(target)||target<0))throw Error('RUNARCANA.Error.Choices');
+      const plan=actor.getFlag('runarcana','originSelection')?.plan;if(!plan)throw Error('RUNARCANA.Error.Source');
+      const modifiers=originRollModifiers(plan,kind,key,{circumstance,poisonLevel,properEquipment,alreadyAdvantage,proficiency:actor.system.attributes.prof,saveMultiplier:actor.system.abilities[key]?.save?.prof?.multiplier??actor.system.abilities[key]?.proficient??0});
+      if(modifiers.immune)return {immune:true};
+      const config={target,advantage:modifiers.advantage,disadvantage:modifiers.disadvantage,...(modifiers.bonus?{rolls:[{parts:[String(modifiers.bonus)]}]}:{})};
+      const message={data:{flags:{runarcana:{originCircumstance:circumstance}}}};
+      return kind==='skill'?actor.rollSkill({...config,skill:key},{configure},message):kind==='save'?actor.rollSavingThrow({...config,ability:key},{configure},message):actor.rollAbilityCheck({...config,ability:key},{configure},message);
+    },
+    async expireOriginArtifacts(actor,options={}){
+      assertGM();if(!actor?.isOwner)throw Error('RUNARCANA.Error.Permission');
+      return serialized(actor.uuid,()=>expireOriginArtifacts(actor,options));
+    },
+    async processOriginDamage(actor,job){
+      assertGM();assertOwner(actor);return serialized(actor.uuid,async()=>{
+        if(actor.getFlag('runarcana','originLife')?.processed?.includes(job?.id))return;
+        if(!job||job.actor!==actor.uuid)throw Error('RUNARCANA.Error.Source');
+        await resolveOriginWeakness(actor,job,this.rollOriginCheck.bind(this));
+        return processRecoveryDamage(actor,job);
+      });
+    },
+    async advanceTrollRecovery(actor,options={}){
+      assertGM();assertOwner(actor);return serialized(actor.uuid,()=>advanceTrollRecovery(actor,options));
+    },
+    async treatTrollWounds(actor,{treatment,confirmed}={}){
+      assertGM();assertOwner(actor);
+      if(!['medical','magical'].includes(treatment)||confirmed!==true||actor.getFlag('runarcana','originSelection')?.plan.origin!=='Troll')throw Error('RUNARCANA.Recovery.Treatment');
+      return serialized(actor.uuid,()=>actor.update({'flags.runarcana.originLife':{...(actor.getFlag('runarcana','originLife')??{turns:0,lastTime:game.time.worldTime,processed:[]}),blocked:0,treatment:{type:treatment,time:game.time.worldTime,user:game.user.id}}}));
     },
     async finishCharacter(actor) {
       assertGM();assertOwner(actor);
@@ -218,7 +281,7 @@ export function createApi() {
         return {created:created.length,...result};
       });
     },
-    async rest(actor,type,{operationId,hitDiceAllocation={},exhaustionRecovery=true}={}) {
+    async rest(actor,type,{operationId,hitDiceAllocation={},exhaustionRecovery=true,repairConfirmed=false}={}) {
       assertGM();assertOwner(actor);
       return serialized(actor.uuid,async()=>{
         if(!['short','long','full'].includes(type))throw new Error('RUNARCANA.Error.Rest');
@@ -233,7 +296,11 @@ export function createApi() {
         const itemUpdates=[];
         for(const item of actor.items)if(item.getFlag?.('runarcana','originManaged')&&item.getFlag('runarcana','originRecovery')===type)itemUpdates.push({_id:item.id,'system.uses.spent':0});
         if(type==='full') {
-          updates['system.attributes.hp.value']=actor.system.attributes.hp.max;
+          const origin=actor.getFlag('runarcana','originSelection')?.plan;
+          if(!(origin?.origin==='Construct'||origin?.constructed)||repairConfirmed===true){
+            const wounds=origin?.origin==='Troll'?actor.getFlag('runarcana','originLife')?.blocked??0:0;
+            updates['system.attributes.hp.value']=Math.max(actor.system.attributes.hp.value,actor.system.attributes.hp.max-wounds);
+          }
           if(exhaustionRecovery)updates['system.attributes.exhaustion']=0;
           const classes=actor.items.filter(i=>i.type==='class');
           if(classes.length===1) {

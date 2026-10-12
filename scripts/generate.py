@@ -254,6 +254,16 @@ def origin_advancements(page,doc):
         variants.append(u);profiles.append(variant(page,s,u))
     if variants:doc['system']['advancement'].append({'_id':uid(key+'@variant-choice'),'type':'ItemChoice','title':heading.replace('-',' ').title(),'configuration':{'allowDrops':False,'type':'feat','choices':{'0':{'count':1,'replacement':False}},'pool':[{'uuid':u} for u in variants],'restriction':{'type':'race'}},'value':{}})
     doc['flags']['runarcana']['creation']=creation(page,profiles)
+    def resolve_grants(value):
+        if isinstance(value,dict):
+            for grant in value.get('spellGrants',[]):
+                spellkey='/en/magic/spells/'+grant['spell']+'/'
+                grant['uuid']='Compendium.runarcana.spells.Item.'+uid(spellkey)
+                grant['canonicalId']=spellkey
+            for child in value.values():resolve_grants(child)
+        elif isinstance(value,list):
+            for child in value:resolve_grants(child)
+    resolve_grants(doc['flags']['runarcana']['creation'])
     doc['flags']['runarcana']['manualAttributeAllocation']=False
 def npc(page,cr):
     key=cr['id']; stats=cr['vitals']; tags=cr['tags']; extra=cr['extra']

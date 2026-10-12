@@ -1,0 +1,96 @@
+{
+  "scope": "Point 2: complete origins and character customization, including published choices, Pasts/class creation choices and heritage customization. Shared spell/combat/rune engines belong to point 3; Foundry V14 runtime checks belong to point 1.",
+  "complete": false,
+  "groups": [
+    {
+      "id": "origin-powers",
+      "requirement": "Native activities and coordinated powers for all published origin/variant traits",
+      "status": "in-progress"
+    },
+    {
+      "id": "origin-spell-grants",
+      "requirement": "Botanical and Vesani innate grants with published abilities, uses and level progression",
+      "status": "in-progress"
+    },
+    {
+      "id": "situational-origin-modifiers",
+      "requirement": "Declared situational saves/checks, immunities, senses and physical modifiers",
+      "status": "in-progress"
+    },
+    {
+      "id": "troll-regeneration",
+      "requirement": "Combat/out-of-combat recovery, acid/fire wounds, treatment and zero-HP exception",
+      "status": "in-progress"
+    },
+    {
+      "id": "origin-weakness",
+      "requirement": "Origin and Runeborn weakness saves, penalties and refresh on continuous damage",
+      "status": "in-progress"
+    },
+    {
+      "id": "vastaya-magic",
+      "requirement": "Magic-zone transformation modifiers, inspiration restrictions, hourly saves/exhaustion, healing and rerolls",
+      "status": "pending"
+    },
+    {
+      "id": "shoma-forms-clones",
+      "requirement": "Oovi-Kat form observation/scrutiny, visual clones, detection and expiry",
+      "status": "pending"
+    },
+    {
+      "id": "botanical-powers",
+      "requirement": "All Fibers/Florescence options, branch budget/expiry, roots, petals and production",
+      "status": "pending"
+    },
+    {
+      "id": "origin-conditional-attacks",
+      "requirement": "Improvised weapon training, Simian Fury, Natural Protectors and movement-dependent damage",
+      "status": "pending"
+    },
+    {
+      "id": "construct-repair-modes",
+      "requirement": "Healing/repair, armor requirements, overheat sequence, geolocation and kinetic energy",
+      "status": "in-progress"
+    },
+    {
+      "id": "minotaur-powers",
+      "requirement": "Additional reaction, condition removal and roar with coupled effects and immunity tracking",
+      "status": "in-progress"
+    },
+    {
+      "id": "yordle-powers",
+      "requirement": "Fey ancestry, emotions/intentions and Glamour with a GM-defined die (source omits its size)",
+      "status": "pending"
+    },
+    {
+      "id": "runeborn-gallery",
+      "requirement": "Remaining traits/disadvantages, weapon upgrades, resistance progression, spell choices and remnant",
+      "status": "pending"
+    },
+    {
+      "id": "backgrounds",
+      "requirement": "Source-backed Past selection, proficiencies, languages/crafts, equipment and features",
+      "status": "pending"
+    },
+    {
+      "id": "class-choices",
+      "requirement": "Published class proficiency and initial selection advancements; general class mechanics remain point 3",
+      "status": "pending"
+    },
+    {
+      "id": "heritage-customization",
+      "requirement": "Remaining selection parameters and permanent conversions relevant to character customization",
+      "status": "pending"
+    },
+    {
+      "id": "existing-character-upgrades",
+      "requirement": "Reviewable upgrades preserving spent counters, later score gains and unrelated edits",
+      "status": "pending"
+    },
+    {
+      "id": "character-audit-tests",
+      "requirement": "Complete source inventory and tests for every implemented numeric choice/transition",
+      "status": "pending"
+    }
+  ]
+}

@@ -4,6 +4,7 @@ import {originHeritageBudget} from './character.mjs';
 import {CRAFTS} from './crafts.mjs';
 import {heritageWeaponOptions} from './heritage-weapons.mjs';
 import {LANGUAGES} from './languages.mjs';
+import {ORIGIN_CIRCUMSTANCES} from './origin-checks.mjs';
 
 const t=key=>game.i18n.localize('RUNARCANA.'+key);
 const el=(tag,text,cls)=>{const node=document.createElement(tag);if(text!==undefined)node.textContent=text;if(cls)node.className=cls;return node;};
@@ -85,6 +86,39 @@ export class Workbench extends foundry.applications.api.ApplicationV2 {
       }
       root.append(section);
     }
+    const powerArea=el('section');powerArea.append(el('h3',t('Powers.Title')));
+    const powerItems=actor.items.filter(i=>i.getFlag?.('runarcana','originPower'));
+    for(const power of powerItems){
+      const definition=power.getFlag('runarcana','originPower'),row=el('details');row.append(el('summary',power.name),el('p',definition.description));
+      if(definition.max)row.append(el('p',`${Math.max(0,power.system.uses.max-power.system.uses.spent)}/${power.system.uses.max}`));
+      if(!definition.managed){
+        row.append(button('Powers.Use',async()=>{const activities=power.system.activities.contents??Object.values(power.system.activities);const activity=activities.find(a=>a.type===definition.activityType);if(!activity)throw Error('RUNARCANA.Error.Source');await activity.use();this.render(true);}));
+      }else{
+        const requirements=field(row,'Powers.RequirementsConfirmed',input('checkbox'));
+        const candidates=new Map([...game.actors,...(canvas.tokens?.placeables??[]).map(t=>t.actor).filter(Boolean)].filter(a=>a.isOwner).map(a=>[a.uuid,a]));
+        let target,cls,count,length,whip,store,discard,condition,decay;
+        if(['selfsacrifice','devourEssence','comfort'].includes(definition.managed))target=field(row,'Powers.Target',select([['',t('Creation.Select')],...[...candidates].map(([uuid,a])=>[uuid,a.name])]));
+        if(definition.managed==='selfsacrifice')cls=field(row,'Powers.HitDieClass',select(actor.items.filter(i=>i.type==='class').map(i=>[i.id,`${i.name}: ${i.system.hd.denomination}`])));
+        if(definition.managed==='foxFire'){count=field(row,'Powers.Orbs',input('number',3));count.min=1;count.max=3;}
+        if(definition.managed==='floralBranch'){length=field(row,'Powers.Length',input('number',6));length.min=1;whip=field(row,'Powers.Whip',input('checkbox'));}
+        if(definition.managed==='devourEssence')store=field(row,'Powers.StoreEssence',input('checkbox'));
+        if(definition.managed==='plumdaggers'){discard=field(row,'Powers.DiscardOldest',input('checkbox'));decay=field(row,'Powers.DecayHours',input('number',''));decay.min=0.1;}
+        if(definition.managed==='comfort')condition=field(row,'Powers.Condition',select([['frightened','Frightened'],['charmed','Charmed']]));
+        row.append(button('Powers.Use',async()=>{
+          const result=await api.useOriginPower(actor,power.id,{prerequisitesConfirmed:requirements.checked,targetUuid:target?.value,classId:cls?.value,count:count?Number(count.value):undefined,length:length?Number(length.value):undefined,whip:whip?.checked,store:store?.checked,discardOldest:discard?.checked,decayHours:decay?Number(decay.value):undefined,condition:condition?.value});
+          if(result.roll)await result.roll.toMessage({speaker:ChatMessage.getSpeaker({actor}),flavor:power.name});
+          this.render(true);
+        }));
+      }
+      powerArea.append(row);
+    }
+    if(powerItems.length)root.append(powerArea);
+    const contextual=el('section');contextual.append(el('h3',t('Powers.ContextualRoll')));
+    const kind=field(contextual,'Powers.RollKind',select([['save','Saving throw'],['skill','Skill check'],['check','Ability check']]));
+    const key=field(contextual,'Powers.AbilitySkill',select(Object.keys(actor.system.abilities).map(k=>[k,k])));
+    kind.addEventListener('change',()=>{const values=kind.value==='skill'?Object.keys(actor.system.skills):Object.keys(actor.system.abilities);key.replaceChildren();for(const k of values){const o=el('option',k);o.value=k;key.append(o);}});
+    const circumstance=field(contextual,'Powers.Circumstance',select(ORIGIN_CIRCUMSTANCES.map(k=>[k,k]))),dc=field(contextual,'Powers.DC',input('number','')),poison=field(contextual,'Powers.PoisonLevel',input('number',0)),equipment=field(contextual,'Powers.ProperEquipment',input('checkbox')),advantage=field(contextual,'Powers.AlreadyAdvantage',input('checkbox'));
+    contextual.append(button('Powers.Roll',async()=>{const result=await api.rollOriginCheck(actor,{kind:kind.value,key:key.value,circumstance:circumstance.value,target:dc.value===''?undefined:Number(dc.value),poisonLevel:Number(poison.value),properEquipment:equipment.checked,alreadyAdvantage:advantage.checked});if(result?.immune)ui.notifications.info(t('Powers.Immune'));}));root.append(contextual);
     for(const [id,r]of Object.entries(actor.getFlag('runarcana','resources')??{})) {
       const row=el('div',undefined,'runarcana-resource');row.append(el('span',`${r.label??id}: ${r.value}/${r.max}`),button('SpendOne',async()=>{await api.spendResource(actor,id,1,{operationId:crypto.randomUUID()});this.render(true);}));root.append(row);
     }
@@ -96,9 +130,15 @@ export class Workbench extends foundry.applications.api.ApplicationV2 {
     const recovery=field(form,'Recovery',select(['none','short','long','full'].map(v=>[v,t('Rest.'+v)])));
     form.append(button('SaveResource',async()=>{await api.setResource(actor,id.value,{label:label.value,max:Number(max.value),value:Number(value.value),recovery:recovery.value});this.render(true);}));root.append(form);
     const rests=el('section');rests.append(el('h3',t('Rest.Title')),el('p',t('Rest.Confirmation')));
+    const originPlan=actor.getFlag('runarcana','originSelection')?.plan;
+    let repair;
+    if(originPlan?.origin==='Construct'||originPlan?.constructed){
+      repair=field(rests,'Powers.RepairConfirmed',input('checkbox'));
+      rests.append(button('Powers.Repair',async()=>{await api.repairConstruct(actor,{hours:6,confirmed:repair.checked});this.render(true);}));
+    }
     for(const kind of ['short','long','full'])rests.append(button('Rest.'+kind,async()=>{
       const confirmed=await foundry.applications.api.DialogV2.confirm({window:{title:t('Rest.'+kind)},content:`<p>${t('Rest.Confirmation')}</p>`});
-      if(confirmed){await api.rest(actor,kind,{operationId:crypto.randomUUID()});this.render(true);}
+      if(confirmed){await api.rest(actor,kind,{operationId:crypto.randomUUID(),repairConfirmed:repair?.checked??false});this.render(true);}
     }));
     const die=select([...new Set(actor.items.filter(i=>i.type==='class').map(i=>i.system.hd.denomination))].map(d=>[d,d]));
     rests.append(die);
@@ -115,7 +155,6 @@ export class Workbench extends foundry.applications.api.ApplicationV2 {
     const heritage=el('section');heritage.append(el('h3',t('Choices.Title')));
     const budget=field(heritage,'Choices.Budget',input('number',0));budget.min=0;
     const pool=field(heritage,'Choices.Pool',select([['origin',t('Choices.OriginPool')],['region',t('Choices.RegionPool')]]));
-    const originPlan=actor.getFlag('runarcana','originSelection')?.plan;
     const updateBudget=()=>{if(originPlan){budget.value=originHeritageBudget(originPlan,actor.system.details.level,pool.value);budget.readOnly=true;}};pool.addEventListener('change',updateBudget);updateBudget();
     const choose=field(heritage,'Choices.Document',select([['',t('Choices.Select')]]));
     const hp=game.packs.get('runarcana.heritages');

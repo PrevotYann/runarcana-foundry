@@ -58,6 +58,8 @@ def creation(page,variants):
                 if len(cells)!=2:continue
                 name,description=[c.get_text(' ',strip=True) for c in cells]
                 result['runeborn'].append({'id':re.sub(r'[^a-z0-9]+','-',(category+'-'+(description if category=='Disadvantages' else name)).lower()).strip('-'),'name':description if category=='Disadvantages' else name,'description':description,'category':category,'group':group,'points':float(name.replace(',','.')) if category=='Disadvantages' else 0})
+    from origin_powers import powers
+    powers(page,result)
     return result
 
 def variant(page,section,uuid):
@@ -67,7 +69,11 @@ def variant(page,section,uuid):
         soup=BeautifulSoup(section['html'],'html.parser');options=[]
         for li in soup.select('ul > li'):
             strong=li.find('strong')
-            if strong:options.append({'id':re.sub(r'[^a-z0-9]+','-',strong.get_text().lower()).strip('-'),'name':strong.get_text(' ',strip=True).rstrip('.'),'description':li.get_text(' ',strip=True)})
+            if strong:
+                option={'id':re.sub(r'[^a-z0-9]+','-',strong.get_text().lower()).strip('-'),'name':strong.get_text(' ',strip=True).rstrip('.'),'description':li.get_text(' ',strip=True)}
+                from origin_powers import botany_powers
+                botany_powers(page,option)
+                options.append(option)
         result['choices'].append({'id':'botany','type':'option','optional':name=='Arboreal','options':options})
         if name=='Arboreal':result['ac']='10 + @abilities.dex.mod + @abilities.con.mod'
     if origin=='Chireans':
@@ -113,4 +119,6 @@ def variant(page,section,uuid):
         if name=='Aquatic':result['resistance']=['bludgeoning'];result['acBonus']='@prof';result['underwaterVision']=120
         if name=='Faeric':result['movement']['fly']=30
         if name=='Fluffy':result['movement']['walk']=40;result['heavyWeaponSpeed']=30
+    from origin_powers import powers
+    powers(page,result,name)
     return result

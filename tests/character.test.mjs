@@ -50,8 +50,8 @@ test('all five Half-Dragon breaths preserve source areas, dynamic Constitution D
 test('Vastaya minor transformation grants a Constitution plus proficiency check without changing tribal statistics',()=>{
   for(const variant of profiles.Vastaya.variants){
     const plan=characterPlan(profiles.Vastaya,selection('Vastaya',variant.name));
-    assert.equal(plan.actions.length,1);
-    const item=originAction(plan.actions[0],{canonicalId:'vastaya'}),activity=Object.values(item.system.activities)[0];
+    assert.equal(plan.actions.filter(a=>a.kind==='transformation').length,1);
+    const item=originAction(plan.actions.find(a=>a.kind==='transformation'),{canonicalId:'vastaya'}),activity=Object.values(item.system.activities)[0];
     assert.equal(activity.type,'check');assert.equal(activity.activation.type,'bonus');
     assert.equal(activity.check.ability,'con');assert.equal(activity.check.bonus,'@prof');
     assert.equal(activity.check.dc.formula,'15');assert.deepEqual(activity.check.associated,[]);

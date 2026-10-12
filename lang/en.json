@@ -252,6 +252,37 @@
       "EquipmentRequired": "Review equipment before transforming.",
       "ReturnFirst": "Return to normal form before resting or customizing your origin.",
       "Materials": "Draconic Form cannot cast spells that consume material components."
+    },
+    "Powers": {
+      "Title": "Origin powers",
+      "Use": "Use power",
+      "Requirements": "Verify the published prerequisites, trigger, target and range.",
+      "RequirementsConfirmed": "Published trigger, target, range and hearing requirements verified",
+      "Unavailable": "The creature cannot use or receive this power in its current state.",
+      "Capacity": "The published carrying or essence capacity would be exceeded.",
+      "EssenceTarget": "Devour Essence requires a different unconscious, living creature with 0 HP.",
+      "Target": "Target creature",
+      "HitDieClass": "Class Hit Die to spend",
+      "Orbs": "Spirit orbs (1 to 3)",
+      "Length": "Branch length in feet",
+      "Whip": "Create a 6-foot thorn whip",
+      "StoreEssence": "Store the essence instead of healing",
+      "DiscardOldest": "Discard oldest feathers if needed to respect capacity",
+      "DecayHours": "GM ruling: feather decay time in hours (source says a few hours)",
+      "Condition": "Condition to end",
+      "ContextualRoll": "Situational origin check",
+      "RollKind": "Roll kind",
+      "AbilitySkill": "Ability or skill",
+      "Circumstance": "Declared circumstance",
+      "DC": "Difficulty class (optional)",
+      "PoisonLevel": "Poison formula level",
+      "ProperEquipment": "Suitable protective equipment",
+      "AlreadyAdvantage": "Already has advantage on this poison saving throw",
+      "Roll": "Roll with origin modifiers",
+      "Immune": "The published origin grants immunity to this declared circumstance.",
+      "RepairConfirmed": "Six hours of careful repair work completed",
+      "Repair": "Complete Construct repair",
+      "RepairRequirements": "Construct repair requires six hours of confirmed work and cannot revive a dead creature."
     }
   }
 }

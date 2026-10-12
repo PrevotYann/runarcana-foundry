@@ -39,7 +39,7 @@ export async function transformDragon(actor,active,{equipmentConfirmed=false}={}
     const definition=form.getFlag('runarcana','originForm');
     if(!['str','dex','con'].includes(definition.ability)||![60,70].includes(definition.fly))throw Error('RUNARCANA.Error.Source');
     state={active:true,started:game.time.worldTime,expires:game.time.worldTime+10800,extraBreath:extra,snapshots:[]};
-    effect={name:'Draconic Form',type:'base',disabled:false,duration:{startTime:game.time.worldTime,seconds:10800},system:{changes:draconicChanges(definition,{size:actor.system.traits.size,proficiency})},flags:{runarcana:{draconicForm:true}}};
+    effect={name:'Draconic Form',type:'base',disabled:false,start:{time:game.time.worldTime},duration:{value:3,units:'hours',expiry:null},system:{changes:draconicChanges(definition,{size:actor.system.traits.size,proficiency})},flags:{runarcana:{draconicForm:true}}};
     updates.push({_id:form.id,'system.uses.spent':form.system.uses.spent+1});
     for(const item of actor.items.filter(i=>i.getFlag?.('runarcana','originManaged'))){
       const raw=item.toObject(),update={_id:item.id},snapshot={_id:item.id};
@@ -85,13 +85,13 @@ export async function transformDragon(actor,active,{equipmentConfirmed=false}={}
   const oldEffects=[...actor.effects].filter(formEffect).map(e=>e.toObject());
   try{
     if(active){const created=await actor.createEmbeddedDocuments('ActiveEffect',[effect]);if(created.length!==1)throw Error('RUNARCANA.Error.Source');}
-    else if(oldEffects.length)await actor.deleteEmbeddedDocuments('ActiveEffect',oldEffects.map(e=>e._id));
+    else if(oldEffects.length)await actor.deleteEmbeddedDocuments('ActiveEffect',oldEffects.map(e=>e._id),{runarcanaFormTransition:true});
     await actor.updateEmbeddedDocuments('Item',updates);
     await actor.update({'flags.runarcana.draconicForm':state});
   }catch(error){
     await actor.updateEmbeddedDocuments('Item',rollback);
     const current=[...actor.effects].filter(formEffect);
-    if(current.length)await actor.deleteEmbeddedDocuments('ActiveEffect',current.map(e=>e.id));
+    if(current.length)await actor.deleteEmbeddedDocuments('ActiveEffect',current.map(e=>e.id),{runarcanaFormTransition:true});
     if(oldEffects.length)await actor.createEmbeddedDocuments('ActiveEffect',oldEffects,{keepId:true});
     await actor.update({'flags.runarcana.draconicForm':before});
     throw error;

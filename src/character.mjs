@@ -64,8 +64,13 @@ export function characterPlan(profile,selection,{knownSkills={},knownCrafts=[]}=
   p.hpOverall=profile.hpOverall;
   p.underwaterVision=variant?.underwaterVision;p.heavyWeaponSpeed=variant?.heavyWeaponSpeed;
   p.naturalWeapons=[...array(profile.naturalWeapons),...array(variant?.naturalWeapons)].map(w=>({...w}));
-  p.actions=[...array(profile.actions),...array(variant?.actions)].map(a=>({...a}));
-  p.actionsReviewRequired=Boolean(profile.actionsReviewRequired||variant?.actionsReviewRequired);
+  p.actions=[...array(profile.actions),...array(variant?.actions),...p.selectedOptions.flatMap(o=>array(o.actions))].map(a=>({...a}));
+  p.spellGrants=[...array(profile.spellGrants),...array(variant?.spellGrants),...p.selectedOptions.flatMap(o=>array(o.spellGrants))].map(s=>({...s}));
+  p.carryLarger=p.selectedOptions.some(o=>o.carryLarger);
+  p.naturalDamageBonus=p.selectedOptions.find(o=>o.naturalDamageBonus)?.naturalDamageBonus;
+  p.unarmedFireBonus=p.selectedOptions.find(o=>o.unarmedFireBonus)?.unarmedFireBonus;
+  p.weaknessProficiency=p.selectedOptions.find(o=>o.weaknessProficiency)?.weaknessProficiency??1;
+  p.actionsReviewRequired=Boolean(profile.actionsReviewRequired||variant?.actionsReviewRequired||profile.powersReviewRequired||variant?.powersReviewRequired||p.selectedOptions.some(o=>o.powersReviewRequired));
   p.generation=generation;
   p.elementalDefense=variant?.elementalDefense;p.initiativeAdvantage=variant?.initiativeAdvantage;p.strengthReduction=variant?.strengthReduction;
   if(profile.origin==='Runeborn')runebornPlan(profile,selection,p,choice,knownSkills,knownCrafts);
@@ -127,10 +132,11 @@ function runebornPlan(profile,selection,p,choice,knownSkills,knownCrafts) {
     if(name==='Natural Resistance')choice({type:'damage',options:['acid','lightning','fire','cold','thunder','poison','force','necrotic','psychic','radiant','bludgeoning','slashing','piercing']},row.value);
     if(name==='Natural Armor'){if(!ABILITIES.filter(k=>k!=='dex').includes(row.value))fail();p.ac=`10 + @abilities.dex.mod + @abilities.${row.value}.mod`;}
     if(name==='Special Senses'){if(!['blindsight','tremorsense'].includes(row.value))fail();p.senses[row.value]=10;}
-    if(name==='Constructed')p.resistance.push('poison');
+    if(name==='Constructed'){p.resistance.push('poison');p.constructed=true;}
     if(['Breath Weapon','Sharp Senses','Innate Spellcasting','Improved Innate Spellcasting'].includes(name)){
       const options={ 'Breath Weapon':['acid','lightning','cold','fire','thunder','poison'],'Sharp Senses':['hearing','smell','sight'],'Innate Spellcasting':['str','dex','con','int','wis','cha'],'Improved Innate Spellcasting':['int','wis','cha']}[name];if(!options.includes(row.value))fail();
       if(name.includes('Spellcasting'))p.castingAbility=row.value;
+      if(name==='Sharp Senses'){p.sharpSenses??=[];if(p.sharpSenses.includes(row.value))fail();p.sharpSenses.push(row.value);}
     }
   }
   credit+=(conversions.minor??0)+2*(conversions.major??0);
@@ -162,5 +168,6 @@ export function originEffects(plan,{level=1,underwater=false,heavyWeapon=false}=
   for(const key of plan.weapons??[])add('system.traits.weaponProf.value',key);
   if(plan.acBonus)add('system.attributes.ac.bonus',plan.acBonus);
   if(plan.initiativeAdvantage)add('system.attributes.init.roll.mode','1');
+  if(plan.carryLarger)add('flags.dnd5e.powerfulBuild','true',5);
   return [{name:'Runarcana — '+plan.origin+(plan.variant?' / '+plan.variant:''),type:'base',transfer:true,disabled:false,system:{changes},flags:{runarcana:{originManaged:true}}}];
 }
