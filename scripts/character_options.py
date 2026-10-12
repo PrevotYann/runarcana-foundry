@@ -21,6 +21,10 @@ def heritage_metadata(page,section):
     mechanics['Pickpocketer']={'skills':{'slt':1}}
     mechanics['Sea Style']={'weapons':['net','spear','trident']}
     mechanics['Exquisite Construction']={'resistanceChoice':['acid','lightning','force','fire','cold','necrotic','psychic','radiant']}
+    mechanics['Skilled']={'trainingChoice':{'count':3,'skills':list(SKILLS.values()),'crafts':'all','newOnly':True}}
+    mechanics['Master Artisan']={'trainingChoice':{'count':1,'skills':[],'crafts':'all','expert':True}}
+    mechanics['Hospitable']={'fixedCrafts':['cook']}
+    mechanics['Cautious Traveler']['trainingChoice']={'count':1,'skills':[],'crafts':'guide'}
     for name,skills in {'Alpha Authority':['itm','per'],'Commander':['itm','per'],'Insightful Mind':['inv','ins'],'Mediator':['dec','itm','ins','per'],'Natural Propulsion':['nat','sur'],'Thick Feet':['ath','sur'],'Wealthy':list(SKILLS.values())}.items():
         mechanics[name]={'skillChoice':{'count':1,'options':skills,'expertiseIfKnown':True}}
     mechanics['Scout']={'skillChoice':{'count':1,'options':['ins','inv','prc','slt'],'advantageIfKnown':True},'passivePerception':'floor(@prof / 2)'}
@@ -30,6 +34,30 @@ def heritage_metadata(page,section):
     return result
 
 def generate(pages,documents,root):
+    craft_catalog=[]
+    abilities={'strength':'str','dexterity':'dex','constitution':'con','intelligence':'int','wisdom':'wis','charisma':'cha'}
+    def ability(text):
+        return next((code for name,code in abilities.items() if re.search(r'\b'+name+r'\b',text,re.I)),None)
+    for p in pages:
+        match=re.search(r'/detailing/crafts/(major|minor)/([^/]+)/$',p['url'])
+        if not match:continue
+        soup=BeautifulSoup(p['html'],'html.parser');intro=[]
+        for child in (soup.find('div') or soup).children:
+            if getattr(child,'name',None)=='h2':break
+            if getattr(child,'name',None):intro.append(child)
+        base={'sourceUrl':p['url'],'sourceHash':p['sha256'],'category':match[1],'craft':p['title']}
+        if match[1]=='major':
+            attr=next((e.get_text(' ',strip=True) for e in intro if e.find('strong') and e.find('strong').get_text(strip=True).rstrip(':.').casefold()=='attribute'),'')
+            craft_catalog.append({**base,'id':match[2],'name':p['title'],'ability':ability(attr) or 'int','abilityReviewRequired':not bool(ability(attr))})
+        else:
+            for element in intro:
+                if element.name not in ['ul','ol']:continue
+                for li in element.find_all('li',recursive=False):
+                    label=li.find('strong');attr=next((e.get_text(' ',strip=True) for e in li.find_all('li') if e.find('strong') and e.find('strong').get_text(strip=True).rstrip(':.').casefold()=='attribute'),'')
+                    if not label or not attr:continue
+                    name=label.get_text(' ',strip=True).rstrip(':');slug=normalized(name).replace(' ','-')
+                    craft_catalog.append({**base,'id':match[2]+'-'+slug,'name':p['title']+': '+name,'discipline':name,'ability':ability(attr) or 'int','specialtyRequired':match[2]=='guide' or match[2]=='player' and slug=='cards'})
+    if len(craft_catalog)<30:raise ValueError('Craft source catalog is incomplete')
     core=['battleaxe','blowgun','club','dagger','dart','flail','glaive','greataxe','greatclub','greatsword','halberd','handaxe','handcrossbow','heavycrossbow','javelin','lance','lightcrossbow','lighthammer','longbow','longsword','mace','maul','morningstar','musket','pike','pistol','quarterstaff','rapier','scimitar','shortsword','sickle','spear','shortbow','sling','trident','warpick','warhammer','whip','net']
     aliases={'staff':'quarterstaff','big club':'greatclub','war axe':'battleaxe','riding lance':'lance','hatchet':'handaxe','mallet':'maul','long sword':'longsword','short sword':'shortsword','flintlock pistol':'pistol','hand cannon':'handcannon','gauntlet':'wargauntlet'}
     weapons=[];by_name={}
@@ -118,4 +146,4 @@ def generate(pages,documents,root):
             names,categories,crafts=activities[p['title']];groups=[{'id':'activities','count':2,'weapons':ids(names),'categories':categories,'crafts':crafts}]
         regions[p['title']]={'name':p['title'],'sourceUrl':p['url'],'sourceHash':p['sha256'],'skills':skills,'languages':{'fixed':fixed,'choices':choices},'groups':groups,'sourceRules':'\n'.join(fields.values())}
     dest=root/'src/generated/character-options.mjs';dest.parent.mkdir(parents=True,exist_ok=True)
-    dest.write_text('// Generated from the collected official source snapshot.\nexport const REGIONAL_RULES='+json.dumps(regions,ensure_ascii=False,indent=2)+';\nexport const EQUIPMENT_WEAPONS='+json.dumps(sorted(weapons,key=lambda w:w['name']),ensure_ascii=False,indent=2)+';\n',encoding='utf8')
+    dest.write_text('// Generated from the collected official source snapshot.\nexport const REGIONAL_RULES='+json.dumps(regions,ensure_ascii=False,indent=2)+';\nexport const EQUIPMENT_WEAPONS='+json.dumps(sorted(weapons,key=lambda w:w['name']),ensure_ascii=False,indent=2)+';\nexport const CRAFTS='+json.dumps(sorted(craft_catalog,key=lambda c:c['name']),ensure_ascii=False,indent=2)+';\n',encoding='utf8')

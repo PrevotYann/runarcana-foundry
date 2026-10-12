@@ -44,13 +44,13 @@ test('reviewed permanent heritage effects preserve expertise, additive vision an
 test('additional reviewed heritage clauses grant their published skills without inventing Pickpocketer expertise',()=>{
   const expected={'Bioenergy':'tec','Blessed Healer':'med','Cautious Traveler':'sur','Celestial Encouragement':'arc','Draconic Resilience':'sur','Extrovert':'his','Ice Breaker':'sur','Killer Instinct':'med','Manatouched':'arc','Natural Medicine':'med','Nomadic Life':'sur','Ottrani Healing':'med','Simian Skill':'ath','Soul of the Hunt':'sur','Truth Seeker':'prc'};
   for(const [name,skill]of Object.entries(expected))for(const value of [0,1,2]){
-    const changes=heritageEffects(rule(name),{skills:{[skill]:value}})[0].system.changes;
+    const changes=heritageEffects(rule(name),{skills:{[skill]:value},options:name==='Cautious Traveler'?{training:[{kind:'craft',id:'guide-pilot',specialty:'Cart'}]}:{}})[0].system.changes;
     assert.ok(changes.some(c=>c.key===`system.skills.${skill}.value`&&c.value===String(value>=1?2:1)&&c.type==='upgrade'),name);
   }
   assert.equal(heritageEffects(rule('Pickpocketer'),{skills:{slt:1}})[0].system.changes[0].value,'1');
   assert.ok(heritageEffects(rule('Truth Seeker'))[0].system.changes.some(c=>c.key==='system.skills.prc.bonuses.passive'&&c.value==='1'));
   assert.deepEqual(heritageEffects(rule('Sea Style'))[0].system.changes.map(c=>[c.key,c.value]),['net','spear','trident'].map(k=>['system.traits.weaponProf.value',k]));
-  assert.equal(rows.filter(d=>d.flags.runarcana.heritageRules.mechanics).length,30);
+  assert.equal(rows.filter(d=>d.flags.runarcana.heritageRules.mechanics).length,33);
 });
 
 test('heritage skill choices validate published options and distinguish expertise from Scout advantage',()=>{

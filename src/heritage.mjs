@@ -1,3 +1,4 @@
+import {trainingOptions} from './crafts.mjs';
 /** Universal heritage cost, pool restrictions and conservative prerequisite checks. */
 const norm=value=>String(value).normalize('NFKD').replaceAll('æ','ae').toLowerCase().replace(/[^a-z0-9]+/g,' ').trim();
 const origins={antroplant:'Antroplantae',antroplantae:'Antroplantae',chirean:'Chireans',chireans:'Chireans',chireano:'Chireans',chireanos:'Chireans',construct:'Construct',constructs:'Construct',human:'Human',humans:'Human',minotaur:'Minotaur',minotaurs:'Minotaur','half dragon':'Half-Dragon',troll:'Troll',vastaya:'Vastaya',vastayas:'Vastaya',yordle:'Yordle'};
@@ -42,8 +43,9 @@ export function heritageOptions(rules,options={},context={}) {
   if(!options||typeof options!=='object')return {valid:false,errors:['RUNARCANA.Error.Choices'],options:{skills:[]}};
   const choice=rules.mechanics?.skillChoice,skills=options.skills??[];
   const resistance=rules.mechanics?.resistanceChoice;
-  const valid=Array.isArray(skills)&&(!choice?skills.length===0:skills.length===choice.count&&new Set(skills).size===skills.length&&skills.every(s=>choice.options.includes(s)))&&(!resistance?!options.damage:resistance.includes(options.damage)&&!context.resistance?.includes(options.damage));
-  return {valid,errors:valid?[]:['RUNARCANA.Error.Choices'],options:{skills:valid?[...skills]:[],...(valid&&resistance?{damage:options.damage}:{})}};
+  const training=trainingOptions(rules,options,context);
+  const valid=training.valid&&Array.isArray(skills)&&(!choice?skills.length===0:skills.length===choice.count&&new Set(skills).size===skills.length&&skills.every(s=>choice.options.includes(s)))&&(!resistance?!options.damage:resistance.includes(options.damage)&&!context.resistance?.includes(options.damage));
+  return {valid,errors:valid?[]:['RUNARCANA.Error.Choices'],options:{skills:valid?[...skills]:[],...(valid&&resistance?{damage:options.damage}:{}),...(valid&&rules.mechanics?.trainingChoice?{training:training.rows}:{})}};
 }
 export function heritageEffects(rules,{skills={},options={}}={}) {
   const m=rules.mechanics;if(!m)return [];
@@ -54,11 +56,12 @@ export function heritageEffects(rules,{skills={},options={}}={}) {
     add('system.skills.'+key+'.value',m.skillChoice.expertiseIfKnown&&skills[key]>=1?2:1,'upgrade');
     if(m.skillChoice.advantageIfKnown&&skills[key]>=1)add('system.skills.'+key+'.roll.mode',1,'upgrade');
   }
+  for(const row of selection.options.training??[])if(row.kind==='skill')add('system.skills.'+row.id+'.value',1,'upgrade');
   for(const key of m.weapons??[])add('system.traits.weaponProf.value',key);
   if(m.resistanceChoice)add('system.traits.dr.value',selection.options.damage);
   for(const [key,value]of Object.entries(m.sensesAdd??{}))add('system.attributes.senses.ranges.'+key,value);
   for(const [key,value]of Object.entries(m.sensesMinimum??{}))add('system.attributes.senses.ranges.'+key,value,'upgrade');
   if(m.sensesAdd||m.sensesMinimum)add('system.attributes.senses.units','ft','override');
   if(m.passivePerception)add('system.skills.prc.bonuses.passive',m.passivePerception);
-  return [{name:rules.name,type:'base',transfer:true,system:{changes},flags:{runarcana:{heritageManaged:true}}}];
+  return changes.length?[{name:rules.name,type:'base',transfer:true,system:{changes},flags:{runarcana:{heritageManaged:true}}}]:[];
 }

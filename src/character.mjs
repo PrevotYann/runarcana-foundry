@@ -147,7 +147,7 @@ export function originEffects(plan,{level=1,underwater=false,heavyWeapon=false}=
   if(Object.keys(senses).length)add('system.attributes.senses.units','ft',5);
   for(const [k,v]of Object.entries(senses))add('system.attributes.senses.'+(k==='special'?'special':'ranges.'+k),v,5);
   for(const [k,v]of Object.entries(plan.skills))add('system.skills.'+k+'.value',v,4);
-  if(plan.customProficiencies?.length)add('system.tools.runarcanaCraft.value','1',4);
+  if(plan.customProficiencies?.length)add('system.tools.runarcanaCraft.value','0.5',4);
   for(const k of new Set(plan.skillAdvantages??[]))add('system.skills.'+k+'.roll.mode','1');
   const resistance=[...plan.resistance];
   if(plan.elementalDefense&&level>=15)resistance.push(plan.elementalDefense[1]);

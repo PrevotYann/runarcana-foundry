@@ -1,6 +1,7 @@
 import {isMarked} from './api.mjs';
 import {renderCharacterForm} from './character-form.mjs';
 import {originHeritageBudget} from './character.mjs';
+import {CRAFTS} from './crafts.mjs';
 
 const t=key=>game.i18n.localize('RUNARCANA.'+key);
 const el=(tag,text,cls)=>{const node=document.createElement(tag);if(text!==undefined)node.textContent=text;if(cls)node.className=cls;return node;};
@@ -104,13 +105,20 @@ export class Workbench extends foundry.applications.api.ApplicationV2 {
     const updateBudget=()=>{if(originPlan){budget.value=originHeritageBudget(originPlan,actor.system.details.level,pool.value);budget.readOnly=true;}};pool.addEventListener('change',updateBudget);updateBudget();
     const choose=field(heritage,'Choices.Document',select([['',t('Choices.Select')]]));
     const hp=game.packs.get('runarcana.heritages');
-    const optionArea=el('div');heritage.append(optionArea);let selectedSkills=[],selectedDamage;
+    const optionArea=el('div');heritage.append(optionArea);let selectedSkills=[],selectedDamage,selectedTraining=[];
     const updateOptions=async()=>{
-      selectedSkills=[];selectedDamage=null;optionArea.replaceChildren();const id=choose.value;if(!id||!hp)return;
+      selectedSkills=[];selectedDamage=null;selectedTraining=[];optionArea.replaceChildren();const id=choose.value;if(!id||!hp)return;
       const source=await hp.getDocument(id);if(choose.value!==id)return;
       const mechanics=source.getFlag('runarcana','heritageRules')?.mechanics,choice=mechanics?.skillChoice;
       if(choice)for(let n=0;n<choice.count;n++)selectedSkills.push(field(optionArea,'Choices.Skill',select([['',t('Choices.Select')],...choice.options.map(k=>[k,game.i18n.localize(CONFIG.DND5E.skills[k]?.label??k)])])));
       if(mechanics?.resistanceChoice)selectedDamage=field(optionArea,'Choices.Resistance',select([['',t('Choices.Select')],...mechanics.resistanceChoice.filter(k=>!originPlan?.resistance?.includes(k)).map(k=>[k,game.i18n.localize(CONFIG.DND5E.damageTypes[k]?.label??k)])]));
+      const training=mechanics?.trainingChoice;
+      if(training)for(let n=0;n<training.count;n++){
+        const row=el('div'),picker=field(row,'Choices.Training',select([['',t('Choices.Select')],...training.skills.map(k=>['skill:'+k,game.i18n.localize(CONFIG.DND5E.skills[k]?.label??k)]),...CRAFTS.filter(c=>training.crafts==='all'||training.crafts==='guide'&&c.craft==='Guide').map(c=>['craft:'+c.id,c.name])]));
+        const detail=field(row,'Choices.Specialty',input('text'));detail.maxLength=100;detail.parentElement.hidden=true;
+        picker.addEventListener('change',()=>{detail.value='';detail.parentElement.hidden=!CRAFTS.find(c=>'craft:'+c.id===picker.value)?.specialtyRequired;});
+        selectedTraining.push(()=>{const [kind,id]=picker.value.split(':');return {kind,id,...(!detail.parentElement.hidden?{specialty:detail.value}:{})};});optionArea.append(row);
+      }
     };
     choose.addEventListener('change',updateOptions);pool.addEventListener('change',updateOptions);
     if(hp){const ix=await hp.getIndex({fields:['flags.runarcana.heritageRules']});const updatePicker=()=>{const previous=choose.value;choose.replaceChildren();const empty=el('option',t('Choices.Select'));empty.value='';choose.append(empty);for(const e of ix){const r=e.flags?.runarcana?.heritageRules;if(!r||!r.general&&!r.unlisted&&!(pool.value==='origin'?r.origins.length:r.regions.length))continue;const o=el('option',e.name);o.value=e._id;choose.append(o);}if([...choose.options].some(o=>o.value===previous))choose.value=previous;};pool.addEventListener('change',updatePicker);updatePicker();}
@@ -121,7 +129,7 @@ export class Workbench extends foundry.applications.api.ApplicationV2 {
     for(const event of ['input','change'])heritage.addEventListener(event,()=>{plan=null;preview.textContent='';});
     heritage.append(button('Preview',async()=>{
       if(!choose.value)throw new Error('RUNARCANA.Error.Choices');
-      plan={pool:pool.value,budget:Number(budget.value),choices:[{id:choose.value,uuid:`Compendium.runarcana.heritages.Item.${choose.value}`,cost:Number(cost.value),options:{skills:selectedSkills.map(s=>s.value),...(selectedDamage?{damage:selectedDamage.value}:{})}}]};
+      plan={pool:pool.value,budget:Number(budget.value),choices:[{id:choose.value,uuid:`Compendium.runarcana.heritages.Item.${choose.value}`,cost:Number(cost.value),options:{skills:selectedSkills.map(s=>s.value),...(selectedDamage?{damage:selectedDamage.value}:{}),...(selectedTraining.length?{training:selectedTraining.map(read=>read())}:{})}}]};
       const result=await api.previewHeritages(actor,plan);preview.textContent=`${t('Choices.Spent')}: ${result.spent}; ${result.errors.map(k=>game.i18n.localize(k)).join(', ')} ${result.manual.join('; ')}`;
     }),button('Apply',async()=>{if(!plan)throw new Error('RUNARCANA.Error.Preview');await api.applyHeritages(actor,plan,{overrideReason:reason.value});this.render(true);}));root.append(heritage);
   }

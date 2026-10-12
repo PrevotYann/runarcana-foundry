@@ -150,7 +150,8 @@ test('origin customization is idempotent, preserves later score gains and rolls 
   const actor=mockActor(),api=createApi(),s={...selection('Human'),originUuid:'human'};
   await api.customizeOrigin(actor,s);assert.equal(actor._source.system.abilities.str.value,12);const length=actor.items.length;
   const tool=actor.items.find(i=>i.type==='tool');assert.equal(tool.system.type.baseItem,'runarcanaCraft');assert.deepEqual(tool.system.activities.rcOriginCheck001.check.associated,['runarcanaCraft']);
-  assert.ok(actor.items.find(i=>i.type==='race').effects[0].system.changes.some(c=>c.key==='system.tools.runarcanaCraft.value'&&c.value==='1'));
+  assert.ok(actor.items.find(i=>i.type==='race').effects[0].system.changes.some(c=>c.key==='system.tools.runarcanaCraft.value'&&c.value==='0.5'));
+  assert.equal(actor.items.find(i=>i.type==='tool').system.proficient,0.5);
   await api.customizeOrigin(actor,s);assert.equal(actor.items.length,length);assert.equal(actor._source.system.abilities.str.value,12);
   actor._source.system.abilities.str.value+=1;
   await api.customizeOrigin(actor,{...s,plusTwo:'dex'});assert.equal(actor._source.system.abilities.str.value,11);assert.equal(actor._source.system.abilities.dex.value,12);

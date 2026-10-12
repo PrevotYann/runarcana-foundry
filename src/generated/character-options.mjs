@@ -1318,3 +1318,440 @@ export const EQUIPMENT_WEAPONS=[
     "category": "martial"
   }
 ];
+export const CRAFTS=[
+  {
+    "sourceUrl": "https://wiki.runarcana.org/en/characters/detailing/crafts/major/alchemist/",
+    "sourceHash": "3bec88dc4db6700d03da7d5601f8273d847c1b73d5ef7e4a5bfa05583e6f4df1",
+    "category": "major",
+    "craft": "Alchemist",
+    "id": "alchemist",
+    "name": "Alchemist",
+    "ability": "wis",
+    "abilityReviewRequired": false
+  },
+  {
+    "sourceUrl": "https://wiki.runarcana.org/en/characters/detailing/crafts/major/apothecary/",
+    "sourceHash": "439fab0e2ac5c827e937c39e25791611f578c4268e68ac8137ba5b7486c25a47",
+    "category": "major",
+    "craft": "Apothecary",
+    "id": "apothecary",
+    "name": "Apothecary",
+    "ability": "wis",
+    "abilityReviewRequired": false
+  },
+  {
+    "sourceUrl": "https://wiki.runarcana.org/en/characters/detailing/crafts/major/armorer/",
+    "sourceHash": "569d1dc31abdb14d4403eed253216677dcd06dee1ed5340701cff40d2d40d061",
+    "category": "major",
+    "craft": "Armorer",
+    "id": "armorer",
+    "name": "Armorer",
+    "ability": "str",
+    "abilityReviewRequired": false
+  },
+  {
+    "sourceUrl": "https://wiki.runarcana.org/en/characters/detailing/crafts/minor/artist/",
+    "sourceHash": "d070dad3da3a2abe1357f85b1f0cbbb5d04d1f55893a06f535de8a8e48bbc15b",
+    "category": "minor",
+    "craft": "Artist",
+    "id": "artist-makeup-artist",
+    "name": "Artist: Makeup Artist",
+    "discipline": "Makeup Artist",
+    "ability": "dex",
+    "specialtyRequired": false
+  },
+  {
+    "sourceUrl": "https://wiki.runarcana.org/en/characters/detailing/crafts/minor/artist/",
+    "sourceHash": "d070dad3da3a2abe1357f85b1f0cbbb5d04d1f55893a06f535de8a8e48bbc15b",
+    "category": "minor",
+    "craft": "Artist",
+    "id": "artist-musician",
+    "name": "Artist: Musician",
+    "discipline": "Musician",
+    "ability": "cha",
+    "specialtyRequired": false
+  },
+  {
+    "sourceUrl": "https://wiki.runarcana.org/en/characters/detailing/crafts/minor/artist/",
+    "sourceHash": "d070dad3da3a2abe1357f85b1f0cbbb5d04d1f55893a06f535de8a8e48bbc15b",
+    "category": "minor",
+    "craft": "Artist",
+    "id": "artist-painter",
+    "name": "Artist: Painter",
+    "discipline": "Painter",
+    "ability": "dex",
+    "specialtyRequired": false
+  },
+  {
+    "sourceUrl": "https://wiki.runarcana.org/en/characters/detailing/crafts/minor/artist/",
+    "sourceHash": "d070dad3da3a2abe1357f85b1f0cbbb5d04d1f55893a06f535de8a8e48bbc15b",
+    "category": "minor",
+    "craft": "Artist",
+    "id": "artist-scribe",
+    "name": "Artist: Scribe",
+    "discipline": "Scribe",
+    "ability": "dex",
+    "specialtyRequired": false
+  },
+  {
+    "sourceUrl": "https://wiki.runarcana.org/en/characters/detailing/crafts/minor/artist/",
+    "sourceHash": "d070dad3da3a2abe1357f85b1f0cbbb5d04d1f55893a06f535de8a8e48bbc15b",
+    "category": "minor",
+    "craft": "Artist",
+    "id": "artist-tattoo-artist",
+    "name": "Artist: Tattoo Artist",
+    "discipline": "Tattoo Artist",
+    "ability": "dex",
+    "specialtyRequired": false
+  },
+  {
+    "sourceUrl": "https://wiki.runarcana.org/en/characters/detailing/crafts/major/brewer/",
+    "sourceHash": "ce670defec73b20cc43bb7424bb8ea8464165c2391ff757b2ee8085679d0d44e",
+    "category": "major",
+    "craft": "Brewer",
+    "id": "brewer",
+    "name": "Brewer",
+    "ability": "wis",
+    "abilityReviewRequired": false
+  },
+  {
+    "sourceUrl": "https://wiki.runarcana.org/en/characters/detailing/crafts/minor/collector/",
+    "sourceHash": "10fa0ee54678dd260c3b77404e5a7de2b0973bbe9fc1e356d52d9b702a6945ec",
+    "category": "minor",
+    "craft": "Collector",
+    "id": "collector-biologist",
+    "name": "Collector: Biologist",
+    "discipline": "Biologist",
+    "ability": "dex",
+    "specialtyRequired": false
+  },
+  {
+    "sourceUrl": "https://wiki.runarcana.org/en/characters/detailing/crafts/minor/collector/",
+    "sourceHash": "10fa0ee54678dd260c3b77404e5a7de2b0973bbe9fc1e356d52d9b702a6945ec",
+    "category": "minor",
+    "craft": "Collector",
+    "id": "collector-lumberjack",
+    "name": "Collector: Lumberjack",
+    "discipline": "Lumberjack",
+    "ability": "str",
+    "specialtyRequired": false
+  },
+  {
+    "sourceUrl": "https://wiki.runarcana.org/en/characters/detailing/crafts/minor/collector/",
+    "sourceHash": "10fa0ee54678dd260c3b77404e5a7de2b0973bbe9fc1e356d52d9b702a6945ec",
+    "category": "minor",
+    "craft": "Collector",
+    "id": "collector-miner",
+    "name": "Collector: Miner",
+    "discipline": "Miner",
+    "ability": "dex",
+    "specialtyRequired": false
+  },
+  {
+    "sourceUrl": "https://wiki.runarcana.org/en/characters/detailing/crafts/minor/collector/",
+    "sourceHash": "10fa0ee54678dd260c3b77404e5a7de2b0973bbe9fc1e356d52d9b702a6945ec",
+    "category": "minor",
+    "craft": "Collector",
+    "id": "collector-tanner",
+    "name": "Collector: Tanner",
+    "discipline": "Tanner",
+    "ability": "dex",
+    "specialtyRequired": false
+  },
+  {
+    "sourceUrl": "https://wiki.runarcana.org/en/characters/detailing/crafts/major/cook/",
+    "sourceHash": "ee1060e2002b89353474d148296f8c45fd753e2621516a3fedcf696b5d8a1c40",
+    "category": "major",
+    "craft": "Cook",
+    "id": "cook",
+    "name": "Cook",
+    "ability": "cha",
+    "abilityReviewRequired": false
+  },
+  {
+    "sourceUrl": "https://wiki.runarcana.org/en/characters/detailing/crafts/major/enchanter/",
+    "sourceHash": "a5b43e8107a767c3712640374455e8b000c4862ca71d04f85a5e1391180544b6",
+    "category": "major",
+    "craft": "Enchanter",
+    "id": "enchanter",
+    "name": "Enchanter",
+    "ability": "int",
+    "abilityReviewRequired": false
+  },
+  {
+    "sourceUrl": "https://wiki.runarcana.org/en/characters/detailing/crafts/major/fashionista/",
+    "sourceHash": "1992dac14d3d4d4762dc21248793c5c0765b462bfce8496e1cefa2278bd600a2",
+    "category": "major",
+    "craft": "Fashionista",
+    "id": "fashionista",
+    "name": "Fashionista",
+    "ability": "dex",
+    "abilityReviewRequired": false
+  },
+  {
+    "sourceUrl": "https://wiki.runarcana.org/en/characters/detailing/crafts/major/fletcher/",
+    "sourceHash": "cf8faff5f303ed100354595f9063fb14008f6c5310eef62f4f3f531f9f016d35",
+    "category": "major",
+    "craft": "Fletcher",
+    "id": "fletcher",
+    "name": "Fletcher",
+    "ability": "dex",
+    "abilityReviewRequired": false
+  },
+  {
+    "sourceUrl": "https://wiki.runarcana.org/en/characters/detailing/crafts/minor/forger/",
+    "sourceHash": "51d35240d13ba0e8bace40a294968a2269e7d98b37d6a1cefa6f2ee2c43b30ff",
+    "category": "minor",
+    "craft": "Forger",
+    "id": "forger-art",
+    "name": "Forger: Art",
+    "discipline": "Art",
+    "ability": "int",
+    "specialtyRequired": false
+  },
+  {
+    "sourceUrl": "https://wiki.runarcana.org/en/characters/detailing/crafts/minor/forger/",
+    "sourceHash": "51d35240d13ba0e8bace40a294968a2269e7d98b37d6a1cefa6f2ee2c43b30ff",
+    "category": "minor",
+    "craft": "Forger",
+    "id": "forger-books",
+    "name": "Forger: Books",
+    "discipline": "Books",
+    "ability": "int",
+    "specialtyRequired": false
+  },
+  {
+    "sourceUrl": "https://wiki.runarcana.org/en/characters/detailing/crafts/minor/forger/",
+    "sourceHash": "51d35240d13ba0e8bace40a294968a2269e7d98b37d6a1cefa6f2ee2c43b30ff",
+    "category": "minor",
+    "craft": "Forger",
+    "id": "forger-chemicals",
+    "name": "Forger: Chemicals",
+    "discipline": "Chemicals",
+    "ability": "int",
+    "specialtyRequired": false
+  },
+  {
+    "sourceUrl": "https://wiki.runarcana.org/en/characters/detailing/crafts/minor/forger/",
+    "sourceHash": "51d35240d13ba0e8bace40a294968a2269e7d98b37d6a1cefa6f2ee2c43b30ff",
+    "category": "minor",
+    "craft": "Forger",
+    "id": "forger-jewels",
+    "name": "Forger: Jewels",
+    "discipline": "Jewels",
+    "ability": "int",
+    "specialtyRequired": false
+  },
+  {
+    "sourceUrl": "https://wiki.runarcana.org/en/characters/detailing/crafts/minor/forger/",
+    "sourceHash": "51d35240d13ba0e8bace40a294968a2269e7d98b37d6a1cefa6f2ee2c43b30ff",
+    "category": "minor",
+    "craft": "Forger",
+    "id": "forger-magic-items",
+    "name": "Forger: Magic Items",
+    "discipline": "Magic Items",
+    "ability": "int",
+    "specialtyRequired": false
+  },
+  {
+    "sourceUrl": "https://wiki.runarcana.org/en/characters/detailing/crafts/minor/guide/",
+    "sourceHash": "76f504f227fcae926070fd689b6decbddef973a700fa917e782e61ba42dac889",
+    "category": "minor",
+    "craft": "Guide",
+    "id": "guide-cartographer",
+    "name": "Guide: Cartographer",
+    "discipline": "Cartographer",
+    "ability": "int",
+    "specialtyRequired": true
+  },
+  {
+    "sourceUrl": "https://wiki.runarcana.org/en/characters/detailing/crafts/minor/guide/",
+    "sourceHash": "76f504f227fcae926070fd689b6decbddef973a700fa917e782e61ba42dac889",
+    "category": "minor",
+    "craft": "Guide",
+    "id": "guide-navigator",
+    "name": "Guide: Navigator",
+    "discipline": "Navigator",
+    "ability": "wis",
+    "specialtyRequired": true
+  },
+  {
+    "sourceUrl": "https://wiki.runarcana.org/en/characters/detailing/crafts/minor/guide/",
+    "sourceHash": "76f504f227fcae926070fd689b6decbddef973a700fa917e782e61ba42dac889",
+    "category": "minor",
+    "craft": "Guide",
+    "id": "guide-pilot",
+    "name": "Guide: Pilot",
+    "discipline": "Pilot",
+    "ability": "dex",
+    "specialtyRequired": true
+  },
+  {
+    "sourceUrl": "https://wiki.runarcana.org/en/characters/detailing/crafts/major/gunsmith/",
+    "sourceHash": "43b8be2f46cc4bfb0a7f62c7838335cc30ae25d488f44194eed380314d3cc514",
+    "category": "major",
+    "craft": "Gunsmith",
+    "id": "gunsmith",
+    "name": "Gunsmith",
+    "ability": "wis",
+    "abilityReviewRequired": false
+  },
+  {
+    "sourceUrl": "https://wiki.runarcana.org/en/characters/detailing/crafts/minor/handworker/",
+    "sourceHash": "2df00ae947ac3e30f2d10de6d1a69e3c64106e5254fce8b74cd2c3c8a4beb5f0",
+    "category": "minor",
+    "craft": "Handworker",
+    "id": "handworker-carpenter",
+    "name": "Handworker: Carpenter",
+    "discipline": "Carpenter",
+    "ability": "dex",
+    "specialtyRequired": false
+  },
+  {
+    "sourceUrl": "https://wiki.runarcana.org/en/characters/detailing/crafts/minor/handworker/",
+    "sourceHash": "2df00ae947ac3e30f2d10de6d1a69e3c64106e5254fce8b74cd2c3c8a4beb5f0",
+    "category": "minor",
+    "craft": "Handworker",
+    "id": "handworker-glassmaker",
+    "name": "Handworker: Glassmaker",
+    "discipline": "Glassmaker",
+    "ability": "dex",
+    "specialtyRequired": false
+  },
+  {
+    "sourceUrl": "https://wiki.runarcana.org/en/characters/detailing/crafts/minor/handworker/",
+    "sourceHash": "2df00ae947ac3e30f2d10de6d1a69e3c64106e5254fce8b74cd2c3c8a4beb5f0",
+    "category": "minor",
+    "craft": "Handworker",
+    "id": "handworker-musical-instrumentator",
+    "name": "Handworker: Musical Instrumentator",
+    "discipline": "Musical Instrumentator",
+    "ability": "dex",
+    "specialtyRequired": false
+  },
+  {
+    "sourceUrl": "https://wiki.runarcana.org/en/characters/detailing/crafts/minor/handworker/",
+    "sourceHash": "2df00ae947ac3e30f2d10de6d1a69e3c64106e5254fce8b74cd2c3c8a4beb5f0",
+    "category": "minor",
+    "craft": "Handworker",
+    "id": "handworker-potter",
+    "name": "Handworker: Potter",
+    "discipline": "Potter",
+    "ability": "dex",
+    "specialtyRequired": false
+  },
+  {
+    "sourceUrl": "https://wiki.runarcana.org/en/characters/detailing/crafts/minor/handworker/",
+    "sourceHash": "2df00ae947ac3e30f2d10de6d1a69e3c64106e5254fce8b74cd2c3c8a4beb5f0",
+    "category": "minor",
+    "craft": "Handworker",
+    "id": "handworker-sculptor",
+    "name": "Handworker: Sculptor",
+    "discipline": "Sculptor",
+    "ability": "dex",
+    "specialtyRequired": false
+  },
+  {
+    "sourceUrl": "https://wiki.runarcana.org/en/characters/detailing/crafts/major/jeweler/",
+    "sourceHash": "4ece50e0d85f45d746c012060d2873e531b95d96976c16d8d1eb694cc10c31c5",
+    "category": "major",
+    "craft": "Jeweler",
+    "id": "jeweler",
+    "name": "Jeweler",
+    "ability": "int",
+    "abilityReviewRequired": false
+  },
+  {
+    "sourceUrl": "https://wiki.runarcana.org/en/characters/detailing/crafts/major/locksmith/",
+    "sourceHash": "0cbeb7b15cc1e9ddd0f9b36bcd2493012e9b82976de3f57d992fa63b9f2b75c6",
+    "category": "major",
+    "craft": "Locksmith",
+    "id": "locksmith",
+    "name": "Locksmith",
+    "ability": "dex",
+    "abilityReviewRequired": false
+  },
+  {
+    "sourceUrl": "https://wiki.runarcana.org/en/characters/detailing/crafts/major/mason/",
+    "sourceHash": "6a62dbe7b72a4d69b497f7e6fe2e8749c4ca81f1ea985f8e5b81cd7024628e11",
+    "category": "major",
+    "craft": "Mason",
+    "id": "mason",
+    "name": "Mason",
+    "ability": "int",
+    "abilityReviewRequired": false
+  },
+  {
+    "sourceUrl": "https://wiki.runarcana.org/en/characters/detailing/crafts/minor/player/",
+    "sourceHash": "c8c1a757815fba4ee6d266b9d599fcf972a610f7cca983470a2fb1ef5d6574e4",
+    "category": "minor",
+    "craft": "Player",
+    "id": "player-cards",
+    "name": "Player: Cards",
+    "discipline": "Cards",
+    "ability": "int",
+    "specialtyRequired": true
+  },
+  {
+    "sourceUrl": "https://wiki.runarcana.org/en/characters/detailing/crafts/minor/player/",
+    "sourceHash": "c8c1a757815fba4ee6d266b9d599fcf972a610f7cca983470a2fb1ef5d6574e4",
+    "category": "minor",
+    "craft": "Player",
+    "id": "player-chess",
+    "name": "Player: Chess",
+    "discipline": "Chess",
+    "ability": "int",
+    "specialtyRequired": false
+  },
+  {
+    "sourceUrl": "https://wiki.runarcana.org/en/characters/detailing/crafts/minor/player/",
+    "sourceHash": "c8c1a757815fba4ee6d266b9d599fcf972a610f7cca983470a2fb1ef5d6574e4",
+    "category": "minor",
+    "craft": "Player",
+    "id": "player-tellstone",
+    "name": "Player: Tellstone",
+    "discipline": "Tellstone",
+    "ability": "wis",
+    "specialtyRequired": false
+  },
+  {
+    "sourceUrl": "https://wiki.runarcana.org/en/characters/detailing/crafts/major/techmaturge/",
+    "sourceHash": "a012c1f1bbd578ca195739205ca155414e005bec648a82d1a5a9f6d00a993e30",
+    "category": "major",
+    "craft": "Techmaturge",
+    "id": "techmaturge",
+    "name": "Techmaturge",
+    "ability": "int",
+    "abilityReviewRequired": false
+  },
+  {
+    "sourceUrl": "https://wiki.runarcana.org/en/characters/detailing/crafts/major/trapper/",
+    "sourceHash": "d7f67e0460f53d455ad251096c93a74669740cac93c3f7e48bebf28ea344885f",
+    "category": "major",
+    "craft": "Trapper",
+    "id": "trapper",
+    "name": "Trapper",
+    "ability": "int",
+    "abilityReviewRequired": false
+  },
+  {
+    "sourceUrl": "https://wiki.runarcana.org/en/characters/detailing/crafts/major/vehiclewright/",
+    "sourceHash": "04b85ca8319ad57c58d3c22897659ff291d447fa41d3653006e3abc6cfd8563f",
+    "category": "major",
+    "craft": "Vehiclewright",
+    "id": "vehiclewright",
+    "name": "Vehiclewright",
+    "ability": "dex",
+    "abilityReviewRequired": false
+  },
+  {
+    "sourceUrl": "https://wiki.runarcana.org/en/characters/detailing/crafts/major/weaponsmith/",
+    "sourceHash": "d5b81aef041b2c5afd1b753528d32a805c774c4fcc911a05c56ef939a49aca2f",
+    "category": "major",
+    "craft": "Weaponsmith",
+    "id": "weaponsmith",
+    "name": "Weaponsmith",
+    "ability": "str",
+    "abilityReviewRequired": false
+  }
+];
