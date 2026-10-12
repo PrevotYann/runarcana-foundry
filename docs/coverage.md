@@ -2,21 +2,21 @@
 
 Profile: **authorized-content**. This module is **incomplete**. It has no Foundry V14 runtime verification.
 
-899 canonical page URLs discovered; 868 complete responses cached; 31 sources not collected. Missing pages are not claimed to be permanently unavailable: HTTP 429 throttling interrupted earlier passes. Collection is resumable from its saved checkpoint; unvisited entries require a resumed crawl or a local export.
+899 canonical page URLs discovered; 899 complete responses cached; 0 sources not collected. All currently discovered page URLs have cached full responses. This completes the discovered crawl, not the editorial review of every section or mechanical conversion.
 
-11335 page/anchor/table/catalog coverage records. Entry discovery is not exhaustive until every source is available and reviewed.
+11385 page/anchor/table/catalog coverage records. Entry discovery is not exhaustive until every source is available and reviewed.
 
 | Part | Discovered pages | Collected pages | Missing pages |
 | --- | ---: | ---: | ---: |
-| Introduction, appendices, projects | 38 | 33 | 5 |
+| Introduction, appendices, projects | 38 | 38 | 0 |
 | Characters | 98 | 98 | 0 |
-| Rules | 578 | 552 | 26 |
+| Rules | 578 | 578 | 0 |
 | Game Mastering | 21 | 21 | 0 |
 | Monsters & Creatures | 164 | 164 | 0 |
 
 | Pack | Generated native documents |
 | --- | ---: |
-| references | 33 |
+| references | 38 |
 | characters | 98 |
 | features | 518 |
 | subclasses | 38 |
@@ -32,8 +32,8 @@ Profile: **authorized-content**. This module is **incomplete**. It has no Foundr
 | gm | 21 |
 | rewards | 177 |
 | afflictions | 165 |
-| rules | 552 |
-| spells | 532 |
+| rules | 578 |
+| spells | 558 |
 | companions | 1 |
 | creature-rules | 164 |
 | creature-features | 2973 |
@@ -65,6 +65,7 @@ World import ignores local edits and duplicate world copies. Reimport or languag
 - Mecha HP: the table assigns Partial Medium shielding 4, while the example uses 5. Base templates use the table and retain the example in their full source text.
 - Abominable Snowman is listed as level 8, but its higher-level paragraph names level 6. Its published level-8 companion and caster matching are converted; that augmentation instruction remains unresolved.
 - Some creature variants omit their type or size. Those fields are flagged for review; missing types use an Unspecified type folder, Diminutive size uses native Tiny, and Colossal size uses native Gargantuan pending review.
+- The five Garden of Shadows creature pages use a legacy stat-block layout. Their complete statistics and abilities are included in source journals; they have not been converted to native Actors. The structured bestiary contains 232 Actors.
 - Voidling lists two different Promotion - Soldier (10 counters) features. Both published texts are retained as separate feature documents; their intended progression is not inferred.
 - Chapter numbering, untranslated Portuguese fragments and under-construction passages are retained rather than silently corrected.
 
@@ -76,10 +77,10 @@ World import ignores local edits and duplicate world copies. Reimport or languag
 4. Check defenses by component, DR bypasses, odd-value rounding, absorption source/cantrip restrictions, and the damage ladder. Review all partial rules before relying on automation.
 5. Import, edit locally and reimport Items/Actors/journals/tables; duplicates and local edits must be skipped. Repeat after a Babele language change and verify backup recovery.
 6. Install Babele 2.9.1 and its lib-wrapper dependency. Use a small runarcana-fr validation module, test spell/class/NPC embedded ability/multipage journal/table full texts and English fallback.
-7. Repeat resource, crafting and import operations with two connected clients. Measure catalog navigation against the final complete corpus. This checkpoint is not the full-corpus performance test.
+7. Repeat resource, crafting and import operations with two connected clients. Measure catalog navigation against the collected corpus; full-corpus performance has not been tested in Foundry.
 
 ## Missing sources
 
-The exact URL list, attempted status, timestamps and available hashes are in `sources/catalog.json`; every page and discovered entry has a row in `sources/coverage.json`. `sources/missing.json` is the machine-readable recovery queue. Resume collection with the throttled crawler or import an official local export. No search excerpt is substituted for a missing rules page.
+The exact URL list, attempted status, timestamps and available hashes are in `sources/catalog.json`; every page and discovered entry has a row in `sources/coverage.json`. `sources/missing.json` is the machine-readable recovery queue. The recovery queue is empty for the currently discovered pages; review the section inventory for editorial omissions. No search excerpt is substituted for a missing rules page.
 
 A complete module requires finishing both collection and mechanical conversion. The current ZIP is a reviewable implementation checkpoint; it does not satisfy total coverage.

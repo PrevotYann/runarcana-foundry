@@ -207,6 +207,41 @@
     {
       "pack": "references",
       "type": "JournalEntry",
+      "id": "18b0ac28f251f54b",
+      "name": "Argoi",
+      "sourceId": "/en/runarcana-plus/garden-of-shadows/creatures/argoi/@journal"
+    },
+    {
+      "pack": "references",
+      "type": "JournalEntry",
+      "id": "0eac61270b9894d8",
+      "name": "Executioners",
+      "sourceId": "/en/runarcana-plus/garden-of-shadows/creatures/executioners/@journal"
+    },
+    {
+      "pack": "references",
+      "type": "JournalEntry",
+      "id": "e6a54569d706230a",
+      "name": "Megaera",
+      "sourceId": "/en/runarcana-plus/garden-of-shadows/creatures/megaera/@journal"
+    },
+    {
+      "pack": "references",
+      "type": "JournalEntry",
+      "id": "19b3d4e9af39bba3",
+      "name": "Nyxis",
+      "sourceId": "/en/runarcana-plus/garden-of-shadows/creatures/nyxis/@journal"
+    },
+    {
+      "pack": "references",
+      "type": "JournalEntry",
+      "id": "e0773d6c682428ad",
+      "name": "Stygian",
+      "sourceId": "/en/runarcana-plus/garden-of-shadows/creatures/stygian/@journal"
+    },
+    {
+      "pack": "references",
+      "type": "JournalEntry",
       "id": "592f8ab8ad93bcff",
       "name": "Magitek Repository",
       "sourceId": "/en/runarcana-plus/magitek-repository/@journal"
@@ -19051,6 +19086,13 @@
     {
       "pack": "rules",
       "type": "JournalEntry",
+      "id": "8ee84a21d22e9ee6",
+      "name": "Abyssus Abyssum Invocat",
+      "sourceId": "/en/magic/spells/abyssus-abyssum-invocat/@journal"
+    },
+    {
+      "pack": "rules",
+      "type": "JournalEntry",
       "id": "db799231051dfda9",
       "name": "Acid Arrow",
       "sourceId": "/en/magic/spells/acid-arrow/@journal"
@@ -19723,9 +19765,30 @@
     {
       "pack": "rules",
       "type": "JournalEntry",
+      "id": "9859f0ddcc6c48c8",
+      "name": "Conjure Minor Elementals",
+      "sourceId": "/en/magic/spells/conjure-minor-elementals/@journal"
+    },
+    {
+      "pack": "rules",
+      "type": "JournalEntry",
       "id": "0ae04cf59abb20cf",
       "name": "Conjure Thorns",
       "sourceId": "/en/magic/spells/conjure-thorns/@journal"
+    },
+    {
+      "pack": "rules",
+      "type": "JournalEntry",
+      "id": "9c482f64c2e0d4f0",
+      "name": "Conjure Woodland Beings",
+      "sourceId": "/en/magic/spells/conjure-woodland-beings/@journal"
+    },
+    {
+      "pack": "rules",
+      "type": "JournalEntry",
+      "id": "a8bea5a7f193b352",
+      "name": "Conqueror's Transformation",
+      "sourceId": "/en/magic/spells/conquerors-transformation/@journal"
     },
     {
       "pack": "rules",
@@ -19793,6 +19856,13 @@
     {
       "pack": "rules",
       "type": "JournalEntry",
+      "id": "be209bf62354388d",
+      "name": "Controllable Elemental Sphere",
+      "sourceId": "/en/magic/spells/controllable-elemental-sphere/@journal"
+    },
+    {
+      "pack": "rules",
+      "type": "JournalEntry",
       "id": "0589a39e43e82570",
       "name": "Corrosion",
       "sourceId": "/en/magic/spells/corrosion/@journal"
@@ -19817,6 +19887,20 @@
       "id": "ed5b8f440c6b0c74",
       "name": "Create Element (Spell)",
       "sourceId": "/en/magic/spells/create-element-spell/@journal"
+    },
+    {
+      "pack": "rules",
+      "type": "JournalEntry",
+      "id": "7a7e6195646b30bf",
+      "name": "Create Food and Water",
+      "sourceId": "/en/magic/spells/create-food-and-water/@journal"
+    },
+    {
+      "pack": "rules",
+      "type": "JournalEntry",
+      "id": "f6460518cf80e781",
+      "name": "Create or Destroy Water",
+      "sourceId": "/en/magic/spells/create-or-destroy-water/@journal"
     },
     {
       "pack": "rules",
@@ -19947,6 +20031,13 @@
     {
       "pack": "rules",
       "type": "JournalEntry",
+      "id": "52cf41c919df994b",
+      "name": "Detect Poison and Disease",
+      "sourceId": "/en/magic/spells/detect-poison-and-disease/@journal"
+    },
+    {
+      "pack": "rules",
+      "type": "JournalEntry",
       "id": "33d10f1380bb5bcb",
       "name": "Detect Thoughts",
       "sourceId": "/en/magic/spells/detect-thoughts/@journal"
@@ -19957,6 +20048,13 @@
       "id": "23b6c09e79221e60",
       "name": "Devastate",
       "sourceId": "/en/magic/spells/devastate/@journal"
+    },
+    {
+      "pack": "rules",
+      "type": "JournalEntry",
+      "id": "53598d1879771830",
+      "name": "Devastating Vibration",
+      "sourceId": "/en/magic/spells/devastating-vibration/@journal"
     },
     {
       "pack": "rules",
@@ -20003,9 +20101,23 @@
     {
       "pack": "rules",
       "type": "JournalEntry",
+      "id": "2eaa83f0a3fc76ec",
+      "name": "Disintegration Mantra",
+      "sourceId": "/en/magic/spells/disintegration-mantra/@journal"
+    },
+    {
+      "pack": "rules",
+      "type": "JournalEntry",
       "id": "742d3b8691a53e5d",
       "name": "Dispel Magic",
       "sourceId": "/en/magic/spells/dispel-magic/@journal"
+    },
+    {
+      "pack": "rules",
+      "type": "JournalEntry",
+      "id": "57049d3dd2fb5bc2",
+      "name": "Dispell Good and Evil",
+      "sourceId": "/en/magic/spells/dispell-good-and-evil/@journal"
     },
     {
       "pack": "rules",
@@ -20027,6 +20139,13 @@
       "id": "d513eac8810704d0",
       "name": "Divine Favor",
       "sourceId": "/en/magic/spells/divine-favor/@journal"
+    },
+    {
+      "pack": "rules",
+      "type": "JournalEntry",
+      "id": "4b79117a60404ab9",
+      "name": "Do You Want to Play in the Snow?",
+      "sourceId": "/en/magic/spells/do-you-want-to-play-in-the-snow/@journal"
     },
     {
       "pack": "rules",
@@ -20668,6 +20787,13 @@
     {
       "pack": "rules",
       "type": "JournalEntry",
+      "id": "e74770befa22eb71",
+      "name": "Globe of Invulnerability",
+      "sourceId": "/en/magic/spells/globe-of-invulnerability/@journal"
+    },
+    {
+      "pack": "rules",
+      "type": "JournalEntry",
       "id": "07dd0a2972065e67",
       "name": "Goodberry",
       "sourceId": "/en/magic/spells/goodberry/@journal"
@@ -20734,6 +20860,20 @@
       "id": "73fd2b6b549d606f",
       "name": "Hallow",
       "sourceId": "/en/magic/spells/hallow/@journal"
+    },
+    {
+      "pack": "rules",
+      "type": "JournalEntry",
+      "id": "d4178a3614fe0b66",
+      "name": "Hallucinatory Terrain",
+      "sourceId": "/en/magic/spells/hallucinatory-terrain/@journal"
+    },
+    {
+      "pack": "rules",
+      "type": "JournalEntry",
+      "id": "880572dd9a1dc503",
+      "name": "Hammer of Hellish Punishment",
+      "sourceId": "/en/magic/spells/hammer-of-hellish-punishment/@journal"
     },
     {
       "pack": "rules",
@@ -21158,6 +21298,13 @@
     {
       "pack": "rules",
       "type": "JournalEntry",
+      "id": "eec03fdd985db084",
+      "name": "Locate Animals or Plants",
+      "sourceId": "/en/magic/spells/locate-animals-or-plants/@journal"
+    },
+    {
+      "pack": "rules",
+      "type": "JournalEntry",
       "id": "8ee37d82728f958d",
       "name": "Locate Creature",
       "sourceId": "/en/magic/spells/locate-creature/@journal"
@@ -21529,6 +21676,13 @@
     {
       "pack": "rules",
       "type": "JournalEntry",
+      "id": "7e35754d0e0add20",
+      "name": "Phantasmal Incarnation",
+      "sourceId": "/en/magic/spells/phantasmal-incarnation/@journal"
+    },
+    {
+      "pack": "rules",
+      "type": "JournalEntry",
       "id": "94bb55740ac3b8b0",
       "name": "Phantasmal Killer",
       "sourceId": "/en/magic/spells/phantasmal-killer/@journal"
@@ -21662,9 +21816,51 @@
     {
       "pack": "rules",
       "type": "JournalEntry",
+      "id": "5c634e1dc8d658f7",
+      "name": "Protection Against the Elements",
+      "sourceId": "/en/magic/spells/protection-against-the-elements/@journal"
+    },
+    {
+      "pack": "rules",
+      "type": "JournalEntry",
+      "id": "d0b60fcebcc34878",
+      "name": "Protection from Energy",
+      "sourceId": "/en/magic/spells/protection-from-energy/@journal"
+    },
+    {
+      "pack": "rules",
+      "type": "JournalEntry",
+      "id": "7a3f1d5cc34f7286",
+      "name": "Protection from Evil and Good",
+      "sourceId": "/en/magic/spells/protection-from-evil-and-good/@journal"
+    },
+    {
+      "pack": "rules",
+      "type": "JournalEntry",
+      "id": "053bf79ed6a24f6e",
+      "name": "Protection from Poison",
+      "sourceId": "/en/magic/spells/protection-from-poison/@journal"
+    },
+    {
+      "pack": "rules",
+      "type": "JournalEntry",
+      "id": "5fe988b64a4d294b",
+      "name": "Protection from Weapons",
+      "sourceId": "/en/magic/spells/protection-from-weapons/@journal"
+    },
+    {
+      "pack": "rules",
+      "type": "JournalEntry",
       "id": "ec4a95fd35f83c9d",
       "name": "Psychic Devastation",
       "sourceId": "/en/magic/spells/psychic-devastation/@journal"
+    },
+    {
+      "pack": "rules",
+      "type": "JournalEntry",
+      "id": "1c1d30b65dcf7662",
+      "name": "Purify Food and Drink",
+      "sourceId": "/en/magic/spells/purify-food-and-drink/@journal"
     },
     {
       "pack": "rules",
@@ -22467,6 +22663,13 @@
     {
       "pack": "rules",
       "type": "JournalEntry",
+      "id": "bb17fac0eb8a7164",
+      "name": "Thunderous Devastation",
+      "sourceId": "/en/magic/spells/thunderous-devastation/@journal"
+    },
+    {
+      "pack": "rules",
+      "type": "JournalEntry",
       "id": "fec74f60ad6f35ec",
       "name": "Time Bomb",
       "sourceId": "/en/magic/spells/time-bomb/@journal"
@@ -22512,6 +22715,13 @@
       "id": "50c051aff7369f4e",
       "name": "Transfusion",
       "sourceId": "/en/magic/spells/transfusion/@journal"
+    },
+    {
+      "pack": "rules",
+      "type": "JournalEntry",
+      "id": "54c76b7df11b5f5d",
+      "name": "Transport via Plants",
+      "sourceId": "/en/magic/spells/transport-via-plants/@journal"
     },
     {
       "pack": "rules",
@@ -22733,6 +22943,13 @@
     {
       "pack": "rules",
       "type": "JournalEntry",
+      "id": "3ac3d92faa418892",
+      "name": "Wood Golem Protection",
+      "sourceId": "/en/magic/spells/wood-golem-protection/@journal"
+    },
+    {
+      "pack": "rules",
+      "type": "JournalEntry",
       "id": "defa79742b410092",
       "name": "Word of Remembrance",
       "sourceId": "/en/magic/spells/word-of-remembrance/@journal"
@@ -22904,6 +23121,13 @@
       "id": "00e7eb4b104d23f0",
       "name": "Absorbed Decision",
       "sourceId": "/en/magic/spells/absorbed-decision/"
+    },
+    {
+      "pack": "spells",
+      "type": "Item",
+      "id": "0ffde66123667078",
+      "name": "Abyssus Abyssum Invocat",
+      "sourceId": "/en/magic/spells/abyssus-abyssum-invocat/"
     },
     {
       "pack": "spells",
@@ -23580,9 +23804,30 @@
     {
       "pack": "spells",
       "type": "Item",
+      "id": "c9d2a04a2b775be2",
+      "name": "Conjure Minor Elementals",
+      "sourceId": "/en/magic/spells/conjure-minor-elementals/"
+    },
+    {
+      "pack": "spells",
+      "type": "Item",
       "id": "cd569c6a2a4c552c",
       "name": "Conjure Thorns",
       "sourceId": "/en/magic/spells/conjure-thorns/"
+    },
+    {
+      "pack": "spells",
+      "type": "Item",
+      "id": "685c05ff3a54cd2f",
+      "name": "Conjure Woodland Beings",
+      "sourceId": "/en/magic/spells/conjure-woodland-beings/"
+    },
+    {
+      "pack": "spells",
+      "type": "Item",
+      "id": "4500ee402397d4d2",
+      "name": "Conqueror's Transformation",
+      "sourceId": "/en/magic/spells/conquerors-transformation/"
     },
     {
       "pack": "spells",
@@ -23650,6 +23895,13 @@
     {
       "pack": "spells",
       "type": "Item",
+      "id": "ac045820957b2f69",
+      "name": "Controllable Elemental Sphere",
+      "sourceId": "/en/magic/spells/controllable-elemental-sphere/"
+    },
+    {
+      "pack": "spells",
+      "type": "Item",
       "id": "3336bf75a0fb8e87",
       "name": "Corrosion",
       "sourceId": "/en/magic/spells/corrosion/"
@@ -23674,6 +23926,20 @@
       "id": "027cabb22f7010e0",
       "name": "Create Element (Spell)",
       "sourceId": "/en/magic/spells/create-element-spell/"
+    },
+    {
+      "pack": "spells",
+      "type": "Item",
+      "id": "343c21000cfd4b24",
+      "name": "Create Food and Water",
+      "sourceId": "/en/magic/spells/create-food-and-water/"
+    },
+    {
+      "pack": "spells",
+      "type": "Item",
+      "id": "c2b7bcb9e4d6ed97",
+      "name": "Create or Destroy Water",
+      "sourceId": "/en/magic/spells/create-or-destroy-water/"
     },
     {
       "pack": "spells",
@@ -23804,6 +24070,13 @@
     {
       "pack": "spells",
       "type": "Item",
+      "id": "6bbd192e559990e8",
+      "name": "Detect Poison and Disease",
+      "sourceId": "/en/magic/spells/detect-poison-and-disease/"
+    },
+    {
+      "pack": "spells",
+      "type": "Item",
       "id": "e70e74608d7e077a",
       "name": "Detect Thoughts",
       "sourceId": "/en/magic/spells/detect-thoughts/"
@@ -23814,6 +24087,13 @@
       "id": "e48afe3a6dac73c0",
       "name": "Devastate",
       "sourceId": "/en/magic/spells/devastate/"
+    },
+    {
+      "pack": "spells",
+      "type": "Item",
+      "id": "33266ca0a7340dc0",
+      "name": "Devastating Vibration",
+      "sourceId": "/en/magic/spells/devastating-vibration/"
     },
     {
       "pack": "spells",
@@ -23860,9 +24140,23 @@
     {
       "pack": "spells",
       "type": "Item",
+      "id": "1db1ea6e48615747",
+      "name": "Disintegration Mantra",
+      "sourceId": "/en/magic/spells/disintegration-mantra/"
+    },
+    {
+      "pack": "spells",
+      "type": "Item",
       "id": "621276a6e9208c10",
       "name": "Dispel Magic",
       "sourceId": "/en/magic/spells/dispel-magic/"
+    },
+    {
+      "pack": "spells",
+      "type": "Item",
+      "id": "739e761bce67eb83",
+      "name": "Dispell Good and Evil",
+      "sourceId": "/en/magic/spells/dispell-good-and-evil/"
     },
     {
       "pack": "spells",
@@ -23884,6 +24178,13 @@
       "id": "a9d0ebe9e89e8832",
       "name": "Divine Favor",
       "sourceId": "/en/magic/spells/divine-favor/"
+    },
+    {
+      "pack": "spells",
+      "type": "Item",
+      "id": "48a39119e6ef0086",
+      "name": "Do You Want to Play in the Snow?",
+      "sourceId": "/en/magic/spells/do-you-want-to-play-in-the-snow/"
     },
     {
       "pack": "spells",
@@ -24525,6 +24826,13 @@
     {
       "pack": "spells",
       "type": "Item",
+      "id": "f1c3bd8221c564ae",
+      "name": "Globe of Invulnerability",
+      "sourceId": "/en/magic/spells/globe-of-invulnerability/"
+    },
+    {
+      "pack": "spells",
+      "type": "Item",
       "id": "92bbde2911b6c6b0",
       "name": "Goodberry",
       "sourceId": "/en/magic/spells/goodberry/"
@@ -24591,6 +24899,20 @@
       "id": "dae21c92ac0cfb19",
       "name": "Hallow",
       "sourceId": "/en/magic/spells/hallow/"
+    },
+    {
+      "pack": "spells",
+      "type": "Item",
+      "id": "70afc5e103272a41",
+      "name": "Hallucinatory Terrain",
+      "sourceId": "/en/magic/spells/hallucinatory-terrain/"
+    },
+    {
+      "pack": "spells",
+      "type": "Item",
+      "id": "aa13ce7e6f90fd9b",
+      "name": "Hammer of Hellish Punishment",
+      "sourceId": "/en/magic/spells/hammer-of-hellish-punishment/"
     },
     {
       "pack": "spells",
@@ -25015,6 +25337,13 @@
     {
       "pack": "spells",
       "type": "Item",
+      "id": "c69f76b10d6ba7f8",
+      "name": "Locate Animals or Plants",
+      "sourceId": "/en/magic/spells/locate-animals-or-plants/"
+    },
+    {
+      "pack": "spells",
+      "type": "Item",
       "id": "076edeb6a52c54c8",
       "name": "Locate Creature",
       "sourceId": "/en/magic/spells/locate-creature/"
@@ -25386,6 +25715,13 @@
     {
       "pack": "spells",
       "type": "Item",
+      "id": "d24f949214eac8e8",
+      "name": "Phantasmal Incarnation",
+      "sourceId": "/en/magic/spells/phantasmal-incarnation/"
+    },
+    {
+      "pack": "spells",
+      "type": "Item",
       "id": "9e085d72a32db060",
       "name": "Phantasmal Killer",
       "sourceId": "/en/magic/spells/phantasmal-killer/"
@@ -25519,9 +25855,51 @@
     {
       "pack": "spells",
       "type": "Item",
+      "id": "b1e5e9025d39808d",
+      "name": "Protection Against the Elements",
+      "sourceId": "/en/magic/spells/protection-against-the-elements/"
+    },
+    {
+      "pack": "spells",
+      "type": "Item",
+      "id": "bb36d50aadbf6456",
+      "name": "Protection from Energy",
+      "sourceId": "/en/magic/spells/protection-from-energy/"
+    },
+    {
+      "pack": "spells",
+      "type": "Item",
+      "id": "f16e71698fa0f8a8",
+      "name": "Protection from Evil and Good",
+      "sourceId": "/en/magic/spells/protection-from-evil-and-good/"
+    },
+    {
+      "pack": "spells",
+      "type": "Item",
+      "id": "2752fea8965de03f",
+      "name": "Protection from Poison",
+      "sourceId": "/en/magic/spells/protection-from-poison/"
+    },
+    {
+      "pack": "spells",
+      "type": "Item",
+      "id": "18d9d3fd8881fd2f",
+      "name": "Protection from Weapons",
+      "sourceId": "/en/magic/spells/protection-from-weapons/"
+    },
+    {
+      "pack": "spells",
+      "type": "Item",
       "id": "54659cba66ce45aa",
       "name": "Psychic Devastation",
       "sourceId": "/en/magic/spells/psychic-devastation/"
+    },
+    {
+      "pack": "spells",
+      "type": "Item",
+      "id": "fb6831b017f670cc",
+      "name": "Purify Food and Drink",
+      "sourceId": "/en/magic/spells/purify-food-and-drink/"
     },
     {
       "pack": "spells",
@@ -26324,6 +26702,13 @@
     {
       "pack": "spells",
       "type": "Item",
+      "id": "9333fe5ee7568b09",
+      "name": "Thunderous Devastation",
+      "sourceId": "/en/magic/spells/thunderous-devastation/"
+    },
+    {
+      "pack": "spells",
+      "type": "Item",
       "id": "d3229f3babc49601",
       "name": "Time Bomb",
       "sourceId": "/en/magic/spells/time-bomb/"
@@ -26369,6 +26754,13 @@
       "id": "85e5f3f5227f152d",
       "name": "Transfusion",
       "sourceId": "/en/magic/spells/transfusion/"
+    },
+    {
+      "pack": "spells",
+      "type": "Item",
+      "id": "815118cc0ab7111b",
+      "name": "Transport via Plants",
+      "sourceId": "/en/magic/spells/transport-via-plants/"
     },
     {
       "pack": "spells",
@@ -26586,6 +26978,13 @@
       "id": "4ce8474ac53ad6bc",
       "name": "Wish",
       "sourceId": "/en/magic/spells/wish/"
+    },
+    {
+      "pack": "spells",
+      "type": "Item",
+      "id": "9690a1a3b29dcceb",
+      "name": "Wood Golem Protection",
+      "sourceId": "/en/magic/spells/wood-golem-protection/"
     },
     {
       "pack": "spells",

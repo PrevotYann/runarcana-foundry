@@ -1,8 +1,8 @@
 {
   "profile": "release",
-  "indexedDocuments": 7358,
-  "embeddedDocuments": 5228,
-  "uuidLinks": 6933,
+  "indexedDocuments": 7415,
+  "embeddedDocuments": 5273,
+  "uuidLinks": 7253,
   "packKeys": {
     "start": 2,
     "origins": 20,
@@ -16,8 +16,8 @@
     "crafts": 445,
     "equipment": 395,
     "characters": 634,
-    "rules": 1181,
-    "spells": 542,
+    "rules": 1233,
+    "spells": 568,
     "rituals": 49,
     "techmaturgy": 133,
     "companions": 5,
@@ -29,11 +29,10 @@
     "bestiary": 3168,
     "creature-features": 3206,
     "creature-rules": 512,
-    "references": 229
+    "references": 253
   },
   "errors": [],
   "warnings": [
-    "Source discovery is incomplete due to unavailable or uncollected pages.",
     "The entry inventory has not received an exhaustive editorial audit.",
     "Foundry V14 and Babele runtime tests have not been executed."
   ],

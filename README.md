@@ -2,7 +2,7 @@
 
 Module ID `runarcana`; system remains `dnd5e`. Target: Foundry **14.367+** and **dnd5e 6.0.6**. English base; optional Babele **2.9.1** for future French translations.
 
-**Incomplete implementation checkpoint.** Source discovery, individual mechanics and runtime testing remain incomplete. Read [coverage and limits](docs/coverage.md) before play. There is no `verified` compatibility claim. No installed system or existing world was changed.
+**Incomplete implementation checkpoint.** All 899 currently discovered source pages are collected. Editorial review, individual mechanics and runtime testing remain incomplete. Read [coverage and limits](docs/coverage.md) before play. There is no `verified` compatibility claim. No installed system or existing world was changed.
 
 ## Install
 
@@ -14,9 +14,9 @@ https://raw.githubusercontent.com/PrevotYann/runarcana-foundry/main/module.json
 
 Version 0.1.1 fixes the unnamed home-page compendium folder that prevented worlds from starting with 0.1.0. Update from Foundry Setup before opening the affected world.
 
-Public releases include collected Runarcana texts and native Items, Actors, Journals and RollTables. The maintainer has confirmed permission for their inclusion in this free module; see [credits and permission](docs/credits.md). Artwork remains linked to its source. Mechanical coverage and uncollected sources are still incomplete.
+Public releases include collected Runarcana texts and native Items, Actors, Journals and RollTables. The maintainer has confirmed permission for their inclusion in this free module; see [credits and permission](docs/credits.md). Artwork remains linked to its source. All currently discovered sources are included; mechanical coverage and the editorial section audit remain incomplete.
 
-Source collection continues alongside character creation and origin customization. Other mechanical automation remains deferred while source import is incomplete.
+The discovered source crawl is complete: 899 cached full pages, including all 558 catalog spells. Character creation and origin customization remain under development; the section inventory and remaining mechanics still need review.
 
 For manual installation, close Foundry, extract the ZIP into `Data/modules/`, then activate Runarcana in a compatible dnd5e world. Enable the world setting and explicitly mark Runarcana actors in the workbench.
 
@@ -53,7 +53,7 @@ The export must contain `en/.../index.html`. Full pages and normalized local tex
 
 A fresh clone builds from the committed `data/corpus.json.gz` snapshot: install dependencies, then run `npm run build`, `npm run translations`, `npm test`, `npm run validate`, `python scripts/report.py` and `python scripts/package.py`. No wiki network access is needed. After collecting more sources, normalization updates that snapshot.
 
-`npm run build -- --references` is an optional reference-only diagnostic profile. Default releases include content. `python scripts/package.py --source` packages code, build tools and the authorized source snapshot. Inspect installable archives with `node scripts/validate-archive.mjs dist/runarcana-0.12.0.zip`.
+`npm run build -- --references` is an optional reference-only diagnostic profile. Default releases include content. `python scripts/package.py --source` packages code, build tools and the authorized source snapshot. Inspect installable archives with `node scripts/validate-archive.mjs dist/runarcana-0.13.0.zip`.
 
 ## API
 

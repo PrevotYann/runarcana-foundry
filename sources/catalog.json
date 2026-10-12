@@ -1,7 +1,7 @@
 {
   "schema": 1,
-  "collectedAt": "2026-10-12T16:57:28.501333+00:00",
-  "discoveryComplete": false,
+  "collectedAt": "2026-10-12T18:53:07.909484+00:00",
+  "discoveryComplete": true,
   "pages": [
     {
       "id": "/en/",
@@ -18289,9 +18289,16 @@
       "part": 2,
       "language": "en",
       "anchors": [],
-      "status": "pending",
+      "status": "collected",
       "attemptedAt": "2026-10-11T14:05:31.973924+00:00",
-      "cacheAvailable": false
+      "cacheAvailable": false,
+      "resolvedUrl": "https://wiki.runarcana.org/en/magic/spells/abyssus-abyssum-invocat/",
+      "collectedAt": "2026-10-12T18:49:18.983370+00:00",
+      "sha256": "21e799a63223f0549010b7b983c8055541e71d1d1e07c99a262344771afff0c0",
+      "cache": "sources/cache/e75543e12374f25fcf33f00fa48f347cae44abaf6c0af47d77d7ffedf6b2da0d.html",
+      "title": "Abyssus Abyssum Invocat",
+      "rulesVersion": null,
+      "wikiBuild": "0.157"
     },
     {
       "id": "/en/magic/spells/acid-arrow/",
@@ -19918,9 +19925,16 @@
       "part": 2,
       "language": "en",
       "anchors": [],
-      "status": "pending",
+      "status": "collected",
       "attemptedAt": "2026-10-11T14:05:33.258118+00:00",
-      "cacheAvailable": false
+      "cacheAvailable": false,
+      "resolvedUrl": "https://wiki.runarcana.org/en/magic/spells/conjure-minor-elementals/",
+      "collectedAt": "2026-10-12T18:50:09.831620+00:00",
+      "sha256": "e23151ec046ea5ab0e0cd353f929588b2cdeeb59c0bfd3d1ef86dab53b1ffeed",
+      "cache": "sources/cache/6400e7e0f23d1a6e67038cfb56c17a0550362a08e0b09eaaa9fe1242f162f260.html",
+      "title": "Conjure Minor Elementals",
+      "rulesVersion": null,
+      "wikiBuild": "0.157"
     },
     {
       "id": "/en/magic/spells/conjure-thorns/",
@@ -19945,9 +19959,16 @@
       "part": 2,
       "language": "en",
       "anchors": [],
-      "status": "pending",
+      "status": "collected",
       "attemptedAt": "2026-10-11T14:05:33.270009+00:00",
-      "cacheAvailable": false
+      "cacheAvailable": false,
+      "resolvedUrl": "https://wiki.runarcana.org/en/magic/spells/conjure-woodland-beings/",
+      "collectedAt": "2026-10-12T18:49:31.684518+00:00",
+      "sha256": "c19472fa41d4e2e088f8de97fc57e0431c8dac6c62939fcf5a8abb6b49ec2c6f",
+      "cache": "sources/cache/9724664da35bb9d3c4dc856acf614a5ee05cee8c6662a4a0292c35e26600509e.html",
+      "title": "Conjure Woodland Beings",
+      "rulesVersion": null,
+      "wikiBuild": "0.157"
     },
     {
       "id": "/en/magic/spells/conquerors-transformation/",
@@ -19955,9 +19976,16 @@
       "part": 2,
       "language": "en",
       "anchors": [],
-      "status": "pending",
+      "status": "collected",
       "attemptedAt": "2026-10-11T14:05:33.275829+00:00",
-      "cacheAvailable": false
+      "cacheAvailable": false,
+      "resolvedUrl": "https://wiki.runarcana.org/en/magic/spells/conquerors-transformation/",
+      "collectedAt": "2026-10-12T18:50:48.008395+00:00",
+      "sha256": "d7b13cb1c6f809dd5b556b54b0537549bf846a37f383c7e14439f8a143eb7161",
+      "cache": "sources/cache/073d3fcd1d21c1b53a0617bc7bd1a18302ed6d60c91b2954e3dfe6e2480ecf74.html",
+      "title": "Conqueror's Transformation",
+      "rulesVersion": null,
+      "wikiBuild": "0.157"
     },
     {
       "id": "/en/magic/spells/constricting-vine/",
@@ -20118,9 +20146,16 @@
       "part": 2,
       "language": "en",
       "anchors": [],
-      "status": "pending",
+      "status": "collected",
       "attemptedAt": "2026-10-11T14:05:33.354574+00:00",
-      "cacheAvailable": false
+      "cacheAvailable": false,
+      "resolvedUrl": "https://wiki.runarcana.org/en/magic/spells/controllable-elemental-sphere/",
+      "collectedAt": "2026-10-12T18:51:25.986892+00:00",
+      "sha256": "844c556a4efecd4efbbb19b989352697ad7ca4556834889cc8bd0669afd39fea",
+      "cache": "sources/cache/51ee9580232b7961442dadad64ced9870329b8b351047c9331483973245cc377.html",
+      "title": "Controllable Elemental Sphere",
+      "rulesVersion": null,
+      "wikiBuild": "0.157"
     },
     {
       "id": "/en/magic/spells/corrosion/",
@@ -20196,9 +20231,16 @@
       "part": 2,
       "language": "en",
       "anchors": [],
-      "status": "pending",
+      "status": "collected",
       "attemptedAt": "2026-10-11T14:05:33.390993+00:00",
-      "cacheAvailable": false
+      "cacheAvailable": false,
+      "resolvedUrl": "https://wiki.runarcana.org/en/magic/spells/create-food-and-water/",
+      "collectedAt": "2026-10-12T18:46:59.260246+00:00",
+      "sha256": "0f51588d90ec6f1ccede1dc34b3a3138e38ee496d90308a7e7941a772f31e6d2",
+      "cache": "sources/cache/cb059de77ad972437643349013d0f4b132decd24aa814c215ecd4a3458ea05b6.html",
+      "title": "Create Food and Water",
+      "rulesVersion": null,
+      "wikiBuild": "0.157"
     },
     {
       "id": "/en/magic/spells/create-or-destroy-water/",
@@ -20206,9 +20248,16 @@
       "part": 2,
       "language": "en",
       "anchors": [],
-      "status": "pending",
+      "status": "collected",
       "attemptedAt": "2026-10-11T14:05:33.397593+00:00",
-      "cacheAvailable": false
+      "cacheAvailable": false,
+      "resolvedUrl": "https://wiki.runarcana.org/en/magic/spells/create-or-destroy-water/",
+      "collectedAt": "2026-10-12T18:49:44.389417+00:00",
+      "sha256": "dc8d9ec2c569796824a129b0711f08a51619b54c6951f44a49d805048d50aa29",
+      "cache": "sources/cache/d202cbe42612760ccede3c1d87cea962388ac7132ca2f73d171b29fb7e1b888d.html",
+      "title": "Create or Destroy Water",
+      "rulesVersion": null,
+      "wikiBuild": "0.157"
     },
     {
       "id": "/en/magic/spells/create-sapling/",
@@ -20521,9 +20570,16 @@
       "part": 2,
       "language": "en",
       "anchors": [],
-      "status": "pending",
+      "status": "collected",
       "attemptedAt": "2026-10-11T14:05:33.610832+00:00",
-      "cacheAvailable": false
+      "cacheAvailable": false,
+      "resolvedUrl": "https://wiki.runarcana.org/en/magic/spells/detect-poison-and-disease/",
+      "collectedAt": "2026-10-12T18:51:00.744350+00:00",
+      "sha256": "e56c6ca5fd6a8bc22fbee681006692e459fbdbe2867ee93f6a544ee4e7feed2a",
+      "cache": "sources/cache/0aae8e407392910083e487286b84d86558e54eea93a7ff03ef2e551d88279159.html",
+      "title": "Detect Poison and Disease",
+      "rulesVersion": null,
+      "wikiBuild": "0.157"
     },
     {
       "id": "/en/magic/spells/detect-thoughts/",
@@ -20565,9 +20621,16 @@
       "part": 2,
       "language": "en",
       "anchors": [],
-      "status": "pending",
+      "status": "collected",
       "attemptedAt": "2026-10-11T14:05:33.635170+00:00",
-      "cacheAvailable": false
+      "cacheAvailable": false,
+      "resolvedUrl": "https://wiki.runarcana.org/en/magic/spells/devastating-vibration/",
+      "collectedAt": "2026-10-12T18:47:11.950646+00:00",
+      "sha256": "07765b2fa095dac4a911f91f30e06d96d98eb2b7c1fc919e61dec94c06be22e9",
+      "cache": "sources/cache/d6c8b1e6b0f359d2810b1102ec557511ad5cd41378f156f5813569c0f44b6040.html",
+      "title": "Devastating Vibration",
+      "rulesVersion": null,
+      "wikiBuild": "0.157"
     },
     {
       "id": "/en/magic/spells/devastating-wave/",
@@ -20677,9 +20740,16 @@
       "part": 2,
       "language": "en",
       "anchors": [],
-      "status": "pending",
+      "status": "collected",
       "attemptedAt": "2026-10-11T14:05:33.699856+00:00",
-      "cacheAvailable": false
+      "cacheAvailable": false,
+      "resolvedUrl": "https://wiki.runarcana.org/en/magic/spells/disintegration-mantra/",
+      "collectedAt": "2026-10-12T18:47:24.650270+00:00",
+      "sha256": "52a32d0d7ce1612790356b64026387f4e2c86b1c78cf917482772f051573c194",
+      "cache": "sources/cache/78f1efe9c368db15808484ef5af960ced0f411e1b0c0f64599f30406b4ea3ce8.html",
+      "title": "Disintegration Mantra",
+      "rulesVersion": null,
+      "wikiBuild": "0.157"
     },
     {
       "id": "/en/magic/spells/dispel-magic/",
@@ -20704,9 +20774,16 @@
       "part": 2,
       "language": "en",
       "anchors": [],
-      "status": "pending",
+      "status": "collected",
       "attemptedAt": "2026-10-11T14:05:33.720387+00:00",
-      "cacheAvailable": false
+      "cacheAvailable": false,
+      "resolvedUrl": "https://wiki.runarcana.org/en/magic/spells/dispell-good-and-evil/",
+      "collectedAt": "2026-10-12T18:47:37.371910+00:00",
+      "sha256": "ef6aea1f2f51794bf7f97a0f308f6886e5d74f9c952ece8b550d26fd815db2a9",
+      "cache": "sources/cache/aa681932cdaa439d9084f5d1dc0d65ee3532c2f356cfc52c89b6c39aae1eb60c.html",
+      "title": "Dispell Good and Evil",
+      "rulesVersion": null,
+      "wikiBuild": "0.157"
     },
     {
       "id": "/en/magic/spells/dissonant-vibration/",
@@ -20765,9 +20842,16 @@
       "part": 2,
       "language": "en",
       "anchors": [],
-      "status": "pending",
+      "status": "collected",
       "attemptedAt": "2026-10-11T14:05:33.760094+00:00",
-      "cacheAvailable": false
+      "cacheAvailable": false,
+      "resolvedUrl": "https://wiki.runarcana.org/en/magic/spells/do-you-want-to-play-in-the-snow/",
+      "collectedAt": "2026-10-12T18:51:51.407710+00:00",
+      "sha256": "6011bcecc21c5590d30f6783e484d6e1f8eca0bb8345c9abbe81267b87976415",
+      "cache": "sources/cache/6fe639c1e194eb1fc61910b90cc2e0aa5b4fcee3e9ecd2b460c1487909b9c762.html",
+      "title": "Do You Want to Play in the Snow?",
+      "rulesVersion": null,
+      "wikiBuild": "0.157"
     },
     {
       "id": "/en/magic/spells/domain-of-fear/",
@@ -22311,9 +22395,16 @@
       "part": 2,
       "language": "en",
       "anchors": [],
-      "status": "pending",
+      "status": "collected",
       "attemptedAt": "2026-10-11T14:05:34.923044+00:00",
-      "cacheAvailable": false
+      "cacheAvailable": false,
+      "resolvedUrl": "https://wiki.runarcana.org/en/magic/spells/globe-of-invulnerability/",
+      "collectedAt": "2026-10-12T18:50:22.581628+00:00",
+      "sha256": "739b0bef46d22bd46480df83e0742034a8c7f125941850e1ebc63f57bdcef148",
+      "cache": "sources/cache/4dd26fbee3278916d0f708f418dea05210a0ab47af0102020812b5154ed90791.html",
+      "title": "Globe of Invulnerability",
+      "rulesVersion": null,
+      "wikiBuild": "0.157"
     },
     {
       "id": "/en/magic/spells/goodberry/",
@@ -22490,9 +22581,16 @@
       "part": 2,
       "language": "en",
       "anchors": [],
-      "status": "pending",
+      "status": "collected",
       "attemptedAt": "2026-10-11T14:05:35.066726+00:00",
-      "cacheAvailable": false
+      "cacheAvailable": false,
+      "resolvedUrl": "https://wiki.runarcana.org/en/magic/spells/hallucinatory-terrain/",
+      "collectedAt": "2026-10-12T18:47:50.054518+00:00",
+      "sha256": "9c58554ba75ec3abf89103ddeb9b0b4c67e978727d9e04d460359de50a30803f",
+      "cache": "sources/cache/ca4833702263c877f1453f90c8828e35e92d1f154a5f591ba02608bb3728fb40.html",
+      "title": "Hallucinatory Terrain",
+      "rulesVersion": null,
+      "wikiBuild": "0.157"
     },
     {
       "id": "/en/magic/spells/hammer-of-hellish-punishment/",
@@ -22500,9 +22598,16 @@
       "part": 2,
       "language": "en",
       "anchors": [],
-      "status": "pending",
+      "status": "collected",
       "attemptedAt": "2026-10-11T14:05:35.076866+00:00",
-      "cacheAvailable": false
+      "cacheAvailable": false,
+      "resolvedUrl": "https://wiki.runarcana.org/en/magic/spells/hammer-of-hellish-punishment/",
+      "collectedAt": "2026-10-12T18:51:13.273654+00:00",
+      "sha256": "7e0afe5e738a4f337a59b2d277a81e3e50e2a4f6c009456c36f710c661340952",
+      "cache": "sources/cache/a62e7301dc2abcea9558f992f3a2bf493553382e5505b05aba9af12c125799c9.html",
+      "title": "Hammer of Hellish Punishment",
+      "rulesVersion": null,
+      "wikiBuild": "0.157"
     },
     {
       "id": "/en/magic/spells/harm/",
@@ -23523,9 +23628,16 @@
       "part": 2,
       "language": "en",
       "anchors": [],
-      "status": "pending",
+      "status": "collected",
       "attemptedAt": "2026-10-11T14:05:35.914984+00:00",
-      "cacheAvailable": false
+      "cacheAvailable": false,
+      "resolvedUrl": "https://wiki.runarcana.org/en/magic/spells/locate-animals-or-plants/",
+      "collectedAt": "2026-10-12T18:50:35.275685+00:00",
+      "sha256": "5201feae4034a396af80e37b312d9a17aaf851958222e3dd7678ca402498d293",
+      "cache": "sources/cache/73e6f49a57dc0ca10534cb48ab0b993aacdf600e2ebbd28994a27ff77a5021cc.html",
+      "title": "Locate Animals or Plants",
+      "rulesVersion": null,
+      "wikiBuild": "0.157"
     },
     {
       "id": "/en/magic/spells/locate-creature/",
@@ -24439,9 +24551,16 @@
       "part": 2,
       "language": "en",
       "anchors": [],
-      "status": "pending",
+      "status": "collected",
       "attemptedAt": "2026-10-11T14:05:36.444607+00:00",
-      "cacheAvailable": false
+      "cacheAvailable": false,
+      "resolvedUrl": "https://wiki.runarcana.org/en/magic/spells/phantasmal-incarnation/",
+      "collectedAt": "2026-10-12T18:48:28.210771+00:00",
+      "sha256": "8f37a7443c1be8de7685a118babf3db8a8bdd42a5c7881461c3fb3195fab33a3",
+      "cache": "sources/cache/cea722d0e73fe373aef58c37cc04f511d1fdb7542b5de14b017f55247eb570e2.html",
+      "title": "Phantasmal Incarnation",
+      "rulesVersion": null,
+      "wikiBuild": "0.157"
     },
     {
       "id": "/en/magic/spells/phantasmal-killer/",
@@ -24772,9 +24891,16 @@
       "part": 2,
       "language": "en",
       "anchors": [],
-      "status": "pending",
+      "status": "collected",
       "attemptedAt": "2026-10-11T14:05:36.627169+00:00",
-      "cacheAvailable": false
+      "cacheAvailable": false,
+      "resolvedUrl": "https://wiki.runarcana.org/en/magic/spells/protection-against-the-elements/",
+      "collectedAt": "2026-10-12T18:52:04.126901+00:00",
+      "sha256": "645b8e82e32e515a09ee86c7c468d2bcb4938338b5a859ab024a884fde9669ed",
+      "cache": "sources/cache/14f583739e4aa4c9e7363282e07061228d2f83b8a3cc826a1b3e51e7c2ecc3e3.html",
+      "title": "Protection Against the Elements",
+      "rulesVersion": null,
+      "wikiBuild": "0.157"
     },
     {
       "id": "/en/magic/spells/protection-from-energy/",
@@ -24782,9 +24908,16 @@
       "part": 2,
       "language": "en",
       "anchors": [],
-      "status": "pending",
+      "status": "collected",
       "attemptedAt": "2026-10-11T14:05:36.635990+00:00",
-      "cacheAvailable": false
+      "cacheAvailable": false,
+      "resolvedUrl": "https://wiki.runarcana.org/en/magic/spells/protection-from-energy/",
+      "collectedAt": "2026-10-12T18:48:40.913353+00:00",
+      "sha256": "cde91f98f6a978feb0dd7a2ec75742228d443c4f223b027f4ae53708ba4e8567",
+      "cache": "sources/cache/2e14410b55b2459c72ddf314c419e69dab4ae4ec042715fd1126c02104e7db9d.html",
+      "title": "Protection from Energy",
+      "rulesVersion": null,
+      "wikiBuild": "0.157"
     },
     {
       "id": "/en/magic/spells/protection-from-evil-and-good/",
@@ -24792,9 +24925,16 @@
       "part": 2,
       "language": "en",
       "anchors": [],
-      "status": "pending",
+      "status": "collected",
       "attemptedAt": "2026-10-11T14:05:36.644426+00:00",
-      "cacheAvailable": false
+      "cacheAvailable": false,
+      "resolvedUrl": "https://wiki.runarcana.org/en/magic/spells/protection-from-evil-and-good/",
+      "collectedAt": "2026-10-12T18:51:38.708187+00:00",
+      "sha256": "82f6cbe3fe24bb8ea4ee31b482e901d9a0f015446ae1209463cd25cde223a6e0",
+      "cache": "sources/cache/8d947ebc01f62a2c3a8512f3f212e887bd30ff5169281ae2d4e71bedbab92bd1.html",
+      "title": "Protection from Evil and Good",
+      "rulesVersion": null,
+      "wikiBuild": "0.157"
     },
     {
       "id": "/en/magic/spells/protection-from-poison/",
@@ -24802,9 +24942,16 @@
       "part": 2,
       "language": "en",
       "anchors": [],
-      "status": "pending",
+      "status": "collected",
       "attemptedAt": "2026-10-11T14:05:36.653774+00:00",
-      "cacheAvailable": false
+      "cacheAvailable": false,
+      "resolvedUrl": "https://wiki.runarcana.org/en/magic/spells/protection-from-poison/",
+      "collectedAt": "2026-10-12T18:48:53.601963+00:00",
+      "sha256": "80c056e0c5c0479120634c6c825123b279dd38ee3b3f3075f333ed59bbf0c474",
+      "cache": "sources/cache/98ee05669ad59069e0c084c06ddb8f5ec8227679d8740a36e1b74a020385f9ce.html",
+      "title": "Protection from Poison",
+      "rulesVersion": null,
+      "wikiBuild": "0.157"
     },
     {
       "id": "/en/magic/spells/protection-from-weapons/",
@@ -24812,9 +24959,16 @@
       "part": 2,
       "language": "en",
       "anchors": [],
-      "status": "pending",
+      "status": "collected",
       "attemptedAt": "2026-10-11T14:05:36.662164+00:00",
-      "cacheAvailable": false
+      "cacheAvailable": false,
+      "resolvedUrl": "https://wiki.runarcana.org/en/magic/spells/protection-from-weapons/",
+      "collectedAt": "2026-10-12T18:49:57.094514+00:00",
+      "sha256": "a33c5bd4cd1a223aa5fe82400c30f574ae9d81fdeea7f293065b26386f808a03",
+      "cache": "sources/cache/1fcd365e987d2198e3d25e8efc088ecbec636cae3c5baa9da2a906a78da1a88e.html",
+      "title": "Protection from Weapons",
+      "rulesVersion": null,
+      "wikiBuild": "0.157"
     },
     {
       "id": "/en/magic/spells/psychic-devastation/",
@@ -24839,9 +24993,16 @@
       "part": 2,
       "language": "en",
       "anchors": [],
-      "status": "pending",
+      "status": "collected",
       "attemptedAt": "2026-10-11T14:05:36.680728+00:00",
-      "cacheAvailable": false
+      "cacheAvailable": false,
+      "resolvedUrl": "https://wiki.runarcana.org/en/magic/spells/purify-food-and-drink/",
+      "collectedAt": "2026-10-12T18:48:02.783702+00:00",
+      "sha256": "4bc84895eb40a8f927ac5e47ddb94bca661fcb4bb6cec8e59ea5f336171685be",
+      "cache": "sources/cache/fd9adb8c51109b3a4913bc90b3dd6aed8dad406e49f0fb080caab8240379f981.html",
+      "title": "Purify Food and Drink",
+      "rulesVersion": null,
+      "wikiBuild": "0.157"
     },
     {
       "id": "/en/magic/spells/pyroclasm/",
@@ -26784,9 +26945,16 @@
       "part": 2,
       "language": "en",
       "anchors": [],
-      "status": "pending",
+      "status": "collected",
       "attemptedAt": "2026-10-11T14:05:37.746411+00:00",
-      "cacheAvailable": false
+      "cacheAvailable": false,
+      "resolvedUrl": "https://wiki.runarcana.org/en/magic/spells/thunderous-devastation/",
+      "collectedAt": "2026-10-12T18:49:06.306956+00:00",
+      "sha256": "7f8ec08d94799a9c929a2954aba8bebe4e199beaf1155a7be20140e909006813",
+      "cache": "sources/cache/1ab489b024de44e8473a491a59fd95ee2f5b969deec727364b68ac9a9ed6658b.html",
+      "title": "Thunderous Devastation",
+      "rulesVersion": null,
+      "wikiBuild": "0.157"
     },
     {
       "id": "/en/magic/spells/time-bomb/",
@@ -26913,10 +27081,16 @@
       "part": 2,
       "language": "en",
       "anchors": [],
-      "status": "source-unavailable",
+      "status": "collected",
       "attemptedAt": "2026-10-12T16:57:28.501128+00:00",
       "cacheAvailable": false,
-      "error": "HTTP Error 429: Too Many Requests"
+      "resolvedUrl": "https://wiki.runarcana.org/en/magic/spells/transport-via-plants/",
+      "collectedAt": "2026-10-12T18:46:46.515341+00:00",
+      "sha256": "b3cdc0efb99315fc598ada25348ec094dc0c921a696c6e6e973e28d87935d31c",
+      "cache": "sources/cache/c4b4d2faa397583df6d5ccd040cfc85c30c9562e1055a2fb589b2f22cea568b7.html",
+      "title": "Transport via Plants",
+      "rulesVersion": null,
+      "wikiBuild": "0.157"
     },
     {
       "id": "/en/magic/spells/tree-stride/",
@@ -27449,9 +27623,16 @@
       "part": 2,
       "language": "en",
       "anchors": [],
-      "status": "pending",
+      "status": "collected",
       "attemptedAt": "2026-10-11T14:05:38.183712+00:00",
-      "cacheAvailable": false
+      "cacheAvailable": false,
+      "resolvedUrl": "https://wiki.runarcana.org/en/magic/spells/wood-golem-protection/",
+      "collectedAt": "2026-10-12T18:48:15.480931+00:00",
+      "sha256": "03c498408069b0b9d6850fcef40cf7174986a9b486b85ab0b012203cfaa20cea",
+      "cache": "sources/cache/38b6bddd5d5b660e73c15bdffc64ac8976ab2ce34c4946fe589ab29800448a88.html",
+      "title": "Wood Golem Protection",
+      "rulesVersion": null,
+      "wikiBuild": "0.157"
     },
     {
       "id": "/en/magic/spells/word-of-remembrance/",
@@ -36889,50 +37070,260 @@
       "url": "https://wiki.runarcana.org/en/runarcana-plus/garden-of-shadows/creatures/argoi/",
       "part": 0,
       "language": "en",
-      "anchors": [],
-      "status": "pending",
+      "anchors": [
+        {
+          "id": "rewards",
+          "title": "Rewards",
+          "level": 2
+        },
+        {
+          "id": "argoi-stat-block",
+          "title": "Argoi Stat Block",
+          "level": 2
+        }
+      ],
+      "status": "collected",
       "attemptedAt": "2026-10-11T14:05:41.403360+00:00",
-      "cacheAvailable": false
+      "cacheAvailable": false,
+      "resolvedUrl": "https://wiki.runarcana.org/en/runarcana-plus/garden-of-shadows/creatures/argoi/",
+      "collectedAt": "2026-10-12T18:52:16.844641+00:00",
+      "sha256": "6e4376f3ba03853e3a13d826143eeaf0c97c0ba71c9eae4ccf6b50bfd9aceb00",
+      "cache": "sources/cache/2af31fc7755692e7f94f7967caae8758c0842e0d44b64cc7cb9250eb4b40a4f2.html",
+      "title": "Argoi",
+      "rulesVersion": null,
+      "wikiBuild": "0.157"
     },
     {
       "id": "/en/runarcana-plus/garden-of-shadows/creatures/executioners/",
       "url": "https://wiki.runarcana.org/en/runarcana-plus/garden-of-shadows/creatures/executioners/",
       "part": 0,
       "language": "en",
-      "anchors": [],
-      "status": "pending",
+      "anchors": [
+        {
+          "id": "doombeast",
+          "title": "Doombeast",
+          "level": 2
+        },
+        {
+          "id": "lair",
+          "title": "Lair",
+          "level": 3
+        },
+        {
+          "id": "regional-effects",
+          "title": "Regional Effects",
+          "level": 3
+        },
+        {
+          "id": "rewards",
+          "title": "Rewards",
+          "level": 3
+        },
+        {
+          "id": "item-crafting",
+          "title": "Item Crafting",
+          "level": 3
+        },
+        {
+          "id": "duskrider",
+          "title": "Duskrider",
+          "level": 2
+        },
+        {
+          "id": "rewards-1",
+          "title": "Rewards",
+          "level": 3
+        },
+        {
+          "id": "item-crafting-1",
+          "title": "Item Crafting",
+          "level": 3
+        },
+        {
+          "id": "executioners-stat-blocks",
+          "title": "Executioners Stat Blocks",
+          "level": 2
+        },
+        {
+          "id": "doombeast-1",
+          "title": "Doombeast",
+          "level": 3
+        },
+        {
+          "id": "duskrider-1",
+          "title": "Duskrider",
+          "level": 3
+        }
+      ],
+      "status": "collected",
       "attemptedAt": "2026-10-11T14:05:41.409830+00:00",
-      "cacheAvailable": false
+      "cacheAvailable": false,
+      "resolvedUrl": "https://wiki.runarcana.org/en/runarcana-plus/garden-of-shadows/creatures/executioners/",
+      "collectedAt": "2026-10-12T18:53:07.746021+00:00",
+      "sha256": "d7fbf9d86a64175f20191a1764b9ffa390c88f5ce761b06eaee36305f8a02a30",
+      "cache": "sources/cache/43cfb3224077527bba418863c4a8a575d2d51d8be9d86263852bee1e2f634b3e.html",
+      "title": "Executioners",
+      "rulesVersion": null,
+      "wikiBuild": "0.157"
     },
     {
       "id": "/en/runarcana-plus/garden-of-shadows/creatures/megaera/",
       "url": "https://wiki.runarcana.org/en/runarcana-plus/garden-of-shadows/creatures/megaera/",
       "part": 0,
       "language": "en",
-      "anchors": [],
-      "status": "pending",
+      "anchors": [
+        {
+          "id": "lair",
+          "title": "Lair",
+          "level": 2
+        },
+        {
+          "id": "lair-actions",
+          "title": "Lair Actions",
+          "level": 3
+        },
+        {
+          "id": "regional-effects",
+          "title": "Regional Effects",
+          "level": 3
+        },
+        {
+          "id": "rewards",
+          "title": "Rewards",
+          "level": 2
+        },
+        {
+          "id": "megaera-stat-block",
+          "title": "Megaera Stat Block",
+          "level": 2
+        }
+      ],
+      "status": "collected",
       "attemptedAt": "2026-10-11T14:05:41.416037+00:00",
-      "cacheAvailable": false
+      "cacheAvailable": false,
+      "resolvedUrl": "https://wiki.runarcana.org/en/runarcana-plus/garden-of-shadows/creatures/megaera/",
+      "collectedAt": "2026-10-12T18:52:42.277766+00:00",
+      "sha256": "d7ec9c59580bdac180a3e319ab2595cacda0afad5a50fd551c05d3e3e617a8d0",
+      "cache": "sources/cache/078859b12abd9e27a89cca6b6f0af44c510bf742dac062ddf694addec09568c9.html",
+      "title": "Megaera",
+      "rulesVersion": null,
+      "wikiBuild": "0.157"
     },
     {
       "id": "/en/runarcana-plus/garden-of-shadows/creatures/nyxis/",
       "url": "https://wiki.runarcana.org/en/runarcana-plus/garden-of-shadows/creatures/nyxis/",
       "part": 0,
       "language": "en",
-      "anchors": [],
-      "status": "pending",
+      "anchors": [
+        {
+          "id": "nyxie",
+          "title": "Nyxie",
+          "level": 2
+        },
+        {
+          "id": "rewards",
+          "title": "Rewards",
+          "level": 3
+        },
+        {
+          "id": "item-crafting",
+          "title": "Item Crafting",
+          "level": 3
+        },
+        {
+          "id": "archnyx",
+          "title": "Archnyx",
+          "level": 2
+        },
+        {
+          "id": "rewards-1",
+          "title": "Rewards",
+          "level": 3
+        },
+        {
+          "id": "item-crafting-1",
+          "title": "Item Crafting",
+          "level": 3
+        },
+        {
+          "id": "tyranyx",
+          "title": "Tyranyx",
+          "level": 2
+        },
+        {
+          "id": "rewards-2",
+          "title": "Rewards",
+          "level": 3
+        },
+        {
+          "id": "item-crafting-2",
+          "title": "Item Crafting",
+          "level": 3
+        },
+        {
+          "id": "nyxis-stat-blocks",
+          "title": "Nyxis Stat Blocks",
+          "level": 2
+        },
+        {
+          "id": "nyxie-1",
+          "title": "Nyxie",
+          "level": 3
+        },
+        {
+          "id": "archnyx-1",
+          "title": "Archnyx",
+          "level": 3
+        },
+        {
+          "id": "tyranyx-1",
+          "title": "Tyranyx",
+          "level": 3
+        }
+      ],
+      "status": "collected",
       "attemptedAt": "2026-10-11T14:05:41.423871+00:00",
-      "cacheAvailable": false
+      "cacheAvailable": false,
+      "resolvedUrl": "https://wiki.runarcana.org/en/runarcana-plus/garden-of-shadows/creatures/nyxis/",
+      "collectedAt": "2026-10-12T18:52:29.558992+00:00",
+      "sha256": "29a3ac2ab621086036a310219e7f7c22bdcc1c0100ec2cdf434619153c8ee47d",
+      "cache": "sources/cache/78df3786c9b6340b17abe8509f2439705b89dcbd0cefdb8d20307c091baace9e.html",
+      "title": "Nyxis",
+      "rulesVersion": null,
+      "wikiBuild": "0.157"
     },
     {
       "id": "/en/runarcana-plus/garden-of-shadows/creatures/stygian/",
       "url": "https://wiki.runarcana.org/en/runarcana-plus/garden-of-shadows/creatures/stygian/",
       "part": 0,
       "language": "en",
-      "anchors": [],
-      "status": "pending",
+      "anchors": [
+        {
+          "id": "rewards",
+          "title": "Rewards",
+          "level": 2
+        },
+        {
+          "id": "item-crafting",
+          "title": "Item Crafting",
+          "level": 3
+        },
+        {
+          "id": "stygian-stat-block",
+          "title": "Stygian Stat Block",
+          "level": 2
+        }
+      ],
+      "status": "collected",
       "attemptedAt": "2026-10-11T14:05:41.433259+00:00",
-      "cacheAvailable": false
+      "cacheAvailable": false,
+      "resolvedUrl": "https://wiki.runarcana.org/en/runarcana-plus/garden-of-shadows/creatures/stygian/",
+      "collectedAt": "2026-10-12T18:52:55.004283+00:00",
+      "sha256": "09d904ca746c301be6de5dc08e19b25d669871584472ef4522edff80d55681e1",
+      "cache": "sources/cache/dc84dbcefc1e7488d75f84dab0583f844c17e1d9973a3c98d6e905bcfd30be68.html",
+      "title": "Stygian",
+      "rulesVersion": null,
+      "wikiBuild": "0.157"
     },
     {
       "id": "/en/runarcana-plus/magitek-repository/",
@@ -37152,7 +37543,7 @@
     "https://runarcana.org/en/runarcana-0-96-update/",
     "https://bit.ly/runarcana_santangelo"
   ],
-  "pending": 31,
-  "rateLimited": true,
+  "pending": 0,
+  "rateLimited": false,
   "retryAfter": null
 }

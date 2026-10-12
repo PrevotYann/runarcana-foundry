@@ -55,7 +55,7 @@
     "nullVersionMeans": "not stated on this source; no version assumed"
   },
   "module": {
-    "version": "0.12.0",
+    "version": "0.13.0",
     "runtimeVerified": false,
     "complete": false
   }
