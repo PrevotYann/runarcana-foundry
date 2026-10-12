@@ -38,10 +38,24 @@ export function heritageEligibility(rules,{origin,variant,region,level,initial,c
   if(manual.length)errors.push('RUNARCANA.Error.ManualPrerequisite');
   return {valid:errors.length===0,errors:[...new Set(errors)],manual};
 }
-export function heritageEffects(rules,{skills={}}={}) {
+export function heritageOptions(rules,options={},context={}) {
+  if(!options||typeof options!=='object')return {valid:false,errors:['RUNARCANA.Error.Choices'],options:{skills:[]}};
+  const choice=rules.mechanics?.skillChoice,skills=options.skills??[];
+  const resistance=rules.mechanics?.resistanceChoice;
+  const valid=Array.isArray(skills)&&(!choice?skills.length===0:skills.length===choice.count&&new Set(skills).size===skills.length&&skills.every(s=>choice.options.includes(s)))&&(!resistance?!options.damage:resistance.includes(options.damage)&&!context.resistance?.includes(options.damage));
+  return {valid,errors:valid?[]:['RUNARCANA.Error.Choices'],options:{skills:valid?[...skills]:[],...(valid&&resistance?{damage:options.damage}:{})}};
+}
+export function heritageEffects(rules,{skills={},options={}}={}) {
   const m=rules.mechanics;if(!m)return [];
+  const selection=heritageOptions(rules,options);if(!selection.valid)throw new Error('RUNARCANA.Error.Choices');
   const changes=[];const add=(key,value,type='add')=>changes.push({_id:'rcHeritage'+String(changes.length).padStart(6,'0'),key,value:String(value),type,phase:'initial',priority:30});
   for(const [key,value]of Object.entries(m.skills??{}))add('system.skills.'+key+'.value',m.expertiseIfKnown?.includes(key)&&skills[key]>=1?2:value,'upgrade');
+  for(const key of selection.options.skills){
+    add('system.skills.'+key+'.value',m.skillChoice.expertiseIfKnown&&skills[key]>=1?2:1,'upgrade');
+    if(m.skillChoice.advantageIfKnown&&skills[key]>=1)add('system.skills.'+key+'.roll.mode',1,'upgrade');
+  }
+  for(const key of m.weapons??[])add('system.traits.weaponProf.value',key);
+  if(m.resistanceChoice)add('system.traits.dr.value',selection.options.damage);
   for(const [key,value]of Object.entries(m.sensesAdd??{}))add('system.attributes.senses.ranges.'+key,value);
   for(const [key,value]of Object.entries(m.sensesMinimum??{}))add('system.attributes.senses.ranges.'+key,value,'upgrade');
   if(m.sensesAdd||m.sensesMinimum)add('system.attributes.senses.units','ft','override');

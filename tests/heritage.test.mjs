@@ -1,7 +1,7 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import fs from 'node:fs/promises';
-import {heritageEligibility,heritageEffects} from '../src/heritage.mjs';
+import {heritageEligibility,heritageEffects,heritageOptions} from '../src/heritage.mjs';
 import {createApi} from '../src/api.mjs';
 const rows=(await Promise.all((await fs.readdir('packs-src/release/heritages')).map(async f=>JSON.parse(await fs.readFile('packs-src/release/heritages/'+f,'utf8'))))).filter(d=>d.flags?.runarcana?.heritageRules);
 const find=name=>rows.find(d=>d.name===name),rule=name=>find(name).flags.runarcana.heritageRules;
@@ -40,6 +40,42 @@ test('reviewed permanent heritage effects preserve expertise, additive vision an
   assert.ok(perceptive.some(c=>c.key==='system.skills.prc.bonuses.passive'&&c.value==='floor(@prof / 2)'));
   assert.ok(perceptive.every(c=>c._id.length===16));
 });
+
+test('additional reviewed heritage clauses grant their published skills without inventing Pickpocketer expertise',()=>{
+  const expected={'Bioenergy':'tec','Blessed Healer':'med','Cautious Traveler':'sur','Celestial Encouragement':'arc','Draconic Resilience':'sur','Extrovert':'his','Ice Breaker':'sur','Killer Instinct':'med','Manatouched':'arc','Natural Medicine':'med','Nomadic Life':'sur','Ottrani Healing':'med','Simian Skill':'ath','Soul of the Hunt':'sur','Truth Seeker':'prc'};
+  for(const [name,skill]of Object.entries(expected))for(const value of [0,1,2]){
+    const changes=heritageEffects(rule(name),{skills:{[skill]:value}})[0].system.changes;
+    assert.ok(changes.some(c=>c.key===`system.skills.${skill}.value`&&c.value===String(value>=1?2:1)&&c.type==='upgrade'),name);
+  }
+  assert.equal(heritageEffects(rule('Pickpocketer'),{skills:{slt:1}})[0].system.changes[0].value,'1');
+  assert.ok(heritageEffects(rule('Truth Seeker'))[0].system.changes.some(c=>c.key==='system.skills.prc.bonuses.passive'&&c.value==='1'));
+  assert.deepEqual(heritageEffects(rule('Sea Style'))[0].system.changes.map(c=>[c.key,c.value]),['net','spear','trident'].map(k=>['system.traits.weaponProf.value',k]));
+  assert.equal(rows.filter(d=>d.flags.runarcana.heritageRules.mechanics).length,30);
+});
+
+test('heritage skill choices validate published options and distinguish expertise from Scout advantage',()=>{
+  for(const name of ['Alpha Authority','Commander','Insightful Mind','Mediator','Natural Propulsion','Thick Feet','Wealthy','Scout']){
+    const r=rule(name),skill=r.mechanics.skillChoice.options[0];
+    assert.equal(heritageOptions(r).valid,false);assert.equal(heritageOptions(r,{skills:[skill,skill]}).valid,false);
+    assert.equal(heritageOptions(r,{skills:['unknown']} ).valid,false);
+    assert.equal(heritageOptions(r,{skills:[skill]}).valid,true);
+    const effects=heritageEffects(r,{skills:{[skill]:1},options:{skills:[skill]}})[0].system.changes;
+    assert.ok(effects.some(c=>c.key===`system.skills.${skill}.value`&&c.value===(name==='Scout'?'1':'2')));
+    assert.equal(effects.some(c=>c.key===`system.skills.${skill}.roll.mode`&&c.value==='1'),name==='Scout');
+  }
+  assert.throws(()=>heritageEffects(rule('Commander')),/Choices/);
+  assert.equal(heritageOptions(rule('Perceptive'),{skills:['prc']}).valid,false);
+});
+
+test('Exquisite Construction requires a distinct second resistance from the Brutal source list',()=>{
+  const r=rule('Exquisite Construction');
+  assert.equal(heritageEligibility(r,{...context,origin:'Construct',variant:'Brutal'}).valid,true);
+  assert.equal(heritageEligibility(r,{...context,origin:'Construct',variant:'Envoy'}).valid,false);
+  for(const damage of ['poison','bludgeoning','unknown',''])assert.equal(heritageOptions(r,{damage}).valid,false);
+  assert.equal(heritageOptions(r,{damage:'fire'},{resistance:['poison','fire']}).valid,false);
+  assert.equal(heritageOptions(r,{damage:'cold'},{resistance:['poison','fire']}).valid,true);
+  assert.deepEqual(heritageEffects(r,{options:{damage:'cold'}})[0].system.changes.map(c=>[c.key,c.value]),[['system.traits.dr.value','cold']]);
+});
 test('heritage application ignores submitted costs, enforces eligibility and restores failed item creation',async()=>{
   globalThis.game={settings:{get:()=>true},user:{isGM:true,id:'gm'},users:{activeGM:{id:'gm'}},time:{worldTime:0},modules:new Map()};
   const document=d=>({...structuredClone(d),documentName:'Item',getFlag(scope,k){return this.flags?.[scope]?.[k];},toObject(){return structuredClone(d);}});
@@ -50,6 +86,10 @@ test('heritage application ignores submitted costs, enforces eligibility and res
   const api=createApi(),choice=name=>({uuid:'Compendium.runarcana.heritages.Item.'+find(name)._id,cost:0});
   const plan={pool:'origin',budget:999,choices:[choice('Magic Spark')]};const preview=await api.previewHeritages(actor,plan);assert.equal(preview.spent,1);assert.equal(preview.budget,3);
   actor.items[0].name='Acolyte traduit';actor.items[0].system={identifier:'acolyte'};assert.equal((await api.previewHeritages(actor,{pool:'origin',choices:[choice('Arcanist Acolyte')]})).valid,true);
+  const invalid={pool:'origin',choices:[choice('Commander')]};assert.equal((await api.previewHeritages(actor,invalid)).valid,false);
+  await assert.rejects(api.applyHeritages(actor,invalid,{overrideReason:'GM exception'}),/Choices/);
+  const selected={pool:'origin',choices:[{...choice('Commander'),options:{skills:['itm']}}]};
+  const normalized=await api.previewHeritages(actor,selected);assert.deepEqual(normalized.choices[0].options,{skills:['itm']});
   await api.applyHeritages(actor,plan);assert.equal(flags.choices.choices[0].cost,1);
   await assert.rejects(api.applyHeritages(actor,plan),/DuplicateChoice/);
   sources.set('Item.world-copy',document(find('Magic Spark')));await assert.rejects(api.applyHeritages(actor,{pool:'origin',choices:[{uuid:'Item.world-copy'}]}),/DuplicateChoice/);
@@ -57,4 +97,16 @@ test('heritage application ignores submitted costs, enforces eligibility and res
   await assert.rejects(api.applyHeritages(actor,{pool:'origin',choices:[choice('Perceptive')]}),/persist failed/);assert.equal(actor.items.length,before);actor.update=update;
   await api.finishCharacter(actor);assert.equal(flags.creationComplete,true);
   await assert.rejects(api.applyHeritages(actor,{pool:'origin',choices:[choice('Ferromancer')]}),/InitialHeritage/);
+  const batch={pool:'origin',choices:[{...choice('Commander'),options:{skills:['ins']}},{...choice('Mediator'),options:{skills:['ins']}}]};
+  await assert.rejects(api.applyHeritages(actor,batch),/Choices/);
+  batch.choices[0].options.skills=['itm'];batch.choices[1].options.skills=['itm'];
+  await api.applyHeritages(actor,batch);
+  const additions=actor.items.slice(-2);assert.equal(additions[0].effects.at(-1).system.changes[0].value,'1');assert.equal(additions[1].effects.at(-1).system.changes[0].value,'2');
+  assert.deepEqual(flags.choices.choices.at(-1).options,{skills:['itm']});assert.deepEqual(additions[1].flags.runarcana.heritageSelection,{skills:['itm']});
+  flags.originSelection.plan={origin:'Construct',variant:'Brutal',region:'Noxus',heritagePoints:5,regionPoints:2,resistance:['poison','fire']};
+  const secondResistance={pool:'origin',choices:[{...choice('Exquisite Construction'),options:{damage:'fire'}}]};
+  await assert.rejects(api.applyHeritages(actor,secondResistance,{overrideReason:'Allow second resistance'}),/Choices/);
+  secondResistance.choices[0].options.damage='cold';await api.applyHeritages(actor,secondResistance);
+  assert.deepEqual(actor.items.at(-1).flags.runarcana.heritageSelection,{skills:[],damage:'cold'});
+  assert.ok(actor.items.at(-1).effects.at(-1).system.changes.some(c=>c.key==='system.traits.dr.value'&&c.value==='cold'));
 });

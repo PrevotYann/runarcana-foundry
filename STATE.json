@@ -15,7 +15,6 @@
     "Complete source collection; finish conditional origin mechanics and runtime validation"
   ],
   "blocked": [
-    "Wiki HTTP 429 rate limiting: use slow resumes/local export",
     "No Foundry V14 installation available: installed V12.343 remains unchanged"
   ],
   "next": [
@@ -26,9 +25,9 @@
   ],
   "snapshot": {
     "discoveredPages": 899,
-    "collectedPages": 572,
-    "missingPages": 327,
-    "documents": 6766,
+    "collectedPages": 638,
+    "missingPages": 261,
+    "documents": 6898,
     "runtimeVerified": false
   }
 }

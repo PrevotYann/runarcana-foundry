@@ -2,7 +2,7 @@
 
 Profile: **authorized-content**. This module is **incomplete**. It has no Foundry V14 runtime verification.
 
-899 canonical page URLs discovered; 572 complete responses cached; 327 sources not collected. Missing pages are not claimed to be permanently unavailable: HTTP 429 throttling interrupted earlier passes. Collection is resumable from its saved checkpoint; unvisited entries require a resumed crawl or a local export.
+899 canonical page URLs discovered; 638 complete responses cached; 261 sources not collected. Missing pages are not claimed to be permanently unavailable: HTTP 429 throttling interrupted earlier passes. Collection is resumable from its saved checkpoint; unvisited entries require a resumed crawl or a local export.
 
 11323 page/anchor/table/catalog coverage records. Entry discovery is not exhaustive until every source is available and reviewed.
 
@@ -10,7 +10,7 @@ Profile: **authorized-content**. This module is **incomplete**. It has no Foundr
 | --- | ---: | ---: | ---: |
 | Introduction, appendices, projects | 38 | 33 | 5 |
 | Characters | 98 | 98 | 0 |
-| Rules | 578 | 256 | 322 |
+| Rules | 578 | 322 | 256 |
 | Game Mastering | 21 | 21 | 0 |
 | Monsters & Creatures | 164 | 164 | 0 |
 
@@ -32,8 +32,8 @@ Profile: **authorized-content**. This module is **incomplete**. It has no Foundr
 | gm | 21 |
 | rewards | 177 |
 | afflictions | 165 |
-| rules | 256 |
-| spells | 236 |
+| rules | 322 |
+| spells | 302 |
 | companions | 1 |
 | creature-rules | 164 |
 | creature-features | 2973 |
@@ -45,7 +45,7 @@ Profile: **authorized-content**. This module is **incomplete**. It has no Foundr
 
 ## Mechanical support
 
-Implemented: namespaced resources and staged native Activity consumption; published mana costs; source-backed creation for 10 origins and 29 named lineages, tribes, clans and models; fixed/27-point/4d6 ability methods and validated +2/+1 allocation; replaceable origin effects for permanent size/movement/senses/proficiencies/defenses; botanical choices, construct armor prerequisites and Runeborn trait budgets/conversions; native natural weapon attacks with Troll level-6 progression; conditional Fluffy movement and explicit underwater vision; origin/region heritage pool separation and source level budgets; thirteen regional proficiency profiles, source weapon identifiers and regional languages; heritage cost/eligibility/repeat/creation checks for 207 selectable descriptions and four reviewed permanent-stat conversions; cumulative Minotaur HP; native class HitPoints advancements; native matched class grants and numeric scale advancements; native source attack bonuses, saving throws, initiative, skill checks, passive perception and numeric senses for structured NPCs; weapon attack/crit metadata; source RollTables; heritage budget preview and recorded GM overrides; explicit rest recovery; a native creation/progression workflow; source-based creature HP calculator; conservative import updates and backups; Babele converters and translation templates. Six source snapshots have reviewed base spell Activities (including the Snowman companion); these adapters fall back to manual casting if their source hash changes. Spell effects, triggers and augmentation remain partial.
+Implemented: namespaced resources and staged native Activity consumption; published mana costs; source-backed creation for 10 origins and 29 named lineages, tribes, clans and models; fixed/27-point/4d6 ability methods and validated +2/+1 allocation; replaceable origin effects for permanent size/movement/senses/proficiencies/defenses; botanical choices, construct armor prerequisites and Runeborn trait budgets/conversions; native natural weapon attacks with Troll level-6 progression; conditional Fluffy movement and explicit underwater vision; origin/region heritage pool separation and source level budgets; thirteen regional proficiency profiles, source weapon identifiers and regional languages; heritage cost/eligibility/repeat/creation checks for 207 selectable descriptions and thirty reviewed permanent-stat conversions with eight validated skill selections and a distinct second Construct resistance; cumulative Minotaur HP; native class HitPoints advancements; native matched class grants and numeric scale advancements; native source attack bonuses, saving throws, initiative, skill checks, passive perception and numeric senses for structured NPCs; weapon attack/crit metadata; source RollTables; heritage budget preview and recorded GM overrides; explicit rest recovery; a native creation/progression workflow; source-based creature HP calculator; conservative import updates and backups; Babele converters and translation templates. Six source snapshots have reviewed base spell Activities (including the Snowman companion); these adapters fall back to manual casting if their source hash changes. Spell effects, triggers and augmentation remain partial.
 
 Manual or incomplete: conditional origin actions and exhaustive trait-effect conversion; Runeborn GM rulings, disadvantage effects and advanced trait interactions; unpublished regional exceptions and remaining heritage effect conversion; multiclass calculation and restrictions; automatic class resource initialization/recalculation; class-specific recovery exceptions; ritual casting procedures; most spell damage, effects and augmentation; familiars/summons/Feral Forms; condition expirations and weakness; DR exceptions; firearm misfires/reloads/ammunition; runes and conditional effects; comprehensive crafting catalogs; Mecha pilots/developments/fuel; Echo applications; reward charges/effects/evolution. Some extracted feature items provide text and native inventory support only and are explicitly partial.
 

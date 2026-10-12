@@ -13,6 +13,17 @@ def heritage_metadata(page,section):
     # The universal cost and repeat rule are stated at the beginning of this source page.
     result={'schema':1,'cost':1,'maxCount':2 if re.search(r'(?:chosen|choose|taken) (?:a )?second time',text,re.I) else 1,'requirement':re.sub(r'^prerequis\w*\s*[:>]\s*','',requirement,flags=re.I),'initial':bool(re.search(r'\b(?:initial|starter)\b',requirement,re.I)),'name':section['name']}
     mechanics={'Arcanist Acolyte':{'skills':{'arc':1}},'Lunar Sight':{'skills':{'ins':1},'expertiseIfKnown':['ins'],'sensesAdd':{'darkvision':15}},'Valor of the Protector':{'skills':{'inv':1},'expertiseIfKnown':['inv']},'Perceptive':{'sensesMinimum':{'blindsight':10},'passivePerception':'floor(@prof / 2)'}}
+    # Reviewed permanent clauses only. Spell grants, counters and situational abilities remain in the full text.
+    for name,skill in {'Bioenergy':'tec','Blessed Healer':'med','Cautious Traveler':'sur','Celestial Encouragement':'arc','Draconic Resilience':'sur','Extrovert':'his','Ice Breaker':'sur','Killer Instinct':'med','Manatouched':'arc','Natural Medicine':'med','Nomadic Life':'sur','Ottrani Healing':'med','Simian Skill':'ath','Soul of the Hunt':'sur','Truth Seeker':'prc'}.items():
+        mechanics[name]={'skills':{skill:1},'expertiseIfKnown':[skill]}
+    mechanics['Truth Seeker']['passivePerception']=1
+    # Pickpocketer repeats "proficiency" in the published clause; do not silently substitute expertise.
+    mechanics['Pickpocketer']={'skills':{'slt':1}}
+    mechanics['Sea Style']={'weapons':['net','spear','trident']}
+    mechanics['Exquisite Construction']={'resistanceChoice':['acid','lightning','force','fire','cold','necrotic','psychic','radiant']}
+    for name,skills in {'Alpha Authority':['itm','per'],'Commander':['itm','per'],'Insightful Mind':['inv','ins'],'Mediator':['dec','itm','ins','per'],'Natural Propulsion':['nat','sur'],'Thick Feet':['ath','sur'],'Wealthy':list(SKILLS.values())}.items():
+        mechanics[name]={'skillChoice':{'count':1,'options':skills,'expertiseIfKnown':True}}
+    mechanics['Scout']={'skillChoice':{'count':1,'options':['ins','inv','prc','slt'],'advantageIfKnown':True},'passivePerception':'floor(@prof / 2)'}
     if section['name'] in mechanics:
         if page['sha256']=='9334a15c409859cc61585387d9de4569855f07ae253400ba51802614a723a76e':result['mechanics']=mechanics[section['name']]
         else:result['mechanicsReviewRequired']=True
@@ -43,6 +54,7 @@ def generate(pages,documents,root):
         return found
     heritage_page=next((p for p in pages if p['url'].endswith('/customization/heritages/')),None)
     if heritage_page:
+        construct=next((p for p in pages if p['url'].endswith('/characters/origins/construct/')),None)
         def key(value):return re.sub(r'\bvariant\b','',normalized(value)).replace('magik','magic').strip()
         general=set();origins={};regions_index={}
         for section in heritage_page['sections']:
@@ -58,6 +70,10 @@ def generate(pages,documents,root):
         for d in documents.get('heritages',[]):
             meta=d.get('flags',{}).get('runarcana',{}).get('heritageRules')
             if not meta:continue
+            if meta['name']=='Exquisite Construction':
+                if not construct or construct['sha256']!='5df86610a7dd2bb97239d849919849133325d80321ad84a7a67b3d6cff08951f':
+                    meta.pop('mechanics',None);meta['mechanicsReviewRequired']=True
+                else:meta['mechanicsSource']={'url':construct['url'],'sha256':construct['sha256']}
             k=key(meta['name']);meta.update(general=k in general,origins=origins.get(k,[]),regions=regions_index.get(k,[]))
             meta['unlisted']=not(meta['general'] or meta['origins'] or meta['regions'])
             if meta['name'].startswith('Variant:') and variant_page:
